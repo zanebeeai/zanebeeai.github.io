@@ -1,0 +1,319 @@
+{
+ "clip_id": "franka_emika_panda__random__0301013",
+ "body": "franka_emika_panda",
+ "kind": "arm",
+ "source": "random",
+ "seed": 301013,
+ "attempt_index": 13,
+ "skill": null,
+ "arm": "random",
+ "compiler": "compile_program/J",
+ "variant": "left_finger_tip",
+ "params": {
+  "amplitude": 0.45,
+  "key_s": 1.027,
+  "wander": false,
+  "ik_miss_m": [
+   0.0001
+  ]
+ },
+ "program": {
+  "duration_s": 6.56,
+  "arm": "J",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 1.03,
+    "frame": 52,
+    "joints": {
+     "joint1": -0.111,
+     "joint2": -0.4274,
+     "joint3": -0.2371,
+     "joint4": 0.1596,
+     "joint5": -0.0064,
+     "joint6": 0.0502,
+     "joint7": -0.0014,
+     "finger_joint1": -0.0001
+    }
+   },
+   {
+    "t": 2.06,
+    "frame": 103,
+    "joints": {
+     "joint1": 0.1488,
+     "joint2": -0.0563,
+     "joint3": 0.1437,
+     "joint4": 0.1245,
+     "joint5": 0.0013,
+     "joint6": 0.0444,
+     "joint7": 0.0005,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 3.09,
+    "frame": 154,
+    "joints": {
+     "joint1": -0.0908,
+     "joint2": -0.2269,
+     "joint3": 0.0026,
+     "joint4": 0.1352,
+     "joint5": -0.0035,
+     "joint6": 0.0444,
+     "joint7": 0.0004,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 4.12,
+    "frame": 206,
+    "joints": {
+     "joint1": 0.3502,
+     "joint2": 0.235,
+     "joint3": -0.0751,
+     "joint4": 0.1172,
+     "joint5": 0.0105,
+     "joint6": 0.0578,
+     "joint7": -0.0005,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 5.15,
+    "frame": 258,
+    "joints": {
+     "joint1": 0.0692,
+     "joint2": 0.0219,
+     "joint3": -0.0683,
+     "joint4": 0.124,
+     "joint5": 0.0035,
+     "joint6": 0.0524,
+     "joint7": 0.0001,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 6.18,
+    "frame": 309,
+    "joints": {
+     "joint1": 0.0,
+     "joint2": 0.0,
+     "joint3": 0.0,
+     "joint4": 0.0,
+     "joint5": 0.0,
+     "joint6": 0.0,
+     "joint7": 0.0,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 6.56,
+    "frame": 328
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 6.56,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 1.03,
+    "joints": {
+     "joint1": -0.111,
+     "joint2": -0.4274,
+     "joint3": -0.2371,
+     "joint4": 0.1596,
+     "joint5": -0.0064,
+     "joint6": 0.0502,
+     "joint7": -0.0014,
+     "finger_joint1": -0.0001
+    }
+   },
+   {
+    "t": 2.06,
+    "joints": {
+     "joint1": 0.1488,
+     "joint2": -0.0563,
+     "joint3": 0.1437,
+     "joint4": 0.1245,
+     "joint5": 0.0013,
+     "joint6": 0.0444,
+     "joint7": 0.0005,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 3.09,
+    "joints": {
+     "joint1": -0.0908,
+     "joint2": -0.2269,
+     "joint3": 0.0026,
+     "joint4": 0.1352,
+     "joint5": -0.0035,
+     "joint6": 0.0444,
+     "joint7": 0.0004,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 4.12,
+    "joints": {
+     "joint1": 0.3502,
+     "joint2": 0.235,
+     "joint3": -0.0751,
+     "joint4": 0.1172,
+     "joint5": 0.0105,
+     "joint6": 0.0578,
+     "joint7": -0.0005,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 5.15,
+    "joints": {
+     "joint1": 0.0692,
+     "joint2": 0.0219,
+     "joint3": -0.0683,
+     "joint4": 0.124,
+     "joint5": 0.0035,
+     "joint6": 0.0524,
+     "joint7": 0.0001,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 6.18,
+    "joints": {
+     "joint1": 0.0,
+     "joint2": 0.0,
+     "joint3": 0.0,
+     "joint4": 0.0,
+     "joint5": 0.0,
+     "joint6": 0.0,
+     "joint7": 0.0,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 6.56
+   }
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0096
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0096
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0096
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0096
+  },
+  "grasp": {
+   "pass": true,
+   "notes": []
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0482
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0346,
+   "limit_rad": 0.1276
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0964
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": true,
+  "point": false,
+  "reach_forward": false,
+  "trace_circle": false,
+  "kick_swing": false,
+  "tap_twice": false,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": true,
+ "duration_s": 6.56,
+ "n_frames": 329,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.1276,
+  "start_joints_moved_inside_range": [
+   "finger_joint1",
+   "finger_joint2"
+  ],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0
+ },
+ "compile_notes": [],
+ "tips": [
+  "left_finger_tip",
+  "right_finger_tip"
+ ],
+ "contact_edges": [
+  [
+   "left_pad",
+   "block"
+  ],
+  [
+   "right_pad",
+   "block"
+  ],
+  [
+   "block",
+   "table"
+  ],
+  [
+   "rest_of_body",
+   "block"
+  ],
+  [
+   "rest_of_body",
+   "table"
+  ],
+  [
+   "block",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 0.32
+}

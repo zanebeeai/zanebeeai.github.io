@@ -1,0 +1,235 @@
+{
+ "clip_id": "unitree_g1__gait__0001035",
+ "body": "unitree_g1",
+ "kind": "humanoid",
+ "source": "gait",
+ "seed": 1035,
+ "attempt_index": 35,
+ "skill": null,
+ "arm": "gait",
+ "compiler": "compile_program/P",
+ "variant": "crawl:diag_right_to_left",
+ "params": {
+  "gait": "crawl",
+  "speed_level": 1,
+  "segment_s": 4.0,
+  "step_L": 0.4,
+  "swing_height_L": 0.1
+ },
+ "program": {
+  "duration_s": 5.38,
+  "arm": "P",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 0.41,
+    "frame": 20,
+    "gait": {
+     "name": "crawl",
+     "cmd": [
+      0.14,
+      -0.14,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 2.79,
+    "frame": 140,
+    "gait": {
+     "name": "crawl",
+     "cmd": [
+      0.0,
+      0.35,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 4.41,
+    "frame": 220
+   },
+   {
+    "t": 5.38,
+    "frame": 269
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 5.38,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 0.41,
+    "gait": {
+     "name": "crawl",
+     "cmd": [
+      0.14,
+      -0.14,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 2.79,
+    "gait": {
+     "name": "crawl",
+     "cmd": [
+      0.0,
+      0.35,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 4.41
+   },
+   {
+    "t": 5.38
+   }
+  ]
+ },
+ "library": {
+  "modes": [],
+  "gaits": [
+   {
+    "name": "crawl",
+    "cycle_s": 1.3387,
+    "duty": {
+     "left_ankle_roll_link_tip": 0.75,
+     "right_ankle_roll_link_tip": 0.75
+    },
+    "phase": {
+     "left_ankle_roll_link_tip": 0.0,
+     "right_ankle_roll_link_tip": 0.5
+    },
+    "step_L": 0.4,
+    "swing_height_L": 0.1,
+    "source": "intake",
+    "valid": true
+   }
+  ]
+ },
+ "library_sha": "12c5fb442e50",
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.007
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0047,
+   "body_frame": [
+    "left_ankle_roll_link",
+    60
+   ],
+   "limit_m": 0.007
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0029,
+   "limit_m": 0.0352
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1419,
+   "limit_rad": 0.1494
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0703
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0021,
+   "worst_off_ground_m": 0.0073,
+   "limit_m": 0.0141
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0703
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": false,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": false,
+  "tap_twice": true,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": true,
+ "duration_s": 5.38,
+ "n_frames": 270,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.1494,
+  "start_joints_moved_inside_range": [
+   "left_knee_joint",
+   "right_knee_joint"
+  ],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0,
+  "gait_cmd_scale_min": 0.2286,
+  "com_shift_max_m": 0.382
+ },
+ "compile_notes": [],
+ "tips": [
+  "left_ankle_roll_link_tip",
+  "right_ankle_roll_link_tip",
+  "left_wrist_yaw_link_tip",
+  "right_wrist_yaw_link_tip"
+ ],
+ "contact_edges": [
+  [
+   "left_ankle_roll_link_foot",
+   "floor"
+  ],
+  [
+   "right_ankle_roll_link_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ],
+  [
+   "left_wrist_yaw_link_end",
+   "floor"
+  ],
+  [
+   "right_wrist_yaw_link_end",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 4.26
+}

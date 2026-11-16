@@ -1,0 +1,227 @@
+{
+ "clip_id": "v3_six_arm_crawler_s3103__gait__0001016",
+ "body": "v3_six_arm_crawler_s3103",
+ "kind": "multileg",
+ "source": "gait",
+ "seed": 1016,
+ "attempt_index": 16,
+ "skill": null,
+ "arm": "gait",
+ "compiler": "compile_program/P",
+ "variant": "omnidirectional_tripod_walk:right",
+ "params": {
+  "gait": "omnidirectional_tripod_walk",
+  "speed_level": 1,
+  "segment_s": 4.0,
+  "step_L": 0.4,
+  "swing_height_L": 0.15
+ },
+ "program": {
+  "duration_s": 5.24,
+  "arm": "P",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 0.54,
+    "frame": 27,
+    "gait": {
+     "name": "omnidirectional_tripod_walk",
+     "cmd": [
+      0.0,
+      -0.2,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 4.54,
+    "frame": 227
+   },
+   {
+    "t": 5.24,
+    "frame": 262
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 5.24,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 0.54,
+    "gait": {
+     "name": "omnidirectional_tripod_walk",
+     "cmd": [
+      0.0,
+      -0.2,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 4.54
+   },
+   {
+    "t": 5.24
+   }
+  ]
+ },
+ "library": {
+  "modes": [],
+  "gaits": [
+   {
+    "name": "omnidirectional_tripod_walk",
+    "cycle_s": 1.14,
+    "duty": {
+     "a0_seg_1_tip": 0.6053,
+     "a1_seg_1_tip": 0.6053,
+     "a2_seg_1_tip": 0.6053,
+     "a3_seg_1_tip": 0.6053,
+     "a4_seg_1_tip": 0.6053,
+     "a5_seg_1_tip": 0.6053
+    },
+    "phase": {
+     "a0_seg_1_tip": 0.0,
+     "a1_seg_1_tip": 0.5,
+     "a2_seg_1_tip": 0.0,
+     "a3_seg_1_tip": 0.5,
+     "a4_seg_1_tip": 0.0,
+     "a5_seg_1_tip": 0.5
+    },
+    "step_L": 0.4,
+    "swing_height_L": 0.15,
+    "source": "intake",
+    "valid": true
+   }
+  ]
+ },
+ "library_sha": "99a0e30dd351",
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0016
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0001,
+   "body_frame": [
+    "a4_seg_1",
+    42
+   ],
+   "limit_m": 0.0016
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0002,
+   "limit_m": 0.0079
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.2365,
+   "limit_rad": 0.3159
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0018,
+   "limit_m": 0.0157
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0001,
+   "worst_off_ground_m": 0.0001,
+   "limit_m": 0.0031
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0157
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": false,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": false,
+  "tap_twice": true,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 5.24,
+ "n_frames": 263,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.3159,
+  "start_joints_moved_inside_range": [],
+  "max_projection_m": 0.0018,
+  "frames_projected_over_1mm": 4,
+  "gait_cmd_scale_min": 0.2007,
+  "com_shift_max_m": 0.0
+ },
+ "compile_notes": [],
+ "tips": [
+  "a0_seg_1_tip",
+  "a1_seg_1_tip",
+  "a2_seg_1_tip",
+  "a3_seg_1_tip",
+  "a4_seg_1_tip",
+  "a5_seg_1_tip"
+ ],
+ "contact_edges": [
+  [
+   "a0_seg_1_foot",
+   "floor"
+  ],
+  [
+   "a1_seg_1_foot",
+   "floor"
+  ],
+  [
+   "a2_seg_1_foot",
+   "floor"
+  ],
+  [
+   "a3_seg_1_foot",
+   "floor"
+  ],
+  [
+   "a4_seg_1_foot",
+   "floor"
+  ],
+  [
+   "a5_seg_1_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 0.79
+}

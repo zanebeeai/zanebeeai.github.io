@@ -1,0 +1,528 @@
+{
+ "name": "kinova_gen3",
+ "xml": "track/bodies/kinova_gen3.xml",
+ "source_model": "humanoid/data/robots/menagerie_4d038b3/kinova_gen3/scene.xml",
+ "source_sha256": "5d3a6e91fea4da5fd7fbaf1fd7b466901ce590395ff78b61c8772b9834310815",
+ "nq": 14,
+ "nv": 13,
+ "nu": 7,
+ "timestep": 0.002,
+ "free_base": false,
+ "root_body": "base_link",
+ "mass_kg": 8.1879,
+ "joints": [
+  {
+   "name": "joint_1",
+   "type": "hinge",
+   "body": "shoulder_link",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": null,
+   "limited": false,
+   "object": false
+  },
+  {
+   "name": "joint_2",
+   "type": "hinge",
+   "body": "half_arm_1_link",
+   "qposadr": 1,
+   "dofadr": 1,
+   "range": [
+    -2.24,
+    2.24
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint_3",
+   "type": "hinge",
+   "body": "half_arm_2_link",
+   "qposadr": 2,
+   "dofadr": 2,
+   "range": null,
+   "limited": false,
+   "object": false
+  },
+  {
+   "name": "joint_4",
+   "type": "hinge",
+   "body": "forearm_link",
+   "qposadr": 3,
+   "dofadr": 3,
+   "range": [
+    -2.57,
+    2.57
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint_5",
+   "type": "hinge",
+   "body": "spherical_wrist_1_link",
+   "qposadr": 4,
+   "dofadr": 4,
+   "range": null,
+   "limited": false,
+   "object": false
+  },
+  {
+   "name": "joint_6",
+   "type": "hinge",
+   "body": "spherical_wrist_2_link",
+   "qposadr": 5,
+   "dofadr": 5,
+   "range": [
+    -2.09,
+    2.09
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint_7",
+   "type": "hinge",
+   "body": "bracelet_link",
+   "qposadr": 6,
+   "dofadr": 6,
+   "range": null,
+   "limited": false,
+   "object": false
+  },
+  {
+   "name": "block_free",
+   "type": "free",
+   "body": "OBJ:block",
+   "qposadr": 7,
+   "dofadr": 7,
+   "range": null,
+   "limited": null,
+   "object": true
+  }
+ ],
+ "actuators": [
+  {
+   "name": "joint_1",
+   "transmission": "joint",
+   "joints": [
+    "joint_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.0,
+    0.0
+   ],
+   "forcerange": [
+    -105.0,
+    105.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -100.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "joint_2",
+   "transmission": "joint",
+   "joints": [
+    "joint_2"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.24973,
+    2.24973
+   ],
+   "forcerange": [
+    -105.0,
+    105.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -100.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "joint_3",
+   "transmission": "joint",
+   "joints": [
+    "joint_3"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.0,
+    0.0
+   ],
+   "forcerange": [
+    -105.0,
+    105.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -100.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "joint_4",
+   "transmission": "joint",
+   "joints": [
+    "joint_4"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.5796,
+    2.5796
+   ],
+   "forcerange": [
+    -105.0,
+    105.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -100.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "joint_5",
+   "transmission": "joint",
+   "joints": [
+    "joint_5"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.0,
+    0.0
+   ],
+   "forcerange": [
+    -52.0,
+    52.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -50.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "joint_6",
+   "transmission": "joint",
+   "joints": [
+    "joint_6"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.09963,
+    2.09963
+   ],
+   "forcerange": [
+    -52.0,
+    52.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -50.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "joint_7",
+   "transmission": "joint",
+   "joints": [
+    "joint_7"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.0,
+    0.0
+   ],
+   "forcerange": [
+    -52.0,
+    52.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -50.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  0.261799,
+  3.141593,
+  -2.268928,
+  0.0,
+  0.959931,
+  1.570796,
+  0.513,
+  0.0,
+  0.225,
+  1.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "L": 1.0052,
+ "T": 0.3201,
+ "L_is": "reach of the tips from their limb's first joint (m)",
+ "tips": [
+  {
+   "name": "bracelet_link_tip",
+   "body": "bracelet_link",
+   "rigby_id": "T0",
+   "joints": [
+    "joint_1",
+    "joint_2",
+    "joint_3",
+    "joint_4",
+    "joint_5",
+    "joint_6",
+    "joint_7"
+   ],
+   "home_base_m": [
+    0.435,
+    0.0013,
+    0.4522
+   ],
+   "home_world_m": [
+    0.435,
+    0.0013,
+    0.4522
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8723,
+     -0.0064,
+     -0.4262
+    ],
+    "max": [
+     0.8788,
+     0.0013,
+     1.1559
+    ]
+   },
+   "reach_m": 1.0052,
+   "first_joint_anchor_base_m": [
+    0.0,
+    0.0,
+    0.1564
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "joint_1": -0.0,
+      "joint_2": 0.8308,
+      "joint_3": -0.0,
+      "joint_4": 0.5457,
+      "joint_5": -0.0,
+      "joint_6": 0.1093,
+      "joint_7": -0.0
+     },
+     "share_of_motion": 0.883,
+     "tip_motion_per_unit_at_home_m": [
+      0.6425,
+      0.0,
+      -0.3189
+     ]
+    },
+    {
+     "weights": {
+      "joint_1": -0.0,
+      "joint_2": -0.5547,
+      "joint_3": 0.0,
+      "joint_4": 0.7957,
+      "joint_5": 0.0,
+      "joint_6": 0.2433,
+      "joint_7": -0.0
+     },
+     "share_of_motion": 0.105,
+     "tip_motion_per_unit_at_home_m": [
+      0.2715,
+      0.0,
+      1.2814
+     ]
+    },
+    {
+     "weights": {
+      "joint_1": 0.0,
+      "joint_2": 0.0458,
+      "joint_3": -0.0,
+      "joint_4": -0.2628,
+      "joint_5": 0.0,
+      "joint_6": 0.9638,
+      "joint_7": 0.0
+     },
+     "share_of_motion": 0.013,
+     "tip_motion_per_unit_at_home_m": [
+      -0.1815,
+      -0.0,
+      0.0288
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "bracelet_link_end": [
+   8
+  ],
+  "rest_of_body": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "floor": [
+   0
+  ],
+  "table": [
+   0
+  ],
+  "block": [
+   9
+  ]
+ },
+ "link_group_names": {
+  "bracelet_link_end": [
+   "bracelet_link"
+  ],
+  "rest_of_body": [
+   "base_link",
+   "shoulder_link",
+   "half_arm_1_link",
+   "half_arm_2_link",
+   "forearm_link",
+   "spherical_wrist_1_link",
+   "spherical_wrist_2_link"
+  ],
+  "floor": [
+   "world"
+  ],
+  "table": [
+   "world"
+  ],
+  "block": [
+   "OBJ:block"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ],
+  "table": [
+   "table"
+  ]
+ },
+ "contact_edges": [
+  [
+   "bracelet_link_end",
+   "block"
+  ],
+  [
+   "block",
+   "table"
+  ],
+  [
+   "rest_of_body",
+   "block"
+  ],
+  [
+   "rest_of_body",
+   "table"
+  ],
+  [
+   "block",
+   "floor"
+  ],
+  [
+   "bracelet_link_end",
+   "table"
+  ]
+ ],
+ "stance_sets": [],
+ "balance": null,
+ "gaits": [],
+ "objects": {
+  "block": {
+   "body": "OBJ:block",
+   "joint": "block_free",
+   "qposadr": 7,
+   "half_m": 0.02,
+   "mass_kg": 0.05,
+   "home_m": [
+    0.513,
+    0.0,
+    0.22499999999999998
+   ]
+  },
+  "table": {
+   "geom": "table",
+   "top_z_m": 0.205,
+   "center_xy_m": [
+    0.565,
+    0.0
+   ],
+   "half_xy_m": [
+    0.257,
+    0.411
+   ],
+   "layout": {
+    "scale": 1.0264,
+    "yaw": 0.0,
+    "overlap_at_home_m": 0.0
+   }
+  },
+  "grip_site": null,
+  "grip_reach_m": null,
+  "gripper": null,
+  "about": "no finger tips: this arm has no gripper in its model, so it cannot grasp the block"
+ },
+ "excluded_pairs_home_overlap": [
+  [
+   "base_link",
+   "shoulder_link"
+  ]
+ ],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: the world frame (x forward, y left, z up, metres), as for every fixed body",
+ "kind": "arm",
+ "support": [],
+ "render_model": "humanoid/data/robots/menagerie_4d038b3/kinova_gen3/scene.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ }
+}

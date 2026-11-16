@@ -1,0 +1,182 @@
+<mujoco model="xarm7 scene">
+  <compiler angle="radian" meshdir="assets/"/>
+
+  <option integrator="implicitfast"/>
+
+  <size nkey="1"/>
+
+  <visual>
+    <global azimuth="150" elevation="-20"/>
+    <headlight ambient="0.3 0.3 0.3" diffuse="0.6 0.6 0.6" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+  </visual>
+
+  <default>
+    <default class="xarm7">
+      <joint range="-6.28319 6.28319" armature="0.1" frictionloss="1"/>
+      <geom type="mesh"/>
+      <site size="0.001 0.005 0.005" group="4" rgba="1 0 0 1"/>
+      <general ctrlrange="-6.28319 6.28319" biastype="affine"/>
+      <default class="size1">
+        <joint damping="10"/>
+        <general forcerange="-50 50" gainprm="1500" biasprm="0 -1500 -150"/>
+      </default>
+      <default class="size2">
+        <joint damping="5"/>
+        <general forcerange="-30 30" gainprm="1000" biasprm="0 -1000 -100"/>
+      </default>
+      <default class="size3">
+        <joint damping="2"/>
+        <general forcerange="-20 20" gainprm="800" biasprm="0 -800 -80"/>
+      </default>
+      <default class="spring_link">
+        <joint springref="2.62" stiffness="0.05" range="0 0.85" damping="0.00125"/>
+      </default>
+      <default class="driver">
+        <joint solreflimit="0.005" range="0 0.85" armature="0.005" damping="0.1"/>
+      </default>
+      <default class="follower">
+        <joint solreflimit="0.005" range="0 0.85"/>
+      </default>
+      <default class="visual">
+        <geom contype="0" conaffinity="0" group="2"/>
+      </default>
+      <default class="collision">
+        <geom group="3"/>
+        <default class="pad_box1">
+          <geom size="0.015 0.002 0.0095" type="box" priority="1" friction="0.7" solref="0.004" solimp="0.95 0.99" rgba="0 0.1 0.7 1"/>
+        </default>
+        <default class="pad_box2">
+          <geom size="0.015 0.002 0.0095" type="box" priority="1" friction="0.6" solref="0.004" solimp="0.95 0.99" rgba="0 0.5 0.5 1"/>
+        </default>
+      </default>
+    </default>
+  </default>
+
+  <worldbody>
+    <geom size="0.06 0.001" pos="0 0 0.06" type="capsule" rgba="1 1 1 1"/>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" rgba="0.32 0.34 0.36 1"/>
+    <geom name="table" size="0.239 0.383 0.156" pos="0.527 0 0.156" type="box" rgba="0.55 0.45 0.35 1"/>
+    <light pos="0 0 1.5" dir="0 0 -1" type="directional"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="link_base" childclass="xarm7" pos="0 0 0.12">
+      <inertial pos="-0.021131 -0.0016302 0.056488" quat="0.696843 0.20176 0.10388 0.680376" mass="0.88556" diaginertia="0.00382023 0.00335282 0.00167725"/>
+      <geom size="0.0703389 0.00979247" pos="-0.0119874 0.000580281 0.0776438" quat="0.724606 0.0189359 0.0177144 0.688675" type="capsule" rgba="0.62 0.62 0.66 1"/>
+      <body name="link1" pos="0 0 0.267">
+        <inertial pos="-0.0002 0.02905 -0.01233" quat="0.978953 -0.202769 -0.00441617 -0.0227264" mass="2.382" diaginertia="0.00569127 0.00533384 0.00293865"/>
+        <joint name="joint1" class="size1" pos="0 0 0" axis="0 0 1"/>
+        <geom size="0.0593865 0.0360711" pos="-0.000120897 0.00454238 -0.029008" quat="0.986119 -0.166024 0.00223562 -0.00031846" type="capsule" rgba="0.62 0.62 0.66 1"/>
+        <body name="link2" quat="0.707107 -0.707107 0 0">
+          <inertial pos="0.00022 -0.12856 0.01735" quat="0.50198 0.86483 -0.00778841 0.00483285" mass="1.869" diaginertia="0.00959898 0.00937717 0.00201315"/>
+          <joint name="joint2" class="size1" pos="0 0 0" axis="0 0 1" range="-2.059 2.0944"/>
+          <geom size="0.0614655 0.0771602" pos="-1.30834e-05 -0.0872731 0.0511498" quat="0.469584 0.882887 -0.00120757 0.000531518" type="capsule" rgba="0.62 0.62 0.66 1"/>
+          <body name="link3" pos="0 -0.293 0" quat="0.707107 0.707107 0 0">
+            <inertial pos="0.0466 -0.02463 -0.00768" quat="0.913819 0.289775 0.281481 -0.0416455" mass="1.6383" diaginertia="0.00351721 0.00294089 0.00195868"/>
+            <joint name="joint3" class="size2" pos="0 0 0" axis="0 0 1"/>
+            <geom size="0.0627051 0.0339516" pos="0.0266855 0.00644588 -0.0292637" quat="0.934852 0.154392 0.313626 0.0620732" type="capsule" rgba="0.62 0.62 0.66 1"/>
+            <body name="link4" pos="0.0525 0 0" quat="0.707107 0.707107 0 0">
+              <inertial pos="0.07047 -0.11575 0.012" quat="0.422108 0.852026 -0.126025 0.282832" mass="1.7269" diaginertia="0.00657137 0.00647948 0.00186763"/>
+              <joint name="joint4" class="size2" pos="0 0 0" axis="0 0 1" range="-0.19198 3.927"/>
+              <geom size="0.0673033 0.0668417" pos="0.0537223 -0.074322 0.0490211" quat="0.477699 0.812145 0.324269 0.0841073" type="capsule" rgba="0.62 0.62 0.66 1"/>
+              <body name="link5" pos="0.0775 -0.3425 0" quat="0.707107 0.707107 0 0">
+                <inertial pos="-0.00032 0.01604 -0.026" quat="0.999311 -0.0304457 0.000577067 0.0212082" mass="1.3203" diaginertia="0.00534729 0.00499076 0.0013489"/>
+                <joint name="joint5" class="size2" pos="0 0 0" axis="0 0 1"/>
+                <geom size="0.0477469 0.0678993" pos="-0.000168088 0.027855 -0.0732222" quat="0.989482 -0.144423 0.000686528 0.00822043" type="capsule" rgba="0.62 0.62 0.66 1"/>
+                <body name="link6" quat="0.707107 0.707107 0 0">
+                  <inertial pos="0.06469 0.03278 0.02141" quat="-0.217672 0.772419 0.16258 0.574069" mass="1.325" diaginertia="0.00245421 0.00221646 0.00107273"/>
+                  <joint name="joint6" class="size3" pos="0 0 0" axis="0 0 1" range="-1.69297 3.14159"/>
+                  <geom size="0.0473509 0.038559" pos="0.0434443 0.00866117 0.010223" quat="-0.110648 0.794266 0.0974631 0.589405" type="capsule" rgba="0.62 0.62 0.66 1"/>
+                  <body name="link7" pos="0.076 0.097 0" quat="0.707107 -0.707107 0 0">
+                    <inertial pos="0 -0.00677 -0.01098" quat="0.487612 0.512088 -0.512088 0.487612" mass="0.17" diaginertia="0.000132176 9.3e-05 5.85236e-05"/>
+                    <joint name="joint7" class="size3" pos="0 0 0" axis="0 0 1"/>
+                    <geom size="0.0226117 0.02226" pos="6.79623e-05 -0.00714794 -0.0135143" quat="-0.4995 -0.5005 0.5005 -0.4995" type="capsule" rgba="0.62 0.62 0.66 1"/>
+                    <body name="xarm_gripper_base_link" quat="0 0 0 1">
+                      <inertial pos="-0.00065489 -0.0018497 0.048028" quat="0.997403 -0.0717512 -0.0061836 0.000477479" mass="0.54156" diaginertia="0.000471093 0.000332307 0.000254799"/>
+                      <geom size="0.0438294 0.0133619" pos="-0.00287603 0.00104301 0.0480532" quat="0.999343 0.0178224 -0.0315493 0.000340134" type="capsule" rgba="0.62 0.62 0.66 1"/>
+                      <site name="link_tcp" pos="0 0 0.172"/>
+                      <site name="grip" pos="0 0 0.151137" size="0.01" rgba="0.2 0.9 0.9 1"/>
+                      <body name="left_outer_knuckle" pos="0 0.035 0.059098">
+                        <inertial pos="0 0.021559 0.015181" quat="0.47789 0.87842 0 0" mass="0.033618" diaginertia="1.9111e-05 1.79089e-05 1.90167e-06"/>
+                        <joint name="left_driver_joint" class="driver" pos="0 0 0" axis="1 0 0"/>
+                        <geom size="0.00986793 0.0312157" pos="0 0.0114433 0.0143573" quat="0.482083 0.876126 0 0" type="capsule" rgba="0.85 0.35 0.3 1"/>
+                        <body name="left_finger" pos="0 0.035465 0.042039">
+                          <inertial pos="0 -0.016413 0.029258" quat="0.697634 0.115353 -0.115353 0.697634" mass="0.048304" diaginertia="1.88037e-05 1.7493e-05 3.56792e-06"/>
+                          <joint name="left_finger_joint" class="follower" pos="0 0 0" axis="-1 0 0"/>
+                          <geom name="left_finger_pad_1" class="pad_box1" pos="0 -0.024003 0.032" group="0" mass="0" rgba="0.85 0.35 0.3 1"/>
+                          <geom name="left_finger_pad_2" class="pad_box2" pos="0 -0.024003 0.05" group="0" mass="0" rgba="0.85 0.35 0.3 1"/>
+                          <site name="left_finger_tip" pos="0 -0.024003 0.05" size="0.008" rgba="1 0.85 0.15 1"/>
+                        </body>
+                      </body>
+                      <body name="left_inner_knuckle" pos="0 0.02 0.074098">
+                        <inertial pos="1.86601e-06 0.0220468 0.0261335" quat="0.664139 -0.242732 0.242713 0.664146" mass="0.0230126" diaginertia="8.34216e-06 6.0949e-06 2.75601e-06"/>
+                        <joint name="left_inner_knuckle_joint" class="spring_link" pos="0 0 0" axis="1 0 0" springref="2.62"/>
+                        <geom size="0.00918808 0.0243505" pos="-1.29232e-05 0.0177324 0.0210194" quat="0.664492 -0.241766 0.243673 0.663795" type="capsule" rgba="0.62 0.62 0.66 1"/>
+                      </body>
+                      <body name="right_outer_knuckle" pos="0 -0.035 0.059098">
+                        <inertial pos="0 -0.021559 0.015181" quat="0.87842 0.47789 0 0" mass="0.033618" diaginertia="1.9111e-05 1.79089e-05 1.90167e-06"/>
+                        <joint name="right_driver_joint" class="driver" pos="0 0 0" axis="-1 0 0"/>
+                        <geom size="0.00986793 0.0312157" pos="0 -0.0114433 0.0143573" quat="0.876126 0.482083 0 0" type="capsule" rgba="0.3 0.55 0.85 1"/>
+                        <body name="right_finger" pos="0 -0.035465 0.042039">
+                          <inertial pos="0 0.016413 0.029258" quat="0.697634 -0.115356 0.115356 0.697634" mass="0.048304" diaginertia="1.88038e-05 1.7493e-05 3.56779e-06"/>
+                          <joint name="right_finger_joint" class="follower" pos="0 0 0" axis="1 0 0"/>
+                          <geom name="right_finger_pad_1" class="pad_box1" pos="0 0.024003 0.032" group="0" mass="0" rgba="0.3 0.55 0.85 1"/>
+                          <geom name="right_finger_pad_2" class="pad_box2" pos="0 0.024003 0.05" group="0" mass="0" rgba="0.3 0.55 0.85 1"/>
+                          <site name="right_finger_tip" pos="0 0.024003 0.05" size="0.008" rgba="1 0.85 0.15 1"/>
+                        </body>
+                      </body>
+                      <body name="right_inner_knuckle" pos="0 -0.02 0.074098">
+                        <inertial pos="1.866e-06 -0.022047 0.026133" quat="0.66415 0.242702 -0.242721 0.664144" mass="0.023013" diaginertia="8.34209e-06 6.0949e-06 2.75601e-06"/>
+                        <joint name="right_inner_knuckle_joint" class="spring_link" pos="0 0 0" axis="-1 0 0" springref="2.62"/>
+                        <geom size="0.00918849 0.0243166" pos="1.69654e-06 -0.0177324 0.0210193" quat="0.664194 0.242582 -0.242832 0.664103" type="capsule" rgba="0.62 0.62 0.66 1"/>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="OBJ:block" pos="0.479 0 0.332">
+      <joint name="block_free" type="free"/>
+      <geom name="block" size="0.02 0.02 0.02" type="box" friction="1.2" mass="0.05" rgba="0.85 0.25 0.2 1"/>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="link_base" body2="link1"/>
+    <exclude body1="left_outer_knuckle" body2="left_inner_knuckle"/>
+    <exclude body1="left_finger" body2="left_inner_knuckle"/>
+    <exclude body1="right_outer_knuckle" body2="right_inner_knuckle"/>
+    <exclude body1="right_finger" body2="right_inner_knuckle"/>
+  </contact>
+
+  <equality>
+    <connect body1="right_finger" body2="right_inner_knuckle" anchor="0 0.015 0.015" solref="0.005"/>
+    <connect body1="left_finger" body2="left_inner_knuckle" anchor="0 -0.015 0.015" solref="0.005"/>
+    <joint joint1="left_driver_joint" joint2="right_driver_joint" polycoef="0 1 0 0 0" solref="0.005"/>
+  </equality>
+
+  <tendon>
+    <fixed name="split">
+      <joint joint="right_driver_joint" coef="0.5"/>
+      <joint joint="left_driver_joint" coef="0.5"/>
+    </fixed>
+  </tendon>
+
+  <actuator>
+    <general name="act1" class="size1" joint="joint1"/>
+    <general name="act2" class="size1" joint="joint2" ctrlrange="-2.059 2.0944"/>
+    <general name="act3" class="size2" joint="joint3"/>
+    <general name="act4" class="size2" joint="joint4" ctrlrange="-0.19198 3.927"/>
+    <general name="act5" class="size2" joint="joint5"/>
+    <general name="act6" class="size3" joint="joint6" ctrlrange="-1.69297 3.14159"/>
+    <general name="act7" class="size3" joint="joint7"/>
+    <general name="gripper" tendon="split" ctrlrange="0 255" forcerange="-50 50" biastype="affine" gainprm="0.333" biasprm="0 -100 -10"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 -0.247 0 0.909 0 1.15644 0 0 0 0 0 0 0 0.479 0 0.332 1 0 0 0" ctrl="0 -0.247 0 0.909 0 1.15644 0 0"/>
+  </keyframe>
+</mujoco>

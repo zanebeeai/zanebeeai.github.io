@@ -1,0 +1,1176 @@
+{
+ "body": "mobile_crane",
+ "kind": "crane",
+ "free_base": true,
+ "L": 0.17014,
+ "T": 0.13169,
+ "modes": [
+  {
+   "name": "turret_yaw",
+   "part": "turret and both finger tips",
+   "plus": "Rotates the arm assembly about the turret toward positive yaw.",
+   "minus": "Rotates the arm assembly about the turret toward negative yaw.",
+   "toward": {
+    "turret_joint": 1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       0.003,
+       -0.028,
+       0.0
+      ],
+      "right_finger_tip": [
+       -0.003,
+       0.028,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.166,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       0.014,
+       -0.013,
+       0.0
+      ],
+      "right_finger_tip": [
+       -0.014,
+       0.013,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.014,
+       -0.013,
+       0.0
+      ],
+      "right_finger_tip": [
+       0.014,
+       0.013,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.003,
+       -0.028,
+       0.0
+      ],
+      "right_finger_tip": [
+       0.003,
+       0.028,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.166,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving turret_joint",
+   "kept": true
+  },
+  {
+   "name": "arm_forward",
+   "part": "upper arm and both finger tips",
+   "plus": "Moves both finger tips forward and downward from the upright home pose.",
+   "minus": "Moves both finger tips backward and downward from the upright home pose.",
+   "toward": {
+    "upper_arm_joint": 0.65
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.643,
+       0.0,
+       -0.512
+      ],
+      "right_finger_tip": [
+       -0.643,
+       0.0,
+       -0.512
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 4.831,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.411,
+       -0.0,
+       -0.144
+      ],
+      "right_finger_tip": [
+       -0.411,
+       0.0,
+       -0.144
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       0.411,
+       -0.0,
+       -0.144
+      ],
+      "right_finger_tip": [
+       0.411,
+       0.0,
+       -0.144
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       0.643,
+       0.0,
+       -0.512
+      ],
+      "right_finger_tip": [
+       0.643,
+       0.0,
+       -0.512
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 4.831,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "forearm_forward",
+   "part": "forearm and both finger tips",
+   "plus": "Bends the forearm forward, moving both finger tips forward and downward.",
+   "minus": "Bends the forearm backward, moving both finger tips backward and downward.",
+   "toward": {
+    "forearm_joint": 0.85
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.339,
+       0.0,
+       -0.482
+      ],
+      "right_finger_tip": [
+       -0.339,
+       0.0,
+       -0.482
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 3.463,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.295,
+       0.0,
+       -0.153
+      ],
+      "right_finger_tip": [
+       -0.295,
+       -0.0,
+       -0.153
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       0.295,
+       0.0,
+       -0.153
+      ],
+      "right_finger_tip": [
+       0.295,
+       -0.0,
+       -0.153
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       0.339,
+       0.0,
+       -0.482
+      ],
+      "right_finger_tip": [
+       0.339,
+       0.0,
+       -0.482
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 3.463,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "left_finger_left",
+   "part": "left_finger_tip",
+   "plus": "Slides the left finger outward toward positive y.",
+   "minus": "Keeps the left finger at its nearly closed home position.",
+   "toward": {
+    "left_finger_joint": 1.0
+   },
+   "away": {
+    "left_finger_joint": 0.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {},
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.0
+     }
+    },
+    "-0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       0.0,
+       0.031,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.017,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       0.0,
+       0.061,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.017,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.359,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 1.0
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving left_finger_joint",
+   "kept": true
+  },
+  {
+   "name": "right_finger_right",
+   "part": "right_finger_tip",
+   "plus": "Slides the right finger outward toward negative y.",
+   "minus": "Keeps the right finger at its nearly closed home position.",
+   "toward": {
+    "right_finger_joint": 1.0
+   },
+   "away": {
+    "right_finger_joint": 0.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {},
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.0
+     }
+    },
+    "-0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "right_finger_tip": [
+       0.0,
+       -0.031,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.017,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "right_finger_tip": [
+       0.0,
+       -0.061,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.017,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.359,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 1.0
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving right_finger_joint",
+   "kept": true
+  },
+  {
+   "name": "arm_fold_forward",
+   "part": "upper arm, forearm, palm and both finger tips",
+   "plus": "Leans the upper arm forward while counter-bending the forearm and palm, lowering both finger tips with a reduced forward excursion.",
+   "minus": "Leans the upper arm backward through a reduced range while counter-bending the forearm and palm, moving both finger tips backward and downward.",
+   "toward": {
+    "upper_arm_joint": 0.8,
+    "forearm_joint": -0.9,
+    "palm_joint": 0.18
+   },
+   "away": {
+    "upper_arm_joint": -0.6,
+    "forearm_joint": 0.675,
+    "palm_joint": -0.135
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.211,
+       -0.0,
+       -0.213
+      ],
+      "right_finger_tip": [
+       -0.211,
+       0.0,
+       -0.213
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.762,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.338
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.138,
+       -0.0,
+       -0.058
+      ],
+      "right_finger_tip": [
+       -0.138,
+       0.0,
+       -0.058
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       0.172,
+       0.0,
+       -0.101
+      ],
+      "right_finger_tip": [
+       0.172,
+       -0.0,
+       -0.101
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       0.203,
+       -0.0,
+       -0.343
+      ],
+      "right_finger_tip": [
+       0.203,
+       0.0,
+       -0.343
+      ]
+     },
+     "clear": {
+      "self": 0.0139,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 2.343,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.45
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 1,
+   "kept_by": "only mode driving palm_joint",
+   "kept": true
+  }
+ ],
+ "gaits": [
+  {
+   "name": "continuous_roll",
+   "cycle_s": 1.0536,
+   "duty": 1.0,
+   "phase": {
+    "left_wheel_tip": 0.0,
+    "right_wheel_tip": 0.0,
+    "front_caster_tip": 0.0,
+    "rear_caster_tip": 0.0
+   },
+   "step_L": 1.0,
+   "swing_height_L": 0.0,
+   "source": "llm",
+   "card": {
+    "forward": {
+     "advance_L": 13.022,
+     "side_L": 0.0,
+     "turn_deg": 0.0
+    },
+    "turn": {
+     "advance_L": -0.0,
+     "side_L": 0.0,
+     "turn_deg": 153.4
+    },
+    "lifts": {
+     "left_wheel_tip": 0,
+     "right_wheel_tip": 0,
+     "front_caster_tip": 0,
+     "rear_caster_tip": 0
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": 0
+  },
+  {
+   "name": "differential_drive",
+   "cycle_s": 0.1,
+   "duty": {
+    "left_wheel_tip": 1.0,
+    "right_wheel_tip": 1.0,
+    "front_caster_tip": 1.0,
+    "rear_caster_tip": 1.0
+   },
+   "phase": {
+    "left_wheel_tip": 0.0,
+    "right_wheel_tip": 0.0,
+    "front_caster_tip": 0.0,
+    "rear_caster_tip": 0.0
+   },
+   "step_L": 0.25,
+   "swing_height_L": 0.08,
+   "source": "intake",
+   "card": {
+    "forward": {
+     "advance_L": 7.309,
+     "side_L": 0.0,
+     "turn_deg": 0.0
+    },
+    "turn": {
+     "advance_L": 0.0,
+     "side_L": -0.0,
+     "turn_deg": 86.6
+    },
+    "lifts": {
+     "left_wheel_tip": 0,
+     "right_wheel_tip": 0,
+     "front_caster_tip": 0,
+     "rear_caster_tip": 0
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": null
+  },
+  {
+   "name": "drive",
+   "cycle_s": 0.3292,
+   "duty": {
+    "left_wheel_tip": 1.0,
+    "right_wheel_tip": 1.0,
+    "front_caster_tip": 1.0,
+    "rear_caster_tip": 1.0
+   },
+   "phase": {
+    "left_wheel_tip": 0.0,
+    "right_wheel_tip": 0.0,
+    "front_caster_tip": 0.0,
+    "rear_caster_tip": 0.0
+   },
+   "step_L": 0.25,
+   "swing_height_L": 0.08,
+   "source": "intake",
+   "card": {
+    "forward": {
+     "advance_L": 6.656,
+     "side_L": 0.0,
+     "turn_deg": 0.0
+    },
+    "turn": {
+     "advance_L": -0.0,
+     "side_L": -0.0,
+     "turn_deg": 78.9
+    },
+    "lifts": {
+     "left_wheel_tip": 0,
+     "right_wheel_tip": 0,
+     "front_caster_tip": 0,
+     "rear_caster_tip": 0
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": null
+  }
+ ],
+ "rejected": {
+  "modes": [
+   {
+    "name": "palm_forward",
+    "part": "palm and both finger tips",
+    "plus": "Tilts the palm forward, moving both finger tips forward and downward.",
+    "minus": "Tilts the palm backward, moving both finger tips backward and downward.",
+    "toward": {
+     "palm_joint": 0.75
+    },
+    "cards": {
+     "-1": {
+      "tips": {
+       "left_finger_tip": [
+        -0.1,
+        0.0,
+        -0.098
+       ],
+       "right_finger_tip": [
+        -0.1,
+        0.0,
+        -0.098
+       ]
+      },
+      "clear": {
+       "self": 0.0139,
+       "ground": 0.017
+      },
+      "fail": [],
+      "base": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg": [
+       0.0,
+       -0.0,
+       0.0
+      ],
+      "size": {
+       "tip_L": 0.823,
+       "base_L": 0.0,
+       "turn_deg": 0.0,
+       "joint_range_share": 0.375
+      }
+     },
+     "-0.5": {
+      "tips": {
+       "left_finger_tip": [
+        -0.07,
+        0.0,
+        -0.029
+       ],
+       "right_finger_tip": [
+        -0.07,
+        0.0,
+        -0.029
+       ]
+      },
+      "clear": {
+       "self": 0.0139,
+       "ground": 0.017
+      },
+      "fail": [],
+      "base": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg": [
+       0.0,
+       -0.0,
+       0.0
+      ]
+     },
+     "0.5": {
+      "tips": {
+       "left_finger_tip": [
+        0.07,
+        0.0,
+        -0.029
+       ],
+       "right_finger_tip": [
+        0.07,
+        0.0,
+        -0.029
+       ]
+      },
+      "clear": {
+       "self": 0.0139,
+       "ground": 0.017
+      },
+      "fail": [],
+      "base": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg": [
+       0.0,
+       -0.0,
+       0.0
+      ]
+     },
+     "1": {
+      "tips": {
+       "left_finger_tip": [
+        0.1,
+        0.0,
+        -0.098
+       ],
+       "right_finger_tip": [
+        0.1,
+        0.0,
+        -0.098
+       ]
+      },
+      "clear": {
+       "self": 0.0139,
+       "ground": 0.017
+      },
+      "fail": [],
+      "base": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg": [
+       0.0,
+       -0.0,
+       0.0
+      ],
+      "size": {
+       "tip_L": 0.823,
+       "base_L": 0.0,
+       "turn_deg": 0.0,
+       "joint_range_share": 0.375
+      }
+     }
+    },
+    "valid": true,
+    "fail": [],
+    "small": false,
+    "round": 1,
+    "kept": false,
+    "why": "no coverage loss without it"
+   }
+  ],
+  "gaits": []
+ },
+ "coverage": {
+  "left_wheel_tip": 1.0,
+  "right_wheel_tip": 1.0,
+  "front_caster_tip": 1.0,
+  "rear_caster_tip": 1.0,
+  "left_finger_tip": 0.5479,
+  "right_finger_tip": 0.5503
+ },
+ "coverage_valid": {
+  "left_wheel_tip": 1.0,
+  "right_wheel_tip": 1.0,
+  "front_caster_tip": 1.0,
+  "rear_caster_tip": 1.0,
+  "left_finger_tip": 0.5884,
+  "right_finger_tip": 0.5823
+ },
+ "coverage_ceiling": {
+  "left_wheel_tip": 1.0,
+  "right_wheel_tip": 1.0,
+  "front_caster_tip": 1.0,
+  "rear_caster_tip": 1.0,
+  "left_finger_tip": 0.9031,
+  "right_finger_tip": 0.9016
+ },
+ "selection": [
+  {
+   "start": [
+    "turret_yaw",
+    "arm_forward",
+    "forearm_forward",
+    "palm_forward",
+    "left_finger_left",
+    "right_finger_right",
+    "arm_fold_forward"
+   ],
+   "mean_coverage": 0.8618
+  },
+  {
+   "drop": "palm_forward",
+   "mean_coverage": 0.8497,
+   "loss": 0.0121
+  }
+ ],
+ "counts": {
+  "modes_final": 7,
+  "modes_valid": 7,
+  "modes_usable": 7,
+  "modes_kept": 6,
+  "gaits_llm_valid": 1,
+  "gaits_llm": 1,
+  "gaits_intake_valid": 2,
+  "gaits_intake": 2,
+  "modes_proposed": 7
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "modes": 7,
+   "modes_valid": 5,
+   "modes_small": 0,
+   "gaits": 1,
+   "gaits_valid": 1
+  },
+  {
+   "round": 1,
+   "modes": 2,
+   "modes_valid": 2,
+   "modes_small": 0,
+   "gaits": 0,
+   "gaits_valid": 0
+  }
+ ],
+ "calls": 2,
+ "cost_usd": 0.012781,
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "prompt_sha": "6d1d19d0e639",
+ "description_sha": "4211d23bf123",
+ "seconds": 50.6,
+ "made": "2026-11-12T02:35:41",
+ "method": "track/kin/primitives.py (see its docstring)"
+}

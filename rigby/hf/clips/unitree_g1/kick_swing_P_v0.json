@@ -1,0 +1,673 @@
+{
+ "body": "unitree_g1",
+ "skill": "kick_swing",
+ "arm": "P",
+ "variant": 0,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/unitree_g1.json",
+ "library_sha": "4f06c5f511a6092f4bfe0588fcd7fd67adabc023274b1fb66a041ebd4c2faa64",
+ "standin_library": false,
+ "prompt_sha256": "7b899b94bd825d4021333d4c63fd628dbd8633362341121a61fea295837e05c5",
+ "prompt_chars": 39356,
+ "valid": true,
+ "valid_first": false,
+ "repair_rounds": 1,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.007
+  },
+  "ground": {
+   "pass": false,
+   "worst_m": 0.0302,
+   "body_frame": [
+    "left_ankle_roll_link",
+    32
+   ],
+   "limit_m": 0.007
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0352
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1015,
+   "limit_rad": 0.1494
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0703
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.0314,
+   "worst_off_ground_m": 0.051,
+   "limit_m": 0.0141
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 13,
+   "worst_outside_m": 0.1256,
+   "limit_m": 0.0703
+  },
+  "pass": false,
+  "failed": [
+   "ground",
+   "foot_slip",
+   "support"
+  ]
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.007
+    },
+    "ground": {
+     "pass": false,
+     "worst_m": 0.0302,
+     "body_frame": [
+      "left_ankle_roll_link",
+      32
+     ],
+     "limit_m": 0.007
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0352
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.1015,
+     "limit_rad": 0.1494
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0703
+    },
+    "foot_slip": {
+     "pass": false,
+     "worst_slide_m": 0.0314,
+     "worst_off_ground_m": 0.051,
+     "limit_m": 0.0141
+    },
+    "support": {
+     "pass": false,
+     "frames_outside": 13,
+     "worst_outside_m": 0.1256,
+     "limit_m": 0.0703
+    },
+    "pass": false,
+    "failed": [
+     "ground",
+     "foot_slip",
+     "support"
+    ]
+   },
+   "program": {
+    "duration_s": 4.2,
+    "keyframes": [
+     {
+      "t": 0,
+      "stance": [
+       "left_ankle_roll_link",
+       "right_ankle_roll_link"
+      ],
+      "modes": {
+       "trunk_left": 0,
+       "trunk_lower": 0,
+       "trunk_pitch_forward": 0,
+       "right_sole_forward": 0,
+       "right_sole_up": 0,
+       "left_wrist_up": 0,
+       "right_wrist_up": 0,
+       "left_wrist_outward": 0,
+       "right_wrist_outward": 0
+      }
+     },
+     {
+      "t": 0.65,
+      "modes": {
+       "trunk_left": 0.65,
+       "trunk_lower": 0.18,
+       "trunk_pitch_forward": 0.06,
+       "left_wrist_up": 0.12,
+       "right_wrist_up": -0.12,
+       "left_wrist_outward": 0.2,
+       "right_wrist_outward": 0.22
+      }
+     },
+     {
+      "t": 0.85,
+      "stance": [
+       "left_ankle_roll_link"
+      ],
+      "modes": {
+       "trunk_left": 0.72,
+       "trunk_lower": 0.18
+      }
+     },
+     {
+      "t": 1.45,
+      "modes": {
+       "right_sole_up": 0.62,
+       "right_sole_forward": -0.12,
+       "trunk_left": 0.74,
+       "trunk_lower": 0.16,
+       "trunk_pitch_forward": 0.1,
+       "left_wrist_up": 0.22,
+       "right_wrist_up": -0.2,
+       "left_wrist_outward": 0.26,
+       "right_wrist_outward": 0.3
+      }
+     },
+     {
+      "t": 1.65,
+      "modes": {
+       "right_sole_up": 0.6,
+       "right_sole_forward": -0.1
+      }
+     },
+     {
+      "t": 2.06,
+      "modes": {
+       "right_sole_up": 0.08,
+       "right_sole_forward": 0.95,
+       "trunk_left": 0.72,
+       "trunk_lower": 0.12,
+       "trunk_pitch_forward": -0.1,
+       "left_wrist_up": -0.16,
+       "right_wrist_up": 0.27,
+       "left_wrist_outward": 0.32,
+       "right_wrist_outward": 0.23
+      }
+     },
+     {
+      "t": 2.23,
+      "modes": {
+       "right_sole_up": 0.12,
+       "right_sole_forward": 0.9
+      }
+     },
+     {
+      "t": 2.78,
+      "modes": {
+       "right_sole_up": 0.57,
+       "right_sole_forward": 0.02,
+       "trunk_left": 0.72,
+       "trunk_lower": 0.16,
+       "trunk_pitch_forward": 0.04,
+       "left_wrist_up": 0.08,
+       "right_wrist_up": 0.06,
+       "left_wrist_outward": 0.2,
+       "right_wrist_outward": 0.23
+      }
+     },
+     {
+      "t": 3.45,
+      "modes": {
+       "right_sole_up": 0,
+       "right_sole_forward": 0,
+       "trunk_left": 0.67,
+       "trunk_lower": 0,
+       "trunk_pitch_forward": 0,
+       "left_wrist_up": 0,
+       "right_wrist_up": 0,
+       "left_wrist_outward": 0.1,
+       "right_wrist_outward": 0.1
+      }
+     },
+     {
+      "t": 3.6,
+      "stance": [
+       "left_ankle_roll_link",
+       "right_ankle_roll_link"
+      ]
+     },
+     {
+      "t": 4.2,
+      "modes": {
+       "trunk_left": 0,
+       "trunk_lower": 0,
+       "trunk_pitch_forward": 0,
+       "left_wrist_up": 0,
+       "right_wrist_up": 0,
+       "left_wrist_outward": 0,
+       "right_wrist_outward": 0
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 4.2,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"stance\": [\"left_ankle_roll_link\", \"right_ankle_roll_link\"],\n      \"modes\": {\n        \"trunk_left\": 0,\n        \"trunk_lower\": 0,\n        \"trunk_pitch_forward\": 0,\n        \"right_sole_forward\": 0,\n        \"right_sole_up\": 0,\n        \"left_wrist_up\": 0,\n        \"right_wrist_up\": 0,\n        \"left_wrist_outward\": 0,\n        \"right_wrist_outward\": 0\n      }\n    },\n    {\n      \"t\": 0.65,\n      \"modes\": {\n        \"trunk_left\": 0.65,\n        \"trunk_lower\": 0.18,\n        \"trunk_pitch_forward\": 0.06,\n        \"left_wrist_up\": 0.12,\n        \"right_wrist_up\": -0.12,\n        \"left_wrist_outward\": 0.2,\n        \"right_wrist_outward\": 0.22\n      }\n    },\n    {\n      \"t\": 0.85,\n      \"stance\": [\"left_ankle_roll_link\"],\n      \"modes\": {\n        \"trunk_left\": 0.72,\n        \"trunk_lower\": 0.18\n      }\n    },\n    {\n      \"t\": 1.45,\n      \"modes\": {\n        \"right_sole_up\": 0.62,\n        \"right_sole_forward\": -0.12,\n        \"trunk_left\": 0.74,\n        \"trunk_lower\": 0.16,\n        \"trunk_pitch_forward\": 0.1,\n        \"left_wrist_up\": 0.22,\n        \"right_wrist_up\": -0.2,\n        \"left_wrist_outward\": 0.26,\n        \"right_wrist_outward\": 0.3\n      }\n    },\n    {\n      \"t\": 1.65,\n      \"modes\": {\n        \"right_sole_up\": 0.6,\n        \"right_sole_forward\": -0.1\n      }\n    },\n    {\n      \"t\": 2.06,\n      \"modes\": {\n        \"right_sole_up\": 0.08,\n        \"right_sole_forward\": 0.95,\n        \"trunk_left\": 0.72,\n        \"trunk_lower\": 0.12,\n        \"trunk_pitch_forward\": -0.1,\n        \"left_wrist_up\": -0.16,\n        \"right_wrist_up\": 0.27,\n        \"left_wrist_outward\": 0.32,\n        \"right_wrist_outward\": 0.23\n      }\n    },\n    {\n      \"t\": 2.23,\n      \"modes\": {\n        \"right_sole_up\": 0.12,\n        \"right_sole_forward\": 0.9\n      }\n    },\n    {\n      \"t\": 2.78,\n      \"modes\": {\n        \"right_sole_up\": 0.57,\n        \"right_sole_forward\": 0.02,\n        \"trunk_left\": 0.72,\n        \"trunk_lower\": 0.16,\n        \"trunk_pitch_forward\": 0.04,\n        \"left_wrist_up\": 0.08,\n        \"right_wrist_up\": 0.06,\n        \"left_wrist_outward\": 0.2,\n        \"right_wrist_outward\": 0.23\n      }\n    },\n    {\n      \"t\": 3.45,\n      \"modes\": {\n        \"right_sole_up\": 0,\n        \"right_sole_forward\": 0,\n        \"trunk_left\": 0.67,\n        \"trunk_lower\": 0,\n        \"trunk_pitch_forward\": 0,\n        \"left_wrist_up\": 0,\n        \"right_wrist_up\": 0,\n        \"left_wrist_outward\": 0.1,\n        \"right_wrist_outward\": 0.1\n      }\n    },\n    {\n      \"t\": 3.6,\n      \"stance\": [\"left_ankle_roll_link\", \"right_ankle_roll_link\"]\n    },\n    {\n      \"t\": 4.2,\n      \"modes\": {\n        \"trunk_left\": 0,\n        \"trunk_lower\": 0,\n        \"trunk_pitch_forward\": 0,\n        \"left_wrist_up\": 0,\n        \"right_wrist_up\": 0,\n        \"left_wrist_outward\": 0,\n        \"right_wrist_outward\": 0\n      }\n    }\n  ]\n}"
+  },
+  {
+   "round": 1,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.007
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0033,
+     "body_frame": [
+      "right_ankle_roll_link",
+      2
+     ],
+     "limit_m": 0.007
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0352
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.1419,
+     "limit_rad": 0.1494
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0703
+    },
+    "foot_slip": {
+     "pass": true,
+     "worst_slide_m": 0.0011,
+     "worst_off_ground_m": 0.0042,
+     "limit_m": 0.0141
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.0703
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 4.4,
+    "keyframes": [
+     {
+      "t": 0,
+      "stance": [
+       "left_ankle_roll_link",
+       "right_ankle_roll_link"
+      ],
+      "modes": {
+       "trunk_left": 0,
+       "right_sole_forward": 0,
+       "right_sole_up": 0,
+       "left_wrist_up": 0,
+       "right_wrist_up": 0,
+       "left_wrist_outward": 0,
+       "right_wrist_outward": 0
+      }
+     },
+     {
+      "t": 0.75,
+      "modes": {
+       "trunk_left": 0.25,
+       "left_wrist_up": 0.08,
+       "right_wrist_up": -0.08,
+       "left_wrist_outward": 0.15,
+       "right_wrist_outward": 0.15
+      }
+     },
+     {
+      "t": 1.0,
+      "stance": [
+       "left_ankle_roll_link"
+      ],
+      "modes": {
+       "trunk_left": 0.25,
+       "right_sole_forward": 0,
+       "right_sole_up": 0
+      }
+     },
+     {
+      "t": 1.65,
+      "modes": {
+       "trunk_left": 0.25,
+       "right_sole_forward": -0.12,
+       "right_sole_up": 0.45,
+       "left_wrist_up": 0.18,
+       "right_wrist_up": -0.15,
+       "left_wrist_outward": 0.2,
+       "right_wrist_outward": 0.2
+      }
+     },
+     {
+      "t": 1.85,
+      "modes": {
+       "right_sole_forward": -0.1,
+       "right_sole_up": 0.45
+      }
+     },
+     {
+      "t": 2.3,
+      "modes": {
+       "trunk_left": 0.25,
+       "right_sole_forward": 0.85,
+       "right_sole_up": 0.05,
+       "left_wrist_up": -0.12,
+       "right_wrist_up": 0.2,
+       "left_wrist_outward": 0.2,
+       "right_wrist_outward": 0.18
+      }
+     },
+     {
+      "t": 2.45,
+      "modes": {
+       "right_sole_forward": 0.8,
+       "right_sole_up": 0.08
+      }
+     },
+     {
+      "t": 3.05,
+      "modes": {
+       "right_sole_forward": 0,
+       "right_sole_up": 0.42,
+       "left_wrist_up": 0.05,
+       "right_wrist_up": 0.05,
+       "left_wrist_outward": 0.15,
+       "right_wrist_outward": 0.15
+      }
+     },
+     {
+      "t": 3.7,
+      "modes": {
+       "trunk_left": 0.25,
+       "right_sole_forward": 0,
+       "right_sole_up": 0,
+       "left_wrist_up": 0,
+       "right_wrist_up": 0,
+       "left_wrist_outward": 0.08,
+       "right_wrist_outward": 0.08
+      }
+     },
+     {
+      "t": 3.85,
+      "stance": [
+       "left_ankle_roll_link",
+       "right_ankle_roll_link"
+      ]
+     },
+     {
+      "t": 4.4,
+      "modes": {
+       "trunk_left": 0,
+       "right_sole_forward": 0,
+       "right_sole_up": 0,
+       "left_wrist_up": 0,
+       "right_wrist_up": 0,
+       "left_wrist_outward": 0,
+       "right_wrist_outward": 0
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 4.4,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"stance\": [\"left_ankle_roll_link\", \"right_ankle_roll_link\"],\n      \"modes\": {\n        \"trunk_left\": 0,\n        \"right_sole_forward\": 0,\n        \"right_sole_up\": 0,\n        \"left_wrist_up\": 0,\n        \"right_wrist_up\": 0,\n        \"left_wrist_outward\": 0,\n        \"right_wrist_outward\": 0\n      }\n    },\n    {\n      \"t\": 0.75,\n      \"modes\": {\n        \"trunk_left\": 0.25,\n        \"left_wrist_up\": 0.08,\n        \"right_wrist_up\": -0.08,\n        \"left_wrist_outward\": 0.15,\n        \"right_wrist_outward\": 0.15\n      }\n    },\n    {\n      \"t\": 1.0,\n      \"stance\": [\"left_ankle_roll_link\"],\n      \"modes\": {\n        \"trunk_left\": 0.25,\n        \"right_sole_forward\": 0,\n        \"right_sole_up\": 0\n      }\n    },\n    {\n      \"t\": 1.65,\n      \"modes\": {\n        \"trunk_left\": 0.25,\n        \"right_sole_forward\": -0.12,\n        \"right_sole_up\": 0.45,\n        \"left_wrist_up\": 0.18,\n        \"right_wrist_up\": -0.15,\n        \"left_wrist_outward\": 0.2,\n        \"right_wrist_outward\": 0.2\n      }\n    },\n    {\n      \"t\": 1.85,\n      \"modes\": {\n        \"right_sole_forward\": -0.1,\n        \"right_sole_up\": 0.45\n      }\n    },\n    {\n      \"t\": 2.3,\n      \"modes\": {\n        \"trunk_left\": 0.25,\n        \"right_sole_forward\": 0.85,\n        \"right_sole_up\": 0.05,\n        \"left_wrist_up\": -0.12,\n        \"right_wrist_up\": 0.2,\n        \"left_wrist_outward\": 0.2,\n        \"right_wrist_outward\": 0.18\n      }\n    },\n    {\n      \"t\": 2.45,\n      \"modes\": {\n        \"right_sole_forward\": 0.8,\n        \"right_sole_up\": 0.08\n      }\n    },\n    {\n      \"t\": 3.05,\n      \"modes\": {\n        \"right_sole_forward\": 0,\n        \"right_sole_up\": 0.42,\n        \"left_wrist_up\": 0.05,\n        \"right_wrist_up\": 0.05,\n        \"left_wrist_outward\": 0.15,\n        \"right_wrist_outward\": 0.15\n      }\n    },\n    {\n      \"t\": 3.7,\n      \"modes\": {\n        \"trunk_left\": 0.25,\n        \"right_sole_forward\": 0,\n        \"right_sole_up\": 0,\n        \"left_wrist_up\": 0,\n        \"right_wrist_up\": 0,\n        \"left_wrist_outward\": 0.08,\n        \"right_wrist_outward\": 0.08\n      }\n    },\n    {\n      \"t\": 3.85,\n      \"stance\": [\"left_ankle_roll_link\", \"right_ankle_roll_link\"]\n    },\n    {\n      \"t\": 4.4,\n      \"modes\": {\n        \"trunk_left\": 0,\n        \"right_sole_forward\": 0,\n        \"right_sole_up\": 0,\n        \"left_wrist_up\": 0,\n        \"right_wrist_up\": 0,\n        \"left_wrist_outward\": 0,\n        \"right_wrist_outward\": 0\n      }\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [
+  "The program compiled, but the motion failed these checks:\n- ground: a part of the body went 0.0302 m into the floor or the table (limit 0.007 m): ('left_ankle_roll_link', 32) (body, frame)\n- foot_slip: a tip in stance slid 0.0314 m or left the floor by 0.051 m (limit 0.0141 m): the base moved too far from the planted tips\n- support: the centre of mass was outside the stance polygon by up to 0.1256 m on 13 frames (allowed 0.0703 m)\n- ground: worst at t=0.64s (left_ankle_roll_link)\n- foot_slip: worst on tip left_ankle_roll_link at t=0.64s\nNumbers: {\"ground\":{\"worst_m\":0.0302,\"body_frame\":[\"left_ankle_roll_link\",32],\"limit_m\":0.007},\"foot_slip\":{\"worst_slide_m\":0.0314,\"worst_off_ground_m\":0.051,\"limit_m\":0.0141},\"support\":{\"frames_outside\":13,\"worst_outside_m\":0.1256,\"limit_m\":0.0703}}\nWrite the whole program again so that every check passes, still doing what was asked. JSON only."
+ ],
+ "calls": 2,
+ "call_log": [
+  {
+   "prompt_tokens": 14147,
+   "cached_tokens": 0,
+   "completion_tokens": 1033,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.019312,
+   "service_tier": "flex",
+   "seconds": 16.73
+  },
+  {
+   "prompt_tokens": 15472,
+   "cached_tokens": 14144,
+   "completion_tokens": 946,
+   "reasoning_tokens": 40,
+   "cost_usd": 0.006765,
+   "service_tier": "flex",
+   "seconds": 15.98
+  }
+ ],
+ "cost_usd": 0.026077,
+ "seconds": 39.3,
+ "at": "2026-11-12T02:28:21",
+ "predicate": {
+  "skill": "kick_swing",
+  "applicable": true,
+  "pass": false,
+  "tip": "right_ankle_roll_link_tip",
+  "forward_L": 0.2366,
+  "peak_speed_L_per_T": 0.3575,
+  "return_L": 0.0122
+ },
+ "valid_and_semantic": false,
+ "program": {
+  "duration_s": 4.4,
+  "keyframes": [
+   {
+    "t": 0,
+    "stance": [
+     "left_ankle_roll_link",
+     "right_ankle_roll_link"
+    ],
+    "modes": {
+     "trunk_left": 0,
+     "right_sole_forward": 0,
+     "right_sole_up": 0,
+     "left_wrist_up": 0,
+     "right_wrist_up": 0,
+     "left_wrist_outward": 0,
+     "right_wrist_outward": 0
+    }
+   },
+   {
+    "t": 0.75,
+    "modes": {
+     "trunk_left": 0.25,
+     "left_wrist_up": 0.08,
+     "right_wrist_up": -0.08,
+     "left_wrist_outward": 0.15,
+     "right_wrist_outward": 0.15
+    }
+   },
+   {
+    "t": 1.0,
+    "stance": [
+     "left_ankle_roll_link"
+    ],
+    "modes": {
+     "trunk_left": 0.25,
+     "right_sole_forward": 0,
+     "right_sole_up": 0
+    }
+   },
+   {
+    "t": 1.65,
+    "modes": {
+     "trunk_left": 0.25,
+     "right_sole_forward": -0.12,
+     "right_sole_up": 0.45,
+     "left_wrist_up": 0.18,
+     "right_wrist_up": -0.15,
+     "left_wrist_outward": 0.2,
+     "right_wrist_outward": 0.2
+    }
+   },
+   {
+    "t": 1.85,
+    "modes": {
+     "right_sole_forward": -0.1,
+     "right_sole_up": 0.45
+    }
+   },
+   {
+    "t": 2.3,
+    "modes": {
+     "trunk_left": 0.25,
+     "right_sole_forward": 0.85,
+     "right_sole_up": 0.05,
+     "left_wrist_up": -0.12,
+     "right_wrist_up": 0.2,
+     "left_wrist_outward": 0.2,
+     "right_wrist_outward": 0.18
+    }
+   },
+   {
+    "t": 2.45,
+    "modes": {
+     "right_sole_forward": 0.8,
+     "right_sole_up": 0.08
+    }
+   },
+   {
+    "t": 3.05,
+    "modes": {
+     "right_sole_forward": 0,
+     "right_sole_up": 0.42,
+     "left_wrist_up": 0.05,
+     "right_wrist_up": 0.05,
+     "left_wrist_outward": 0.15,
+     "right_wrist_outward": 0.15
+    }
+   },
+   {
+    "t": 3.7,
+    "modes": {
+     "trunk_left": 0.25,
+     "right_sole_forward": 0,
+     "right_sole_up": 0,
+     "left_wrist_up": 0,
+     "right_wrist_up": 0,
+     "left_wrist_outward": 0.08,
+     "right_wrist_outward": 0.08
+    }
+   },
+   {
+    "t": 3.85,
+    "stance": [
+     "left_ankle_roll_link",
+     "right_ankle_roll_link"
+    ]
+   },
+   {
+    "t": 4.4,
+    "modes": {
+     "trunk_left": 0,
+     "right_sole_forward": 0,
+     "right_sole_up": 0,
+     "left_wrist_up": 0,
+     "right_wrist_up": 0,
+     "left_wrist_outward": 0,
+     "right_wrist_outward": 0
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.007
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0033,
+   "body_frame": [
+    "right_ankle_roll_link",
+    2
+   ],
+   "limit_m": 0.007
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0352
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1419,
+   "limit_rad": 0.1494
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0703
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0011,
+   "worst_off_ground_m": 0.0042,
+   "limit_m": 0.0141
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0703
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": 5,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.1494,
+   "start_joints_moved_inside_range": [
+    "left_knee_joint",
+    "right_knee_joint"
+   ],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0,
+   "gait_cmd_scale_min": 1.0,
+   "com_shift_max_m": 0.2992
+  },
+  "notes": [],
+  "gaits": []
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/unitree_g1/clips/kick_swing_P_v0.npz"
+}

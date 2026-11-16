@@ -1,0 +1,996 @@
+{
+ "body": "franka_emika_panda",
+ "kind": "arm",
+ "free_base": false,
+ "L": 0.9635,
+ "T": 0.31339,
+ "modes": [
+  {
+   "name": "arm_sweep_left",
+   "part": "arm",
+   "plus": "Sweeps both tips left and backward around the base.",
+   "minus": "Sweeps both tips right and backward around the base.",
+   "toward": {
+    "joint1": 0.85,
+    "joint3": -0.2
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.708,
+       -0.59,
+       -0.0
+      ],
+      "right_finger_tip": [
+       -0.61,
+       -0.51,
+       -0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.957,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.214,
+       -0.463,
+       0.0
+      ],
+      "right_finger_tip": [
+       -0.184,
+       -0.4,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.223,
+       0.459,
+       0.0
+      ],
+      "right_finger_tip": [
+       -0.193,
+       0.396,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.719,
+       0.577,
+       -0.0
+      ],
+      "right_finger_tip": [
+       -0.621,
+       0.497,
+       -0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.957,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "forearm_sweep_left",
+   "part": "arm",
+   "plus": "Sweeps both tips left and backward using the intermediate arm joint, with counterrotation at the base.",
+   "minus": "Sweeps both tips right and backward using the intermediate arm joint, with counterrotation at the base.",
+   "toward": {
+    "joint3": 0.85,
+    "joint1": -0.2
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.708,
+       -0.59,
+       0.0
+      ],
+      "right_finger_tip": [
+       -0.61,
+       -0.51,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.957,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.214,
+       -0.463,
+       0.0
+      ],
+      "right_finger_tip": [
+       -0.184,
+       -0.4,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.223,
+       0.459,
+       0.0
+      ],
+      "right_finger_tip": [
+       -0.193,
+       0.396,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.719,
+       0.577,
+       0.0
+      ],
+      "right_finger_tip": [
+       -0.621,
+       0.497,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.957,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "arm_raise_back",
+   "part": "arm",
+   "plus": "Raises both tips and draws them backward by pitching the arm at the shoulder.",
+   "minus": "Lowers both tips with a small forward displacement.",
+   "toward": {
+    "joint2": -0.85
+   },
+   "away": {
+    "joint2": 0.22
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       0.026,
+       0.0,
+       -0.224
+      ],
+      "right_finger_tip": [
+       0.032,
+       0.0,
+       -0.195
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.234,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.11
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       0.023,
+       0.0,
+       -0.111
+      ],
+      "right_finger_tip": [
+       0.025,
+       0.0,
+       -0.096
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.26,
+       0.0,
+       0.342
+      ],
+      "right_finger_tip": [
+       -0.241,
+       0.0,
+       0.289
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.68,
+       0.0,
+       0.434
+      ],
+      "right_finger_tip": [
+       -0.611,
+       0.0,
+       0.353
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.837,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving joint2",
+   "kept": true
+  },
+  {
+   "name": "forearm_raise",
+   "part": "arm",
+   "plus": "Raises both tips while folding the forearm backward.",
+   "minus": "Lowers both tips and draws them slightly backward.",
+   "toward": {
+    "joint4": 0.85
+   },
+   "away": {
+    "joint4": -0.32
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.109,
+       -0.0,
+       -0.21
+      ],
+      "right_finger_tip": [
+       -0.101,
+       0.0,
+       -0.175
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.246,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.16
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.043,
+       0.0,
+       -0.111
+      ],
+      "right_finger_tip": [
+       -0.041,
+       0.0,
+       -0.093
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.014,
+       -0.0,
+       0.313
+      ],
+      "right_finger_tip": [
+       -0.0,
+       -0.0,
+       0.267
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.203,
+       -0.0,
+       0.562
+      ],
+      "right_finger_tip": [
+       -0.151,
+       0.0,
+       0.486
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.62,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving joint4",
+   "kept": true
+  },
+  {
+   "name": "wrist_arc_left_up",
+   "part": "left_finger_tip and right_finger_tip",
+   "plus": "Arcs both tips left and upward around the forearm axis.",
+   "minus": "Arcs both tips right and upward around the forearm axis.",
+   "toward": {
+    "joint5": 0.9
+   },
+   "away": {
+    "joint5": -0.9
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.0,
+       -0.147,
+       0.378
+      ],
+      "right_finger_tip": [
+       -0.0,
+       -0.147,
+       0.378
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.421,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.45
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.0,
+       -0.206,
+       0.137
+      ],
+      "right_finger_tip": [
+       -0.0,
+       -0.206,
+       0.137
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.0,
+       0.199,
+       0.148
+      ],
+      "right_finger_tip": [
+       -0.0,
+       0.199,
+       0.148
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.0,
+       0.127,
+       0.385
+      ],
+      "right_finger_tip": [
+       -0.0,
+       0.127,
+       0.385
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.421,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.45
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving joint5",
+   "kept": true
+  },
+  {
+   "name": "wrist_arc_forward_up",
+   "part": "left_finger_tip and right_finger_tip",
+   "plus": "Moves both tips forward and upward by pitching the wrist.",
+   "minus": "Moves both tips backward, ending above their home height.",
+   "toward": {
+    "joint6": 0.4
+   },
+   "away": {
+    "joint6": -0.9
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.307,
+       -0.0,
+       0.039
+      ],
+      "right_finger_tip": [
+       -0.245,
+       0.0,
+       0.118
+      ]
+     },
+     "clear": {
+      "self": 0.0098,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.321,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.375
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.16,
+       -0.0,
+       -0.034
+      ],
+      "right_finger_tip": [
+       -0.143,
+       -0.0,
+       0.017
+      ]
+     },
+     "clear": {
+      "self": 0.0306,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       0.076,
+       -0.0,
+       0.07
+      ],
+      "right_finger_tip": [
+       0.083,
+       -0.0,
+       0.037
+      ]
+     },
+     "clear": {
+      "self": 0.0282,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       0.117,
+       -0.0,
+       0.164
+      ],
+      "right_finger_tip": [
+       0.143,
+       0.0,
+       0.104
+      ]
+     },
+     "clear": {
+      "self": 0.0278,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.209,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.233
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving joint6",
+   "kept": true
+  },
+  {
+   "name": "fingers_rotate_about_wrist",
+   "part": "left_finger_tip and right_finger_tip",
+   "plus": "Rotates the finger pair in the horizontal plane, moving the left tip backward and the right tip forward.",
+   "minus": "Rotates the finger pair oppositely, with the left tip arcing left and backward and the right tip right and forward.",
+   "toward": {
+    "joint7": 0.95
+   },
+   "away": {
+    "joint7": -0.95
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.057,
+       0.032,
+       0.0
+      ],
+      "right_finger_tip": [
+       0.046,
+       -0.046,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0205,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.068,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.338
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.02,
+       0.03,
+       0.0
+      ],
+      "right_finger_tip": [
+       0.012,
+       -0.035,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.04,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.039,
+       -0.047,
+       0.0
+      ],
+      "right_finger_tip": [
+       0.05,
+       0.035,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0346,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.082,
+       -0.003,
+       0.0
+      ],
+      "right_finger_tip": [
+       0.08,
+       -0.019,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0114,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.085,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.612
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving joint7",
+   "kept": true
+  },
+  {
+   "name": "left_finger_tip_backward",
+   "part": "left_finger_tip",
+   "plus": "Slides the left fingertip backward toward the other fingertip.",
+   "minus": "Keeps the left fingertip at its home slide extension.",
+   "toward": {
+    "finger_joint1": -1.0
+   },
+   "away": {
+    "finger_joint1": 0.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {},
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.0
+     }
+    },
+    "-0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.009,
+       0.0,
+       0.0
+      ],
+      "right_finger_tip": [
+       0.009,
+       -0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.019,
+       0.0,
+       0.0
+      ],
+      "right_finger_tip": [
+       0.019,
+       -0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.02,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving finger_joint1",
+   "kept": true
+  },
+  {
+   "name": "right_finger_tip_forward",
+   "part": "right_finger_tip",
+   "plus": "Slides the right fingertip forward toward the other fingertip.",
+   "minus": "Keeps the right fingertip at its home slide extension.",
+   "toward": {
+    "finger_joint2": -1.0
+   },
+   "away": {
+    "finger_joint2": 0.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {},
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.0
+     }
+    },
+    "-0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_tip": [
+       -0.009,
+       0.0,
+       0.0
+      ],
+      "right_finger_tip": [
+       0.009,
+       -0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_tip": [
+       -0.019,
+       0.0,
+       0.0
+      ],
+      "right_finger_tip": [
+       0.019,
+       -0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.029,
+      "ground": 0.0964
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.02,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving finger_joint2",
+   "kept": true
+  }
+ ],
+ "gaits": [],
+ "rejected": {
+  "modes": [],
+  "gaits": []
+ },
+ "coverage": {
+  "left_finger_tip": 0.5483,
+  "right_finger_tip": 0.5234
+ },
+ "coverage_valid": {
+  "left_finger_tip": 0.5483,
+  "right_finger_tip": 0.5234
+ },
+ "coverage_ceiling": {
+  "left_finger_tip": 0.894,
+  "right_finger_tip": 0.8911
+ },
+ "selection": [
+  {
+   "start": [
+    "arm_sweep_left",
+    "forearm_sweep_left",
+    "arm_raise_back",
+    "forearm_raise",
+    "wrist_arc_left_up",
+    "wrist_arc_forward_up",
+    "fingers_rotate_about_wrist",
+    "left_finger_tip_backward",
+    "right_finger_tip_forward"
+   ],
+   "mean_coverage": 0.5358
+  }
+ ],
+ "counts": {
+  "modes_final": 9,
+  "modes_valid": 9,
+  "modes_usable": 9,
+  "modes_kept": 9,
+  "gaits_llm_valid": 0,
+  "gaits_llm": 0,
+  "gaits_intake_valid": 0,
+  "gaits_intake": 0,
+  "modes_proposed": 9
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "modes": 9,
+   "modes_valid": 9,
+   "modes_small": 0,
+   "gaits": 0,
+   "gaits_valid": 0
+  }
+ ],
+ "calls": 1,
+ "cost_usd": 0.01002,
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "prompt_sha": "6d1d19d0e639",
+ "description_sha": "c8ed7f0210e6",
+ "seconds": 52.2,
+ "made": "2026-11-12T01:00:06",
+ "method": "track/kin/primitives.py (see its docstring)"
+}

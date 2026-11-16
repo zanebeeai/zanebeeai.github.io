@@ -1,0 +1,317 @@
+{
+ "clip_id": "mobile_crane__drive__0101020",
+ "body": "mobile_crane",
+ "kind": "crane",
+ "source": "drive",
+ "seed": 101020,
+ "attempt_index": 20,
+ "skill": null,
+ "arm": "drive",
+ "compiler": "compile_program/J",
+ "variant": "wheels:spin_right+back",
+ "params": {
+  "speed_level": 1,
+  "segments": 2,
+  "base_offsets": true
+ },
+ "program": {
+  "duration_s": 6.97,
+  "arm": "J",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    }
+   },
+   {
+    "t": 0.2,
+    "frame": 10,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    }
+   },
+   {
+    "t": 0.63,
+    "frame": 32,
+    "joints": {
+     "left_wheel_joint": 0.15,
+     "right_wheel_joint": -0.15
+    },
+    "dz_L": -0.065,
+    "rpy": [
+     0.0,
+     -0.09948376736367678,
+     0.0
+    ]
+   },
+   {
+    "t": 2.77,
+    "frame": 138,
+    "joints": {
+     "left_wheel_joint": 0.15,
+     "right_wheel_joint": -0.15
+    }
+   },
+   {
+    "t": 3.28,
+    "frame": 164,
+    "joints": {
+     "left_wheel_joint": -0.25,
+     "right_wheel_joint": -0.25
+    },
+    "dz_L": -0.062,
+    "rpy": [
+     0.0,
+     0.005235987755982988,
+     0.0
+    ]
+   },
+   {
+    "t": 5.68,
+    "frame": 284,
+    "joints": {
+     "left_wheel_joint": -0.25,
+     "right_wheel_joint": -0.25
+    }
+   },
+   {
+    "t": 6.57,
+    "frame": 328,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    },
+    "dz_L": 0.0,
+    "rpy": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "t": 6.97,
+    "frame": 348
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 6.97,
+  "keyframes": [
+   {
+    "t": 0.0,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    }
+   },
+   {
+    "t": 0.2,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    }
+   },
+   {
+    "t": 0.63,
+    "joints": {
+     "left_wheel_joint": 0.15,
+     "right_wheel_joint": -0.15
+    },
+    "base": {
+     "dz_L": -0.065,
+     "rpy_deg": [
+      0.0,
+      -5.7,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 2.77,
+    "joints": {
+     "left_wheel_joint": 0.15,
+     "right_wheel_joint": -0.15
+    }
+   },
+   {
+    "t": 3.28,
+    "joints": {
+     "left_wheel_joint": -0.25,
+     "right_wheel_joint": -0.25
+    },
+    "base": {
+     "dz_L": -0.062,
+     "rpy_deg": [
+      0.0,
+      0.3,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 5.68,
+    "joints": {
+     "left_wheel_joint": -0.25,
+     "right_wheel_joint": -0.25
+    }
+   },
+   {
+    "t": 6.57,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    },
+    "base": {
+     "dz_L": 0.0,
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 6.97
+   }
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0017
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0001,
+   "body_frame": [
+    "rear_caster",
+    32
+   ],
+   "limit_m": 0.0017
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0085
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0721,
+   "limit_rad": 0.3037
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.017
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0001,
+   "limit_m": 0.0034
+  },
+  "wheel_slip": {
+   "pass": true,
+   "worst_roll_mismatch_m": 0.0,
+   "worst_side_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0034
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.017
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": false,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": false,
+  "tap_twice": false,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": true,
+ "duration_s": 6.96,
+ "n_frames": 349,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.3037,
+  "start_joints_moved_inside_range": [
+   "left_finger_joint",
+   "right_finger_joint"
+  ],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0,
+  "gait_cmd_scale_min": 1.0,
+  "com_shift_max_m": 0.0
+ },
+ "compile_notes": [],
+ "tips": [
+  "left_wheel_tip",
+  "right_wheel_tip",
+  "front_caster_tip",
+  "rear_caster_tip",
+  "left_finger_tip",
+  "right_finger_tip"
+ ],
+ "contact_edges": [
+  [
+   "left_wheel",
+   "floor"
+  ],
+  [
+   "right_wheel",
+   "floor"
+  ],
+  [
+   "front_caster_foot",
+   "floor"
+  ],
+  [
+   "rear_caster_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ],
+  [
+   "left_pad",
+   "floor"
+  ],
+  [
+   "right_pad",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 1.29
+}

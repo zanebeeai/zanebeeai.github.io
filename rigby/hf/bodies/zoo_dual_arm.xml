@@ -1,0 +1,118 @@
+<mujoco model="zoo_dual_arm">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast"/>
+
+  <size nkey="1"/>
+
+  <worldbody>
+    <geom size="0.16 0.001" pos="0 0 0.15" type="capsule"/>
+    <geom size="0.11 0.23 0.05" pos="0 0 0.05" type="box"/>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" rgba="0.32 0.34 0.36 1"/>
+    <geom name="table" size="0.199 0.319 0.15" pos="0.439 0.3 0.15" type="box" rgba="0.55 0.45 0.35 1"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="left_link_0" pos="0 0.3 0.14" quat="0.980067 -0.198669 0 0">
+      <inertial pos="0 0 0.08" mass="0.798015" diaginertia="0.00205436 0.00205436 0.00070385"/>
+      <joint name="left_joint_0" pos="0 0 0" axis="0 0 1" range="-2.85 2.85" actuatorfrcrange="-95 95" armature="0.00253333"/>
+      <geom size="0.042 0.038" pos="0 0 0.08" type="capsule" rgba="0.62 0.62 0.66 1"/>
+      <body name="left_link_1" pos="0 0 0.16">
+        <inertial pos="0 0 0.12" mass="0.926974" diaginertia="0.00476605 0.00476605 0.00063314"/>
+        <joint name="left_joint_1" pos="0 0 0" axis="0 1 0" range="-2.85 2.85" actuatorfrcrange="-95 95" armature="0.00253333"/>
+        <geom size="0.03696 0.08304" pos="0 0 0.12" type="capsule" rgba="0.62 0.62 0.66 1"/>
+        <body name="left_link_2" pos="0 0 0.24">
+          <inertial pos="0 0 0.1" mass="0.598207" diaginertia="0.00215223 0.00215223 0.00031641"/>
+          <joint name="left_joint_2" pos="0 0 0" axis="0 1 0" range="-2.85 2.85" actuatorfrcrange="-95 95" armature="0.00253333"/>
+          <geom size="0.032525 0.067475" pos="0 0 0.1" type="capsule" rgba="0.62 0.62 0.66 1"/>
+          <body name="left_link_3" pos="0 0 0.2">
+            <inertial pos="0 0 0.045" mass="0.25" diaginertia="0.00021995 0.00021995 0.0001024"/>
+            <joint name="left_joint_3" pos="0 0 0" axis="0 0 1" range="-2.85 2.85" actuatorfrcrange="-95 95" armature="0.00253333"/>
+            <geom size="0.028622 0.016378" pos="0 0 0.045" type="capsule" rgba="0.62 0.62 0.66 1"/>
+            <body name="left_link_4" pos="0 0 0.09">
+              <inertial pos="0 0 0.03" mass="0.25" diaginertia="0.00011465 0.00011465 7.93e-05"/>
+              <joint name="left_joint_4" pos="0 0 0" axis="0 1 0" range="-2.85 2.85" actuatorfrcrange="-95 95" armature="0.00253333"/>
+              <geom size="0.025187 0.004813" pos="0 0 0.03" type="capsule" rgba="0.62 0.62 0.66 1"/>
+              <geom size="0.045 0.025 0.025" pos="0 0 0.025" type="box" rgba="0.62 0.62 0.66 1"/>
+              <site name="grip_0" pos="0 0.015 0.0874726" quat="0 0 0 1" size="0.01" group="4" rgba="0.2 0.9 0.9 1"/>
+              <body name="left_finger_left" pos="0.043 0 0.05">
+                <inertial pos="0 0 0.03" mass="0.06" diaginertia="2.25e-05 1.898e-05 5.48e-06"/>
+                <joint name="left_grip_left" pos="0 0 0" axis="-1 0 0" type="slide" range="0 0.035" actuatorfrcrange="-45 45" armature="0.036"/>
+                <geom size="0.007 0.015 0.03" pos="0 0 0.03" type="box" rgba="0.85 0.35 0.3 1"/>
+                <site name="left_finger_left_tip" pos="0 0 0.03" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+              <body name="left_finger_right" pos="-0.043 0 0.05">
+                <inertial pos="0 0 0.03" mass="0.06" diaginertia="2.25e-05 1.898e-05 5.48e-06"/>
+                <joint name="left_grip_right" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.035" actuatorfrcrange="-45 45" armature="0.036"/>
+                <geom size="0.007 0.015 0.03" pos="0 0 0.03" type="box" rgba="0.3 0.55 0.85 1"/>
+                <site name="left_finger_right_tip" pos="0 0 0.03" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="right_link_0" pos="0 -0.3 0.14" quat="0.980067 0.198669 0 0">
+      <inertial pos="0 0 0.08" mass="0.798015" diaginertia="0.00205436 0.00205436 0.00070385"/>
+      <joint name="right_joint_0" pos="0 0 0" axis="0 0 1" range="-2.85 2.85" actuatorfrcrange="-95 95" armature="0.00253333"/>
+      <geom size="0.042 0.038" pos="0 0 0.08" type="capsule" rgba="0.62 0.62 0.66 1"/>
+      <body name="right_link_1" pos="0 0 0.16">
+        <inertial pos="0 0 0.12" mass="0.926974" diaginertia="0.00476605 0.00476605 0.00063314"/>
+        <joint name="right_joint_1" pos="0 0 0" axis="0 1 0" range="-2.85 2.85" actuatorfrcrange="-95 95" armature="0.00253333"/>
+        <geom size="0.03696 0.08304" pos="0 0 0.12" type="capsule" rgba="0.62 0.62 0.66 1"/>
+        <body name="right_link_2" pos="0 0 0.24">
+          <inertial pos="0 0 0.1" mass="0.598207" diaginertia="0.00215223 0.00215223 0.00031641"/>
+          <joint name="right_joint_2" pos="0 0 0" axis="0 1 0" range="-2.85 2.85" actuatorfrcrange="-95 95" armature="0.00253333"/>
+          <geom size="0.032525 0.067475" pos="0 0 0.1" type="capsule" rgba="0.62 0.62 0.66 1"/>
+          <body name="right_link_3" pos="0 0 0.2">
+            <inertial pos="0 0 0.045" mass="0.25" diaginertia="0.00021995 0.00021995 0.0001024"/>
+            <joint name="right_joint_3" pos="0 0 0" axis="0 0 1" range="-2.85 2.85" actuatorfrcrange="-95 95" armature="0.00253333"/>
+            <geom size="0.028622 0.016378" pos="0 0 0.045" type="capsule" rgba="0.62 0.62 0.66 1"/>
+            <body name="right_link_4" pos="0 0 0.09">
+              <inertial pos="0 0 0.03" mass="0.25" diaginertia="0.00011465 0.00011465 7.93e-05"/>
+              <joint name="right_joint_4" pos="0 0 0" axis="0 1 0" range="-2.85 2.85" actuatorfrcrange="-95 95" armature="0.00253333"/>
+              <geom size="0.025187 0.004813" pos="0 0 0.03" type="capsule" rgba="0.62 0.62 0.66 1"/>
+              <geom size="0.045 0.025 0.025" pos="0 0 0.025" type="box" rgba="0.62 0.62 0.66 1"/>
+              <site name="grip_1" pos="0 0.015 0.0794726" quat="0 0 0 1" size="0.01" group="4" rgba="0.2 0.9 0.9 1"/>
+              <body name="right_finger_left" pos="0.043 0 0.05">
+                <inertial pos="0 0 0.03" mass="0.06" diaginertia="2.25e-05 1.898e-05 5.48e-06"/>
+                <joint name="right_grip_left" pos="0 0 0" axis="-1 0 0" type="slide" range="0 0.035" actuatorfrcrange="-45 45" armature="0.036"/>
+                <geom size="0.007 0.015 0.03" pos="0 0 0.03" type="box" rgba="0.35 0.7 0.4 1"/>
+                <site name="right_finger_left_tip" pos="0 0 0.03" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+              <body name="right_finger_right" pos="-0.043 0 0.05">
+                <inertial pos="0 0 0.03" mass="0.06" diaginertia="2.25e-05 1.898e-05 5.48e-06"/>
+                <joint name="right_grip_right" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.035" actuatorfrcrange="-45 45" armature="0.036"/>
+                <geom size="0.007 0.015 0.03" pos="0 0 0.03" type="box" rgba="0.85 0.65 0.25 1"/>
+                <site name="right_finger_right_tip" pos="0 0 0.03" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="OBJ:block" pos="0.399 0.3 0.32">
+      <joint name="block_free" type="free"/>
+      <geom name="block" size="0.02 0.02 0.02" type="box" friction="1.2" mass="0.05" rgba="0.85 0.25 0.2 1"/>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <general name="BRK_servo_left_joint_0" joint="left_joint_0" ctrllimited="true" ctrlrange="-2.85 2.85" forcelimited="true" forcerange="-95 95" biastype="affine" gainprm="316.667" biasprm="0 -316.667 -2.49397"/>
+    <general name="BRK_servo_left_joint_1" joint="left_joint_1" ctrllimited="true" ctrlrange="-2.85 2.85" forcelimited="true" forcerange="-95 95" biastype="affine" gainprm="316.667" biasprm="0 -316.667 -22.9636"/>
+    <general name="BRK_servo_left_joint_2" joint="left_joint_2" ctrllimited="true" ctrlrange="-2.85 2.85" forcelimited="true" forcerange="-95 95" biastype="affine" gainprm="316.667" biasprm="0 -316.667 -12.5116"/>
+    <general name="BRK_servo_left_joint_3" joint="left_joint_3" ctrllimited="true" ctrlrange="-2.85 2.85" forcelimited="true" forcerange="-95 95" biastype="affine" gainprm="316.667" biasprm="0 -316.667 -2.03115"/>
+    <general name="BRK_servo_left_joint_4" joint="left_joint_4" ctrllimited="true" ctrlrange="-2.85 2.85" forcelimited="true" forcerange="-95 95" biastype="affine" gainprm="316.667" biasprm="0 -316.667 -3.24687"/>
+    <general name="BRK_servo_left_grip_left" joint="left_grip_left" ctrllimited="true" ctrlrange="0 0.035" forcelimited="true" forcerange="-45 45" biastype="affine" gainprm="4500" biasprm="0 -4500 -41.5692"/>
+    <general name="BRK_servo_left_grip_right" joint="left_grip_right" ctrllimited="true" ctrlrange="0 0.035" forcelimited="true" forcerange="-45 45" biastype="affine" gainprm="4500" biasprm="0 -4500 -41.5692"/>
+    <general name="BRK_servo_right_joint_0" joint="right_joint_0" ctrllimited="true" ctrlrange="-2.85 2.85" forcelimited="true" forcerange="-95 95" biastype="affine" gainprm="316.667" biasprm="0 -316.667 -2.49397"/>
+    <general name="BRK_servo_right_joint_1" joint="right_joint_1" ctrllimited="true" ctrlrange="-2.85 2.85" forcelimited="true" forcerange="-95 95" biastype="affine" gainprm="316.667" biasprm="0 -316.667 -22.9636"/>
+    <general name="BRK_servo_right_joint_2" joint="right_joint_2" ctrllimited="true" ctrlrange="-2.85 2.85" forcelimited="true" forcerange="-95 95" biastype="affine" gainprm="316.667" biasprm="0 -316.667 -12.5116"/>
+    <general name="BRK_servo_right_joint_3" joint="right_joint_3" ctrllimited="true" ctrlrange="-2.85 2.85" forcelimited="true" forcerange="-95 95" biastype="affine" gainprm="316.667" biasprm="0 -316.667 -2.03115"/>
+    <general name="BRK_servo_right_joint_4" joint="right_joint_4" ctrllimited="true" ctrlrange="-2.85 2.85" forcelimited="true" forcerange="-95 95" biastype="affine" gainprm="316.667" biasprm="0 -316.667 -3.24687"/>
+    <general name="BRK_servo_right_grip_left" joint="right_grip_left" ctrllimited="true" ctrlrange="0 0.035" forcelimited="true" forcerange="-45 45" biastype="affine" gainprm="4500" biasprm="0 -4500 -41.5692"/>
+    <general name="BRK_servo_right_grip_right" joint="right_grip_right" ctrllimited="true" ctrlrange="0 0.035" forcelimited="true" forcerange="-45 45" biastype="affine" gainprm="4500" biasprm="0 -4500 -41.5692"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home"/>
+  </keyframe>
+</mujoco>

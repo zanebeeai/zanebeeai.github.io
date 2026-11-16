@@ -1,0 +1,325 @@
+{
+ "clip_id": "mobile_crane__random__0301007",
+ "body": "mobile_crane",
+ "kind": "crane",
+ "source": "random",
+ "seed": 301007,
+ "attempt_index": 7,
+ "skill": null,
+ "arm": "random",
+ "compiler": "compile_program/J",
+ "variant": "left_finger_tip",
+ "params": {
+  "amplitude": 0.25,
+  "key_s": 1.097,
+  "wander": false,
+  "ik_miss_m": []
+ },
+ "program": {
+  "duration_s": 8.23,
+  "arm": "J",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 1.1,
+    "frame": 55,
+    "joints": {
+     "turret_joint": -0.0501,
+     "upper_arm_joint": -0.0512,
+     "forearm_joint": -0.1935,
+     "palm_joint": -0.0476,
+     "left_finger_joint": 0.0
+    }
+   },
+   {
+    "t": 2.2,
+    "frame": 110,
+    "joints": {
+     "turret_joint": -0.0696,
+     "upper_arm_joint": 0.1813,
+     "forearm_joint": -0.0765,
+     "palm_joint": -0.0249,
+     "left_finger_joint": 0.0
+    }
+   },
+   {
+    "t": 3.3,
+    "frame": 165,
+    "joints": {
+     "turret_joint": 0.0283,
+     "upper_arm_joint": 0.2272,
+     "forearm_joint": -0.0657,
+     "palm_joint": -0.0237,
+     "left_finger_joint": 0.0001
+    }
+   },
+   {
+    "t": 4.4,
+    "frame": 220,
+    "joints": {
+     "turret_joint": -0.1232,
+     "upper_arm_joint": 0.0027,
+     "forearm_joint": 0.1671,
+     "palm_joint": 0.0427,
+     "left_finger_joint": 0.0
+    }
+   },
+   {
+    "t": 5.5,
+    "frame": 275,
+    "joints": {
+     "turret_joint": -0.1182,
+     "upper_arm_joint": 0.1086,
+     "forearm_joint": 0.0751,
+     "palm_joint": 0.0161,
+     "left_finger_joint": 0.0
+    }
+   },
+   {
+    "t": 6.6,
+    "frame": 330,
+    "joints": {
+     "turret_joint": 0.1088,
+     "upper_arm_joint": -0.0051,
+     "forearm_joint": 0.1005,
+     "palm_joint": 0.0255,
+     "left_finger_joint": 0.0002
+    }
+   },
+   {
+    "t": 7.7,
+    "frame": 385,
+    "joints": {
+     "turret_joint": 0.0,
+     "upper_arm_joint": 0.0,
+     "forearm_joint": 0.0,
+     "palm_joint": 0.0,
+     "left_finger_joint": 0.0
+    }
+   },
+   {
+    "t": 8.23,
+    "frame": 412
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 8.23,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 1.1,
+    "joints": {
+     "turret_joint": -0.0501,
+     "upper_arm_joint": -0.0512,
+     "forearm_joint": -0.1935,
+     "palm_joint": -0.0476,
+     "left_finger_joint": 0.0
+    }
+   },
+   {
+    "t": 2.2,
+    "joints": {
+     "turret_joint": -0.0696,
+     "upper_arm_joint": 0.1813,
+     "forearm_joint": -0.0765,
+     "palm_joint": -0.0249,
+     "left_finger_joint": 0.0
+    }
+   },
+   {
+    "t": 3.3,
+    "joints": {
+     "turret_joint": 0.0283,
+     "upper_arm_joint": 0.2272,
+     "forearm_joint": -0.0657,
+     "palm_joint": -0.0237,
+     "left_finger_joint": 0.0001
+    }
+   },
+   {
+    "t": 4.4,
+    "joints": {
+     "turret_joint": -0.1232,
+     "upper_arm_joint": 0.0027,
+     "forearm_joint": 0.1671,
+     "palm_joint": 0.0427,
+     "left_finger_joint": 0.0
+    }
+   },
+   {
+    "t": 5.5,
+    "joints": {
+     "turret_joint": -0.1182,
+     "upper_arm_joint": 0.1086,
+     "forearm_joint": 0.0751,
+     "palm_joint": 0.0161,
+     "left_finger_joint": 0.0
+    }
+   },
+   {
+    "t": 6.6,
+    "joints": {
+     "turret_joint": 0.1088,
+     "upper_arm_joint": -0.0051,
+     "forearm_joint": 0.1005,
+     "palm_joint": 0.0255,
+     "left_finger_joint": 0.0002
+    }
+   },
+   {
+    "t": 7.7,
+    "joints": {
+     "turret_joint": 0.0,
+     "upper_arm_joint": 0.0,
+     "forearm_joint": 0.0,
+     "palm_joint": 0.0,
+     "left_finger_joint": 0.0
+    }
+   },
+   {
+    "t": 8.23
+   }
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0017
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "front_caster",
+    0
+   ],
+   "limit_m": 0.0017
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0085
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0181,
+   "limit_rad": 0.3037
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.017
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0034
+  },
+  "wheel_slip": {
+   "pass": true,
+   "worst_roll_mismatch_m": 0.0,
+   "worst_side_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0034
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.017
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": true,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": false,
+  "tap_twice": false,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 8.24,
+ "n_frames": 413,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.3037,
+  "start_joints_moved_inside_range": [
+   "left_finger_joint",
+   "right_finger_joint"
+  ],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0,
+  "gait_cmd_scale_min": 1.0,
+  "com_shift_max_m": 0.0
+ },
+ "compile_notes": [],
+ "tips": [
+  "left_wheel_tip",
+  "right_wheel_tip",
+  "front_caster_tip",
+  "rear_caster_tip",
+  "left_finger_tip",
+  "right_finger_tip"
+ ],
+ "contact_edges": [
+  [
+   "left_wheel",
+   "floor"
+  ],
+  [
+   "right_wheel",
+   "floor"
+  ],
+  [
+   "front_caster_foot",
+   "floor"
+  ],
+  [
+   "rear_caster_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ],
+  [
+   "left_pad",
+   "floor"
+  ],
+  [
+   "right_pad",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 1.65
+}

@@ -1,0 +1,478 @@
+{
+ "body": "universal_robots_ur5e",
+ "skill": "wave",
+ "arm": "J",
+ "variant": 0,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/universal_robots_ur5e.json",
+ "library_sha": "ca6a24ba9472f6e5ca1183a019e39a3f4b72fe94227fda5c092cad28535ce192",
+ "standin_library": false,
+ "prompt_sha256": "38b0a2f3ff7e49301170cd670e7bc19952dce8f590c1c77da16bc525366d052a",
+ "prompt_chars": 9509,
+ "valid": true,
+ "valid_first": true,
+ "repair_rounds": 0,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0095
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0095
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0095
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0095
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0478
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0501,
+   "limit_rad": 0.1282
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0955
+  },
+  "pass": true,
+  "failed": []
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0095
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0,
+     "body_frame": null,
+     "limit_m": 0.0095
+    },
+    "object_penetration": {
+     "pass": true,
+     "worst_m": 0.0,
+     "limit_m": 0.0095
+    },
+    "arm_in_object": {
+     "pass": true,
+     "worst_m": 0.0,
+     "limit_m": 0.0095
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0478
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.0501,
+     "limit_rad": 0.1282
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0955
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 7.6,
+    "keyframes": [
+     {
+      "t": 0,
+      "joints": {
+       "shoulder_pan_joint": 0,
+       "shoulder_lift_joint": 0,
+       "elbow_joint": 0,
+       "wrist_1_joint": 0,
+       "wrist_2_joint": 0,
+       "wrist_3_joint": 0
+      }
+     },
+     {
+      "t": 0.55,
+      "joints": {
+       "shoulder_pan_joint": -0.015,
+       "shoulder_lift_joint": -0.018,
+       "elbow_joint": -0.045,
+       "wrist_1_joint": -0.035,
+       "wrist_2_joint": 0.015,
+       "wrist_3_joint": -0.015
+      }
+     },
+     {
+      "t": 1.35,
+      "joints": {
+       "shoulder_pan_joint": 0,
+       "shoulder_lift_joint": -0.05,
+       "elbow_joint": -0.115,
+       "wrist_1_joint": -0.095,
+       "wrist_2_joint": 0.025,
+       "wrist_3_joint": 0
+      }
+     },
+     {
+      "t": 2.05,
+      "joints": {
+       "shoulder_pan_joint": -0.105,
+       "shoulder_lift_joint": -0.055,
+       "elbow_joint": -0.105,
+       "wrist_1_joint": -0.15,
+       "wrist_2_joint": -0.025,
+       "wrist_3_joint": -0.055
+      }
+     },
+     {
+      "t": 2.85,
+      "joints": {
+       "shoulder_pan_joint": 0.065,
+       "shoulder_lift_joint": -0.045,
+       "elbow_joint": -0.125,
+       "wrist_1_joint": -0.035,
+       "wrist_2_joint": 0.045,
+       "wrist_3_joint": 0.055
+      }
+     },
+     {
+      "t": 3.6,
+      "joints": {
+       "shoulder_pan_joint": -0.115,
+       "shoulder_lift_joint": -0.055,
+       "elbow_joint": -0.1,
+       "wrist_1_joint": -0.16,
+       "wrist_2_joint": -0.025,
+       "wrist_3_joint": -0.06
+      }
+     },
+     {
+      "t": 4.45,
+      "joints": {
+       "shoulder_pan_joint": 0.07,
+       "shoulder_lift_joint": -0.043,
+       "elbow_joint": -0.12,
+       "wrist_1_joint": -0.03,
+       "wrist_2_joint": 0.045,
+       "wrist_3_joint": 0.055
+      }
+     },
+     {
+      "t": 5.2,
+      "joints": {
+       "shoulder_pan_joint": -0.095,
+       "shoulder_lift_joint": -0.05,
+       "elbow_joint": -0.105,
+       "wrist_1_joint": -0.14,
+       "wrist_2_joint": -0.02,
+       "wrist_3_joint": -0.045
+      }
+     },
+     {
+      "t": 5.9,
+      "joints": {
+       "shoulder_pan_joint": 0.04,
+       "shoulder_lift_joint": -0.045,
+       "elbow_joint": -0.115,
+       "wrist_1_joint": -0.055,
+       "wrist_2_joint": 0.03,
+       "wrist_3_joint": 0.035
+      }
+     },
+     {
+      "t": 6.45,
+      "joints": {
+       "shoulder_pan_joint": 0,
+       "shoulder_lift_joint": -0.035,
+       "elbow_joint": -0.085,
+       "wrist_1_joint": -0.07,
+       "wrist_2_joint": 0.015,
+       "wrist_3_joint": 0
+      }
+     },
+     {
+      "t": 7.15,
+      "joints": {
+       "shoulder_pan_joint": -0.008,
+       "shoulder_lift_joint": -0.008,
+       "elbow_joint": -0.02,
+       "wrist_1_joint": -0.02,
+       "wrist_2_joint": 0.005,
+       "wrist_3_joint": 0
+      }
+     },
+     {
+      "t": 7.6,
+      "joints": {
+       "shoulder_pan_joint": 0,
+       "shoulder_lift_joint": 0,
+       "elbow_joint": 0,
+       "wrist_1_joint": 0,
+       "wrist_2_joint": 0,
+       "wrist_3_joint": 0
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 7.6,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"joints\": {\n        \"shoulder_pan_joint\": 0,\n        \"shoulder_lift_joint\": 0,\n        \"elbow_joint\": 0,\n        \"wrist_1_joint\": 0,\n        \"wrist_2_joint\": 0,\n        \"wrist_3_joint\": 0\n      }\n    },\n    {\n      \"t\": 0.55,\n      \"joints\": {\n        \"shoulder_pan_joint\": -0.015,\n        \"shoulder_lift_joint\": -0.018,\n        \"elbow_joint\": -0.045,\n        \"wrist_1_joint\": -0.035,\n        \"wrist_2_joint\": 0.015,\n        \"wrist_3_joint\": -0.015\n      }\n    },\n    {\n      \"t\": 1.35,\n      \"joints\": {\n        \"shoulder_pan_joint\": 0,\n        \"shoulder_lift_joint\": -0.05,\n        \"elbow_joint\": -0.115,\n        \"wrist_1_joint\": -0.095,\n        \"wrist_2_joint\": 0.025,\n        \"wrist_3_joint\": 0\n      }\n    },\n    {\n      \"t\": 2.05,\n      \"joints\": {\n        \"shoulder_pan_joint\": -0.105,\n        \"shoulder_lift_joint\": -0.055,\n        \"elbow_joint\": -0.105,\n        \"wrist_1_joint\": -0.15,\n        \"wrist_2_joint\": -0.025,\n        \"wrist_3_joint\": -0.055\n      }\n    },\n    {\n      \"t\": 2.85,\n      \"joints\": {\n        \"shoulder_pan_joint\": 0.065,\n        \"shoulder_lift_joint\": -0.045,\n        \"elbow_joint\": -0.125,\n        \"wrist_1_joint\": -0.035,\n        \"wrist_2_joint\": 0.045,\n        \"wrist_3_joint\": 0.055\n      }\n    },\n    {\n      \"t\": 3.6,\n      \"joints\": {\n        \"shoulder_pan_joint\": -0.115,\n        \"shoulder_lift_joint\": -0.055,\n        \"elbow_joint\": -0.1,\n        \"wrist_1_joint\": -0.16,\n        \"wrist_2_joint\": -0.025,\n        \"wrist_3_joint\": -0.06\n      }\n    },\n    {\n      \"t\": 4.45,\n      \"joints\": {\n        \"shoulder_pan_joint\": 0.07,\n        \"shoulder_lift_joint\": -0.043,\n        \"elbow_joint\": -0.12,\n        \"wrist_1_joint\": -0.03,\n        \"wrist_2_joint\": 0.045,\n        \"wrist_3_joint\": 0.055\n      }\n    },\n    {\n      \"t\": 5.2,\n      \"joints\": {\n        \"shoulder_pan_joint\": -0.095,\n        \"shoulder_lift_joint\": -0.05,\n        \"elbow_joint\": -0.105,\n        \"wrist_1_joint\": -0.14,\n        \"wrist_2_joint\": -0.02,\n        \"wrist_3_joint\": -0.045\n      }\n    },\n    {\n      \"t\": 5.9,\n      \"joints\": {\n        \"shoulder_pan_joint\": 0.04,\n        \"shoulder_lift_joint\": -0.045,\n        \"elbow_joint\": -0.115,\n        \"wrist_1_joint\": -0.055,\n        \"wrist_2_joint\": 0.03,\n        \"wrist_3_joint\": 0.035\n      }\n    },\n    {\n      \"t\": 6.45,\n      \"joints\": {\n        \"shoulder_pan_joint\": 0,\n        \"shoulder_lift_joint\": -0.035,\n        \"elbow_joint\": -0.085,\n        \"wrist_1_joint\": -0.07,\n        \"wrist_2_joint\": 0.015,\n        \"wrist_3_joint\": 0\n      }\n    },\n    {\n      \"t\": 7.15,\n      \"joints\": {\n        \"shoulder_pan_joint\": -0.008,\n        \"shoulder_lift_joint\": -0.008,\n        \"elbow_joint\": -0.02,\n        \"wrist_1_joint\": -0.02,\n        \"wrist_2_joint\": 0.005,\n        \"wrist_3_joint\": 0\n      }\n    },\n    {\n      \"t\": 7.6,\n      \"joints\": {\n        \"shoulder_pan_joint\": 0,\n        \"shoulder_lift_joint\": 0,\n        \"elbow_joint\": 0,\n        \"wrist_1_joint\": 0,\n        \"wrist_2_joint\": 0,\n        \"wrist_3_joint\": 0\n      }\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [],
+ "calls": 1,
+ "call_log": [
+  {
+   "prompt_tokens": 3205,
+   "cached_tokens": 0,
+   "completion_tokens": 1314,
+   "reasoning_tokens": 166,
+   "cost_usd": 0.009775,
+   "service_tier": "flex",
+   "seconds": 24.36
+  }
+ ],
+ "cost_usd": 0.009775,
+ "seconds": 27.2,
+ "at": "2026-11-12T02:24:35",
+ "predicate": {
+  "skill": "wave",
+  "applicable": true,
+  "pass": true,
+  "tip": "wrist_3_link_tip",
+  "raise_L": 0.4252,
+  "raised_frame": 18,
+  "half_swings": 3,
+  "swing_amp_reach": 0.1465,
+  "swing_amp_L": 0.1465,
+  "limb_reach_m": 0.955
+ },
+ "valid_and_semantic": true,
+ "program": {
+  "duration_s": 7.6,
+  "keyframes": [
+   {
+    "t": 0,
+    "joints": {
+     "shoulder_pan_joint": 0,
+     "shoulder_lift_joint": 0,
+     "elbow_joint": 0,
+     "wrist_1_joint": 0,
+     "wrist_2_joint": 0,
+     "wrist_3_joint": 0
+    }
+   },
+   {
+    "t": 0.55,
+    "joints": {
+     "shoulder_pan_joint": -0.015,
+     "shoulder_lift_joint": -0.018,
+     "elbow_joint": -0.045,
+     "wrist_1_joint": -0.035,
+     "wrist_2_joint": 0.015,
+     "wrist_3_joint": -0.015
+    }
+   },
+   {
+    "t": 1.35,
+    "joints": {
+     "shoulder_pan_joint": 0,
+     "shoulder_lift_joint": -0.05,
+     "elbow_joint": -0.115,
+     "wrist_1_joint": -0.095,
+     "wrist_2_joint": 0.025,
+     "wrist_3_joint": 0
+    }
+   },
+   {
+    "t": 2.05,
+    "joints": {
+     "shoulder_pan_joint": -0.105,
+     "shoulder_lift_joint": -0.055,
+     "elbow_joint": -0.105,
+     "wrist_1_joint": -0.15,
+     "wrist_2_joint": -0.025,
+     "wrist_3_joint": -0.055
+    }
+   },
+   {
+    "t": 2.85,
+    "joints": {
+     "shoulder_pan_joint": 0.065,
+     "shoulder_lift_joint": -0.045,
+     "elbow_joint": -0.125,
+     "wrist_1_joint": -0.035,
+     "wrist_2_joint": 0.045,
+     "wrist_3_joint": 0.055
+    }
+   },
+   {
+    "t": 3.6,
+    "joints": {
+     "shoulder_pan_joint": -0.115,
+     "shoulder_lift_joint": -0.055,
+     "elbow_joint": -0.1,
+     "wrist_1_joint": -0.16,
+     "wrist_2_joint": -0.025,
+     "wrist_3_joint": -0.06
+    }
+   },
+   {
+    "t": 4.45,
+    "joints": {
+     "shoulder_pan_joint": 0.07,
+     "shoulder_lift_joint": -0.043,
+     "elbow_joint": -0.12,
+     "wrist_1_joint": -0.03,
+     "wrist_2_joint": 0.045,
+     "wrist_3_joint": 0.055
+    }
+   },
+   {
+    "t": 5.2,
+    "joints": {
+     "shoulder_pan_joint": -0.095,
+     "shoulder_lift_joint": -0.05,
+     "elbow_joint": -0.105,
+     "wrist_1_joint": -0.14,
+     "wrist_2_joint": -0.02,
+     "wrist_3_joint": -0.045
+    }
+   },
+   {
+    "t": 5.9,
+    "joints": {
+     "shoulder_pan_joint": 0.04,
+     "shoulder_lift_joint": -0.045,
+     "elbow_joint": -0.115,
+     "wrist_1_joint": -0.055,
+     "wrist_2_joint": 0.03,
+     "wrist_3_joint": 0.035
+    }
+   },
+   {
+    "t": 6.45,
+    "joints": {
+     "shoulder_pan_joint": 0,
+     "shoulder_lift_joint": -0.035,
+     "elbow_joint": -0.085,
+     "wrist_1_joint": -0.07,
+     "wrist_2_joint": 0.015,
+     "wrist_3_joint": 0
+    }
+   },
+   {
+    "t": 7.15,
+    "joints": {
+     "shoulder_pan_joint": -0.008,
+     "shoulder_lift_joint": -0.008,
+     "elbow_joint": -0.02,
+     "wrist_1_joint": -0.02,
+     "wrist_2_joint": 0.005,
+     "wrist_3_joint": 0
+    }
+   },
+   {
+    "t": 7.6,
+    "joints": {
+     "shoulder_pan_joint": 0,
+     "shoulder_lift_joint": 0,
+     "elbow_joint": 0,
+     "wrist_1_joint": 0,
+     "wrist_2_joint": 0,
+     "wrist_3_joint": 0
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0095
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0095
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0095
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0095
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0478
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0501,
+   "limit_rad": 0.1282
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0955
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": null,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.1282,
+   "start_joints_moved_inside_range": [],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0
+  },
+  "notes": [],
+  "gaits": null
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/universal_robots_ur5e/clips/wave_J_v0.npz"
+}

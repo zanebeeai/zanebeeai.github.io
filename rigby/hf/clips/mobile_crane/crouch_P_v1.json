@@ -1,0 +1,484 @@
+{
+ "body": "mobile_crane",
+ "skill": "crouch",
+ "arm": "P",
+ "variant": 1,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/mobile_crane.json",
+ "library_sha": "16c9c1d4c2bf33a43f6fef8ba1957c0b39389858050c6e8a9dfc63f549076295",
+ "standin_library": false,
+ "prompt_sha256": "4749bc057a4b767b1068ddb0a43e783413c7841ae562390f3125d55a0ee11024",
+ "prompt_chars": 15816,
+ "valid": true,
+ "valid_first": true,
+ "repair_rounds": 0,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0017
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "front_caster",
+    113
+   ],
+   "limit_m": 0.0017
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0085
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.026,
+   "limit_rad": 0.3037
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.017
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0034
+  },
+  "wheel_slip": {
+   "pass": true,
+   "worst_roll_mismatch_m": 0.0,
+   "worst_side_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0034
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.017
+  },
+  "pass": true,
+  "failed": []
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0017
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0,
+     "body_frame": [
+      "front_caster",
+      113
+     ],
+     "limit_m": 0.0017
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0085
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.026,
+     "limit_rad": 0.3037
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.017
+    },
+    "foot_slip": {
+     "pass": true,
+     "worst_slide_m": 0.0,
+     "worst_off_ground_m": 0.0,
+     "limit_m": 0.0034
+    },
+    "wheel_slip": {
+     "pass": true,
+     "worst_roll_mismatch_m": 0.0,
+     "worst_side_slide_m": 0.0,
+     "worst_off_ground_m": 0.0,
+     "limit_m": 0.0034
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.017
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 6.4,
+    "keyframes": [
+     {
+      "t": 0,
+      "modes": {
+       "arm_fold_forward": 0,
+       "arm_forward": 0,
+       "turret_yaw": 0,
+       "left_finger_left": 0,
+       "right_finger_right": 0
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        0,
+        0,
+        0
+       ]
+      },
+      "stance": [
+       "left_wheel",
+       "right_wheel",
+       "front_caster",
+       "rear_caster"
+      ]
+     },
+     {
+      "t": 0.7,
+      "modes": {
+       "arm_fold_forward": 0.15,
+       "arm_forward": 0.02,
+       "turret_yaw": -0.015,
+       "left_finger_left": 0.1,
+       "right_finger_right": 0.1
+      }
+     },
+     {
+      "t": 2.25,
+      "modes": {
+       "arm_fold_forward": 0.88,
+       "arm_forward": 0.055,
+       "turret_yaw": -0.04,
+       "left_finger_left": 0.22,
+       "right_finger_right": 0.22
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        0,
+        0.04,
+        0
+       ]
+      }
+     },
+     {
+      "t": 2.8,
+      "modes": {
+       "arm_fold_forward": 0.94,
+       "arm_forward": 0.06,
+       "turret_yaw": -0.035,
+       "left_finger_left": 0.2,
+       "right_finger_right": 0.2
+      }
+     },
+     {
+      "t": 3.65,
+      "modes": {
+       "arm_fold_forward": 0.94,
+       "arm_forward": 0.06,
+       "turret_yaw": -0.025,
+       "left_finger_left": 0.18,
+       "right_finger_right": 0.18
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        0,
+        0.04,
+        0
+       ]
+      }
+     },
+     {
+      "t": 5.25,
+      "modes": {
+       "arm_fold_forward": 0.2,
+       "arm_forward": 0.015,
+       "turret_yaw": -0.008,
+       "left_finger_left": 0.08,
+       "right_finger_right": 0.08
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        0,
+        0.01,
+        0
+       ]
+      }
+     },
+     {
+      "t": 6.4,
+      "modes": {
+       "arm_fold_forward": 0,
+       "arm_forward": 0,
+       "turret_yaw": 0,
+       "left_finger_left": 0,
+       "right_finger_right": 0
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        0,
+        0,
+        0
+       ]
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 6.4,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"modes\": {\n        \"arm_fold_forward\": 0,\n        \"arm_forward\": 0,\n        \"turret_yaw\": 0,\n        \"left_finger_left\": 0,\n        \"right_finger_right\": 0\n      },\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [0, 0, 0]},\n      \"stance\": [\"left_wheel\", \"right_wheel\", \"front_caster\", \"rear_caster\"]\n    },\n    {\n      \"t\": 0.7,\n      \"modes\": {\n        \"arm_fold_forward\": 0.15,\n        \"arm_forward\": 0.02,\n        \"turret_yaw\": -0.015,\n        \"left_finger_left\": 0.1,\n        \"right_finger_right\": 0.1\n      }\n    },\n    {\n      \"t\": 2.25,\n      \"modes\": {\n        \"arm_fold_forward\": 0.88,\n        \"arm_forward\": 0.055,\n        \"turret_yaw\": -0.04,\n        \"left_finger_left\": 0.22,\n        \"right_finger_right\": 0.22\n      },\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [0, 0.04, 0]}\n    },\n    {\n      \"t\": 2.8,\n      \"modes\": {\n        \"arm_fold_forward\": 0.94,\n        \"arm_forward\": 0.06,\n        \"turret_yaw\": -0.035,\n        \"left_finger_left\": 0.2,\n        \"right_finger_right\": 0.2\n      }\n    },\n    {\n      \"t\": 3.65,\n      \"modes\": {\n        \"arm_fold_forward\": 0.94,\n        \"arm_forward\": 0.06,\n        \"turret_yaw\": -0.025,\n        \"left_finger_left\": 0.18,\n        \"right_finger_right\": 0.18\n      },\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [0, 0.04, 0]}\n    },\n    {\n      \"t\": 5.25,\n      \"modes\": {\n        \"arm_fold_forward\": 0.2,\n        \"arm_forward\": 0.015,\n        \"turret_yaw\": -0.008,\n        \"left_finger_left\": 0.08,\n        \"right_finger_right\": 0.08\n      },\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [0, 0.01, 0]}\n    },\n    {\n      \"t\": 6.4,\n      \"modes\": {\n        \"arm_fold_forward\": 0,\n        \"arm_forward\": 0,\n        \"turret_yaw\": 0,\n        \"left_finger_left\": 0,\n        \"right_finger_right\": 0\n      },\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [0, 0, 0]}\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [],
+ "calls": 1,
+ "call_log": [
+  {
+   "prompt_tokens": 5406,
+   "cached_tokens": 0,
+   "completion_tokens": 784,
+   "reasoning_tokens": 73,
+   "cost_usd": 0.009326,
+   "service_tier": "flex",
+   "seconds": 17.01
+  }
+ ],
+ "cost_usd": 0.009326,
+ "seconds": 18.6,
+ "at": "2026-11-12T02:42:12",
+ "predicate": {
+  "skill": "crouch",
+  "applicable": true,
+  "pass": false,
+  "standing_height_m": 0.12,
+  "drop_share": 0.0,
+  "hold_s": 0.0,
+  "recover_share": Infinity
+ },
+ "valid_and_semantic": false,
+ "program": {
+  "duration_s": 6.4,
+  "keyframes": [
+   {
+    "t": 0,
+    "modes": {
+     "arm_fold_forward": 0,
+     "arm_forward": 0,
+     "turret_yaw": 0,
+     "left_finger_left": 0,
+     "right_finger_right": 0
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      0,
+      0,
+      0
+     ]
+    },
+    "stance": [
+     "left_wheel",
+     "right_wheel",
+     "front_caster",
+     "rear_caster"
+    ]
+   },
+   {
+    "t": 0.7,
+    "modes": {
+     "arm_fold_forward": 0.15,
+     "arm_forward": 0.02,
+     "turret_yaw": -0.015,
+     "left_finger_left": 0.1,
+     "right_finger_right": 0.1
+    }
+   },
+   {
+    "t": 2.25,
+    "modes": {
+     "arm_fold_forward": 0.88,
+     "arm_forward": 0.055,
+     "turret_yaw": -0.04,
+     "left_finger_left": 0.22,
+     "right_finger_right": 0.22
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      0,
+      0.04,
+      0
+     ]
+    }
+   },
+   {
+    "t": 2.8,
+    "modes": {
+     "arm_fold_forward": 0.94,
+     "arm_forward": 0.06,
+     "turret_yaw": -0.035,
+     "left_finger_left": 0.2,
+     "right_finger_right": 0.2
+    }
+   },
+   {
+    "t": 3.65,
+    "modes": {
+     "arm_fold_forward": 0.94,
+     "arm_forward": 0.06,
+     "turret_yaw": -0.025,
+     "left_finger_left": 0.18,
+     "right_finger_right": 0.18
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      0,
+      0.04,
+      0
+     ]
+    }
+   },
+   {
+    "t": 5.25,
+    "modes": {
+     "arm_fold_forward": 0.2,
+     "arm_forward": 0.015,
+     "turret_yaw": -0.008,
+     "left_finger_left": 0.08,
+     "right_finger_right": 0.08
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      0,
+      0.01,
+      0
+     ]
+    }
+   },
+   {
+    "t": 6.4,
+    "modes": {
+     "arm_fold_forward": 0,
+     "arm_forward": 0,
+     "turret_yaw": 0,
+     "left_finger_left": 0,
+     "right_finger_right": 0
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0017
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "front_caster",
+    113
+   ],
+   "limit_m": 0.0017
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0085
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.026,
+   "limit_rad": 0.3037
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.017
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0034
+  },
+  "wheel_slip": {
+   "pass": true,
+   "worst_roll_mismatch_m": 0.0,
+   "worst_side_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0034
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.017
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": 2,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.3037,
+   "start_joints_moved_inside_range": [
+    "left_finger_joint",
+    "right_finger_joint"
+   ],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0,
+   "gait_cmd_scale_min": 1.0,
+   "com_shift_max_m": 0.0
+  },
+  "notes": [],
+  "gaits": []
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/mobile_crane/clips/crouch_P_v1.npz"
+}

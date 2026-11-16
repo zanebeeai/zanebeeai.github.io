@@ -1,0 +1,669 @@
+{
+ "body": "anybotics_anymal_c",
+ "skill": "trace_circle",
+ "arm": "J",
+ "variant": 0,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/anybotics_anymal_c.json",
+ "library_sha": "e3eb606f9dc452fff0d6015380660555d256318dcf97914e57e280597a414170",
+ "standin_library": false,
+ "prompt_sha256": "328d6d2b72859219d7ba8a00f804c9fddb48db5ff7613809d5c4e3ae7c366c50",
+ "prompt_chars": 19070,
+ "valid": true,
+ "valid_first": true,
+ "repair_rounds": 0,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0057
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0003,
+   "body_frame": [
+    "RH_SHANK",
+    1
+   ],
+   "limit_m": 0.0057
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0283
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1055,
+   "limit_rad": 0.1666
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0566
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0002,
+   "worst_off_ground_m": 0.0004,
+   "limit_m": 0.0113
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0566
+  },
+  "pass": true,
+  "failed": []
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0057
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0003,
+     "body_frame": [
+      "RH_SHANK",
+      1
+     ],
+     "limit_m": 0.0057
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0283
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.1055,
+     "limit_rad": 0.1666
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0566
+    },
+    "foot_slip": {
+     "pass": true,
+     "worst_slide_m": 0.0002,
+     "worst_off_ground_m": 0.0004,
+     "limit_m": 0.0113
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.0566
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 7.6,
+    "keyframes": [
+     {
+      "t": 0,
+      "joints": {
+       "LF_HAA": 0,
+       "LF_HFE": 0,
+       "LF_KFE": 0
+      },
+      "stance": [
+       "LF_SHANK",
+       "RF_SHANK",
+       "LH_SHANK",
+       "RH_SHANK"
+      ]
+     },
+     {
+      "t": 0.4,
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        -1,
+        -1,
+        0
+       ]
+      },
+      "stance": [
+       "RF_SHANK",
+       "LH_SHANK",
+       "RH_SHANK"
+      ],
+      "joints": {
+       "LF_HAA": 0,
+       "LF_HFE": 0,
+       "LF_KFE": 0
+      }
+     },
+     {
+      "t": 1.05,
+      "joints": {
+       "LF_HAA": -0.025,
+       "LF_HFE": 0.062,
+       "LF_KFE": -0.11
+      }
+     },
+     {
+      "t": 1.7,
+      "joints": {
+       "LF_HAA": -0.04,
+       "LF_HFE": 0.111,
+       "LF_KFE": -0.17
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        -1.5,
+        -1,
+        0
+       ]
+      }
+     },
+     {
+      "t": 2.2,
+      "joints": {
+       "LF_HAA": -0.049,
+       "LF_HFE": 0.124,
+       "LF_KFE": -0.1645
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        -1.7,
+        -1.2,
+        -0.4
+       ]
+      }
+     },
+     {
+      "t": 2.7,
+      "joints": {
+       "LF_HAA": -0.053,
+       "LF_HFE": 0.152,
+       "LF_KFE": -0.192
+      }
+     },
+     {
+      "t": 3.2,
+      "joints": {
+       "LF_HAA": -0.049,
+       "LF_HFE": 0.1795,
+       "LF_KFE": -0.231
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        -1.4,
+        -0.7,
+        0
+       ]
+      }
+     },
+     {
+      "t": 3.7,
+      "joints": {
+       "LF_HAA": -0.04,
+       "LF_HFE": 0.188,
+       "LF_KFE": -0.263
+      }
+     },
+     {
+      "t": 4.2,
+      "joints": {
+       "LF_HAA": -0.031,
+       "LF_HFE": 0.168,
+       "LF_KFE": -0.2685
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        -1.2,
+        -0.8,
+        0.4
+       ]
+      }
+     },
+     {
+      "t": 4.7,
+      "joints": {
+       "LF_HAA": -0.027,
+       "LF_HFE": 0.138,
+       "LF_KFE": -0.244
+      }
+     },
+     {
+      "t": 5.2,
+      "joints": {
+       "LF_HAA": -0.031,
+       "LF_HFE": 0.1174,
+       "LF_KFE": -0.2035
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        -1.4,
+        -1,
+        0.2
+       ]
+      }
+     },
+     {
+      "t": 5.7,
+      "joints": {
+       "LF_HAA": -0.04,
+       "LF_HFE": 0.111,
+       "LF_KFE": -0.17
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        -1.5,
+        -1,
+        0
+       ]
+      }
+     },
+     {
+      "t": 6.35,
+      "joints": {
+       "LF_HAA": -0.025,
+       "LF_HFE": 0.062,
+       "LF_KFE": -0.11
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        -1,
+        -0.5,
+        0
+       ]
+      }
+     },
+     {
+      "t": 7,
+      "joints": {
+       "LF_HAA": 0,
+       "LF_HFE": 0,
+       "LF_KFE": 0
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        0,
+        0,
+        0
+       ]
+      }
+     },
+     {
+      "t": 7.2,
+      "stance": [
+       "LF_SHANK",
+       "RF_SHANK",
+       "LH_SHANK",
+       "RH_SHANK"
+      ]
+     },
+     {
+      "t": 7.6,
+      "joints": {
+       "LF_HAA": 0,
+       "LF_HFE": 0,
+       "LF_KFE": 0
+      },
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        0,
+        0,
+        0
+       ]
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 7.6,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"joints\": {\"LF_HAA\": 0, \"LF_HFE\": 0, \"LF_KFE\": 0},\n      \"stance\": [\"LF_SHANK\", \"RF_SHANK\", \"LH_SHANK\", \"RH_SHANK\"]\n    },\n    {\n      \"t\": 0.4,\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [-1, -1, 0]},\n      \"stance\": [\"RF_SHANK\", \"LH_SHANK\", \"RH_SHANK\"],\n      \"joints\": {\"LF_HAA\": 0, \"LF_HFE\": 0, \"LF_KFE\": 0}\n    },\n    {\n      \"t\": 1.05,\n      \"joints\": {\"LF_HAA\": -0.025, \"LF_HFE\": 0.062, \"LF_KFE\": -0.11}\n    },\n    {\n      \"t\": 1.7,\n      \"joints\": {\"LF_HAA\": -0.04, \"LF_HFE\": 0.111, \"LF_KFE\": -0.17},\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [-1.5, -1, 0]}\n    },\n    {\n      \"t\": 2.2,\n      \"joints\": {\"LF_HAA\": -0.049, \"LF_HFE\": 0.124, \"LF_KFE\": -0.1645},\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [-1.7, -1.2, -0.4]}\n    },\n    {\n      \"t\": 2.7,\n      \"joints\": {\"LF_HAA\": -0.053, \"LF_HFE\": 0.152, \"LF_KFE\": -0.192}\n    },\n    {\n      \"t\": 3.2,\n      \"joints\": {\"LF_HAA\": -0.049, \"LF_HFE\": 0.1795, \"LF_KFE\": -0.231},\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [-1.4, -0.7, 0]}\n    },\n    {\n      \"t\": 3.7,\n      \"joints\": {\"LF_HAA\": -0.04, \"LF_HFE\": 0.188, \"LF_KFE\": -0.263}\n    },\n    {\n      \"t\": 4.2,\n      \"joints\": {\"LF_HAA\": -0.031, \"LF_HFE\": 0.168, \"LF_KFE\": -0.2685},\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [-1.2, -0.8, 0.4]}\n    },\n    {\n      \"t\": 4.7,\n      \"joints\": {\"LF_HAA\": -0.027, \"LF_HFE\": 0.138, \"LF_KFE\": -0.244}\n    },\n    {\n      \"t\": 5.2,\n      \"joints\": {\"LF_HAA\": -0.031, \"LF_HFE\": 0.1174, \"LF_KFE\": -0.2035},\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [-1.4, -1, 0.2]}\n    },\n    {\n      \"t\": 5.7,\n      \"joints\": {\"LF_HAA\": -0.04, \"LF_HFE\": 0.111, \"LF_KFE\": -0.17},\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [-1.5, -1, 0]}\n    },\n    {\n      \"t\": 6.35,\n      \"joints\": {\"LF_HAA\": -0.025, \"LF_HFE\": 0.062, \"LF_KFE\": -0.11},\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [-1, -0.5, 0]}\n    },\n    {\n      \"t\": 7,\n      \"joints\": {\"LF_HAA\": 0, \"LF_HFE\": 0, \"LF_KFE\": 0},\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [0, 0, 0]}\n    },\n    {\n      \"t\": 7.2,\n      \"stance\": [\"LF_SHANK\", \"RF_SHANK\", \"LH_SHANK\", \"RH_SHANK\"]\n    },\n    {\n      \"t\": 7.6,\n      \"joints\": {\"LF_HAA\": 0, \"LF_HFE\": 0, \"LF_KFE\": 0},\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [0, 0, 0]}\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [],
+ "calls": 1,
+ "call_log": [
+  {
+   "prompt_tokens": 6904,
+   "cached_tokens": 0,
+   "completion_tokens": 1928,
+   "reasoning_tokens": 837,
+   "cost_usd": 0.016544,
+   "service_tier": "flex",
+   "seconds": 61.64
+  }
+ ],
+ "cost_usd": 0.016544,
+ "seconds": 65.3,
+ "at": "2026-11-12T02:43:22",
+ "predicate": {
+  "skill": "trace_circle",
+  "applicable": true,
+  "pass": false,
+  "tip": "LF_SHANK_tip",
+  "close_L": 0.0313,
+  "span_deg": 216.137,
+  "radius_L": 0.2457,
+  "radius_cv": 0.5219
+ },
+ "valid_and_semantic": false,
+ "program": {
+  "duration_s": 7.6,
+  "keyframes": [
+   {
+    "t": 0,
+    "joints": {
+     "LF_HAA": 0,
+     "LF_HFE": 0,
+     "LF_KFE": 0
+    },
+    "stance": [
+     "LF_SHANK",
+     "RF_SHANK",
+     "LH_SHANK",
+     "RH_SHANK"
+    ]
+   },
+   {
+    "t": 0.4,
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      -1,
+      -1,
+      0
+     ]
+    },
+    "stance": [
+     "RF_SHANK",
+     "LH_SHANK",
+     "RH_SHANK"
+    ],
+    "joints": {
+     "LF_HAA": 0,
+     "LF_HFE": 0,
+     "LF_KFE": 0
+    }
+   },
+   {
+    "t": 1.05,
+    "joints": {
+     "LF_HAA": -0.025,
+     "LF_HFE": 0.062,
+     "LF_KFE": -0.11
+    }
+   },
+   {
+    "t": 1.7,
+    "joints": {
+     "LF_HAA": -0.04,
+     "LF_HFE": 0.111,
+     "LF_KFE": -0.17
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      -1.5,
+      -1,
+      0
+     ]
+    }
+   },
+   {
+    "t": 2.2,
+    "joints": {
+     "LF_HAA": -0.049,
+     "LF_HFE": 0.124,
+     "LF_KFE": -0.1645
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      -1.7,
+      -1.2,
+      -0.4
+     ]
+    }
+   },
+   {
+    "t": 2.7,
+    "joints": {
+     "LF_HAA": -0.053,
+     "LF_HFE": 0.152,
+     "LF_KFE": -0.192
+    }
+   },
+   {
+    "t": 3.2,
+    "joints": {
+     "LF_HAA": -0.049,
+     "LF_HFE": 0.1795,
+     "LF_KFE": -0.231
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      -1.4,
+      -0.7,
+      0
+     ]
+    }
+   },
+   {
+    "t": 3.7,
+    "joints": {
+     "LF_HAA": -0.04,
+     "LF_HFE": 0.188,
+     "LF_KFE": -0.263
+    }
+   },
+   {
+    "t": 4.2,
+    "joints": {
+     "LF_HAA": -0.031,
+     "LF_HFE": 0.168,
+     "LF_KFE": -0.2685
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      -1.2,
+      -0.8,
+      0.4
+     ]
+    }
+   },
+   {
+    "t": 4.7,
+    "joints": {
+     "LF_HAA": -0.027,
+     "LF_HFE": 0.138,
+     "LF_KFE": -0.244
+    }
+   },
+   {
+    "t": 5.2,
+    "joints": {
+     "LF_HAA": -0.031,
+     "LF_HFE": 0.1174,
+     "LF_KFE": -0.2035
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      -1.4,
+      -1,
+      0.2
+     ]
+    }
+   },
+   {
+    "t": 5.7,
+    "joints": {
+     "LF_HAA": -0.04,
+     "LF_HFE": 0.111,
+     "LF_KFE": -0.17
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      -1.5,
+      -1,
+      0
+     ]
+    }
+   },
+   {
+    "t": 6.35,
+    "joints": {
+     "LF_HAA": -0.025,
+     "LF_HFE": 0.062,
+     "LF_KFE": -0.11
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      -1,
+      -0.5,
+      0
+     ]
+    }
+   },
+   {
+    "t": 7,
+    "joints": {
+     "LF_HAA": 0,
+     "LF_HFE": 0,
+     "LF_KFE": 0
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "t": 7.2,
+    "stance": [
+     "LF_SHANK",
+     "RF_SHANK",
+     "LH_SHANK",
+     "RH_SHANK"
+    ]
+   },
+   {
+    "t": 7.6,
+    "joints": {
+     "LF_HAA": 0,
+     "LF_HFE": 0,
+     "LF_KFE": 0
+    },
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0057
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0003,
+   "body_frame": [
+    "RH_SHANK",
+    1
+   ],
+   "limit_m": 0.0057
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0283
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1055,
+   "limit_rad": 0.1666
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0566
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0002,
+   "worst_off_ground_m": 0.0004,
+   "limit_m": 0.0113
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0566
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": 5,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.1666,
+   "start_joints_moved_inside_range": [],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0,
+   "gait_cmd_scale_min": 1.0,
+   "com_shift_max_m": 0.0574
+  },
+  "notes": [],
+  "gaits": []
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/anybotics_anymal_c/clips/trace_circle_J_v0.npz"
+}

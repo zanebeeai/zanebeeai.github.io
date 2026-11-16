@@ -1,0 +1,143 @@
+<mujoco model="v3_hexapod_s20261104">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast"/>
+
+  <size nkey="1"/>
+
+  <default>
+    <joint limited="true" armature="0.01" damping="0.5"/>
+    <geom solref="0.01" solimp="0.95 0.99" margin="0.0005"/>
+    <general ctrllimited="true" forcelimited="true" biastype="affine" biasprm="0 -1"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" rgba="0.32 0.34 0.36 1"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="torso" pos="0 0 0.16926">
+      <joint name="root" type="free" armature="0" damping="0"/>
+      <geom name="torso_geom" size="0.25407 0.09045 0.03742" type="box" density="660" rgba="0.62 0.62 0.66 1"/>
+      <body name="l0_hip" pos="0.20326 0.09045 0" quat="0.707105 0 0 0.707108">
+        <joint name="l0_yaw" pos="0 0 0" axis="0 0 1" range="-0.8 0.8"/>
+        <geom name="l0_coxa_geom" size="0.018 0.02887" pos="0.02887 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.85 0.35 0.3 1"/>
+        <body name="l0_thigh" pos="0.05774 0 0">
+          <joint name="l0_lift" pos="0 0 0" axis="0 1 0" range="-1.2 1.2"/>
+          <geom name="l0_femur_geom" size="0.016 0.05684" pos="0.05684 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.85 0.35 0.3 1"/>
+          <body name="l0_shin" pos="0.11368 0 0">
+            <joint name="l0_knee" pos="0 0 0" axis="0 1 0" range="-0.3 2.2"/>
+            <geom name="l0_tibia_geom" size="0.013 0.07026" pos="0 0 -0.07026" type="capsule" density="900" rgba="0.85 0.35 0.3 1"/>
+            <body name="l0_foot" pos="0 0 -0.14052">
+              <geom name="l0_foot_geom" size="0.018" friction="1.3" density="1100" rgba="0.85 0.35 0.3 1"/>
+              <site name="l0_foot_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="r0_hip" pos="0.20326 -0.09045 0" quat="0.707105 0 0 -0.707108">
+        <joint name="r0_yaw" pos="0 0 0" axis="0 0 1" range="-0.8 0.8"/>
+        <geom name="r0_coxa_geom" size="0.018 0.02887" pos="0.02887 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.3 0.55 0.85 1"/>
+        <body name="r0_thigh" pos="0.05774 0 0">
+          <joint name="r0_lift" pos="0 0 0" axis="0 1 0" range="-1.2 1.2"/>
+          <geom name="r0_femur_geom" size="0.016 0.05684" pos="0.05684 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.3 0.55 0.85 1"/>
+          <body name="r0_shin" pos="0.11368 0 0">
+            <joint name="r0_knee" pos="0 0 0" axis="0 1 0" range="-0.3 2.2"/>
+            <geom name="r0_tibia_geom" size="0.013 0.07026" pos="0 0 -0.07026" type="capsule" density="900" rgba="0.3 0.55 0.85 1"/>
+            <body name="r0_foot" pos="0 0 -0.14052">
+              <geom name="r0_foot_geom" size="0.018" friction="1.3" density="1100" rgba="0.3 0.55 0.85 1"/>
+              <site name="r0_foot_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="l1_hip" pos="0 0.09045 0" quat="0.707105 0 0 0.707108">
+        <joint name="l1_yaw" pos="0 0 0" axis="0 0 1" range="-0.8 0.8"/>
+        <geom name="l1_coxa_geom" size="0.018 0.02887" pos="0.02887 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.35 0.7 0.4 1"/>
+        <body name="l1_thigh" pos="0.05774 0 0">
+          <joint name="l1_lift" pos="0 0 0" axis="0 1 0" range="-1.2 1.2"/>
+          <geom name="l1_femur_geom" size="0.016 0.05684" pos="0.05684 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.35 0.7 0.4 1"/>
+          <body name="l1_shin" pos="0.11368 0 0">
+            <joint name="l1_knee" pos="0 0 0" axis="0 1 0" range="-0.3 2.2"/>
+            <geom name="l1_tibia_geom" size="0.013 0.07026" pos="0 0 -0.07026" type="capsule" density="900" rgba="0.35 0.7 0.4 1"/>
+            <body name="l1_foot" pos="0 0 -0.14052">
+              <geom name="l1_foot_geom" size="0.018" friction="1.3" density="1100" rgba="0.35 0.7 0.4 1"/>
+              <site name="l1_foot_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="r1_hip" pos="0 -0.09045 0" quat="0.707105 0 0 -0.707108">
+        <joint name="r1_yaw" pos="0 0 0" axis="0 0 1" range="-0.8 0.8"/>
+        <geom name="r1_coxa_geom" size="0.018 0.02887" pos="0.02887 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.85 0.65 0.25 1"/>
+        <body name="r1_thigh" pos="0.05774 0 0">
+          <joint name="r1_lift" pos="0 0 0" axis="0 1 0" range="-1.2 1.2"/>
+          <geom name="r1_femur_geom" size="0.016 0.05684" pos="0.05684 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.85 0.65 0.25 1"/>
+          <body name="r1_shin" pos="0.11368 0 0">
+            <joint name="r1_knee" pos="0 0 0" axis="0 1 0" range="-0.3 2.2"/>
+            <geom name="r1_tibia_geom" size="0.013 0.07026" pos="0 0 -0.07026" type="capsule" density="900" rgba="0.85 0.65 0.25 1"/>
+            <body name="r1_foot" pos="0 0 -0.14052">
+              <geom name="r1_foot_geom" size="0.018" friction="1.3" density="1100" rgba="0.85 0.65 0.25 1"/>
+              <site name="r1_foot_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="l2_hip" pos="-0.20326 0.09045 0" quat="0.707105 0 0 0.707108">
+        <joint name="l2_yaw" pos="0 0 0" axis="0 0 1" range="-0.8 0.8"/>
+        <geom name="l2_coxa_geom" size="0.018 0.02887" pos="0.02887 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.6 0.4 0.8 1"/>
+        <body name="l2_thigh" pos="0.05774 0 0">
+          <joint name="l2_lift" pos="0 0 0" axis="0 1 0" range="-1.2 1.2"/>
+          <geom name="l2_femur_geom" size="0.016 0.05684" pos="0.05684 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.6 0.4 0.8 1"/>
+          <body name="l2_shin" pos="0.11368 0 0">
+            <joint name="l2_knee" pos="0 0 0" axis="0 1 0" range="-0.3 2.2"/>
+            <geom name="l2_tibia_geom" size="0.013 0.07026" pos="0 0 -0.07026" type="capsule" density="900" rgba="0.6 0.4 0.8 1"/>
+            <body name="l2_foot" pos="0 0 -0.14052">
+              <geom name="l2_foot_geom" size="0.018" friction="1.3" density="1100" rgba="0.6 0.4 0.8 1"/>
+              <site name="l2_foot_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="r2_hip" pos="-0.20326 -0.09045 0" quat="0.707105 0 0 -0.707108">
+        <joint name="r2_yaw" pos="0 0 0" axis="0 0 1" range="-0.8 0.8"/>
+        <geom name="r2_coxa_geom" size="0.018 0.02887" pos="0.02887 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.3 0.75 0.75 1"/>
+        <body name="r2_thigh" pos="0.05774 0 0">
+          <joint name="r2_lift" pos="0 0 0" axis="0 1 0" range="-1.2 1.2"/>
+          <geom name="r2_femur_geom" size="0.016 0.05684" pos="0.05684 0 0" quat="0.707107 0 -0.707107 0" type="capsule" density="900" rgba="0.3 0.75 0.75 1"/>
+          <body name="r2_shin" pos="0.11368 0 0">
+            <joint name="r2_knee" pos="0 0 0" axis="0 1 0" range="-0.3 2.2"/>
+            <geom name="r2_tibia_geom" size="0.013 0.07026" pos="0 0 -0.07026" type="capsule" density="900" rgba="0.3 0.75 0.75 1"/>
+            <body name="r2_foot" pos="0 0 -0.14052">
+              <geom name="r2_foot_geom" size="0.018" friction="1.3" density="1100" rgba="0.3 0.75 0.75 1"/>
+              <site name="r2_foot_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <general name="l0_yaw_servo" joint="l0_yaw" ctrlrange="-0.8 0.8" forcerange="-15 15" gainprm="60" biasprm="0 -60"/>
+    <general name="l0_lift_servo" joint="l0_lift" ctrlrange="-1.2 1.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="l0_knee_servo" joint="l0_knee" ctrlrange="-0.3 2.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="r0_yaw_servo" joint="r0_yaw" ctrlrange="-0.8 0.8" forcerange="-15 15" gainprm="60" biasprm="0 -60"/>
+    <general name="r0_lift_servo" joint="r0_lift" ctrlrange="-1.2 1.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="r0_knee_servo" joint="r0_knee" ctrlrange="-0.3 2.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="l1_yaw_servo" joint="l1_yaw" ctrlrange="-0.8 0.8" forcerange="-15 15" gainprm="60" biasprm="0 -60"/>
+    <general name="l1_lift_servo" joint="l1_lift" ctrlrange="-1.2 1.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="l1_knee_servo" joint="l1_knee" ctrlrange="-0.3 2.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="r1_yaw_servo" joint="r1_yaw" ctrlrange="-0.8 0.8" forcerange="-15 15" gainprm="60" biasprm="0 -60"/>
+    <general name="r1_lift_servo" joint="r1_lift" ctrlrange="-1.2 1.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="r1_knee_servo" joint="r1_knee" ctrlrange="-0.3 2.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="l2_yaw_servo" joint="l2_yaw" ctrlrange="-0.8 0.8" forcerange="-15 15" gainprm="60" biasprm="0 -60"/>
+    <general name="l2_lift_servo" joint="l2_lift" ctrlrange="-1.2 1.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="l2_knee_servo" joint="l2_knee" ctrlrange="-0.3 2.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="r2_yaw_servo" joint="r2_yaw" ctrlrange="-0.8 0.8" forcerange="-15 15" gainprm="60" biasprm="0 -60"/>
+    <general name="r2_lift_servo" joint="r2_lift" ctrlrange="-1.2 1.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+    <general name="r2_knee_servo" joint="r2_knee" ctrlrange="-0.3 2.2" forcerange="-20 20" gainprm="80" biasprm="0 -80"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.116196 1 0 0 0 0 -0.370547 0.498992 0 -0.370547 0.498992 0 -0.370547 0.498992 0 -0.370547 0.498992 0 -0.370547 0.498992 0 -0.370547 0.498992" ctrl="0 -0.370547 0.498992 0 -0.370547 0.498992 0 -0.370547 0.498992 0 -0.370547 0.498992 0 -0.370547 0.498992 0 -0.370547 0.498992"/>
+  </keyframe>
+</mujoco>

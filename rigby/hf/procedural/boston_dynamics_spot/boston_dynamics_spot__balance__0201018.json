@@ -1,0 +1,302 @@
+{
+ "clip_id": "boston_dynamics_spot__balance__0201018",
+ "body": "boston_dynamics_spot",
+ "kind": "quadruped",
+ "source": "balance",
+ "seed": 201018,
+ "attempt_index": 18,
+ "skill": null,
+ "arm": "balance",
+ "compiler": "compile_program/J",
+ "variant": "height",
+ "params": {
+  "amplitude": 0.4
+ },
+ "program": {
+  "duration_s": 5.97,
+  "arm": "J",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 0.95,
+    "frame": 48,
+    "dz_L": -0.106,
+    "rpy": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "t": 1.26,
+    "frame": 63,
+    "dz_L": -0.106,
+    "rpy": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "t": 2.21,
+    "frame": 110,
+    "dz_L": -0.025,
+    "rpy": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "t": 2.82,
+    "frame": 141,
+    "dz_L": -0.025,
+    "rpy": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "t": 3.77,
+    "frame": 188,
+    "dz_L": -0.088,
+    "rpy": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "t": 4.52,
+    "frame": 226,
+    "dz_L": -0.088,
+    "rpy": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "t": 5.47,
+    "frame": 274,
+    "dz_L": 0.0,
+    "rpy": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "t": 5.97,
+    "frame": 298
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 5.97,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 0.95,
+    "base": {
+     "dz_L": -0.106,
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 1.26,
+    "base": {
+     "dz_L": -0.106,
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 2.21,
+    "base": {
+     "dz_L": -0.025,
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 2.82,
+    "base": {
+     "dz_L": -0.025,
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 3.77,
+    "base": {
+     "dz_L": -0.088,
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 4.52,
+    "base": {
+     "dz_L": -0.088,
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 5.47,
+    "base": {
+     "dz_L": 0.0,
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 5.97
+   }
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0044
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "fr_lleg",
+    33
+   ],
+   "limit_m": 0.0044
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0222
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0063,
+   "limit_rad": 0.1882
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0443
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0089
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0443
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": false,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": false,
+  "tap_twice": false,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 5.96,
+ "n_frames": 299,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.1882,
+  "start_joints_moved_inside_range": [],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0,
+  "gait_cmd_scale_min": 1.0,
+  "com_shift_max_m": 0.0
+ },
+ "compile_notes": [],
+ "tips": [
+  "fl_lleg_tip",
+  "fr_lleg_tip",
+  "hl_lleg_tip",
+  "hr_lleg_tip"
+ ],
+ "contact_edges": [
+  [
+   "fl_lleg_foot",
+   "floor"
+  ],
+  [
+   "fr_lleg_foot",
+   "floor"
+  ],
+  [
+   "hl_lleg_foot",
+   "floor"
+  ],
+  [
+   "hr_lleg_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 1.12
+}

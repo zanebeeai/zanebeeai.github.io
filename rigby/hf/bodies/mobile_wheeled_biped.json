@@ -1,0 +1,1030 @@
+{
+ "name": "mobile_wheeled_biped",
+ "xml": "track/bodies/mobile_wheeled_biped.xml",
+ "source_model": "any-robot/assets/general/mobile/mobile_wheeled_biped/robot.xml",
+ "source_sha256": "85ddd23087ac5d0014cc6c111fbe904693576bfe39d4d61e170754523374a6e3",
+ "nq": 18,
+ "nv": 17,
+ "nu": 11,
+ "timestep": 0.002,
+ "free_base": true,
+ "root_body": "torso",
+ "mass_kg": 16.012,
+ "joints": [
+  {
+   "name": "root",
+   "type": "free",
+   "body": "torso",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": null,
+   "limited": null,
+   "object": false
+  },
+  {
+   "name": "left_hip_pitch",
+   "type": "hinge",
+   "body": "left_hip",
+   "qposadr": 7,
+   "dofadr": 6,
+   "range": [
+    -2.0,
+    2.0
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "left_knee",
+   "type": "hinge",
+   "body": "left_shank",
+   "qposadr": 8,
+   "dofadr": 7,
+   "range": [
+    0.0,
+    2.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "left_wheel_spin",
+   "type": "hinge",
+   "body": "left_wheel",
+   "qposadr": 9,
+   "dofadr": 8,
+   "range": null,
+   "limited": false,
+   "object": false,
+   "wheel": true
+  },
+  {
+   "name": "right_hip_pitch",
+   "type": "hinge",
+   "body": "right_hip",
+   "qposadr": 10,
+   "dofadr": 9,
+   "range": [
+    -2.0,
+    2.0
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "right_knee",
+   "type": "hinge",
+   "body": "right_shank",
+   "qposadr": 11,
+   "dofadr": 10,
+   "range": [
+    0.0,
+    2.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "right_wheel_spin",
+   "type": "hinge",
+   "body": "right_wheel",
+   "qposadr": 12,
+   "dofadr": 11,
+   "range": null,
+   "limited": false,
+   "object": false,
+   "wheel": true
+  },
+  {
+   "name": "arm_yaw",
+   "type": "hinge",
+   "body": "arm_base",
+   "qposadr": 13,
+   "dofadr": 12,
+   "range": [
+    -2.6,
+    2.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "arm_joint_0",
+   "type": "hinge",
+   "body": "arm_link_0",
+   "qposadr": 14,
+   "dofadr": 13,
+   "range": [
+    -2.6,
+    2.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "arm_joint_1",
+   "type": "hinge",
+   "body": "arm_link_1",
+   "qposadr": 15,
+   "dofadr": 14,
+   "range": [
+    -2.6,
+    2.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "arm_grip_left",
+   "type": "slide",
+   "body": "arm_finger_left",
+   "qposadr": 16,
+   "dofadr": 15,
+   "range": [
+    0.0,
+    0.035
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "arm_grip_right",
+   "type": "slide",
+   "body": "arm_finger_right",
+   "qposadr": 17,
+   "dofadr": 16,
+   "range": [
+    0.0,
+    0.035
+   ],
+   "limited": true,
+   "object": false
+  }
+ ],
+ "actuators": [
+  {
+   "name": "left_hip_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "left_hip_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.0,
+    2.0
+   ],
+   "forcerange": [
+    -45.0,
+    45.0
+   ],
+   "gain": 180.0,
+   "bias": [
+    0.0,
+    -180.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "left_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "left_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.0,
+    2.6
+   ],
+   "forcerange": [
+    -45.0,
+    45.0
+   ],
+   "gain": 180.0,
+   "bias": [
+    0.0,
+    -180.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "left_wheel_spin_drive",
+   "transmission": "joint",
+   "joints": [
+    "left_wheel_spin"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -25.0,
+    25.0
+   ],
+   "forcerange": [
+    -12.0,
+    12.0
+   ],
+   "gain": 1.5,
+   "bias": [
+    0.0,
+    0.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "right_hip_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "right_hip_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.0,
+    2.0
+   ],
+   "forcerange": [
+    -45.0,
+    45.0
+   ],
+   "gain": 180.0,
+   "bias": [
+    0.0,
+    -180.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "right_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "right_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.0,
+    2.6
+   ],
+   "forcerange": [
+    -45.0,
+    45.0
+   ],
+   "gain": 180.0,
+   "bias": [
+    0.0,
+    -180.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "right_wheel_spin_drive",
+   "transmission": "joint",
+   "joints": [
+    "right_wheel_spin"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -25.0,
+    25.0
+   ],
+   "forcerange": [
+    -12.0,
+    12.0
+   ],
+   "gain": 1.5,
+   "bias": [
+    0.0,
+    0.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "arm_yaw_servo",
+   "transmission": "joint",
+   "joints": [
+    "arm_yaw"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.6,
+    2.6
+   ],
+   "forcerange": [
+    -20.0,
+    20.0
+   ],
+   "gain": 60.0,
+   "bias": [
+    0.0,
+    -60.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  },
+  {
+   "name": "arm_joint_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "arm_joint_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.6,
+    2.6
+   ],
+   "forcerange": [
+    -25.0,
+    25.0
+   ],
+   "gain": 75.0,
+   "bias": [
+    0.0,
+    -75.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C7"
+  },
+  {
+   "name": "arm_joint_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "arm_joint_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.6,
+    2.6
+   ],
+   "forcerange": [
+    -18.0,
+    18.0
+   ],
+   "gain": 54.0,
+   "bias": [
+    0.0,
+    -54.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C8"
+  },
+  {
+   "name": "arm_grip_left_servo",
+   "transmission": "joint",
+   "joints": [
+    "arm_grip_left"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.0,
+    0.035
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 400.0,
+   "bias": [
+    0.0,
+    -400.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C9"
+  },
+  {
+   "name": "arm_grip_right_servo",
+   "transmission": "joint",
+   "joints": [
+    "arm_grip_right"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.0,
+    0.035
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 400.0,
+   "bias": [
+    0.0,
+    -400.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C10"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  0.0,
+  0.58,
+  1.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  -2.25,
+  -2.3,
+  0.0,
+  0.0
+ ],
+ "L": 0.50428,
+ "T": 0.22673,
+ "L_is": "standing CoM height (m)",
+ "tips": [
+  {
+   "name": "left_wheel_tip",
+   "body": "left_wheel",
+   "rigby_id": "T0",
+   "joints": [
+    "left_hip_pitch",
+    "left_knee",
+    "left_wheel_spin"
+   ],
+   "home_base_m": [
+    0.0,
+    0.26,
+    -0.5
+   ],
+   "home_world_m": [
+    0.0,
+    0.26,
+    0.08
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.3998,
+     0.26,
+     -0.5
+    ],
+    "max": [
+     0.3999,
+     0.26,
+     0.1805
+    ]
+   },
+   "reach_m": 0.4061,
+   "first_joint_anchor_base_m": [
+    0.0,
+    0.19,
+    -0.1
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "left_hip_pitch": 0.9453,
+      "left_knee": 0.3263,
+      "left_wheel_spin": 0.0
+     },
+     "share_of_motion": 0.95,
+     "tip_motion_per_unit_at_home_m": [
+      -0.8411,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "weights": {
+      "left_hip_pitch": -0.3263,
+      "left_knee": 0.9453,
+      "left_wheel_spin": -0.0
+     },
+     "share_of_motion": 0.05,
+     "tip_motion_per_unit_at_home_m": [
+      0.0153,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "right_wheel_tip",
+   "body": "right_wheel",
+   "rigby_id": "T1",
+   "joints": [
+    "right_hip_pitch",
+    "right_knee",
+    "right_wheel_spin"
+   ],
+   "home_base_m": [
+    0.0,
+    -0.26,
+    -0.5
+   ],
+   "home_world_m": [
+    0.0,
+    -0.26,
+    0.08
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.3992,
+     -0.26,
+     -0.5
+    ],
+    "max": [
+     0.4,
+     -0.26,
+     0.1808
+    ]
+   },
+   "reach_m": 0.4061,
+   "first_joint_anchor_base_m": [
+    0.0,
+    -0.19,
+    -0.1
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "right_hip_pitch": 0.9448,
+      "right_knee": 0.3276,
+      "right_wheel_spin": 0.0
+     },
+     "share_of_motion": 0.947,
+     "tip_motion_per_unit_at_home_m": [
+      -0.841,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "weights": {
+      "right_hip_pitch": -0.3276,
+      "right_knee": 0.9448,
+      "right_wheel_spin": -0.0
+     },
+     "share_of_motion": 0.053,
+     "tip_motion_per_unit_at_home_m": [
+      0.0164,
+      0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "arm_finger_left_tip",
+   "body": "arm_finger_left",
+   "rigby_id": "T2",
+   "joints": [
+    "arm_yaw",
+    "arm_joint_0",
+    "arm_joint_1",
+    "arm_grip_left"
+   ],
+   "home_base_m": [
+    -0.0072,
+    0.0,
+    0.3202
+   ],
+   "home_world_m": [
+    -0.0072,
+    0.0,
+    0.9002
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.3946,
+     -0.4879,
+     -0.3167
+    ],
+    "max": [
+     0.5893,
+     0.4893,
+     0.6429
+    ]
+   },
+   "reach_m": 0.5305,
+   "first_joint_anchor_base_m": [
+    0.1,
+    0.0,
+    0.14
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "arm_yaw": -0.0,
+      "arm_joint_0": 0.8309,
+      "arm_joint_1": 0.5562,
+      "arm_grip_left": 0.0135
+     },
+     "share_of_motion": 0.674,
+     "tip_motion_per_unit_at_home_m": [
+      0.3059,
+      0.0,
+      0.6343
+     ]
+    },
+    {
+     "weights": {
+      "arm_yaw": 1.0,
+      "arm_joint_0": 0.0,
+      "arm_joint_1": 0.0,
+      "arm_grip_left": 0.0
+     },
+     "share_of_motion": 0.271,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.2786,
+      0.0
+     ]
+    },
+    {
+     "weights": {
+      "arm_yaw": 0.0,
+      "arm_joint_0": -0.5564,
+      "arm_joint_1": 0.8307,
+      "arm_grip_left": 0.02
+     },
+     "share_of_motion": 0.055,
+     "tip_motion_per_unit_at_home_m": [
+      -0.1984,
+      0.0,
+      0.4465
+     ]
+    }
+   ]
+  },
+  {
+   "name": "arm_finger_right_tip",
+   "body": "arm_finger_right",
+   "rigby_id": "T3",
+   "joints": [
+    "arm_yaw",
+    "arm_joint_0",
+    "arm_joint_1",
+    "arm_grip_right"
+   ],
+   "home_base_m": [
+    0.0067,
+    0.0,
+    0.4051
+   ],
+   "home_world_m": [
+    0.0067,
+    0.0,
+    0.9851
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.3945,
+     -0.4886,
+     -0.3174
+    ],
+    "max": [
+     0.5871,
+     0.4949,
+     0.6391
+    ]
+   },
+   "reach_m": 0.5323,
+   "first_joint_anchor_base_m": [
+    0.1,
+    0.0,
+    0.14
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "arm_yaw": 0.0,
+      "arm_joint_0": 0.8251,
+      "arm_joint_1": 0.5649,
+      "arm_grip_right": -0.0137
+     },
+     "share_of_motion": 0.687,
+     "tip_motion_per_unit_at_home_m": [
+      0.6105,
+      0.0,
+      0.5886
+     ]
+    },
+    {
+     "weights": {
+      "arm_yaw": 1.0,
+      "arm_joint_0": 0.0,
+      "arm_joint_1": 0.0,
+      "arm_grip_right": 0.0
+     },
+     "share_of_motion": 0.252,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.2425,
+      0.0
+     ]
+    },
+    {
+     "weights": {
+      "arm_yaw": -0.0,
+      "arm_joint_0": -0.565,
+      "arm_joint_1": 0.8248,
+      "arm_grip_right": -0.0197
+     },
+     "share_of_motion": 0.062,
+     "tip_motion_per_unit_at_home_m": [
+      -0.1443,
+      0.0,
+      0.4304
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "left_wheel": [
+   5
+  ],
+  "right_wheel": [
+   9
+  ],
+  "arm_finger_left_pad": [
+   14
+  ],
+  "arm_finger_right_pad": [
+   15
+  ],
+  "rest_of_body": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   7,
+   8,
+   10,
+   11,
+   12,
+   13
+  ],
+  "floor": [
+   0
+  ]
+ },
+ "link_group_names": {
+  "left_wheel": [
+   "left_wheel"
+  ],
+  "right_wheel": [
+   "right_wheel"
+  ],
+  "arm_finger_left_pad": [
+   "arm_finger_left"
+  ],
+  "arm_finger_right_pad": [
+   "arm_finger_right"
+  ],
+  "rest_of_body": [
+   "torso",
+   "left_hip",
+   "left_thigh",
+   "left_shank",
+   "right_hip",
+   "right_thigh",
+   "right_shank",
+   "arm_base",
+   "arm_link_0",
+   "arm_link_1",
+   "arm_palm"
+  ],
+  "floor": [
+   "world"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ]
+ },
+ "contact_edges": [
+  [
+   "left_wheel",
+   "floor"
+  ],
+  [
+   "right_wheel",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ],
+  [
+   "arm_finger_left_pad",
+   "floor"
+  ],
+  [
+   "arm_finger_right_pad",
+   "floor"
+  ]
+ ],
+ "stance_sets": [
+  {
+   "name": "all",
+   "tips": [
+    "left_wheel_tip",
+    "right_wheel_tip"
+   ]
+  },
+  {
+   "name": "all_but_left_wheel_tip",
+   "tips": [
+    "right_wheel_tip"
+   ]
+  },
+  {
+   "name": "all_but_right_wheel_tip",
+   "tips": [
+    "left_wheel_tip"
+   ]
+  }
+ ],
+ "balance": {
+  "support_tips": [
+   "left_wheel_tip",
+   "right_wheel_tip"
+  ],
+  "support_polygon_base_xy_m": [
+   [
+    0.0,
+    0.26
+   ],
+   [
+    0.0,
+    -0.26
+   ]
+  ],
+  "com_home_base_m": [
+   0.0114,
+   0.0,
+   -0.0757
+  ],
+  "com_margin_home_m": -0.0114,
+  "about": "weight-shift coordinate: the base moves so the CoM moves toward a direction inside this polygon; a tip may lift once the CoM is inside the polygon of the others (dilated 0.1 L)",
+  "polygon_from": "sole corners and wheel contact points (below each wheel centre by its radius) at home"
+ },
+ "gaits": [
+  {
+   "name": "differential_roll",
+   "source": "rigby v7 library (docs/preprint/v7/libraries/mobile_wheeled_biped.json)",
+   "about": "Rolls on both driven wheels under active balance. A small equal wheel bias cancels the measured neutral drift; equal command changes translate forward or backward, and opposite changes turn in place. Sideways destinations are reached by turning and then translating.",
+   "cycle_s": 0.1,
+   "phase": {
+    "left_wheel_tip": 0.0,
+    "right_wheel_tip": 0.0
+   },
+   "duty": {
+    "left_wheel_tip": 1.0,
+    "right_wheel_tip": 1.0
+   },
+   "duty_mean": 1.0,
+   "stacks": [
+    {
+     "t": 0.1,
+     "set": {
+      "C2": 0.2,
+      "C5": 0.2
+     }
+    }
+   ],
+   "steer": {
+    "forward": [
+     {
+      "C2": -0.4,
+      "C5": -0.4
+     }
+    ],
+    "left": [
+     {
+      "C2": 0.0,
+      "C5": 0.0
+     }
+    ],
+    "turn": [
+     {
+      "C2": -0.35,
+      "C5": 0.35
+     }
+    ]
+   },
+   "channel_joint": {
+    "C0": "left_hip_pitch",
+    "C1": "left_knee",
+    "C3": "right_hip_pitch",
+    "C4": "right_knee",
+    "C6": "arm_yaw",
+    "C7": "arm_joint_0",
+    "C8": "arm_joint_1",
+    "C9": "arm_grip_left",
+    "C10": "arm_grip_right"
+   },
+   "step_height_m": 0.1261,
+   "min_limbs_down": 2,
+   "quasi_static": true
+  },
+  {
+   "name": "drive",
+   "source": "intake: wheels from the model's wheel joints",
+   "cycle_s": 0.5668,
+   "phase": {
+    "left_wheel_tip": 0.0,
+    "right_wheel_tip": 0.0
+   },
+   "duty": {
+    "left_wheel_tip": 1.0,
+    "right_wheel_tip": 1.0
+   },
+   "duty_mean": 1.0,
+   "wheels": {
+    "left_wheel_tip": {
+     "joint": "left_wheel_spin",
+     "radius_m": 0.08
+    },
+    "right_wheel_tip": {
+     "joint": "right_wheel_spin",
+     "radius_m": 0.08
+    }
+   },
+   "about": "no tip lifts; the base moves by rolling its wheels (differential drive about the wheels' axle line)",
+   "min_limbs_down": 2,
+   "quasi_static": true
+  }
+ ],
+ "objects": null,
+ "excluded_pairs_home_overlap": [],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: x forward, y left, z up, metres; for the arm a level frame at its base",
+ "kind": "wheeled",
+ "support": [
+  {
+   "tip": "left_wheel_tip",
+   "type": "wheel",
+   "joint": "left_wheel_spin",
+   "radius_m": 0.08,
+   "axis_body": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "axis_base_home": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "geom": "left_wheel_geom",
+   "about": "axis_body: the wheel joint's axis in the wheel body's frame; the tip site is the wheel's centre"
+  },
+  {
+   "tip": "right_wheel_tip",
+   "type": "wheel",
+   "joint": "right_wheel_spin",
+   "radius_m": 0.08,
+   "axis_body": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "axis_base_home": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "geom": "right_wheel_geom",
+   "about": "axis_body: the wheel joint's axis in the wheel body's frame; the tip site is the wheel's centre"
+  }
+ ],
+ "render_model": "any-robot/assets/general/mobile/mobile_wheeled_biped/robot.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ },
+ "intake_notes": {
+  "model_edits": {
+   "inertia_kept_from_source_bodies": 3
+  }
+ }
+}

@@ -1,0 +1,370 @@
+{
+ "clip_id": "anybotics_anymal_c__random__0301007",
+ "body": "anybotics_anymal_c",
+ "kind": "quadruped",
+ "source": "random",
+ "seed": 301007,
+ "attempt_index": 7,
+ "skill": null,
+ "arm": "random",
+ "compiler": "compile_program/J",
+ "variant": "RF_SHANK_tip:lifted",
+ "params": {
+  "amplitude": 0.15,
+  "key_s": 1.094,
+  "wander": false,
+  "ik_miss_m": [
+   0.0
+  ]
+ },
+ "program": {
+  "duration_s": 9.11,
+  "arm": "J",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 1.08,
+    "frame": 54,
+    "stance": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 2.17,
+    "frame": 108,
+    "joints": {
+     "RF_HAA": 0.0565,
+     "RF_HFE": 0.0049,
+     "RF_KFE": -0.0273
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 3.26,
+    "frame": 163,
+    "joints": {
+     "RF_HAA": -0.0686,
+     "RF_HFE": 0.0116,
+     "RF_KFE": -0.0422
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 4.35,
+    "frame": 217,
+    "joints": {
+     "RF_HAA": 0.0484,
+     "RF_HFE": 0.0098,
+     "RF_KFE": -0.0708
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 5.44,
+    "frame": 272,
+    "joints": {
+     "RF_HAA": -0.1416,
+     "RF_HFE": 0.017,
+     "RF_KFE": -0.0045
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 6.53,
+    "frame": 326,
+    "joints": {
+     "RF_HAA": -0.1408,
+     "RF_HFE": 0.0106,
+     "RF_KFE": -0.043
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 7.62,
+    "frame": 381,
+    "joints": {
+     "RF_HAA": 0.0096,
+     "RF_HFE": -0.0111,
+     "RF_KFE": -0.0374
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 8.71,
+    "frame": 436,
+    "joints": {
+     "RF_HAA": 0.0,
+     "RF_HFE": 0.0,
+     "RF_KFE": 0.0
+    },
+    "stance": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 9.11,
+    "frame": 456
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 9.11,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 1.08,
+    "stance": [
+     "LF_SHANK_tip",
+     "RF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ]
+   },
+   {
+    "t": 2.17,
+    "joints": {
+     "RF_HAA": 0.0565,
+     "RF_HFE": 0.0049,
+     "RF_KFE": -0.0273
+    },
+    "stance": [
+     "LF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ]
+   },
+   {
+    "t": 3.26,
+    "joints": {
+     "RF_HAA": -0.0686,
+     "RF_HFE": 0.0116,
+     "RF_KFE": -0.0422
+    },
+    "stance": [
+     "LF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ]
+   },
+   {
+    "t": 4.35,
+    "joints": {
+     "RF_HAA": 0.0484,
+     "RF_HFE": 0.0098,
+     "RF_KFE": -0.0708
+    },
+    "stance": [
+     "LF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ]
+   },
+   {
+    "t": 5.44,
+    "joints": {
+     "RF_HAA": -0.1416,
+     "RF_HFE": 0.017,
+     "RF_KFE": -0.0045
+    },
+    "stance": [
+     "LF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ]
+   },
+   {
+    "t": 6.53,
+    "joints": {
+     "RF_HAA": -0.1408,
+     "RF_HFE": 0.0106,
+     "RF_KFE": -0.043
+    },
+    "stance": [
+     "LF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ]
+   },
+   {
+    "t": 7.62,
+    "joints": {
+     "RF_HAA": 0.0096,
+     "RF_HFE": -0.0111,
+     "RF_KFE": -0.0374
+    },
+    "stance": [
+     "LF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ]
+   },
+   {
+    "t": 8.71,
+    "joints": {
+     "RF_HAA": 0.0,
+     "RF_HFE": 0.0,
+     "RF_KFE": 0.0
+    },
+    "stance": [
+     "LF_SHANK_tip",
+     "RF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ]
+   },
+   {
+    "t": 9.11
+   }
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0057
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "LH_SHANK",
+    55
+   ],
+   "limit_m": 0.0057
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0283
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.016,
+   "limit_rad": 0.1666
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0566
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0001,
+   "limit_m": 0.0113
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0566
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": true,
+  "reach_forward": false,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": false,
+  "tap_twice": true,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": true,
+ "duration_s": 9.12,
+ "n_frames": 457,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.1666,
+  "start_joints_moved_inside_range": [],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0,
+  "gait_cmd_scale_min": 1.0,
+  "com_shift_max_m": 0.0341
+ },
+ "compile_notes": [],
+ "tips": [
+  "LF_SHANK_tip",
+  "RF_SHANK_tip",
+  "LH_SHANK_tip",
+  "RH_SHANK_tip"
+ ],
+ "contact_edges": [
+  [
+   "LF_SHANK_foot",
+   "floor"
+  ],
+  [
+   "RF_SHANK_foot",
+   "floor"
+  ],
+  [
+   "LH_SHANK_foot",
+   "floor"
+  ],
+  [
+   "RH_SHANK_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 5.04
+}

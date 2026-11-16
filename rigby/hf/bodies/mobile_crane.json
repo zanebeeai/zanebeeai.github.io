@@ -1,0 +1,1006 @@
+{
+ "name": "mobile_crane",
+ "xml": "track/bodies/mobile_crane.xml",
+ "source_model": "any-robot/assets/general/mobile/mobile_crane/robot_free.xml",
+ "source_sha256": "ccafb5f87480db04ed08aab7542e96b21b475f6142b587dfd6ab38e03a593d53",
+ "nq": 15,
+ "nv": 14,
+ "nu": 8,
+ "timestep": 0.002,
+ "free_base": true,
+ "root_body": "chassis",
+ "mass_kg": 46.48,
+ "joints": [
+  {
+   "name": "mobile_base_free",
+   "type": "free",
+   "body": "chassis",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": null,
+   "limited": null,
+   "object": false
+  },
+  {
+   "name": "left_wheel_joint",
+   "type": "hinge",
+   "body": "left_wheel",
+   "qposadr": 7,
+   "dofadr": 6,
+   "range": null,
+   "limited": false,
+   "object": false,
+   "wheel": true
+  },
+  {
+   "name": "right_wheel_joint",
+   "type": "hinge",
+   "body": "right_wheel",
+   "qposadr": 8,
+   "dofadr": 7,
+   "range": null,
+   "limited": false,
+   "object": false,
+   "wheel": true
+  },
+  {
+   "name": "turret_joint",
+   "type": "hinge",
+   "body": "turret",
+   "qposadr": 9,
+   "dofadr": 8,
+   "range": [
+    -3.14159,
+    3.14159
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "upper_arm_joint",
+   "type": "hinge",
+   "body": "upper_arm",
+   "qposadr": 10,
+   "dofadr": 9,
+   "range": [
+    -2.2,
+    2.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "forearm_joint",
+   "type": "hinge",
+   "body": "forearm",
+   "qposadr": 11,
+   "dofadr": 10,
+   "range": [
+    -2.4,
+    2.4
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "palm_joint",
+   "type": "hinge",
+   "body": "palm",
+   "qposadr": 12,
+   "dofadr": 11,
+   "range": [
+    -2.2,
+    2.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "left_finger_joint",
+   "type": "slide",
+   "body": "left_finger",
+   "qposadr": 13,
+   "dofadr": 12,
+   "range": [
+    0.0,
+    0.065
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "right_finger_joint",
+   "type": "slide",
+   "body": "right_finger",
+   "qposadr": 14,
+   "dofadr": 13,
+   "range": [
+    0.0,
+    0.065
+   ],
+   "limited": true,
+   "object": false
+  }
+ ],
+ "actuators": [
+  {
+   "name": "drive_turret_joint",
+   "transmission": "joint",
+   "joints": [
+    "turret_joint"
+   ],
+   "type": "torque motor",
+   "ctrlrange": [
+    -2000.0,
+    2000.0
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 1.0,
+   "bias": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "drive_upper_arm_joint",
+   "transmission": "joint",
+   "joints": [
+    "upper_arm_joint"
+   ],
+   "type": "torque motor",
+   "ctrlrange": [
+    -2000.0,
+    2000.0
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 1.0,
+   "bias": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "drive_forearm_joint",
+   "transmission": "joint",
+   "joints": [
+    "forearm_joint"
+   ],
+   "type": "torque motor",
+   "ctrlrange": [
+    -2000.0,
+    2000.0
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 1.0,
+   "bias": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "drive_palm_joint",
+   "transmission": "joint",
+   "joints": [
+    "palm_joint"
+   ],
+   "type": "torque motor",
+   "ctrlrange": [
+    -2000.0,
+    2000.0
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 1.0,
+   "bias": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "drive_left_finger_joint",
+   "transmission": "joint",
+   "joints": [
+    "left_finger_joint"
+   ],
+   "type": "torque motor",
+   "ctrlrange": [
+    -2000.0,
+    2000.0
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 1.0,
+   "bias": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "drive_right_finger_joint",
+   "transmission": "joint",
+   "joints": [
+    "right_finger_joint"
+   ],
+   "type": "torque motor",
+   "ctrlrange": [
+    -2000.0,
+    2000.0
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 1.0,
+   "bias": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "drive_left_wheel_joint",
+   "transmission": "joint",
+   "joints": [
+    "left_wheel_joint"
+   ],
+   "type": "torque motor",
+   "ctrlrange": [
+    -18.0,
+    18.0
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 1.0,
+   "bias": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  },
+  {
+   "name": "drive_right_wheel_joint",
+   "transmission": "joint",
+   "joints": [
+    "right_wheel_joint"
+   ],
+   "type": "torque motor",
+   "ctrlrange": [
+    -18.0,
+    18.0
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 1.0,
+   "bias": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C7"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  0.0,
+  0.12,
+  1.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "L": 0.17014,
+ "T": 0.13169,
+ "L_is": "standing CoM height (m)",
+ "tips": [
+  {
+   "name": "left_wheel_tip",
+   "body": "left_wheel",
+   "rigby_id": "T0",
+   "joints": [
+    "left_wheel_joint"
+   ],
+   "home_base_m": [
+    0.0,
+    0.25,
+    0.0
+   ],
+   "home_world_m": [
+    0.0,
+    0.25,
+    0.12
+   ],
+   "reach_box_base_m": {
+    "min": [
+     0.0,
+     0.25,
+     0.0
+    ],
+    "max": [
+     0.0,
+     0.25,
+     0.0
+    ]
+   },
+   "reach_m": 0.0,
+   "first_joint_anchor_base_m": [
+    0.0,
+    0.25,
+    0.0
+   ],
+   "coordinates": []
+  },
+  {
+   "name": "right_wheel_tip",
+   "body": "right_wheel",
+   "rigby_id": "T1",
+   "joints": [
+    "right_wheel_joint"
+   ],
+   "home_base_m": [
+    0.0,
+    -0.25,
+    0.0
+   ],
+   "home_world_m": [
+    0.0,
+    -0.25,
+    0.12
+   ],
+   "reach_box_base_m": {
+    "min": [
+     0.0,
+     -0.25,
+     0.0
+    ],
+    "max": [
+     0.0,
+     -0.25,
+     0.0
+    ]
+   },
+   "reach_m": 0.0,
+   "first_joint_anchor_base_m": [
+    0.0,
+    -0.25,
+    0.0
+   ],
+   "coordinates": []
+  },
+  {
+   "name": "front_caster_tip",
+   "body": "front_caster",
+   "rigby_id": "T2",
+   "joints": [],
+   "home_base_m": [
+    0.24,
+    0.0,
+    -0.085
+   ],
+   "home_world_m": [
+    0.24,
+    0.0,
+    0.035
+   ],
+   "reach_box_base_m": {
+    "min": [
+     0.24,
+     0.0,
+     -0.085
+    ],
+    "max": [
+     0.24,
+     0.0,
+     -0.085
+    ]
+   },
+   "reach_m": 0.2546,
+   "first_joint_anchor_base_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "coordinates": []
+  },
+  {
+   "name": "rear_caster_tip",
+   "body": "rear_caster",
+   "rigby_id": "T3",
+   "joints": [],
+   "home_base_m": [
+    -0.24,
+    0.0,
+    -0.085
+   ],
+   "home_world_m": [
+    -0.24,
+    0.0,
+    0.035
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.24,
+     0.0,
+     -0.085
+    ],
+    "max": [
+     -0.24,
+     0.0,
+     -0.085
+    ]
+   },
+   "reach_m": 0.2546,
+   "first_joint_anchor_base_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "coordinates": []
+  },
+  {
+   "name": "left_finger_tip",
+   "body": "left_finger",
+   "rigby_id": "T9",
+   "joints": [
+    "turret_joint",
+    "upper_arm_joint",
+    "forearm_joint",
+    "palm_joint",
+    "left_finger_joint"
+   ],
+   "home_base_m": [
+    0.2,
+    0.012,
+    0.88
+   ],
+   "home_world_m": [
+    0.2,
+    0.012,
+    1.0
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.4466,
+     -0.6457,
+     -0.2896
+    ],
+    "max": [
+     0.8431,
+     0.6436,
+     0.88
+    ]
+   },
+   "reach_m": 0.8201,
+   "first_joint_anchor_base_m": [
+    0.2,
+    0.0,
+    0.06
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "turret_joint": -0.2481,
+      "upper_arm_joint": 0.8122,
+      "forearm_joint": 0.519,
+      "palm_joint": 0.0966,
+      "left_finger_joint": -0.0005
+     },
+     "share_of_motion": 0.496,
+     "tip_motion_per_unit_at_home_m": [
+      1.6584,
+      -0.0,
+      0.0
+     ]
+    },
+    {
+     "weights": {
+      "turret_joint": 0.9687,
+      "upper_arm_joint": 0.2012,
+      "forearm_joint": 0.1434,
+      "palm_joint": 0.0257,
+      "left_finger_joint": 0.002
+     },
+     "share_of_motion": 0.45,
+     "tip_motion_per_unit_at_home_m": [
+      0.3852,
+      0.0001,
+      0.0
+     ]
+    },
+    {
+     "weights": {
+      "turret_joint": -0.012,
+      "upper_arm_joint": -0.5467,
+      "forearm_joint": 0.8115,
+      "palm_joint": 0.2061,
+      "left_finger_joint": -0.0002
+     },
+     "share_of_motion": 0.046,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0469,
+      -0.0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "right_finger_tip",
+   "body": "right_finger",
+   "rigby_id": "T10",
+   "joints": [
+    "turret_joint",
+    "upper_arm_joint",
+    "forearm_joint",
+    "palm_joint",
+    "right_finger_joint"
+   ],
+   "home_base_m": [
+    0.2,
+    -0.012,
+    0.88
+   ],
+   "home_world_m": [
+    0.2,
+    -0.012,
+    1.0
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.4239,
+     -0.6514,
+     -0.3034
+    ],
+    "max": [
+     0.8473,
+     0.6506,
+     0.88
+    ]
+   },
+   "reach_m": 0.8201,
+   "first_joint_anchor_base_m": [
+    0.2,
+    0.0,
+    0.06
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "turret_joint": 0.1885,
+      "upper_arm_joint": 0.8256,
+      "forearm_joint": 0.524,
+      "palm_joint": 0.0908,
+      "right_finger_joint": 0.0
+     },
+     "share_of_motion": 0.522,
+     "tip_motion_per_unit_at_home_m": [
+      1.6786,
+      -0.0,
+      0.0
+     ]
+    },
+    {
+     "weights": {
+      "turret_joint": 0.982,
+      "upper_arm_joint": -0.1529,
+      "forearm_joint": -0.1092,
+      "palm_joint": -0.0192,
+      "right_finger_joint": 0.0001
+     },
+     "share_of_motion": 0.42,
+     "tip_motion_per_unit_at_home_m": [
+      -0.2835,
+      -0.0,
+      0.0
+     ]
+    },
+    {
+     "weights": {
+      "turret_joint": 0.0102,
+      "upper_arm_joint": -0.5408,
+      "forearm_joint": 0.8076,
+      "palm_joint": 0.2348,
+      "right_finger_joint": 0.0
+     },
+     "share_of_motion": 0.048,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0354,
+      -0.0,
+      0.0
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "left_wheel": [
+   2
+  ],
+  "right_wheel": [
+   3
+  ],
+  "front_caster_foot": [
+   4
+  ],
+  "rear_caster_foot": [
+   5
+  ],
+  "left_pad": [
+   15
+  ],
+  "right_pad": [
+   16
+  ],
+  "rest_of_body": [
+   1,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ],
+  "floor": [
+   0
+  ]
+ },
+ "link_group_names": {
+  "left_wheel": [
+   "left_wheel"
+  ],
+  "right_wheel": [
+   "right_wheel"
+  ],
+  "front_caster_foot": [
+   "front_caster"
+  ],
+  "rear_caster_foot": [
+   "rear_caster"
+  ],
+  "left_pad": [
+   "left_finger"
+  ],
+  "right_pad": [
+   "right_finger"
+  ],
+  "rest_of_body": [
+   "chassis",
+   "cargo_floor",
+   "cargo_front",
+   "cargo_back",
+   "cargo_left",
+   "cargo_right",
+   "turret",
+   "upper_arm",
+   "forearm",
+   "palm"
+  ],
+  "floor": [
+   "world"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ]
+ },
+ "contact_edges": [
+  [
+   "left_wheel",
+   "floor"
+  ],
+  [
+   "right_wheel",
+   "floor"
+  ],
+  [
+   "front_caster_foot",
+   "floor"
+  ],
+  [
+   "rear_caster_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ],
+  [
+   "left_pad",
+   "floor"
+  ],
+  [
+   "right_pad",
+   "floor"
+  ]
+ ],
+ "stance_sets": [
+  {
+   "name": "all",
+   "tips": [
+    "left_wheel_tip",
+    "right_wheel_tip",
+    "front_caster_tip",
+    "rear_caster_tip"
+   ]
+  },
+  {
+   "name": "all_but_left_wheel_tip",
+   "tips": [
+    "right_wheel_tip",
+    "front_caster_tip",
+    "rear_caster_tip"
+   ]
+  },
+  {
+   "name": "all_but_right_wheel_tip",
+   "tips": [
+    "left_wheel_tip",
+    "front_caster_tip",
+    "rear_caster_tip"
+   ]
+  },
+  {
+   "name": "all_but_front_caster_tip",
+   "tips": [
+    "left_wheel_tip",
+    "right_wheel_tip",
+    "rear_caster_tip"
+   ]
+  },
+  {
+   "name": "all_but_rear_caster_tip",
+   "tips": [
+    "left_wheel_tip",
+    "right_wheel_tip",
+    "front_caster_tip"
+   ]
+  }
+ ],
+ "balance": {
+  "support_tips": [
+   "left_wheel_tip",
+   "right_wheel_tip",
+   "front_caster_tip",
+   "rear_caster_tip"
+  ],
+  "support_polygon_base_xy_m": [
+   [
+    -0.24,
+    0.0
+   ],
+   [
+    0.0,
+    -0.25
+   ],
+   [
+    0.24,
+    0.0
+   ],
+   [
+    0.0,
+    0.25
+   ]
+  ],
+  "com_home_base_m": [
+   0.0184,
+   0.0009,
+   0.0501
+  ],
+  "com_margin_home_m": 0.1593,
+  "about": "weight-shift coordinate: the base moves so the CoM moves toward a direction inside this polygon; a tip may lift once the CoM is inside the polygon of the others (dilated 0.1 L)",
+  "polygon_from": "sole corners and wheel contact points (below each wheel centre by its radius) at home"
+ },
+ "gaits": [
+  {
+   "name": "differential_drive",
+   "source": "rigby v7 library (docs/preprint/v7/libraries/mobile_crane.json)",
+   "about": "Maintains a forward-left arm posture that loads the driven wheels; equal positive wheel speeds drive forward and opposite wheel speeds turn the chassis in place. Sideways displacement is obtained by turning and then driving.",
+   "cycle_s": 0.1,
+   "phase": {
+    "left_wheel_tip": 0.0,
+    "right_wheel_tip": 0.0,
+    "front_caster_tip": 0.0,
+    "rear_caster_tip": 0.0
+   },
+   "duty": {
+    "left_wheel_tip": 1.0,
+    "right_wheel_tip": 1.0,
+    "front_caster_tip": 1.0,
+    "rear_caster_tip": 1.0
+   },
+   "duty_mean": 1.0,
+   "stacks": [
+    {
+     "t": 0.1,
+     "set": {
+      "C0": 0.25,
+      "C1": 0.5,
+      "C2": -0.1,
+      "C3": -0.1,
+      "C6": 0.0,
+      "C7": 0.0
+     }
+    }
+   ],
+   "steer": {
+    "forward": [
+     {
+      "C6": 0.8,
+      "C7": 0.8
+     }
+    ],
+    "left": [
+     {}
+    ],
+    "turn": [
+     {
+      "C6": -0.7,
+      "C7": 0.7
+     }
+    ]
+   },
+   "channel_joint": {
+    "C0": "turret_joint",
+    "C1": "upper_arm_joint",
+    "C2": "forearm_joint",
+    "C3": "palm_joint",
+    "C4": "left_finger_joint",
+    "C5": "right_finger_joint"
+   },
+   "step_height_m": 0.0425,
+   "min_limbs_down": 4,
+   "quasi_static": true
+  },
+  {
+   "name": "drive",
+   "source": "intake: wheels from the model's wheel joints",
+   "cycle_s": 0.3292,
+   "phase": {
+    "left_wheel_tip": 0.0,
+    "right_wheel_tip": 0.0,
+    "front_caster_tip": 0.0,
+    "rear_caster_tip": 0.0
+   },
+   "duty": {
+    "left_wheel_tip": 1.0,
+    "right_wheel_tip": 1.0,
+    "front_caster_tip": 1.0,
+    "rear_caster_tip": 1.0
+   },
+   "duty_mean": 1.0,
+   "wheels": {
+    "left_wheel_tip": {
+     "joint": "left_wheel_joint",
+     "radius_m": 0.12
+    },
+    "right_wheel_tip": {
+     "joint": "right_wheel_joint",
+     "radius_m": 0.12
+    }
+   },
+   "about": "no tip lifts; the base moves by rolling its wheels (differential drive about the wheels' axle line)",
+   "min_limbs_down": 4,
+   "quasi_static": true
+  }
+ ],
+ "objects": null,
+ "excluded_pairs_home_overlap": [],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: x forward, y left, z up, metres; for the arm a level frame at its base",
+ "kind": "crane",
+ "support": [
+  {
+   "tip": "left_wheel_tip",
+   "type": "wheel",
+   "joint": "left_wheel_joint",
+   "radius_m": 0.12,
+   "axis_body": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "axis_base_home": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "geom": "left_wheel_geom",
+   "about": "axis_body: the wheel joint's axis in the wheel body's frame; the tip site is the wheel's centre"
+  },
+  {
+   "tip": "right_wheel_tip",
+   "type": "wheel",
+   "joint": "right_wheel_joint",
+   "radius_m": 0.12,
+   "axis_body": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "axis_base_home": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "geom": "right_wheel_geom",
+   "about": "axis_body: the wheel joint's axis in the wheel body's frame; the tip site is the wheel's centre"
+  },
+  {
+   "tip": "front_caster_tip",
+   "type": "point",
+   "rolls_freely": true
+  },
+  {
+   "tip": "rear_caster_tip",
+   "type": "point",
+   "rolls_freely": true
+  }
+ ],
+ "render_model": "any-robot/assets/general/mobile/mobile_crane/robot_free.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ },
+ "intake_notes": {
+  "leaves_not_tips": [
+   "cargo_floor_tip",
+   "cargo_front_tip",
+   "cargo_back_tip",
+   "cargo_left_tip",
+   "cargo_right_tip"
+  ]
+ }
+}

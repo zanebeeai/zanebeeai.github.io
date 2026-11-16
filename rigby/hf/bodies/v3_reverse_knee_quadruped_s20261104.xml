@@ -1,0 +1,105 @@
+<mujoco model="v3_reverse_knee_quadruped_s20261104">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast"/>
+
+  <size nkey="1"/>
+
+  <default>
+    <joint limited="true" armature="0.01" damping="0.5"/>
+    <geom solref="0.01" solimp="0.95 0.99" margin="0.0005"/>
+    <general ctrllimited="true" forcelimited="true" biastype="affine" biasprm="0 -1"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" rgba="0.32 0.34 0.36 1"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="torso" pos="0 0 0.32788">
+      <joint name="root" type="free" armature="0" damping="0"/>
+      <geom name="torso_geom" size="0.27407 0.11045 0.05" type="box" density="770" rgba="0.62 0.62 0.66 1"/>
+      <body name="fl_hip" pos="0.21926 0.11045 -0.02">
+        <joint name="fl_abduct" pos="0 0 0" axis="1 0 0" range="-0.5 0.5"/>
+        <geom name="fl_hip_geom" size="0.03" density="900" rgba="0.85 0.35 0.3 1"/>
+        <body name="fl_thigh" pos="0 0.03 0">
+          <joint name="fl_swing" pos="0 0 0" axis="0 1 0" range="-1.6 1.6"/>
+          <geom name="fl_thigh_geom" size="0.026 0.094835" pos="0 0 -0.094835" type="capsule" density="900" rgba="0.85 0.35 0.3 1"/>
+          <body name="fl_shank" pos="0 0 -0.18967">
+            <joint name="fl_knee" pos="0 0 0" axis="0 1 0" range="0.15 2.4"/>
+            <geom name="fl_shank_geom" size="0.02 0.103655" pos="0 0 -0.103655" type="capsule" density="900" rgba="0.85 0.35 0.3 1"/>
+            <body name="fl_foot" pos="0 0 -0.20731">
+              <geom name="fl_foot_geom" size="0.024" friction="1.3" density="1100" rgba="0.85 0.35 0.3 1"/>
+              <site name="fl_foot_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="fr_hip" pos="0.21926 -0.11045 -0.02">
+        <joint name="fr_abduct" pos="0 0 0" axis="1 0 0" range="-0.5 0.5"/>
+        <geom name="fr_hip_geom" size="0.03" density="900" rgba="0.3 0.55 0.85 1"/>
+        <body name="fr_thigh" pos="0 -0.03 0">
+          <joint name="fr_swing" pos="0 0 0" axis="0 1 0" range="-1.6 1.6"/>
+          <geom name="fr_thigh_geom" size="0.026 0.094835" pos="0 0 -0.094835" type="capsule" density="900" rgba="0.3 0.55 0.85 1"/>
+          <body name="fr_shank" pos="0 0 -0.18967">
+            <joint name="fr_knee" pos="0 0 0" axis="0 1 0" range="0.15 2.4"/>
+            <geom name="fr_shank_geom" size="0.02 0.103655" pos="0 0 -0.103655" type="capsule" density="900" rgba="0.3 0.55 0.85 1"/>
+            <body name="fr_foot" pos="0 0 -0.20731">
+              <geom name="fr_foot_geom" size="0.024" friction="1.3" density="1100" rgba="0.3 0.55 0.85 1"/>
+              <site name="fr_foot_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="hl_hip" pos="-0.21926 0.11045 -0.02">
+        <joint name="hl_abduct" pos="0 0 0" axis="1 0 0" range="-0.5 0.5"/>
+        <geom name="hl_hip_geom" size="0.03" density="900" rgba="0.35 0.7 0.4 1"/>
+        <body name="hl_thigh" pos="0 0.03 0">
+          <joint name="hl_swing" pos="0 0 0" axis="0 1 0" range="-1.6 1.6"/>
+          <geom name="hl_thigh_geom" size="0.026 0.094835" pos="0 0 -0.094835" type="capsule" density="900" rgba="0.35 0.7 0.4 1"/>
+          <body name="hl_shank" pos="0 0 -0.18967">
+            <joint name="hl_knee" pos="0 0 0" axis="0 1 0" range="0.15 2.4"/>
+            <geom name="hl_shank_geom" size="0.02 0.103655" pos="0 0 -0.103655" type="capsule" density="900" rgba="0.35 0.7 0.4 1"/>
+            <body name="hl_foot" pos="0 0 -0.20731">
+              <geom name="hl_foot_geom" size="0.024" friction="1.3" density="1100" rgba="0.35 0.7 0.4 1"/>
+              <site name="hl_foot_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="hr_hip" pos="-0.21926 -0.11045 -0.02">
+        <joint name="hr_abduct" pos="0 0 0" axis="1 0 0" range="-0.5 0.5"/>
+        <geom name="hr_hip_geom" size="0.03" density="900" rgba="0.85 0.65 0.25 1"/>
+        <body name="hr_thigh" pos="0 -0.03 0">
+          <joint name="hr_swing" pos="0 0 0" axis="0 1 0" range="-1.6 1.6"/>
+          <geom name="hr_thigh_geom" size="0.026 0.094835" pos="0 0 -0.094835" type="capsule" density="900" rgba="0.85 0.65 0.25 1"/>
+          <body name="hr_shank" pos="0 0 -0.18967">
+            <joint name="hr_knee" pos="0 0 0" axis="0 1 0" range="0.15 2.4"/>
+            <geom name="hr_shank_geom" size="0.02 0.103655" pos="0 0 -0.103655" type="capsule" density="900" rgba="0.85 0.65 0.25 1"/>
+            <body name="hr_foot" pos="0 0 -0.20731">
+              <geom name="hr_foot_geom" size="0.024" friction="1.3" density="1100" rgba="0.85 0.65 0.25 1"/>
+              <site name="hr_foot_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <general name="fl_abduct_servo" joint="fl_abduct" ctrlrange="-0.5 0.5" forcerange="-30 30" gainprm="120" biasprm="0 -120"/>
+    <general name="fl_swing_servo" joint="fl_swing" ctrlrange="-1.6 1.6" forcerange="-40 40" gainprm="160" biasprm="0 -160"/>
+    <general name="fl_knee_servo" joint="fl_knee" ctrlrange="0.15 2.4" forcerange="-40 40" gainprm="160" biasprm="0 -160"/>
+    <general name="fr_abduct_servo" joint="fr_abduct" ctrlrange="-0.5 0.5" forcerange="-30 30" gainprm="120" biasprm="0 -120"/>
+    <general name="fr_swing_servo" joint="fr_swing" ctrlrange="-1.6 1.6" forcerange="-40 40" gainprm="160" biasprm="0 -160"/>
+    <general name="fr_knee_servo" joint="fr_knee" ctrlrange="0.15 2.4" forcerange="-40 40" gainprm="160" biasprm="0 -160"/>
+    <general name="hl_abduct_servo" joint="hl_abduct" ctrlrange="-0.5 0.5" forcerange="-30 30" gainprm="120" biasprm="0 -120"/>
+    <general name="hl_swing_servo" joint="hl_swing" ctrlrange="-1.6 1.6" forcerange="-40 40" gainprm="160" biasprm="0 -160"/>
+    <general name="hl_knee_servo" joint="hl_knee" ctrlrange="0.15 2.4" forcerange="-40 40" gainprm="160" biasprm="0 -160"/>
+    <general name="hr_abduct_servo" joint="hr_abduct" ctrlrange="-0.5 0.5" forcerange="-30 30" gainprm="120" biasprm="0 -120"/>
+    <general name="hr_swing_servo" joint="hr_swing" ctrlrange="-1.6 1.6" forcerange="-40 40" gainprm="160" biasprm="0 -160"/>
+    <general name="hr_knee_servo" joint="hr_knee" ctrlrange="0.15 2.4" forcerange="-40 40" gainprm="160" biasprm="0 -160"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.44098 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+  </keyframe>
+</mujoco>

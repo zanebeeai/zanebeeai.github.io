@@ -1,0 +1,745 @@
+{
+ "body": "mobile_wheeled_biped",
+ "skill": "trace_circle",
+ "arm": "J",
+ "variant": 0,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/mobile_wheeled_biped.json",
+ "library_sha": "7b95043290a69d511df40aba8eaf246bbc14e37930f04d2d7d5a68912288c296",
+ "standin_library": false,
+ "prompt_sha256": "635234a5f4d922cf0376d74fc4d58054ad3ae5b0e8acd276cf8ad7042b5ea818",
+ "prompt_chars": 22750,
+ "valid": true,
+ "valid_first": true,
+ "repair_rounds": 0,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0049
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "left_wheel",
+    350
+   ],
+   "limit_m": 0.0049
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0246
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0136,
+   "limit_rad": 0.1786
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0492
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0098
+  },
+  "wheel_slip": {
+   "pass": true,
+   "worst_roll_mismatch_m": 0.0,
+   "worst_side_slide_m": 0.0001,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0098
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0492
+  },
+  "pass": true,
+  "failed": []
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0049
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0,
+     "body_frame": [
+      "left_wheel",
+      350
+     ],
+     "limit_m": 0.0049
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0246
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.0136,
+     "limit_rad": 0.1786
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0492
+    },
+    "foot_slip": {
+     "pass": true,
+     "worst_slide_m": 0.0,
+     "worst_off_ground_m": 0.0,
+     "limit_m": 0.0098
+    },
+    "wheel_slip": {
+     "pass": true,
+     "worst_roll_mismatch_m": 0.0,
+     "worst_side_slide_m": 0.0001,
+     "worst_off_ground_m": 0.0,
+     "limit_m": 0.0098
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.0492
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 8.4,
+    "keyframes": [
+     {
+      "t": 0,
+      "joints": {
+       "arm_yaw": 0,
+       "arm_joint_0": 0,
+       "arm_joint_1": 0
+      },
+      "stance": [
+       "left_wheel",
+       "right_wheel"
+      ]
+     },
+     {
+      "t": 0.7,
+      "joints": {
+       "arm_yaw": 0.085,
+       "arm_joint_0": -0.18,
+       "arm_joint_1": -0.07
+      },
+      "base": {
+       "rpy_deg": [
+        0,
+        -0.4,
+        0
+       ]
+      }
+     },
+     {
+      "t": 1.5,
+      "joints": {
+       "arm_yaw": 0.17,
+       "arm_joint_0": -0.32,
+       "arm_joint_1": -0.12
+      },
+      "base": {
+       "rpy_deg": [
+        -0.3,
+        -0.7,
+        0
+       ]
+      }
+     },
+     {
+      "t": 1.95,
+      "joints": {
+       "arm_yaw": 0.147,
+       "arm_joint_0": -0.46,
+       "arm_joint_1": -0.145
+      },
+      "base": {
+       "rpy_deg": [
+        -0.26,
+        -0.8,
+        0
+       ]
+      }
+     },
+     {
+      "t": 2.4,
+      "joints": {
+       "arm_yaw": 0.085,
+       "arm_joint_0": -0.562,
+       "arm_joint_1": -0.163
+      },
+      "base": {
+       "rpy_deg": [
+        -0.15,
+        -0.9,
+        0
+       ]
+      }
+     },
+     {
+      "t": 2.85,
+      "joints": {
+       "arm_yaw": 0,
+       "arm_joint_0": -0.6,
+       "arm_joint_1": -0.17
+      },
+      "base": {
+       "rpy_deg": [
+        0,
+        -0.95,
+        0
+       ]
+      }
+     },
+     {
+      "t": 3.3,
+      "joints": {
+       "arm_yaw": -0.085,
+       "arm_joint_0": -0.562,
+       "arm_joint_1": -0.163
+      },
+      "base": {
+       "rpy_deg": [
+        0.15,
+        -0.9,
+        0
+       ]
+      }
+     },
+     {
+      "t": 3.75,
+      "joints": {
+       "arm_yaw": -0.147,
+       "arm_joint_0": -0.46,
+       "arm_joint_1": -0.145
+      },
+      "base": {
+       "rpy_deg": [
+        0.26,
+        -0.8,
+        0
+       ]
+      }
+     },
+     {
+      "t": 4.2,
+      "joints": {
+       "arm_yaw": -0.17,
+       "arm_joint_0": -0.32,
+       "arm_joint_1": -0.12
+      },
+      "base": {
+       "rpy_deg": [
+        0.3,
+        -0.7,
+        0
+       ]
+      }
+     },
+     {
+      "t": 4.65,
+      "joints": {
+       "arm_yaw": -0.147,
+       "arm_joint_0": -0.18,
+       "arm_joint_1": -0.095
+      },
+      "base": {
+       "rpy_deg": [
+        0.26,
+        -0.6,
+        0
+       ]
+      }
+     },
+     {
+      "t": 5.1,
+      "joints": {
+       "arm_yaw": -0.085,
+       "arm_joint_0": -0.078,
+       "arm_joint_1": -0.077
+      },
+      "base": {
+       "rpy_deg": [
+        0.15,
+        -0.5,
+        0
+       ]
+      }
+     },
+     {
+      "t": 5.55,
+      "joints": {
+       "arm_yaw": 0,
+       "arm_joint_0": -0.04,
+       "arm_joint_1": -0.07
+      },
+      "base": {
+       "rpy_deg": [
+        0,
+        -0.45,
+        0
+       ]
+      }
+     },
+     {
+      "t": 6,
+      "joints": {
+       "arm_yaw": 0.085,
+       "arm_joint_0": -0.078,
+       "arm_joint_1": -0.077
+      },
+      "base": {
+       "rpy_deg": [
+        -0.15,
+        -0.5,
+        0
+       ]
+      }
+     },
+     {
+      "t": 6.45,
+      "joints": {
+       "arm_yaw": 0.147,
+       "arm_joint_0": -0.18,
+       "arm_joint_1": -0.095
+      },
+      "base": {
+       "rpy_deg": [
+        -0.26,
+        -0.6,
+        0
+       ]
+      }
+     },
+     {
+      "t": 6.9,
+      "joints": {
+       "arm_yaw": 0.17,
+       "arm_joint_0": -0.32,
+       "arm_joint_1": -0.12
+      },
+      "base": {
+       "rpy_deg": [
+        -0.3,
+        -0.7,
+        0
+       ]
+      }
+     },
+     {
+      "t": 7.3,
+      "joints": {
+       "arm_yaw": 0.17,
+       "arm_joint_0": -0.32,
+       "arm_joint_1": -0.12
+      }
+     },
+     {
+      "t": 8.4,
+      "joints": {
+       "arm_yaw": 0,
+       "arm_joint_0": 0,
+       "arm_joint_1": 0
+      },
+      "base": {
+       "rpy_deg": [
+        0,
+        0,
+        0
+       ]
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 8.4,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"joints\": {\n        \"arm_yaw\": 0,\n        \"arm_joint_0\": 0,\n        \"arm_joint_1\": 0\n      },\n      \"stance\": [\"left_wheel\", \"right_wheel\"]\n    },\n    {\n      \"t\": 0.7,\n      \"joints\": {\n        \"arm_yaw\": 0.085,\n        \"arm_joint_0\": -0.18,\n        \"arm_joint_1\": -0.07\n      },\n      \"base\": {\"rpy_deg\": [0, -0.4, 0]}\n    },\n    {\n      \"t\": 1.5,\n      \"joints\": {\n        \"arm_yaw\": 0.17,\n        \"arm_joint_0\": -0.32,\n        \"arm_joint_1\": -0.12\n      },\n      \"base\": {\"rpy_deg\": [-0.3, -0.7, 0]}\n    },\n    {\n      \"t\": 1.95,\n      \"joints\": {\n        \"arm_yaw\": 0.147,\n        \"arm_joint_0\": -0.46,\n        \"arm_joint_1\": -0.145\n      },\n      \"base\": {\"rpy_deg\": [-0.26, -0.8, 0]}\n    },\n    {\n      \"t\": 2.4,\n      \"joints\": {\n        \"arm_yaw\": 0.085,\n        \"arm_joint_0\": -0.562,\n        \"arm_joint_1\": -0.163\n      },\n      \"base\": {\"rpy_deg\": [-0.15, -0.9, 0]}\n    },\n    {\n      \"t\": 2.85,\n      \"joints\": {\n        \"arm_yaw\": 0,\n        \"arm_joint_0\": -0.6,\n        \"arm_joint_1\": -0.17\n      },\n      \"base\": {\"rpy_deg\": [0, -0.95, 0]}\n    },\n    {\n      \"t\": 3.3,\n      \"joints\": {\n        \"arm_yaw\": -0.085,\n        \"arm_joint_0\": -0.562,\n        \"arm_joint_1\": -0.163\n      },\n      \"base\": {\"rpy_deg\": [0.15, -0.9, 0]}\n    },\n    {\n      \"t\": 3.75,\n      \"joints\": {\n        \"arm_yaw\": -0.147,\n        \"arm_joint_0\": -0.46,\n        \"arm_joint_1\": -0.145\n      },\n      \"base\": {\"rpy_deg\": [0.26, -0.8, 0]}\n    },\n    {\n      \"t\": 4.2,\n      \"joints\": {\n        \"arm_yaw\": -0.17,\n        \"arm_joint_0\": -0.32,\n        \"arm_joint_1\": -0.12\n      },\n      \"base\": {\"rpy_deg\": [0.3, -0.7, 0]}\n    },\n    {\n      \"t\": 4.65,\n      \"joints\": {\n        \"arm_yaw\": -0.147,\n        \"arm_joint_0\": -0.18,\n        \"arm_joint_1\": -0.095\n      },\n      \"base\": {\"rpy_deg\": [0.26, -0.6, 0]}\n    },\n    {\n      \"t\": 5.1,\n      \"joints\": {\n        \"arm_yaw\": -0.085,\n        \"arm_joint_0\": -0.078,\n        \"arm_joint_1\": -0.077\n      },\n      \"base\": {\"rpy_deg\": [0.15, -0.5, 0]}\n    },\n    {\n      \"t\": 5.55,\n      \"joints\": {\n        \"arm_yaw\": 0,\n        \"arm_joint_0\": -0.04,\n        \"arm_joint_1\": -0.07\n      },\n      \"base\": {\"rpy_deg\": [0, -0.45, 0]}\n    },\n    {\n      \"t\": 6,\n      \"joints\": {\n        \"arm_yaw\": 0.085,\n        \"arm_joint_0\": -0.078,\n        \"arm_joint_1\": -0.077\n      },\n      \"base\": {\"rpy_deg\": [-0.15, -0.5, 0]}\n    },\n    {\n      \"t\": 6.45,\n      \"joints\": {\n        \"arm_yaw\": 0.147,\n        \"arm_joint_0\": -0.18,\n        \"arm_joint_1\": -0.095\n      },\n      \"base\": {\"rpy_deg\": [-0.26, -0.6, 0]}\n    },\n    {\n      \"t\": 6.9,\n      \"joints\": {\n        \"arm_yaw\": 0.17,\n        \"arm_joint_0\": -0.32,\n        \"arm_joint_1\": -0.12\n      },\n      \"base\": {\"rpy_deg\": [-0.3, -0.7, 0]}\n    },\n    {\n      \"t\": 7.3,\n      \"joints\": {\n        \"arm_yaw\": 0.17,\n        \"arm_joint_0\": -0.32,\n        \"arm_joint_1\": -0.12\n      }\n    },\n    {\n      \"t\": 8.4,\n      \"joints\": {\n        \"arm_yaw\": 0,\n        \"arm_joint_0\": 0,\n        \"arm_joint_1\": 0\n      },\n      \"base\": {\"rpy_deg\": [0, 0, 0]}\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [],
+ "calls": 1,
+ "call_log": [
+  {
+   "prompt_tokens": 8549,
+   "cached_tokens": 0,
+   "completion_tokens": 1474,
+   "reasoning_tokens": 176,
+   "cost_usd": 0.015919,
+   "service_tier": "flex",
+   "seconds": 23.96
+  }
+ ],
+ "cost_usd": 0.015919,
+ "seconds": 26.7,
+ "at": "2026-11-12T02:33:34",
+ "predicate": {
+  "skill": "trace_circle",
+  "applicable": true,
+  "pass": true,
+  "tip": "arm_finger_right_tip",
+  "close_L": 0.0124,
+  "span_deg": 358.021,
+  "radius_L": 0.2161,
+  "radius_cv": 0.2589
+ },
+ "valid_and_semantic": true,
+ "program": {
+  "duration_s": 8.4,
+  "keyframes": [
+   {
+    "t": 0,
+    "joints": {
+     "arm_yaw": 0,
+     "arm_joint_0": 0,
+     "arm_joint_1": 0
+    },
+    "stance": [
+     "left_wheel",
+     "right_wheel"
+    ]
+   },
+   {
+    "t": 0.7,
+    "joints": {
+     "arm_yaw": 0.085,
+     "arm_joint_0": -0.18,
+     "arm_joint_1": -0.07
+    },
+    "base": {
+     "rpy_deg": [
+      0,
+      -0.4,
+      0
+     ]
+    }
+   },
+   {
+    "t": 1.5,
+    "joints": {
+     "arm_yaw": 0.17,
+     "arm_joint_0": -0.32,
+     "arm_joint_1": -0.12
+    },
+    "base": {
+     "rpy_deg": [
+      -0.3,
+      -0.7,
+      0
+     ]
+    }
+   },
+   {
+    "t": 1.95,
+    "joints": {
+     "arm_yaw": 0.147,
+     "arm_joint_0": -0.46,
+     "arm_joint_1": -0.145
+    },
+    "base": {
+     "rpy_deg": [
+      -0.26,
+      -0.8,
+      0
+     ]
+    }
+   },
+   {
+    "t": 2.4,
+    "joints": {
+     "arm_yaw": 0.085,
+     "arm_joint_0": -0.562,
+     "arm_joint_1": -0.163
+    },
+    "base": {
+     "rpy_deg": [
+      -0.15,
+      -0.9,
+      0
+     ]
+    }
+   },
+   {
+    "t": 2.85,
+    "joints": {
+     "arm_yaw": 0,
+     "arm_joint_0": -0.6,
+     "arm_joint_1": -0.17
+    },
+    "base": {
+     "rpy_deg": [
+      0,
+      -0.95,
+      0
+     ]
+    }
+   },
+   {
+    "t": 3.3,
+    "joints": {
+     "arm_yaw": -0.085,
+     "arm_joint_0": -0.562,
+     "arm_joint_1": -0.163
+    },
+    "base": {
+     "rpy_deg": [
+      0.15,
+      -0.9,
+      0
+     ]
+    }
+   },
+   {
+    "t": 3.75,
+    "joints": {
+     "arm_yaw": -0.147,
+     "arm_joint_0": -0.46,
+     "arm_joint_1": -0.145
+    },
+    "base": {
+     "rpy_deg": [
+      0.26,
+      -0.8,
+      0
+     ]
+    }
+   },
+   {
+    "t": 4.2,
+    "joints": {
+     "arm_yaw": -0.17,
+     "arm_joint_0": -0.32,
+     "arm_joint_1": -0.12
+    },
+    "base": {
+     "rpy_deg": [
+      0.3,
+      -0.7,
+      0
+     ]
+    }
+   },
+   {
+    "t": 4.65,
+    "joints": {
+     "arm_yaw": -0.147,
+     "arm_joint_0": -0.18,
+     "arm_joint_1": -0.095
+    },
+    "base": {
+     "rpy_deg": [
+      0.26,
+      -0.6,
+      0
+     ]
+    }
+   },
+   {
+    "t": 5.1,
+    "joints": {
+     "arm_yaw": -0.085,
+     "arm_joint_0": -0.078,
+     "arm_joint_1": -0.077
+    },
+    "base": {
+     "rpy_deg": [
+      0.15,
+      -0.5,
+      0
+     ]
+    }
+   },
+   {
+    "t": 5.55,
+    "joints": {
+     "arm_yaw": 0,
+     "arm_joint_0": -0.04,
+     "arm_joint_1": -0.07
+    },
+    "base": {
+     "rpy_deg": [
+      0,
+      -0.45,
+      0
+     ]
+    }
+   },
+   {
+    "t": 6,
+    "joints": {
+     "arm_yaw": 0.085,
+     "arm_joint_0": -0.078,
+     "arm_joint_1": -0.077
+    },
+    "base": {
+     "rpy_deg": [
+      -0.15,
+      -0.5,
+      0
+     ]
+    }
+   },
+   {
+    "t": 6.45,
+    "joints": {
+     "arm_yaw": 0.147,
+     "arm_joint_0": -0.18,
+     "arm_joint_1": -0.095
+    },
+    "base": {
+     "rpy_deg": [
+      -0.26,
+      -0.6,
+      0
+     ]
+    }
+   },
+   {
+    "t": 6.9,
+    "joints": {
+     "arm_yaw": 0.17,
+     "arm_joint_0": -0.32,
+     "arm_joint_1": -0.12
+    },
+    "base": {
+     "rpy_deg": [
+      -0.3,
+      -0.7,
+      0
+     ]
+    }
+   },
+   {
+    "t": 7.3,
+    "joints": {
+     "arm_yaw": 0.17,
+     "arm_joint_0": -0.32,
+     "arm_joint_1": -0.12
+    }
+   },
+   {
+    "t": 8.4,
+    "joints": {
+     "arm_yaw": 0,
+     "arm_joint_0": 0,
+     "arm_joint_1": 0
+    },
+    "base": {
+     "rpy_deg": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0049
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "left_wheel",
+    350
+   ],
+   "limit_m": 0.0049
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0246
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0136,
+   "limit_rad": 0.1786
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0492
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0098
+  },
+  "wheel_slip": {
+   "pass": true,
+   "worst_roll_mismatch_m": 0.0,
+   "worst_side_slide_m": 0.0001,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0098
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0492
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": 4,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.1786,
+   "start_joints_moved_inside_range": [
+    "left_knee",
+    "right_knee",
+    "arm_grip_left",
+    "arm_grip_right"
+   ],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0,
+   "gait_cmd_scale_min": 1.0,
+   "com_shift_max_m": 0.0179
+  },
+  "notes": [],
+  "gaits": []
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/mobile_wheeled_biped/clips/trace_circle_J_v0.npz"
+}

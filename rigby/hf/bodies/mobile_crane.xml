@@ -1,0 +1,104 @@
+<mujoco model="mobile_crane">
+  <compiler angle="radian"/>
+
+  <size nkey="1"/>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" rgba="0.32 0.34 0.36 1"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="chassis" pos="0 0 0.122">
+      <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="35" diaginertia="1.5645 1.092 0.5565"/>
+      <joint name="mobile_base_free" type="free" armature="0.03"/>
+      <geom name="chassis_geom" size="0.3 0.21 0.06" type="box" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.62 0.62 0.66 1"/>
+      <body name="left_wheel" pos="0 0.25 0">
+        <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="1.8" diaginertia="0.01296 0.00711375 0.00711375"/>
+        <joint name="left_wheel_joint" pos="0 0 0" axis="0 1 0" actuatorfrcrange="-180 180" armature="0.03"/>
+        <geom name="left_wheel_geom" size="0.12 0.0325" quat="0.707107 0.707107 0 0" type="cylinder" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.85 0.35 0.3 1"/>
+        <site name="left_wheel_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="right_wheel" pos="0 -0.25 0">
+        <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="1.8" diaginertia="0.01296 0.00711375 0.00711375"/>
+        <joint name="right_wheel_joint" pos="0 0 0" axis="0 1 0" actuatorfrcrange="-180 180"/>
+        <geom name="right_wheel_geom" size="0.12 0.0325" quat="0.707107 0.707107 0 0" type="cylinder" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.3 0.55 0.85 1"/>
+        <site name="right_wheel_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="front_caster" pos="0.24 0 -0.085">
+        <inertial pos="0 0 0" mass="0.3" diaginertia="0.000147 0.000147 0.000147"/>
+        <geom name="front_caster_geom" size="0.035" priority="1" friction="0.001 1e-05 1e-05" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.35 0.7 0.4 1"/>
+        <site name="front_caster_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="rear_caster" pos="-0.24 0 -0.085">
+        <inertial pos="0 0 0" mass="0.3" diaginertia="0.000147 0.000147 0.000147"/>
+        <geom name="rear_caster_geom" size="0.035" priority="1" friction="0.001 1e-05 1e-05" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.85 0.65 0.25 1"/>
+        <site name="rear_caster_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="cargo_floor" pos="-0.1 0.02 0.08">
+        <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="1.2" diaginertia="0.01684 0.00904 0.00788"/>
+        <geom name="cargo_floor_geom" size="0.15 0.14 0.01" type="box" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.62 0.62 0.66 1"/>
+      </body>
+      <body name="cargo_front" pos="0.055 0.02 0.135">
+        <inertial pos="0 0 0" quat="0.707107 0.707107 0 0" mass="0.2" diaginertia="0.001635 0.00150167 0.00013667"/>
+        <geom name="cargo_front_geom" size="0.005 0.15 0.045" type="box" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.62 0.62 0.66 1"/>
+      </body>
+      <body name="cargo_back" pos="-0.255 0.02 0.135">
+        <inertial pos="0 0 0" quat="0.707107 0.707107 0 0" mass="0.2" diaginertia="0.001635 0.00150167 0.00013667"/>
+        <geom name="cargo_back_geom" size="0.005 0.15 0.045" type="box" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.62 0.62 0.66 1"/>
+      </body>
+      <body name="cargo_left" pos="-0.1 0.165 0.135">
+        <inertial pos="0 0 0" quat="0.5 0.5 0.5 0.5" mass="0.2" diaginertia="0.001635 0.00150167 0.00013667"/>
+        <geom name="cargo_left_geom" size="0.15 0.005 0.045" type="box" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.62 0.62 0.66 1"/>
+      </body>
+      <body name="cargo_right" pos="-0.1 -0.125 0.135">
+        <inertial pos="0 0 0" quat="0.5 0.5 0.5 0.5" mass="0.2" diaginertia="0.001635 0.00150167 0.00013667"/>
+        <geom name="cargo_right_geom" size="0.15 0.005 0.045" type="box" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.62 0.62 0.66 1"/>
+      </body>
+      <body name="turret" pos="0.2 0 0.06">
+        <inertial pos="0 0 0.08" mass="2" diaginertia="0.00606667 0.00606667 0.0036"/>
+        <joint name="turret_joint" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159" actuatorfrcrange="-180 180" armature="0.01" damping="0.5 0.5 0.5"/>
+        <geom name="turret_geom" size="0.06 0.02" pos="0 0 0.08" type="capsule" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.62 0.62 0.66 1"/>
+        <body name="upper_arm" pos="0 0 0.16">
+          <inertial pos="0 0 0.15" mass="1.4" diaginertia="0.0112087 0.0112087 0.0014175"/>
+          <joint name="upper_arm_joint" pos="0 0 0" axis="0 1 0" range="-2.2 2.2" actuatorfrcrange="-180 180" armature="0.01" damping="0.5 0.5 0.5"/>
+          <geom name="upper_arm_geom" size="0.045 0.105" pos="0 0 0.15" type="capsule" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.62 0.62 0.66 1"/>
+          <body name="forearm" pos="0 0 0.3">
+            <inertial pos="0 0 0.13" mass="1" diaginertia="0.00599433 0.00599433 0.000722"/>
+            <joint name="forearm_joint" pos="0 0 0" axis="0 1 0" range="-2.4 2.4" actuatorfrcrange="-180 180" armature="0.01" damping="0.5 0.5 0.5"/>
+            <geom name="forearm_geom" size="0.038 0.092" pos="0 0 0.13" type="capsule" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.62 0.62 0.66 1"/>
+            <body name="palm" pos="0 0 0.26">
+              <inertial pos="0 0 0.025" quat="0.5 0.5 -0.5 0.5" mass="0.6" diaginertia="0.0016 0.001405 0.000445"/>
+              <joint name="palm_joint" pos="0 0 0" axis="0 1 0" range="-2.2 2.2" actuatorfrcrange="-180 180" armature="0.01" damping="0.5 0.5 0.5"/>
+              <geom name="palm_geom" size="0.04 0.08 0.025" pos="0 0 0.025" type="box" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.62 0.62 0.66 1"/>
+              <body name="left_finger" pos="0 0.012 0.05">
+                <inertial pos="0 0 0.05" quat="0.707107 0 0 0.707107" mass="0.14" diaginertia="0.00015196 0.00011895 3.758e-05"/>
+                <joint name="left_finger_joint" pos="0 0 0" axis="0 1 0" type="slide" range="0 0.065" actuatorfrcrange="-180 180" armature="0.01" damping="0.5 0.5 0.5"/>
+                <geom name="left_finger_geom" size="0.0275 0.007 0.05" pos="0 0 0.05" type="box" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.6 0.4 0.8 1"/>
+                <site name="left_finger_tip" pos="0 0 0.05" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+              <body name="right_finger" pos="0 -0.012 0.05">
+                <inertial pos="0 0 0.05" quat="0.707107 0 0 0.707107" mass="0.14" diaginertia="0.00015196 0.00011895 3.758e-05"/>
+                <joint name="right_finger_joint" pos="0 0 0" axis="0 -1 0" type="slide" range="0 0.065" actuatorfrcrange="-180 180" armature="0.01" damping="0.5 0.5 0.5"/>
+                <geom name="right_finger_geom" size="0.0275 0.007 0.05" pos="0 0 0.05" type="box" friction="1.2" solref="0.004" solimp="0.99 0.999 0.0005" rgba="0.3 0.75 0.75 1"/>
+                <site name="right_finger_tip" pos="0 0 0.05" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <general name="drive_turret_joint" joint="turret_joint" ctrllimited="true" ctrlrange="-2000 2000"/>
+    <general name="drive_upper_arm_joint" joint="upper_arm_joint" ctrllimited="true" ctrlrange="-2000 2000"/>
+    <general name="drive_forearm_joint" joint="forearm_joint" ctrllimited="true" ctrlrange="-2000 2000"/>
+    <general name="drive_palm_joint" joint="palm_joint" ctrllimited="true" ctrlrange="-2000 2000"/>
+    <general name="drive_left_finger_joint" joint="left_finger_joint" ctrllimited="true" ctrlrange="-2000 2000"/>
+    <general name="drive_right_finger_joint" joint="right_finger_joint" ctrllimited="true" ctrlrange="-2000 2000"/>
+    <general name="drive_left_wheel_joint" joint="left_wheel_joint" ctrllimited="true" ctrlrange="-18 18"/>
+    <general name="drive_right_wheel_joint" joint="right_wheel_joint" ctrllimited="true" ctrlrange="-18 18"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.12 1 0 0 0 0 0 0 0 0 0 0 0"/>
+  </keyframe>
+</mujoco>

@@ -1,0 +1,265 @@
+{
+ "clip_id": "franka_emika_panda__random__0301092",
+ "body": "franka_emika_panda",
+ "kind": "arm",
+ "source": "random",
+ "seed": 301092,
+ "attempt_index": 92,
+ "skill": null,
+ "arm": "random",
+ "compiler": "compile_program/J",
+ "variant": "left_finger_tip",
+ "params": {
+  "amplitude": 0.25,
+  "key_s": 1.22,
+  "wander": false,
+  "ik_miss_m": [
+   0.0001
+  ]
+ },
+ "program": {
+  "duration_s": 5.23,
+  "arm": "J",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 1.22,
+    "frame": 61,
+    "joints": {
+     "joint1": 0.1472,
+     "joint2": -0.2838,
+     "joint3": -0.0227,
+     "joint4": 0.1487,
+     "joint5": -0.0024,
+     "joint6": 0.0474,
+     "joint7": -0.001,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 2.44,
+    "frame": 122,
+    "joints": {
+     "joint1": -0.0916,
+     "joint2": 0.2109,
+     "joint3": 0.0173,
+     "joint4": 0.1005,
+     "joint5": 0.0054,
+     "joint6": 0.0508,
+     "joint7": 0.0013,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 3.66,
+    "frame": 183,
+    "joints": {
+     "joint1": -0.1316,
+     "joint2": -0.0928,
+     "joint3": 0.0396,
+     "joint4": 0.122,
+     "joint5": -0.0014,
+     "joint6": 0.0447,
+     "joint7": 0.0009,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 4.88,
+    "frame": 244,
+    "joints": {
+     "joint1": 0.0,
+     "joint2": 0.0,
+     "joint3": 0.0,
+     "joint4": 0.0,
+     "joint5": 0.0,
+     "joint6": 0.0,
+     "joint7": 0.0,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 5.23,
+    "frame": 262
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 5.23,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 1.22,
+    "joints": {
+     "joint1": 0.1472,
+     "joint2": -0.2838,
+     "joint3": -0.0227,
+     "joint4": 0.1487,
+     "joint5": -0.0024,
+     "joint6": 0.0474,
+     "joint7": -0.001,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 2.44,
+    "joints": {
+     "joint1": -0.0916,
+     "joint2": 0.2109,
+     "joint3": 0.0173,
+     "joint4": 0.1005,
+     "joint5": 0.0054,
+     "joint6": 0.0508,
+     "joint7": 0.0013,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 3.66,
+    "joints": {
+     "joint1": -0.1316,
+     "joint2": -0.0928,
+     "joint3": 0.0396,
+     "joint4": 0.122,
+     "joint5": -0.0014,
+     "joint6": 0.0447,
+     "joint7": 0.0009,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 4.88,
+    "joints": {
+     "joint1": 0.0,
+     "joint2": 0.0,
+     "joint3": 0.0,
+     "joint4": 0.0,
+     "joint5": 0.0,
+     "joint6": 0.0,
+     "joint7": 0.0,
+     "finger_joint1": 0.0
+    }
+   },
+   {
+    "t": 5.23
+   }
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0096
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0096
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0096
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0096
+  },
+  "grasp": {
+   "pass": true,
+   "notes": []
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0482
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0202,
+   "limit_rad": 0.1276
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0964
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": false,
+  "trace_circle": false,
+  "kick_swing": false,
+  "tap_twice": false,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 5.24,
+ "n_frames": 263,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.1276,
+  "start_joints_moved_inside_range": [
+   "finger_joint1",
+   "finger_joint2"
+  ],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0
+ },
+ "compile_notes": [],
+ "tips": [
+  "left_finger_tip",
+  "right_finger_tip"
+ ],
+ "contact_edges": [
+  [
+   "left_pad",
+   "block"
+  ],
+  [
+   "right_pad",
+   "block"
+  ],
+  [
+   "block",
+   "table"
+  ],
+  [
+   "rest_of_body",
+   "block"
+  ],
+  [
+   "rest_of_body",
+   "table"
+  ],
+  [
+   "block",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 0.24
+}

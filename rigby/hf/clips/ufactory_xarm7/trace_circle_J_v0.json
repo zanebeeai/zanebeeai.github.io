@@ -1,0 +1,615 @@
+{
+ "body": "ufactory_xarm7",
+ "skill": "trace_circle",
+ "arm": "J",
+ "variant": 0,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/ufactory_xarm7.json",
+ "library_sha": "6af734c6a35fcf0172d1790a8f836712834e6df68eccea1ef331f84716c2eefc",
+ "standin_library": false,
+ "prompt_sha256": "045093c0f45acf1c2e226fad39ae79c488dfd6fc750f5e5f6baf80d2b9ae131f",
+ "prompt_chars": 15349,
+ "valid": true,
+ "valid_first": true,
+ "repair_rounds": 0,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0094
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0094
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0094
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0094
+  },
+  "grasp": {
+   "pass": true,
+   "notes": []
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0468
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0259,
+   "limit_rad": 0.1296
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0935
+  },
+  "pass": true,
+  "failed": []
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0094
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0,
+     "body_frame": null,
+     "limit_m": 0.0094
+    },
+    "object_penetration": {
+     "pass": true,
+     "worst_m": 0.0,
+     "limit_m": 0.0094
+    },
+    "arm_in_object": {
+     "pass": true,
+     "worst_m": 0.0,
+     "limit_m": 0.0094
+    },
+    "grasp": {
+     "pass": true,
+     "notes": []
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0468
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.0259,
+     "limit_rad": 0.1296
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0935
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 9.6,
+    "keyframes": [
+     {
+      "t": 0,
+      "joints": {
+       "joint1": 0,
+       "joint2": 0,
+       "joint3": 0,
+       "joint4": 0,
+       "joint5": 0,
+       "joint6": 0,
+       "joint7": 0
+      }
+     },
+     {
+      "t": 1.2,
+      "joints": {
+       "joint1": 0,
+       "joint2": -0.145,
+       "joint3": 0,
+       "joint4": 0.316,
+       "joint5": 0,
+       "joint6": -0.1,
+       "joint7": 0
+      }
+     },
+     {
+      "t": 1.8,
+      "joints": {
+       "joint1": 0.026,
+       "joint2": -0.132,
+       "joint3": 0.003,
+       "joint4": 0.307,
+       "joint5": -0.006,
+       "joint6": -0.096,
+       "joint7": 0.008
+      }
+     },
+     {
+      "t": 2.3,
+      "joints": {
+       "joint1": 0.045,
+       "joint2": -0.098,
+       "joint3": 0.005,
+       "joint4": 0.283,
+       "joint5": -0.01,
+       "joint6": -0.085,
+       "joint7": 0.014
+      }
+     },
+     {
+      "t": 2.8,
+      "joints": {
+       "joint1": 0.052,
+       "joint2": -0.05,
+       "joint3": 0.006,
+       "joint4": 0.25,
+       "joint5": -0.012,
+       "joint6": -0.07,
+       "joint7": 0.016
+      }
+     },
+     {
+      "t": 3.3,
+      "joints": {
+       "joint1": 0.045,
+       "joint2": -0.003,
+       "joint3": 0.005,
+       "joint4": 0.217,
+       "joint5": -0.01,
+       "joint6": -0.055,
+       "joint7": 0.014
+      }
+     },
+     {
+      "t": 3.8,
+      "joints": {
+       "joint1": 0.026,
+       "joint2": 0.025,
+       "joint3": 0.003,
+       "joint4": 0.193,
+       "joint5": -0.006,
+       "joint6": -0.044,
+       "joint7": 0.008
+      }
+     },
+     {
+      "t": 4.3,
+      "joints": {
+       "joint1": 0,
+       "joint2": 0.034,
+       "joint3": 0,
+       "joint4": 0.184,
+       "joint5": 0,
+       "joint6": -0.04,
+       "joint7": 0
+      }
+     },
+     {
+      "t": 4.8,
+      "joints": {
+       "joint1": -0.026,
+       "joint2": 0.025,
+       "joint3": -0.003,
+       "joint4": 0.193,
+       "joint5": 0.006,
+       "joint6": -0.044,
+       "joint7": -0.008
+      }
+     },
+     {
+      "t": 5.3,
+      "joints": {
+       "joint1": -0.045,
+       "joint2": -0.003,
+       "joint3": -0.005,
+       "joint4": 0.217,
+       "joint5": 0.01,
+       "joint6": -0.055,
+       "joint7": -0.014
+      }
+     },
+     {
+      "t": 5.8,
+      "joints": {
+       "joint1": -0.052,
+       "joint2": -0.05,
+       "joint3": -0.006,
+       "joint4": 0.25,
+       "joint5": 0.012,
+       "joint6": -0.07,
+       "joint7": -0.016
+      }
+     },
+     {
+      "t": 6.3,
+      "joints": {
+       "joint1": -0.045,
+       "joint2": -0.098,
+       "joint3": -0.005,
+       "joint4": 0.283,
+       "joint5": 0.01,
+       "joint6": -0.085,
+       "joint7": -0.014
+      }
+     },
+     {
+      "t": 6.8,
+      "joints": {
+       "joint1": -0.026,
+       "joint2": -0.132,
+       "joint3": -0.003,
+       "joint4": 0.307,
+       "joint5": 0.006,
+       "joint6": -0.096,
+       "joint7": -0.008
+      }
+     },
+     {
+      "t": 7.4,
+      "joints": {
+       "joint1": 0,
+       "joint2": -0.145,
+       "joint3": 0,
+       "joint4": 0.316,
+       "joint5": 0,
+       "joint6": -0.1,
+       "joint7": 0
+      }
+     },
+     {
+      "t": 7.8,
+      "joints": {
+       "joint1": 0,
+       "joint2": -0.145,
+       "joint3": 0,
+       "joint4": 0.316,
+       "joint5": 0,
+       "joint6": -0.1,
+       "joint7": 0
+      }
+     },
+     {
+      "t": 9.6,
+      "joints": {
+       "joint1": 0,
+       "joint2": 0,
+       "joint3": 0,
+       "joint4": 0,
+       "joint5": 0,
+       "joint6": 0,
+       "joint7": 0
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 9.6,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"joints\": {\n        \"joint1\": 0,\n        \"joint2\": 0,\n        \"joint3\": 0,\n        \"joint4\": 0,\n        \"joint5\": 0,\n        \"joint6\": 0,\n        \"joint7\": 0\n      }\n    },\n    {\n      \"t\": 1.2,\n      \"joints\": {\n        \"joint1\": 0,\n        \"joint2\": -0.145,\n        \"joint3\": 0,\n        \"joint4\": 0.316,\n        \"joint5\": 0,\n        \"joint6\": -0.1,\n        \"joint7\": 0\n      }\n    },\n    {\n      \"t\": 1.8,\n      \"joints\": {\n        \"joint1\": 0.026,\n        \"joint2\": -0.132,\n        \"joint3\": 0.003,\n        \"joint4\": 0.307,\n        \"joint5\": -0.006,\n        \"joint6\": -0.096,\n        \"joint7\": 0.008\n      }\n    },\n    {\n      \"t\": 2.3,\n      \"joints\": {\n        \"joint1\": 0.045,\n        \"joint2\": -0.098,\n        \"joint3\": 0.005,\n        \"joint4\": 0.283,\n        \"joint5\": -0.01,\n        \"joint6\": -0.085,\n        \"joint7\": 0.014\n      }\n    },\n    {\n      \"t\": 2.8,\n      \"joints\": {\n        \"joint1\": 0.052,\n        \"joint2\": -0.05,\n        \"joint3\": 0.006,\n        \"joint4\": 0.25,\n        \"joint5\": -0.012,\n        \"joint6\": -0.07,\n        \"joint7\": 0.016\n      }\n    },\n    {\n      \"t\": 3.3,\n      \"joints\": {\n        \"joint1\": 0.045,\n        \"joint2\": -0.003,\n        \"joint3\": 0.005,\n        \"joint4\": 0.217,\n        \"joint5\": -0.01,\n        \"joint6\": -0.055,\n        \"joint7\": 0.014\n      }\n    },\n    {\n      \"t\": 3.8,\n      \"joints\": {\n        \"joint1\": 0.026,\n        \"joint2\": 0.025,\n        \"joint3\": 0.003,\n        \"joint4\": 0.193,\n        \"joint5\": -0.006,\n        \"joint6\": -0.044,\n        \"joint7\": 0.008\n      }\n    },\n    {\n      \"t\": 4.3,\n      \"joints\": {\n        \"joint1\": 0,\n        \"joint2\": 0.034,\n        \"joint3\": 0,\n        \"joint4\": 0.184,\n        \"joint5\": 0,\n        \"joint6\": -0.04,\n        \"joint7\": 0\n      }\n    },\n    {\n      \"t\": 4.8,\n      \"joints\": {\n        \"joint1\": -0.026,\n        \"joint2\": 0.025,\n        \"joint3\": -0.003,\n        \"joint4\": 0.193,\n        \"joint5\": 0.006,\n        \"joint6\": -0.044,\n        \"joint7\": -0.008\n      }\n    },\n    {\n      \"t\": 5.3,\n      \"joints\": {\n        \"joint1\": -0.045,\n        \"joint2\": -0.003,\n        \"joint3\": -0.005,\n        \"joint4\": 0.217,\n        \"joint5\": 0.01,\n        \"joint6\": -0.055,\n        \"joint7\": -0.014\n      }\n    },\n    {\n      \"t\": 5.8,\n      \"joints\": {\n        \"joint1\": -0.052,\n        \"joint2\": -0.05,\n        \"joint3\": -0.006,\n        \"joint4\": 0.25,\n        \"joint5\": 0.012,\n        \"joint6\": -0.07,\n        \"joint7\": -0.016\n      }\n    },\n    {\n      \"t\": 6.3,\n      \"joints\": {\n        \"joint1\": -0.045,\n        \"joint2\": -0.098,\n        \"joint3\": -0.005,\n        \"joint4\": 0.283,\n        \"joint5\": 0.01,\n        \"joint6\": -0.085,\n        \"joint7\": -0.014\n      }\n    },\n    {\n      \"t\": 6.8,\n      \"joints\": {\n        \"joint1\": -0.026,\n        \"joint2\": -0.132,\n        \"joint3\": -0.003,\n        \"joint4\": 0.307,\n        \"joint5\": 0.006,\n        \"joint6\": -0.096,\n        \"joint7\": -0.008\n      }\n    },\n    {\n      \"t\": 7.4,\n      \"joints\": {\n        \"joint1\": 0,\n        \"joint2\": -0.145,\n        \"joint3\": 0,\n        \"joint4\": 0.316,\n        \"joint5\": 0,\n        \"joint6\": -0.1,\n        \"joint7\": 0\n      }\n    },\n    {\n      \"t\": 7.8,\n      \"joints\": {\n        \"joint1\": 0,\n        \"joint2\": -0.145,\n        \"joint3\": 0,\n        \"joint4\": 0.316,\n        \"joint5\": 0,\n        \"joint6\": -0.1,\n        \"joint7\": 0\n      }\n    },\n    {\n      \"t\": 9.6,\n      \"joints\": {\n        \"joint1\": 0,\n        \"joint2\": 0,\n        \"joint3\": 0,\n        \"joint4\": 0,\n        \"joint5\": 0,\n        \"joint6\": 0,\n        \"joint7\": 0\n      }\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [],
+ "calls": 1,
+ "call_log": [
+  {
+   "prompt_tokens": 5616,
+   "cached_tokens": 0,
+   "completion_tokens": 1891,
+   "reasoning_tokens": 465,
+   "cost_usd": 0.015071,
+   "service_tier": "flex",
+   "seconds": 46.25
+  }
+ ],
+ "cost_usd": 0.015071,
+ "seconds": 46.7,
+ "at": "2026-11-12T02:27:32",
+ "predicate": {
+  "skill": "trace_circle",
+  "applicable": true,
+  "pass": true,
+  "tip": "left_finger_tip",
+  "close_L": 0.0,
+  "span_deg": 358.239,
+  "radius_L": 0.1953,
+  "radius_cv": 0.3335
+ },
+ "valid_and_semantic": true,
+ "program": {
+  "duration_s": 9.6,
+  "keyframes": [
+   {
+    "t": 0,
+    "joints": {
+     "joint1": 0,
+     "joint2": 0,
+     "joint3": 0,
+     "joint4": 0,
+     "joint5": 0,
+     "joint6": 0,
+     "joint7": 0
+    }
+   },
+   {
+    "t": 1.2,
+    "joints": {
+     "joint1": 0,
+     "joint2": -0.145,
+     "joint3": 0,
+     "joint4": 0.316,
+     "joint5": 0,
+     "joint6": -0.1,
+     "joint7": 0
+    }
+   },
+   {
+    "t": 1.8,
+    "joints": {
+     "joint1": 0.026,
+     "joint2": -0.132,
+     "joint3": 0.003,
+     "joint4": 0.307,
+     "joint5": -0.006,
+     "joint6": -0.096,
+     "joint7": 0.008
+    }
+   },
+   {
+    "t": 2.3,
+    "joints": {
+     "joint1": 0.045,
+     "joint2": -0.098,
+     "joint3": 0.005,
+     "joint4": 0.283,
+     "joint5": -0.01,
+     "joint6": -0.085,
+     "joint7": 0.014
+    }
+   },
+   {
+    "t": 2.8,
+    "joints": {
+     "joint1": 0.052,
+     "joint2": -0.05,
+     "joint3": 0.006,
+     "joint4": 0.25,
+     "joint5": -0.012,
+     "joint6": -0.07,
+     "joint7": 0.016
+    }
+   },
+   {
+    "t": 3.3,
+    "joints": {
+     "joint1": 0.045,
+     "joint2": -0.003,
+     "joint3": 0.005,
+     "joint4": 0.217,
+     "joint5": -0.01,
+     "joint6": -0.055,
+     "joint7": 0.014
+    }
+   },
+   {
+    "t": 3.8,
+    "joints": {
+     "joint1": 0.026,
+     "joint2": 0.025,
+     "joint3": 0.003,
+     "joint4": 0.193,
+     "joint5": -0.006,
+     "joint6": -0.044,
+     "joint7": 0.008
+    }
+   },
+   {
+    "t": 4.3,
+    "joints": {
+     "joint1": 0,
+     "joint2": 0.034,
+     "joint3": 0,
+     "joint4": 0.184,
+     "joint5": 0,
+     "joint6": -0.04,
+     "joint7": 0
+    }
+   },
+   {
+    "t": 4.8,
+    "joints": {
+     "joint1": -0.026,
+     "joint2": 0.025,
+     "joint3": -0.003,
+     "joint4": 0.193,
+     "joint5": 0.006,
+     "joint6": -0.044,
+     "joint7": -0.008
+    }
+   },
+   {
+    "t": 5.3,
+    "joints": {
+     "joint1": -0.045,
+     "joint2": -0.003,
+     "joint3": -0.005,
+     "joint4": 0.217,
+     "joint5": 0.01,
+     "joint6": -0.055,
+     "joint7": -0.014
+    }
+   },
+   {
+    "t": 5.8,
+    "joints": {
+     "joint1": -0.052,
+     "joint2": -0.05,
+     "joint3": -0.006,
+     "joint4": 0.25,
+     "joint5": 0.012,
+     "joint6": -0.07,
+     "joint7": -0.016
+    }
+   },
+   {
+    "t": 6.3,
+    "joints": {
+     "joint1": -0.045,
+     "joint2": -0.098,
+     "joint3": -0.005,
+     "joint4": 0.283,
+     "joint5": 0.01,
+     "joint6": -0.085,
+     "joint7": -0.014
+    }
+   },
+   {
+    "t": 6.8,
+    "joints": {
+     "joint1": -0.026,
+     "joint2": -0.132,
+     "joint3": -0.003,
+     "joint4": 0.307,
+     "joint5": 0.006,
+     "joint6": -0.096,
+     "joint7": -0.008
+    }
+   },
+   {
+    "t": 7.4,
+    "joints": {
+     "joint1": 0,
+     "joint2": -0.145,
+     "joint3": 0,
+     "joint4": 0.316,
+     "joint5": 0,
+     "joint6": -0.1,
+     "joint7": 0
+    }
+   },
+   {
+    "t": 7.8,
+    "joints": {
+     "joint1": 0,
+     "joint2": -0.145,
+     "joint3": 0,
+     "joint4": 0.316,
+     "joint5": 0,
+     "joint6": -0.1,
+     "joint7": 0
+    }
+   },
+   {
+    "t": 9.6,
+    "joints": {
+     "joint1": 0,
+     "joint2": 0,
+     "joint3": 0,
+     "joint4": 0,
+     "joint5": 0,
+     "joint6": 0,
+     "joint7": 0
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0094
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0094
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0094
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0094
+  },
+  "grasp": {
+   "pass": true,
+   "notes": []
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0468
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0259,
+   "limit_rad": 0.1296
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0935
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": null,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.1296,
+   "start_joints_moved_inside_range": [
+    "left_driver_joint",
+    "left_finger_joint",
+    "left_inner_knuckle_joint",
+    "right_driver_joint",
+    "right_finger_joint",
+    "right_inner_knuckle_joint"
+   ],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0
+  },
+  "notes": [],
+  "gaits": null
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/ufactory_xarm7/clips/trace_circle_J_v0.npz"
+}

@@ -1,0 +1,379 @@
+{
+ "clip_id": "franka_emika_panda__object__0401022",
+ "body": "franka_emika_panda",
+ "kind": "arm",
+ "source": "object",
+ "seed": 401022,
+ "attempt_index": 22,
+ "skill": null,
+ "arm": "object",
+ "compiler": "core.compile_dense",
+ "variant": "pick_place",
+ "params": {
+  "speed": "slow",
+  "amplitude": "large",
+  "block_start": [
+   0.663,
+   -0.256,
+   0.22
+  ],
+  "place": [
+   0.515,
+   -0.1,
+   0.22
+  ],
+  "lift_m": 0.079,
+  "yaw_deg": 0.0,
+  "hold_s": 0.55
+ },
+ "program": {
+  "duration_s": 11.61,
+  "keyframes": [
+   {
+    "t": 0.0,
+    "grip": [
+     0.5545000242923065,
+     0.005499999972872666,
+     0.5161024294875894
+    ],
+    "gripper": "open"
+   },
+   {
+    "t": 1.96,
+    "grip": [
+     0.663,
+     -0.256,
+     0.32
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "open"
+   },
+   {
+    "t": 3.36,
+    "grip": [
+     0.663,
+     -0.256,
+     0.22
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "open"
+   },
+   {
+    "t": 4.2,
+    "grip": [
+     0.663,
+     -0.256,
+     0.22
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "closed",
+    "event": "grasp"
+   },
+   {
+    "t": 5.6,
+    "grip": [
+     0.663,
+     -0.256,
+     0.299
+    ],
+    "down": true,
+    "yaw": 0.0
+   },
+   {
+    "t": 6.15,
+    "grip": [
+     0.663,
+     -0.256,
+     0.299
+    ],
+    "down": true,
+    "yaw": 0.0
+   },
+   {
+    "t": 8.11,
+    "grip": [
+     0.515,
+     -0.1,
+     0.299
+    ],
+    "down": true,
+    "yaw": 0.0
+   },
+   {
+    "t": 9.51,
+    "grip": [
+     0.515,
+     -0.1,
+     0.22
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "closed"
+   },
+   {
+    "t": 10.21,
+    "grip": [
+     0.515,
+     -0.1,
+     0.22
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "open",
+    "event": "release"
+   },
+   {
+    "t": 11.61,
+    "grip": [
+     0.515,
+     -0.1,
+     0.32
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "open"
+   }
+  ],
+  "block_start": [
+   0.663,
+   -0.256,
+   0.22,
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "program_raw": {
+  "duration_s": 11.61,
+  "keyframes": [
+   {
+    "t": 0.0,
+    "grip": [
+     0.5545000242923065,
+     0.005499999972872666,
+     0.5161024294875894
+    ],
+    "gripper": "open"
+   },
+   {
+    "t": 1.96,
+    "grip": [
+     0.663,
+     -0.256,
+     0.32
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "open"
+   },
+   {
+    "t": 3.36,
+    "grip": [
+     0.663,
+     -0.256,
+     0.22
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "open"
+   },
+   {
+    "t": 4.2,
+    "grip": [
+     0.663,
+     -0.256,
+     0.22
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "closed",
+    "event": "grasp"
+   },
+   {
+    "t": 5.6,
+    "grip": [
+     0.663,
+     -0.256,
+     0.299
+    ],
+    "down": true,
+    "yaw": 0.0
+   },
+   {
+    "t": 6.15,
+    "grip": [
+     0.663,
+     -0.256,
+     0.299
+    ],
+    "down": true,
+    "yaw": 0.0
+   },
+   {
+    "t": 8.11,
+    "grip": [
+     0.515,
+     -0.1,
+     0.299
+    ],
+    "down": true,
+    "yaw": 0.0
+   },
+   {
+    "t": 9.51,
+    "grip": [
+     0.515,
+     -0.1,
+     0.22
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "closed"
+   },
+   {
+    "t": 10.21,
+    "grip": [
+     0.515,
+     -0.1,
+     0.22
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "open",
+    "event": "release"
+   },
+   {
+    "t": 11.61,
+    "grip": [
+     0.515,
+     -0.1,
+     0.32
+    ],
+    "down": true,
+    "yaw": 0.0,
+    "gripper": "open"
+   }
+  ],
+  "block_start": [
+   0.663,
+   -0.256,
+   0.22,
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0096
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0096
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0003,
+   "limit_m": 0.0096
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0096
+  },
+  "grasp": {
+   "pass": true,
+   "notes": []
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0008,
+   "limit_m": 0.0482
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0937,
+   "limit_rad": 0.1276
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0964
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": false,
+  "trace_circle": false,
+  "kick_swing": false,
+  "tap_twice": true,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 11.6,
+ "n_frames": 581,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.1276,
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0
+ },
+ "compile_notes": [],
+ "tips": [
+  "left_finger_tip",
+  "right_finger_tip"
+ ],
+ "contact_edges": [
+  [
+   "left_pad",
+   "block"
+  ],
+  [
+   "right_pad",
+   "block"
+  ],
+  [
+   "block",
+   "table"
+  ],
+  [
+   "rest_of_body",
+   "block"
+  ],
+  [
+   "rest_of_body",
+   "table"
+  ],
+  [
+   "block",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 0.52
+}

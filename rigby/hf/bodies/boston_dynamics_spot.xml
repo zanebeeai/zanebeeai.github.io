@@ -1,0 +1,131 @@
+<mujoco model="spot scene">
+  <compiler angle="radian" meshdir="assets/"/>
+
+  <option impratio="100" integrator="implicitfast" cone="elliptic"/>
+
+  <size nkey="1"/>
+
+  <visual>
+    <global azimuth="220" elevation="-10" ellipsoidinertia="true"/>
+    <quality shadowsize="8192"/>
+    <headlight ambient="0.3 0.3 0.3" diffuse="0.6 0.6 0.6" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+  </visual>
+
+  <statistic meansize="0.05"/>
+
+  <default>
+    <default class="spot">
+      <joint actuatorfrcrange="-1000 1000"/>
+      <geom solref="0.004"/>
+      <general biastype="affine" gainprm="500" biasprm="0 -500 -40"/>
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+      </default>
+      <default class="collision">
+        <geom type="mesh" group="3"/>
+        <default class="foot">
+          <geom size="0.036 0 0" type="sphere" condim="6" priority="1" friction="0.8 0.02 0.01" solimp="0.015 1 0.036"/>
+        </default>
+      </default>
+    </default>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" rgba="0.32 0.34 0.36 1"/>
+    <light name="spotlight" target="body" pos="3 0 4" dir="0 0 -1" cutoff="30" mode="targetbodycom"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="body" childclass="spot" pos="0 0 0.75">
+      <inertial pos="0.0063944 -9.81216e-05 0.000911379" mass="32.86" diaginertia="0.13144 0.13144 0.13144"/>
+      <joint name="freejoint" type="free" actuatorfrcrange="0 0"/>
+      <geom class="collision" size="0.11475 0.331011" pos="0.00615584 -0.000363558 0.000124959" quat="0.00195833 0.709564 0.00223122 0.704635" type="capsule" group="0" rgba="0.62 0.62 0.66 1"/>
+      <light name="tracking" pos="0 0 2" dir="0 0 -1" mode="trackcom"/>
+      <body name="fl_hip" pos="0.29785 0.055 0">
+        <inertial pos="-0.00537435 0.0128418 9.87523e-05" quat="0.5 0.5 -0.5 0.5" mass="1.68" diaginertia="0.00226544 0.00211474 0.00181296"/>
+        <joint name="fl_hx" pos="0 0 0" axis="1 0 0" range="-0.785398 0.785398"/>
+        <body name="fl_uleg" pos="0 0.1108 0">
+          <inertial pos="0.00514237 -0.00243237 -0.121009" mass="2.34" diaginertia="0.0275596 0.0273549 0.00284815"/>
+          <joint name="fl_hy" pos="0 0 0" axis="0 1 0" range="-0.898845 2.29511"/>
+          <geom class="collision" size="0.0679137 0.151735" pos="0.0063731 -0.00362655 -0.13596" quat="0.999422 0.018385 -0.0240489 0.015455" type="capsule" group="0" rgba="0.85 0.35 0.3 1"/>
+          <body name="fl_lleg" pos="0.025 0 -0.32">
+            <inertial pos="0.00225794 4.6076e-05 -0.180082" quat="0.707107 0 0 0.707107" mass="0.35" diaginertia="0.00405032 0.00399902 0.00014934"/>
+            <joint name="fl_kn" pos="0 0 0" axis="0 1 0" range="-2.7929 -0.254402"/>
+            <geom name="FL" class="foot" pos="0 0 -0.3365" group="0" rgba="0.85 0.35 0.3 1"/>
+            <site name="fl_lleg_tip" pos="0 0 -0.3365" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+          </body>
+        </body>
+      </body>
+      <body name="fr_hip" pos="0.29785 -0.055 0">
+        <inertial pos="-0.00537435 -0.0128418 -9.87523e-05" quat="0.5 0.5 -0.5 0.5" mass="1.68" diaginertia="0.00226544 0.00211474 0.00181296"/>
+        <joint name="fr_hx" pos="0 0 0" axis="1 0 0" range="-0.785398 0.785398"/>
+        <body name="fr_uleg" pos="0 -0.1108 0">
+          <inertial pos="0.00514237 0.00243237 -0.121009" mass="2.34" diaginertia="0.0275596 0.0273549 0.00284815"/>
+          <joint name="fr_hy" pos="0 0 0" axis="0 1 0" range="-0.898845 2.24363"/>
+          <geom class="collision" size="0.0679491 0.151737" pos="0.00631113 0.00347386 -0.135854" quat="0.999402 -0.0188405 -0.0242368 -0.0159298" type="capsule" group="0" rgba="0.3 0.55 0.85 1"/>
+          <body name="fr_lleg" pos="0.025 0 -0.32">
+            <inertial pos="0.00225794 4.6076e-05 -0.180082" quat="0.707107 0 0 0.707107" mass="0.35" diaginertia="0.00405032 0.00399902 0.00014934"/>
+            <joint name="fr_kn" pos="0 0 0" axis="0 1 0" range="-2.7929 -0.255648"/>
+            <geom name="FR" class="foot" pos="0 0 -0.3365" group="0" rgba="0.3 0.55 0.85 1"/>
+            <site name="fr_lleg_tip" pos="0 0 -0.3365" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+          </body>
+        </body>
+      </body>
+      <body name="hl_hip" pos="-0.29785 0.055 0">
+        <inertial pos="0.00537435 0.0128418 -9.87523e-05" quat="0.5 0.5 -0.5 0.5" mass="1.68" diaginertia="0.00226544 0.00211474 0.00181296"/>
+        <joint name="hl_hx" pos="0 0 0" axis="1 0 0" range="-0.785398 0.785398"/>
+        <body name="hl_uleg" pos="0 0.1108 0">
+          <inertial pos="0.00514237 -0.00243237 -0.121009" mass="2.34" diaginertia="0.0275596 0.0273549 0.00284815"/>
+          <joint name="hl_hy" pos="0 0 0" axis="0 1 0" range="-0.898845 2.29511"/>
+          <geom class="collision" size="0.0679137 0.151735" pos="0.0063731 -0.00362655 -0.13596" quat="0.999422 0.018385 -0.0240489 0.015455" type="capsule" group="0" rgba="0.35 0.7 0.4 1"/>
+          <body name="hl_lleg" pos="0.025 0 -0.32">
+            <inertial pos="0.00225794 4.6076e-05 -0.180082" quat="0.707107 0 0 0.707107" mass="0.35" diaginertia="0.00405032 0.00399902 0.00014934"/>
+            <joint name="hl_kn" pos="0 0 0" axis="0 1 0" range="-2.7929 -0.247067"/>
+            <geom name="HL" class="foot" pos="0 0 -0.3365" group="0" rgba="0.35 0.7 0.4 1"/>
+            <site name="hl_lleg_tip" pos="0 0 -0.3365" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+          </body>
+        </body>
+      </body>
+      <body name="hr_hip" pos="-0.29785 -0.055 0">
+        <inertial pos="0.00537435 -0.0128418 9.87523e-05" quat="0.5 0.5 -0.5 0.5" mass="1.68" diaginertia="0.00226544 0.00211474 0.00181296"/>
+        <joint name="hr_hx" pos="0 0 0" axis="1 0 0" range="-0.785398 0.785398"/>
+        <body name="hr_uleg" pos="0 -0.1108 0">
+          <inertial pos="0.00514237 0.00243237 -0.121009" mass="2.34" diaginertia="0.0275596 0.0273549 0.00284815"/>
+          <joint name="hr_hy" pos="0 0 0" axis="0 1 0" range="-0.898845 2.29511"/>
+          <geom class="collision" size="0.0679491 0.151737" pos="0.00631113 0.00347386 -0.135854" quat="0.999402 -0.0188405 -0.0242368 -0.0159298" type="capsule" group="0" rgba="0.85 0.65 0.25 1"/>
+          <body name="hr_lleg" pos="0.025 0 -0.32">
+            <inertial pos="0.00225794 4.6076e-05 -0.180082" quat="0.707107 0 0 0.707107" mass="0.35" diaginertia="0.00405032 0.00399902 0.00014934"/>
+            <joint name="hr_kn" pos="0 0 0" axis="0 1 0" range="-2.7929 -0.248282"/>
+            <geom name="HR" class="foot" pos="0 0 -0.3365" group="0" rgba="0.85 0.65 0.25 1"/>
+            <site name="hr_lleg_tip" pos="0 0 -0.3365" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="body" body2="fl_uleg"/>
+    <exclude body1="body" body2="fr_uleg"/>
+    <exclude body1="body" body2="hl_uleg"/>
+    <exclude body1="body" body2="hr_uleg"/>
+  </contact>
+
+  <actuator>
+    <general name="fl_hx" class="spot" joint="fl_hx" ctrlrange="-0.785398 0.785398"/>
+    <general name="fl_hy" class="spot" joint="fl_hy" ctrlrange="-0.898845 2.29511"/>
+    <general name="fl_kn" class="spot" joint="fl_kn" ctrlrange="-2.7929 -0.254402"/>
+    <general name="fr_hx" class="spot" joint="fr_hx" ctrlrange="-0.785398 0.785398"/>
+    <general name="fr_hy" class="spot" joint="fr_hy" ctrlrange="-0.898845 2.24363"/>
+    <general name="fr_kn" class="spot" joint="fr_kn" ctrlrange="-2.7929 -0.255648"/>
+    <general name="hl_hx" class="spot" joint="hl_hx" ctrlrange="-0.785398 0.785398"/>
+    <general name="hl_hy" class="spot" joint="hl_hy" ctrlrange="-0.898845 2.29511"/>
+    <general name="hl_kn" class="spot" joint="hl_kn" ctrlrange="-2.7929 -0.247067"/>
+    <general name="hr_hx" class="spot" joint="hr_hx" ctrlrange="-0.785398 0.785398"/>
+    <general name="hr_hy" class="spot" joint="hr_hy" ctrlrange="-0.898845 2.29511"/>
+    <general name="hr_kn" class="spot" joint="hr_kn" ctrlrange="-2.7929 -0.248282"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.463458 1 0 0 0 0 1.04 -1.8 0 1.04 -1.8 0 1.04 -1.8 0 1.04 -1.8" ctrl="0 1.04 -1.8 0 1.04 -1.8 0 1.04 -1.8 0 1.04 -1.8"/>
+  </keyframe>
+</mujoco>

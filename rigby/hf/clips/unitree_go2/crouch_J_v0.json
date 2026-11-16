@@ -1,0 +1,460 @@
+{
+ "body": "unitree_go2",
+ "skill": "crouch",
+ "arm": "J",
+ "variant": 0,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/unitree_go2.json",
+ "library_sha": "20cd791a3edcf0fd617f4abe34e608832eedd5e8c4b0345abf8975b9f0843fec",
+ "standin_library": false,
+ "prompt_sha256": "dc420499494268a58e9b96bcc50118d1cdfef5b196eb0039ed317ed9a1b80dba",
+ "prompt_chars": 17870,
+ "valid": true,
+ "valid_first": true,
+ "repair_rounds": 0,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0027
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "FL_calf",
+    63
+   ],
+   "limit_m": 0.0027
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0133
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0129,
+   "limit_rad": 0.2425
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0267
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0053
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0267
+  },
+  "pass": true,
+  "failed": []
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0027
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0,
+     "body_frame": [
+      "FL_calf",
+      63
+     ],
+     "limit_m": 0.0027
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0133
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.0129,
+     "limit_rad": 0.2425
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0267
+    },
+    "foot_slip": {
+     "pass": true,
+     "worst_slide_m": 0.0,
+     "worst_off_ground_m": 0.0,
+     "limit_m": 0.0053
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.0267
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 4.2,
+    "keyframes": [
+     {
+      "t": 0,
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        0,
+        0,
+        0
+       ]
+      },
+      "stance": [
+       "FL",
+       "FR",
+       "RL",
+       "RR"
+      ]
+     },
+     {
+      "t": 0.35,
+      "base": {
+       "dz_L": -0.025,
+       "rpy_deg": [
+        0,
+        1,
+        0
+       ]
+      }
+     },
+     {
+      "t": 0.85,
+      "base": {
+       "dz_L": -0.17,
+       "rpy_deg": [
+        0.4,
+        3.5,
+        0
+       ]
+      }
+     },
+     {
+      "t": 1.45,
+      "base": {
+       "dz_L": -0.34,
+       "rpy_deg": [
+        0,
+        6,
+        0
+       ]
+      }
+     },
+     {
+      "t": 1.85,
+      "base": {
+       "dz_L": -0.36,
+       "rpy_deg": [
+        -0.3,
+        6.5,
+        0
+       ]
+      }
+     },
+     {
+      "t": 2.45,
+      "base": {
+       "dz_L": -0.355,
+       "rpy_deg": [
+        0,
+        6,
+        0
+       ]
+      }
+     },
+     {
+      "t": 2.85,
+      "base": {
+       "dz_L": -0.29,
+       "rpy_deg": [
+        0.3,
+        4.8,
+        0
+       ]
+      }
+     },
+     {
+      "t": 3.4,
+      "base": {
+       "dz_L": -0.11,
+       "rpy_deg": [
+        0.2,
+        2,
+        0
+       ]
+      }
+     },
+     {
+      "t": 3.9,
+      "base": {
+       "dz_L": -0.01,
+       "rpy_deg": [
+        0,
+        0.3,
+        0
+       ]
+      }
+     },
+     {
+      "t": 4.2,
+      "base": {
+       "dz_L": 0,
+       "rpy_deg": [
+        0,
+        0,
+        0
+       ]
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 4.2,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [0, 0, 0]},\n      \"stance\": [\"FL\", \"FR\", \"RL\", \"RR\"]\n    },\n    {\n      \"t\": 0.35,\n      \"base\": {\"dz_L\": -0.025, \"rpy_deg\": [0, 1, 0]}\n    },\n    {\n      \"t\": 0.85,\n      \"base\": {\"dz_L\": -0.17, \"rpy_deg\": [0.4, 3.5, 0]}\n    },\n    {\n      \"t\": 1.45,\n      \"base\": {\"dz_L\": -0.34, \"rpy_deg\": [0, 6, 0]}\n    },\n    {\n      \"t\": 1.85,\n      \"base\": {\"dz_L\": -0.36, \"rpy_deg\": [-0.3, 6.5, 0]}\n    },\n    {\n      \"t\": 2.45,\n      \"base\": {\"dz_L\": -0.355, \"rpy_deg\": [0, 6, 0]}\n    },\n    {\n      \"t\": 2.85,\n      \"base\": {\"dz_L\": -0.29, \"rpy_deg\": [0.3, 4.8, 0]}\n    },\n    {\n      \"t\": 3.4,\n      \"base\": {\"dz_L\": -0.11, \"rpy_deg\": [0.2, 2, 0]}\n    },\n    {\n      \"t\": 3.9,\n      \"base\": {\"dz_L\": -0.01, \"rpy_deg\": [0, 0.3, 0]}\n    },\n    {\n      \"t\": 4.2,\n      \"base\": {\"dz_L\": 0, \"rpy_deg\": [0, 0, 0]}\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [],
+ "calls": 1,
+ "call_log": [
+  {
+   "prompt_tokens": 6394,
+   "cached_tokens": 0,
+   "completion_tokens": 513,
+   "reasoning_tokens": 55,
+   "cost_usd": 0.008959,
+   "service_tier": "flex",
+   "seconds": 12.3
+  }
+ ],
+ "cost_usd": 0.008959,
+ "seconds": 13.2,
+ "at": "2026-11-12T02:31:13",
+ "predicate": {
+  "skill": "crouch",
+  "applicable": true,
+  "pass": true,
+  "standing_height_m": 0.2884,
+  "drop_share": 0.3258,
+  "hold_s": 2.38,
+  "recover_share": 0.0
+ },
+ "valid_and_semantic": true,
+ "program": {
+  "duration_s": 4.2,
+  "keyframes": [
+   {
+    "t": 0,
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      0,
+      0,
+      0
+     ]
+    },
+    "stance": [
+     "FL",
+     "FR",
+     "RL",
+     "RR"
+    ]
+   },
+   {
+    "t": 0.35,
+    "base": {
+     "dz_L": -0.025,
+     "rpy_deg": [
+      0,
+      1,
+      0
+     ]
+    }
+   },
+   {
+    "t": 0.85,
+    "base": {
+     "dz_L": -0.17,
+     "rpy_deg": [
+      0.4,
+      3.5,
+      0
+     ]
+    }
+   },
+   {
+    "t": 1.45,
+    "base": {
+     "dz_L": -0.34,
+     "rpy_deg": [
+      0,
+      6,
+      0
+     ]
+    }
+   },
+   {
+    "t": 1.85,
+    "base": {
+     "dz_L": -0.36,
+     "rpy_deg": [
+      -0.3,
+      6.5,
+      0
+     ]
+    }
+   },
+   {
+    "t": 2.45,
+    "base": {
+     "dz_L": -0.355,
+     "rpy_deg": [
+      0,
+      6,
+      0
+     ]
+    }
+   },
+   {
+    "t": 2.85,
+    "base": {
+     "dz_L": -0.29,
+     "rpy_deg": [
+      0.3,
+      4.8,
+      0
+     ]
+    }
+   },
+   {
+    "t": 3.4,
+    "base": {
+     "dz_L": -0.11,
+     "rpy_deg": [
+      0.2,
+      2,
+      0
+     ]
+    }
+   },
+   {
+    "t": 3.9,
+    "base": {
+     "dz_L": -0.01,
+     "rpy_deg": [
+      0,
+      0.3,
+      0
+     ]
+    }
+   },
+   {
+    "t": 4.2,
+    "base": {
+     "dz_L": 0,
+     "rpy_deg": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0027
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "FL_calf",
+    63
+   ],
+   "limit_m": 0.0027
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0133
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0129,
+   "limit_rad": 0.2425
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0267
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0053
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0267
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": 2,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.2425,
+   "start_joints_moved_inside_range": [],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0,
+   "gait_cmd_scale_min": 1.0,
+   "com_shift_max_m": 0.0
+  },
+  "notes": [],
+  "gaits": []
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/unitree_go2/clips/crouch_J_v0.npz"
+}

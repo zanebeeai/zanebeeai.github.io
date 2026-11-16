@@ -1,0 +1,491 @@
+{
+ "body": "franka_emika_panda",
+ "skill": "trace_circle",
+ "arm": "J",
+ "variant": 0,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/franka_emika_panda.json",
+ "library_sha": "73a903ac0fc8141e31ded376638c9ffa8884c7b081ed8e371f4f05c8c67d02ab",
+ "standin_library": false,
+ "prompt_sha256": "3a589bf5ef7de7773fd1ea6e75147e62675e647e08d56df47af2f0e351f28081",
+ "prompt_chars": 12627,
+ "valid": true,
+ "valid_first": true,
+ "repair_rounds": 0,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0096
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0096
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0096
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0096
+  },
+  "grasp": {
+   "pass": true,
+   "notes": []
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0482
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0071,
+   "limit_rad": 0.1276
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0964
+  },
+  "pass": true,
+  "failed": []
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0096
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0,
+     "body_frame": null,
+     "limit_m": 0.0096
+    },
+    "object_penetration": {
+     "pass": true,
+     "worst_m": 0.0,
+     "limit_m": 0.0096
+    },
+    "arm_in_object": {
+     "pass": true,
+     "worst_m": 0.0,
+     "limit_m": 0.0096
+    },
+    "grasp": {
+     "pass": true,
+     "notes": []
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0482
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.0071,
+     "limit_rad": 0.1276
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0964
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 9.0,
+    "keyframes": [
+     {
+      "t": 0,
+      "joints": {
+       "joint1": 0,
+       "joint2": 0,
+       "joint3": 0,
+       "joint4": 0,
+       "joint5": 0,
+       "joint6": 0,
+       "joint7": 0
+      }
+     },
+     {
+      "t": 1.2,
+      "joints": {
+       "joint1": -0.085,
+       "joint2": -0.12,
+       "joint3": -0.02,
+       "joint4": 0.05,
+       "joint5": -0.025,
+       "joint6": 0.02,
+       "joint7": 0.02
+      }
+     },
+     {
+      "t": 2.0,
+      "joints": {
+       "joint1": -0.0601,
+       "joint2": -0.2119,
+       "joint3": -0.0141,
+       "joint4": 0.0783,
+       "joint5": -0.0177,
+       "joint6": 0.0306,
+       "joint7": 0.0141
+      }
+     },
+     {
+      "t": 2.8,
+      "joints": {
+       "joint1": 0,
+       "joint2": -0.25,
+       "joint3": 0,
+       "joint4": 0.09,
+       "joint5": 0,
+       "joint6": 0.035,
+       "joint7": 0
+      }
+     },
+     {
+      "t": 3.6,
+      "joints": {
+       "joint1": 0.0601,
+       "joint2": -0.2119,
+       "joint3": 0.0141,
+       "joint4": 0.0783,
+       "joint5": 0.0177,
+       "joint6": 0.0306,
+       "joint7": -0.0141
+      }
+     },
+     {
+      "t": 4.4,
+      "joints": {
+       "joint1": 0.085,
+       "joint2": -0.12,
+       "joint3": 0.02,
+       "joint4": 0.05,
+       "joint5": 0.025,
+       "joint6": 0.02,
+       "joint7": -0.02
+      }
+     },
+     {
+      "t": 5.2,
+      "joints": {
+       "joint1": 0.0601,
+       "joint2": -0.0281,
+       "joint3": 0.0141,
+       "joint4": 0.0217,
+       "joint5": 0.0177,
+       "joint6": 0.0094,
+       "joint7": -0.0141
+      }
+     },
+     {
+      "t": 6.0,
+      "joints": {
+       "joint1": 0,
+       "joint2": 0.01,
+       "joint3": 0,
+       "joint4": 0.01,
+       "joint5": 0,
+       "joint6": 0.005,
+       "joint7": 0
+      }
+     },
+     {
+      "t": 6.8,
+      "joints": {
+       "joint1": -0.0601,
+       "joint2": -0.0281,
+       "joint3": -0.0141,
+       "joint4": 0.0217,
+       "joint5": -0.0177,
+       "joint6": 0.0094,
+       "joint7": 0.0141
+      }
+     },
+     {
+      "t": 7.6,
+      "joints": {
+       "joint1": -0.085,
+       "joint2": -0.12,
+       "joint3": -0.02,
+       "joint4": 0.05,
+       "joint5": -0.025,
+       "joint6": 0.02,
+       "joint7": 0.02
+      }
+     },
+     {
+      "t": 9.0,
+      "joints": {
+       "joint1": 0,
+       "joint2": 0,
+       "joint3": 0,
+       "joint4": 0,
+       "joint5": 0,
+       "joint6": 0,
+       "joint7": 0
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 9.0,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"joints\": {\n        \"joint1\": 0,\n        \"joint2\": 0,\n        \"joint3\": 0,\n        \"joint4\": 0,\n        \"joint5\": 0,\n        \"joint6\": 0,\n        \"joint7\": 0\n      }\n    },\n    {\n      \"t\": 1.2,\n      \"joints\": {\n        \"joint1\": -0.085,\n        \"joint2\": -0.12,\n        \"joint3\": -0.02,\n        \"joint4\": 0.05,\n        \"joint5\": -0.025,\n        \"joint6\": 0.02,\n        \"joint7\": 0.02\n      }\n    },\n    {\n      \"t\": 2.0,\n      \"joints\": {\n        \"joint1\": -0.0601,\n        \"joint2\": -0.2119,\n        \"joint3\": -0.0141,\n        \"joint4\": 0.0783,\n        \"joint5\": -0.0177,\n        \"joint6\": 0.0306,\n        \"joint7\": 0.0141\n      }\n    },\n    {\n      \"t\": 2.8,\n      \"joints\": {\n        \"joint1\": 0,\n        \"joint2\": -0.25,\n        \"joint3\": 0,\n        \"joint4\": 0.09,\n        \"joint5\": 0,\n        \"joint6\": 0.035,\n        \"joint7\": 0\n      }\n    },\n    {\n      \"t\": 3.6,\n      \"joints\": {\n        \"joint1\": 0.0601,\n        \"joint2\": -0.2119,\n        \"joint3\": 0.0141,\n        \"joint4\": 0.0783,\n        \"joint5\": 0.0177,\n        \"joint6\": 0.0306,\n        \"joint7\": -0.0141\n      }\n    },\n    {\n      \"t\": 4.4,\n      \"joints\": {\n        \"joint1\": 0.085,\n        \"joint2\": -0.12,\n        \"joint3\": 0.02,\n        \"joint4\": 0.05,\n        \"joint5\": 0.025,\n        \"joint6\": 0.02,\n        \"joint7\": -0.02\n      }\n    },\n    {\n      \"t\": 5.2,\n      \"joints\": {\n        \"joint1\": 0.0601,\n        \"joint2\": -0.0281,\n        \"joint3\": 0.0141,\n        \"joint4\": 0.0217,\n        \"joint5\": 0.0177,\n        \"joint6\": 0.0094,\n        \"joint7\": -0.0141\n      }\n    },\n    {\n      \"t\": 6.0,\n      \"joints\": {\n        \"joint1\": 0,\n        \"joint2\": 0.01,\n        \"joint3\": 0,\n        \"joint4\": 0.01,\n        \"joint5\": 0,\n        \"joint6\": 0.005,\n        \"joint7\": 0\n      }\n    },\n    {\n      \"t\": 6.8,\n      \"joints\": {\n        \"joint1\": -0.0601,\n        \"joint2\": -0.0281,\n        \"joint3\": -0.0141,\n        \"joint4\": 0.0217,\n        \"joint5\": -0.0177,\n        \"joint6\": 0.0094,\n        \"joint7\": 0.0141\n      }\n    },\n    {\n      \"t\": 7.6,\n      \"joints\": {\n        \"joint1\": -0.085,\n        \"joint2\": -0.12,\n        \"joint3\": -0.02,\n        \"joint4\": 0.05,\n        \"joint5\": -0.025,\n        \"joint6\": 0.02,\n        \"joint7\": 0.02\n      }\n    },\n    {\n      \"t\": 9.0,\n      \"joints\": {\n        \"joint1\": 0,\n        \"joint2\": 0,\n        \"joint3\": 0,\n        \"joint4\": 0,\n        \"joint5\": 0,\n        \"joint6\": 0,\n        \"joint7\": 0\n      }\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [],
+ "calls": 1,
+ "call_log": [
+  {
+   "prompt_tokens": 4612,
+   "cached_tokens": 0,
+   "completion_tokens": 1350,
+   "reasoning_tokens": 335,
+   "cost_usd": 0.011362,
+   "service_tier": "flex",
+   "seconds": 28.01
+  }
+ ],
+ "cost_usd": 0.011362,
+ "seconds": 28.7,
+ "at": "2026-11-12T02:26:02",
+ "predicate": {
+  "skill": "trace_circle",
+  "applicable": true,
+  "pass": true,
+  "tip": "left_finger_tip",
+  "close_L": 0.0,
+  "span_deg": 358.29,
+  "radius_L": 0.1638,
+  "radius_cv": 0.2139
+ },
+ "valid_and_semantic": true,
+ "program": {
+  "duration_s": 9.0,
+  "keyframes": [
+   {
+    "t": 0,
+    "joints": {
+     "joint1": 0,
+     "joint2": 0,
+     "joint3": 0,
+     "joint4": 0,
+     "joint5": 0,
+     "joint6": 0,
+     "joint7": 0
+    }
+   },
+   {
+    "t": 1.2,
+    "joints": {
+     "joint1": -0.085,
+     "joint2": -0.12,
+     "joint3": -0.02,
+     "joint4": 0.05,
+     "joint5": -0.025,
+     "joint6": 0.02,
+     "joint7": 0.02
+    }
+   },
+   {
+    "t": 2.0,
+    "joints": {
+     "joint1": -0.0601,
+     "joint2": -0.2119,
+     "joint3": -0.0141,
+     "joint4": 0.0783,
+     "joint5": -0.0177,
+     "joint6": 0.0306,
+     "joint7": 0.0141
+    }
+   },
+   {
+    "t": 2.8,
+    "joints": {
+     "joint1": 0,
+     "joint2": -0.25,
+     "joint3": 0,
+     "joint4": 0.09,
+     "joint5": 0,
+     "joint6": 0.035,
+     "joint7": 0
+    }
+   },
+   {
+    "t": 3.6,
+    "joints": {
+     "joint1": 0.0601,
+     "joint2": -0.2119,
+     "joint3": 0.0141,
+     "joint4": 0.0783,
+     "joint5": 0.0177,
+     "joint6": 0.0306,
+     "joint7": -0.0141
+    }
+   },
+   {
+    "t": 4.4,
+    "joints": {
+     "joint1": 0.085,
+     "joint2": -0.12,
+     "joint3": 0.02,
+     "joint4": 0.05,
+     "joint5": 0.025,
+     "joint6": 0.02,
+     "joint7": -0.02
+    }
+   },
+   {
+    "t": 5.2,
+    "joints": {
+     "joint1": 0.0601,
+     "joint2": -0.0281,
+     "joint3": 0.0141,
+     "joint4": 0.0217,
+     "joint5": 0.0177,
+     "joint6": 0.0094,
+     "joint7": -0.0141
+    }
+   },
+   {
+    "t": 6.0,
+    "joints": {
+     "joint1": 0,
+     "joint2": 0.01,
+     "joint3": 0,
+     "joint4": 0.01,
+     "joint5": 0,
+     "joint6": 0.005,
+     "joint7": 0
+    }
+   },
+   {
+    "t": 6.8,
+    "joints": {
+     "joint1": -0.0601,
+     "joint2": -0.0281,
+     "joint3": -0.0141,
+     "joint4": 0.0217,
+     "joint5": -0.0177,
+     "joint6": 0.0094,
+     "joint7": 0.0141
+    }
+   },
+   {
+    "t": 7.6,
+    "joints": {
+     "joint1": -0.085,
+     "joint2": -0.12,
+     "joint3": -0.02,
+     "joint4": 0.05,
+     "joint5": -0.025,
+     "joint6": 0.02,
+     "joint7": 0.02
+    }
+   },
+   {
+    "t": 9.0,
+    "joints": {
+     "joint1": 0,
+     "joint2": 0,
+     "joint3": 0,
+     "joint4": 0,
+     "joint5": 0,
+     "joint6": 0,
+     "joint7": 0
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0096
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0096
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0096
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0096
+  },
+  "grasp": {
+   "pass": true,
+   "notes": []
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0482
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0071,
+   "limit_rad": 0.1276
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0964
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": null,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.1276,
+   "start_joints_moved_inside_range": [
+    "finger_joint1",
+    "finger_joint2"
+   ],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0
+  },
+  "notes": [],
+  "gaits": null
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/franka_emika_panda/clips/trace_circle_J_v0.npz"
+}

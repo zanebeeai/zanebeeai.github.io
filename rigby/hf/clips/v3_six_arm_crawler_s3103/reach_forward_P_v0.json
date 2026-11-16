@@ -1,0 +1,426 @@
+{
+ "body": "v3_six_arm_crawler_s3103",
+ "skill": "reach_forward",
+ "arm": "P",
+ "variant": 0,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/v3_six_arm_crawler_s3103.json",
+ "library_sha": "750d6d2c210d90a82253f74195c378ec639236d12dafdd579aae6f055b82143d",
+ "standin_library": false,
+ "prompt_sha256": "9dff3a53751dcb2a15735aa898e6a44fbb5310754020f302c75fc4ffde1a259a",
+ "prompt_chars": 33641,
+ "valid": true,
+ "valid_first": true,
+ "repair_rounds": 0,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0016
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0005,
+   "body_frame": [
+    "a3_seg_1",
+    99
+   ],
+   "limit_m": 0.0016
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0079
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0667,
+   "limit_rad": 0.3159
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0157
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0003,
+   "worst_off_ground_m": 0.0005,
+   "limit_m": 0.0031
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0157
+  },
+  "pass": true,
+  "failed": []
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0016
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0005,
+     "body_frame": [
+      "a3_seg_1",
+      99
+     ],
+     "limit_m": 0.0016
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0079
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.0667,
+     "limit_rad": 0.3159
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0157
+    },
+    "foot_slip": {
+     "pass": true,
+     "worst_slide_m": 0.0003,
+     "worst_off_ground_m": 0.0005,
+     "limit_m": 0.0031
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.0157
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 4.4,
+    "keyframes": [
+     {
+      "t": 0,
+      "modes": {
+       "a0_tip_radial": 0,
+       "a0_tip_raise": 0,
+       "trunk_forward": 0,
+       "trunk_lower": 0
+      }
+     },
+     {
+      "t": 0.35,
+      "stance": [
+       "a1_seg_1",
+       "a2_seg_1",
+       "a3_seg_1",
+       "a4_seg_1",
+       "a5_seg_1"
+      ],
+      "modes": {
+       "a0_tip_radial": 0,
+       "a0_tip_raise": 0,
+       "trunk_forward": -0.12,
+       "trunk_lower": -0.04
+      }
+     },
+     {
+      "t": 0.85,
+      "modes": {
+       "a0_tip_radial": 0.18,
+       "a0_tip_raise": 0.08,
+       "trunk_forward": 0.05,
+       "trunk_lower": -0.08
+      }
+     },
+     {
+      "t": 1.65,
+      "modes": {
+       "a0_tip_radial": 0.48,
+       "a0_tip_raise": 0.04,
+       "trunk_forward": 0.42,
+       "trunk_lower": -0.1
+      }
+     },
+     {
+      "t": 2.15,
+      "modes": {
+       "a0_tip_radial": 0.52,
+       "a0_tip_raise": 0.04,
+       "trunk_forward": 0.48,
+       "trunk_lower": -0.1
+      }
+     },
+     {
+      "t": 2.55,
+      "modes": {
+       "a0_tip_radial": 0.5,
+       "a0_tip_raise": 0.04,
+       "trunk_forward": 0.43,
+       "trunk_lower": -0.08
+      }
+     },
+     {
+      "t": 3.2,
+      "modes": {
+       "a0_tip_radial": 0.23,
+       "a0_tip_raise": 0.08,
+       "trunk_forward": 0.12,
+       "trunk_lower": -0.05
+      }
+     },
+     {
+      "t": 3.85,
+      "modes": {
+       "a0_tip_radial": 0,
+       "a0_tip_raise": 0,
+       "trunk_forward": 0,
+       "trunk_lower": 0
+      }
+     },
+     {
+      "t": 4.05,
+      "stance": [
+       "a0_seg_1",
+       "a1_seg_1",
+       "a2_seg_1",
+       "a3_seg_1",
+       "a4_seg_1",
+       "a5_seg_1"
+      ]
+     },
+     {
+      "t": 4.4,
+      "modes": {
+       "a0_tip_radial": 0,
+       "a0_tip_raise": 0,
+       "trunk_forward": 0,
+       "trunk_lower": 0
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 4.4,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"modes\": {\n        \"a0_tip_radial\": 0,\n        \"a0_tip_raise\": 0,\n        \"trunk_forward\": 0,\n        \"trunk_lower\": 0\n      }\n    },\n    {\n      \"t\": 0.35,\n      \"stance\": [\n        \"a1_seg_1\",\n        \"a2_seg_1\",\n        \"a3_seg_1\",\n        \"a4_seg_1\",\n        \"a5_seg_1\"\n      ],\n      \"modes\": {\n        \"a0_tip_radial\": 0,\n        \"a0_tip_raise\": 0,\n        \"trunk_forward\": -0.12,\n        \"trunk_lower\": -0.04\n      }\n    },\n    {\n      \"t\": 0.85,\n      \"modes\": {\n        \"a0_tip_radial\": 0.18,\n        \"a0_tip_raise\": 0.08,\n        \"trunk_forward\": 0.05,\n        \"trunk_lower\": -0.08\n      }\n    },\n    {\n      \"t\": 1.65,\n      \"modes\": {\n        \"a0_tip_radial\": 0.48,\n        \"a0_tip_raise\": 0.04,\n        \"trunk_forward\": 0.42,\n        \"trunk_lower\": -0.1\n      }\n    },\n    {\n      \"t\": 2.15,\n      \"modes\": {\n        \"a0_tip_radial\": 0.52,\n        \"a0_tip_raise\": 0.04,\n        \"trunk_forward\": 0.48,\n        \"trunk_lower\": -0.1\n      }\n    },\n    {\n      \"t\": 2.55,\n      \"modes\": {\n        \"a0_tip_radial\": 0.5,\n        \"a0_tip_raise\": 0.04,\n        \"trunk_forward\": 0.43,\n        \"trunk_lower\": -0.08\n      }\n    },\n    {\n      \"t\": 3.2,\n      \"modes\": {\n        \"a0_tip_radial\": 0.23,\n        \"a0_tip_raise\": 0.08,\n        \"trunk_forward\": 0.12,\n        \"trunk_lower\": -0.05\n      }\n    },\n    {\n      \"t\": 3.85,\n      \"modes\": {\n        \"a0_tip_radial\": 0,\n        \"a0_tip_raise\": 0,\n        \"trunk_forward\": 0,\n        \"trunk_lower\": 0\n      }\n    },\n    {\n      \"t\": 4.05,\n      \"stance\": [\n        \"a0_seg_1\",\n        \"a1_seg_1\",\n        \"a2_seg_1\",\n        \"a3_seg_1\",\n        \"a4_seg_1\",\n        \"a5_seg_1\"\n      ]\n    },\n    {\n      \"t\": 4.4,\n      \"modes\": {\n        \"a0_tip_radial\": 0,\n        \"a0_tip_raise\": 0,\n        \"trunk_forward\": 0,\n        \"trunk_lower\": 0\n      }\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [],
+ "calls": 1,
+ "call_log": [
+  {
+   "prompt_tokens": 12796,
+   "cached_tokens": 0,
+   "completion_tokens": 838,
+   "reasoning_tokens": 109,
+   "cost_usd": 0.016986,
+   "service_tier": "flex",
+   "seconds": 13.54
+  }
+ ],
+ "cost_usd": 0.016986,
+ "seconds": 15.3,
+ "at": "2026-11-12T02:25:13",
+ "predicate": {
+  "skill": "reach_forward",
+  "applicable": true,
+  "pass": true,
+  "tip": "a0_seg_1_tip",
+  "advance_L": 0.3758,
+  "return_L": 0.0044,
+  "final_L": 0.0044
+ },
+ "valid_and_semantic": true,
+ "program": {
+  "duration_s": 4.4,
+  "keyframes": [
+   {
+    "t": 0,
+    "modes": {
+     "a0_tip_radial": 0,
+     "a0_tip_raise": 0,
+     "trunk_forward": 0,
+     "trunk_lower": 0
+    }
+   },
+   {
+    "t": 0.35,
+    "stance": [
+     "a1_seg_1",
+     "a2_seg_1",
+     "a3_seg_1",
+     "a4_seg_1",
+     "a5_seg_1"
+    ],
+    "modes": {
+     "a0_tip_radial": 0,
+     "a0_tip_raise": 0,
+     "trunk_forward": -0.12,
+     "trunk_lower": -0.04
+    }
+   },
+   {
+    "t": 0.85,
+    "modes": {
+     "a0_tip_radial": 0.18,
+     "a0_tip_raise": 0.08,
+     "trunk_forward": 0.05,
+     "trunk_lower": -0.08
+    }
+   },
+   {
+    "t": 1.65,
+    "modes": {
+     "a0_tip_radial": 0.48,
+     "a0_tip_raise": 0.04,
+     "trunk_forward": 0.42,
+     "trunk_lower": -0.1
+    }
+   },
+   {
+    "t": 2.15,
+    "modes": {
+     "a0_tip_radial": 0.52,
+     "a0_tip_raise": 0.04,
+     "trunk_forward": 0.48,
+     "trunk_lower": -0.1
+    }
+   },
+   {
+    "t": 2.55,
+    "modes": {
+     "a0_tip_radial": 0.5,
+     "a0_tip_raise": 0.04,
+     "trunk_forward": 0.43,
+     "trunk_lower": -0.08
+    }
+   },
+   {
+    "t": 3.2,
+    "modes": {
+     "a0_tip_radial": 0.23,
+     "a0_tip_raise": 0.08,
+     "trunk_forward": 0.12,
+     "trunk_lower": -0.05
+    }
+   },
+   {
+    "t": 3.85,
+    "modes": {
+     "a0_tip_radial": 0,
+     "a0_tip_raise": 0,
+     "trunk_forward": 0,
+     "trunk_lower": 0
+    }
+   },
+   {
+    "t": 4.05,
+    "stance": [
+     "a0_seg_1",
+     "a1_seg_1",
+     "a2_seg_1",
+     "a3_seg_1",
+     "a4_seg_1",
+     "a5_seg_1"
+    ]
+   },
+   {
+    "t": 4.4,
+    "modes": {
+     "a0_tip_radial": 0,
+     "a0_tip_raise": 0,
+     "trunk_forward": 0,
+     "trunk_lower": 0
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0016
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0005,
+   "body_frame": [
+    "a3_seg_1",
+    99
+   ],
+   "limit_m": 0.0016
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0079
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0667,
+   "limit_rad": 0.3159
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0157
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0003,
+   "worst_off_ground_m": 0.0005,
+   "limit_m": 0.0031
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0157
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": 1,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.3159,
+   "start_joints_moved_inside_range": [],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0,
+   "gait_cmd_scale_min": 1.0,
+   "com_shift_max_m": 0.0
+  },
+  "notes": [],
+  "gaits": []
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/v3_six_arm_crawler_s3103/clips/reach_forward_P_v0.npz"
+}

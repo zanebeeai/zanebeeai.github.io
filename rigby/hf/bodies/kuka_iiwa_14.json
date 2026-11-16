@@ -1,0 +1,535 @@
+{
+ "name": "kuka_iiwa_14",
+ "xml": "track/bodies/kuka_iiwa_14.xml",
+ "source_model": "humanoid/data/robots/menagerie_full/kuka_iiwa_14/scene.xml",
+ "source_sha256": "e0625aa6086874619d3c033e1231c727d1bf937612166ab60c896d9993834474",
+ "nq": 14,
+ "nv": 13,
+ "nu": 7,
+ "timestep": 0.002,
+ "free_base": false,
+ "root_body": "base",
+ "mass_kg": 30.61,
+ "joints": [
+  {
+   "name": "joint1",
+   "type": "hinge",
+   "body": "link1",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": [
+    -2.96706,
+    2.96706
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint2",
+   "type": "hinge",
+   "body": "link2",
+   "qposadr": 1,
+   "dofadr": 1,
+   "range": [
+    -2.0944,
+    2.0944
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint3",
+   "type": "hinge",
+   "body": "link3",
+   "qposadr": 2,
+   "dofadr": 2,
+   "range": [
+    -2.96706,
+    2.96706
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint4",
+   "type": "hinge",
+   "body": "link4",
+   "qposadr": 3,
+   "dofadr": 3,
+   "range": [
+    -2.0944,
+    2.0944
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint5",
+   "type": "hinge",
+   "body": "link5",
+   "qposadr": 4,
+   "dofadr": 4,
+   "range": [
+    -2.96706,
+    2.96706
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint6",
+   "type": "hinge",
+   "body": "link6",
+   "qposadr": 5,
+   "dofadr": 5,
+   "range": [
+    -2.0944,
+    2.0944
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint7",
+   "type": "hinge",
+   "body": "link7",
+   "qposadr": 6,
+   "dofadr": 6,
+   "range": [
+    -3.05433,
+    3.05433
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "block_free",
+   "type": "free",
+   "body": "OBJ:block",
+   "qposadr": 7,
+   "dofadr": 7,
+   "range": null,
+   "limited": null,
+   "object": true
+  }
+ ],
+ "actuators": [
+  {
+   "name": "actuator1",
+   "transmission": "joint",
+   "joints": [
+    "joint1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.96706,
+    2.96706
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -200.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "actuator2",
+   "transmission": "joint",
+   "joints": [
+    "joint2"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.0944,
+    2.0944
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -200.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "actuator3",
+   "transmission": "joint",
+   "joints": [
+    "joint3"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.96706,
+    2.96706
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -200.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "actuator4",
+   "transmission": "joint",
+   "joints": [
+    "joint4"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.0944,
+    2.0944
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -200.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "actuator5",
+   "transmission": "joint",
+   "joints": [
+    "joint5"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.96706,
+    2.96706
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -200.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "actuator6",
+   "transmission": "joint",
+   "joints": [
+    "joint6"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.0944,
+    2.0944
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -200.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "actuator7",
+   "transmission": "joint",
+   "joints": [
+    "joint7"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -3.05433,
+    3.05433
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -200.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  0.785398,
+  0.0,
+  -1.5708,
+  0.0,
+  0.0,
+  0.0,
+  0.577,
+  0.0,
+  0.251,
+  1.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "L": 1.1009,
+ "T": 0.335,
+ "L_is": "reach of the tips from their limb's first joint (m)",
+ "tips": [
+  {
+   "name": "link7_tip",
+   "body": "link7",
+   "rigby_id": "T0",
+   "joints": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6",
+    "joint7"
+   ],
+   "home_base_m": [
+    0.6378,
+    0.0,
+    0.3162
+   ],
+   "home_world_m": [
+    0.6378,
+    0.0,
+    0.3162
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8808,
+     -0.8829,
+     -0.3016
+    ],
+    "max": [
+     0.8898,
+     0.877,
+     1.2579
+    ]
+   },
+   "reach_m": 1.1009,
+   "first_joint_anchor_base_m": [
+    0.0,
+    0.0,
+    0.1575
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "joint1": 0.98,
+      "joint2": 0.0034,
+      "joint3": 0.1965,
+      "joint4": -0.0316,
+      "joint5": 0.0052,
+      "joint6": 0.001,
+      "joint7": -0.0
+     },
+     "share_of_motion": 0.431,
+     "tip_motion_per_unit_at_home_m": [
+      -0.023,
+      2.1356,
+      -0.0272
+     ]
+    },
+    {
+     "weights": {
+      "joint1": 0.0008,
+      "joint2": 0.9968,
+      "joint3": -0.0331,
+      "joint4": -0.0726,
+      "joint5": 0.0063,
+      "joint6": 0.0033,
+      "joint7": -0.0
+     },
+     "share_of_motion": 0.305,
+     "tip_motion_per_unit_at_home_m": [
+      -0.1438,
+      -0.0458,
+      -1.3838
+     ]
+    },
+    {
+     "weights": {
+      "joint1": -0.1897,
+      "joint2": 0.0432,
+      "joint3": 0.9692,
+      "joint4": 0.1501,
+      "joint5": 0.0087,
+      "joint6": 0.0094,
+      "joint7": 0.0
+     },
+     "share_of_motion": 0.131,
+     "tip_motion_per_unit_at_home_m": [
+      0.1021,
+      1.0271,
+      0.0483
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "link7_end": [
+   8
+  ],
+  "rest_of_body": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "floor": [
+   0
+  ],
+  "table": [
+   0
+  ],
+  "block": [
+   9
+  ]
+ },
+ "link_group_names": {
+  "link7_end": [
+   "link7"
+  ],
+  "rest_of_body": [
+   "base",
+   "link1",
+   "link2",
+   "link3",
+   "link4",
+   "link5",
+   "link6"
+  ],
+  "floor": [
+   "world"
+  ],
+  "table": [
+   "world"
+  ],
+  "block": [
+   "OBJ:block"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ],
+  "table": [
+   "table"
+  ]
+ },
+ "contact_edges": [
+  [
+   "link7_end",
+   "block"
+  ],
+  [
+   "block",
+   "table"
+  ],
+  [
+   "rest_of_body",
+   "block"
+  ],
+  [
+   "rest_of_body",
+   "table"
+  ],
+  [
+   "block",
+   "floor"
+  ],
+  [
+   "link7_end",
+   "table"
+  ]
+ ],
+ "stance_sets": [],
+ "balance": null,
+ "gaits": [],
+ "objects": {
+  "block": {
+   "body": "OBJ:block",
+   "joint": "block_free",
+   "qposadr": 7,
+   "half_m": 0.02,
+   "mass_kg": 0.05,
+   "home_m": [
+    0.577,
+    0.0,
+    0.251
+   ]
+  },
+  "table": {
+   "geom": "table",
+   "top_z_m": 0.231,
+   "center_xy_m": [
+    0.634,
+    0.0
+   ],
+   "half_xy_m": [
+    0.288,
+    0.461
+   ],
+   "layout": {
+    "scale": 1.1534,
+    "yaw": 0.0,
+    "overlap_at_home_m": 0.0
+   }
+  },
+  "grip_site": null,
+  "grip_reach_m": null,
+  "gripper": null,
+  "about": "no finger tips: this arm has no gripper in its model, so it cannot grasp the block"
+ },
+ "excluded_pairs_home_overlap": [],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: the world frame (x forward, y left, z up, metres), as for every fixed body",
+ "kind": "arm",
+ "support": [],
+ "render_model": "humanoid/data/robots/menagerie_full/kuka_iiwa_14/scene.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ }
+}

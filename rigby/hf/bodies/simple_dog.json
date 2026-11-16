@@ -1,0 +1,1733 @@
+{
+ "name": "simple_dog",
+ "xml": "track/bodies/simple_dog.xml",
+ "source_model": "any-robot/assets/general/simple/simple_dog/robot.xml",
+ "source_sha256": "16bea3865f567354e45ee453c85ec98ff65ee62f81806a19432f8123884cab17",
+ "nq": 19,
+ "nv": 18,
+ "nu": 12,
+ "timestep": 0.002,
+ "free_base": true,
+ "root_body": "torso",
+ "mass_kg": 15.9165,
+ "joints": [
+  {
+   "name": "root",
+   "type": "free",
+   "body": "torso",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": null,
+   "limited": null,
+   "object": false
+  },
+  {
+   "name": "fl_hip_roll",
+   "type": "hinge",
+   "body": "fl_hip",
+   "qposadr": 7,
+   "dofadr": 6,
+   "range": [
+    -0.6,
+    0.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fl_hip_pitch",
+   "type": "hinge",
+   "body": "fl_thigh",
+   "qposadr": 8,
+   "dofadr": 7,
+   "range": [
+    -1.6,
+    1.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fl_knee",
+   "type": "hinge",
+   "body": "fl_shank",
+   "qposadr": 9,
+   "dofadr": 8,
+   "range": [
+    -2.4,
+    -0.15
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fr_hip_roll",
+   "type": "hinge",
+   "body": "fr_hip",
+   "qposadr": 10,
+   "dofadr": 9,
+   "range": [
+    -0.6,
+    0.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fr_hip_pitch",
+   "type": "hinge",
+   "body": "fr_thigh",
+   "qposadr": 11,
+   "dofadr": 10,
+   "range": [
+    -1.6,
+    1.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fr_knee",
+   "type": "hinge",
+   "body": "fr_shank",
+   "qposadr": 12,
+   "dofadr": 11,
+   "range": [
+    -2.4,
+    -0.15
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hl_hip_roll",
+   "type": "hinge",
+   "body": "hl_hip",
+   "qposadr": 13,
+   "dofadr": 12,
+   "range": [
+    -0.6,
+    0.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hl_hip_pitch",
+   "type": "hinge",
+   "body": "hl_thigh",
+   "qposadr": 14,
+   "dofadr": 13,
+   "range": [
+    -1.6,
+    1.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hl_knee",
+   "type": "hinge",
+   "body": "hl_shank",
+   "qposadr": 15,
+   "dofadr": 14,
+   "range": [
+    -2.4,
+    -0.15
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hr_hip_roll",
+   "type": "hinge",
+   "body": "hr_hip",
+   "qposadr": 16,
+   "dofadr": 15,
+   "range": [
+    -0.6,
+    0.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hr_hip_pitch",
+   "type": "hinge",
+   "body": "hr_thigh",
+   "qposadr": 17,
+   "dofadr": 16,
+   "range": [
+    -1.6,
+    1.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hr_knee",
+   "type": "hinge",
+   "body": "hr_shank",
+   "qposadr": 18,
+   "dofadr": 17,
+   "range": [
+    -2.4,
+    -0.15
+   ],
+   "limited": true,
+   "object": false
+  }
+ ],
+ "actuators": [
+  {
+   "name": "fl_hip_roll_servo",
+   "transmission": "joint",
+   "joints": [
+    "fl_hip_roll"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.6,
+    0.6
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "fl_hip_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "fl_hip_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.6,
+    1.6
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "fl_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "fl_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.4,
+    -0.15
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "fr_hip_roll_servo",
+   "transmission": "joint",
+   "joints": [
+    "fr_hip_roll"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.6,
+    0.6
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "fr_hip_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "fr_hip_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.6,
+    1.6
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "fr_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "fr_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.4,
+    -0.15
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "hl_hip_roll_servo",
+   "transmission": "joint",
+   "joints": [
+    "hl_hip_roll"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.6,
+    0.6
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  },
+  {
+   "name": "hl_hip_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "hl_hip_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.6,
+    1.6
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C7"
+  },
+  {
+   "name": "hl_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "hl_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.4,
+    -0.15
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C8"
+  },
+  {
+   "name": "hr_hip_roll_servo",
+   "transmission": "joint",
+   "joints": [
+    "hr_hip_roll"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.6,
+    0.6
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C9"
+  },
+  {
+   "name": "hr_hip_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "hr_hip_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.6,
+    1.6
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C10"
+  },
+  {
+   "name": "hr_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "hr_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.4,
+    -0.15
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C11"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  0.0,
+  0.456,
+  1.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "L": 0.40382,
+ "T": 0.20289,
+ "L_is": "standing CoM height (m)",
+ "tips": [
+  {
+   "name": "fl_foot_tip",
+   "body": "fl_foot",
+   "rigby_id": "T0",
+   "joints": [
+    "fl_hip_roll",
+    "fl_hip_pitch",
+    "fl_knee"
+   ],
+   "home_base_m": [
+    0.2,
+    0.16,
+    -0.43
+   ],
+   "home_world_m": [
+    0.2,
+    0.16,
+    0.026
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.2067,
+     -0.0616,
+     -0.43
+    ],
+    "max": [
+     0.6082,
+     0.3635,
+     0.1895
+    ]
+   },
+   "reach_m": 0.4111,
+   "first_joint_anchor_base_m": [
+    0.2,
+    0.13,
+    -0.02
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "fl_hip_roll": -0.0143,
+      "fl_hip_pitch": 0.9303,
+      "fl_knee": 0.3666
+     },
+     "share_of_motion": 0.892,
+     "tip_motion_per_unit_at_home_m": [
+      -0.6969,
+      -0.0035,
+      -0.0003
+     ]
+    },
+    {
+     "weights": {
+      "fl_hip_roll": -0.4689,
+      "fl_hip_pitch": -0.33,
+      "fl_knee": 0.8193
+     },
+     "share_of_motion": 0.057,
+     "tip_motion_per_unit_at_home_m": [
+      0.0229,
+      -0.1153,
+      -0.0084
+     ]
+    },
+    {
+     "weights": {
+      "fl_hip_roll": 0.8832,
+      "fl_hip_pitch": -0.1602,
+      "fl_knee": 0.4409
+     },
+     "share_of_motion": 0.051,
+     "tip_motion_per_unit_at_home_m": [
+      0.0009,
+      0.2173,
+      0.0159
+     ]
+    }
+   ]
+  },
+  {
+   "name": "fr_foot_tip",
+   "body": "fr_foot",
+   "rigby_id": "T1",
+   "joints": [
+    "fr_hip_roll",
+    "fr_hip_pitch",
+    "fr_knee"
+   ],
+   "home_base_m": [
+    0.2,
+    -0.16,
+    -0.43
+   ],
+   "home_world_m": [
+    0.2,
+    -0.16,
+    0.026
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.2013,
+     -0.3818,
+     -0.43
+    ],
+    "max": [
+     0.6085,
+     0.0734,
+     0.194
+    ]
+   },
+   "reach_m": 0.4111,
+   "first_joint_anchor_base_m": [
+    0.2,
+    -0.13,
+    -0.02
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "fr_hip_roll": 0.0128,
+      "fr_hip_pitch": 0.9304,
+      "fr_knee": 0.3662
+     },
+     "share_of_motion": 0.886,
+     "tip_motion_per_unit_at_home_m": [
+      -0.6969,
+      0.0031,
+      -0.0002
+     ]
+    },
+    {
+     "weights": {
+      "fr_hip_roll": 0.9024,
+      "fr_hip_pitch": -0.1685,
+      "fr_knee": 0.3966
+     },
+     "share_of_motion": 0.06,
+     "tip_motion_per_unit_at_home_m": [
+      0.0169,
+      0.222,
+      -0.0162
+     ]
+    },
+    {
+     "weights": {
+      "fr_hip_roll": -0.4307,
+      "fr_hip_pitch": -0.3254,
+      "fr_knee": 0.8418
+     },
+     "share_of_motion": 0.054,
+     "tip_motion_per_unit_at_home_m": [
+      0.0146,
+      -0.106,
+      0.0078
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hl_foot_tip",
+   "body": "hl_foot",
+   "rigby_id": "T2",
+   "joints": [
+    "hl_hip_roll",
+    "hl_hip_pitch",
+    "hl_knee"
+   ],
+   "home_base_m": [
+    -0.2,
+    0.16,
+    -0.43
+   ],
+   "home_world_m": [
+    -0.2,
+    0.16,
+    0.026
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.6038,
+     -0.0687,
+     -0.43
+    ],
+    "max": [
+     0.2075,
+     0.3639,
+     0.1924
+    ]
+   },
+   "reach_m": 0.4111,
+   "first_joint_anchor_base_m": [
+    -0.2,
+    0.13,
+    -0.02
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "hl_hip_roll": -0.0121,
+      "hl_hip_pitch": 0.9316,
+      "hl_knee": 0.3632
+     },
+     "share_of_motion": 0.895,
+     "tip_motion_per_unit_at_home_m": [
+      -0.697,
+      -0.003,
+      -0.0002
+     ]
+    },
+    {
+     "weights": {
+      "hl_hip_roll": 0.9442,
+      "hl_hip_pitch": 0.1302,
+      "hl_knee": -0.3027
+     },
+     "share_of_motion": 0.057,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0139,
+      0.2323,
+      0.017
+     ]
+    },
+    {
+     "weights": {
+      "hl_hip_roll": 0.3292,
+      "hl_hip_pitch": -0.3393,
+      "hl_knee": 0.8812
+     },
+     "share_of_motion": 0.049,
+     "tip_motion_per_unit_at_home_m": [
+      0.0144,
+      0.081,
+      0.0059
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hr_foot_tip",
+   "body": "hr_foot",
+   "rigby_id": "T3",
+   "joints": [
+    "hr_hip_roll",
+    "hr_hip_pitch",
+    "hr_knee"
+   ],
+   "home_base_m": [
+    -0.2,
+    -0.16,
+    -0.43
+   ],
+   "home_world_m": [
+    -0.2,
+    -0.16,
+    0.026
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.5996,
+     -0.3804,
+     -0.43
+    ],
+    "max": [
+     0.2084,
+     0.062,
+     0.1937
+    ]
+   },
+   "reach_m": 0.4111,
+   "first_joint_anchor_base_m": [
+    -0.2,
+    -0.13,
+    -0.02
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "hr_hip_roll": 0.0136,
+      "hr_hip_pitch": 0.9301,
+      "hr_knee": 0.3671
+     },
+     "share_of_motion": 0.889,
+     "tip_motion_per_unit_at_home_m": [
+      -0.6969,
+      0.0034,
+      -0.0002
+     ]
+    },
+    {
+     "weights": {
+      "hr_hip_roll": 0.5352,
+      "hr_hip_pitch": -0.3169,
+      "hr_knee": 0.783
+     },
+     "share_of_motion": 0.058,
+     "tip_motion_per_unit_at_home_m": [
+      0.0229,
+      0.1317,
+      -0.0096
+     ]
+    },
+    {
+     "weights": {
+      "hr_hip_roll": 0.8446,
+      "hr_hip_pitch": 0.1858,
+      "hr_knee": -0.5021
+     },
+     "share_of_motion": 0.052,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0033,
+      0.2078,
+      -0.0152
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "fl_foot": [
+   5
+  ],
+  "fr_foot": [
+   9
+  ],
+  "hl_foot": [
+   13
+  ],
+  "hr_foot": [
+   17
+  ],
+  "rest_of_body": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   7,
+   8,
+   10,
+   11,
+   12,
+   14,
+   15,
+   16
+  ],
+  "floor": [
+   0
+  ]
+ },
+ "link_group_names": {
+  "fl_foot": [
+   "fl_foot"
+  ],
+  "fr_foot": [
+   "fr_foot"
+  ],
+  "hl_foot": [
+   "hl_foot"
+  ],
+  "hr_foot": [
+   "hr_foot"
+  ],
+  "rest_of_body": [
+   "torso",
+   "fl_hip",
+   "fl_thigh",
+   "fl_shank",
+   "fr_hip",
+   "fr_thigh",
+   "fr_shank",
+   "hl_hip",
+   "hl_thigh",
+   "hl_shank",
+   "hr_hip",
+   "hr_thigh",
+   "hr_shank"
+  ],
+  "floor": [
+   "world"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ]
+ },
+ "contact_edges": [
+  [
+   "fl_foot",
+   "floor"
+  ],
+  [
+   "fr_foot",
+   "floor"
+  ],
+  [
+   "hl_foot",
+   "floor"
+  ],
+  [
+   "hr_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ]
+ ],
+ "stance_sets": [
+  {
+   "name": "all",
+   "tips": [
+    "fl_foot_tip",
+    "fr_foot_tip",
+    "hl_foot_tip",
+    "hr_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_fl_foot_tip",
+   "tips": [
+    "fr_foot_tip",
+    "hl_foot_tip",
+    "hr_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_fr_foot_tip",
+   "tips": [
+    "fl_foot_tip",
+    "hl_foot_tip",
+    "hr_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_hl_foot_tip",
+   "tips": [
+    "fl_foot_tip",
+    "fr_foot_tip",
+    "hr_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_hr_foot_tip",
+   "tips": [
+    "fl_foot_tip",
+    "fr_foot_tip",
+    "hl_foot_tip"
+   ]
+  }
+ ],
+ "balance": {
+  "support_tips": [
+   "fl_foot_tip",
+   "fr_foot_tip",
+   "hl_foot_tip",
+   "hr_foot_tip"
+  ],
+  "support_polygon_base_xy_m": [
+   [
+    -0.2,
+    -0.16
+   ],
+   [
+    0.2,
+    -0.16
+   ],
+   [
+    0.2,
+    0.16
+   ],
+   [
+    -0.2,
+    0.16
+   ]
+  ],
+  "com_home_base_m": [
+   0.0,
+   0.0,
+   -0.0522
+  ],
+  "com_margin_home_m": 0.16,
+  "about": "weight-shift coordinate: the base moves so the CoM moves toward a direction inside this polygon; a tip may lift once the CoM is inside the polygon of the others (dilated 0.1 L)"
+ },
+ "gaits": [
+  {
+   "name": "stable_omnidirectional_crawl",
+   "source": "rigby v7 library (docs/preprint/v7/libraries/simple_dog.json)",
+   "about": "A four-beat crawl with a continuously widened stance. Exactly one foot is retracted at a time, moved to its commanded leading foothold, and lowered before the next foot lifts. During the following three-foot-supported interval, planted hips sweep toward the trailing side to propel the trunk. Lateral and tangential versions of the same trajectories provide translation and yaw.",
+   "cycle_s": 1.92,
+   "phase": {
+    "fl_foot_tip": 0.75,
+    "fr_foot_tip": 0.0,
+    "hl_foot_tip": 0.25,
+    "hr_foot_tip": 0.5
+   },
+   "duty": {
+    "fl_foot_tip": 0.3125,
+    "fr_foot_tip": 0.3125,
+    "hl_foot_tip": 0.3125,
+    "hr_foot_tip": 0.3125
+   },
+   "duty_mean": 0.312,
+   "stacks": [
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": -0.48,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": -0.48,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": -0.48,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": -0.48,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": -0.48,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": -0.48,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": -0.48
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": -0.48
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.1,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": -0.1,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.1,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": -0.1,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    }
+   ],
+   "steer": {
+    "forward": [
+     {
+      "C1": 0.3,
+      "C4": 0.2,
+      "C7": 0.0,
+      "C10": -0.2
+     },
+     {
+      "C1": -0.3,
+      "C4": 0.24,
+      "C7": 0.05,
+      "C10": -0.15
+     },
+     {
+      "C1": -0.3,
+      "C4": 0.27,
+      "C7": 0.1,
+      "C10": -0.1
+     },
+     {
+      "C1": -0.25,
+      "C4": 0.3,
+      "C7": 0.15,
+      "C10": -0.05
+     },
+     {
+      "C1": -0.2,
+      "C4": 0.3,
+      "C7": 0.2,
+      "C10": 0.0
+     },
+     {
+      "C1": -0.15,
+      "C4": -0.3,
+      "C7": 0.24,
+      "C10": 0.05
+     },
+     {
+      "C1": -0.1,
+      "C4": -0.3,
+      "C7": 0.27,
+      "C10": 0.1
+     },
+     {
+      "C1": -0.05,
+      "C4": -0.25,
+      "C7": 0.3,
+      "C10": 0.15
+     },
+     {
+      "C1": 0.0,
+      "C4": -0.2,
+      "C7": 0.3,
+      "C10": 0.2
+     },
+     {
+      "C1": 0.05,
+      "C4": -0.15,
+      "C7": -0.3,
+      "C10": 0.24
+     },
+     {
+      "C1": 0.1,
+      "C4": -0.1,
+      "C7": -0.3,
+      "C10": 0.27
+     },
+     {
+      "C1": 0.15,
+      "C4": -0.05,
+      "C7": -0.25,
+      "C10": 0.3
+     },
+     {
+      "C1": 0.2,
+      "C4": 0.0,
+      "C7": -0.2,
+      "C10": 0.3
+     },
+     {
+      "C1": 0.24,
+      "C4": 0.05,
+      "C7": -0.15,
+      "C10": -0.3
+     },
+     {
+      "C1": 0.27,
+      "C4": 0.1,
+      "C7": -0.1,
+      "C10": -0.3
+     },
+     {
+      "C1": 0.3,
+      "C4": 0.15,
+      "C7": -0.05,
+      "C10": -0.25
+     }
+    ],
+    "left": [
+     {
+      "C0": -0.3,
+      "C3": -0.2,
+      "C6": 0.0,
+      "C9": 0.2
+     },
+     {
+      "C0": 0.3,
+      "C3": -0.24,
+      "C6": -0.05,
+      "C9": 0.15
+     },
+     {
+      "C0": 0.3,
+      "C3": -0.27,
+      "C6": -0.1,
+      "C9": 0.1
+     },
+     {
+      "C0": 0.25,
+      "C3": -0.3,
+      "C6": -0.15,
+      "C9": 0.05
+     },
+     {
+      "C0": 0.2,
+      "C3": -0.3,
+      "C6": -0.2,
+      "C9": 0.0
+     },
+     {
+      "C0": 0.15,
+      "C3": 0.3,
+      "C6": -0.24,
+      "C9": -0.05
+     },
+     {
+      "C0": 0.1,
+      "C3": 0.3,
+      "C6": -0.27,
+      "C9": -0.1
+     },
+     {
+      "C0": 0.05,
+      "C3": 0.25,
+      "C6": -0.3,
+      "C9": -0.15
+     },
+     {
+      "C0": 0.0,
+      "C3": 0.2,
+      "C6": -0.3,
+      "C9": -0.2
+     },
+     {
+      "C0": -0.05,
+      "C3": 0.15,
+      "C6": 0.3,
+      "C9": -0.24
+     },
+     {
+      "C0": -0.1,
+      "C3": 0.1,
+      "C6": 0.3,
+      "C9": -0.27
+     },
+     {
+      "C0": -0.15,
+      "C3": 0.05,
+      "C6": 0.25,
+      "C9": -0.3
+     },
+     {
+      "C0": -0.2,
+      "C3": 0.0,
+      "C6": 0.2,
+      "C9": -0.3
+     },
+     {
+      "C0": -0.24,
+      "C3": -0.05,
+      "C6": 0.15,
+      "C9": 0.3
+     },
+     {
+      "C0": -0.27,
+      "C3": -0.1,
+      "C6": 0.1,
+      "C9": 0.3
+     },
+     {
+      "C0": -0.3,
+      "C3": -0.15,
+      "C6": 0.05,
+      "C9": 0.25
+     }
+    ],
+    "turn": [
+     {
+      "C0": -0.3,
+      "C1": -0.3,
+      "C3": -0.2,
+      "C4": 0.2,
+      "C6": 0.0,
+      "C7": 0.0,
+      "C9": -0.2,
+      "C10": 0.2
+     },
+     {
+      "C0": 0.3,
+      "C1": 0.3,
+      "C3": -0.24,
+      "C4": 0.24,
+      "C6": 0.05,
+      "C7": -0.05,
+      "C9": -0.15,
+      "C10": 0.15
+     },
+     {
+      "C0": 0.3,
+      "C1": 0.3,
+      "C3": -0.27,
+      "C4": 0.27,
+      "C6": 0.1,
+      "C7": -0.1,
+      "C9": -0.1,
+      "C10": 0.1
+     },
+     {
+      "C0": 0.25,
+      "C1": 0.25,
+      "C3": -0.3,
+      "C4": 0.3,
+      "C6": 0.15,
+      "C7": -0.15,
+      "C9": -0.05,
+      "C10": 0.05
+     },
+     {
+      "C0": 0.2,
+      "C1": 0.2,
+      "C3": -0.3,
+      "C4": 0.3,
+      "C6": 0.2,
+      "C7": -0.2,
+      "C9": 0.0,
+      "C10": 0.0
+     },
+     {
+      "C0": 0.15,
+      "C1": 0.15,
+      "C3": 0.3,
+      "C4": -0.3,
+      "C6": 0.24,
+      "C7": -0.24,
+      "C9": 0.05,
+      "C10": -0.05
+     },
+     {
+      "C0": 0.1,
+      "C1": 0.1,
+      "C3": 0.3,
+      "C4": -0.3,
+      "C6": 0.27,
+      "C7": -0.27,
+      "C9": 0.1,
+      "C10": -0.1
+     },
+     {
+      "C0": 0.05,
+      "C1": 0.05,
+      "C3": 0.25,
+      "C4": -0.25,
+      "C6": 0.3,
+      "C7": -0.3,
+      "C9": 0.15,
+      "C10": -0.15
+     },
+     {
+      "C0": 0.0,
+      "C1": 0.0,
+      "C3": 0.2,
+      "C4": -0.2,
+      "C6": 0.3,
+      "C7": -0.3,
+      "C9": 0.2,
+      "C10": -0.2
+     },
+     {
+      "C0": -0.05,
+      "C1": -0.05,
+      "C3": 0.15,
+      "C4": -0.15,
+      "C6": -0.3,
+      "C7": 0.3,
+      "C9": 0.24,
+      "C10": -0.24
+     },
+     {
+      "C0": -0.1,
+      "C1": -0.1,
+      "C3": 0.1,
+      "C4": -0.1,
+      "C6": -0.3,
+      "C7": 0.3,
+      "C9": 0.27,
+      "C10": -0.27
+     },
+     {
+      "C0": -0.15,
+      "C1": -0.15,
+      "C3": 0.05,
+      "C4": -0.05,
+      "C6": -0.25,
+      "C7": 0.25,
+      "C9": 0.3,
+      "C10": -0.3
+     },
+     {
+      "C0": -0.2,
+      "C1": -0.2,
+      "C3": 0.0,
+      "C4": 0.0,
+      "C6": -0.2,
+      "C7": 0.2,
+      "C9": 0.3,
+      "C10": -0.3
+     },
+     {
+      "C0": -0.24,
+      "C1": -0.24,
+      "C3": -0.05,
+      "C4": 0.05,
+      "C6": -0.15,
+      "C7": 0.15,
+      "C9": -0.3,
+      "C10": 0.3
+     },
+     {
+      "C0": -0.27,
+      "C1": -0.27,
+      "C3": -0.1,
+      "C4": 0.1,
+      "C6": -0.1,
+      "C7": 0.1,
+      "C9": -0.3,
+      "C10": 0.3
+     },
+     {
+      "C0": -0.3,
+      "C1": -0.3,
+      "C3": -0.15,
+      "C4": 0.15,
+      "C6": -0.05,
+      "C7": 0.05,
+      "C9": -0.25,
+      "C10": 0.25
+     }
+    ]
+   },
+   "channel_joint": {
+    "C0": "fl_hip_roll",
+    "C1": "fl_hip_pitch",
+    "C2": "fl_knee",
+    "C3": "fr_hip_roll",
+    "C4": "fr_hip_pitch",
+    "C5": "fr_knee",
+    "C6": "hl_hip_roll",
+    "C7": "hl_hip_pitch",
+    "C8": "hl_knee",
+    "C9": "hr_hip_roll",
+    "C10": "hr_hip_pitch",
+    "C11": "hr_knee"
+   },
+   "step_height_m": 0.101,
+   "min_limbs_down": 1,
+   "quasi_static": false
+  },
+  {
+   "name": "alternating",
+   "source": "synthesised from measured tips (angular order, alternate phases)",
+   "cycle_s": 0.5072,
+   "phase": {
+    "fl_foot_tip": 0.0,
+    "fr_foot_tip": 0.5,
+    "hl_foot_tip": 0.5,
+    "hr_foot_tip": 0.0
+   },
+   "duty": {
+    "fl_foot_tip": 0.6,
+    "fr_foot_tip": 0.6,
+    "hl_foot_tip": 0.6,
+    "hr_foot_tip": 0.6
+   },
+   "duty_mean": 0.6,
+   "step_height_m": 0.101,
+   "min_limbs_down": 2,
+   "quasi_static": false
+  },
+  {
+   "name": "crawl",
+   "source": "synthesised quasi-static crawl from measured tips (one limb lifted at a time)",
+   "cycle_s": 2.0289,
+   "phase": {
+    "fl_foot_tip": 0.0,
+    "fr_foot_tip": 0.5,
+    "hl_foot_tip": 0.75,
+    "hr_foot_tip": 0.25
+   },
+   "duty": {
+    "fl_foot_tip": 0.8,
+    "fr_foot_tip": 0.8,
+    "hl_foot_tip": 0.8,
+    "hr_foot_tip": 0.8
+   },
+   "duty_mean": 0.8,
+   "step_height_m": 0.101,
+   "lift_order": [
+    "fl_hip",
+    "hr_hip",
+    "fr_hip",
+    "hl_hip"
+   ],
+   "min_limbs_down": 3,
+   "quasi_static": true
+  }
+ ],
+ "objects": null,
+ "excluded_pairs_home_overlap": [],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: x forward, y left, z up, metres; for the arm a level frame at its base",
+ "kind": "quadruped",
+ "support": [
+  {
+   "tip": "fl_foot_tip",
+   "type": "point"
+  },
+  {
+   "tip": "fr_foot_tip",
+   "type": "point"
+  },
+  {
+   "tip": "hl_foot_tip",
+   "type": "point"
+  },
+  {
+   "tip": "hr_foot_tip",
+   "type": "point"
+  }
+ ],
+ "render_model": "any-robot/assets/general/simple/simple_dog/robot.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ }
+}

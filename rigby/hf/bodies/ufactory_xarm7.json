@@ -1,0 +1,829 @@
+{
+ "name": "ufactory_xarm7",
+ "xml": "track/bodies/ufactory_xarm7.xml",
+ "source_model": "humanoid/data/robots/menagerie_4d038b3/ufactory_xarm7/scene.xml",
+ "source_sha256": "aa9df2cb2c5a64f52d616d0bb37236b3662563fcabaeb92dfbea04ebb66da5d2",
+ "nq": 20,
+ "nv": 19,
+ "nu": 8,
+ "timestep": 0.002,
+ "free_base": false,
+ "root_body": "link_base",
+ "mass_kg": 12.0685,
+ "joints": [
+  {
+   "name": "joint1",
+   "type": "hinge",
+   "body": "link1",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": [
+    -6.28319,
+    6.28319
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint2",
+   "type": "hinge",
+   "body": "link2",
+   "qposadr": 1,
+   "dofadr": 1,
+   "range": [
+    -2.059,
+    2.0944
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint3",
+   "type": "hinge",
+   "body": "link3",
+   "qposadr": 2,
+   "dofadr": 2,
+   "range": [
+    -6.28319,
+    6.28319
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint4",
+   "type": "hinge",
+   "body": "link4",
+   "qposadr": 3,
+   "dofadr": 3,
+   "range": [
+    -0.19198,
+    3.927
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint5",
+   "type": "hinge",
+   "body": "link5",
+   "qposadr": 4,
+   "dofadr": 4,
+   "range": [
+    -6.28319,
+    6.28319
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint6",
+   "type": "hinge",
+   "body": "link6",
+   "qposadr": 5,
+   "dofadr": 5,
+   "range": [
+    -1.69297,
+    3.14159
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint7",
+   "type": "hinge",
+   "body": "link7",
+   "qposadr": 6,
+   "dofadr": 6,
+   "range": [
+    -6.28319,
+    6.28319
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "left_driver_joint",
+   "type": "hinge",
+   "body": "left_outer_knuckle",
+   "qposadr": 7,
+   "dofadr": 7,
+   "range": [
+    0.0,
+    0.85
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "left_finger_joint",
+   "type": "hinge",
+   "body": "left_finger",
+   "qposadr": 8,
+   "dofadr": 8,
+   "range": [
+    0.0,
+    0.85
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "left_inner_knuckle_joint",
+   "type": "hinge",
+   "body": "left_inner_knuckle",
+   "qposadr": 9,
+   "dofadr": 9,
+   "range": [
+    0.0,
+    0.85
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "right_driver_joint",
+   "type": "hinge",
+   "body": "right_outer_knuckle",
+   "qposadr": 10,
+   "dofadr": 10,
+   "range": [
+    0.0,
+    0.85
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "right_finger_joint",
+   "type": "hinge",
+   "body": "right_finger",
+   "qposadr": 11,
+   "dofadr": 11,
+   "range": [
+    0.0,
+    0.85
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "right_inner_knuckle_joint",
+   "type": "hinge",
+   "body": "right_inner_knuckle",
+   "qposadr": 12,
+   "dofadr": 12,
+   "range": [
+    0.0,
+    0.85
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "block_free",
+   "type": "free",
+   "body": "OBJ:block",
+   "qposadr": 13,
+   "dofadr": 13,
+   "range": null,
+   "limited": null,
+   "object": true
+  }
+ ],
+ "actuators": [
+  {
+   "name": "act1",
+   "transmission": "joint",
+   "joints": [
+    "joint1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -6.28319,
+    6.28319
+   ],
+   "forcerange": [
+    -50.0,
+    50.0
+   ],
+   "gain": 1500.0,
+   "bias": [
+    0.0,
+    -1500.0,
+    -150.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "act2",
+   "transmission": "joint",
+   "joints": [
+    "joint2"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.059,
+    2.0944
+   ],
+   "forcerange": [
+    -50.0,
+    50.0
+   ],
+   "gain": 1500.0,
+   "bias": [
+    0.0,
+    -1500.0,
+    -150.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "act3",
+   "transmission": "joint",
+   "joints": [
+    "joint3"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -6.28319,
+    6.28319
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 1000.0,
+   "bias": [
+    0.0,
+    -1000.0,
+    -100.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "act4",
+   "transmission": "joint",
+   "joints": [
+    "joint4"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.19198,
+    3.927
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 1000.0,
+   "bias": [
+    0.0,
+    -1000.0,
+    -100.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "act5",
+   "transmission": "joint",
+   "joints": [
+    "joint5"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -6.28319,
+    6.28319
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 1000.0,
+   "bias": [
+    0.0,
+    -1000.0,
+    -100.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "act6",
+   "transmission": "joint",
+   "joints": [
+    "joint6"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.69297,
+    3.14159
+   ],
+   "forcerange": [
+    -20.0,
+    20.0
+   ],
+   "gain": 800.0,
+   "bias": [
+    0.0,
+    -800.0,
+    -80.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "act7",
+   "transmission": "joint",
+   "joints": [
+    "joint7"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -6.28319,
+    6.28319
+   ],
+   "forcerange": [
+    -20.0,
+    20.0
+   ],
+   "gain": 800.0,
+   "bias": [
+    0.0,
+    -800.0,
+    -80.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  },
+  {
+   "name": "gripper",
+   "transmission": "tendon",
+   "joints": [
+    "right_driver_joint",
+    "left_driver_joint"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.0,
+    255.0
+   ],
+   "forcerange": [
+    -50.0,
+    50.0
+   ],
+   "gain": 0.333,
+   "bias": [
+    0.0,
+    -100.0,
+    -10.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C7"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  -0.247,
+  0.0,
+  0.909,
+  0.0,
+  1.15644,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.479,
+  0.0,
+  0.332,
+  1.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "L": 0.9352,
+ "T": 0.30876,
+ "L_is": "reach of the tips from their limb's first joint (m)",
+ "tips": [
+  {
+   "name": "left_finger_tip",
+   "body": "left_finger",
+   "rigby_id": "T0",
+   "joints": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6",
+    "joint7",
+    "left_driver_joint",
+    "left_finger_joint"
+   ],
+   "home_base_m": [
+    0.3998,
+    0.0465,
+    0.3687
+   ],
+   "home_world_m": [
+    0.3998,
+    0.0465,
+    0.3687
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8816,
+     -0.8915,
+     -0.3119
+    ],
+    "max": [
+     0.8909,
+     0.8991,
+     1.2949
+    ]
+   },
+   "reach_m": 0.9305,
+   "first_joint_anchor_base_m": [
+    0.0,
+    0.0,
+    0.387
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "joint1": 0.9084,
+      "joint2": 0.014,
+      "joint3": 0.417,
+      "joint4": -0.006,
+      "joint5": 0.026,
+      "joint6": 0.0064,
+      "joint7": 0.0012,
+      "left_driver_joint": -0.0008,
+      "left_finger_joint": 0.0005
+     },
+     "share_of_motion": 0.556,
+     "tip_motion_per_unit_at_home_m": [
+      -0.3881,
+      3.3184,
+      -0.0408
+     ]
+    },
+    {
+     "weights": {
+      "joint1": -0.4175,
+      "joint2": 0.0019,
+      "joint3": 0.9035,
+      "joint4": 0.0108,
+      "joint5": 0.0962,
+      "joint6": 0.0042,
+      "joint7": -0.0015,
+      "left_driver_joint": 0.0001,
+      "left_finger_joint": -0.0001
+     },
+     "share_of_motion": 0.222,
+     "tip_motion_per_unit_at_home_m": [
+      -0.1186,
+      1.2455,
+      -0.0318
+     ]
+    },
+    {
+     "weights": {
+      "joint1": 0.0161,
+      "joint2": 0.088,
+      "joint3": -0.0988,
+      "joint4": 0.0653,
+      "joint5": 0.9889,
+      "joint6": -0.0037,
+      "joint7": -0.0003,
+      "left_driver_joint": -0.0004,
+      "left_finger_joint": 0.0002
+     },
+     "share_of_motion": 0.079,
+     "tip_motion_per_unit_at_home_m": [
+      0.1808,
+      1.0238,
+      0.2554
+     ]
+    }
+   ]
+  },
+  {
+   "name": "right_finger_tip",
+   "body": "right_finger",
+   "rigby_id": "T2",
+   "joints": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6",
+    "joint7",
+    "right_driver_joint",
+    "right_finger_joint"
+   ],
+   "home_base_m": [
+    0.3998,
+    -0.0465,
+    0.3687
+   ],
+   "home_world_m": [
+    0.3998,
+    -0.0465,
+    0.3687
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8961,
+     -0.8556,
+     -0.3612
+    ],
+    "max": [
+     0.8646,
+     0.8975,
+     1.305
+    ]
+   },
+   "reach_m": 0.9352,
+   "first_joint_anchor_base_m": [
+    0.0,
+    0.0,
+    0.387
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "joint1": 0.9298,
+      "joint2": 0.0058,
+      "joint3": 0.3652,
+      "joint4": -0.0223,
+      "joint5": 0.0379,
+      "joint6": -0.0071,
+      "joint7": -0.0057,
+      "right_driver_joint": -0.0,
+      "right_finger_joint": -0.0
+     },
+     "share_of_motion": 0.564,
+     "tip_motion_per_unit_at_home_m": [
+      0.3616,
+      3.2621,
+      -0.0069
+     ]
+    },
+    {
+     "weights": {
+      "joint1": -0.3665,
+      "joint2": -0.0078,
+      "joint3": 0.9262,
+      "joint4": 0.0193,
+      "joint5": 0.085,
+      "joint6": 0.0136,
+      "joint7": 0.0044,
+      "right_driver_joint": 0.0001,
+      "right_finger_joint": 0.0
+     },
+     "share_of_motion": 0.227,
+     "tip_motion_per_unit_at_home_m": [
+      0.1486,
+      1.4142,
+      0.0641
+     ]
+    },
+    {
+     "weights": {
+      "joint1": -0.0063,
+      "joint2": 0.5138,
+      "joint3": -0.0777,
+      "joint4": 0.0288,
+      "joint5": 0.8527,
+      "joint6": 0.0334,
+      "joint7": 0.029,
+      "right_driver_joint": 0.0001,
+      "right_finger_joint": 0.0
+     },
+     "share_of_motion": 0.072,
+     "tip_motion_per_unit_at_home_m": [
+      -0.1535,
+      0.8501,
+      -0.6412
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "left_pad": [
+   11
+  ],
+  "right_pad": [
+   14
+  ],
+  "rest_of_body": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   12,
+   13,
+   15
+  ],
+  "floor": [
+   0
+  ],
+  "table": [
+   0
+  ],
+  "block": [
+   16
+  ]
+ },
+ "link_group_names": {
+  "left_pad": [
+   "left_finger"
+  ],
+  "right_pad": [
+   "right_finger"
+  ],
+  "rest_of_body": [
+   "link_base",
+   "link1",
+   "link2",
+   "link3",
+   "link4",
+   "link5",
+   "link6",
+   "link7",
+   "xarm_gripper_base_link",
+   "left_outer_knuckle",
+   "left_inner_knuckle",
+   "right_outer_knuckle",
+   "right_inner_knuckle"
+  ],
+  "floor": [
+   "world"
+  ],
+  "table": [
+   "world"
+  ],
+  "block": [
+   "OBJ:block"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ],
+  "table": [
+   "table"
+  ]
+ },
+ "contact_edges": [
+  [
+   "left_pad",
+   "block"
+  ],
+  [
+   "right_pad",
+   "block"
+  ],
+  [
+   "block",
+   "table"
+  ],
+  [
+   "rest_of_body",
+   "block"
+  ],
+  [
+   "rest_of_body",
+   "table"
+  ],
+  [
+   "block",
+   "floor"
+  ]
+ ],
+ "stance_sets": [],
+ "balance": null,
+ "gaits": [],
+ "objects": {
+  "block": {
+   "body": "OBJ:block",
+   "joint": "block_free",
+   "qposadr": 13,
+   "half_m": 0.02,
+   "mass_kg": 0.05,
+   "home_m": [
+    0.479,
+    0.0,
+    0.332
+   ]
+  },
+  "table": {
+   "geom": "table",
+   "top_z_m": 0.312,
+   "center_xy_m": [
+    0.527,
+    0.0
+   ],
+   "half_xy_m": [
+    0.239,
+    0.383
+   ],
+   "layout": {
+    "scale": 0.9579,
+    "yaw": 0.0,
+    "overlap_at_home_m": 0.0
+   }
+  },
+  "grip_site": "grip",
+  "grip_reach_m": {
+   "grip": 0.9076
+  },
+  "gripper": {
+   "joints": [
+    "left_driver_joint",
+    "left_finger_joint",
+    "right_driver_joint",
+    "right_finger_joint"
+   ],
+   "ranges": {
+    "left_driver_joint": [
+     0.0,
+     0.85
+    ],
+    "left_finger_joint": [
+     0.0,
+     0.85
+    ],
+    "right_driver_joint": [
+     0.0,
+     0.85
+    ],
+    "right_finger_joint": [
+     0.0,
+     0.85
+    ]
+   },
+   "open": {
+    "left_driver_joint": 0.0,
+    "left_finger_joint": 0.0,
+    "right_driver_joint": 0.0,
+    "right_finger_joint": 0.0
+   },
+   "closed": {
+    "left_driver_joint": 0.85,
+    "left_finger_joint": 0.85,
+    "right_driver_joint": 0.85,
+    "right_finger_joint": 0.85
+   },
+   "closes_toward": "upper",
+   "actuator": "gripper",
+   "ctrlrange": [
+    0.0,
+    255.0
+   ],
+   "about": "hinged fingers: joint values in rad within ranges; the actuator's control drives them"
+  }
+ },
+ "excluded_pairs_home_overlap": [
+  [
+   "link1",
+   "link_base"
+  ]
+ ],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: the world frame (x forward, y left, z up, metres), as for every fixed body",
+ "kind": "arm",
+ "support": [],
+ "render_model": "humanoid/data/robots/menagerie_4d038b3/ufactory_xarm7/scene.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ },
+ "intake_notes": {
+  "leaves_not_tips": [
+   "left_inner_knuckle_tip",
+   "right_inner_knuckle_tip"
+  ]
+ }
+}

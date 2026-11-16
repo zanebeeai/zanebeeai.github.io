@@ -1,0 +1,922 @@
+{
+ "body": "v3_hexapod_s3101",
+ "skill": "wave",
+ "arm": "P",
+ "variant": 1,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/v3_hexapod_s3101.json",
+ "library_sha": "6342da8c91dffad0e923d1bf08db8fc897507e653ac1687a2bb243898fbda644",
+ "standin_library": false,
+ "prompt_sha256": "437355087a8602510dded378510862fc1614bbeb97f00fd711d6014ee3f15986",
+ "prompt_chars": 30562,
+ "valid": true,
+ "valid_first": false,
+ "repair_rounds": 2,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0014
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "r0_foot",
+    74
+   ],
+   "limit_m": 0.0014
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0068
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0449,
+   "limit_rad": 0.339
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0137
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.0061,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0027
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0137
+  },
+  "pass": false,
+  "failed": [
+   "foot_slip"
+  ]
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0014
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0,
+     "body_frame": [
+      "r0_foot",
+      74
+     ],
+     "limit_m": 0.0014
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0068
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.0449,
+     "limit_rad": 0.339
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0137
+    },
+    "foot_slip": {
+     "pass": false,
+     "worst_slide_m": 0.0061,
+     "worst_off_ground_m": 0.0,
+     "limit_m": 0.0027
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.0137
+    },
+    "pass": false,
+    "failed": [
+     "foot_slip"
+    ]
+   },
+   "program": {
+    "duration_s": 5.8,
+    "keyframes": [
+     {
+      "t": 0,
+      "modes": {
+       "trunk_left": 0,
+       "trunk_lower": 0,
+       "trunk_yaw_left": 0,
+       "r1_tip_up": 0,
+       "r1_tip_outward": 0,
+       "r1_tip_forward": 0
+      },
+      "stance": [
+       "l0",
+       "r0",
+       "l1",
+       "r1",
+       "l2",
+       "r2"
+      ]
+     },
+     {
+      "t": 0.4,
+      "modes": {
+       "trunk_left": 0.3,
+       "trunk_lower": 0.25,
+       "trunk_yaw_left": -0.12
+      },
+      "stance": [
+       "l0",
+       "r0",
+       "l1",
+       "l2",
+       "r2"
+      ]
+     },
+     {
+      "t": 1.05,
+      "modes": {
+       "trunk_left": 0.4,
+       "trunk_lower": 0.35,
+       "trunk_yaw_left": -0.2,
+       "r1_tip_up": 0.95,
+       "r1_tip_outward": 0.45,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 1.48,
+      "modes": {
+       "trunk_left": 0.36,
+       "trunk_lower": 0.32,
+       "trunk_yaw_left": -0.32,
+       "r1_tip_up": 0.93,
+       "r1_tip_outward": 0.42,
+       "r1_tip_forward": 0.65
+      }
+     },
+     {
+      "t": 2.07,
+      "modes": {
+       "trunk_left": 0.43,
+       "trunk_lower": 0.37,
+       "trunk_yaw_left": 0.1,
+       "r1_tip_up": 1,
+       "r1_tip_outward": 0.4,
+       "r1_tip_forward": -0.62
+      }
+     },
+     {
+      "t": 2.62,
+      "modes": {
+       "trunk_left": 0.35,
+       "trunk_lower": 0.3,
+       "trunk_yaw_left": -0.3,
+       "r1_tip_up": 0.94,
+       "r1_tip_outward": 0.45,
+       "r1_tip_forward": 0.7
+      }
+     },
+     {
+      "t": 3.25,
+      "modes": {
+       "trunk_left": 0.42,
+       "trunk_lower": 0.36,
+       "trunk_yaw_left": 0.08,
+       "r1_tip_up": 0.98,
+       "r1_tip_outward": 0.41,
+       "r1_tip_forward": -0.68
+      }
+     },
+     {
+      "t": 3.78,
+      "modes": {
+       "trunk_left": 0.36,
+       "trunk_lower": 0.31,
+       "trunk_yaw_left": -0.25,
+       "r1_tip_up": 0.94,
+       "r1_tip_outward": 0.43,
+       "r1_tip_forward": 0.58
+      }
+     },
+     {
+      "t": 4.3,
+      "modes": {
+       "trunk_left": 0.4,
+       "trunk_lower": 0.34,
+       "trunk_yaw_left": 0.04,
+       "r1_tip_up": 0.96,
+       "r1_tip_outward": 0.4,
+       "r1_tip_forward": -0.48
+      }
+     },
+     {
+      "t": 4.65,
+      "modes": {
+       "trunk_left": 0.35,
+       "trunk_lower": 0.3,
+       "trunk_yaw_left": -0.1,
+       "r1_tip_up": 0.88,
+       "r1_tip_outward": 0.35,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 5.35,
+      "modes": {
+       "trunk_left": 0.25,
+       "trunk_lower": 0.18,
+       "trunk_yaw_left": 0,
+       "r1_tip_up": 0,
+       "r1_tip_outward": 0,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 5.45,
+      "stance": [
+       "l0",
+       "r0",
+       "l1",
+       "r1",
+       "l2",
+       "r2"
+      ]
+     },
+     {
+      "t": 5.8,
+      "modes": {
+       "trunk_left": 0,
+       "trunk_lower": 0,
+       "trunk_yaw_left": 0
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 5.8,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"modes\": {\n        \"trunk_left\": 0,\n        \"trunk_lower\": 0,\n        \"trunk_yaw_left\": 0,\n        \"r1_tip_up\": 0,\n        \"r1_tip_outward\": 0,\n        \"r1_tip_forward\": 0\n      },\n      \"stance\": [\"l0\", \"r0\", \"l1\", \"r1\", \"l2\", \"r2\"]\n    },\n    {\n      \"t\": 0.4,\n      \"modes\": {\n        \"trunk_left\": 0.3,\n        \"trunk_lower\": 0.25,\n        \"trunk_yaw_left\": -0.12\n      },\n      \"stance\": [\"l0\", \"r0\", \"l1\", \"l2\", \"r2\"]\n    },\n    {\n      \"t\": 1.05,\n      \"modes\": {\n        \"trunk_left\": 0.4,\n        \"trunk_lower\": 0.35,\n        \"trunk_yaw_left\": -0.2,\n        \"r1_tip_up\": 0.95,\n        \"r1_tip_outward\": 0.45,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 1.48,\n      \"modes\": {\n        \"trunk_left\": 0.36,\n        \"trunk_lower\": 0.32,\n        \"trunk_yaw_left\": -0.32,\n        \"r1_tip_up\": 0.93,\n        \"r1_tip_outward\": 0.42,\n        \"r1_tip_forward\": 0.65\n      }\n    },\n    {\n      \"t\": 2.07,\n      \"modes\": {\n        \"trunk_left\": 0.43,\n        \"trunk_lower\": 0.37,\n        \"trunk_yaw_left\": 0.1,\n        \"r1_tip_up\": 1,\n        \"r1_tip_outward\": 0.4,\n        \"r1_tip_forward\": -0.62\n      }\n    },\n    {\n      \"t\": 2.62,\n      \"modes\": {\n        \"trunk_left\": 0.35,\n        \"trunk_lower\": 0.3,\n        \"trunk_yaw_left\": -0.3,\n        \"r1_tip_up\": 0.94,\n        \"r1_tip_outward\": 0.45,\n        \"r1_tip_forward\": 0.7\n      }\n    },\n    {\n      \"t\": 3.25,\n      \"modes\": {\n        \"trunk_left\": 0.42,\n        \"trunk_lower\": 0.36,\n        \"trunk_yaw_left\": 0.08,\n        \"r1_tip_up\": 0.98,\n        \"r1_tip_outward\": 0.41,\n        \"r1_tip_forward\": -0.68\n      }\n    },\n    {\n      \"t\": 3.78,\n      \"modes\": {\n        \"trunk_left\": 0.36,\n        \"trunk_lower\": 0.31,\n        \"trunk_yaw_left\": -0.25,\n        \"r1_tip_up\": 0.94,\n        \"r1_tip_outward\": 0.43,\n        \"r1_tip_forward\": 0.58\n      }\n    },\n    {\n      \"t\": 4.3,\n      \"modes\": {\n        \"trunk_left\": 0.4,\n        \"trunk_lower\": 0.34,\n        \"trunk_yaw_left\": 0.04,\n        \"r1_tip_up\": 0.96,\n        \"r1_tip_outward\": 0.4,\n        \"r1_tip_forward\": -0.48\n      }\n    },\n    {\n      \"t\": 4.65,\n      \"modes\": {\n        \"trunk_left\": 0.35,\n        \"trunk_lower\": 0.3,\n        \"trunk_yaw_left\": -0.1,\n        \"r1_tip_up\": 0.88,\n        \"r1_tip_outward\": 0.35,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 5.35,\n      \"modes\": {\n        \"trunk_left\": 0.25,\n        \"trunk_lower\": 0.18,\n        \"trunk_yaw_left\": 0,\n        \"r1_tip_up\": 0,\n        \"r1_tip_outward\": 0,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 5.45,\n      \"stance\": [\"l0\", \"r0\", \"l1\", \"r1\", \"l2\", \"r2\"]\n    },\n    {\n      \"t\": 5.8,\n      \"modes\": {\n        \"trunk_left\": 0,\n        \"trunk_lower\": 0,\n        \"trunk_yaw_left\": 0\n      }\n    }\n  ]\n}"
+  },
+  {
+   "round": 1,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0014
+    },
+    "ground": {
+     "pass": false,
+     "worst_m": 0.0082,
+     "body_frame": [
+      "r2_foot",
+      22
+     ],
+     "limit_m": 0.0014
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0068
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.0344,
+     "limit_rad": 0.339
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0137
+    },
+    "foot_slip": {
+     "pass": false,
+     "worst_slide_m": 0.0408,
+     "worst_off_ground_m": 0.0377,
+     "limit_m": 0.0027
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.0137
+    },
+    "pass": false,
+    "failed": [
+     "ground",
+     "foot_slip"
+    ]
+   },
+   "program": {
+    "duration_s": 6.2,
+    "keyframes": [
+     {
+      "t": 0,
+      "modes": {
+       "trunk_left": 0,
+       "trunk_lower": 0,
+       "trunk_yaw_left": 0,
+       "r1_tip_up": 0,
+       "r1_tip_outward": 0,
+       "r1_tip_forward": 0
+      },
+      "stance": [
+       "l0",
+       "r0",
+       "l1",
+       "r1",
+       "l2",
+       "r2"
+      ]
+     },
+     {
+      "t": 0.45,
+      "modes": {
+       "trunk_left": 0.1,
+       "trunk_lower": 0.12
+      }
+     },
+     {
+      "t": 0.55,
+      "stance": [
+       "l0",
+       "r0",
+       "l1",
+       "l2",
+       "r2"
+      ]
+     },
+     {
+      "t": 1.25,
+      "modes": {
+       "trunk_left": 0.12,
+       "trunk_lower": 0.18,
+       "trunk_yaw_left": -0.04,
+       "r1_tip_up": 0.95,
+       "r1_tip_outward": 0.22,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 1.72,
+      "modes": {
+       "trunk_left": 0.1,
+       "trunk_lower": 0.17,
+       "trunk_yaw_left": -0.08,
+       "r1_tip_up": 0.95,
+       "r1_tip_outward": 0.22,
+       "r1_tip_forward": 0.52
+      }
+     },
+     {
+      "t": 2.32,
+      "modes": {
+       "trunk_left": 0.13,
+       "trunk_lower": 0.19,
+       "trunk_yaw_left": 0.04,
+       "r1_tip_up": 0.95,
+       "r1_tip_outward": 0.2,
+       "r1_tip_forward": -0.5
+      }
+     },
+     {
+      "t": 2.9,
+      "modes": {
+       "trunk_left": 0.1,
+       "trunk_lower": 0.17,
+       "trunk_yaw_left": -0.07,
+       "r1_tip_up": 0.95,
+       "r1_tip_outward": 0.22,
+       "r1_tip_forward": 0.55
+      }
+     },
+     {
+      "t": 3.54,
+      "modes": {
+       "trunk_left": 0.13,
+       "trunk_lower": 0.19,
+       "trunk_yaw_left": 0.04,
+       "r1_tip_up": 0.95,
+       "r1_tip_outward": 0.2,
+       "r1_tip_forward": -0.53
+      }
+     },
+     {
+      "t": 4.08,
+      "modes": {
+       "trunk_left": 0.1,
+       "trunk_lower": 0.17,
+       "trunk_yaw_left": -0.06,
+       "r1_tip_up": 0.95,
+       "r1_tip_outward": 0.22,
+       "r1_tip_forward": 0.48
+      }
+     },
+     {
+      "t": 4.65,
+      "modes": {
+       "trunk_left": 0.12,
+       "trunk_lower": 0.18,
+       "trunk_yaw_left": 0.03,
+       "r1_tip_up": 0.95,
+       "r1_tip_outward": 0.2,
+       "r1_tip_forward": -0.43
+      }
+     },
+     {
+      "t": 5.05,
+      "modes": {
+       "trunk_left": 0.12,
+       "trunk_lower": 0.18,
+       "trunk_yaw_left": 0,
+       "r1_tip_up": 0.9,
+       "r1_tip_outward": 0.2,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 5.75,
+      "modes": {
+       "trunk_left": 0.1,
+       "trunk_lower": 0.12,
+       "r1_tip_up": 0,
+       "r1_tip_outward": 0,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 5.85,
+      "stance": [
+       "l0",
+       "r0",
+       "l1",
+       "r1",
+       "l2",
+       "r2"
+      ]
+     },
+     {
+      "t": 6.2,
+      "modes": {
+       "trunk_left": 0,
+       "trunk_lower": 0,
+       "trunk_yaw_left": 0
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 6.2,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"modes\": {\n        \"trunk_left\": 0,\n        \"trunk_lower\": 0,\n        \"trunk_yaw_left\": 0,\n        \"r1_tip_up\": 0,\n        \"r1_tip_outward\": 0,\n        \"r1_tip_forward\": 0\n      },\n      \"stance\": [\"l0\", \"r0\", \"l1\", \"r1\", \"l2\", \"r2\"]\n    },\n    {\n      \"t\": 0.45,\n      \"modes\": {\n        \"trunk_left\": 0.1,\n        \"trunk_lower\": 0.12\n      }\n    },\n    {\n      \"t\": 0.55,\n      \"stance\": [\"l0\", \"r0\", \"l1\", \"l2\", \"r2\"]\n    },\n    {\n      \"t\": 1.25,\n      \"modes\": {\n        \"trunk_left\": 0.12,\n        \"trunk_lower\": 0.18,\n        \"trunk_yaw_left\": -0.04,\n        \"r1_tip_up\": 0.95,\n        \"r1_tip_outward\": 0.22,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 1.72,\n      \"modes\": {\n        \"trunk_left\": 0.1,\n        \"trunk_lower\": 0.17,\n        \"trunk_yaw_left\": -0.08,\n        \"r1_tip_up\": 0.95,\n        \"r1_tip_outward\": 0.22,\n        \"r1_tip_forward\": 0.52\n      }\n    },\n    {\n      \"t\": 2.32,\n      \"modes\": {\n        \"trunk_left\": 0.13,\n        \"trunk_lower\": 0.19,\n        \"trunk_yaw_left\": 0.04,\n        \"r1_tip_up\": 0.95,\n        \"r1_tip_outward\": 0.2,\n        \"r1_tip_forward\": -0.5\n      }\n    },\n    {\n      \"t\": 2.9,\n      \"modes\": {\n        \"trunk_left\": 0.1,\n        \"trunk_lower\": 0.17,\n        \"trunk_yaw_left\": -0.07,\n        \"r1_tip_up\": 0.95,\n        \"r1_tip_outward\": 0.22,\n        \"r1_tip_forward\": 0.55\n      }\n    },\n    {\n      \"t\": 3.54,\n      \"modes\": {\n        \"trunk_left\": 0.13,\n        \"trunk_lower\": 0.19,\n        \"trunk_yaw_left\": 0.04,\n        \"r1_tip_up\": 0.95,\n        \"r1_tip_outward\": 0.2,\n        \"r1_tip_forward\": -0.53\n      }\n    },\n    {\n      \"t\": 4.08,\n      \"modes\": {\n        \"trunk_left\": 0.1,\n        \"trunk_lower\": 0.17,\n        \"trunk_yaw_left\": -0.06,\n        \"r1_tip_up\": 0.95,\n        \"r1_tip_outward\": 0.22,\n        \"r1_tip_forward\": 0.48\n      }\n    },\n    {\n      \"t\": 4.65,\n      \"modes\": {\n        \"trunk_left\": 0.12,\n        \"trunk_lower\": 0.18,\n        \"trunk_yaw_left\": 0.03,\n        \"r1_tip_up\": 0.95,\n        \"r1_tip_outward\": 0.2,\n        \"r1_tip_forward\": -0.43\n      }\n    },\n    {\n      \"t\": 5.05,\n      \"modes\": {\n        \"trunk_left\": 0.12,\n        \"trunk_lower\": 0.18,\n        \"trunk_yaw_left\": 0,\n        \"r1_tip_up\": 0.9,\n        \"r1_tip_outward\": 0.2,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 5.75,\n      \"modes\": {\n        \"trunk_left\": 0.1,\n        \"trunk_lower\": 0.12,\n        \"r1_tip_up\": 0,\n        \"r1_tip_outward\": 0,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 5.85,\n      \"stance\": [\"l0\", \"r0\", \"l1\", \"r1\", \"l2\", \"r2\"]\n    },\n    {\n      \"t\": 6.2,\n      \"modes\": {\n        \"trunk_left\": 0,\n        \"trunk_lower\": 0,\n        \"trunk_yaw_left\": 0\n      }\n    }\n  ]\n}"
+  },
+  {
+   "round": 2,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0014
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0,
+     "body_frame": [
+      "l0_foot",
+      0
+     ],
+     "limit_m": 0.0014
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0068
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.0354,
+     "limit_rad": 0.339
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.0137
+    },
+    "foot_slip": {
+     "pass": true,
+     "worst_slide_m": 0.0,
+     "worst_off_ground_m": 0.0,
+     "limit_m": 0.0027
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.0137
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 5.8,
+    "keyframes": [
+     {
+      "t": 0,
+      "stance": [
+       "l0",
+       "r0",
+       "l1",
+       "l2",
+       "r2"
+      ],
+      "modes": {
+       "r1_tip_up": 0,
+       "r1_tip_outward": 0,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 0.4,
+      "modes": {
+       "r1_tip_up": 0.45,
+       "r1_tip_outward": 0.1,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 0.95,
+      "modes": {
+       "r1_tip_up": 1,
+       "r1_tip_outward": 0.25,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 1.42,
+      "modes": {
+       "r1_tip_up": 0.98,
+       "r1_tip_outward": 0.23,
+       "r1_tip_forward": 0.55
+      }
+     },
+     {
+      "t": 2.02,
+      "modes": {
+       "r1_tip_up": 1,
+       "r1_tip_outward": 0.2,
+       "r1_tip_forward": -0.52
+      }
+     },
+     {
+      "t": 2.58,
+      "modes": {
+       "r1_tip_up": 0.98,
+       "r1_tip_outward": 0.24,
+       "r1_tip_forward": 0.58
+      }
+     },
+     {
+      "t": 3.22,
+      "modes": {
+       "r1_tip_up": 1,
+       "r1_tip_outward": 0.2,
+       "r1_tip_forward": -0.55
+      }
+     },
+     {
+      "t": 3.75,
+      "modes": {
+       "r1_tip_up": 0.98,
+       "r1_tip_outward": 0.23,
+       "r1_tip_forward": 0.5
+      }
+     },
+     {
+      "t": 4.32,
+      "modes": {
+       "r1_tip_up": 1,
+       "r1_tip_outward": 0.2,
+       "r1_tip_forward": -0.45
+      }
+     },
+     {
+      "t": 4.72,
+      "modes": {
+       "r1_tip_up": 0.95,
+       "r1_tip_outward": 0.2,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 5.2,
+      "modes": {
+       "r1_tip_up": 0.45,
+       "r1_tip_outward": 0.08,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 5.65,
+      "modes": {
+       "r1_tip_up": 0,
+       "r1_tip_outward": 0,
+       "r1_tip_forward": 0
+      }
+     },
+     {
+      "t": 5.8,
+      "stance": [
+       "l0",
+       "r0",
+       "l1",
+       "r1",
+       "l2",
+       "r2"
+      ],
+      "modes": {
+       "r1_tip_up": 0,
+       "r1_tip_outward": 0,
+       "r1_tip_forward": 0
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 5.8,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"stance\": [\"l0\", \"r0\", \"l1\", \"l2\", \"r2\"],\n      \"modes\": {\n        \"r1_tip_up\": 0,\n        \"r1_tip_outward\": 0,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 0.4,\n      \"modes\": {\n        \"r1_tip_up\": 0.45,\n        \"r1_tip_outward\": 0.1,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 0.95,\n      \"modes\": {\n        \"r1_tip_up\": 1,\n        \"r1_tip_outward\": 0.25,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 1.42,\n      \"modes\": {\n        \"r1_tip_up\": 0.98,\n        \"r1_tip_outward\": 0.23,\n        \"r1_tip_forward\": 0.55\n      }\n    },\n    {\n      \"t\": 2.02,\n      \"modes\": {\n        \"r1_tip_up\": 1,\n        \"r1_tip_outward\": 0.2,\n        \"r1_tip_forward\": -0.52\n      }\n    },\n    {\n      \"t\": 2.58,\n      \"modes\": {\n        \"r1_tip_up\": 0.98,\n        \"r1_tip_outward\": 0.24,\n        \"r1_tip_forward\": 0.58\n      }\n    },\n    {\n      \"t\": 3.22,\n      \"modes\": {\n        \"r1_tip_up\": 1,\n        \"r1_tip_outward\": 0.2,\n        \"r1_tip_forward\": -0.55\n      }\n    },\n    {\n      \"t\": 3.75,\n      \"modes\": {\n        \"r1_tip_up\": 0.98,\n        \"r1_tip_outward\": 0.23,\n        \"r1_tip_forward\": 0.5\n      }\n    },\n    {\n      \"t\": 4.32,\n      \"modes\": {\n        \"r1_tip_up\": 1,\n        \"r1_tip_outward\": 0.2,\n        \"r1_tip_forward\": -0.45\n      }\n    },\n    {\n      \"t\": 4.72,\n      \"modes\": {\n        \"r1_tip_up\": 0.95,\n        \"r1_tip_outward\": 0.2,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 5.2,\n      \"modes\": {\n        \"r1_tip_up\": 0.45,\n        \"r1_tip_outward\": 0.08,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 5.65,\n      \"modes\": {\n        \"r1_tip_up\": 0,\n        \"r1_tip_outward\": 0,\n        \"r1_tip_forward\": 0\n      }\n    },\n    {\n      \"t\": 5.8,\n      \"stance\": [\"l0\", \"r0\", \"l1\", \"r1\", \"l2\", \"r2\"],\n      \"modes\": {\n        \"r1_tip_up\": 0,\n        \"r1_tip_outward\": 0,\n        \"r1_tip_forward\": 0\n      }\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [
+  "The program compiled, but the motion failed these checks:\n- foot_slip: a tip in stance slid 0.0061 m or left the floor by 0.0 m (limit 0.0027 m): the base moved too far from the planted tips\n- foot_slip: worst on tip r0 at t=1.48s\nNumbers: {\"foot_slip\":{\"worst_slide_m\":0.0061,\"worst_off_ground_m\":0.0,\"limit_m\":0.0027}}\nWrite the whole program again so that every check passes, still doing what was asked. JSON only.",
+  "The program compiled, but the motion failed these checks:\n- ground: a part of the body went 0.0082 m into the floor or the table (limit 0.0014 m): ('r2_foot', 22) (body, frame)\n- foot_slip: a tip in stance slid 0.0408 m or left the floor by 0.0377 m (limit 0.0027 m): the base moved too far from the planted tips\n- ground: worst at t=0.44s (r2_foot)\n- foot_slip: worst on tip r1 at t=0.44s\nNumbers: {\"ground\":{\"worst_m\":0.0082,\"body_frame\":[\"r2_foot\",22],\"limit_m\":0.0014},\"foot_slip\":{\"worst_slide_m\":0.0408,\"worst_off_ground_m\":0.0377,\"limit_m\":0.0027}}\nWrite the whole program again so that every check passes, still doing what was asked. JSON only."
+ ],
+ "calls": 3,
+ "call_log": [
+  {
+   "prompt_tokens": 11410,
+   "cached_tokens": 0,
+   "completion_tokens": 1332,
+   "reasoning_tokens": 199,
+   "cost_usd": 0.01807,
+   "service_tier": "flex",
+   "seconds": 29.58
+  },
+  {
+   "prompt_tokens": 12670,
+   "cached_tokens": 11407,
+   "completion_tokens": 1154,
+   "reasoning_tokens": 32,
+   "cost_usd": 0.007603,
+   "service_tier": "flex",
+   "seconds": 22.08
+  },
+  {
+   "prompt_tokens": 14011,
+   "cached_tokens": 12667,
+   "completion_tokens": 844,
+   "reasoning_tokens": 42,
+   "cost_usd": 0.006197,
+   "service_tier": "flex",
+   "seconds": 15.92
+  }
+ ],
+ "cost_usd": 0.031871,
+ "seconds": 74.7,
+ "at": "2026-11-12T02:42:17",
+ "predicate": {
+  "skill": "wave",
+  "applicable": true,
+  "pass": false,
+  "tip": "r1_foot_tip",
+  "raise_L": 0.6763,
+  "raised_frame": 9,
+  "half_swings": 0,
+  "swing_amp_reach": 0.0925,
+  "swing_amp_L": 0.191,
+  "limb_reach_m": 0.2818
+ },
+ "valid_and_semantic": false,
+ "program": {
+  "duration_s": 5.8,
+  "keyframes": [
+   {
+    "t": 0,
+    "stance": [
+     "l0",
+     "r0",
+     "l1",
+     "l2",
+     "r2"
+    ],
+    "modes": {
+     "r1_tip_up": 0,
+     "r1_tip_outward": 0,
+     "r1_tip_forward": 0
+    }
+   },
+   {
+    "t": 0.4,
+    "modes": {
+     "r1_tip_up": 0.45,
+     "r1_tip_outward": 0.1,
+     "r1_tip_forward": 0
+    }
+   },
+   {
+    "t": 0.95,
+    "modes": {
+     "r1_tip_up": 1,
+     "r1_tip_outward": 0.25,
+     "r1_tip_forward": 0
+    }
+   },
+   {
+    "t": 1.42,
+    "modes": {
+     "r1_tip_up": 0.98,
+     "r1_tip_outward": 0.23,
+     "r1_tip_forward": 0.55
+    }
+   },
+   {
+    "t": 2.02,
+    "modes": {
+     "r1_tip_up": 1,
+     "r1_tip_outward": 0.2,
+     "r1_tip_forward": -0.52
+    }
+   },
+   {
+    "t": 2.58,
+    "modes": {
+     "r1_tip_up": 0.98,
+     "r1_tip_outward": 0.24,
+     "r1_tip_forward": 0.58
+    }
+   },
+   {
+    "t": 3.22,
+    "modes": {
+     "r1_tip_up": 1,
+     "r1_tip_outward": 0.2,
+     "r1_tip_forward": -0.55
+    }
+   },
+   {
+    "t": 3.75,
+    "modes": {
+     "r1_tip_up": 0.98,
+     "r1_tip_outward": 0.23,
+     "r1_tip_forward": 0.5
+    }
+   },
+   {
+    "t": 4.32,
+    "modes": {
+     "r1_tip_up": 1,
+     "r1_tip_outward": 0.2,
+     "r1_tip_forward": -0.45
+    }
+   },
+   {
+    "t": 4.72,
+    "modes": {
+     "r1_tip_up": 0.95,
+     "r1_tip_outward": 0.2,
+     "r1_tip_forward": 0
+    }
+   },
+   {
+    "t": 5.2,
+    "modes": {
+     "r1_tip_up": 0.45,
+     "r1_tip_outward": 0.08,
+     "r1_tip_forward": 0
+    }
+   },
+   {
+    "t": 5.65,
+    "modes": {
+     "r1_tip_up": 0,
+     "r1_tip_outward": 0,
+     "r1_tip_forward": 0
+    }
+   },
+   {
+    "t": 5.8,
+    "stance": [
+     "l0",
+     "r0",
+     "l1",
+     "r1",
+     "l2",
+     "r2"
+    ],
+    "modes": {
+     "r1_tip_up": 0,
+     "r1_tip_outward": 0,
+     "r1_tip_forward": 0
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0014
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "l0_foot",
+    0
+   ],
+   "limit_m": 0.0014
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0068
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0354,
+   "limit_rad": 0.339
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0137
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0027
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0137
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": 1,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.339,
+   "start_joints_moved_inside_range": [],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0,
+   "gait_cmd_scale_min": 1.0,
+   "com_shift_max_m": 0.0
+  },
+  "notes": [],
+  "gaits": []
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/v3_hexapod_s3101/clips/wave_P_v1.npz"
+}

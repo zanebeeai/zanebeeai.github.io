@@ -1,0 +1,395 @@
+{
+ "clip_id": "anybotics_anymal_c__balance__0201022",
+ "body": "anybotics_anymal_c",
+ "kind": "quadruped",
+ "source": "balance",
+ "seed": 201022,
+ "attempt_index": 22,
+ "skill": null,
+ "arm": "balance",
+ "compiler": "compile_program/J",
+ "variant": "sway",
+ "params": {
+  "amplitude": 1.0,
+  "ik_miss_m": [
+   0.0,
+   0.0
+  ],
+  "subsets": [
+   "all_but_RF_SHANK_tip",
+   "all_but_LH_SHANK_tip"
+  ]
+ },
+ "program": {
+  "duration_s": 6.69,
+  "arm": "J",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 0.98,
+    "frame": 49,
+    "stance": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 1.58,
+    "frame": 79,
+    "joints": {
+     "RF_HAA": 1.2069401912435235e-06,
+     "RF_HFE": 0.02893061165654696,
+     "RF_KFE": -0.060102962547686746
+    },
+    "dz_L": -0.021,
+    "rpy": [
+     0.0,
+     0.1466076571675237,
+     0.0
+    ],
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 2.75,
+    "frame": 138,
+    "joints": {
+     "RF_HAA": 1.2069401912435235e-06,
+     "RF_HFE": 0.02893061165654696,
+     "RF_KFE": -0.060102962547686746
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 3.35,
+    "frame": 168,
+    "joints": {
+     "RF_HAA": 0.0,
+     "RF_HFE": 0.0,
+     "RF_KFE": 0.0
+    },
+    "dz_L": 0.0,
+    "rpy": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stance": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 3.8,
+    "frame": 190,
+    "stance": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 4.4,
+    "frame": 220,
+    "joints": {
+     "LH_HAA": -1.2778274312693812e-06,
+     "LH_HFE": -0.03032471087004007,
+     "LH_KFE": 0.06089027848808203
+    },
+    "stance": [
+     0,
+     1,
+     3
+    ]
+   },
+   {
+    "t": 5.49,
+    "frame": 274,
+    "joints": {
+     "LH_HAA": -1.2778274312693812e-06,
+     "LH_HFE": -0.03032471087004007,
+     "LH_KFE": 0.06089027848808203
+    },
+    "stance": [
+     0,
+     1,
+     3
+    ]
+   },
+   {
+    "t": 6.09,
+    "frame": 304,
+    "joints": {
+     "LH_HAA": 0.0,
+     "LH_HFE": 0.0,
+     "LH_KFE": 0.0
+    },
+    "stance": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 6.69,
+    "frame": 334
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 6.69,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 0.98,
+    "stance": [
+     "LF_SHANK_tip",
+     "RF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ]
+   },
+   {
+    "t": 1.58,
+    "stance": [
+     "LF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ],
+    "joints": {
+     "RF_HAA": 1.2069401912435235e-06,
+     "RF_HFE": 0.02893061165654696,
+     "RF_KFE": -0.060102962547686746
+    },
+    "base": {
+     "dz_L": -0.021,
+     "rpy_deg": [
+      0.0,
+      8.4,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 2.75,
+    "stance": [
+     "LF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ],
+    "joints": {
+     "RF_HAA": 1.2069401912435235e-06,
+     "RF_HFE": 0.02893061165654696,
+     "RF_KFE": -0.060102962547686746
+    }
+   },
+   {
+    "t": 3.35,
+    "stance": [
+     "LF_SHANK_tip",
+     "RF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ],
+    "joints": {
+     "RF_HAA": 0.0,
+     "RF_HFE": 0.0,
+     "RF_KFE": 0.0
+    },
+    "base": {
+     "dz_L": 0.0,
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 3.8,
+    "stance": [
+     "LF_SHANK_tip",
+     "RF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ]
+   },
+   {
+    "t": 4.4,
+    "stance": [
+     "LF_SHANK_tip",
+     "RF_SHANK_tip",
+     "RH_SHANK_tip"
+    ],
+    "joints": {
+     "LH_HAA": -1.2778274312693812e-06,
+     "LH_HFE": -0.03032471087004007,
+     "LH_KFE": 0.06089027848808203
+    }
+   },
+   {
+    "t": 5.49,
+    "stance": [
+     "LF_SHANK_tip",
+     "RF_SHANK_tip",
+     "RH_SHANK_tip"
+    ],
+    "joints": {
+     "LH_HAA": -1.2778274312693812e-06,
+     "LH_HFE": -0.03032471087004007,
+     "LH_KFE": 0.06089027848808203
+    }
+   },
+   {
+    "t": 6.09,
+    "stance": [
+     "LF_SHANK_tip",
+     "RF_SHANK_tip",
+     "LH_SHANK_tip",
+     "RH_SHANK_tip"
+    ],
+    "joints": {
+     "LH_HAA": 0.0,
+     "LH_HFE": 0.0,
+     "LH_KFE": 0.0
+    }
+   },
+   {
+    "t": 6.69
+   }
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0057
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0002,
+   "body_frame": [
+    "RF_SHANK",
+    78
+   ],
+   "limit_m": 0.0057
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0283
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0292,
+   "limit_rad": 0.1666
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0566
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0001,
+   "worst_off_ground_m": 0.0003,
+   "limit_m": 0.0113
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0566
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": true,
+  "reach_forward": false,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": false,
+  "tap_twice": false,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 6.68,
+ "n_frames": 335,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.1666,
+  "start_joints_moved_inside_range": [],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0,
+  "gait_cmd_scale_min": 1.0,
+  "com_shift_max_m": 0.0388
+ },
+ "compile_notes": [],
+ "tips": [
+  "LF_SHANK_tip",
+  "RF_SHANK_tip",
+  "LH_SHANK_tip",
+  "RH_SHANK_tip"
+ ],
+ "contact_edges": [
+  [
+   "LF_SHANK_foot",
+   "floor"
+  ],
+  [
+   "RF_SHANK_foot",
+   "floor"
+  ],
+  [
+   "LH_SHANK_foot",
+   "floor"
+  ],
+  [
+   "RH_SHANK_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 4.26
+}

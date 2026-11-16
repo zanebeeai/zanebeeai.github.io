@@ -1,0 +1,424 @@
+{
+ "clip_id": "boston_dynamics_spot__random__0301014",
+ "body": "boston_dynamics_spot",
+ "kind": "quadruped",
+ "source": "random",
+ "seed": 301014,
+ "attempt_index": 14,
+ "skill": null,
+ "arm": "random",
+ "compiler": "compile_program/J",
+ "variant": "fr_lleg_tip:lifted",
+ "params": {
+  "amplitude": 0.42,
+  "key_s": 0.463,
+  "wander": false,
+  "ik_miss_m": [
+   0.0
+  ]
+ },
+ "program": {
+  "duration_s": 5.75,
+  "arm": "J",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 1.01,
+    "frame": 50,
+    "stance": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 1.61,
+    "frame": 80,
+    "joints": {
+     "fr_hx": 0.072,
+     "fr_hy": -0.2422,
+     "fr_kn": 0.0675
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 2.07,
+    "frame": 103,
+    "joints": {
+     "fr_hx": -0.0444,
+     "fr_hy": -0.2183,
+     "fr_kn": -0.0232
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 2.53,
+    "frame": 126,
+    "joints": {
+     "fr_hx": 0.0778,
+     "fr_hy": -0.0315,
+     "fr_kn": 0.3014
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 2.99,
+    "frame": 150,
+    "joints": {
+     "fr_hx": 0.339,
+     "fr_hy": 0.484,
+     "fr_kn": 0.1425
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 3.45,
+    "frame": 172,
+    "joints": {
+     "fr_hx": -0.0486,
+     "fr_hy": -0.0458,
+     "fr_kn": 0.263
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 3.91,
+    "frame": 196,
+    "joints": {
+     "fr_hx": 0.0575,
+     "fr_hy": -0.1136,
+     "fr_kn": 0.1659
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 4.37,
+    "frame": 218,
+    "joints": {
+     "fr_hx": 0.2631,
+     "fr_hy": -0.0039,
+     "fr_kn": 0.0247
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 4.83,
+    "frame": 242,
+    "joints": {
+     "fr_hx": -0.2795,
+     "fr_hy": -0.0564,
+     "fr_kn": -0.5051
+    },
+    "stance": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 5.43,
+    "frame": 272,
+    "joints": {
+     "fr_hx": 0.0,
+     "fr_hy": 0.0,
+     "fr_kn": 0.0
+    },
+    "stance": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "t": 5.75,
+    "frame": 288
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 5.75,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 1.01,
+    "stance": [
+     "fl_lleg_tip",
+     "fr_lleg_tip",
+     "hl_lleg_tip",
+     "hr_lleg_tip"
+    ]
+   },
+   {
+    "t": 1.61,
+    "joints": {
+     "fr_hx": 0.072,
+     "fr_hy": -0.2422,
+     "fr_kn": 0.0675
+    },
+    "stance": [
+     "fl_lleg_tip",
+     "hl_lleg_tip",
+     "hr_lleg_tip"
+    ]
+   },
+   {
+    "t": 2.07,
+    "joints": {
+     "fr_hx": -0.0444,
+     "fr_hy": -0.2183,
+     "fr_kn": -0.0232
+    },
+    "stance": [
+     "fl_lleg_tip",
+     "hl_lleg_tip",
+     "hr_lleg_tip"
+    ]
+   },
+   {
+    "t": 2.53,
+    "joints": {
+     "fr_hx": 0.0778,
+     "fr_hy": -0.0315,
+     "fr_kn": 0.3014
+    },
+    "stance": [
+     "fl_lleg_tip",
+     "hl_lleg_tip",
+     "hr_lleg_tip"
+    ]
+   },
+   {
+    "t": 2.99,
+    "joints": {
+     "fr_hx": 0.339,
+     "fr_hy": 0.484,
+     "fr_kn": 0.1425
+    },
+    "stance": [
+     "fl_lleg_tip",
+     "hl_lleg_tip",
+     "hr_lleg_tip"
+    ]
+   },
+   {
+    "t": 3.45,
+    "joints": {
+     "fr_hx": -0.0486,
+     "fr_hy": -0.0458,
+     "fr_kn": 0.263
+    },
+    "stance": [
+     "fl_lleg_tip",
+     "hl_lleg_tip",
+     "hr_lleg_tip"
+    ]
+   },
+   {
+    "t": 3.91,
+    "joints": {
+     "fr_hx": 0.0575,
+     "fr_hy": -0.1136,
+     "fr_kn": 0.1659
+    },
+    "stance": [
+     "fl_lleg_tip",
+     "hl_lleg_tip",
+     "hr_lleg_tip"
+    ]
+   },
+   {
+    "t": 4.37,
+    "joints": {
+     "fr_hx": 0.2631,
+     "fr_hy": -0.0039,
+     "fr_kn": 0.0247
+    },
+    "stance": [
+     "fl_lleg_tip",
+     "hl_lleg_tip",
+     "hr_lleg_tip"
+    ]
+   },
+   {
+    "t": 4.83,
+    "joints": {
+     "fr_hx": -0.2795,
+     "fr_hy": -0.0564,
+     "fr_kn": -0.5051
+    },
+    "stance": [
+     "fl_lleg_tip",
+     "hl_lleg_tip",
+     "hr_lleg_tip"
+    ]
+   },
+   {
+    "t": 5.43,
+    "joints": {
+     "fr_hx": 0.0,
+     "fr_hy": 0.0,
+     "fr_kn": 0.0
+    },
+    "stance": [
+     "fl_lleg_tip",
+     "fr_lleg_tip",
+     "hl_lleg_tip",
+     "hr_lleg_tip"
+    ]
+   },
+   {
+    "t": 5.75
+   }
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0044
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "fr_lleg",
+    163
+   ],
+   "limit_m": 0.0044
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0222
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0387,
+   "limit_rad": 0.1882
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0443
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0089
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0443
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": true,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": false,
+  "tap_twice": true,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 5.76,
+ "n_frames": 289,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.1882,
+  "start_joints_moved_inside_range": [],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0,
+  "gait_cmd_scale_min": 1.0,
+  "com_shift_max_m": 0.0364
+ },
+ "compile_notes": [],
+ "tips": [
+  "fl_lleg_tip",
+  "fr_lleg_tip",
+  "hl_lleg_tip",
+  "hr_lleg_tip"
+ ],
+ "contact_edges": [
+  [
+   "fl_lleg_foot",
+   "floor"
+  ],
+  [
+   "fr_lleg_foot",
+   "floor"
+  ],
+  [
+   "hl_lleg_foot",
+   "floor"
+  ],
+  [
+   "hr_lleg_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 2.75
+}

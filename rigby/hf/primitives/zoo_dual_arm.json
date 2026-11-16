@@ -1,0 +1,1501 @@
+{
+ "body": "zoo_dual_arm",
+ "kind": "dual_arm",
+ "free_base": false,
+ "L": 0.7782,
+ "T": 0.28165,
+ "modes": [
+  {
+   "name": "left_tips_forward",
+   "part": "left arm",
+   "plus": "Moves both tips forward and somewhat downward.",
+   "minus": "Moves both tips backward and somewhat downward.",
+   "toward": {
+    "left_joint_1": 0.4,
+    "left_joint_2": -0.12,
+    "left_joint_4": -0.12
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.445,
+       -0.075,
+       -0.178
+      ],
+      "left_finger_right_tip": [
+       -0.438,
+       -0.089,
+       -0.21
+      ]
+     },
+     "clear": {
+      "self": 0.0528,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.635,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.2
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.247,
+       -0.018,
+       -0.043
+      ],
+      "left_finger_right_tip": [
+       -0.245,
+       -0.025,
+       -0.059
+      ]
+     },
+     "clear": {
+      "self": 0.0553,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       0.245,
+       -0.025,
+       -0.059
+      ],
+      "left_finger_right_tip": [
+       0.247,
+       -0.018,
+       -0.043
+      ]
+     },
+     "clear": {
+      "self": 0.0553,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_left_tip": [
+       0.438,
+       -0.089,
+       -0.21
+      ],
+      "left_finger_right_tip": [
+       0.445,
+       -0.075,
+       -0.178
+      ]
+     },
+     "clear": {
+      "self": 0.0528,
+      "ground": 0.0617
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.635,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.2
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "left_arm_fold",
+   "part": "left arm",
+   "plus": "Folds the elbow while counter-rotating the shoulder and wrist, lowering and retracting the tips.",
+   "minus": "Folds in the opposite direction, lowering the tips with a different fore-aft offset.",
+   "toward": {
+    "left_joint_1": -0.22,
+    "left_joint_2": 0.62,
+    "left_joint_4": -0.4
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.121,
+       -0.075,
+       -0.177
+      ],
+      "left_finger_right_tip": [
+       -0.121,
+       -0.075,
+       -0.177
+      ]
+     },
+     "clear": {
+      "self": 0.0358,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.292,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.31
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.078,
+       -0.02,
+       -0.047
+      ],
+      "left_finger_right_tip": [
+       -0.078,
+       -0.02,
+       -0.047
+      ]
+     },
+     "clear": {
+      "self": 0.0487,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       0.078,
+       -0.02,
+       -0.047
+      ],
+      "left_finger_right_tip": [
+       0.078,
+       -0.02,
+       -0.047
+      ]
+     },
+     "clear": {
+      "self": 0.0487,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_left_tip": [
+       0.121,
+       -0.075,
+       -0.177
+      ],
+      "left_finger_right_tip": [
+       0.121,
+       -0.075,
+       -0.177
+      ]
+     },
+     "clear": {
+      "self": 0.0358,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.292,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.31
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "left_tips_pitch_forward",
+   "part": "left fingertips",
+   "plus": "Pitches the fingertips forward and downward, with a small compensating elbow rotation.",
+   "minus": "Pitches the fingertips backward and downward, with the opposite elbow rotation.",
+   "toward": {
+    "left_joint_2": -0.046,
+    "left_joint_4": 0.65
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.088,
+       -0.017,
+       -0.041
+      ],
+      "left_finger_right_tip": [
+       -0.0,
+       -0.05,
+       -0.118
+      ]
+     },
+     "clear": {
+      "self": 0.0123,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.165,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.053,
+       0.002,
+       0.005
+      ],
+      "left_finger_right_tip": [
+       -0.027,
+       -0.022,
+       -0.051
+      ]
+     },
+     "clear": {
+      "self": 0.0411,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       0.027,
+       -0.022,
+       -0.051
+      ],
+      "left_finger_right_tip": [
+       0.053,
+       0.002,
+       0.005
+      ]
+     },
+     "clear": {
+      "self": 0.0411,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_left_tip": [
+       0.0,
+       -0.05,
+       -0.118
+      ],
+      "left_finger_right_tip": [
+       0.088,
+       -0.017,
+       -0.041
+      ]
+     },
+     "clear": {
+      "self": 0.0123,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.165,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 1,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "left_arm_twist_positive",
+   "part": "left arm",
+   "plus": "Twists the proximal arm positively while partly counter-twisting the distal joint; the fingertips rotate around their shared axis.",
+   "minus": "Reverses the proximal and distal twists and the fingertip rotation.",
+   "toward": {
+    "left_joint_0": 0.85,
+    "left_joint_3": -0.25
+   },
+   "name_note": "the name contains a word of a SPEC section 4 skill",
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.043,
+       -0.039,
+       0.016
+      ],
+      "left_finger_right_tip": [
+       0.043,
+       0.039,
+       -0.016
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.077,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.013,
+       -0.028,
+       0.012
+      ],
+      "left_finger_right_tip": [
+       0.013,
+       0.028,
+       -0.012
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.013,
+       0.028,
+       -0.012
+      ],
+      "left_finger_right_tip": [
+       0.013,
+       -0.028,
+       0.012
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.043,
+       0.039,
+       -0.016
+      ],
+      "left_finger_right_tip": [
+       0.043,
+       -0.039,
+       0.016
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.077,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "left_fingers_rotate_left",
+   "part": "left fingertips",
+   "plus": "Rotates the finger pair so the left finger initially moves toward positive y and negative z, and the right finger moves oppositely.",
+   "minus": "Reverses that rotation: the left finger initially moves toward negative y and positive z.",
+   "toward": {
+    "left_joint_0": 0.1,
+    "left_joint_3": 0.85
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.077,
+       -0.022,
+       0.009
+      ],
+      "left_finger_right_tip": [
+       0.077,
+       0.022,
+       -0.009
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.104,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.03,
+       -0.037,
+       0.016
+      ],
+      "left_finger_right_tip": [
+       0.03,
+       0.037,
+       -0.016
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.03,
+       0.037,
+       -0.016
+      ],
+      "left_finger_right_tip": [
+       0.03,
+       -0.037,
+       0.016
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.077,
+       0.022,
+       -0.009
+      ],
+      "left_finger_right_tip": [
+       0.077,
+       -0.022,
+       0.009
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.104,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "left_left_finger_backward",
+   "part": "left_finger_left_tip",
+   "plus": "Slides this fingertip backward along base x at home.",
+   "minus": "Slides this fingertip slightly forward toward its minimum slide position.",
+   "toward": {
+    "left_grip_left": 1.0
+   },
+   "away": {
+    "left_grip_left": -1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {},
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.0
+     }
+    },
+    "-0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.008,
+       0.0,
+       0.0
+      ],
+      "left_finger_right_tip": [
+       0.008,
+       0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0534,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.016,
+       0.0,
+       0.0
+      ],
+      "left_finger_right_tip": [
+       0.016,
+       0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.037,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.021,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving left_grip_left",
+   "kept": true
+  },
+  {
+   "name": "left_right_finger_forward",
+   "part": "left_finger_right_tip",
+   "plus": "Slides this fingertip forward along base x at home.",
+   "minus": "Slides this fingertip slightly backward toward its minimum slide position.",
+   "toward": {
+    "left_grip_right": 1.0
+   },
+   "away": {
+    "left_grip_right": -1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {},
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.0
+     }
+    },
+    "-0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.008,
+       0.0,
+       0.0
+      ],
+      "left_finger_right_tip": [
+       0.008,
+       0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0534,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "left_finger_left_tip": [
+       -0.016,
+       0.0,
+       0.0
+      ],
+      "left_finger_right_tip": [
+       0.016,
+       0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.037,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.021,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving left_grip_right",
+   "kept": true
+  },
+  {
+   "name": "right_tips_forward",
+   "part": "right arm",
+   "plus": "Moves both tips forward and somewhat downward.",
+   "minus": "Moves both tips backward and somewhat downward.",
+   "toward": {
+    "right_joint_1": 0.4,
+    "right_joint_2": -0.12,
+    "right_joint_4": -0.12
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.445,
+       0.075,
+       -0.178
+      ],
+      "right_finger_right_tip": [
+       -0.438,
+       0.089,
+       -0.21
+      ]
+     },
+     "clear": {
+      "self": 0.0528,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.635,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.2
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.247,
+       0.018,
+       -0.043
+      ],
+      "right_finger_right_tip": [
+       -0.245,
+       0.025,
+       -0.059
+      ]
+     },
+     "clear": {
+      "self": 0.0553,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       0.245,
+       0.025,
+       -0.059
+      ],
+      "right_finger_right_tip": [
+       0.247,
+       0.018,
+       -0.043
+      ]
+     },
+     "clear": {
+      "self": 0.0553,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "right_finger_left_tip": [
+       0.438,
+       0.089,
+       -0.21
+      ],
+      "right_finger_right_tip": [
+       0.445,
+       0.075,
+       -0.178
+      ]
+     },
+     "clear": {
+      "self": 0.0528,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.635,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.2
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "right_arm_fold",
+   "part": "right arm",
+   "plus": "Folds the elbow while counter-rotating the shoulder and wrist, lowering and retracting the tips.",
+   "minus": "Folds in the opposite direction, lowering the tips with a different fore-aft offset.",
+   "toward": {
+    "right_joint_1": -0.22,
+    "right_joint_2": 0.62,
+    "right_joint_4": -0.4
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.121,
+       0.075,
+       -0.177
+      ],
+      "right_finger_right_tip": [
+       -0.121,
+       0.075,
+       -0.177
+      ]
+     },
+     "clear": {
+      "self": 0.0358,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.292,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.31
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.078,
+       0.02,
+       -0.047
+      ],
+      "right_finger_right_tip": [
+       -0.078,
+       0.02,
+       -0.047
+      ]
+     },
+     "clear": {
+      "self": 0.0487,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       0.078,
+       0.02,
+       -0.047
+      ],
+      "right_finger_right_tip": [
+       0.078,
+       0.02,
+       -0.047
+      ]
+     },
+     "clear": {
+      "self": 0.0487,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "right_finger_left_tip": [
+       0.121,
+       0.075,
+       -0.177
+      ],
+      "right_finger_right_tip": [
+       0.121,
+       0.075,
+       -0.177
+      ]
+     },
+     "clear": {
+      "self": 0.0358,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.292,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.31
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "right_tips_pitch_forward",
+   "part": "right fingertips",
+   "plus": "Pitches the fingertips forward and downward, with a small compensating elbow rotation.",
+   "minus": "Pitches the fingertips backward and downward, with the opposite elbow rotation.",
+   "toward": {
+    "right_joint_2": -0.046,
+    "right_joint_4": 0.65
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.088,
+       0.017,
+       -0.041
+      ],
+      "right_finger_right_tip": [
+       -0.0,
+       0.05,
+       -0.118
+      ]
+     },
+     "clear": {
+      "self": 0.0123,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.165,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.053,
+       -0.002,
+       0.005
+      ],
+      "right_finger_right_tip": [
+       -0.027,
+       0.022,
+       -0.051
+      ]
+     },
+     "clear": {
+      "self": 0.0411,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       0.027,
+       0.022,
+       -0.051
+      ],
+      "right_finger_right_tip": [
+       0.053,
+       -0.002,
+       0.005
+      ]
+     },
+     "clear": {
+      "self": 0.0411,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "right_finger_left_tip": [
+       0.0,
+       0.05,
+       -0.118
+      ],
+      "right_finger_right_tip": [
+       0.088,
+       0.017,
+       -0.041
+      ]
+     },
+     "clear": {
+      "self": 0.0123,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.165,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 1,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "right_arm_twist_positive",
+   "part": "right arm",
+   "plus": "Twists the proximal arm positively while partly counter-twisting the distal joint; the fingertips rotate around their shared axis.",
+   "minus": "Reverses the proximal and distal twists and the fingertip rotation.",
+   "toward": {
+    "right_joint_0": 0.85,
+    "right_joint_3": -0.25
+   },
+   "name_note": "the name contains a word of a SPEC section 4 skill",
+   "cards": {
+    "-1": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.043,
+       -0.039,
+       -0.016
+      ],
+      "right_finger_right_tip": [
+       0.043,
+       0.039,
+       0.016
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.077,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.013,
+       -0.028,
+       -0.012
+      ],
+      "right_finger_right_tip": [
+       0.013,
+       0.028,
+       0.012
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.013,
+       0.028,
+       0.012
+      ],
+      "right_finger_right_tip": [
+       0.013,
+       -0.028,
+       -0.012
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.043,
+       0.039,
+       0.016
+      ],
+      "right_finger_right_tip": [
+       0.043,
+       -0.039,
+       -0.016
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.077,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "right_fingers_rotate_left",
+   "part": "right fingertips",
+   "plus": "Rotates the finger pair so the left finger initially moves toward positive y and positive z, and the right finger moves oppositely.",
+   "minus": "Reverses that rotation: the left finger initially moves toward negative y and negative z.",
+   "toward": {
+    "right_joint_0": 0.1,
+    "right_joint_3": 0.85
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.077,
+       -0.022,
+       -0.009
+      ],
+      "right_finger_right_tip": [
+       0.077,
+       0.022,
+       0.009
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.104,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.03,
+       -0.037,
+       -0.016
+      ],
+      "right_finger_right_tip": [
+       0.03,
+       0.037,
+       0.016
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.03,
+       0.037,
+       0.016
+      ],
+      "right_finger_right_tip": [
+       0.03,
+       -0.037,
+       -0.016
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.077,
+       0.022,
+       0.009
+      ],
+      "right_finger_right_tip": [
+       0.077,
+       -0.022,
+       -0.009
+      ]
+     },
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.104,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.425
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "right_left_finger_backward",
+   "part": "right_finger_left_tip",
+   "plus": "Slides this fingertip backward along base x at home.",
+   "minus": "Slides this fingertip slightly forward toward its minimum slide position.",
+   "toward": {
+    "right_grip_left": 1.0
+   },
+   "away": {
+    "right_grip_left": -1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {},
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.0
+     }
+    },
+    "-0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.008,
+       0.0,
+       0.0
+      ],
+      "right_finger_right_tip": [
+       0.008,
+       0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0534,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.016,
+       0.0,
+       0.0
+      ],
+      "right_finger_right_tip": [
+       0.016,
+       0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.037,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.021,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving right_grip_left",
+   "kept": true
+  },
+  {
+   "name": "right_right_finger_forward",
+   "part": "right_finger_right_tip",
+   "plus": "Slides this fingertip forward along base x at home.",
+   "minus": "Slides this fingertip slightly backward toward its minimum slide position.",
+   "toward": {
+    "right_grip_right": 1.0
+   },
+   "away": {
+    "right_grip_right": -1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {},
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.0
+     }
+    },
+    "-0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.0574,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.008,
+       0.0,
+       0.0
+      ],
+      "right_finger_right_tip": [
+       0.008,
+       0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0534,
+      "ground": 0.0778
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "right_finger_left_tip": [
+       -0.016,
+       0.0,
+       0.0
+      ],
+      "right_finger_right_tip": [
+       0.016,
+       0.0,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.037,
+      "ground": 0.0778
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.021,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving right_grip_right",
+   "kept": true
+  }
+ ],
+ "gaits": [],
+ "rejected": {
+  "modes": [],
+  "gaits": []
+ },
+ "coverage": {
+  "left_finger_left_tip": 0.2354,
+  "left_finger_right_tip": 0.2451,
+  "right_finger_left_tip": 0.2327,
+  "right_finger_right_tip": 0.2419
+ },
+ "coverage_valid": {
+  "left_finger_left_tip": 0.2354,
+  "left_finger_right_tip": 0.2451,
+  "right_finger_left_tip": 0.2327,
+  "right_finger_right_tip": 0.2419
+ },
+ "coverage_ceiling": {
+  "left_finger_left_tip": 0.8882,
+  "left_finger_right_tip": 0.9033,
+  "right_finger_left_tip": 0.8855,
+  "right_finger_right_tip": 0.9089
+ },
+ "selection": [
+  {
+   "start": [
+    "left_tips_forward",
+    "left_arm_fold",
+    "left_tips_pitch_forward",
+    "left_arm_twist_positive",
+    "left_fingers_rotate_left",
+    "left_left_finger_backward",
+    "left_right_finger_forward",
+    "right_tips_forward",
+    "right_arm_fold",
+    "right_tips_pitch_forward",
+    "right_arm_twist_positive",
+    "right_fingers_rotate_left",
+    "right_left_finger_backward",
+    "right_right_finger_forward"
+   ],
+   "mean_coverage": 0.2388
+  }
+ ],
+ "counts": {
+  "modes_final": 14,
+  "modes_valid": 14,
+  "modes_usable": 14,
+  "modes_kept": 14,
+  "gaits_llm_valid": 0,
+  "gaits_llm": 0,
+  "gaits_intake_valid": 0,
+  "gaits_intake": 0,
+  "modes_proposed": 14
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "modes": 14,
+   "modes_valid": 12,
+   "modes_small": 0,
+   "gaits": 0,
+   "gaits_valid": 0
+  },
+  {
+   "round": 1,
+   "modes": 2,
+   "modes_valid": 2,
+   "modes_small": 0,
+   "gaits": 0,
+   "gaits_valid": 0
+  }
+ ],
+ "calls": 2,
+ "cost_usd": 0.018174,
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "prompt_sha": "6d1d19d0e639",
+ "description_sha": "3636c8290766",
+ "seconds": 62.9,
+ "made": "2026-11-12T02:21:25",
+ "method": "track/kin/primitives.py (see its docstring)"
+}

@@ -1,0 +1,707 @@
+{
+ "name": "franka_emika_panda",
+ "xml": "track/bodies/franka_emika_panda.xml",
+ "source_model": "humanoid/data/robots/menagerie_4d038b3/franka_emika_panda/panda.xml",
+ "source_sha256": "c5a92e6ff47e7282ea303ffe13530ffe150248a22bb4b349a9369881e52facf0",
+ "nq": 16,
+ "nv": 15,
+ "nu": 8,
+ "timestep": 0.002,
+ "free_base": false,
+ "root_body": "link0",
+ "mass_kg": 17.4519,
+ "joints": [
+  {
+   "name": "joint1",
+   "type": "hinge",
+   "body": "link1",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": [
+    -2.8973,
+    2.8973
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint2",
+   "type": "hinge",
+   "body": "link2",
+   "qposadr": 1,
+   "dofadr": 1,
+   "range": [
+    -1.7628,
+    1.7628
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint3",
+   "type": "hinge",
+   "body": "link3",
+   "qposadr": 2,
+   "dofadr": 2,
+   "range": [
+    -2.8973,
+    2.8973
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint4",
+   "type": "hinge",
+   "body": "link4",
+   "qposadr": 3,
+   "dofadr": 3,
+   "range": [
+    -3.0718,
+    -0.0698
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint5",
+   "type": "hinge",
+   "body": "link5",
+   "qposadr": 4,
+   "dofadr": 4,
+   "range": [
+    -2.8973,
+    2.8973
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint6",
+   "type": "hinge",
+   "body": "link6",
+   "qposadr": 5,
+   "dofadr": 5,
+   "range": [
+    -0.0175,
+    3.7525
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "joint7",
+   "type": "hinge",
+   "body": "link7",
+   "qposadr": 6,
+   "dofadr": 6,
+   "range": [
+    -2.8973,
+    2.8973
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "finger_joint1",
+   "type": "slide",
+   "body": "left_finger",
+   "qposadr": 7,
+   "dofadr": 7,
+   "range": [
+    0.0,
+    0.04
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "finger_joint2",
+   "type": "slide",
+   "body": "right_finger",
+   "qposadr": 8,
+   "dofadr": 8,
+   "range": [
+    0.0,
+    0.04
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "block_free",
+   "type": "free",
+   "body": "OBJ:block",
+   "qposadr": 9,
+   "dofadr": 9,
+   "range": null,
+   "limited": null,
+   "object": true
+  }
+ ],
+ "actuators": [
+  {
+   "name": "actuator1",
+   "transmission": "joint",
+   "joints": [
+    "joint1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.8973,
+    2.8973
+   ],
+   "forcerange": [
+    -87.0,
+    87.0
+   ],
+   "gain": 4500.0,
+   "bias": [
+    0.0,
+    -4500.0,
+    -450.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "actuator2",
+   "transmission": "joint",
+   "joints": [
+    "joint2"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.7628,
+    1.7628
+   ],
+   "forcerange": [
+    -87.0,
+    87.0
+   ],
+   "gain": 4500.0,
+   "bias": [
+    0.0,
+    -4500.0,
+    -450.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "actuator3",
+   "transmission": "joint",
+   "joints": [
+    "joint3"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.8973,
+    2.8973
+   ],
+   "forcerange": [
+    -87.0,
+    87.0
+   ],
+   "gain": 3500.0,
+   "bias": [
+    0.0,
+    -3500.0,
+    -350.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "actuator4",
+   "transmission": "joint",
+   "joints": [
+    "joint4"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -3.0718,
+    -0.0698
+   ],
+   "forcerange": [
+    -87.0,
+    87.0
+   ],
+   "gain": 3500.0,
+   "bias": [
+    0.0,
+    -3500.0,
+    -350.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "actuator5",
+   "transmission": "joint",
+   "joints": [
+    "joint5"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.8973,
+    2.8973
+   ],
+   "forcerange": [
+    -12.0,
+    12.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -200.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "actuator6",
+   "transmission": "joint",
+   "joints": [
+    "joint6"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.0175,
+    3.7525
+   ],
+   "forcerange": [
+    -12.0,
+    12.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -200.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "actuator7",
+   "transmission": "joint",
+   "joints": [
+    "joint7"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.8973,
+    2.8973
+   ],
+   "forcerange": [
+    -12.0,
+    12.0
+   ],
+   "gain": 2000.0,
+   "bias": [
+    0.0,
+    -2000.0,
+    -200.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  },
+  {
+   "name": "actuator8",
+   "transmission": "tendon",
+   "joints": [
+    "finger_joint1",
+    "finger_joint2"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.0,
+    255.0
+   ],
+   "forcerange": [
+    -100.0,
+    100.0
+   ],
+   "gain": 0.015686,
+   "bias": [
+    0.0,
+    -100.0,
+    -10.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C7"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  0.0,
+  0.0,
+  -1.57079,
+  0.0,
+  1.57079,
+  -0.7853,
+  0.04,
+  0.04,
+  0.5,
+  0.0,
+  0.22,
+  1.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "L": 0.9635,
+ "T": 0.31339,
+ "L_is": "reach of the tips from their limb's first joint (m)",
+ "tips": [
+  {
+   "name": "left_finger_tip",
+   "body": "left_finger",
+   "rigby_id": "T0",
+   "joints": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6",
+    "joint7",
+    "finger_joint1"
+   ],
+   "home_base_m": [
+    0.5965,
+    0.0055,
+    0.5161
+   ],
+   "home_world_m": [
+    0.5965,
+    0.0055,
+    0.5161
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.9379,
+     -0.9178,
+     -0.33
+    ],
+    "max": [
+     0.9213,
+     0.9448,
+     1.2741
+    ]
+   },
+   "reach_m": 0.9635,
+   "first_joint_anchor_base_m": [
+    0.0,
+    0.0,
+    0.333
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "joint1": 0.8037,
+      "joint2": -0.0225,
+      "joint3": 0.5945,
+      "joint4": 0.0039,
+      "joint5": 0.0027,
+      "joint6": -0.0088,
+      "joint7": -0.0006,
+      "finger_joint1": 0.0001
+     },
+     "share_of_motion": 0.516,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0323,
+      2.4182,
+      0.0246
+     ]
+    },
+    {
+     "weights": {
+      "joint1": 0.1868,
+      "joint2": 0.9555,
+      "joint3": -0.2159,
+      "joint4": -0.0621,
+      "joint5": 0.0355,
+      "joint6": 0.0216,
+      "joint7": 0.0022,
+      "finger_joint1": 0.0
+     },
+     "share_of_motion": 0.172,
+     "tip_motion_per_unit_at_home_m": [
+      0.3053,
+      -0.0283,
+      -1.0468
+     ]
+    },
+    {
+     "weights": {
+      "joint1": -0.5644,
+      "joint2": 0.2824,
+      "joint3": 0.7739,
+      "joint4": -0.0494,
+      "joint5": -0.0003,
+      "joint6": -0.0174,
+      "joint7": 0.0057,
+      "finger_joint1": 0.0003
+     },
+     "share_of_motion": 0.149,
+     "tip_motion_per_unit_at_home_m": [
+      0.071,
+      0.3611,
+      -0.3393
+     ]
+    }
+   ]
+  },
+  {
+   "name": "right_finger_tip",
+   "body": "right_finger",
+   "rigby_id": "T1",
+   "joints": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6",
+    "joint7",
+    "finger_joint2"
+   ],
+   "home_base_m": [
+    0.5125,
+    0.0055,
+    0.5161
+   ],
+   "home_world_m": [
+    0.5125,
+    0.0055,
+    0.5161
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.9233,
+     -0.9266,
+     -0.3542
+    ],
+    "max": [
+     0.9167,
+     0.9535,
+     1.2662
+    ]
+   },
+   "reach_m": 0.9626,
+   "first_joint_anchor_base_m": [
+    0.0,
+    0.0,
+    0.333
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "joint1": 0.7968,
+      "joint2": -0.0203,
+      "joint3": 0.6034,
+      "joint4": 0.0182,
+      "joint5": 0.0009,
+      "joint6": -0.0155,
+      "joint7": -0.0021,
+      "finger_joint2": -0.0001
+     },
+     "share_of_motion": 0.519,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0316,
+      2.0795,
+      0.0288
+     ]
+    },
+    {
+     "weights": {
+      "joint1": 0.0414,
+      "joint2": 0.998,
+      "joint3": -0.0197,
+      "joint4": -0.0419,
+      "joint5": -0.0142,
+      "joint6": 0.0039,
+      "joint7": 0.0016,
+      "finger_joint2": 0.0002
+     },
+     "share_of_motion": 0.169,
+     "tip_motion_per_unit_at_home_m": [
+      0.315,
+      0.0236,
+      -0.9285
+     ]
+    },
+    {
+     "weights": {
+      "joint1": -0.5974,
+      "joint2": 0.036,
+      "joint3": 0.7933,
+      "joint4": -0.1107,
+      "joint5": 0.0127,
+      "joint6": -0.0081,
+      "joint7": 0.0048,
+      "finger_joint2": -0.0007
+     },
+     "share_of_motion": 0.154,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0168,
+      0.2993,
+      -0.1045
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "left_pad": [
+   10
+  ],
+  "right_pad": [
+   11
+  ],
+  "rest_of_body": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": [
+   0
+  ],
+  "table": [
+   0
+  ],
+  "block": [
+   12
+  ]
+ },
+ "link_group_names": {
+  "left_pad": [
+   "left_finger"
+  ],
+  "right_pad": [
+   "right_finger"
+  ],
+  "rest_of_body": [
+   "link0",
+   "link1",
+   "link2",
+   "link3",
+   "link4",
+   "link5",
+   "link6",
+   "link7",
+   "hand"
+  ],
+  "floor": [
+   "world"
+  ],
+  "table": [
+   "world"
+  ],
+  "block": [
+   "OBJ:block"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ],
+  "table": [
+   "table"
+  ]
+ },
+ "contact_edges": [
+  [
+   "left_pad",
+   "block"
+  ],
+  [
+   "right_pad",
+   "block"
+  ],
+  [
+   "block",
+   "table"
+  ],
+  [
+   "rest_of_body",
+   "block"
+  ],
+  [
+   "rest_of_body",
+   "table"
+  ],
+  [
+   "block",
+   "floor"
+  ]
+ ],
+ "stance_sets": [],
+ "balance": null,
+ "gaits": [],
+ "objects": {
+  "block": {
+   "body": "OBJ:block",
+   "joint": "block_free",
+   "qposadr": 9,
+   "half_m": 0.02,
+   "mass_kg": 0.05,
+   "home_m": [
+    0.5,
+    0.0,
+    0.22
+   ]
+  },
+  "table": {
+   "geom": "table",
+   "top_z_m": 0.2,
+   "center_xy_m": [
+    0.55,
+    0.0
+   ],
+   "half_xy_m": [
+    0.25,
+    0.4
+   ]
+  },
+  "grip_site": "grip",
+  "grip_reach_m": {
+   "grip": 0.9529
+  },
+  "gripper": {
+   "joints": [
+    "finger_joint1",
+    "finger_joint2"
+   ],
+   "open_m": 0.04,
+   "closed_m": 0.0,
+   "actuator": "actuator8",
+   "ctrl_per_m": 3187.5,
+   "about": "each finger slides 0..0.04 m; the pads are 2 x finger value apart (plus pad thickness)"
+  }
+ },
+ "excluded_pairs_home_overlap": [],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: the world frame (x forward, y left, z up, metres), as for every fixed body",
+ "kind": "arm",
+ "support": [],
+ "render_model": "humanoid/data/robots/menagerie_4d038b3/franka_emika_panda/panda.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ }
+}

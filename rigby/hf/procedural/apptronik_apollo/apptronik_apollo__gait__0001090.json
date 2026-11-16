@@ -1,0 +1,221 @@
+{
+ "clip_id": "apptronik_apollo__gait__0001090",
+ "body": "apptronik_apollo",
+ "kind": "humanoid",
+ "source": "gait",
+ "seed": 1090,
+ "attempt_index": 90,
+ "skill": null,
+ "arm": "gait",
+ "compiler": "compile_program/P",
+ "variant": "alternating:slow_walk",
+ "params": {
+  "gait": "alternating",
+  "speed_level": 0,
+  "segment_s": 6.0,
+  "step_L": 0.2,
+  "swing_height_L": 0.1
+ },
+ "program": {
+  "duration_s": 7.12,
+  "arm": "P",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 0.48,
+    "frame": 24,
+    "gait": {
+     "name": "alternating",
+     "cmd": [
+      0.1,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 6.48,
+    "frame": 324
+   },
+   {
+    "t": 7.12,
+    "frame": 356
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 7.12,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 0.48,
+    "gait": {
+     "name": "alternating",
+     "cmd": [
+      0.1,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 6.48
+   },
+   {
+    "t": 7.12
+   }
+  ]
+ },
+ "library": {
+  "modes": [],
+  "gaits": [
+   {
+    "name": "alternating",
+    "cycle_s": 0.7711,
+    "duty": {
+     "l_foot_link_tip": 0.6,
+     "r_foot_link_tip": 0.6
+    },
+    "phase": {
+     "l_foot_link_tip": 0.5,
+     "r_foot_link_tip": 0.0
+    },
+    "step_L": 0.2,
+    "swing_height_L": 0.1,
+    "source": "intake",
+    "valid": true
+   }
+  ]
+ },
+ "library_sha": "861c741e32a5",
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0063,
+   "pair_frame": [
+    "base_link",
+    "l_hip_fe_link",
+    72
+   ],
+   "limit_m": 0.0093
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0008,
+   "body_frame": [
+    "r_foot_link",
+    159
+   ],
+   "limit_m": 0.0093
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0045,
+   "limit_m": 0.0467
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1232,
+   "limit_rad": 0.1297
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0153,
+   "limit_m": 0.0933
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0005,
+   "worst_off_ground_m": 0.0069,
+   "limit_m": 0.0187
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0933
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": false,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": true,
+  "tap_twice": true,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 7.12,
+ "n_frames": 357,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.1297,
+  "start_joints_moved_inside_range": [
+   "l_knee_fe",
+   "r_knee_fe"
+  ],
+  "max_projection_m": 0.0153,
+  "frames_projected_over_1mm": 0,
+  "gait_cmd_scale_min": 0.8,
+  "com_shift_max_m": 0.1696
+ },
+ "compile_notes": [],
+ "tips": [
+  "neck_pitch_link_tip",
+  "l_wrist_pitch_link_tip",
+  "r_wrist_pitch_link_tip",
+  "l_foot_link_tip",
+  "r_foot_link_tip"
+ ],
+ "contact_edges": [
+  [
+   "l_link_foot",
+   "floor"
+  ],
+  [
+   "r_link_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ],
+  [
+   "neck_pitch_link_end",
+   "floor"
+  ],
+  [
+   "l_wrist_pitch_link_end",
+   "floor"
+  ],
+  [
+   "r_wrist_pitch_link_end",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 8.22
+}

@@ -1,0 +1,1413 @@
+{
+ "name": "boston_dynamics_spot",
+ "xml": "track/bodies/boston_dynamics_spot.xml",
+ "source_model": "humanoid/data/robots/menagerie_4d038b3/boston_dynamics_spot/scene.xml",
+ "source_sha256": "043e50493185ba75c94cc0c0134488559c07558e041f44478b8ee896f53893c0",
+ "nq": 19,
+ "nv": 18,
+ "nu": 12,
+ "timestep": 0.002,
+ "free_base": true,
+ "root_body": "body",
+ "mass_kg": 50.34,
+ "joints": [
+  {
+   "name": "freejoint",
+   "type": "free",
+   "body": "body",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": null,
+   "limited": null,
+   "object": false
+  },
+  {
+   "name": "fl_hx",
+   "type": "hinge",
+   "body": "fl_hip",
+   "qposadr": 7,
+   "dofadr": 6,
+   "range": [
+    -0.7854,
+    0.7854
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fl_hy",
+   "type": "hinge",
+   "body": "fl_uleg",
+   "qposadr": 8,
+   "dofadr": 7,
+   "range": [
+    -0.89885,
+    2.29511
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fl_kn",
+   "type": "hinge",
+   "body": "fl_lleg",
+   "qposadr": 9,
+   "dofadr": 8,
+   "range": [
+    -2.7929,
+    -0.2544
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fr_hx",
+   "type": "hinge",
+   "body": "fr_hip",
+   "qposadr": 10,
+   "dofadr": 9,
+   "range": [
+    -0.7854,
+    0.7854
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fr_hy",
+   "type": "hinge",
+   "body": "fr_uleg",
+   "qposadr": 11,
+   "dofadr": 10,
+   "range": [
+    -0.89885,
+    2.24363
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fr_kn",
+   "type": "hinge",
+   "body": "fr_lleg",
+   "qposadr": 12,
+   "dofadr": 11,
+   "range": [
+    -2.7929,
+    -0.25565
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hl_hx",
+   "type": "hinge",
+   "body": "hl_hip",
+   "qposadr": 13,
+   "dofadr": 12,
+   "range": [
+    -0.7854,
+    0.7854
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hl_hy",
+   "type": "hinge",
+   "body": "hl_uleg",
+   "qposadr": 14,
+   "dofadr": 13,
+   "range": [
+    -0.89885,
+    2.29511
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hl_kn",
+   "type": "hinge",
+   "body": "hl_lleg",
+   "qposadr": 15,
+   "dofadr": 14,
+   "range": [
+    -2.7929,
+    -0.24707
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hr_hx",
+   "type": "hinge",
+   "body": "hr_hip",
+   "qposadr": 16,
+   "dofadr": 15,
+   "range": [
+    -0.7854,
+    0.7854
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hr_hy",
+   "type": "hinge",
+   "body": "hr_uleg",
+   "qposadr": 17,
+   "dofadr": 16,
+   "range": [
+    -0.89885,
+    2.29511
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hr_kn",
+   "type": "hinge",
+   "body": "hr_lleg",
+   "qposadr": 18,
+   "dofadr": 17,
+   "range": [
+    -2.7929,
+    -0.24828
+   ],
+   "limited": true,
+   "object": false
+  }
+ ],
+ "actuators": [
+  {
+   "name": "fl_hx",
+   "transmission": "joint",
+   "joints": [
+    "fl_hx"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.7854,
+    0.7854
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "fl_hy",
+   "transmission": "joint",
+   "joints": [
+    "fl_hy"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.89885,
+    2.29511
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "fl_kn",
+   "transmission": "joint",
+   "joints": [
+    "fl_kn"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.7929,
+    -0.2544
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "fr_hx",
+   "transmission": "joint",
+   "joints": [
+    "fr_hx"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.7854,
+    0.7854
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "fr_hy",
+   "transmission": "joint",
+   "joints": [
+    "fr_hy"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.89885,
+    2.24363
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "fr_kn",
+   "transmission": "joint",
+   "joints": [
+    "fr_kn"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.7929,
+    -0.25565
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "hl_hx",
+   "transmission": "joint",
+   "joints": [
+    "hl_hx"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.7854,
+    0.7854
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  },
+  {
+   "name": "hl_hy",
+   "transmission": "joint",
+   "joints": [
+    "hl_hy"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.89885,
+    2.29511
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C7"
+  },
+  {
+   "name": "hl_kn",
+   "transmission": "joint",
+   "joints": [
+    "hl_kn"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.7929,
+    -0.24707
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C8"
+  },
+  {
+   "name": "hr_hx",
+   "transmission": "joint",
+   "joints": [
+    "hr_hx"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.7854,
+    0.7854
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C9"
+  },
+  {
+   "name": "hr_hy",
+   "transmission": "joint",
+   "joints": [
+    "hr_hy"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.89885,
+    2.29511
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C10"
+  },
+  {
+   "name": "hr_kn",
+   "transmission": "joint",
+   "joints": [
+    "hr_kn"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.7929,
+    -0.24828
+   ],
+   "forcerange": [
+    0.0,
+    0.0
+   ],
+   "gain": 500.0,
+   "bias": [
+    0.0,
+    -500.0,
+    -40.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C11"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  0.0,
+  0.463458,
+  1.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  1.04,
+  -1.8,
+  0.0,
+  1.04,
+  -1.8,
+  0.0,
+  1.04,
+  -1.8,
+  0.0,
+  1.04,
+  -1.8
+ ],
+ "L": 0.44315,
+ "T": 0.21254,
+ "L_is": "standing CoM height (m)",
+ "tips": [
+  {
+   "name": "fl_lleg_tip",
+   "body": "fl_lleg",
+   "rigby_id": "T0",
+   "joints": [
+    "fl_hx",
+    "fl_hy",
+    "fl_kn"
+   ],
+   "home_base_m": [
+    0.2664,
+    0.1658,
+    -0.4275
+   ],
+   "home_world_m": [
+    0.2664,
+    0.1658,
+    0.036
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.3562,
+     -0.3035,
+     -0.6581
+    ],
+    "max": [
+     0.8981,
+     0.5663,
+     0.3074
+    ]
+   },
+   "reach_m": 0.6642,
+   "first_joint_anchor_base_m": [
+    0.2978,
+    0.055,
+    0.0
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "fl_hx": -0.0168,
+      "fl_hy": 0.9046,
+      "fl_kn": 0.426
+     },
+     "share_of_motion": 0.828,
+     "tip_motion_per_unit_at_home_m": [
+      -0.7494,
+      -0.0056,
+      -0.0813
+     ]
+    },
+    {
+     "weights": {
+      "fl_hx": 0.8139,
+      "fl_hy": 0.2598,
+      "fl_kn": -0.5197
+     },
+     "share_of_motion": 0.101,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0165,
+      0.2732,
+      0.2368
+     ]
+    },
+    {
+     "weights": {
+      "fl_hx": 0.5808,
+      "fl_hy": -0.338,
+      "fl_kn": 0.7406
+     },
+     "share_of_motion": 0.071,
+     "tip_motion_per_unit_at_home_m": [
+      0.0014,
+      0.195,
+      -0.1844
+     ]
+    }
+   ]
+  },
+  {
+   "name": "fr_lleg_tip",
+   "body": "fr_lleg",
+   "rigby_id": "T1",
+   "joints": [
+    "fr_hx",
+    "fr_hy",
+    "fr_kn"
+   ],
+   "home_base_m": [
+    0.2664,
+    -0.1658,
+    -0.4275
+   ],
+   "home_world_m": [
+    0.2664,
+    -0.1658,
+    0.036
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.356,
+     -0.5679,
+     -0.6636
+    ],
+    "max": [
+     0.8993,
+     0.3094,
+     0.2755
+    ]
+   },
+   "reach_m": 0.6642,
+   "first_joint_anchor_base_m": [
+    0.2978,
+    -0.055,
+    0.0
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "fr_hx": 0.0121,
+      "fr_hy": 0.9019,
+      "fr_kn": 0.4318
+     },
+     "share_of_motion": 0.818,
+     "tip_motion_per_unit_at_home_m": [
+      -0.7394,
+      0.0041,
+      -0.0834
+     ]
+    },
+    {
+     "weights": {
+      "fr_hx": 0.8861,
+      "fr_hy": -0.2097,
+      "fr_kn": 0.4133
+     },
+     "share_of_motion": 0.108,
+     "tip_motion_per_unit_at_home_m": [
+      0.013,
+      0.2975,
+      -0.209
+     ]
+    },
+    {
+     "weights": {
+      "fr_hx": -0.4633,
+      "fr_hy": -0.3777,
+      "fr_kn": 0.8017
+     },
+     "share_of_motion": 0.074,
+     "tip_motion_per_unit_at_home_m": [
+      0.0056,
+      -0.1555,
+      -0.2141
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hl_lleg_tip",
+   "body": "hl_lleg",
+   "rigby_id": "T2",
+   "joints": [
+    "hl_hx",
+    "hl_hy",
+    "hl_kn"
+   ],
+   "home_base_m": [
+    -0.3293,
+    0.1658,
+    -0.4275
+   ],
+   "home_world_m": [
+    -0.3293,
+    0.1658,
+    0.036
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.9522,
+     -0.325,
+     -0.6593
+    ],
+    "max": [
+     0.3023,
+     0.5777,
+     0.304
+    ]
+   },
+   "reach_m": 0.6643,
+   "first_joint_anchor_base_m": [
+    -0.2978,
+    0.055,
+    0.0
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "hl_hx": -0.0068,
+      "hl_hy": 0.9075,
+      "hl_kn": 0.42
+     },
+     "share_of_motion": 0.833,
+     "tip_motion_per_unit_at_home_m": [
+      -0.7499,
+      -0.0023,
+      -0.0789
+     ]
+    },
+    {
+     "weights": {
+      "hl_hx": 0.9124,
+      "hl_hy": 0.1775,
+      "hl_kn": -0.3687
+     },
+     "share_of_motion": 0.101,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0067,
+      0.3063,
+      0.1971
+     ]
+    },
+    {
+     "weights": {
+      "hl_hx": 0.4092,
+      "hl_hy": -0.3807,
+      "hl_kn": 0.8292
+     },
+     "share_of_motion": 0.066,
+     "tip_motion_per_unit_at_home_m": [
+      0.0024,
+      0.1374,
+      -0.2282
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hr_lleg_tip",
+   "body": "hr_lleg",
+   "rigby_id": "T3",
+   "joints": [
+    "hr_hx",
+    "hr_hy",
+    "hr_kn"
+   ],
+   "home_base_m": [
+    -0.3293,
+    -0.1658,
+    -0.4275
+   ],
+   "home_world_m": [
+    -0.3293,
+    -0.1658,
+    0.036
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.9517,
+     -0.5919,
+     -0.6601
+    ],
+    "max": [
+     0.3014,
+     0.3097,
+     0.2752
+    ]
+   },
+   "reach_m": 0.6643,
+   "first_joint_anchor_base_m": [
+    -0.2978,
+    -0.055,
+    0.0
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "hr_hx": 0.0137,
+      "hr_hy": 0.904,
+      "hr_kn": 0.4273
+     },
+     "share_of_motion": 0.826,
+     "tip_motion_per_unit_at_home_m": [
+      -0.7497,
+      0.0046,
+      -0.0818
+     ]
+    },
+    {
+     "weights": {
+      "hr_hx": 0.8177,
+      "hr_hy": -0.2561,
+      "hr_kn": 0.5155
+     },
+     "share_of_motion": 0.103,
+     "tip_motion_per_unit_at_home_m": [
+      0.0148,
+      0.2745,
+      -0.2361
+     ]
+    },
+    {
+     "weights": {
+      "hr_hx": -0.5755,
+      "hr_hy": -0.3423,
+      "hr_kn": 0.7427
+     },
+     "share_of_motion": 0.072,
+     "tip_motion_per_unit_at_home_m": [
+      0.0032,
+      -0.1932,
+      -0.1862
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "fl_lleg_foot": [
+   4
+  ],
+  "fr_lleg_foot": [
+   7
+  ],
+  "hl_lleg_foot": [
+   10
+  ],
+  "hr_lleg_foot": [
+   13
+  ],
+  "rest_of_body": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   8,
+   9,
+   11,
+   12
+  ],
+  "floor": [
+   0
+  ]
+ },
+ "link_group_names": {
+  "fl_lleg_foot": [
+   "fl_lleg"
+  ],
+  "fr_lleg_foot": [
+   "fr_lleg"
+  ],
+  "hl_lleg_foot": [
+   "hl_lleg"
+  ],
+  "hr_lleg_foot": [
+   "hr_lleg"
+  ],
+  "rest_of_body": [
+   "body",
+   "fl_hip",
+   "fl_uleg",
+   "fr_hip",
+   "fr_uleg",
+   "hl_hip",
+   "hl_uleg",
+   "hr_hip",
+   "hr_uleg"
+  ],
+  "floor": [
+   "world"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ]
+ },
+ "contact_edges": [
+  [
+   "fl_lleg_foot",
+   "floor"
+  ],
+  [
+   "fr_lleg_foot",
+   "floor"
+  ],
+  [
+   "hl_lleg_foot",
+   "floor"
+  ],
+  [
+   "hr_lleg_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ]
+ ],
+ "stance_sets": [
+  {
+   "name": "all",
+   "tips": [
+    "fl_lleg_tip",
+    "fr_lleg_tip",
+    "hl_lleg_tip",
+    "hr_lleg_tip"
+   ]
+  },
+  {
+   "name": "all_but_fl_lleg_tip",
+   "tips": [
+    "fr_lleg_tip",
+    "hl_lleg_tip",
+    "hr_lleg_tip"
+   ]
+  },
+  {
+   "name": "all_but_fr_lleg_tip",
+   "tips": [
+    "fl_lleg_tip",
+    "hl_lleg_tip",
+    "hr_lleg_tip"
+   ]
+  },
+  {
+   "name": "all_but_hl_lleg_tip",
+   "tips": [
+    "fl_lleg_tip",
+    "fr_lleg_tip",
+    "hr_lleg_tip"
+   ]
+  },
+  {
+   "name": "all_but_hr_lleg_tip",
+   "tips": [
+    "fl_lleg_tip",
+    "fr_lleg_tip",
+    "hl_lleg_tip"
+   ]
+  }
+ ],
+ "balance": {
+  "support_tips": [
+   "fl_lleg_tip",
+   "fr_lleg_tip",
+   "hl_lleg_tip",
+   "hr_lleg_tip"
+  ],
+  "support_polygon_base_xy_m": [
+   [
+    -0.3293,
+    -0.1658
+   ],
+   [
+    0.2664,
+    -0.1658
+   ],
+   [
+    0.2664,
+    0.1658
+   ],
+   [
+    -0.3293,
+    0.1658
+   ]
+  ],
+  "com_home_base_m": [
+   -0.0186,
+   -0.0001,
+   -0.0203
+  ],
+  "com_margin_home_m": 0.1657,
+  "about": "weight-shift coordinate: the base moves so the CoM moves toward a direction inside this polygon; a tip may lift once the CoM is inside the polygon of the others (dilated 0.1 L)"
+ },
+ "gaits": [
+  {
+   "name": "omnidirectional_crawl",
+   "source": "rigby v7 library (docs/preprint/v7/libraries/boston_dynamics_spot.json)",
+   "about": "A statically supported four-beat crawl with a small forward placement bias that cancels the neutral backward drift. It shifts into each opposite three-foot support triangle, swings one foot, places it according to translation and turn commands, and reloads it before the next swing.",
+   "cycle_s": 2.32,
+   "phase": {
+    "fl_lleg_tip": 0.0862,
+    "fr_lleg_tip": 0.5862,
+    "hl_lleg_tip": 0.8362,
+    "hr_lleg_tip": 0.3362
+   },
+   "duty": {
+    "fl_lleg_tip": 0.8362,
+    "fr_lleg_tip": 0.8362,
+    "hl_lleg_tip": 0.5862,
+    "hr_lleg_tip": 0.5862
+   },
+   "duty_mean": 0.711,
+   "stacks": [
+    {
+     "t": 0.2,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": 0.06,
+      "C4": -0.05,
+      "C5": -0.05,
+      "C6": 0.06,
+      "C7": -0.05,
+      "C8": -0.05,
+      "C9": 0.06,
+      "C10": -0.05,
+      "C11": -0.05
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": 0.12,
+      "C1": 0.295,
+      "C2": -0.405,
+      "C3": 0.06,
+      "C4": -0.05,
+      "C5": -0.05,
+      "C6": 0.06,
+      "C7": -0.05,
+      "C8": -0.05,
+      "C9": 0.06,
+      "C10": -0.05,
+      "C11": -0.05
+     }
+    },
+    {
+     "t": 0.16,
+     "set": {
+      "C0": 0.0,
+      "C1": -0.055,
+      "C2": -0.055,
+      "C3": 0.06,
+      "C4": -0.05,
+      "C5": -0.05,
+      "C6": 0.06,
+      "C7": -0.05,
+      "C8": -0.05,
+      "C9": 0.06,
+      "C10": -0.05,
+      "C11": -0.05
+     }
+    },
+    {
+     "t": 0.2,
+     "set": {
+      "C0": -0.06,
+      "C1": 0.05,
+      "C2": 0.05,
+      "C3": -0.06,
+      "C4": 0.05,
+      "C5": 0.05,
+      "C6": -0.06,
+      "C7": 0.05,
+      "C8": 0.05,
+      "C9": 0.0,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": -0.06,
+      "C1": 0.05,
+      "C2": 0.05,
+      "C3": -0.06,
+      "C4": 0.05,
+      "C5": 0.05,
+      "C6": -0.06,
+      "C7": 0.05,
+      "C8": 0.05,
+      "C9": -0.12,
+      "C10": 0.295,
+      "C11": -0.405
+     }
+    },
+    {
+     "t": 0.16,
+     "set": {
+      "C0": -0.06,
+      "C1": 0.05,
+      "C2": 0.05,
+      "C3": -0.06,
+      "C4": 0.05,
+      "C5": 0.05,
+      "C6": -0.06,
+      "C7": 0.05,
+      "C8": 0.05,
+      "C9": 0.0,
+      "C10": -0.055,
+      "C11": -0.055
+     }
+    },
+    {
+     "t": 0.2,
+     "set": {
+      "C0": -0.06,
+      "C1": -0.05,
+      "C2": -0.05,
+      "C3": 0.0,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": -0.06,
+      "C7": -0.05,
+      "C8": -0.05,
+      "C9": -0.06,
+      "C10": -0.05,
+      "C11": -0.05
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": -0.06,
+      "C1": -0.05,
+      "C2": -0.05,
+      "C3": -0.12,
+      "C4": 0.295,
+      "C5": -0.405,
+      "C6": -0.06,
+      "C7": -0.05,
+      "C8": -0.05,
+      "C9": -0.06,
+      "C10": -0.05,
+      "C11": -0.05
+     }
+    },
+    {
+     "t": 0.16,
+     "set": {
+      "C0": -0.06,
+      "C1": -0.05,
+      "C2": -0.05,
+      "C3": 0.0,
+      "C4": -0.055,
+      "C5": -0.055,
+      "C6": -0.06,
+      "C7": -0.05,
+      "C8": -0.05,
+      "C9": -0.06,
+      "C10": -0.05,
+      "C11": -0.05
+     }
+    },
+    {
+     "t": 0.2,
+     "set": {
+      "C0": 0.06,
+      "C1": 0.05,
+      "C2": 0.05,
+      "C3": 0.06,
+      "C4": 0.05,
+      "C5": 0.05,
+      "C6": 0.0,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": 0.06,
+      "C10": 0.05,
+      "C11": 0.05
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": 0.06,
+      "C1": 0.05,
+      "C2": 0.05,
+      "C3": 0.06,
+      "C4": 0.05,
+      "C5": 0.05,
+      "C6": 0.12,
+      "C7": 0.295,
+      "C8": -0.405,
+      "C9": 0.06,
+      "C10": 0.05,
+      "C11": 0.05
+     }
+    },
+    {
+     "t": 0.16,
+     "set": {
+      "C0": 0.06,
+      "C1": 0.05,
+      "C2": 0.05,
+      "C3": 0.06,
+      "C4": 0.05,
+      "C5": 0.05,
+      "C6": 0.0,
+      "C7": -0.055,
+      "C8": -0.055,
+      "C9": 0.06,
+      "C10": 0.05,
+      "C11": 0.05
+     }
+    }
+   ],
+   "steer": {
+    "forward": [
+     {},
+     {
+      "C1": -0.24,
+      "C2": -0.24
+     },
+     {
+      "C1": -0.24,
+      "C2": -0.24
+     },
+     {},
+     {
+      "C10": -0.24,
+      "C11": -0.24
+     },
+     {
+      "C10": -0.24,
+      "C11": -0.24
+     },
+     {},
+     {
+      "C4": -0.24,
+      "C5": -0.24
+     },
+     {
+      "C4": -0.24,
+      "C5": -0.24
+     },
+     {},
+     {
+      "C7": -0.24,
+      "C8": -0.24
+     },
+     {
+      "C7": -0.24,
+      "C8": -0.24
+     }
+    ],
+    "left": [
+     {},
+     {
+      "C0": 0.24
+     },
+     {
+      "C0": 0.24
+     },
+     {},
+     {
+      "C9": 0.24
+     },
+     {
+      "C9": 0.24
+     },
+     {},
+     {
+      "C3": 0.24
+     },
+     {
+      "C3": 0.24
+     },
+     {},
+     {
+      "C6": 0.24
+     },
+     {
+      "C6": 0.24
+     }
+    ],
+    "turn": [
+     {},
+     {
+      "C0": 0.3,
+      "C1": 0.3,
+      "C2": 0.3
+     },
+     {
+      "C0": 0.3,
+      "C1": 0.3,
+      "C2": 0.3
+     },
+     {},
+     {
+      "C9": -0.3,
+      "C10": -0.3,
+      "C11": -0.3
+     },
+     {
+      "C9": -0.3,
+      "C10": -0.3,
+      "C11": -0.3
+     },
+     {},
+     {
+      "C3": 0.3,
+      "C4": -0.3,
+      "C5": -0.3
+     },
+     {
+      "C3": 0.3,
+      "C4": -0.3,
+      "C5": -0.3
+     },
+     {},
+     {
+      "C6": -0.3,
+      "C7": 0.3,
+      "C8": 0.3
+     },
+     {
+      "C6": -0.3,
+      "C7": 0.3,
+      "C8": 0.3
+     }
+    ]
+   },
+   "channel_joint": {
+    "C0": "fl_hx",
+    "C1": "fl_hy",
+    "C2": "fl_kn",
+    "C3": "fr_hx",
+    "C4": "fr_hy",
+    "C5": "fr_kn",
+    "C6": "hl_hx",
+    "C7": "hl_hy",
+    "C8": "hl_kn",
+    "C9": "hr_hx",
+    "C10": "hr_hy",
+    "C11": "hr_kn"
+   },
+   "step_height_m": 0.1108,
+   "min_limbs_down": 2,
+   "quasi_static": false
+  },
+  {
+   "name": "alternating",
+   "source": "synthesised from measured tips (angular order, alternate phases)",
+   "cycle_s": 0.5313,
+   "phase": {
+    "fl_lleg_tip": 0.0,
+    "fr_lleg_tip": 0.5,
+    "hl_lleg_tip": 0.5,
+    "hr_lleg_tip": 0.0
+   },
+   "duty": {
+    "fl_lleg_tip": 0.6,
+    "fr_lleg_tip": 0.6,
+    "hl_lleg_tip": 0.6,
+    "hr_lleg_tip": 0.6
+   },
+   "duty_mean": 0.6,
+   "step_height_m": 0.1108,
+   "min_limbs_down": 2,
+   "quasi_static": false
+  },
+  {
+   "name": "crawl",
+   "source": "synthesised quasi-static crawl from measured tips (one limb lifted at a time)",
+   "cycle_s": 2.1254,
+   "phase": {
+    "fl_lleg_tip": 0.0,
+    "fr_lleg_tip": 0.5,
+    "hl_lleg_tip": 0.75,
+    "hr_lleg_tip": 0.25
+   },
+   "duty": {
+    "fl_lleg_tip": 0.8,
+    "fr_lleg_tip": 0.8,
+    "hl_lleg_tip": 0.8,
+    "hr_lleg_tip": 0.8
+   },
+   "duty_mean": 0.8,
+   "step_height_m": 0.1108,
+   "lift_order": [
+    "fl_hip",
+    "hr_hip",
+    "fr_hip",
+    "hl_hip"
+   ],
+   "min_limbs_down": 3,
+   "quasi_static": true
+  }
+ ],
+ "objects": null,
+ "excluded_pairs_home_overlap": [],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: x forward, y left, z up, metres; for the arm a level frame at its base",
+ "kind": "quadruped",
+ "support": [
+  {
+   "tip": "fl_lleg_tip",
+   "type": "point"
+  },
+  {
+   "tip": "fr_lleg_tip",
+   "type": "point"
+  },
+  {
+   "tip": "hl_lleg_tip",
+   "type": "point"
+  },
+  {
+   "tip": "hr_lleg_tip",
+   "type": "point"
+  }
+ ],
+ "render_model": "humanoid/data/robots/menagerie_4d038b3/boston_dynamics_spot/scene.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ }
+}

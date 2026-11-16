@@ -1,0 +1,4355 @@
+{
+ "body": "v3_six_arm_crawler_s3103",
+ "kind": "multileg",
+ "free_base": true,
+ "L": 0.15733,
+ "T": 0.12664,
+ "modes": [
+  {
+   "name": "a0_tip_sweep",
+   "part": "a0_seg_1_tip",
+   "plus": "Lift the tip and sweep it toward positive y.",
+   "minus": "Lift the tip and sweep it toward negative y.",
+   "toward": {
+    "a0_sweep_0": 0.65,
+    "a0_sweep_1": 0.4,
+    "a0_bend_0": -0.3
+   },
+   "away": {
+    "a0_sweep_0": -0.65,
+    "a0_sweep_1": -0.4,
+    "a0_bend_0": -0.3
+   },
+   "frees": [
+    "a0_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.051,
+       -0.202,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.435,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.005,
+       -0.106,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.004,
+       0.106,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.05,
+       0.203,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.439,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a0_tip_radial",
+   "part": "a0_seg_1_tip",
+   "plus": "Lift and extend the tip outward toward positive x.",
+   "minus": "Lift and retract the tip toward its root.",
+   "toward": {
+    "a0_bend_0": -0.55,
+    "a0_bend_1": -0.3
+   },
+   "away": {
+    "a0_bend_0": 0.45,
+    "a0_bend_1": -0.65
+   },
+   "frees": [
+    "a0_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.065,
+       -0.0,
+       0.047
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.51,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.636
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.057,
+       -0.0,
+       0.015
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0151
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.051,
+       -0.0,
+       0.146
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.024,
+       -0.0,
+       0.305
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.945,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.294
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a0_tip_raise",
+   "part": "a0_seg_1_tip",
+   "plus": "Raise the tip predominantly through the proximal bend.",
+   "minus": "Raise and fold the tip predominantly through the distal bend.",
+   "toward": {
+    "a0_bend_0": -0.85,
+    "a0_bend_1": -0.12
+   },
+   "away": {
+    "a0_bend_0": 0.12,
+    "a0_bend_1": -0.8
+   },
+   "frees": [
+    "a0_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.021,
+       -0.0,
+       0.278
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.772,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.783
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.076,
+       -0.0,
+       0.135
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.034,
+       -0.0,
+       0.154
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.007,
+       0.0,
+       0.312
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.984,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.342
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a1_tip_sweep",
+   "part": "a1_seg_1_tip",
+   "plus": "Lift the tip and sweep it toward negative x and positive y.",
+   "minus": "Lift the tip and sweep it toward positive x and negative y.",
+   "toward": {
+    "a1_sweep_0": 0.65,
+    "a1_sweep_1": 0.4,
+    "a1_bend_0": -0.3
+   },
+   "away": {
+    "a1_sweep_0": -0.65,
+    "a1_sweep_1": -0.4,
+    "a1_bend_0": -0.3
+   },
+   "frees": [
+    "a1_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a1_seg_1_tip": [
+       0.158,
+       -0.137,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.44,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a1_seg_1_tip": [
+       0.092,
+       -0.052,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a1_seg_1_tip": [
+       -0.096,
+       0.044,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a1_seg_1_tip": [
+       -0.203,
+       0.047,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.435,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a1_tip_radial",
+   "part": "a1_seg_1_tip",
+   "plus": "Lift and extend the tip outward toward positive x and positive y.",
+   "minus": "Lift and retract the tip toward its root.",
+   "toward": {
+    "a1_bend_0": -0.55,
+    "a1_bend_1": -0.3
+   },
+   "away": {
+    "a1_bend_0": 0.45,
+    "a1_bend_1": -0.65
+   },
+   "frees": [
+    "a1_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a1_seg_1_tip": [
+       0.03,
+       0.058,
+       0.047
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.511,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.636
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a1_seg_1_tip": [
+       0.026,
+       0.051,
+       0.015
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0151
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a1_seg_1_tip": [
+       0.023,
+       0.045,
+       0.146
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a1_seg_1_tip": [
+       0.011,
+       0.021,
+       0.305
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.944,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.294
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a1_tip_raise",
+   "part": "a1_seg_1_tip",
+   "plus": "Raise the tip predominantly through the proximal bend.",
+   "minus": "Raise and fold the tip predominantly through the distal bend.",
+   "toward": {
+    "a1_bend_0": -0.85,
+    "a1_bend_1": -0.12
+   },
+   "away": {
+    "a1_bend_0": 0.12,
+    "a1_bend_1": -0.8
+   },
+   "frees": [
+    "a1_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a1_seg_1_tip": [
+       0.01,
+       0.019,
+       0.278
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.772,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.783
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a1_seg_1_tip": [
+       0.035,
+       0.068,
+       0.135
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a1_seg_1_tip": [
+       0.015,
+       0.03,
+       0.154
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a1_seg_1_tip": [
+       -0.003,
+       -0.006,
+       0.312
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.984,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.342
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a2_tip_sweep",
+   "part": "a2_seg_1_tip",
+   "plus": "Lift the tip and sweep it toward negative x and negative y.",
+   "minus": "Lift the tip and sweep it toward positive x and positive y.",
+   "toward": {
+    "a2_sweep_0": 0.65,
+    "a2_sweep_1": 0.4,
+    "a2_bend_0": -0.3
+   },
+   "away": {
+    "a2_sweep_0": -0.65,
+    "a2_sweep_1": -0.4,
+    "a2_bend_0": -0.3
+   },
+   "frees": [
+    "a2_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a2_seg_1_tip": [
+       0.203,
+       0.05,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.439,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a2_seg_1_tip": [
+       0.096,
+       0.045,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a2_seg_1_tip": [
+       -0.091,
+       -0.054,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a2_seg_1_tip": [
+       -0.155,
+       -0.14,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.438,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a2_tip_radial",
+   "part": "a2_seg_1_tip",
+   "plus": "Lift and extend the tip outward toward negative x and positive y.",
+   "minus": "Lift and retract the tip toward its root.",
+   "toward": {
+    "a2_bend_0": -0.55,
+    "a2_bend_1": -0.3
+   },
+   "away": {
+    "a2_bend_0": 0.45,
+    "a2_bend_1": -0.65
+   },
+   "frees": [
+    "a2_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a2_seg_1_tip": [
+       -0.031,
+       0.057,
+       0.047
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.509,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.636
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a2_seg_1_tip": [
+       -0.027,
+       0.05,
+       0.015
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0151
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a2_seg_1_tip": [
+       -0.024,
+       0.045,
+       0.146
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a2_seg_1_tip": [
+       -0.011,
+       0.021,
+       0.305
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.944,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.294
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a2_tip_raise",
+   "part": "a2_seg_1_tip",
+   "plus": "Raise the tip predominantly through the proximal bend.",
+   "minus": "Raise and fold the tip predominantly through the distal bend.",
+   "toward": {
+    "a2_bend_0": -0.85,
+    "a2_bend_1": -0.12
+   },
+   "away": {
+    "a2_bend_0": 0.12,
+    "a2_bend_1": -0.8
+   },
+   "frees": [
+    "a2_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a2_seg_1_tip": [
+       -0.01,
+       0.019,
+       0.278
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.772,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.783
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a2_seg_1_tip": [
+       -0.036,
+       0.067,
+       0.135
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a2_seg_1_tip": [
+       -0.016,
+       0.03,
+       0.154
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a2_seg_1_tip": [
+       0.003,
+       -0.006,
+       0.312
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.984,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.342
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a3_tip_sweep",
+   "part": "a3_seg_1_tip",
+   "plus": "Lift the tip and sweep it toward negative y.",
+   "minus": "Lift the tip and sweep it toward positive y.",
+   "toward": {
+    "a3_sweep_0": 0.65,
+    "a3_sweep_1": 0.4,
+    "a3_bend_0": -0.3
+   },
+   "away": {
+    "a3_sweep_0": -0.65,
+    "a3_sweep_1": -0.4,
+    "a3_bend_0": -0.3
+   },
+   "frees": [
+    "a3_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a3_seg_1_tip": [
+       0.036,
+       0.206,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.44,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a3_seg_1_tip": [
+       -0.003,
+       0.106,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a3_seg_1_tip": [
+       0.012,
+       -0.105,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a3_seg_1_tip": [
+       0.065,
+       -0.198,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.435,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a3_tip_radial",
+   "part": "a3_seg_1_tip",
+   "plus": "Lift and extend the tip outward toward negative x.",
+   "minus": "Lift and retract the tip toward its root.",
+   "toward": {
+    "a3_bend_0": -0.55,
+    "a3_bend_1": -0.3
+   },
+   "away": {
+    "a3_bend_0": 0.45,
+    "a3_bend_1": -0.65
+   },
+   "frees": [
+    "a3_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a3_seg_1_tip": [
+       -0.065,
+       -0.005,
+       0.047
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.511,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.636
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a3_seg_1_tip": [
+       -0.057,
+       -0.004,
+       0.015
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0151
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a3_seg_1_tip": [
+       -0.05,
+       -0.004,
+       0.146
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a3_seg_1_tip": [
+       -0.024,
+       -0.002,
+       0.305
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.945,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.294
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a3_tip_raise",
+   "part": "a3_seg_1_tip",
+   "plus": "Raise the tip predominantly through the proximal bend.",
+   "minus": "Raise and fold the tip predominantly through the distal bend.",
+   "toward": {
+    "a3_bend_0": -0.85,
+    "a3_bend_1": -0.12
+   },
+   "away": {
+    "a3_bend_0": 0.12,
+    "a3_bend_1": -0.8
+   },
+   "frees": [
+    "a3_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a3_seg_1_tip": [
+       -0.021,
+       -0.002,
+       0.278
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.772,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.783
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a3_seg_1_tip": [
+       -0.076,
+       -0.005,
+       0.135
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a3_seg_1_tip": [
+       -0.034,
+       -0.002,
+       0.154
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a3_seg_1_tip": [
+       0.007,
+       0.001,
+       0.312
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.984,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.342
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a4_tip_sweep",
+   "part": "a4_seg_1_tip",
+   "plus": "Lift the tip and sweep it toward positive x and negative y.",
+   "minus": "Lift the tip and sweep it toward negative x and positive y.",
+   "toward": {
+    "a4_sweep_0": 0.65,
+    "a4_sweep_1": 0.4,
+    "a4_bend_0": -0.3
+   },
+   "away": {
+    "a4_sweep_0": -0.65,
+    "a4_sweep_1": -0.4,
+    "a4_bend_0": -0.3
+   },
+   "frees": [
+    "a4_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a4_seg_1_tip": [
+       -0.164,
+       0.13,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.441,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a4_seg_1_tip": [
+       -0.094,
+       0.048,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a4_seg_1_tip": [
+       0.098,
+       -0.039,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a4_seg_1_tip": [
+       0.205,
+       -0.038,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.436,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a4_tip_radial",
+   "part": "a4_seg_1_tip",
+   "plus": "Lift and extend the tip outward toward negative x and negative y.",
+   "minus": "Lift and retract the tip toward its root.",
+   "toward": {
+    "a4_bend_0": -0.55,
+    "a4_bend_1": -0.3
+   },
+   "away": {
+    "a4_bend_0": 0.45,
+    "a4_bend_1": -0.65
+   },
+   "frees": [
+    "a4_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a4_seg_1_tip": [
+       -0.027,
+       -0.059,
+       0.047
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.509,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.636
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a4_seg_1_tip": [
+       -0.024,
+       -0.052,
+       0.015
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0151
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a4_seg_1_tip": [
+       -0.021,
+       -0.046,
+       0.146
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a4_seg_1_tip": [
+       -0.01,
+       -0.022,
+       0.305
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.945,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.294
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a4_tip_raise",
+   "part": "a4_seg_1_tip",
+   "plus": "Raise the tip predominantly through the proximal bend.",
+   "minus": "Raise and fold the tip predominantly through the distal bend.",
+   "toward": {
+    "a4_bend_0": -0.85,
+    "a4_bend_1": -0.12
+   },
+   "away": {
+    "a4_bend_0": 0.12,
+    "a4_bend_1": -0.8
+   },
+   "frees": [
+    "a4_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a4_seg_1_tip": [
+       -0.009,
+       -0.02,
+       0.278
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.772,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.783
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a4_seg_1_tip": [
+       -0.032,
+       -0.07,
+       0.135
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a4_seg_1_tip": [
+       -0.014,
+       -0.031,
+       0.154
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a4_seg_1_tip": [
+       0.003,
+       0.006,
+       0.312
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.984,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.342
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a5_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a5_tip_sweep",
+   "part": "a5_seg_1_tip",
+   "plus": "Lift the tip and sweep it toward positive x and positive y.",
+   "minus": "Lift the tip and sweep it toward negative x and negative y.",
+   "toward": {
+    "a5_sweep_0": 0.65,
+    "a5_sweep_1": 0.4,
+    "a5_bend_0": -0.3
+   },
+   "away": {
+    "a5_sweep_0": -0.65,
+    "a5_sweep_1": -0.4,
+    "a5_bend_0": -0.3
+   },
+   "frees": [
+    "a5_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a5_seg_1_tip": [
+       -0.205,
+       -0.041,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.439,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a5_seg_1_tip": [
+       -0.097,
+       -0.041,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a5_seg_1_tip": [
+       0.093,
+       0.05,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a5_seg_1_tip": [
+       0.161,
+       0.133,
+       0.087
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.438,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.325
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a5_tip_radial",
+   "part": "a5_seg_1_tip",
+   "plus": "Lift and extend the tip outward toward positive x and negative y.",
+   "minus": "Lift and retract the tip toward its root.",
+   "toward": {
+    "a5_bend_0": -0.55,
+    "a5_bend_1": -0.3
+   },
+   "away": {
+    "a5_bend_0": 0.45,
+    "a5_bend_1": -0.65
+   },
+   "frees": [
+    "a5_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a5_seg_1_tip": [
+       0.028,
+       -0.059,
+       0.047
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.511,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.636
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a5_seg_1_tip": [
+       0.025,
+       -0.052,
+       0.015
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0151
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a5_seg_1_tip": [
+       0.022,
+       -0.046,
+       0.146
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a5_seg_1_tip": [
+       0.01,
+       -0.021,
+       0.305
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.944,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.294
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "a5_tip_raise",
+   "part": "a5_seg_1_tip",
+   "plus": "Raise the tip predominantly through the proximal bend.",
+   "minus": "Raise and fold the tip predominantly through the distal bend.",
+   "toward": {
+    "a5_bend_0": -0.85,
+    "a5_bend_1": -0.12
+   },
+   "away": {
+    "a5_bend_0": 0.12,
+    "a5_bend_1": -0.8
+   },
+   "frees": [
+    "a5_seg_1_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "a5_seg_1_tip": [
+       0.009,
+       -0.019,
+       0.278
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.772,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.783
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a5_seg_1_tip": [
+       0.033,
+       -0.069,
+       0.135
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a5_seg_1_tip": [
+       0.015,
+       -0.031,
+       0.154
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "a5_seg_1_tip": [
+       -0.003,
+       0.006,
+       0.312
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.984,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.342
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "trunk_forward",
+   "part": "trunk",
+   "plus": "Shift the trunk toward positive x over the planted tips.",
+   "minus": "Shift the trunk toward negative x over the planted tips.",
+   "toward": {
+    "a0_bend_0": 0.045,
+    "a0_bend_1": 0.055,
+    "a1_sweep_0": 0.06,
+    "a1_bend_0": 0.02,
+    "a1_bend_1": 0.025,
+    "a2_sweep_0": 0.06,
+    "a2_bend_0": 0.025,
+    "a2_bend_1": -0.075,
+    "a3_bend_0": 0.055,
+    "a3_bend_1": -0.15,
+    "a4_sweep_0": -0.06,
+    "a4_bend_0": 0.025,
+    "a4_bend_1": -0.07,
+    "a5_sweep_0": -0.06,
+    "a5_bend_0": 0.02,
+    "a5_bend_1": 0.025
+   },
+   "away": {
+    "a0_bend_0": 0.055,
+    "a0_bend_1": -0.15,
+    "a1_sweep_0": -0.06,
+    "a1_bend_0": 0.025,
+    "a1_bend_1": -0.075,
+    "a2_sweep_0": -0.06,
+    "a2_bend_0": 0.02,
+    "a2_bend_1": 0.025,
+    "a3_bend_0": 0.045,
+    "a3_bend_1": 0.055,
+    "a4_sweep_0": 0.06,
+    "a4_bend_0": 0.02,
+    "a4_bend_1": 0.025,
+    "a5_sweep_0": 0.06,
+    "a5_bend_0": 0.025,
+    "a5_bend_1": -0.075
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.025,
+       -0.055,
+       0.025
+      ],
+      "a1_seg_1_tip": [
+       0.069,
+       -0.031,
+       0.011
+      ],
+      "a2_seg_1_tip": [
+       0.072,
+       0.013,
+       -0.012
+      ],
+      "a3_seg_1_tip": [
+       0.029,
+       0.04,
+       -0.024
+      ],
+      "a4_seg_1_tip": [
+       -0.013,
+       0.015,
+       -0.01
+      ],
+      "a5_seg_1_tip": [
+       -0.015,
+       -0.025,
+       0.013
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      -0.02,
+      0.004,
+      0.001
+     ],
+     "rpy_deg": [
+      0.4,
+      3.2,
+      6.2
+     ],
+     "size": {
+      "tip_L": 0.486,
+      "base_L": 0.13,
+      "turn_deg": 6.2,
+      "joint_range_share": 0.469
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.013,
+       -0.038,
+       0.011
+      ],
+      "a1_seg_1_tip": [
+       0.045,
+       -0.02,
+       0.005
+      ],
+      "a2_seg_1_tip": [
+       0.047,
+       0.013,
+       -0.006
+      ],
+      "a3_seg_1_tip": [
+       0.014,
+       0.032,
+       -0.013
+      ],
+      "a4_seg_1_tip": [
+       -0.017,
+       0.013,
+       -0.005
+      ],
+      "a5_seg_1_tip": [
+       -0.018,
+       -0.017,
+       0.006
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      -0.01,
+      0.001,
+      0.001
+     ],
+     "rpy_deg": [
+      0.2,
+      1.6,
+      4.6
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.016,
+       -0.031,
+       -0.012
+      ],
+      "a1_seg_1_tip": [
+       0.016,
+       -0.014,
+       -0.005
+      ],
+      "a2_seg_1_tip": [
+       0.017,
+       0.017,
+       0.006
+      ],
+      "a3_seg_1_tip": [
+       -0.015,
+       0.037,
+       0.011
+      ],
+      "a4_seg_1_tip": [
+       -0.045,
+       0.018,
+       0.004
+      ],
+      "a5_seg_1_tip": [
+       -0.046,
+       -0.011,
+       -0.006
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.01,
+      -0.002,
+      0.001
+     ],
+     "rpy_deg": [
+      -0.2,
+      -1.5,
+      4.5
+     ]
+    },
+    "1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.031,
+       -0.039,
+       -0.024
+      ],
+      "a1_seg_1_tip": [
+       0.013,
+       -0.015,
+       -0.01
+      ],
+      "a2_seg_1_tip": [
+       0.015,
+       0.026,
+       0.012
+      ],
+      "a3_seg_1_tip": [
+       -0.028,
+       0.053,
+       0.025
+      ],
+      "a4_seg_1_tip": [
+       -0.069,
+       0.028,
+       0.009
+      ],
+      "a5_seg_1_tip": [
+       -0.07,
+       -0.01,
+       -0.012
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.019,
+      -0.004,
+      0.001
+     ],
+     "rpy_deg": [
+      -0.5,
+      -3.2,
+      6.1
+     ],
+     "size": {
+      "tip_L": 0.477,
+      "base_L": 0.124,
+      "turn_deg": 6.1,
+      "joint_range_share": 0.457
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "moves the base most along x",
+   "kept": true
+  },
+  {
+   "name": "trunk_left",
+   "part": "trunk",
+   "plus": "Shift the trunk toward positive y over the planted tips.",
+   "minus": "Shift the trunk toward negative y over the planted tips.",
+   "toward": {
+    "a0_sweep_0": -0.07,
+    "a1_sweep_0": -0.032,
+    "a1_bend_0": 0.04,
+    "a1_bend_1": 0.05,
+    "a2_sweep_0": 0.033,
+    "a2_bend_0": 0.04,
+    "a2_bend_1": 0.05,
+    "a3_sweep_0": 0.07,
+    "a4_sweep_0": 0.029,
+    "a4_bend_0": 0.05,
+    "a4_bend_1": -0.135,
+    "a5_sweep_0": -0.03,
+    "a5_bend_0": 0.05,
+    "a5_bend_1": -0.135
+   },
+   "away": {
+    "a0_sweep_0": 0.07,
+    "a1_sweep_0": 0.032,
+    "a1_bend_0": 0.05,
+    "a1_bend_1": -0.135,
+    "a2_sweep_0": -0.033,
+    "a2_bend_0": 0.05,
+    "a2_bend_1": -0.135,
+    "a3_sweep_0": -0.07,
+    "a4_sweep_0": -0.029,
+    "a4_bend_0": 0.04,
+    "a4_bend_1": 0.05,
+    "a5_sweep_0": 0.03,
+    "a5_bend_0": 0.04,
+    "a5_bend_1": 0.05
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.013,
+       0.092,
+       -0.0
+      ],
+      "a1_seg_1_tip": [
+       -0.071,
+       0.05,
+       0.021
+      ],
+      "a2_seg_1_tip": [
+       -0.065,
+       -0.013,
+       0.021
+      ],
+      "a3_seg_1_tip": [
+       0.002,
+       -0.043,
+       -0.0
+      ],
+      "a4_seg_1_tip": [
+       0.056,
+       0.001,
+       -0.02
+      ],
+      "a5_seg_1_tip": [
+       0.05,
+       0.059,
+       -0.021
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.004,
+      -0.017,
+      0.001
+     ],
+     "rpy_deg": [
+      -3.0,
+      -0.6,
+      -8.9
+     ],
+     "size": {
+      "tip_L": 0.591,
+      "base_L": 0.111,
+      "turn_deg": 8.9,
+      "joint_range_share": 0.405
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.006,
+       0.061,
+       -0.001
+      ],
+      "a1_seg_1_tip": [
+       -0.047,
+       0.032,
+       0.009
+      ],
+      "a2_seg_1_tip": [
+       -0.044,
+       -0.012,
+       0.009
+      ],
+      "a3_seg_1_tip": [
+       0.003,
+       -0.035,
+       -0.001
+      ],
+      "a4_seg_1_tip": [
+       0.042,
+       -0.005,
+       -0.011
+      ],
+      "a5_seg_1_tip": [
+       0.039,
+       0.036,
+       -0.011
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.002,
+      -0.009,
+      0.001
+     ],
+     "rpy_deg": [
+      -1.4,
+      -0.2,
+      -6.3
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.001,
+       0.035,
+       -0.0
+      ],
+      "a1_seg_1_tip": [
+       -0.04,
+       0.006,
+       -0.011
+      ],
+      "a2_seg_1_tip": [
+       -0.037,
+       -0.037,
+       -0.011
+      ],
+      "a3_seg_1_tip": [
+       0.009,
+       -0.06,
+       -0.0
+      ],
+      "a4_seg_1_tip": [
+       0.047,
+       -0.03,
+       0.009
+      ],
+      "a5_seg_1_tip": [
+       0.045,
+       0.01,
+       0.009
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      0.009,
+      0.001
+     ],
+     "rpy_deg": [
+      1.4,
+      0.2,
+      -6.2
+     ]
+    },
+    "1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       0.003,
+       0.043,
+       0.001
+      ],
+      "a1_seg_1_tip": [
+       -0.054,
+       0.001,
+       -0.02
+      ],
+      "a2_seg_1_tip": [
+       -0.048,
+       -0.061,
+       -0.021
+      ],
+      "a3_seg_1_tip": [
+       0.018,
+       -0.09,
+       0.001
+      ],
+      "a4_seg_1_tip": [
+       0.071,
+       -0.047,
+       0.021
+      ],
+      "a5_seg_1_tip": [
+       0.066,
+       0.01,
+       0.021
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      -0.004,
+      0.016,
+      0.001
+     ],
+     "rpy_deg": [
+      3.0,
+      0.6,
+      -8.7
+     ],
+     "size": {
+      "tip_L": 0.583,
+      "base_L": 0.105,
+      "turn_deg": 8.7,
+      "joint_range_share": 0.399
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "moves the base most along y",
+   "kept": true
+  },
+  {
+   "name": "trunk_lower",
+   "part": "trunk",
+   "plus": "Lower the trunk over the planted tips.",
+   "minus": "Raise the trunk over the planted tips.",
+   "toward": {
+    "a0_bend_0": -0.054,
+    "a0_bend_1": -0.09,
+    "a1_bend_0": -0.054,
+    "a1_bend_1": -0.09,
+    "a2_bend_0": -0.054,
+    "a2_bend_1": -0.09,
+    "a3_bend_0": -0.054,
+    "a3_bend_1": -0.09,
+    "a4_bend_0": -0.054,
+    "a4_bend_1": -0.09,
+    "a5_bend_0": -0.054,
+    "a5_bend_1": -0.09
+   },
+   "away": {
+    "a0_bend_0": 0.099,
+    "a0_bend_1": -0.044,
+    "a1_bend_0": 0.099,
+    "a1_bend_1": -0.044,
+    "a2_bend_0": 0.099,
+    "a2_bend_1": -0.044,
+    "a3_bend_0": 0.099,
+    "a3_bend_1": -0.044,
+    "a4_bend_0": 0.099,
+    "a4_bend_1": -0.044,
+    "a5_bend_0": 0.099,
+    "a5_bend_1": -0.044
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.002,
+       0.0,
+       -0.029
+      ],
+      "a1_seg_1_tip": [
+       -0.001,
+       -0.002,
+       -0.029
+      ],
+      "a2_seg_1_tip": [
+       0.001,
+       -0.002,
+       -0.029
+      ],
+      "a3_seg_1_tip": [
+       0.002,
+       0.0,
+       -0.029
+      ],
+      "a4_seg_1_tip": [
+       0.001,
+       0.002,
+       -0.029
+      ],
+      "a5_seg_1_tip": [
+       -0.001,
+       0.002,
+       -0.029
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.0,
+      0.029
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.185,
+      "base_L": 0.184,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.059
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.001,
+       0.0,
+       -0.014
+      ],
+      "a1_seg_1_tip": [
+       -0.0,
+       -0.001,
+       -0.014
+      ],
+      "a2_seg_1_tip": [
+       0.0,
+       -0.001,
+       -0.014
+      ],
+      "a3_seg_1_tip": [
+       0.001,
+       0.0,
+       -0.014
+      ],
+      "a4_seg_1_tip": [
+       0.0,
+       0.001,
+       -0.014
+      ],
+      "a5_seg_1_tip": [
+       -0.0,
+       0.001,
+       -0.014
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.0,
+      0.014
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.034,
+       0.172,
+       0.021
+      ],
+      "a1_seg_1_tip": [
+       -0.169,
+       0.046,
+       0.021
+      ],
+      "a2_seg_1_tip": [
+       -0.135,
+       -0.112,
+       0.021
+      ],
+      "a3_seg_1_tip": [
+       0.047,
+       -0.169,
+       0.021
+      ],
+      "a4_seg_1_tip": [
+       0.171,
+       -0.039,
+       0.021
+      ],
+      "a5_seg_1_tip": [
+       0.14,
+       0.105,
+       0.021
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      -0.0,
+      0.0,
+      -0.021
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      -23.1
+     ]
+    },
+    "1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.062,
+       0.227,
+       0.043
+      ],
+      "a1_seg_1_tip": [
+       -0.231,
+       0.046,
+       0.043
+      ],
+      "a2_seg_1_tip": [
+       -0.17,
+       -0.163,
+       0.043
+      ],
+      "a3_seg_1_tip": [
+       0.08,
+       -0.223,
+       0.043
+      ],
+      "a4_seg_1_tip": [
+       0.233,
+       -0.037,
+       0.044
+      ],
+      "a5_seg_1_tip": [
+       0.178,
+       0.154,
+       0.044
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      -0.0,
+      0.001,
+      -0.043
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      -31.2
+     ],
+     "size": {
+      "tip_L": 1.53,
+      "base_L": 0.273,
+      "turn_deg": 31.2,
+      "joint_range_share": 0.322
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 1,
+   "kept_by": "moves the base most along z",
+   "kept": true
+  },
+  {
+   "name": "trunk_roll",
+   "part": "trunk",
+   "plus": "Roll the trunk about positive x, raising its left side.",
+   "minus": "Roll the trunk about negative x, raising its right side.",
+   "toward": {
+    "a1_bend_0": 0.18,
+    "a1_bend_1": -0.08,
+    "a2_bend_0": 0.18,
+    "a2_bend_1": -0.08,
+    "a4_bend_0": -0.12,
+    "a4_bend_1": -0.2,
+    "a5_bend_0": -0.12,
+    "a5_bend_1": -0.2
+   },
+   "away": {
+    "a1_bend_0": -0.12,
+    "a1_bend_1": -0.2,
+    "a2_bend_0": -0.12,
+    "a2_bend_1": -0.2,
+    "a4_bend_0": 0.18,
+    "a4_bend_1": -0.08,
+    "a5_bend_0": 0.18,
+    "a5_bend_1": -0.08
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.045,
+       0.19,
+       0.022
+      ],
+      "a1_seg_1_tip": [
+       -0.174,
+       0.062,
+       0.097
+      ],
+      "a2_seg_1_tip": [
+       -0.142,
+       -0.092,
+       0.097
+      ],
+      "a3_seg_1_tip": [
+       0.033,
+       -0.142,
+       0.018
+      ],
+      "a4_seg_1_tip": [
+       0.151,
+       -0.01,
+       -0.052
+      ],
+      "a5_seg_1_tip": [
+       0.122,
+       0.131,
+       -0.052
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.003,
+      0.002,
+      -0.021
+     ],
+     "rpy_deg": [
+      -10.1,
+      -4.3,
+      -22.1
+     ],
+     "size": {
+      "tip_L": 1.326,
+      "base_L": 0.135,
+      "turn_deg": 22.1,
+      "joint_range_share": 0.5
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.03,
+       0.155,
+       0.01
+      ],
+      "a1_seg_1_tip": [
+       -0.141,
+       0.058,
+       0.047
+      ],
+      "a2_seg_1_tip": [
+       -0.119,
+       -0.07,
+       0.047
+      ],
+      "a3_seg_1_tip": [
+       0.025,
+       -0.12,
+       0.008
+      ],
+      "a4_seg_1_tip": [
+       0.127,
+       -0.019,
+       -0.028
+      ],
+      "a5_seg_1_tip": [
+       0.107,
+       0.098,
+       -0.027
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.002,
+      -0.004,
+      -0.009
+     ],
+     "rpy_deg": [
+      -5.2,
+      -1.8,
+      -18.4
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.01,
+       0.11,
+       0.011
+      ],
+      "a1_seg_1_tip": [
+       -0.116,
+       0.019,
+       -0.028
+      ],
+      "a2_seg_1_tip": [
+       -0.097,
+       -0.102,
+       -0.028
+      ],
+      "a3_seg_1_tip": [
+       0.038,
+       -0.15,
+       0.013
+      ],
+      "a4_seg_1_tip": [
+       0.136,
+       -0.055,
+       0.049
+      ],
+      "a5_seg_1_tip": [
+       0.118,
+       0.055,
+       0.049
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      0.008,
+      -0.009
+     ],
+     "rpy_deg": [
+      5.4,
+      1.7,
+      -17.3
+     ]
+    },
+    "1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.016,
+       0.134,
+       0.023
+      ],
+      "a1_seg_1_tip": [
+       -0.138,
+       0.015,
+       -0.052
+      ],
+      "a2_seg_1_tip": [
+       -0.11,
+       -0.13,
+       -0.052
+      ],
+      "a3_seg_1_tip": [
+       0.052,
+       -0.178,
+       0.027
+      ],
+      "a4_seg_1_tip": [
+       0.165,
+       -0.055,
+       0.097
+      ],
+      "a5_seg_1_tip": [
+       0.139,
+       0.077,
+       0.097
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      -0.003,
+      -0.001,
+      -0.019
+     ],
+     "rpy_deg": [
+      10.2,
+      4.0,
+      -20.7
+     ],
+     "size": {
+      "tip_L": 1.266,
+      "base_L": 0.122,
+      "turn_deg": 20.7,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "moves the base most along roll",
+   "kept": true
+  },
+  {
+   "name": "trunk_yaw",
+   "part": "trunk",
+   "plus": "Turn the trunk about positive z over the planted tips.",
+   "minus": "Turn the trunk about negative z over the planted tips.",
+   "toward": {
+    "a0_sweep_0": -0.38,
+    "a0_sweep_1": 0.22,
+    "a1_sweep_0": -0.38,
+    "a1_sweep_1": 0.22,
+    "a2_sweep_0": -0.38,
+    "a2_sweep_1": 0.22,
+    "a3_sweep_0": -0.38,
+    "a3_sweep_1": 0.22,
+    "a4_sweep_0": -0.38,
+    "a4_sweep_1": 0.22,
+    "a5_sweep_0": -0.38,
+    "a5_sweep_1": 0.22
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.008,
+       0.083,
+       0.006
+      ],
+      "a1_seg_1_tip": [
+       -0.077,
+       0.031,
+       0.006
+      ],
+      "a2_seg_1_tip": [
+       -0.069,
+       -0.046,
+       0.006
+      ],
+      "a3_seg_1_tip": [
+       0.014,
+       -0.082,
+       0.006
+      ],
+      "a4_seg_1_tip": [
+       0.078,
+       -0.027,
+       0.006
+      ],
+      "a5_seg_1_tip": [
+       0.071,
+       0.043,
+       0.006
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      -0.006
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      -10.9
+     ],
+     "size": {
+      "tip_L": 0.531,
+      "base_L": 0.038,
+      "turn_deg": 10.9,
+      "joint_range_share": 0.19
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.002,
+       0.042,
+       0.001
+      ],
+      "a1_seg_1_tip": [
+       -0.038,
+       0.017,
+       0.001
+      ],
+      "a2_seg_1_tip": [
+       -0.036,
+       -0.021,
+       0.001
+      ],
+      "a3_seg_1_tip": [
+       0.005,
+       -0.041,
+       0.001
+      ],
+      "a4_seg_1_tip": [
+       0.039,
+       -0.015,
+       0.001
+      ],
+      "a5_seg_1_tip": [
+       0.037,
+       0.02,
+       0.001
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      -0.001
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      -5.4
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.002,
+       -0.041,
+       0.001
+      ],
+      "a1_seg_1_tip": [
+       0.036,
+       -0.021,
+       0.001
+      ],
+      "a2_seg_1_tip": [
+       0.038,
+       0.018,
+       0.001
+      ],
+      "a3_seg_1_tip": [
+       -0.001,
+       0.042,
+       0.001
+      ],
+      "a4_seg_1_tip": [
+       -0.037,
+       0.019,
+       0.001
+      ],
+      "a5_seg_1_tip": [
+       -0.038,
+       -0.016,
+       0.001
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      -0.0,
+      -0.0,
+      -0.001
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      5.4
+     ]
+    },
+    "1": {
+     "tips": {
+      "a0_seg_1_tip": [
+       -0.008,
+       -0.083,
+       0.006
+      ],
+      "a1_seg_1_tip": [
+       0.07,
+       -0.045,
+       0.006
+      ],
+      "a2_seg_1_tip": [
+       0.077,
+       0.032,
+       0.006
+      ],
+      "a3_seg_1_tip": [
+       0.002,
+       0.083,
+       0.006
+      ],
+      "a4_seg_1_tip": [
+       -0.072,
+       0.041,
+       0.006
+      ],
+      "a5_seg_1_tip": [
+       -0.078,
+       -0.028,
+       0.006
+      ]
+     },
+     "clear": {
+      "self": 0.0157,
+      "ground": 0.0157
+     },
+     "fail": [],
+     "base": [
+      -0.0,
+      -0.0,
+      -0.006
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      10.9
+     ],
+     "size": {
+      "tip_L": 0.531,
+      "base_L": 0.038,
+      "turn_deg": 10.9,
+      "joint_range_share": 0.19
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  }
+ ],
+ "gaits": [
+  {
+   "name": "wave",
+   "cycle_s": 1.52,
+   "duty": 0.84,
+   "phase": {
+    "a0_seg_1_tip": 0.0,
+    "a1_seg_1_tip": 0.333333,
+    "a2_seg_1_tip": 0.666667,
+    "a3_seg_1_tip": 0.166667,
+    "a4_seg_1_tip": 0.5,
+    "a5_seg_1_tip": 0.833333
+   },
+   "step_L": 0.35,
+   "swing_height_L": 0.2,
+   "source": "llm",
+   "card": {
+    "forward": {
+     "advance_L": 0.828,
+     "side_L": -0.0,
+     "turn_deg": 0.0
+    },
+    "turn": {
+     "advance_L": -0.0,
+     "side_L": -0.0,
+     "turn_deg": 15.9
+    },
+    "lifts": {
+     "a0_seg_1_tip": 6,
+     "a1_seg_1_tip": 6,
+     "a2_seg_1_tip": 6,
+     "a3_seg_1_tip": 6,
+     "a4_seg_1_tip": 6,
+     "a5_seg_1_tip": 8
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": 0
+  },
+  {
+   "name": "alternating_tripod",
+   "cycle_s": 1.0128,
+   "duty": 0.65,
+   "phase": {
+    "a0_seg_1_tip": 0.0,
+    "a1_seg_1_tip": 0.5,
+    "a2_seg_1_tip": 0.0,
+    "a3_seg_1_tip": 0.5,
+    "a4_seg_1_tip": 0.0,
+    "a5_seg_1_tip": 0.5
+   },
+   "step_L": 0.4,
+   "swing_height_L": 0.22,
+   "source": "llm",
+   "card": {
+    "forward": {
+     "advance_L": 1.292,
+     "side_L": 0.0,
+     "turn_deg": 0.0
+    },
+    "turn": {
+     "advance_L": 0.0,
+     "side_L": 0.0,
+     "turn_deg": 23.4
+    },
+    "lifts": {
+     "a0_seg_1_tip": 7,
+     "a1_seg_1_tip": 8,
+     "a2_seg_1_tip": 7,
+     "a3_seg_1_tip": 8,
+     "a4_seg_1_tip": 7,
+     "a5_seg_1_tip": 8
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": 0
+  },
+  {
+   "name": "omnidirectional_tripod_walk",
+   "cycle_s": 1.14,
+   "duty": {
+    "a0_seg_1_tip": 0.6053,
+    "a1_seg_1_tip": 0.6053,
+    "a2_seg_1_tip": 0.6053,
+    "a3_seg_1_tip": 0.6053,
+    "a4_seg_1_tip": 0.6053,
+    "a5_seg_1_tip": 0.6053
+   },
+   "phase": {
+    "a0_seg_1_tip": 0.0,
+    "a1_seg_1_tip": 0.5,
+    "a2_seg_1_tip": 0.0,
+    "a3_seg_1_tip": 0.5,
+    "a4_seg_1_tip": 0.0,
+    "a5_seg_1_tip": 0.5
+   },
+   "step_L": 0.25,
+   "swing_height_L": 0.15,
+   "source": "intake",
+   "card": {
+    "forward": {
+     "advance_L": 0.967,
+     "side_L": 0.0,
+     "turn_deg": 0.0
+    },
+    "turn": {
+     "advance_L": 0.001,
+     "side_L": 0.0,
+     "turn_deg": 19.4
+    },
+    "lifts": {
+     "a0_seg_1_tip": 8,
+     "a1_seg_1_tip": 8,
+     "a2_seg_1_tip": 8,
+     "a3_seg_1_tip": 8,
+     "a4_seg_1_tip": 8,
+     "a5_seg_1_tip": 8
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": null
+  },
+  {
+   "name": "alternating",
+   "cycle_s": 0.3166,
+   "duty": {
+    "a0_seg_1_tip": 0.6,
+    "a1_seg_1_tip": 0.6,
+    "a2_seg_1_tip": 0.6,
+    "a3_seg_1_tip": 0.6,
+    "a4_seg_1_tip": 0.6,
+    "a5_seg_1_tip": 0.6
+   },
+   "phase": {
+    "a0_seg_1_tip": 0.5,
+    "a1_seg_1_tip": 0.0,
+    "a2_seg_1_tip": 0.5,
+    "a3_seg_1_tip": 0.0,
+    "a4_seg_1_tip": 0.5,
+    "a5_seg_1_tip": 0.0
+   },
+   "step_L": 0.25,
+   "swing_height_L": 0.15,
+   "source": "intake",
+   "card": {
+    "forward": {
+     "advance_L": 0.922,
+     "side_L": -0.0,
+     "turn_deg": -0.0
+    },
+    "turn": {
+     "advance_L": -0.003,
+     "side_L": -0.002,
+     "turn_deg": 18.1
+    },
+    "lifts": {
+     "a0_seg_1_tip": 8,
+     "a1_seg_1_tip": 7,
+     "a2_seg_1_tip": 8,
+     "a3_seg_1_tip": 7,
+     "a4_seg_1_tip": 8,
+     "a5_seg_1_tip": 7
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": null
+  }
+ ],
+ "rejected": {
+  "modes": [
+   {
+    "name": "trunk_pitch",
+    "part": "trunk",
+    "plus": "Pitch the trunk about positive y, lowering its forward side, with coupled positive yaw.",
+    "minus": "Pitch the trunk about negative y, raising its forward side, with coupled positive yaw.",
+    "toward": {
+     "a0_bend_0": -0.06,
+     "a0_bend_1": -0.1,
+     "a1_bend_0": -0.0275,
+     "a1_bend_1": -0.045,
+     "a5_bend_0": -0.026,
+     "a5_bend_1": -0.043,
+     "a3_bend_0": 0.09,
+     "a3_bend_1": -0.04,
+     "a2_bend_0": 0.0425,
+     "a2_bend_1": -0.019,
+     "a4_bend_0": 0.0375,
+     "a4_bend_1": -0.0165
+    },
+    "away": {
+     "a0_bend_0": 0.09,
+     "a0_bend_1": -0.04,
+     "a1_bend_0": 0.041,
+     "a1_bend_1": -0.018,
+     "a5_bend_0": 0.0385,
+     "a5_bend_1": -0.017,
+     "a3_bend_0": -0.06,
+     "a3_bend_1": -0.1,
+     "a2_bend_0": -0.028,
+     "a2_bend_1": -0.047,
+     "a4_bend_0": -0.025,
+     "a4_bend_1": -0.0415
+    },
+    "cards": {
+     "-1": {
+      "tips": {
+       "a0_seg_1_tip": [
+        -0.016,
+        0.079,
+        -0.027
+       ],
+       "a1_seg_1_tip": [
+        -0.083,
+        0.028,
+        -0.012
+       ],
+       "a2_seg_1_tip": [
+        -0.075,
+        -0.046,
+        0.019
+       ],
+       "a3_seg_1_tip": [
+        0.008,
+        -0.082,
+        0.041
+       ],
+       "a4_seg_1_tip": [
+        0.07,
+        -0.029,
+        0.017
+       ],
+       "a5_seg_1_tip": [
+        0.062,
+        0.04,
+        -0.011
+       ]
+      },
+      "clear": {
+       "self": 0.0157,
+       "ground": 0.0157
+      },
+      "fail": [],
+      "base": [
+       -0.005,
+       0.001,
+       -0.004
+      ],
+      "rpy_deg": [
+       0.8,
+       -4.4,
+       -10.7
+      ],
+      "size": {
+       "tip_L": 0.585,
+       "base_L": 0.041,
+       "turn_deg": 10.7,
+       "joint_range_share": 0.5
+      }
+     },
+     "-0.5": {
+      "tips": {
+       "a0_seg_1_tip": [
+        -0.012,
+        0.07,
+        -0.014
+       ],
+       "a1_seg_1_tip": [
+        -0.072,
+        0.026,
+        -0.006
+       ],
+       "a2_seg_1_tip": [
+        -0.066,
+        -0.04,
+        0.01
+       ],
+       "a3_seg_1_tip": [
+        0.006,
+        -0.072,
+        0.021
+       ],
+       "a4_seg_1_tip": [
+        0.062,
+        -0.026,
+        0.009
+       ],
+       "a5_seg_1_tip": [
+        0.056,
+        0.035,
+        -0.006
+       ]
+      },
+      "clear": {
+       "self": 0.0157,
+       "ground": 0.0157
+      },
+      "fail": [],
+      "base": [
+       -0.001,
+       0.0,
+       -0.002
+      ],
+      "rpy_deg": [
+       0.4,
+       -2.2,
+       -9.4
+      ]
+     },
+     "0.5": {
+      "tips": {
+       "a0_seg_1_tip": [
+        -0.001,
+        0.072,
+        0.021
+       ],
+       "a1_seg_1_tip": [
+        -0.06,
+        0.029,
+        0.01
+       ],
+       "a2_seg_1_tip": [
+        -0.054,
+        -0.037,
+        -0.006
+       ],
+       "a3_seg_1_tip": [
+        0.017,
+        -0.068,
+        -0.014
+       ],
+       "a4_seg_1_tip": [
+        0.072,
+        -0.023,
+        -0.006
+       ],
+       "a5_seg_1_tip": [
+        0.067,
+        0.037,
+        0.009
+       ]
+      },
+      "clear": {
+       "self": 0.0157,
+       "ground": 0.0157
+      },
+      "fail": [],
+      "base": [
+       0.001,
+       -0.001,
+       -0.002
+      ],
+      "rpy_deg": [
+       -0.4,
+       2.2,
+       -9.3
+      ]
+     },
+     "1": {
+      "tips": {
+       "a0_seg_1_tip": [
+        -0.002,
+        0.083,
+        0.041
+       ],
+       "a1_seg_1_tip": [
+        -0.069,
+        0.033,
+        0.019
+       ],
+       "a2_seg_1_tip": [
+        -0.061,
+        -0.042,
+        -0.012
+       ],
+       "a3_seg_1_tip": [
+        0.022,
+        -0.078,
+        -0.027
+       ],
+       "a4_seg_1_tip": [
+        0.085,
+        -0.024,
+        -0.011
+       ],
+       "a5_seg_1_tip": [
+        0.077,
+        0.044,
+        0.018
+       ]
+      },
+      "clear": {
+       "self": 0.0157,
+       "ground": 0.0157
+      },
+      "fail": [],
+      "base": [
+       0.005,
+       -0.001,
+       -0.004
+      ],
+      "rpy_deg": [
+       -0.9,
+       4.4,
+       -10.7
+      ],
+      "size": {
+       "tip_L": 0.589,
+       "base_L": 0.041,
+       "turn_deg": 10.7,
+       "joint_range_share": 0.5
+      }
+     }
+    },
+    "valid": true,
+    "fail": [],
+    "small": false,
+    "round": 1,
+    "kept": false,
+    "why": "no coverage loss without it"
+   }
+  ],
+  "gaits": [
+   {
+    "name": "crawl",
+    "cycle_s": 1.8996,
+    "duty": {
+     "a0_seg_1_tip": 0.8667,
+     "a1_seg_1_tip": 0.8667,
+     "a2_seg_1_tip": 0.8667,
+     "a3_seg_1_tip": 0.8667,
+     "a4_seg_1_tip": 0.8667,
+     "a5_seg_1_tip": 0.8667
+    },
+    "phase": {
+     "a0_seg_1_tip": 0.3333,
+     "a1_seg_1_tip": 0.1667,
+     "a2_seg_1_tip": 0.0,
+     "a3_seg_1_tip": 0.5,
+     "a4_seg_1_tip": 0.6667,
+     "a5_seg_1_tip": 0.8333
+    },
+    "step_L": 0.25,
+    "swing_height_L": 0.15,
+    "source": "intake",
+    "card": {
+     "forward": {
+      "advance_L": 0.637,
+      "side_L": -0.0,
+      "turn_deg": -0.0
+     },
+     "turn": {
+      "advance_L": -0.0,
+      "side_L": 0.0,
+      "turn_deg": 1.6
+     },
+     "lifts": {
+      "a0_seg_1_tip": 4,
+      "a1_seg_1_tip": 4,
+      "a2_seg_1_tip": 4,
+      "a3_seg_1_tip": 6,
+      "a4_seg_1_tip": 6,
+      "a5_seg_1_tip": 6
+     }
+    },
+    "valid": false,
+    "fail": [
+     "moves: the turn turned 1.6 deg (at least 15.0 needed)"
+    ],
+    "round": null
+   }
+  ]
+ },
+ "coverage": {
+  "a0_seg_1_tip": 0.4587,
+  "a1_seg_1_tip": 0.4924,
+  "a2_seg_1_tip": 0.4832,
+  "a3_seg_1_tip": 0.4575,
+  "a4_seg_1_tip": 0.4954,
+  "a5_seg_1_tip": 0.4849
+ },
+ "coverage_valid": {
+  "a0_seg_1_tip": 0.4626,
+  "a1_seg_1_tip": 0.4956,
+  "a2_seg_1_tip": 0.4844,
+  "a3_seg_1_tip": 0.4697,
+  "a4_seg_1_tip": 0.4905,
+  "a5_seg_1_tip": 0.4832
+ },
+ "coverage_ceiling": {
+  "a0_seg_1_tip": 0.9072,
+  "a1_seg_1_tip": 0.9036,
+  "a2_seg_1_tip": 0.9041,
+  "a3_seg_1_tip": 0.9114,
+  "a4_seg_1_tip": 0.9053,
+  "a5_seg_1_tip": 0.9058
+ },
+ "selection": [
+  {
+   "start": [
+    "a0_tip_sweep",
+    "a0_tip_radial",
+    "a0_tip_raise",
+    "a1_tip_sweep",
+    "a1_tip_radial",
+    "a1_tip_raise",
+    "a2_tip_sweep",
+    "a2_tip_radial",
+    "a2_tip_raise",
+    "a3_tip_sweep",
+    "a3_tip_radial",
+    "a3_tip_raise",
+    "a4_tip_sweep",
+    "a4_tip_radial",
+    "a4_tip_raise",
+    "a5_tip_sweep",
+    "a5_tip_radial",
+    "a5_tip_raise",
+    "trunk_forward",
+    "trunk_left",
+    "trunk_lower",
+    "trunk_roll",
+    "trunk_pitch",
+    "trunk_yaw"
+   ],
+   "mean_coverage": 0.481
+  },
+  {
+   "drop": "trunk_pitch",
+   "mean_coverage": 0.4787,
+   "loss": 0.0023
+  }
+ ],
+ "counts": {
+  "modes_final": 24,
+  "modes_valid": 24,
+  "modes_usable": 24,
+  "modes_kept": 23,
+  "gaits_llm_valid": 2,
+  "gaits_llm": 2,
+  "gaits_intake_valid": 2,
+  "gaits_intake": 3,
+  "modes_proposed": 24
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "modes": 24,
+   "modes_valid": 22,
+   "modes_small": 0,
+   "gaits": 2,
+   "gaits_valid": 2
+  },
+  {
+   "round": 1,
+   "modes": 2,
+   "modes_valid": 2,
+   "modes_small": 0,
+   "gaits": 0,
+   "gaits_valid": 0
+  }
+ ],
+ "calls": 2,
+ "cost_usd": 0.046867,
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "prompt_sha": "6d1d19d0e639",
+ "description_sha": "a53ef9059cba",
+ "seconds": 128.5,
+ "made": "2026-11-12T02:23:15",
+ "method": "track/kin/primitives.py (see its docstring)"
+}

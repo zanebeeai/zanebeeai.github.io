@@ -1,0 +1,570 @@
+{
+ "body": "universal_robots_ur5e",
+ "kind": "arm",
+ "free_base": false,
+ "L": 0.955,
+ "T": 0.31201,
+ "modes": [
+  {
+   "name": "arm_sweep_right",
+   "part": "wrist_3_link_tip",
+   "plus": "Sweeps the tip predominantly right, with a backward component.",
+   "minus": "Sweeps the tip forward and right around the shoulder.",
+   "toward": {
+    "shoulder_pan_joint": 0.3
+   },
+   "away": {
+    "shoulder_pan_joint": -0.3
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "wrist_3_link_tip": [
+       0.572,
+       -0.232,
+       -0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.646,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.11
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "wrist_3_link_tip": [
+       0.325,
+       -0.019,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.367,
+       -0.399,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.167,
+       -0.903,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.962,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.19
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving shoulder_pan_joint",
+   "kept": true
+  },
+  {
+   "name": "arm_raise",
+   "part": "wrist_3_link_tip",
+   "plus": "Raises the tip while sweeping it right through the shoulder's vertical arc.",
+   "minus": "Lowers the tip and shifts it left through a shorter shoulder arc.",
+   "toward": {
+    "shoulder_lift_joint": -0.3
+   },
+   "away": {
+    "shoulder_lift_joint": 0.04
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "wrist_3_link_tip": [
+       0.0,
+       0.08,
+       -0.16
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.187,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.025
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "wrist_3_link_tip": [
+       0.0,
+       0.046,
+       -0.077
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.0,
+       -0.309,
+       0.227
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.0,
+       -0.693,
+       0.221
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.762,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.11
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving shoulder_lift_joint",
+   "kept": true
+  },
+  {
+   "name": "forearm_raise",
+   "part": "wrist_3_link_tip",
+   "plus": "Raises the tip substantially and shifts it right by bending the elbow.",
+   "minus": "Lowers the tip and shifts it slightly right by extending the elbow.",
+   "toward": {
+    "elbow_joint": -0.3
+   },
+   "away": {
+    "elbow_joint": 0.3
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.0,
+       -0.074,
+       -0.191
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.214,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.07
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.0,
+       -0.027,
+       -0.1
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.0,
+       -0.059,
+       0.327
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.0,
+       -0.31,
+       0.544
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.656,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.23
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving elbow_joint",
+   "kept": true
+  },
+  {
+   "name": "wrist_bend_right",
+   "part": "wrist_3_link_tip",
+   "plus": "Arcs the tip right around the first wrist joint, ending slightly higher.",
+   "minus": "Arcs the tip upward around the first wrist joint.",
+   "toward": {
+    "wrist_1_joint": 0.3
+   },
+   "away": {
+    "wrist_1_joint": -0.3
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "wrist_3_link_tip": [
+       0.0,
+       0.004,
+       0.155
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.162,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.11
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "wrist_3_link_tip": [
+       0.0,
+       0.028,
+       0.077
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.0,
+       -0.129,
+       -0.045
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.0,
+       -0.225,
+       0.052
+      ]
+     },
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.242,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.19
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving wrist_1_joint",
+   "kept": true
+  },
+  {
+   "name": "wrist_bend_backward",
+   "part": "wrist_3_link_tip",
+   "plus": "Moves the tip backward and upward around the second wrist joint.",
+   "minus": "Moves the tip forward and upward around the second wrist joint.",
+   "toward": {
+    "wrist_2_joint": 0.3
+   },
+   "away": {
+    "wrist_2_joint": -0.3
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "wrist_3_link_tip": [
+       0.077,
+       -0.0,
+       0.059
+      ]
+     },
+     "clear": {
+      "self": 0.0222,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.102,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.11
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "wrist_3_link_tip": [
+       0.048,
+       -0.0,
+       0.016
+      ]
+     },
+     "clear": {
+      "self": 0.0381,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.072,
+       0.0,
+       0.045
+      ]
+     },
+     "clear": {
+      "self": 0.0515,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "wrist_3_link_tip": [
+       -0.063,
+       -0.0,
+       0.13
+      ]
+     },
+     "clear": {
+      "self": 0.051,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.151,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.19
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving wrist_2_joint",
+   "kept": true
+  },
+  {
+   "name": "wrist_axial_rotate",
+   "part": "wrist_3_link_tip",
+   "plus": "Rotates the terminal wrist in the positive joint direction without translating the tip.",
+   "minus": "Rotates the terminal wrist in the negative joint direction without translating the tip.",
+   "toward": {
+    "wrist_3_joint": 1.0
+   },
+   "away": {
+    "wrist_3_joint": -1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {},
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    },
+    "-0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {},
+     "clear": {
+      "self": 0.0476,
+      "ground": 0.003
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving wrist_3_joint",
+   "kept": true
+  }
+ ],
+ "gaits": [],
+ "rejected": {
+  "modes": [],
+  "gaits": []
+ },
+ "coverage": {
+  "wrist_3_link_tip": 0.2273
+ },
+ "coverage_valid": {
+  "wrist_3_link_tip": 0.2273
+ },
+ "coverage_ceiling": {
+  "wrist_3_link_tip": 0.8914
+ },
+ "selection": [
+  {
+   "start": [
+    "arm_sweep_right",
+    "arm_raise",
+    "forearm_raise",
+    "wrist_bend_right",
+    "wrist_bend_backward",
+    "wrist_axial_rotate"
+   ],
+   "mean_coverage": 0.2273
+  }
+ ],
+ "counts": {
+  "modes_final": 6,
+  "modes_valid": 6,
+  "modes_usable": 6,
+  "modes_kept": 6,
+  "gaits_llm_valid": 0,
+  "gaits_llm": 0,
+  "gaits_intake_valid": 0,
+  "gaits_intake": 0,
+  "modes_proposed": 6
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "modes": 6,
+   "modes_valid": 6,
+   "modes_small": 0,
+   "gaits": 0,
+   "gaits_valid": 0
+  }
+ ],
+ "calls": 1,
+ "cost_usd": 0.007527,
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "prompt_sha": "6d1d19d0e639",
+ "description_sha": "23a9041a465a",
+ "seconds": 41.8,
+ "made": "2026-11-12T02:20:44",
+ "method": "track/kin/primitives.py (see its docstring)"
+}

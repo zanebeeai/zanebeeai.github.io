@@ -1,0 +1,2143 @@
+{
+ "name": "v3_six_arm_crawler_s3103",
+ "xml": "track/bodies/v3_six_arm_crawler_s3103.xml",
+ "source_model": "any-robot/assets/general/v3_walkers/v3_six_arm_crawler_s3103/robot.xml",
+ "source_sha256": "db62a010f0ef08c3fb3f999c9bf27e087932dccc0f7cc7fce60afd65aedeac3d",
+ "nq": 31,
+ "nv": 30,
+ "nu": 24,
+ "timestep": 0.002,
+ "free_base": true,
+ "root_body": "hub",
+ "mass_kg": 7.0512,
+ "joints": [
+  {
+   "name": "root",
+   "type": "free",
+   "body": "hub",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": null,
+   "limited": null,
+   "object": false
+  },
+  {
+   "name": "a0_sweep_0",
+   "type": "hinge",
+   "body": "a0_seg_0",
+   "qposadr": 7,
+   "dofadr": 6,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a0_bend_0",
+   "type": "hinge",
+   "body": "a0_seg_0",
+   "qposadr": 8,
+   "dofadr": 7,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a0_sweep_1",
+   "type": "hinge",
+   "body": "a0_seg_1",
+   "qposadr": 9,
+   "dofadr": 8,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a0_bend_1",
+   "type": "hinge",
+   "body": "a0_seg_1",
+   "qposadr": 10,
+   "dofadr": 9,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a1_sweep_0",
+   "type": "hinge",
+   "body": "a1_seg_0",
+   "qposadr": 11,
+   "dofadr": 10,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a1_bend_0",
+   "type": "hinge",
+   "body": "a1_seg_0",
+   "qposadr": 12,
+   "dofadr": 11,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a1_sweep_1",
+   "type": "hinge",
+   "body": "a1_seg_1",
+   "qposadr": 13,
+   "dofadr": 12,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a1_bend_1",
+   "type": "hinge",
+   "body": "a1_seg_1",
+   "qposadr": 14,
+   "dofadr": 13,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a2_sweep_0",
+   "type": "hinge",
+   "body": "a2_seg_0",
+   "qposadr": 15,
+   "dofadr": 14,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a2_bend_0",
+   "type": "hinge",
+   "body": "a2_seg_0",
+   "qposadr": 16,
+   "dofadr": 15,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a2_sweep_1",
+   "type": "hinge",
+   "body": "a2_seg_1",
+   "qposadr": 17,
+   "dofadr": 16,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a2_bend_1",
+   "type": "hinge",
+   "body": "a2_seg_1",
+   "qposadr": 18,
+   "dofadr": 17,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a3_sweep_0",
+   "type": "hinge",
+   "body": "a3_seg_0",
+   "qposadr": 19,
+   "dofadr": 18,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a3_bend_0",
+   "type": "hinge",
+   "body": "a3_seg_0",
+   "qposadr": 20,
+   "dofadr": 19,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a3_sweep_1",
+   "type": "hinge",
+   "body": "a3_seg_1",
+   "qposadr": 21,
+   "dofadr": 20,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a3_bend_1",
+   "type": "hinge",
+   "body": "a3_seg_1",
+   "qposadr": 22,
+   "dofadr": 21,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a4_sweep_0",
+   "type": "hinge",
+   "body": "a4_seg_0",
+   "qposadr": 23,
+   "dofadr": 22,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a4_bend_0",
+   "type": "hinge",
+   "body": "a4_seg_0",
+   "qposadr": 24,
+   "dofadr": 23,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a4_sweep_1",
+   "type": "hinge",
+   "body": "a4_seg_1",
+   "qposadr": 25,
+   "dofadr": 24,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a4_bend_1",
+   "type": "hinge",
+   "body": "a4_seg_1",
+   "qposadr": 26,
+   "dofadr": 25,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a5_sweep_0",
+   "type": "hinge",
+   "body": "a5_seg_0",
+   "qposadr": 27,
+   "dofadr": 26,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a5_bend_0",
+   "type": "hinge",
+   "body": "a5_seg_0",
+   "qposadr": 28,
+   "dofadr": 27,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a5_sweep_1",
+   "type": "hinge",
+   "body": "a5_seg_1",
+   "qposadr": 29,
+   "dofadr": 28,
+   "range": [
+    -0.9,
+    0.9
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "a5_bend_1",
+   "type": "hinge",
+   "body": "a5_seg_1",
+   "qposadr": 30,
+   "dofadr": 29,
+   "range": [
+    -1.2,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  }
+ ],
+ "actuators": [
+  {
+   "name": "a0_sweep_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a0_sweep_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "a0_bend_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a0_bend_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "a0_sweep_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a0_sweep_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "a0_bend_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a0_bend_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "a1_sweep_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a1_sweep_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "a1_bend_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a1_bend_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "a1_sweep_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a1_sweep_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  },
+  {
+   "name": "a1_bend_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a1_bend_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C7"
+  },
+  {
+   "name": "a2_sweep_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a2_sweep_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C8"
+  },
+  {
+   "name": "a2_bend_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a2_bend_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C9"
+  },
+  {
+   "name": "a2_sweep_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a2_sweep_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C10"
+  },
+  {
+   "name": "a2_bend_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a2_bend_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C11"
+  },
+  {
+   "name": "a3_sweep_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a3_sweep_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C12"
+  },
+  {
+   "name": "a3_bend_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a3_bend_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C13"
+  },
+  {
+   "name": "a3_sweep_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a3_sweep_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C14"
+  },
+  {
+   "name": "a3_bend_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a3_bend_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C15"
+  },
+  {
+   "name": "a4_sweep_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a4_sweep_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C16"
+  },
+  {
+   "name": "a4_bend_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a4_bend_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C17"
+  },
+  {
+   "name": "a4_sweep_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a4_sweep_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C18"
+  },
+  {
+   "name": "a4_bend_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a4_bend_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C19"
+  },
+  {
+   "name": "a5_sweep_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a5_sweep_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C20"
+  },
+  {
+   "name": "a5_bend_0_servo",
+   "transmission": "joint",
+   "joints": [
+    "a5_bend_0"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C21"
+  },
+  {
+   "name": "a5_sweep_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a5_sweep_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.9,
+    0.9
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C22"
+  },
+  {
+   "name": "a5_bend_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "a5_bend_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.2,
+    1.2
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 50.0,
+   "bias": [
+    0.0,
+    -50.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C23"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  0.0,
+  0.182047,
+  1.0,
+  0.0,
+  0.0,
+  0.0,
+  -0.0,
+  -0.221376,
+  0.0,
+  1.08,
+  0.0,
+  -0.221376,
+  -0.0,
+  1.08,
+  0.0,
+  -0.221376,
+  -0.0,
+  1.08,
+  0.0,
+  -0.221376,
+  -0.0,
+  1.08,
+  -0.0,
+  -0.221376,
+  0.0,
+  1.08,
+  -0.0,
+  -0.221376,
+  0.0,
+  1.08
+ ],
+ "L": 0.15733,
+ "T": 0.12664,
+ "L_is": "standing CoM height (m)",
+ "tips": [
+  {
+   "name": "a0_seg_1_tip",
+   "body": "a0_seg_1",
+   "rigby_id": "T0",
+   "joints": [
+    "a0_sweep_0",
+    "a0_bend_0",
+    "a0_sweep_1",
+    "a0_bend_1"
+   ],
+   "home_base_m": [
+    0.4383,
+    -0.0018,
+    -0.162
+   ],
+   "home_world_m": [
+    0.4383,
+    -0.0018,
+    0.02
+   ],
+   "reach_box_base_m": {
+    "min": [
+     0.0229,
+     -0.3436,
+     -0.4168
+    ],
+    "max": [
+     0.5154,
+     0.3442,
+     0.3392
+    ]
+   },
+   "reach_m": 0.3954,
+   "first_joint_anchor_base_m": [
+    0.1214,
+    -0.0005,
+    -0.04
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "a0_sweep_0": -0.0052,
+      "a0_bend_0": 0.8629,
+      "a0_sweep_1": -0.0026,
+      "a0_bend_1": 0.5053
+     },
+     "share_of_motion": 0.711,
+     "tip_motion_per_unit_at_home_m": [
+      -0.2246,
+      -0.0008,
+      -0.4129
+     ]
+    },
+    {
+     "weights": {
+      "a0_sweep_0": 0.8704,
+      "a0_bend_0": 0.0012,
+      "a0_sweep_1": 0.4923,
+      "a0_bend_1": 0.0094
+     },
+     "share_of_motion": 0.256,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0008,
+      0.2929,
+      -0.002
+     ]
+    },
+    {
+     "weights": {
+      "a0_sweep_0": 0.0083,
+      "a0_bend_0": -0.5051,
+      "a0_sweep_1": -0.03,
+      "a0_bend_1": 0.8625
+     },
+     "share_of_motion": 0.021,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0936,
+      0.0,
+      0.0474
+     ]
+    }
+   ]
+  },
+  {
+   "name": "a1_seg_1_tip",
+   "body": "a1_seg_1",
+   "rigby_id": "T1",
+   "joints": [
+    "a1_sweep_0",
+    "a1_bend_0",
+    "a1_sweep_1",
+    "a1_bend_1"
+   ],
+   "home_base_m": [
+    0.1989,
+    0.3905,
+    -0.162
+   ],
+   "home_world_m": [
+    0.1989,
+    0.3905,
+    0.02
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.1971,
+     -0.0006,
+     -0.4147
+    ],
+    "max": [
+     0.4408,
+     0.5031,
+     0.3413
+    ]
+   },
+   "reach_m": 0.3954,
+   "first_joint_anchor_base_m": [
+    0.0551,
+    0.1082,
+    -0.04
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "a1_sweep_0": -0.0037,
+      "a1_bend_0": 0.8636,
+      "a1_sweep_1": -0.0006,
+      "a1_bend_1": 0.5041
+     },
+     "share_of_motion": 0.706,
+     "tip_motion_per_unit_at_home_m": [
+      -0.1009,
+      -0.2005,
+      -0.413
+     ]
+    },
+    {
+     "weights": {
+      "a1_sweep_0": 0.8728,
+      "a1_bend_0": 0.0048,
+      "a1_sweep_1": 0.4881,
+      "a1_bend_1": -0.0013
+     },
+     "share_of_motion": 0.264,
+     "tip_motion_per_unit_at_home_m": [
+      -0.2615,
+      0.1327,
+      -0.0016
+     ]
+    },
+    {
+     "weights": {
+      "a1_sweep_0": -0.0247,
+      "a1_bend_0": -0.5034,
+      "a1_sweep_1": 0.0513,
+      "a1_bend_1": 0.8622
+     },
+     "share_of_motion": 0.019,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0404,
+      -0.0847,
+      0.0468
+     ]
+    }
+   ]
+  },
+  {
+   "name": "a2_seg_1_tip",
+   "body": "a2_seg_1",
+   "rigby_id": "T2",
+   "joints": [
+    "a2_sweep_0",
+    "a2_bend_0",
+    "a2_sweep_1",
+    "a2_bend_1"
+   ],
+   "home_base_m": [
+    -0.2056,
+    0.3871,
+    -0.162
+   ],
+   "home_world_m": [
+    -0.2056,
+    0.3871,
+    0.02
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.4408,
+     -0.0076,
+     -0.4206
+    ],
+    "max": [
+     0.1841,
+     0.4956,
+     0.3356
+    ]
+   },
+   "reach_m": 0.3954,
+   "first_joint_anchor_base_m": [
+    -0.0569,
+    0.1072,
+    -0.04
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "a2_sweep_0": 0.0069,
+      "a2_bend_0": 0.8628,
+      "a2_sweep_1": -0.0011,
+      "a2_bend_1": 0.5055
+     },
+     "share_of_motion": 0.697,
+     "tip_motion_per_unit_at_home_m": [
+      0.1037,
+      -0.1992,
+      -0.4129
+     ]
+    },
+    {
+     "weights": {
+      "a2_sweep_0": 0.8808,
+      "a2_bend_0": -0.0087,
+      "a2_sweep_1": 0.4734,
+      "a2_bend_1": 0.0038
+     },
+     "share_of_motion": 0.272,
+     "tip_motion_per_unit_at_home_m": [
+      -0.26,
+      -0.1375,
+      0.0027
+     ]
+    },
+    {
+     "weights": {
+      "a2_sweep_0": -0.0035,
+      "a2_bend_0": -0.5055,
+      "a2_sweep_1": -0.0097,
+      "a2_bend_1": 0.8628
+     },
+     "share_of_motion": 0.021,
+     "tip_motion_per_unit_at_home_m": [
+      0.0456,
+      -0.0818,
+      0.0475
+     ]
+    }
+   ]
+  },
+  {
+   "name": "a3_seg_1_tip",
+   "body": "a3_seg_1",
+   "rigby_id": "T3",
+   "joints": [
+    "a3_sweep_0",
+    "a3_bend_0",
+    "a3_sweep_1",
+    "a3_bend_1"
+   ],
+   "home_base_m": [
+    -0.4372,
+    -0.0312,
+    -0.162
+   ],
+   "home_world_m": [
+    -0.4372,
+    -0.0312,
+    0.02
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.5118,
+     -0.3644,
+     -0.4202
+    ],
+    "max": [
+     -0.0332,
+     0.3255,
+     0.3404
+    ]
+   },
+   "reach_m": 0.3954,
+   "first_joint_anchor_base_m": [
+    -0.1211,
+    -0.0086,
+    -0.04
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "a3_sweep_0": -0.0083,
+      "a3_bend_0": 0.8627,
+      "a3_sweep_1": 0.0001,
+      "a3_bend_1": 0.5057
+     },
+     "share_of_motion": 0.704,
+     "tip_motion_per_unit_at_home_m": [
+      0.2239,
+      0.0184,
+      -0.4129
+     ]
+    },
+    {
+     "weights": {
+      "a3_sweep_0": 0.8719,
+      "a3_bend_0": 0.0103,
+      "a3_sweep_1": 0.4895,
+      "a3_bend_1": -0.0032
+     },
+     "share_of_motion": 0.264,
+     "tip_motion_per_unit_at_home_m": [
+      0.0217,
+      -0.2923,
+      -0.0034
+     ]
+    },
+    {
+     "weights": {
+      "a3_sweep_0": -0.0236,
+      "a3_bend_0": -0.5049,
+      "a3_sweep_1": 0.0584,
+      "a3_bend_1": 0.8609
+     },
+     "share_of_motion": 0.02,
+     "tip_motion_per_unit_at_home_m": [
+      0.093,
+      0.0081,
+      0.0476
+     ]
+    }
+   ]
+  },
+  {
+   "name": "a4_seg_1_tip",
+   "body": "a4_seg_1",
+   "rigby_id": "T4",
+   "joints": [
+    "a4_sweep_0",
+    "a4_bend_0",
+    "a4_sweep_1",
+    "a4_bend_1"
+   ],
+   "home_base_m": [
+    -0.1813,
+    -0.399,
+    -0.162
+   ],
+   "home_world_m": [
+    -0.1813,
+    -0.399,
+    0.02
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.4386,
+     -0.5045,
+     -0.4204
+    ],
+    "max": [
+     0.2242,
+     -0.0047,
+     0.3376
+    ]
+   },
+   "reach_m": 0.3954,
+   "first_joint_anchor_base_m": [
+    -0.0502,
+    -0.1105,
+    -0.04
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "a4_sweep_0": -0.0002,
+      "a4_bend_0": 0.8635,
+      "a4_sweep_1": 0.0005,
+      "a4_bend_1": 0.5043
+     },
+     "share_of_motion": 0.714,
+     "tip_motion_per_unit_at_home_m": [
+      0.0928,
+      0.2043,
+      -0.413
+     ]
+    },
+    {
+     "weights": {
+      "a4_sweep_0": 0.8661,
+      "a4_bend_0": 0.0005,
+      "a4_sweep_1": 0.4999,
+      "a4_bend_1": -0.001
+     },
+     "share_of_motion": 0.254,
+     "tip_motion_per_unit_at_home_m": [
+      0.2661,
+      -0.1211,
+      -0.0
+     ]
+    },
+    {
+     "weights": {
+      "a4_sweep_0": 0.0043,
+      "a4_bend_0": -0.5043,
+      "a4_sweep_1": -0.0052,
+      "a4_bend_1": 0.8635
+     },
+     "share_of_motion": 0.021,
+     "tip_motion_per_unit_at_home_m": [
+      0.0395,
+      0.0852,
+      0.0469
+     ]
+    }
+   ]
+  },
+  {
+   "name": "a5_seg_1_tip",
+   "body": "a5_seg_1",
+   "rigby_id": "T5",
+   "joints": [
+    "a5_sweep_0",
+    "a5_bend_0",
+    "a5_sweep_1",
+    "a5_bend_1"
+   ],
+   "home_base_m": [
+    0.1883,
+    -0.3958,
+    -0.162
+   ],
+   "home_world_m": [
+    0.1883,
+    -0.3958,
+    0.02
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.2048,
+     -0.5029,
+     -0.4191
+    ],
+    "max": [
+     0.4338,
+     0.0179,
+     0.3356
+    ]
+   },
+   "reach_m": 0.3954,
+   "first_joint_anchor_base_m": [
+    0.0522,
+    -0.1096,
+    -0.04
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "a5_sweep_0": 0.0025,
+      "a5_bend_0": 0.8638,
+      "a5_sweep_1": 0.0012,
+      "a5_bend_1": 0.5038
+     },
+     "share_of_motion": 0.713,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0957,
+      0.203,
+      -0.413
+     ]
+    },
+    {
+     "weights": {
+      "a5_sweep_0": 0.8723,
+      "a5_bend_0": 0.0034,
+      "a5_sweep_1": 0.4889,
+      "a5_bend_1": -0.0115
+     },
+     "share_of_motion": 0.253,
+     "tip_motion_per_unit_at_home_m": [
+      0.2654,
+      0.1244,
+      0.0006
+     ]
+    },
+    {
+     "weights": {
+      "a5_sweep_0": -0.0588,
+      "a5_bend_0": -0.4988,
+      "a5_sweep_1": 0.1286,
+      "a5_bend_1": 0.8551
+     },
+     "share_of_motion": 0.021,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0446,
+      0.0819,
+      0.0462
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "a0_seg_1_foot": [
+   4
+  ],
+  "a1_seg_1_foot": [
+   7
+  ],
+  "a2_seg_1_foot": [
+   10
+  ],
+  "a3_seg_1_foot": [
+   13
+  ],
+  "a4_seg_1_foot": [
+   16
+  ],
+  "a5_seg_1_foot": [
+   19
+  ],
+  "rest_of_body": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   8,
+   9,
+   11,
+   12,
+   14,
+   15,
+   17,
+   18
+  ],
+  "floor": [
+   0
+  ]
+ },
+ "link_group_names": {
+  "a0_seg_1_foot": [
+   "a0_seg_1"
+  ],
+  "a1_seg_1_foot": [
+   "a1_seg_1"
+  ],
+  "a2_seg_1_foot": [
+   "a2_seg_1"
+  ],
+  "a3_seg_1_foot": [
+   "a3_seg_1"
+  ],
+  "a4_seg_1_foot": [
+   "a4_seg_1"
+  ],
+  "a5_seg_1_foot": [
+   "a5_seg_1"
+  ],
+  "rest_of_body": [
+   "hub",
+   "a0_root",
+   "a0_seg_0",
+   "a1_root",
+   "a1_seg_0",
+   "a2_root",
+   "a2_seg_0",
+   "a3_root",
+   "a3_seg_0",
+   "a4_root",
+   "a4_seg_0",
+   "a5_root",
+   "a5_seg_0"
+  ],
+  "floor": [
+   "world"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ]
+ },
+ "contact_edges": [
+  [
+   "a0_seg_1_foot",
+   "floor"
+  ],
+  [
+   "a1_seg_1_foot",
+   "floor"
+  ],
+  [
+   "a2_seg_1_foot",
+   "floor"
+  ],
+  [
+   "a3_seg_1_foot",
+   "floor"
+  ],
+  [
+   "a4_seg_1_foot",
+   "floor"
+  ],
+  [
+   "a5_seg_1_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ]
+ ],
+ "stance_sets": [
+  {
+   "name": "all",
+   "tips": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ]
+  },
+  {
+   "name": "all_but_a0_seg_1_tip",
+   "tips": [
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ]
+  },
+  {
+   "name": "all_but_a1_seg_1_tip",
+   "tips": [
+    "a0_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ]
+  },
+  {
+   "name": "all_but_a2_seg_1_tip",
+   "tips": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ]
+  },
+  {
+   "name": "all_but_a3_seg_1_tip",
+   "tips": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a4_seg_1_tip",
+    "a5_seg_1_tip"
+   ]
+  },
+  {
+   "name": "all_but_a4_seg_1_tip",
+   "tips": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a5_seg_1_tip"
+   ]
+  },
+  {
+   "name": "all_but_a5_seg_1_tip",
+   "tips": [
+    "a0_seg_1_tip",
+    "a1_seg_1_tip",
+    "a2_seg_1_tip",
+    "a3_seg_1_tip",
+    "a4_seg_1_tip"
+   ]
+  }
+ ],
+ "balance": {
+  "support_tips": [
+   "a0_seg_1_tip",
+   "a1_seg_1_tip",
+   "a2_seg_1_tip",
+   "a3_seg_1_tip",
+   "a4_seg_1_tip",
+   "a5_seg_1_tip"
+  ],
+  "support_polygon_base_xy_m": [
+   [
+    -0.4372,
+    -0.0312
+   ],
+   [
+    -0.1813,
+    -0.399
+   ],
+   [
+    0.1883,
+    -0.3958
+   ],
+   [
+    0.4383,
+    -0.0018
+   ],
+   [
+    0.1989,
+    0.3905
+   ],
+   [
+    -0.2056,
+    0.3871
+   ]
+  ],
+  "com_home_base_m": [
+   0.0001,
+   -0.0028,
+   -0.0247
+  ],
+  "com_margin_home_m": 0.3688,
+  "about": "weight-shift coordinate: the base moves so the CoM moves toward a direction inside this polygon; a tip may lift once the CoM is inside the polygon of the others (dilated 0.1 L)"
+ },
+ "gaits": [
+  {
+   "name": "omnidirectional_tripod_walk",
+   "source": "rigby v7 library (docs/preprint/v7/libraries/v3_six_arm_crawler_s3103.json)",
+   "about": "Alternates the stable T0-T2-T4 and T1-T3-T5 tripods. Each airborne tripod advances while the planted tripod strokes backward; steering blends forward, lateral, and yaw strokes.",
+   "cycle_s": 1.14,
+   "phase": {
+    "a0_seg_1_tip": 0.0,
+    "a1_seg_1_tip": 0.5,
+    "a2_seg_1_tip": 0.0,
+    "a3_seg_1_tip": 0.5,
+    "a4_seg_1_tip": 0.0,
+    "a5_seg_1_tip": 0.5
+   },
+   "duty": {
+    "a0_seg_1_tip": 0.6053,
+    "a1_seg_1_tip": 0.6053,
+    "a2_seg_1_tip": 0.6053,
+    "a3_seg_1_tip": 0.6053,
+    "a4_seg_1_tip": 0.6053,
+    "a5_seg_1_tip": 0.6053
+   },
+   "duty_mean": 0.605,
+   "stacks": [
+    {
+     "t": 0.45,
+     "set": {
+      "C0": 0.0,
+      "C1": -0.15,
+      "C2": 0.0,
+      "C3": -0.15,
+      "C4": 0.0,
+      "C5": 0.5,
+      "C6": 0.0,
+      "C7": 0.5,
+      "C8": 0.0,
+      "C9": -0.15,
+      "C10": 0.0,
+      "C11": -0.15,
+      "C12": 0.0,
+      "C13": 0.5,
+      "C14": 0.0,
+      "C15": 0.5,
+      "C16": 0.0,
+      "C17": -0.15,
+      "C18": 0.0,
+      "C19": -0.15,
+      "C20": 0.0,
+      "C21": 0.5,
+      "C22": 0.0,
+      "C23": 0.5
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.5,
+      "C2": 0.0,
+      "C3": 0.5,
+      "C4": 0.0,
+      "C5": 0.5,
+      "C6": 0.0,
+      "C7": 0.5,
+      "C8": 0.0,
+      "C9": 0.5,
+      "C10": 0.0,
+      "C11": 0.5,
+      "C12": 0.0,
+      "C13": 0.5,
+      "C14": 0.0,
+      "C15": 0.5,
+      "C16": 0.0,
+      "C17": 0.5,
+      "C18": 0.0,
+      "C19": 0.5,
+      "C20": 0.0,
+      "C21": 0.5,
+      "C22": 0.0,
+      "C23": 0.5
+     }
+    },
+    {
+     "t": 0.45,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.5,
+      "C2": 0.0,
+      "C3": 0.5,
+      "C4": 0.0,
+      "C5": -0.15,
+      "C6": 0.0,
+      "C7": -0.15,
+      "C8": 0.0,
+      "C9": 0.5,
+      "C10": 0.0,
+      "C11": 0.5,
+      "C12": 0.0,
+      "C13": -0.15,
+      "C14": 0.0,
+      "C15": -0.15,
+      "C16": 0.0,
+      "C17": 0.5,
+      "C18": 0.0,
+      "C19": 0.5,
+      "C20": 0.0,
+      "C21": -0.15,
+      "C22": 0.0,
+      "C23": -0.15
+     }
+    },
+    {
+     "t": 0.12,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.5,
+      "C2": 0.0,
+      "C3": 0.5,
+      "C4": 0.0,
+      "C5": 0.5,
+      "C6": 0.0,
+      "C7": 0.5,
+      "C8": 0.0,
+      "C9": 0.5,
+      "C10": 0.0,
+      "C11": 0.5,
+      "C12": 0.0,
+      "C13": 0.5,
+      "C14": 0.0,
+      "C15": 0.5,
+      "C16": 0.0,
+      "C17": 0.5,
+      "C18": 0.0,
+      "C19": 0.5,
+      "C20": 0.0,
+      "C21": 0.5,
+      "C22": 0.0,
+      "C23": 0.5
+     }
+    }
+   ],
+   "steer": {
+    "forward": [
+     {
+      "C4": 0.2848,
+      "C6": 0.2848,
+      "C8": -0.2826,
+      "C10": -0.2826,
+      "C12": -0.0227,
+      "C14": -0.0227,
+      "C16": 0.2912,
+      "C18": 0.2912,
+      "C20": -0.289,
+      "C22": -0.289
+     },
+     {
+      "C4": 0.2848,
+      "C6": 0.2848,
+      "C8": -0.2826,
+      "C10": -0.2826,
+      "C12": -0.0227,
+      "C14": -0.0227,
+      "C16": 0.2912,
+      "C18": 0.2912,
+      "C20": -0.289,
+      "C22": -0.289
+     },
+     {
+      "C4": -0.2848,
+      "C6": -0.2848,
+      "C8": 0.2826,
+      "C10": 0.2826,
+      "C12": 0.0227,
+      "C14": 0.0227,
+      "C16": -0.2912,
+      "C18": -0.2912,
+      "C20": 0.289,
+      "C22": 0.289
+     },
+     {
+      "C4": -0.2848,
+      "C6": -0.2848,
+      "C8": 0.2826,
+      "C10": 0.2826,
+      "C12": 0.0227,
+      "C14": 0.0227,
+      "C16": -0.2912,
+      "C18": -0.2912,
+      "C20": 0.289,
+      "C22": 0.289
+     }
+    ],
+    "left": [
+     {
+      "C0": 0.32,
+      "C2": 0.32,
+      "C4": -0.1453,
+      "C6": -0.1453,
+      "C8": -0.1501,
+      "C10": -0.1501,
+      "C12": 0.319,
+      "C14": 0.319,
+      "C16": -0.1325,
+      "C18": -0.1325,
+      "C20": -0.1376,
+      "C22": -0.1376
+     },
+     {
+      "C0": 0.32,
+      "C2": 0.32,
+      "C4": -0.1453,
+      "C6": -0.1453,
+      "C8": -0.1501,
+      "C10": -0.1501,
+      "C12": 0.319,
+      "C14": 0.319,
+      "C16": -0.1325,
+      "C18": -0.1325,
+      "C20": -0.1376,
+      "C22": -0.1376
+     },
+     {
+      "C0": -0.32,
+      "C2": -0.32,
+      "C4": 0.1453,
+      "C6": 0.1453,
+      "C8": 0.1501,
+      "C10": 0.1501,
+      "C12": -0.319,
+      "C14": -0.319,
+      "C16": 0.1325,
+      "C18": 0.1325,
+      "C20": 0.1376,
+      "C22": 0.1376
+     },
+     {
+      "C0": -0.32,
+      "C2": -0.32,
+      "C4": 0.1453,
+      "C6": 0.1453,
+      "C8": 0.1501,
+      "C10": 0.1501,
+      "C12": -0.319,
+      "C14": -0.319,
+      "C16": 0.1325,
+      "C18": 0.1325,
+      "C20": 0.1376,
+      "C22": 0.1376
+     }
+    ],
+    "turn": [
+     {
+      "C0": -0.28,
+      "C2": -0.28,
+      "C4": 0.28,
+      "C6": 0.28,
+      "C8": -0.28,
+      "C10": -0.28,
+      "C12": 0.28,
+      "C14": 0.28,
+      "C16": -0.28,
+      "C18": -0.28,
+      "C20": 0.28,
+      "C22": 0.28
+     },
+     {
+      "C0": -0.28,
+      "C2": -0.28,
+      "C4": 0.28,
+      "C6": 0.28,
+      "C8": -0.28,
+      "C10": -0.28,
+      "C12": 0.28,
+      "C14": 0.28,
+      "C16": -0.28,
+      "C18": -0.28,
+      "C20": 0.28,
+      "C22": 0.28
+     },
+     {
+      "C0": 0.28,
+      "C2": 0.28,
+      "C4": -0.28,
+      "C6": -0.28,
+      "C8": 0.28,
+      "C10": 0.28,
+      "C12": -0.28,
+      "C14": -0.28,
+      "C16": 0.28,
+      "C18": 0.28,
+      "C20": -0.28,
+      "C22": -0.28
+     },
+     {
+      "C0": 0.28,
+      "C2": 0.28,
+      "C4": -0.28,
+      "C6": -0.28,
+      "C8": 0.28,
+      "C10": 0.28,
+      "C12": -0.28,
+      "C14": -0.28,
+      "C16": 0.28,
+      "C18": 0.28,
+      "C20": -0.28,
+      "C22": -0.28
+     }
+    ]
+   },
+   "channel_joint": {
+    "C0": "a0_sweep_0",
+    "C1": "a0_bend_0",
+    "C2": "a0_sweep_1",
+    "C3": "a0_bend_1",
+    "C4": "a1_sweep_0",
+    "C5": "a1_bend_0",
+    "C6": "a1_sweep_1",
+    "C7": "a1_bend_1",
+    "C8": "a2_sweep_0",
+    "C9": "a2_bend_0",
+    "C10": "a2_sweep_1",
+    "C11": "a2_bend_1",
+    "C12": "a3_sweep_0",
+    "C13": "a3_bend_0",
+    "C14": "a3_sweep_1",
+    "C15": "a3_bend_1",
+    "C16": "a4_sweep_0",
+    "C17": "a4_bend_0",
+    "C18": "a4_sweep_1",
+    "C19": "a4_bend_1",
+    "C20": "a5_sweep_0",
+    "C21": "a5_bend_0",
+    "C22": "a5_sweep_1",
+    "C23": "a5_bend_1"
+   },
+   "step_height_m": 0.0393,
+   "min_limbs_down": 3,
+   "quasi_static": true
+  },
+  {
+   "name": "alternating",
+   "source": "synthesised from measured tips (angular order, alternate phases)",
+   "cycle_s": 0.3166,
+   "phase": {
+    "a0_seg_1_tip": 0.5,
+    "a1_seg_1_tip": 0.0,
+    "a2_seg_1_tip": 0.5,
+    "a3_seg_1_tip": 0.0,
+    "a4_seg_1_tip": 0.5,
+    "a5_seg_1_tip": 0.0
+   },
+   "duty": {
+    "a0_seg_1_tip": 0.6,
+    "a1_seg_1_tip": 0.6,
+    "a2_seg_1_tip": 0.6,
+    "a3_seg_1_tip": 0.6,
+    "a4_seg_1_tip": 0.6,
+    "a5_seg_1_tip": 0.6
+   },
+   "duty_mean": 0.6,
+   "step_height_m": 0.0393,
+   "min_limbs_down": 3,
+   "quasi_static": true
+  },
+  {
+   "name": "crawl",
+   "source": "synthesised quasi-static crawl from measured tips (one limb lifted at a time)",
+   "cycle_s": 1.8996,
+   "phase": {
+    "a0_seg_1_tip": 0.3333,
+    "a1_seg_1_tip": 0.1667,
+    "a2_seg_1_tip": 0.0,
+    "a3_seg_1_tip": 0.5,
+    "a4_seg_1_tip": 0.6667,
+    "a5_seg_1_tip": 0.8333
+   },
+   "duty": {
+    "a0_seg_1_tip": 0.8667,
+    "a1_seg_1_tip": 0.8667,
+    "a2_seg_1_tip": 0.8667,
+    "a3_seg_1_tip": 0.8667,
+    "a4_seg_1_tip": 0.8667,
+    "a5_seg_1_tip": 0.8667
+   },
+   "duty_mean": 0.8667,
+   "step_height_m": 0.0393,
+   "lift_order": [
+    "a2_root",
+    "a1_root",
+    "a0_root",
+    "a3_root",
+    "a4_root",
+    "a5_root"
+   ],
+   "min_limbs_down": 5,
+   "quasi_static": true
+  }
+ ],
+ "objects": null,
+ "excluded_pairs_home_overlap": [],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: x forward, y left, z up, metres; for the arm a level frame at its base",
+ "kind": "multileg",
+ "support": [
+  {
+   "tip": "a0_seg_1_tip",
+   "type": "point"
+  },
+  {
+   "tip": "a1_seg_1_tip",
+   "type": "point"
+  },
+  {
+   "tip": "a2_seg_1_tip",
+   "type": "point"
+  },
+  {
+   "tip": "a3_seg_1_tip",
+   "type": "point"
+  },
+  {
+   "tip": "a4_seg_1_tip",
+   "type": "point"
+  },
+  {
+   "tip": "a5_seg_1_tip",
+   "type": "point"
+  }
+ ],
+ "render_model": "any-robot/assets/general/v3_walkers/v3_six_arm_crawler_s3103/robot.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ },
+ "intake_notes": {
+  "model_edits": {
+   "inertia_kept_from_source_bodies": 1
+  },
+  "home_changed": {
+   "planted": {
+    "base_raised_share": 0.5,
+    "tips": [
+     "a0_seg_1_tip",
+     "a1_seg_1_tip",
+     "a2_seg_1_tip",
+     "a3_seg_1_tip",
+     "a4_seg_1_tip",
+     "a5_seg_1_tip"
+    ]
+   }
+  },
+  "support_sites_at_contact": [
+   "a0_seg_1_tip",
+   "a1_seg_1_tip",
+   "a2_seg_1_tip",
+   "a3_seg_1_tip",
+   "a4_seg_1_tip",
+   "a5_seg_1_tip"
+  ]
+ }
+}

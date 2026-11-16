@@ -1,0 +1,261 @@
+{
+ "clip_id": "zoo_dual_arm__random__0301025",
+ "body": "zoo_dual_arm",
+ "kind": "dual_arm",
+ "source": "random",
+ "seed": 301025,
+ "attempt_index": 25,
+ "skill": null,
+ "arm": "random",
+ "compiler": "compile_program/J",
+ "variant": "right_finger_left_tip",
+ "params": {
+  "amplitude": 0.7,
+  "key_s": 1.365,
+  "wander": false,
+  "ik_miss_m": [
+   0.2231
+  ]
+ },
+ "program": {
+  "duration_s": 5.86,
+  "arm": "J",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 1.37,
+    "frame": 68,
+    "joints": {
+     "right_joint_0": -0.6656,
+     "right_joint_1": 0.0347,
+     "right_joint_2": 0.015,
+     "right_joint_3": 0.0752,
+     "right_joint_4": -0.1733,
+     "right_grip_left": 0.0001
+    }
+   },
+   {
+    "t": 2.74,
+    "frame": 137,
+    "joints": {
+     "right_joint_0": -0.8036,
+     "right_joint_1": -0.3728,
+     "right_joint_2": -0.2555,
+     "right_joint_3": 0.074,
+     "right_joint_4": -0.1747,
+     "right_grip_left": 0.0002
+    }
+   },
+   {
+    "t": 4.11,
+    "frame": 206,
+    "joints": {
+     "right_joint_0": -0.4041,
+     "right_joint_1": -0.4242,
+     "right_joint_2": -0.2759,
+     "right_joint_3": 0.0795,
+     "right_joint_4": -0.1733,
+     "right_grip_left": 0.0002
+    }
+   },
+   {
+    "t": 5.48,
+    "frame": 274,
+    "joints": {
+     "right_joint_0": 0.0,
+     "right_joint_1": 0.0,
+     "right_joint_2": 0.0,
+     "right_joint_3": 0.0,
+     "right_joint_4": 0.0,
+     "right_grip_left": 0.0
+    }
+   },
+   {
+    "t": 5.86,
+    "frame": 293
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 5.86,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 1.37,
+    "joints": {
+     "right_joint_0": -0.6656,
+     "right_joint_1": 0.0347,
+     "right_joint_2": 0.015,
+     "right_joint_3": 0.0752,
+     "right_joint_4": -0.1733,
+     "right_grip_left": 0.0001
+    }
+   },
+   {
+    "t": 2.74,
+    "joints": {
+     "right_joint_0": -0.8036,
+     "right_joint_1": -0.3728,
+     "right_joint_2": -0.2555,
+     "right_joint_3": 0.074,
+     "right_joint_4": -0.1747,
+     "right_grip_left": 0.0002
+    }
+   },
+   {
+    "t": 4.11,
+    "joints": {
+     "right_joint_0": -0.4041,
+     "right_joint_1": -0.4242,
+     "right_joint_2": -0.2759,
+     "right_joint_3": 0.0795,
+     "right_joint_4": -0.1733,
+     "right_grip_left": 0.0002
+    }
+   },
+   {
+    "t": 5.48,
+    "joints": {
+     "right_joint_0": 0.0,
+     "right_joint_1": 0.0,
+     "right_joint_2": 0.0,
+     "right_joint_3": 0.0,
+     "right_joint_4": 0.0,
+     "right_grip_left": 0.0
+    }
+   },
+   {
+    "t": 5.86
+   }
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0078
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0078
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0078
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0078
+  },
+  "grasp": {
+   "pass": true,
+   "notes": []
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0389
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0365,
+   "limit_rad": 0.142
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0778
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": true,
+  "trace_circle": true,
+  "kick_swing": false,
+  "tap_twice": false,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": true,
+ "duration_s": 5.86,
+ "n_frames": 294,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.142,
+  "start_joints_moved_inside_range": [
+   "left_grip_left",
+   "left_grip_right",
+   "right_grip_left",
+   "right_grip_right"
+  ],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0
+ },
+ "compile_notes": [],
+ "tips": [
+  "left_finger_left_tip",
+  "left_finger_right_tip",
+  "right_finger_left_tip",
+  "right_finger_right_tip"
+ ],
+ "contact_edges": [
+  [
+   "left_finger_left_pad",
+   "block"
+  ],
+  [
+   "left_finger_right_pad",
+   "block"
+  ],
+  [
+   "right_finger_left_pad",
+   "block"
+  ],
+  [
+   "right_finger_right_pad",
+   "block"
+  ],
+  [
+   "block",
+   "table"
+  ],
+  [
+   "rest_of_body",
+   "block"
+  ],
+  [
+   "rest_of_body",
+   "table"
+  ],
+  [
+   "block",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 0.24
+}

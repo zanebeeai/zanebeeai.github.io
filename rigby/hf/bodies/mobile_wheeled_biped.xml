@@ -1,0 +1,117 @@
+<mujoco model="mobile_wheeled_biped">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast"/>
+
+  <size nkey="1"/>
+
+  <default>
+    <joint limited="true" armature="0.01" damping="0.5"/>
+    <geom solref="0.01" solimp="0.95 0.99" margin="0.0005"/>
+    <general ctrllimited="true" forcelimited="true" biastype="affine" biasprm="0 0 -1"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" rgba="0.32 0.34 0.36 1"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="torso" pos="0 0 0.55">
+      <joint name="root" type="free" armature="0" damping="0"/>
+      <geom name="torso_geom" size="0.1 0.14 0.14" type="box" density="660" rgba="0.62 0.62 0.66 1"/>
+      <geom name="tail_skid_geom" size="0.03" pos="-0.09 0 -0.16" friction="1.2" density="1100" rgba="0.62 0.62 0.66 1"/>
+      <site name="torso_imu" pos="0 0 0" size="0.004" rgba="1 0.3 0.3 0.5"/>
+      <site name="tail_skid_touch" pos="-0.09 0 -0.16" size="0.035" rgba="1 0.3 0.3 0.5"/>
+      <body name="left_hip" pos="0 0.19 -0.1">
+        <inertial pos="0 0 0" quat="0.707105 0.707108 0 0" mass="0.138544" diaginertia="6.09017e-05 6.09017e-05 8.48583e-05"/>
+        <joint name="left_hip_pitch" pos="0 0 0" axis="0 1 0" range="-2 2"/>
+        <geom name="left_hip_geom" size="0.035 0.001" quat="0.707105 0.707108 0 0" type="capsule" density="900" rgba="0.85 0.35 0.3 1"/>
+        <body name="left_thigh" pos="0 0.03 0">
+          <geom name="left_thigh_geom" size="0.028 0.1" pos="0 0 -0.1" quat="0 1 0 0" type="capsule" density="900" rgba="0.85 0.35 0.3 1"/>
+          <body name="left_shank" pos="0 0 -0.2">
+            <joint name="left_knee" pos="0 0 0" axis="0 1 0" range="0 2.6"/>
+            <geom name="left_shank_geom" size="0.024 0.1" pos="0 0 -0.1" quat="0 1 0 0" type="capsule" density="900" rgba="0.85 0.35 0.3 1"/>
+            <geom name="left_knee_pad" size="0.035" friction="1.2" density="1100" rgba="0.85 0.35 0.3 1"/>
+            <body name="left_wheel" pos="0 0.04 -0.2">
+              <joint name="left_wheel_spin" pos="0 0 0" axis="0 1 0" limited="false" damping="0.05"/>
+              <geom name="left_wheel_geom" size="0.08 0.02" quat="0.707105 0.707108 0 0" type="cylinder" friction="1.1" density="1100" rgba="0.85 0.35 0.3 1"/>
+              <site name="left_wheel_touch" pos="0 0 0" size="0.085" rgba="1 0.3 0.3 0.5"/>
+              <site name="left_wheel_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="right_hip" pos="0 -0.19 -0.1">
+        <inertial pos="0 0 0" quat="0.707105 0.707108 0 0" mass="0.138544" diaginertia="6.09017e-05 6.09017e-05 8.48583e-05"/>
+        <joint name="right_hip_pitch" pos="0 0 0" axis="0 1 0" range="-2 2"/>
+        <geom name="right_hip_geom" size="0.035 0.001" quat="0.707105 0.707108 0 0" type="capsule" density="900" rgba="0.3 0.55 0.85 1"/>
+        <body name="right_thigh" pos="0 -0.03 0">
+          <geom name="right_thigh_geom" size="0.028 0.1" pos="0 0 -0.1" quat="0 1 0 0" type="capsule" density="900" rgba="0.3 0.55 0.85 1"/>
+          <body name="right_shank" pos="0 0 -0.2">
+            <joint name="right_knee" pos="0 0 0" axis="0 1 0" range="0 2.6"/>
+            <geom name="right_shank_geom" size="0.024 0.1" pos="0 0 -0.1" quat="0 1 0 0" type="capsule" density="900" rgba="0.3 0.55 0.85 1"/>
+            <geom name="right_knee_pad" size="0.035" friction="1.2" density="1100" rgba="0.3 0.55 0.85 1"/>
+            <body name="right_wheel" pos="0 -0.04 -0.2">
+              <joint name="right_wheel_spin" pos="0 0 0" axis="0 1 0" limited="false" damping="0.05"/>
+              <geom name="right_wheel_geom" size="0.08 0.02" quat="0.707105 0.707108 0 0" type="cylinder" friction="1.1" density="1100" rgba="0.3 0.55 0.85 1"/>
+              <site name="right_wheel_touch" pos="0 0 0" size="0.085" rgba="1 0.3 0.3 0.5"/>
+              <site name="right_wheel_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="arm_base" pos="0.1 0 0.14">
+        <inertial pos="0 0 0" mass="0.180956" diaginertia="9.65097e-05 9.65097e-05 0.000144765"/>
+        <joint name="arm_yaw" pos="0 0 0" axis="0 0 1" range="-2.6 2.6"/>
+        <geom name="arm_base_geom" size="0.04 0.001" type="capsule" density="900" rgba="0.62 0.62 0.66 1"/>
+        <body name="arm_link_0" pos="0 0 0.04">
+          <joint name="arm_joint_0" pos="0 0 0" axis="0 1 0" range="-2.6 2.6"/>
+          <geom name="arm_link_0_geom" size="0.028 0.11" pos="0 0 -0.11" quat="0 1 0 0" type="capsule" density="900" rgba="0.62 0.62 0.66 1"/>
+          <body name="arm_link_1" pos="0 0 -0.22">
+            <joint name="arm_joint_1" pos="0 0 0" axis="0 1 0" range="-2.6 2.6"/>
+            <geom name="arm_link_1_geom" size="0.0238 0.1" pos="0 0 -0.1" quat="0 1 0 0" type="capsule" density="900" rgba="0.62 0.62 0.66 1"/>
+            <body name="arm_palm" pos="0 0 -0.23">
+              <geom name="arm_palm_geom" size="0.045 0.025 0.015" type="box" density="900" rgba="0.62 0.62 0.66 1"/>
+              <site name="arm_grasp_centre" pos="0 0 -0.045" size="0.006" rgba="1 0.3 0.3 0.5"/>
+              <body name="arm_finger_left" pos="0.043 0 -0.045">
+                <joint name="arm_grip_left" pos="0 0 0" axis="-1 0 0" type="slide" range="0 0.035"/>
+                <geom name="arm_finger_left_geom" size="0.007 0.015 0.03" type="box" friction="1.4" density="900" rgba="0.35 0.7 0.4 1"/>
+                <site name="arm_finger_left_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+              <body name="arm_finger_right" pos="-0.043 0 -0.045">
+                <joint name="arm_grip_right" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.035"/>
+                <geom name="arm_finger_right_geom" size="0.007 0.015 0.03" type="box" friction="1.4" density="900" rgba="0.85 0.65 0.25 1"/>
+                <site name="arm_finger_right_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <general name="left_hip_pitch_servo" joint="left_hip_pitch" ctrlrange="-2 2" forcerange="-45 45" gainprm="180" biasprm="0 -180"/>
+    <general name="left_knee_servo" joint="left_knee" ctrlrange="0 2.6" forcerange="-45 45" gainprm="180" biasprm="0 -180"/>
+    <general name="left_wheel_spin_drive" joint="left_wheel_spin" ctrlrange="-25 25" forcerange="-12 12" gainprm="1.5" biasprm="0 0 -1.5"/>
+    <general name="right_hip_pitch_servo" joint="right_hip_pitch" ctrlrange="-2 2" forcerange="-45 45" gainprm="180" biasprm="0 -180"/>
+    <general name="right_knee_servo" joint="right_knee" ctrlrange="0 2.6" forcerange="-45 45" gainprm="180" biasprm="0 -180"/>
+    <general name="right_wheel_spin_drive" joint="right_wheel_spin" ctrlrange="-25 25" forcerange="-12 12" gainprm="1.5" biasprm="0 0 -1.5"/>
+    <general name="arm_yaw_servo" joint="arm_yaw" ctrlrange="-2.6 2.6" forcerange="-20 20" gainprm="60" biasprm="0 -60"/>
+    <general name="arm_joint_0_servo" joint="arm_joint_0" ctrlrange="-2.6 2.6" forcerange="-25 25" gainprm="75" biasprm="0 -75"/>
+    <general name="arm_joint_1_servo" joint="arm_joint_1" ctrlrange="-2.6 2.6" forcerange="-18 18" gainprm="54" biasprm="0 -54"/>
+    <general name="arm_grip_left_servo" joint="arm_grip_left" ctrlrange="0 0.035" forcerange="-40 40" gainprm="400" biasprm="0 -400"/>
+    <general name="arm_grip_right_servo" joint="arm_grip_right" ctrlrange="0 0.035" forcerange="-40 40" gainprm="400" biasprm="0 -400"/>
+  </actuator>
+
+  <sensor>
+    <gyro site="torso_imu" name="torso_gyro"/>
+    <accelerometer site="torso_imu" name="torso_accel"/>
+    <framequat objtype="site" objname="torso_imu" name="torso_orientation"/>
+    <touch site="left_wheel_touch" name="left_wheel_contact"/>
+    <touch site="right_wheel_touch" name="right_wheel_contact"/>
+    <touch site="tail_skid_touch" name="tail_skid_contact"/>
+  </sensor>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.58 1 0 0 0 0 0 0 0 0 0 0 -2.25 -2.3 0 0" ctrl="0 0 0 0 0 0 0 -2.25 -2.3 0 0"/>
+  </keyframe>
+</mujoco>

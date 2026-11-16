@@ -1,0 +1,617 @@
+{
+ "body": "kinova_gen3",
+ "kind": "arm",
+ "free_base": false,
+ "L": 1.0052,
+ "T": 0.3201,
+ "modes": [
+  {
+   "name": "arm_back_up",
+   "part": "bracelet_link_tip",
+   "plus": "Moves the tip backward and upward by rotating the proximal movable joint.",
+   "minus": "Moves the tip slightly forward and downward.",
+   "toward": {
+    "joint_2": -0.65
+   },
+   "away": {
+    "joint_2": 0.13
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "bracelet_link_tip": [
+       0.027,
+       0.0,
+       -0.108
+      ]
+     },
+     "clear": {
+      "self": 0.0567,
+      "ground": 0.1005
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.111,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.057
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "bracelet_link_tip": [
+       0.017,
+       0.0,
+       -0.053
+      ]
+     },
+     "clear": {
+      "self": 0.0567,
+      "ground": 0.1005
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.239,
+       -0.0,
+       0.255
+      ]
+     },
+     "clear": {
+      "self": 0.0567,
+      "ground": 0.1005
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.588,
+       0.0,
+       0.273
+      ]
+     },
+     "clear": {
+      "self": 0.0567,
+      "ground": 0.1005
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.645,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.365
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "arm_fold_up",
+   "part": "bracelet_link_tip",
+   "plus": "Folds the arm, moving the tip upward and backward.",
+   "minus": "Moves the tip backward and downward while curling the distal joint.",
+   "toward": {
+    "joint_4": 0.45
+   },
+   "away": {
+    "joint_4": -0.8,
+    "joint_6": -0.65
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.224,
+       0.0,
+       -0.177
+      ]
+     },
+     "clear": {
+      "self": 0.0567,
+      "ground": 0.0592
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.284,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.484
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.068,
+       0.0,
+       -0.142
+      ]
+     },
+     "clear": {
+      "self": 0.0578,
+      "ground": 0.1005
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "bracelet_link_tip": [
+       0.043,
+       0.0,
+       0.404
+      ]
+     },
+     "clear": {
+      "self": 0.0567,
+      "ground": 0.1005
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.288,
+       0.0,
+       0.642
+      ]
+     },
+     "clear": {
+      "self": 0.0567,
+      "ground": 0.1005
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.7,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.436
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "arm_forward_up",
+   "part": "bracelet_link_tip",
+   "plus": "Moves the tip forward and upward with coordinated proximal and elbow rotation.",
+   "minus": "Retracts the tip backward while raising it.",
+   "toward": {
+    "joint_2": 0.12,
+    "joint_4": 0.18,
+    "joint_6": 0.35
+   },
+   "away": {
+    "joint_2": -0.45,
+    "joint_4": 0.08,
+    "joint_6": -0.25
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.36,
+       -0.0,
+       0.379
+      ]
+     },
+     "clear": {
+      "self": 0.0577,
+      "ground": 0.1005
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.52,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.253
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.112,
+       -0.0,
+       0.231
+      ]
+     },
+     "clear": {
+      "self": 0.0573,
+      "ground": 0.1005
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "bracelet_link_tip": [
+       0.089,
+       -0.0,
+       0.119
+      ]
+     },
+     "clear": {
+      "self": 0.0563,
+      "ground": 0.1005
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "bracelet_link_tip": [
+       0.124,
+       0.0,
+       0.232
+      ]
+     },
+     "clear": {
+      "self": 0.0559,
+      "ground": 0.1005
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.262,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.175
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "arm_high_retract",
+   "part": "bracelet_link_tip",
+   "plus": "Retracts and raises the tip through coordinated motion of all movable joints.",
+   "minus": "Lowers and draws the tip backward using distal curling.",
+   "toward": {
+    "joint_2": -0.35,
+    "joint_4": 0.25,
+    "joint_6": 0.65
+   },
+   "away": {
+    "joint_2": 0.08,
+    "joint_4": 0.06,
+    "joint_6": -0.85
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.144,
+       0.0,
+       -0.129
+      ]
+     },
+     "clear": {
+      "self": 0.0553,
+      "ground": 0.1005
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.192,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.633
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.026,
+       -0.0,
+       -0.142
+      ]
+     },
+     "clear": {
+      "self": 0.0577,
+      "ground": 0.1005
+     },
+     "fail": []
+    },
+    "0.5": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.167,
+       0.0,
+       0.407
+      ]
+     },
+     "clear": {
+      "self": 0.0559,
+      "ground": 0.1005
+     },
+     "fail": []
+    },
+    "1": {
+     "tips": {
+      "bracelet_link_tip": [
+       -0.639,
+       0.0,
+       0.511
+      ]
+     },
+     "clear": {
+      "self": 0.0547,
+      "ground": 0.1005
+     },
+     "fail": [],
+     "size": {
+      "tip_L": 0.814,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.242
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  }
+ ],
+ "gaits": [],
+ "rejected": {
+  "modes": [
+   {
+    "name": "wrist_tip_up",
+    "part": "bracelet_link_tip",
+    "plus": "Moves the tip upward and slightly backward through distal rotation.",
+    "minus": "Curls the tip backward and downward.",
+    "toward": {
+     "joint_6": 1.0
+    },
+    "away": {
+     "joint_6": -1.0
+    },
+    "cards": {
+     "-1": {
+      "tips": {
+       "bracelet_link_tip": [
+        -0.284,
+        0.0,
+        -0.068
+       ]
+      },
+      "clear": {
+       "self": 0.0287,
+       "ground": 0.1005
+      },
+      "fail": [],
+      "size": {
+       "tip_L": 0.291,
+       "base_L": 0.0,
+       "turn_deg": 0.0,
+       "joint_range_share": 0.744
+      }
+     },
+     "-0.5": {
+      "tips": {
+       "bracelet_link_tip": [
+        -0.112,
+        0.0,
+        -0.161
+       ]
+      },
+      "clear": {
+       "self": 0.0574,
+       "ground": 0.1005
+      },
+      "fail": []
+     },
+     "0.5": {
+      "tips": {
+       "bracelet_link_tip": [
+        -0.027,
+        0.0,
+        0.068
+       ]
+      },
+      "clear": {
+       "self": 0.0555,
+       "ground": 0.1005
+      },
+      "fail": []
+     },
+     "1": {
+      "tips": {
+       "bracelet_link_tip": [
+        -0.083,
+        0.0,
+        0.114
+       ]
+      },
+      "clear": {
+       "self": 0.0431,
+       "ground": 0.1005
+      },
+      "fail": [],
+      "size": {
+       "tip_L": 0.14,
+       "base_L": 0.0,
+       "turn_deg": 0.0,
+       "joint_range_share": 0.256
+      }
+     }
+    },
+    "valid": true,
+    "fail": [],
+    "small": false,
+    "round": 0,
+    "kept": false,
+    "why": "no coverage loss without it"
+   },
+   {
+    "name": "arm_distal_fold_back",
+    "part": "bracelet_link_tip",
+    "plus": "Folds the distal arm backward while lifting the elbow.",
+    "minus": "Extends the distal arm upward with a small proximal retraction.",
+    "toward": {
+     "joint_4": 0.3,
+     "joint_6": -0.9
+    },
+    "away": {
+     "joint_2": -0.18,
+     "joint_4": -0.4,
+     "joint_6": 0.9
+    },
+    "cards": {
+     "-1": {
+      "tips": {
+       "bracelet_link_tip": [
+        -0.218,
+        0.0,
+        0.217
+       ]
+      },
+      "clear": {
+       "self": 0.0478,
+       "ground": 0.1005
+      },
+      "fail": [],
+      "size": {
+       "tip_L": 0.306,
+       "base_L": 0.0,
+       "turn_deg": 0.0,
+       "joint_range_share": 0.23
+      }
+     },
+     "-0.5": {
+      "tips": {
+       "bracelet_link_tip": [
+        -0.084,
+        0.0,
+        0.134
+       ]
+      },
+      "clear": {
+       "self": 0.0556,
+       "ground": 0.1005
+      },
+      "fail": []
+     },
+     "0.5": {
+      "tips": {
+       "bracelet_link_tip": [
+        0.108,
+        -0.0,
+        0.09
+       ]
+      },
+      "clear": {
+       "self": 0.0576,
+       "ground": 0.1005
+      },
+      "fail": []
+     },
+     "1": {
+      "tips": {
+       "bracelet_link_tip": [
+        0.024,
+        0.0,
+        0.244
+       ]
+      },
+      "clear": {
+       "self": 0.0538,
+       "ground": 0.1005
+      },
+      "fail": [],
+      "size": {
+       "tip_L": 0.244,
+       "base_L": 0.0,
+       "turn_deg": 0.0,
+       "joint_range_share": 0.67
+      }
+     }
+    },
+    "valid": true,
+    "fail": [],
+    "small": false,
+    "round": 0,
+    "kept": false,
+    "why": "no coverage loss without it"
+   }
+  ],
+  "gaits": []
+ },
+ "coverage": {
+  "bracelet_link_tip": 0.1006
+ },
+ "coverage_valid": {
+  "bracelet_link_tip": 0.1035
+ },
+ "coverage_ceiling": {
+  "bracelet_link_tip": 0.9048
+ },
+ "selection": [
+  {
+   "start": [
+    "arm_back_up",
+    "arm_fold_up",
+    "wrist_tip_up",
+    "arm_forward_up",
+    "arm_distal_fold_back",
+    "arm_high_retract"
+   ],
+   "mean_coverage": 0.1035
+  },
+  {
+   "drop": "wrist_tip_up",
+   "mean_coverage": 0.1028,
+   "loss": 0.0007
+  },
+  {
+   "drop": "arm_distal_fold_back",
+   "mean_coverage": 0.1006,
+   "loss": 0.0022
+  }
+ ],
+ "counts": {
+  "modes_final": 6,
+  "modes_valid": 6,
+  "modes_usable": 6,
+  "modes_kept": 4,
+  "gaits_llm_valid": 0,
+  "gaits_llm": 0,
+  "gaits_intake_valid": 0,
+  "gaits_intake": 0,
+  "modes_proposed": 6
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "modes": 6,
+   "modes_valid": 6,
+   "modes_small": 0,
+   "gaits": 0,
+   "gaits_valid": 0
+  }
+ ],
+ "calls": 1,
+ "cost_usd": 0.007084,
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "prompt_sha": "6d1d19d0e639",
+ "description_sha": "a9edb2b3783f",
+ "seconds": 38.8,
+ "made": "2026-11-12T02:20:41",
+ "method": "track/kin/primitives.py (see its docstring)"
+}

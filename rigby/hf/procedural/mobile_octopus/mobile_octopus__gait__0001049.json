@@ -1,0 +1,241 @@
+{
+ "clip_id": "mobile_octopus__gait__0001049",
+ "body": "mobile_octopus",
+ "kind": "octopus",
+ "source": "gait",
+ "seed": 1049,
+ "attempt_index": 49,
+ "skill": null,
+ "arm": "gait",
+ "compiler": "compile_program/P",
+ "variant": "alternating:back",
+ "params": {
+  "gait": "alternating",
+  "speed_level": 2,
+  "segment_s": 2.5,
+  "step_L": 0.2,
+  "swing_height_L": 0.15
+ },
+ "program": {
+  "duration_s": 3.75,
+  "arm": "P",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0
+   },
+   {
+    "t": 0.46,
+    "frame": 23,
+    "gait": {
+     "name": "alternating",
+     "cmd": [
+      -0.35,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 2.96,
+    "frame": 148
+   },
+   {
+    "t": 3.75,
+    "frame": 188
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 3.75,
+  "keyframes": [
+   {
+    "t": 0.0
+   },
+   {
+    "t": 0.46,
+    "gait": {
+     "name": "alternating",
+     "cmd": [
+      -0.35,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 2.96
+   },
+   {
+    "t": 3.75
+   }
+  ]
+ },
+ "library": {
+  "modes": [],
+  "gaits": [
+   {
+    "name": "alternating",
+    "cycle_s": 0.3104,
+    "duty": {
+     "t0_finger_left_tip": 0.6,
+     "t0_finger_right_tip": 0.6,
+     "t1_seg_3_tip": 0.6,
+     "t2_seg_3_tip": 0.6,
+     "t3_seg_3_tip": 0.6,
+     "t4_seg_3_tip": 0.6,
+     "t5_finger_left_tip": 0.6,
+     "t5_finger_right_tip": 0.6
+    },
+    "phase": {
+     "t0_finger_left_tip": 0.5,
+     "t0_finger_right_tip": 0.5,
+     "t1_seg_3_tip": 0.0,
+     "t2_seg_3_tip": 0.5,
+     "t3_seg_3_tip": 0.0,
+     "t4_seg_3_tip": 0.5,
+     "t5_finger_left_tip": 0.0,
+     "t5_finger_right_tip": 0.0
+    },
+    "step_L": 0.2,
+    "swing_height_L": 0.15,
+    "source": "intake",
+    "valid": true
+   }
+  ]
+ },
+ "library_sha": "3bcb83b656ed",
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0015
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "t5_finger_left",
+    32
+   ],
+   "limit_m": 0.0015
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0076
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0315,
+   "limit_rad": 0.3221
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0151
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.003
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0151
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": false,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": false,
+  "tap_twice": true,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 3.76,
+ "n_frames": 189,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.3221,
+  "start_joints_moved_inside_range": [],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0,
+  "gait_cmd_scale_min": 0.2286,
+  "com_shift_max_m": 0.0
+ },
+ "compile_notes": [],
+ "tips": [
+  "t0_finger_left_tip",
+  "t0_finger_right_tip",
+  "t1_seg_3_tip",
+  "t2_seg_3_tip",
+  "t3_seg_3_tip",
+  "t4_seg_3_tip",
+  "t5_finger_left_tip",
+  "t5_finger_right_tip"
+ ],
+ "contact_edges": [
+  [
+   "t0_finger_left_pad",
+   "floor"
+  ],
+  [
+   "t0_finger_right_pad",
+   "floor"
+  ],
+  [
+   "t1_seg_3_foot",
+   "floor"
+  ],
+  [
+   "t2_seg_3_foot",
+   "floor"
+  ],
+  [
+   "t3_seg_3_foot",
+   "floor"
+  ],
+  [
+   "t4_seg_3_foot",
+   "floor"
+  ],
+  [
+   "t5_finger_left_pad",
+   "floor"
+  ],
+  [
+   "t5_finger_right_pad",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 0.76
+}

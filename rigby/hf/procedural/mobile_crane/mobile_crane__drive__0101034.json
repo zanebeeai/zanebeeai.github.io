@@ -1,0 +1,275 @@
+{
+ "clip_id": "mobile_crane__drive__0101034",
+ "body": "mobile_crane",
+ "kind": "crane",
+ "source": "drive",
+ "seed": 101034,
+ "attempt_index": 34,
+ "skill": null,
+ "arm": "drive",
+ "compiler": "compile_program/J",
+ "variant": "wheels:arc_right+spin_left",
+ "params": {
+  "speed_level": 3,
+  "segments": 2,
+  "base_offsets": false
+ },
+ "program": {
+  "duration_s": 6.18,
+  "arm": "J",
+  "keyframes": [
+   {
+    "t": 0.0,
+    "frame": 0,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    }
+   },
+   {
+    "t": 0.47,
+    "frame": 24,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    }
+   },
+   {
+    "t": 1.03,
+    "frame": 52,
+    "joints": {
+     "left_wheel_joint": 0.4,
+     "right_wheel_joint": 0.2
+    }
+   },
+   {
+    "t": 2.69,
+    "frame": 134,
+    "joints": {
+     "left_wheel_joint": 0.4,
+     "right_wheel_joint": 0.2
+    }
+   },
+   {
+    "t": 3.16,
+    "frame": 158,
+    "joints": {
+     "left_wheel_joint": -0.08,
+     "right_wheel_joint": 0.08
+    }
+   },
+   {
+    "t": 5.07,
+    "frame": 254,
+    "joints": {
+     "left_wheel_joint": -0.08,
+     "right_wheel_joint": 0.08
+    }
+   },
+   {
+    "t": 5.78,
+    "frame": 289,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    }
+   },
+   {
+    "t": 6.18,
+    "frame": 309
+   }
+  ]
+ },
+ "program_raw": {
+  "duration_s": 6.18,
+  "keyframes": [
+   {
+    "t": 0.0,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    }
+   },
+   {
+    "t": 0.47,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    }
+   },
+   {
+    "t": 1.03,
+    "joints": {
+     "left_wheel_joint": 0.4,
+     "right_wheel_joint": 0.2
+    }
+   },
+   {
+    "t": 2.69,
+    "joints": {
+     "left_wheel_joint": 0.4,
+     "right_wheel_joint": 0.2
+    }
+   },
+   {
+    "t": 3.16,
+    "joints": {
+     "left_wheel_joint": -0.08,
+     "right_wheel_joint": 0.08
+    }
+   },
+   {
+    "t": 5.07,
+    "joints": {
+     "left_wheel_joint": -0.08,
+     "right_wheel_joint": 0.08
+    }
+   },
+   {
+    "t": 5.78,
+    "joints": {
+     "left_wheel_joint": 0.0,
+     "right_wheel_joint": 0.0
+    }
+   },
+   {
+    "t": 6.18
+   }
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0017
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "right_wheel",
+    117
+   ],
+   "limit_m": 0.0017
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0085
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1154,
+   "limit_rad": 0.3037
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.017
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0034
+  },
+  "wheel_slip": {
+   "pass": true,
+   "worst_roll_mismatch_m": 0.0,
+   "worst_side_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0034
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.017
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": false,
+  "crouch": false,
+  "turn_in_place": false,
+  "trace_circle": false,
+  "bow": false,
+  "twist": false,
+  "kick_swing": false,
+  "step_forward": false,
+  "tap_twice": false,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 6.18,
+ "n_frames": 310,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 0,
+  "jump_limit_rad_per_frame": 0.3037,
+  "start_joints_moved_inside_range": [
+   "left_finger_joint",
+   "right_finger_joint"
+  ],
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0,
+  "gait_cmd_scale_min": 1.0,
+  "com_shift_max_m": 0.0
+ },
+ "compile_notes": [],
+ "tips": [
+  "left_wheel_tip",
+  "right_wheel_tip",
+  "front_caster_tip",
+  "rear_caster_tip",
+  "left_finger_tip",
+  "right_finger_tip"
+ ],
+ "contact_edges": [
+  [
+   "left_wheel",
+   "floor"
+  ],
+  [
+   "right_wheel",
+   "floor"
+  ],
+  [
+   "front_caster_foot",
+   "floor"
+  ],
+  [
+   "rear_caster_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ],
+  [
+   "left_pad",
+   "floor"
+  ],
+  [
+   "right_pad",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 0.7
+}

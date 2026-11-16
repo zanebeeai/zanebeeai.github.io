@@ -1,0 +1,3672 @@
+{
+ "body": "boston_dynamics_spot",
+ "kind": "quadruped",
+ "free_base": true,
+ "L": 0.44315,
+ "T": 0.21254,
+ "modes": [
+  {
+   "name": "trunk_forward",
+   "part": "trunk",
+   "plus": "Trunk shifts forward over planted feet.",
+   "minus": "Trunk shifts backward over planted feet.",
+   "toward": {
+    "fl_hy": 0.35,
+    "fl_kn": 0.17,
+    "fr_hy": 0.365,
+    "fr_kn": 0.17,
+    "hl_hy": 0.35,
+    "hl_kn": 0.169,
+    "hr_hy": 0.35,
+    "hr_kn": 0.169
+   },
+   "away": {
+    "fl_hy": -0.28,
+    "fl_kn": 0.14,
+    "fr_hy": -0.28,
+    "fr_kn": 0.14,
+    "hl_hy": -0.28,
+    "hl_kn": 0.139,
+    "hr_hy": -0.28,
+    "hr_kn": 0.139
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.188,
+       0.0,
+       -0.024
+      ],
+      "fr_lleg_tip": [
+       0.188,
+       0.0,
+       -0.024
+      ],
+      "hl_lleg_tip": [
+       0.188,
+       0.0,
+       -0.023
+      ],
+      "hr_lleg_tip": [
+       0.188,
+       0.0,
+       -0.023
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.188,
+      -0.0,
+      0.023
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.428,
+      "base_L": 0.427,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.175
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.09,
+       0.0,
+       -0.022
+      ],
+      "fr_lleg_tip": [
+       0.091,
+       0.0,
+       -0.022
+      ],
+      "hl_lleg_tip": [
+       0.091,
+       -0.0,
+       -0.022
+      ],
+      "hr_lleg_tip": [
+       0.091,
+       -0.0,
+       -0.022
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.091,
+      -0.0,
+      0.022
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.122,
+       0.0,
+       -0.005
+      ],
+      "fr_lleg_tip": [
+       -0.122,
+       0.0,
+       -0.005
+      ],
+      "hl_lleg_tip": [
+       -0.122,
+       -0.0,
+       -0.005
+      ],
+      "hr_lleg_tip": [
+       -0.122,
+       -0.0,
+       -0.005
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.122,
+      -0.0,
+      0.005
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.248,
+       -0.0,
+       0.028
+      ],
+      "fr_lleg_tip": [
+       -0.247,
+       -0.0,
+       0.028
+      ],
+      "hl_lleg_tip": [
+       -0.248,
+       -0.0,
+       0.028
+      ],
+      "hr_lleg_tip": [
+       -0.248,
+       -0.0,
+       0.028
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.248,
+      0.0,
+      -0.028
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.563,
+      "base_L": 0.563,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.137
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "moves the base most along x",
+   "kept": true
+  },
+  {
+   "name": "trunk_left",
+   "part": "trunk",
+   "plus": "Trunk shifts left over planted feet.",
+   "minus": "Trunk shifts right over planted feet.",
+   "toward": {
+    "fl_hx": -0.45,
+    "fr_hx": -0.45,
+    "hl_hx": -0.45,
+    "hr_hx": -0.45,
+    "fl_hy": 0.04,
+    "fl_kn": -0.09,
+    "hl_hy": 0.04,
+    "hl_kn": -0.09,
+    "fr_hy": -0.07,
+    "fr_kn": 0.14,
+    "hr_hy": -0.07,
+    "hr_kn": 0.139
+   },
+   "away": {
+    "fl_hx": 0.45,
+    "fr_hx": 0.45,
+    "hl_hx": 0.45,
+    "hr_hx": 0.45,
+    "fl_hy": -0.07,
+    "fl_kn": 0.14,
+    "hl_hy": -0.07,
+    "hl_kn": 0.139,
+    "fr_hy": 0.042,
+    "fr_kn": -0.09,
+    "hr_hy": 0.04,
+    "hr_kn": -0.09
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.006,
+       0.149,
+       0.013
+      ],
+      "fr_lleg_tip": [
+       0.0,
+       0.139,
+       0.007
+      ],
+      "hl_lleg_tip": [
+       0.007,
+       0.149,
+       0.013
+      ],
+      "hr_lleg_tip": [
+       0.0,
+       0.139,
+       0.007
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.003,
+      -0.137,
+      -0.008
+     ],
+     "rpy_deg": [
+      -1.0,
+      -0.0,
+      0.2
+     ],
+     "size": {
+      "tip_L": 0.338,
+      "base_L": 0.31,
+      "turn_deg": 1.0,
+      "joint_range_share": 0.225
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.003,
+       0.073,
+       -0.001
+      ],
+      "fr_lleg_tip": [
+       0.0,
+       0.07,
+       -0.002
+      ],
+      "hl_lleg_tip": [
+       0.003,
+       0.073,
+       -0.001
+      ],
+      "hr_lleg_tip": [
+       0.0,
+       0.07,
+       -0.002
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.001,
+      -0.07,
+      0.002
+     ],
+     "rpy_deg": [
+      -0.3,
+      -0.0,
+      0.1
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.0,
+       -0.07,
+       -0.002
+      ],
+      "fr_lleg_tip": [
+       0.003,
+       -0.073,
+       -0.001
+      ],
+      "hl_lleg_tip": [
+       0.0,
+       -0.07,
+       -0.002
+      ],
+      "hr_lleg_tip": [
+       0.003,
+       -0.073,
+       -0.001
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.001,
+      0.07,
+      0.002
+     ],
+     "rpy_deg": [
+      0.3,
+      -0.0,
+      -0.1
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.0,
+       -0.139,
+       0.007
+      ],
+      "fr_lleg_tip": [
+       0.007,
+       -0.149,
+       0.013
+      ],
+      "hl_lleg_tip": [
+       0.0,
+       -0.139,
+       0.007
+      ],
+      "hr_lleg_tip": [
+       0.007,
+       -0.149,
+       0.013
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.003,
+      0.137,
+      -0.008
+     ],
+     "rpy_deg": [
+      1.0,
+      -0.0,
+      -0.2
+     ],
+     "size": {
+      "tip_L": 0.338,
+      "base_L": 0.31,
+      "turn_deg": 1.0,
+      "joint_range_share": 0.225
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "moves the base most along y",
+   "kept": true
+  },
+  {
+   "name": "trunk_roll_left",
+   "part": "trunk",
+   "plus": "Trunk rolls with its left side down.",
+   "minus": "Trunk rolls with its right side down.",
+   "toward": {
+    "fl_hx": 0.5,
+    "fr_hx": 0.5,
+    "hl_hx": 0.5,
+    "hr_hx": 0.5,
+    "fl_hy": 0.045,
+    "fl_kn": -0.1,
+    "hl_hy": 0.045,
+    "hl_kn": -0.1,
+    "fr_hy": -0.045,
+    "fr_kn": 0.09,
+    "hr_hy": -0.045,
+    "hr_kn": 0.089
+   },
+   "away": {
+    "fl_hx": -0.5,
+    "fr_hx": -0.5,
+    "hl_hx": -0.5,
+    "hr_hx": -0.5,
+    "fl_hy": -0.045,
+    "fl_kn": 0.09,
+    "hl_hy": -0.045,
+    "hl_kn": 0.089,
+    "fr_hy": 0.047,
+    "fr_kn": -0.1,
+    "hr_hy": 0.045,
+    "hr_kn": -0.1
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.004,
+       -0.173,
+       -0.041
+      ],
+      "fr_lleg_tip": [
+       0.0,
+       -0.138,
+       0.091
+      ],
+      "hl_lleg_tip": [
+       0.004,
+       -0.173,
+       -0.041
+      ],
+      "hr_lleg_tip": [
+       0.0,
+       -0.138,
+       0.091
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      -0.02,
+      0.004
+     ],
+     "rpy_deg": [
+      23.8,
+      -0.0,
+      0.2
+     ],
+     "size": {
+      "tip_L": 0.401,
+      "base_L": 0.046,
+      "turn_deg": 23.8,
+      "joint_range_share": 0.25
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.002,
+       -0.083,
+       -0.029
+      ],
+      "fr_lleg_tip": [
+       0.0,
+       -0.074,
+       0.039
+      ],
+      "hl_lleg_tip": [
+       0.002,
+       -0.083,
+       -0.029
+      ],
+      "hr_lleg_tip": [
+       0.0,
+       -0.074,
+       0.039
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.001,
+      -0.01,
+      0.002
+     ],
+     "rpy_deg": [
+      11.9,
+      -0.0,
+      0.1
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.0,
+       0.074,
+       0.039
+      ],
+      "fr_lleg_tip": [
+       0.002,
+       0.083,
+       -0.029
+      ],
+      "hl_lleg_tip": [
+       0.0,
+       0.074,
+       0.039
+      ],
+      "hr_lleg_tip": [
+       0.002,
+       0.083,
+       -0.029
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.001,
+      0.01,
+      0.002
+     ],
+     "rpy_deg": [
+      -11.9,
+      -0.0,
+      -0.1
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.0,
+       0.138,
+       0.091
+      ],
+      "fr_lleg_tip": [
+       0.004,
+       0.173,
+       -0.041
+      ],
+      "hl_lleg_tip": [
+       0.0,
+       0.138,
+       0.091
+      ],
+      "hr_lleg_tip": [
+       0.004,
+       0.173,
+       -0.041
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      0.02,
+      0.004
+     ],
+     "rpy_deg": [
+      -23.8,
+      -0.0,
+      -0.2
+     ],
+     "size": {
+      "tip_L": 0.401,
+      "base_L": 0.046,
+      "turn_deg": 23.8,
+      "joint_range_share": 0.25
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "moves the base most along roll",
+   "kept": true
+  },
+  {
+   "name": "trunk_pitch_up",
+   "part": "trunk",
+   "plus": "Trunk pitches nose upward.",
+   "minus": "Trunk pitches nose downward.",
+   "toward": {
+    "fl_hy": -0.09,
+    "fl_kn": 0.18,
+    "fr_hy": -0.09,
+    "fr_kn": 0.18,
+    "hl_hy": 0.114,
+    "hl_kn": -0.294,
+    "hr_hy": 0.114,
+    "hr_kn": -0.294
+   },
+   "away": {
+    "fl_hy": 0.114,
+    "fl_kn": -0.294,
+    "fr_hy": 0.1188,
+    "fr_kn": -0.294,
+    "hl_hy": -0.09,
+    "hl_kn": 0.1788,
+    "hr_hy": -0.09,
+    "hr_kn": 0.1794
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.009,
+       0.0,
+       0.07
+      ],
+      "fr_lleg_tip": [
+       0.009,
+       0.001,
+       0.07
+      ],
+      "hl_lleg_tip": [
+       0.009,
+       0.001,
+       -0.062
+      ],
+      "hr_lleg_tip": [
+       0.009,
+       0.0,
+       -0.063
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.082,
+      -0.0,
+      -0.019
+     ],
+     "rpy_deg": [
+      -0.1,
+      12.5,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.159,
+      "base_L": 0.19,
+      "turn_deg": 12.5,
+      "joint_range_share": 0.113
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.005,
+       0.0,
+       0.034
+      ],
+      "fr_lleg_tip": [
+       0.005,
+       0.0,
+       0.034
+      ],
+      "hl_lleg_tip": [
+       0.004,
+       0.0,
+       -0.032
+      ],
+      "hr_lleg_tip": [
+       0.004,
+       0.0,
+       -0.032
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.043,
+      -0.0,
+      -0.007
+     ],
+     "rpy_deg": [
+      -0.0,
+      6.4,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.004,
+       0.0,
+       -0.032
+      ],
+      "fr_lleg_tip": [
+       0.004,
+       0.0,
+       -0.032
+      ],
+      "hl_lleg_tip": [
+       0.005,
+       -0.0,
+       0.034
+      ],
+      "hr_lleg_tip": [
+       0.005,
+       0.0,
+       0.034
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.052,
+      -0.0,
+      -0.001
+     ],
+     "rpy_deg": [
+      -0.0,
+      -6.4,
+      -0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.009,
+       0.001,
+       -0.062
+      ],
+      "fr_lleg_tip": [
+       0.009,
+       -0.0,
+       -0.063
+      ],
+      "hl_lleg_tip": [
+       0.009,
+       -0.0,
+       0.07
+      ],
+      "hr_lleg_tip": [
+       0.009,
+       0.001,
+       0.07
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.102,
+      -0.0,
+      -0.009
+     ],
+     "rpy_deg": [
+      -0.0,
+      -12.5,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.159,
+      "base_L": 0.231,
+      "turn_deg": 12.5,
+      "joint_range_share": 0.113
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 1,
+   "kept_by": "moves the base most along pitch",
+   "kept": true
+  },
+  {
+   "name": "fl_tip_forward",
+   "part": "fl_lleg_tip",
+   "plus": "Front-left tip moves forward and upward.",
+   "minus": "Front-left tip moves backward and upward.",
+   "toward": {
+    "fl_hy": -0.65,
+    "fl_kn": -0.35
+   },
+   "away": {
+    "fl_hy": 0.65,
+    "fl_kn": -0.65
+   },
+   "frees": [
+    "fl_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.095,
+       -0.007,
+       0.196
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.492,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.251
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.069,
+       -0.003,
+       0.092
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.254,
+       -0.004,
+       0.11
+      ],
+      "fr_lleg_tip": [
+       0.003,
+       0.001,
+       0.0
+      ],
+      "hl_lleg_tip": [
+       0.003,
+       0.001,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.003,
+       0.001,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.003,
+      -0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.362,
+       -0.013,
+       0.334
+      ],
+      "fr_lleg_tip": [
+       0.006,
+       0.002,
+       -0.0
+      ],
+      "hl_lleg_tip": [
+       0.006,
+       0.002,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.006,
+       0.002,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.006,
+      -0.002,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 1.112,
+      "base_L": 0.014,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.399
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fr_lleg_tip",
+    "hl_lleg_tip",
+    "hr_lleg_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "fl_tip_outward",
+   "part": "fl_lleg_tip",
+   "plus": "Front-left tip moves left and upward.",
+   "minus": "Front-left tip moves right and upward.",
+   "toward": {
+    "fl_hx": 0.8,
+    "fl_hy": 0.2,
+    "fl_kn": -0.5
+   },
+   "away": {
+    "fl_hx": -0.55,
+    "fl_hy": 0.2,
+    "fl_kn": -0.55
+   },
+   "frees": [
+    "fl_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.022,
+       -0.124,
+       0.117
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.001,
+      0.001,
+      0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.388,
+      "base_L": 0.003,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.275
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.012,
+       -0.075,
+       0.051
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.007,
+       0.102,
+       0.108
+      ],
+      "fr_lleg_tip": [
+       0.002,
+       0.001,
+       -0.0
+      ],
+      "hl_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      -0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.014,
+       0.15,
+       0.237
+      ],
+      "fr_lleg_tip": [
+       0.002,
+       0.001,
+       -0.0
+      ],
+      "hl_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      -0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.634,
+      "base_L": 0.005,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.4
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fr_lleg_tip",
+    "hl_lleg_tip",
+    "hr_lleg_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "fl_tip_up",
+   "part": "fl_lleg_tip",
+   "plus": "Front-left tip folds upward toward its hip.",
+   "minus": "Front-left tip returns to home.",
+   "toward": {
+    "fl_hy": 0.3,
+    "fl_kn": -0.95
+   },
+   "frees": [
+    "fl_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.124,
+       0.008,
+       -0.202
+      ],
+      "fr_lleg_tip": [
+       -0.076,
+       0.047,
+       -0.184
+      ],
+      "hl_lleg_tip": [
+       -0.117,
+       -0.044,
+       -0.148
+      ],
+      "hr_lleg_tip": [
+       -0.067,
+       -0.04,
+       -0.131
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      0.041,
+      -0.048,
+      0.171
+     ],
+     "rpy_deg": [
+      3.7,
+      -4.6,
+      -8.7
+     ],
+     "size": {
+      "tip_L": 0.535,
+      "base_L": 0.411,
+      "turn_deg": 8.7,
+      "joint_range_share": 0.585
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.06,
+       0.005,
+       -0.138
+      ],
+      "fr_lleg_tip": [
+       -0.075,
+       0.056,
+       -0.123
+      ],
+      "hl_lleg_tip": [
+       -0.11,
+       -0.021,
+       -0.089
+      ],
+      "hr_lleg_tip": [
+       -0.068,
+       -0.018,
+       -0.079
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      0.049,
+      -0.047,
+      0.11
+     ],
+     "rpy_deg": [
+      2.3,
+      -4.0,
+      -7.3
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.027,
+       -0.004,
+       0.116
+      ],
+      "fr_lleg_tip": [
+       0.0,
+       0.005,
+       -0.014
+      ],
+      "hl_lleg_tip": [
+       -0.002,
+       0.001,
+       -0.014
+      ],
+      "hr_lleg_tip": [
+       0.0,
+       0.001,
+       -0.014
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.003,
+      0.014
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.4
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.044,
+       -0.009,
+       0.249
+      ],
+      "fr_lleg_tip": [
+       0.0,
+       0.002,
+       -0.004
+      ],
+      "hl_lleg_tip": [
+       -0.0,
+       0.001,
+       -0.004
+      ],
+      "hr_lleg_tip": [
+       0.0,
+       0.001,
+       -0.004
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.0,
+      -0.002,
+      0.004
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.1
+     ],
+     "size": {
+      "tip_L": 0.571,
+      "base_L": 0.01,
+      "turn_deg": 0.1,
+      "joint_range_share": 0.365
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fr_lleg_tip",
+    "hl_lleg_tip",
+    "hr_lleg_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "fr_tip_forward",
+   "part": "fr_lleg_tip",
+   "plus": "Front-right tip moves forward and upward.",
+   "minus": "Front-right tip moves backward and upward.",
+   "toward": {
+    "fr_hy": -0.65,
+    "fr_kn": -0.35
+   },
+   "away": {
+    "fr_hy": 0.678,
+    "fr_kn": -0.65
+   },
+   "frees": [
+    "fr_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.002,
+       0.001,
+       0.0
+      ],
+      "fr_lleg_tip": [
+       -0.095,
+       0.008,
+       0.196
+      ],
+      "hl_lleg_tip": [
+       -0.002,
+       0.001,
+       -0.0
+      ],
+      "hr_lleg_tip": [
+       -0.002,
+       0.001,
+       -0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.002,
+      -0.001,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.492,
+      "base_L": 0.005,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.255
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.002,
+       0.001,
+       0.0
+      ],
+      "fr_lleg_tip": [
+       -0.069,
+       0.004,
+       0.092
+      ],
+      "hl_lleg_tip": [
+       -0.002,
+       0.001,
+       -0.0
+      ],
+      "hr_lleg_tip": [
+       -0.002,
+       0.001,
+       -0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.002,
+      -0.001,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ],
+      "fr_lleg_tip": [
+       0.254,
+       0.004,
+       0.11
+      ],
+      "hl_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.005,
+       -0.002,
+       -0.0
+      ],
+      "fr_lleg_tip": [
+       0.362,
+       0.013,
+       0.334
+      ],
+      "hl_lleg_tip": [
+       0.005,
+       -0.002,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.005,
+       -0.002,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.005,
+      0.002,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.112,
+      "base_L": 0.012,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.406
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fl_lleg_tip",
+    "hl_lleg_tip",
+    "hr_lleg_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "fr_tip_outward",
+   "part": "fr_lleg_tip",
+   "plus": "Front-right tip moves right and upward.",
+   "minus": "Front-right tip moves left and upward.",
+   "toward": {
+    "fr_hx": -0.8,
+    "fr_hy": 0.209,
+    "fr_kn": -0.5
+   },
+   "away": {
+    "fr_hx": 0.55,
+    "fr_hy": 0.209,
+    "fr_kn": -0.55
+   },
+   "frees": [
+    "fr_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "fr_lleg_tip": [
+       0.022,
+       0.124,
+       0.117
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.388,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.275
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fr_lleg_tip": [
+       0.012,
+       0.075,
+       0.051
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.002,
+       -0.001,
+       -0.0
+      ],
+      "fr_lleg_tip": [
+       0.007,
+       -0.102,
+       0.108
+      ],
+      "hl_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.002,
+       -0.001,
+       -0.0
+      ],
+      "fr_lleg_tip": [
+       0.014,
+       -0.15,
+       0.237
+      ],
+      "hl_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.634,
+      "base_L": 0.005,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.4
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fl_lleg_tip",
+    "hl_lleg_tip",
+    "hr_lleg_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "fr_tip_up",
+   "part": "fr_lleg_tip",
+   "plus": "Front-right tip folds upward toward its hip.",
+   "minus": "Front-right tip returns to home.",
+   "toward": {
+    "fr_hy": 0.313,
+    "fr_kn": -0.95
+   },
+   "frees": [
+    "fr_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.078,
+       -0.046,
+       -0.186
+      ],
+      "fr_lleg_tip": [
+       -0.108,
+       -0.008,
+       -0.206
+      ],
+      "hl_lleg_tip": [
+       -0.069,
+       0.041,
+       -0.13
+      ],
+      "hr_lleg_tip": [
+       -0.119,
+       0.045,
+       -0.148
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      0.04,
+      0.048,
+      0.172
+     ],
+     "rpy_deg": [
+      -3.8,
+      -4.8,
+      8.8
+     ],
+     "size": {
+      "tip_L": 0.525,
+      "base_L": 0.413,
+      "turn_deg": 8.8,
+      "joint_range_share": 0.585
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.075,
+       -0.056,
+       -0.123
+      ],
+      "fr_lleg_tip": [
+       -0.053,
+       -0.005,
+       -0.139
+      ],
+      "hl_lleg_tip": [
+       -0.069,
+       0.018,
+       -0.078
+      ],
+      "hr_lleg_tip": [
+       -0.111,
+       0.021,
+       -0.089
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      0.048,
+      0.047,
+      0.11
+     ],
+     "rpy_deg": [
+      -2.3,
+      -4.0,
+      7.3
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.0,
+       -0.005,
+       -0.015
+      ],
+      "fr_lleg_tip": [
+       0.027,
+       0.004,
+       0.116
+      ],
+      "hl_lleg_tip": [
+       0.0,
+       -0.001,
+       -0.014
+      ],
+      "hr_lleg_tip": [
+       -0.002,
+       -0.001,
+       -0.014
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.001,
+      0.003,
+      0.014
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.3
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.0,
+       -0.002,
+       -0.004
+      ],
+      "fr_lleg_tip": [
+       0.044,
+       0.01,
+       0.249
+      ],
+      "hl_lleg_tip": [
+       0.0,
+       -0.001,
+       -0.004
+      ],
+      "hr_lleg_tip": [
+       -0.0,
+       -0.001,
+       -0.004
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.0,
+      0.002,
+      0.004
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.1
+     ],
+     "size": {
+      "tip_L": 0.571,
+      "base_L": 0.01,
+      "turn_deg": 0.1,
+      "joint_range_share": 0.365
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fl_lleg_tip",
+    "hl_lleg_tip",
+    "hr_lleg_tip"
+   ],
+   "round": 0,
+   "kept_by": "moves the base most along z",
+   "kept": true
+  },
+  {
+   "name": "hl_tip_forward",
+   "part": "hl_lleg_tip",
+   "plus": "Hind-left tip moves forward and upward.",
+   "minus": "Hind-left tip moves backward and upward.",
+   "toward": {
+    "hl_hy": -0.325,
+    "hl_kn": -0.175
+   },
+   "away": {
+    "hl_hy": 0.65,
+    "hl_kn": -0.65
+   },
+   "frees": [
+    "hl_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "hl_lleg_tip": [
+       -0.096,
+       -0.003,
+       0.196
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.493,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.251
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "hl_lleg_tip": [
+       -0.069,
+       -0.001,
+       0.092
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ],
+      "fr_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ],
+      "hl_lleg_tip": [
+       0.14,
+       -0.001,
+       0.034
+      ],
+      "hr_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0355
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ],
+      "fr_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ],
+      "hl_lleg_tip": [
+       0.254,
+       -0.002,
+       0.11
+      ],
+      "hr_lleg_tip": [
+       0.002,
+       -0.001,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.625,
+      "base_L": 0.005,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.2
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fl_lleg_tip",
+    "fr_lleg_tip",
+    "hr_lleg_tip"
+   ],
+   "round": 1,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "hl_tip_up",
+   "part": "hl_lleg_tip",
+   "plus": "Hind-left tip folds upward toward its hip.",
+   "minus": "Hind-left tip returns to home.",
+   "toward": {
+    "hl_hy": 0.3,
+    "hl_kn": -0.95
+   },
+   "frees": [
+    "hl_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.049,
+       -0.023,
+       -0.129
+      ],
+      "fr_lleg_tip": [
+       0.004,
+       -0.02,
+       -0.118
+      ],
+      "hl_lleg_tip": [
+       -0.126,
+       0.003,
+       -0.202
+      ],
+      "hr_lleg_tip": [
+       0.012,
+       0.059,
+       -0.175
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      0.028,
+      -0.036,
+      0.147
+     ],
+     "rpy_deg": [
+      2.6,
+      5.3,
+      7.9
+     ],
+     "size": {
+      "tip_L": 0.537,
+      "base_L": 0.347,
+      "turn_deg": 7.9,
+      "joint_range_share": 0.586
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.016,
+       -0.016,
+       -0.09
+      ],
+      "fr_lleg_tip": [
+       -0.025,
+       -0.014,
+       -0.08
+      ],
+      "hl_lleg_tip": [
+       -0.061,
+       0.002,
+       -0.139
+      ],
+      "hr_lleg_tip": [
+       -0.019,
+       0.058,
+       -0.123
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      0.044,
+      -0.032,
+      0.101
+     ],
+     "rpy_deg": [
+      2.3,
+      4.0,
+      7.1
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.001,
+       -0.001,
+       -0.014
+      ],
+      "fr_lleg_tip": [
+       -0.001,
+       -0.001,
+       -0.014
+      ],
+      "hl_lleg_tip": [
+       0.027,
+       -0.002,
+       0.117
+      ],
+      "hr_lleg_tip": [
+       -0.001,
+       0.003,
+       -0.014
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.001,
+      0.014
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.3
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.001,
+       0.0,
+       -0.004
+      ],
+      "fr_lleg_tip": [
+       -0.002,
+       0.0,
+       -0.004
+      ],
+      "hl_lleg_tip": [
+       0.044,
+       -0.004,
+       0.249
+      ],
+      "hr_lleg_tip": [
+       -0.002,
+       0.002,
+       -0.004
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.001,
+      -0.001,
+      0.004
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.1
+     ],
+     "size": {
+      "tip_L": 0.571,
+      "base_L": 0.01,
+      "turn_deg": 0.1,
+      "joint_range_share": 0.364
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fl_lleg_tip",
+    "fr_lleg_tip",
+    "hr_lleg_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "hr_tip_forward",
+   "part": "hr_lleg_tip",
+   "plus": "Hind-right tip moves forward and upward.",
+   "minus": "Hind-right tip moves backward and upward.",
+   "toward": {
+    "hr_hy": -0.325,
+    "hr_kn": -0.175
+   },
+   "away": {
+    "hr_hy": 0.65,
+    "hr_kn": -0.65
+   },
+   "frees": [
+    "hr_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "hr_lleg_tip": [
+       -0.096,
+       0.003,
+       0.196
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.493,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.251
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "hr_lleg_tip": [
+       -0.069,
+       0.001,
+       0.092
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "fr_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "hl_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.14,
+       0.001,
+       0.034
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0356
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      -0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "fr_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "hl_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.254,
+       0.002,
+       0.11
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      -0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.625,
+      "base_L": 0.005,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.2
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fl_lleg_tip",
+    "fr_lleg_tip",
+    "hl_lleg_tip"
+   ],
+   "round": 1,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "hr_tip_outward",
+   "part": "hr_lleg_tip",
+   "plus": "Hind-right tip moves right and upward.",
+   "minus": "Hind-right tip moves left and upward.",
+   "toward": {
+    "hr_hx": -0.8,
+    "hr_hy": 0.2,
+    "hr_kn": -0.5
+   },
+   "away": {
+    "hr_hx": 0.55,
+    "hr_hy": 0.2,
+    "hr_kn": -0.55
+   },
+   "frees": [
+    "hr_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "fr_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "hl_lleg_tip": [
+       0.002,
+       0.001,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.022,
+       0.124,
+       0.117
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      -0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.388,
+      "base_L": 0.005,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.275
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.001,
+       0.001,
+       0.0
+      ],
+      "fr_lleg_tip": [
+       0.001,
+       0.001,
+       0.0
+      ],
+      "hl_lleg_tip": [
+       0.001,
+       0.001,
+       0.0
+      ],
+      "hr_lleg_tip": [
+       0.011,
+       0.075,
+       0.051
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      -0.001,
+      -0.001,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "hr_lleg_tip": [
+       0.007,
+       -0.102,
+       0.108
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "hr_lleg_tip": [
+       0.014,
+       -0.15,
+       0.237
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.634,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.4
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fl_lleg_tip",
+    "fr_lleg_tip",
+    "hl_lleg_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "hr_tip_up",
+   "part": "hr_lleg_tip",
+   "plus": "Hind-right tip folds upward toward its hip.",
+   "minus": "Hind-right tip returns to home.",
+   "toward": {
+    "hr_hy": 0.3,
+    "hr_kn": -0.95
+   },
+   "frees": [
+    "hr_lleg_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "fl_lleg_tip": [
+       0.004,
+       0.02,
+       -0.118
+      ],
+      "fr_lleg_tip": [
+       0.05,
+       0.023,
+       -0.129
+      ],
+      "hl_lleg_tip": [
+       0.012,
+       -0.059,
+       -0.176
+      ],
+      "hr_lleg_tip": [
+       -0.126,
+       -0.003,
+       -0.202
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      0.028,
+      0.036,
+      0.147
+     ],
+     "rpy_deg": [
+      -2.6,
+      5.3,
+      -7.9
+     ],
+     "size": {
+      "tip_L": 0.537,
+      "base_L": 0.347,
+      "turn_deg": 7.9,
+      "joint_range_share": 0.586
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.025,
+       0.014,
+       -0.08
+      ],
+      "fr_lleg_tip": [
+       0.016,
+       0.016,
+       -0.09
+      ],
+      "hl_lleg_tip": [
+       -0.019,
+       -0.058,
+       -0.123
+      ],
+      "hr_lleg_tip": [
+       -0.061,
+       -0.002,
+       -0.139
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      0.044,
+      0.032,
+      0.101
+     ],
+     "rpy_deg": [
+      -2.3,
+      4.0,
+      -7.1
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.001,
+       0.001,
+       -0.014
+      ],
+      "fr_lleg_tip": [
+       0.001,
+       0.001,
+       -0.014
+      ],
+      "hl_lleg_tip": [
+       -0.001,
+       -0.003,
+       -0.014
+      ],
+      "hr_lleg_tip": [
+       0.027,
+       0.002,
+       0.117
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.001,
+      0.014
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      -0.3
+     ]
+    },
+    "1": {
+     "tips": {
+      "fl_lleg_tip": [
+       -0.002,
+       -0.001,
+       -0.004
+      ],
+      "fr_lleg_tip": [
+       -0.001,
+       -0.001,
+       -0.004
+      ],
+      "hl_lleg_tip": [
+       -0.002,
+       -0.002,
+       -0.004
+      ],
+      "hr_lleg_tip": [
+       0.044,
+       0.004,
+       0.249
+      ]
+     },
+     "clear": {
+      "self": 0.0443,
+      "ground": 0.0443
+     },
+     "fail": [],
+     "base": [
+      0.002,
+      0.001,
+      0.004
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      -0.1
+     ],
+     "size": {
+      "tip_L": 0.571,
+      "base_L": 0.01,
+      "turn_deg": 0.1,
+      "joint_range_share": 0.364
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "fl_lleg_tip",
+    "fr_lleg_tip",
+    "hl_lleg_tip"
+   ],
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  }
+ ],
+ "gaits": [
+  {
+   "name": "four_foot_wave",
+   "cycle_s": 2.55,
+   "duty": 0.8,
+   "phase": {
+    "fl_lleg_tip": 0.0,
+    "fr_lleg_tip": 0.5,
+    "hl_lleg_tip": 0.75,
+    "hr_lleg_tip": 0.25
+   },
+   "step_L": 0.65,
+   "swing_height_L": 0.16,
+   "source": "llm",
+   "card": {
+    "forward": {
+     "advance_L": 1.162,
+     "side_L": 0.021,
+     "turn_deg": -0.0
+    },
+    "turn": {
+     "advance_L": 0.003,
+     "side_L": -0.005,
+     "turn_deg": 65.6
+    },
+    "lifts": {
+     "fl_lleg_tip": 2,
+     "fr_lleg_tip": 4,
+     "hl_lleg_tip": 4,
+     "hr_lleg_tip": 4
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": 0
+  },
+  {
+   "name": "alternating",
+   "cycle_s": 0.5313,
+   "duty": {
+    "fl_lleg_tip": 0.6,
+    "fr_lleg_tip": 0.6,
+    "hl_lleg_tip": 0.6,
+    "hr_lleg_tip": 0.6
+   },
+   "phase": {
+    "fl_lleg_tip": 0.0,
+    "fr_lleg_tip": 0.5,
+    "hl_lleg_tip": 0.5,
+    "hr_lleg_tip": 0.0
+   },
+   "step_L": 0.25,
+   "swing_height_L": 0.15,
+   "source": "intake",
+   "card": {
+    "forward": {
+     "advance_L": 0.901,
+     "side_L": -0.002,
+     "turn_deg": -0.0
+    },
+    "turn": {
+     "advance_L": 0.013,
+     "side_L": -0.023,
+     "turn_deg": 52.1
+    },
+    "lifts": {
+     "fl_lleg_tip": 6,
+     "fr_lleg_tip": 8,
+     "hl_lleg_tip": 8,
+     "hr_lleg_tip": 6
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": null
+  },
+  {
+   "name": "crawl",
+   "cycle_s": 2.1254,
+   "duty": {
+    "fl_lleg_tip": 0.8,
+    "fr_lleg_tip": 0.8,
+    "hl_lleg_tip": 0.8,
+    "hr_lleg_tip": 0.8
+   },
+   "phase": {
+    "fl_lleg_tip": 0.0,
+    "fr_lleg_tip": 0.5,
+    "hl_lleg_tip": 0.75,
+    "hr_lleg_tip": 0.25
+   },
+   "step_L": 0.25,
+   "swing_height_L": 0.15,
+   "source": "intake",
+   "card": {
+    "forward": {
+     "advance_L": 0.549,
+     "side_L": 0.007,
+     "turn_deg": 0.0
+    },
+    "turn": {
+     "advance_L": -0.011,
+     "side_L": 0.009,
+     "turn_deg": 35.8
+    },
+    "lifts": {
+     "fl_lleg_tip": 4,
+     "fr_lleg_tip": 4,
+     "hl_lleg_tip": 6,
+     "hr_lleg_tip": 4
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": null
+  }
+ ],
+ "rejected": {
+  "modes": [
+   {
+    "name": "trunk_lower",
+    "part": "trunk",
+    "plus": "Trunk lowers as all four legs fold.",
+    "minus": "Trunk rises as all four legs extend.",
+    "toward": {
+     "fl_hy": 0.25,
+     "fl_kn": -0.65,
+     "fr_hy": 0.261,
+     "fr_kn": -0.65,
+     "hl_hy": 0.25,
+     "hl_kn": -0.65,
+     "hr_hy": 0.25,
+     "hr_kn": -0.65
+    },
+    "away": {
+     "fl_hy": -0.16,
+     "fl_kn": 0.32,
+     "fr_hy": -0.16,
+     "fr_kn": 0.32,
+     "hl_hy": -0.16,
+     "hl_kn": 0.318,
+     "hr_hy": -0.16,
+     "hr_kn": 0.319
+    },
+    "cards": {
+     "-1": {
+      "tips": {
+       "fl_lleg_tip": [
+        0.019,
+        -0.0,
+        -0.105
+       ],
+       "fr_lleg_tip": [
+        0.019,
+        -0.0,
+        -0.105
+       ],
+       "hl_lleg_tip": [
+        0.019,
+        -0.0,
+        -0.105
+       ],
+       "hr_lleg_tip": [
+        0.018,
+        -0.0,
+        -0.105
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       -0.019,
+       0.0,
+       0.105
+      ],
+      "rpy_deg": [
+       -0.0,
+       0.0,
+       -0.0
+      ],
+      "size": {
+       "tip_L": 0.241,
+       "base_L": 0.241,
+       "turn_deg": 0.0,
+       "joint_range_share": 0.197
+      }
+     },
+     "-0.5": {
+      "tips": {
+       "fl_lleg_tip": [
+        0.008,
+        -0.0,
+        -0.056
+       ],
+       "fr_lleg_tip": [
+        0.008,
+        -0.0,
+        -0.056
+       ],
+       "hl_lleg_tip": [
+        0.008,
+        -0.0,
+        -0.056
+       ],
+       "hr_lleg_tip": [
+        0.008,
+        -0.0,
+        -0.056
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       -0.008,
+       0.0,
+       0.056
+      ],
+      "rpy_deg": [
+       -0.0,
+       0.0,
+       -0.0
+      ]
+     },
+     "0.5": {
+      "tips": {
+       "fl_lleg_tip": [
+        0.011,
+        0.0,
+        0.078
+       ],
+       "fr_lleg_tip": [
+        0.011,
+        0.0,
+        0.078
+       ],
+       "hl_lleg_tip": [
+        0.011,
+        -0.0,
+        0.078
+       ],
+       "hr_lleg_tip": [
+        0.011,
+        -0.0,
+        0.078
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       -0.011,
+       -0.0,
+       -0.078
+      ],
+      "rpy_deg": [
+       0.0,
+       0.0,
+       -0.0
+      ]
+     },
+     "1": {
+      "tips": {
+       "fl_lleg_tip": [
+        0.021,
+        0.0,
+        0.164
+       ],
+       "fr_lleg_tip": [
+        0.021,
+        0.0,
+        0.164
+       ],
+       "hl_lleg_tip": [
+        0.021,
+        -0.0,
+        0.164
+       ],
+       "hr_lleg_tip": [
+        0.021,
+        -0.0,
+        0.164
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       -0.021,
+       -0.0,
+       -0.164
+      ],
+      "rpy_deg": [
+       0.0,
+       0.0,
+       -0.0
+      ],
+      "size": {
+       "tip_L": 0.373,
+       "base_L": 0.373,
+       "turn_deg": 0.0,
+       "joint_range_share": 0.25
+      }
+     }
+    },
+    "valid": true,
+    "fail": [],
+    "small": false,
+    "round": 0,
+    "kept": false,
+    "why": "no coverage loss without it"
+   },
+   {
+    "name": "trunk_yaw_left",
+    "part": "trunk",
+    "plus": "Trunk turns left over planted feet.",
+    "minus": "Trunk turns right over planted feet.",
+    "toward": {
+     "fl_hx": -0.126,
+     "fr_hx": -0.126,
+     "hl_hx": 0.126,
+     "hr_hx": 0.126,
+     "fl_hy": -0.025,
+     "fl_kn": -0.0105,
+     "fr_hy": 0.029,
+     "fr_kn": 0.048,
+     "hl_hy": -0.044,
+     "hl_kn": 0.048,
+     "hr_hy": 0.05,
+     "hr_kn": -0.0105
+    },
+    "away": {
+     "fl_hx": 0.126,
+     "fr_hx": 0.126,
+     "hl_hx": -0.126,
+     "hr_hx": -0.126,
+     "fl_hy": 0.0278,
+     "fl_kn": 0.048,
+     "fr_hy": -0.025,
+     "fr_kn": -0.0105,
+     "hl_hy": 0.05,
+     "hl_kn": -0.0105,
+     "hr_hy": -0.044,
+     "hr_kn": 0.048
+    },
+    "cards": {
+     "-1": {
+      "tips": {
+       "fl_lleg_tip": [
+        -0.032,
+        0.041,
+        -0.002
+       ],
+       "fr_lleg_tip": [
+        0.022,
+        0.04,
+        -0.007
+       ],
+       "hl_lleg_tip": [
+        -0.022,
+        -0.04,
+        -0.004
+       ],
+       "hr_lleg_tip": [
+        0.018,
+        -0.041,
+        -0.006
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       0.004,
+       0.0,
+       0.005
+      ],
+      "rpy_deg": [
+       -0.7,
+       -0.0,
+       -7.8
+      ],
+      "size": {
+       "tip_L": 0.117,
+       "base_L": 0.014,
+       "turn_deg": 7.8,
+       "joint_range_share": 0.063
+      }
+     },
+     "-0.5": {
+      "tips": {
+       "fl_lleg_tip": [
+        -0.016,
+        0.02,
+        -0.002
+       ],
+       "fr_lleg_tip": [
+        0.011,
+        0.02,
+        -0.004
+       ],
+       "hl_lleg_tip": [
+        -0.011,
+        -0.02,
+        -0.003
+       ],
+       "hr_lleg_tip": [
+        0.009,
+        -0.02,
+        -0.004
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       0.002,
+       0.0,
+       0.003
+      ],
+      "rpy_deg": [
+       -0.3,
+       -0.0,
+       -3.9
+      ]
+     },
+     "0.5": {
+      "tips": {
+       "fl_lleg_tip": [
+        0.011,
+        -0.02,
+        -0.004
+       ],
+       "fr_lleg_tip": [
+        -0.016,
+        -0.02,
+        -0.002
+       ],
+       "hl_lleg_tip": [
+        0.009,
+        0.02,
+        -0.004
+       ],
+       "hr_lleg_tip": [
+        -0.011,
+        0.02,
+        -0.003
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       0.002,
+       -0.0,
+       0.003
+      ],
+      "rpy_deg": [
+       0.3,
+       -0.0,
+       3.9
+      ]
+     },
+     "1": {
+      "tips": {
+       "fl_lleg_tip": [
+        0.022,
+        -0.04,
+        -0.007
+       ],
+       "fr_lleg_tip": [
+        -0.032,
+        -0.041,
+        -0.002
+       ],
+       "hl_lleg_tip": [
+        0.018,
+        0.041,
+        -0.006
+       ],
+       "hr_lleg_tip": [
+        -0.022,
+        0.04,
+        -0.004
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       0.004,
+       -0.0,
+       0.005
+      ],
+      "rpy_deg": [
+       0.7,
+       -0.0,
+       7.8
+      ],
+      "size": {
+       "tip_L": 0.117,
+       "base_L": 0.014,
+       "turn_deg": 7.8,
+       "joint_range_share": 0.063
+      }
+     }
+    },
+    "valid": true,
+    "fail": [],
+    "small": false,
+    "round": 2,
+    "kept": false,
+    "why": "no coverage loss without it"
+   },
+   {
+    "name": "hl_tip_outward",
+    "part": "hl_lleg_tip",
+    "plus": "Hind-left tip moves left and upward.",
+    "minus": "Hind-left tip moves right and upward.",
+    "toward": {
+     "hl_hx": 0.8,
+     "hl_hy": 0.2,
+     "hl_kn": -0.5
+    },
+    "away": {
+     "hl_hx": -0.55,
+     "hl_hy": 0.2,
+     "hl_kn": -0.55
+    },
+    "frees": [
+     "hl_lleg_tip"
+    ],
+    "cards": {
+     "-1": {
+      "tips": {
+       "fl_lleg_tip": [
+        0.002,
+        -0.001,
+        0.0
+       ],
+       "fr_lleg_tip": [
+        0.002,
+        -0.001,
+        0.0
+       ],
+       "hl_lleg_tip": [
+        0.022,
+        -0.124,
+        0.117
+       ],
+       "hr_lleg_tip": [
+        0.002,
+        -0.001,
+        0.0
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       -0.002,
+       0.001,
+       -0.0
+      ],
+      "rpy_deg": [
+       -0.0,
+       -0.0,
+       0.0
+      ],
+      "size": {
+       "tip_L": 0.388,
+       "base_L": 0.005,
+       "turn_deg": 0.0,
+       "joint_range_share": 0.275
+      }
+     },
+     "-0.5": {
+      "tips": {
+       "fl_lleg_tip": [
+        0.001,
+        -0.001,
+        0.0
+       ],
+       "fr_lleg_tip": [
+        0.001,
+        -0.001,
+        0.0
+       ],
+       "hl_lleg_tip": [
+        0.011,
+        -0.075,
+        0.05
+       ],
+       "hr_lleg_tip": [
+        0.001,
+        -0.001,
+        0.0
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       -0.001,
+       0.001,
+       -0.0
+      ],
+      "rpy_deg": [
+       -0.0,
+       -0.0,
+       0.0
+      ]
+     },
+     "0.5": {
+      "tips": {
+       "hl_lleg_tip": [
+        0.007,
+        0.102,
+        0.108
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       0.0,
+       -0.0,
+       0.0
+      ],
+      "rpy_deg": [
+       0.0,
+       0.0,
+       -0.0
+      ]
+     },
+     "1": {
+      "tips": {
+       "hl_lleg_tip": [
+        0.014,
+        0.15,
+        0.237
+       ]
+      },
+      "clear": {
+       "self": 0.0443,
+       "ground": 0.0443
+      },
+      "fail": [],
+      "base": [
+       0.001,
+       -0.0,
+       0.0
+      ],
+      "rpy_deg": [
+       0.0,
+       0.0,
+       -0.0
+      ],
+      "size": {
+       "tip_L": 0.634,
+       "base_L": 0.002,
+       "turn_deg": 0.0,
+       "joint_range_share": 0.4
+      }
+     }
+    },
+    "valid": true,
+    "fail": [],
+    "small": false,
+    "measured_stance": [
+     "fl_lleg_tip",
+     "fr_lleg_tip",
+     "hr_lleg_tip"
+    ],
+    "round": 0,
+    "kept": false,
+    "why": "no coverage loss without it"
+   }
+  ],
+  "gaits": [
+   {
+    "name": "omnidirectional_crawl",
+    "cycle_s": 2.32,
+    "duty": {
+     "fl_lleg_tip": 0.8362,
+     "fr_lleg_tip": 0.8362,
+     "hl_lleg_tip": 0.5862,
+     "hr_lleg_tip": 0.5862
+    },
+    "phase": {
+     "fl_lleg_tip": 0.0862,
+     "fr_lleg_tip": 0.5862,
+     "hl_lleg_tip": 0.8362,
+     "hr_lleg_tip": 0.3362
+    },
+    "step_L": 0.25,
+    "swing_height_L": 0.15,
+    "source": "intake",
+    "card": {
+     "forward": {
+      "advance_L": 0.517,
+      "side_L": -0.0,
+      "turn_deg": -0.0
+     },
+     "turn": {
+      "advance_L": 0.0,
+      "side_L": -0.245,
+      "turn_deg": 29.2
+     },
+     "lifts": {
+      "fl_lleg_tip": 4,
+      "fr_lleg_tip": 4,
+      "hl_lleg_tip": 2,
+      "hr_lleg_tip": 4
+     }
+    },
+    "valid": false,
+    "fail": [
+     "support: the centre of mass was outside the stance polygon by up to 0.0909 m on 26 frames (allowed 0.0443 m)"
+    ],
+    "round": null
+   }
+  ]
+ },
+ "coverage": {
+  "fl_lleg_tip": 0.4924,
+  "fr_lleg_tip": 0.4946,
+  "hl_lleg_tip": 0.3184,
+  "hr_lleg_tip": 0.3621
+ },
+ "coverage_valid": {
+  "fl_lleg_tip": 0.5022,
+  "fr_lleg_tip": 0.5022,
+  "hl_lleg_tip": 0.354,
+  "hr_lleg_tip": 0.3638
+ },
+ "coverage_ceiling": {
+  "fl_lleg_tip": 0.9126,
+  "fr_lleg_tip": 0.8994,
+  "hl_lleg_tip": 0.8997,
+  "hr_lleg_tip": 0.8918
+ },
+ "selection": [
+  {
+   "start": [
+    "trunk_forward",
+    "trunk_left",
+    "trunk_lower",
+    "trunk_roll_left",
+    "trunk_pitch_up",
+    "trunk_yaw_left",
+    "fl_tip_forward",
+    "fl_tip_outward",
+    "fl_tip_up",
+    "fr_tip_forward",
+    "fr_tip_outward",
+    "fr_tip_up",
+    "hl_tip_forward",
+    "hl_tip_outward",
+    "hl_tip_up",
+    "hr_tip_forward",
+    "hr_tip_outward",
+    "hr_tip_up"
+   ],
+   "mean_coverage": 0.4305
+  },
+  {
+   "drop": "trunk_lower",
+   "mean_coverage": 0.4303,
+   "loss": 0.0002
+  },
+  {
+   "drop": "trunk_yaw_left",
+   "mean_coverage": 0.4245,
+   "loss": 0.0058
+  },
+  {
+   "drop": "hl_tip_outward",
+   "mean_coverage": 0.4169,
+   "loss": 0.0076
+  }
+ ],
+ "counts": {
+  "modes_final": 18,
+  "modes_valid": 18,
+  "modes_usable": 18,
+  "modes_kept": 15,
+  "gaits_llm_valid": 1,
+  "gaits_llm": 1,
+  "gaits_intake_valid": 2,
+  "gaits_intake": 3,
+  "modes_proposed": 18
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "modes": 18,
+   "modes_valid": 14,
+   "modes_small": 0,
+   "gaits": 1,
+   "gaits_valid": 1
+  },
+  {
+   "round": 1,
+   "modes": 4,
+   "modes_valid": 3,
+   "modes_small": 0,
+   "gaits": 0,
+   "gaits_valid": 0
+  },
+  {
+   "round": 2,
+   "modes": 1,
+   "modes_valid": 1,
+   "modes_small": 0,
+   "gaits": 0,
+   "gaits_valid": 0
+  }
+ ],
+ "calls": 3,
+ "cost_usd": 0.037516,
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "prompt_sha": "6d1d19d0e639",
+ "description_sha": "937215fb39ff",
+ "seconds": 150.9,
+ "made": "2026-11-12T02:23:13",
+ "method": "track/kin/primitives.py (see its docstring)"
+}

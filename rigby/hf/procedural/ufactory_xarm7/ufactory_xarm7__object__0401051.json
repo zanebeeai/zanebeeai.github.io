@@ -1,0 +1,382 @@
+{
+ "clip_id": "ufactory_xarm7__object__0401051",
+ "body": "ufactory_xarm7",
+ "kind": "arm",
+ "source": "object",
+ "seed": 401051,
+ "attempt_index": 51,
+ "skill": null,
+ "arm": "object",
+ "compiler": "core.compile_dense",
+ "variant": "pick_place",
+ "params": {
+  "speed": "fast",
+  "amplitude": "medium",
+  "block_start": [
+   0.454,
+   -0.301,
+   0.332
+  ],
+  "place": [
+   0.353,
+   -0.036,
+   0.332
+  ],
+  "lift_m": 0.151,
+  "yaw_deg": 90.0,
+  "hold_s": 0.28
+ },
+ "program": {
+  "duration_s": 4.23,
+  "keyframes": [
+   {
+    "t": 0.0,
+    "grip": [
+     0.3998483237131823,
+     0.0,
+     0.3686723258062965
+    ],
+    "gripper": "open"
+   },
+   {
+    "t": 0.7,
+    "grip": [
+     0.454,
+     -0.301,
+     0.432
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "open"
+   },
+   {
+    "t": 1.2,
+    "grip": [
+     0.454,
+     -0.301,
+     0.332
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "open"
+   },
+   {
+    "t": 1.5,
+    "grip": [
+     0.454,
+     -0.301,
+     0.332
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "closed",
+    "event": "grasp"
+   },
+   {
+    "t": 2.0,
+    "grip": [
+     0.454,
+     -0.301,
+     0.483
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966
+   },
+   {
+    "t": 2.28,
+    "grip": [
+     0.454,
+     -0.301,
+     0.483
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966
+   },
+   {
+    "t": 2.98,
+    "grip": [
+     0.353,
+     -0.036,
+     0.483
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966
+   },
+   {
+    "t": 3.48,
+    "grip": [
+     0.353,
+     -0.036,
+     0.332
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "closed"
+   },
+   {
+    "t": 3.73,
+    "grip": [
+     0.353,
+     -0.036,
+     0.332
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "open",
+    "event": "release"
+   },
+   {
+    "t": 4.23,
+    "grip": [
+     0.353,
+     -0.036,
+     0.432
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "open"
+   }
+  ],
+  "block_start": [
+   0.454,
+   -0.301,
+   0.332,
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "program_raw": {
+  "duration_s": 4.23,
+  "keyframes": [
+   {
+    "t": 0.0,
+    "grip": [
+     0.3998483237131823,
+     0.0,
+     0.3686723258062965
+    ],
+    "gripper": "open"
+   },
+   {
+    "t": 0.7,
+    "grip": [
+     0.454,
+     -0.301,
+     0.432
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "open"
+   },
+   {
+    "t": 1.2,
+    "grip": [
+     0.454,
+     -0.301,
+     0.332
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "open"
+   },
+   {
+    "t": 1.5,
+    "grip": [
+     0.454,
+     -0.301,
+     0.332
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "closed",
+    "event": "grasp"
+   },
+   {
+    "t": 2.0,
+    "grip": [
+     0.454,
+     -0.301,
+     0.483
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966
+   },
+   {
+    "t": 2.28,
+    "grip": [
+     0.454,
+     -0.301,
+     0.483
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966
+   },
+   {
+    "t": 2.98,
+    "grip": [
+     0.353,
+     -0.036,
+     0.483
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966
+   },
+   {
+    "t": 3.48,
+    "grip": [
+     0.353,
+     -0.036,
+     0.332
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "closed"
+   },
+   {
+    "t": 3.73,
+    "grip": [
+     0.353,
+     -0.036,
+     0.332
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "open",
+    "event": "release"
+   },
+   {
+    "t": 4.23,
+    "grip": [
+     0.353,
+     -0.036,
+     0.432
+    ],
+    "down": true,
+    "yaw": 1.5707963267948966,
+    "gripper": "open"
+   }
+  ],
+  "block_start": [
+   0.454,
+   -0.301,
+   0.332,
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "library": null,
+ "library_sha": null,
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0094
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0015,
+   "body_frame": [
+    "right_finger",
+    174
+   ],
+   "limit_m": 0.0094
+  },
+  "object_penetration": {
+   "pass": true,
+   "worst_m": 0.0005,
+   "limit_m": 0.0094
+  },
+  "arm_in_object": {
+   "pass": true,
+   "worst_m": 0.0,
+   "limit_m": 0.0094
+  },
+  "grasp": {
+   "pass": true,
+   "notes": []
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0014,
+   "limit_m": 0.0468
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1231,
+   "limit_rad": 0.1296
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.0935
+  },
+  "pass": true,
+  "failed": []
+ },
+ "filter_words": [],
+ "predicate": {
+  "wave": false,
+  "point": false,
+  "reach_forward": false,
+  "trace_circle": false,
+  "kick_swing": false,
+  "tap_twice": true,
+  "lift_and_hold": false
+ },
+ "attempts": 1,
+ "calls": 0,
+ "cost_usd": 0.0,
+ "held_out": false,
+ "duration_s": 4.24,
+ "n_frames": 213,
+ "fps": 50,
+ "repairs": {
+  "frames_with_capped_joints": 12,
+  "jump_limit_rad_per_frame": 0.1296,
+  "max_projection_m": 0.0,
+  "frames_projected_over_1mm": 0
+ },
+ "compile_notes": [],
+ "tips": [
+  "left_finger_tip",
+  "right_finger_tip"
+ ],
+ "contact_edges": [
+  [
+   "left_pad",
+   "block"
+  ],
+  [
+   "right_pad",
+   "block"
+  ],
+  [
+   "block",
+   "table"
+  ],
+  [
+   "rest_of_body",
+   "block"
+  ],
+  [
+   "rest_of_body",
+   "table"
+  ],
+  [
+   "block",
+   "floor"
+  ]
+ ],
+ "code": "5c97a339459a",
+ "seconds": 0.21
+}

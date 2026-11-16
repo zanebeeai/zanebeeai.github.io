@@ -1,0 +1,1389 @@
+{
+ "name": "v3_reverse_knee_quadruped_s3104",
+ "xml": "track/bodies/v3_reverse_knee_quadruped_s3104.xml",
+ "source_model": "any-robot/assets/general/v3_walkers/v3_reverse_knee_quadruped_s3104/robot.xml",
+ "source_sha256": "5a02ca586a77109097d43545d6c9ac4db919433a9bd4bec9a77ae2be629e9078",
+ "nq": 19,
+ "nv": 18,
+ "nu": 12,
+ "timestep": 0.002,
+ "free_base": true,
+ "root_body": "torso",
+ "mass_kg": 11.3662,
+ "joints": [
+  {
+   "name": "root",
+   "type": "free",
+   "body": "torso",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": null,
+   "limited": null,
+   "object": false
+  },
+  {
+   "name": "fl_abduct",
+   "type": "hinge",
+   "body": "fl_hip",
+   "qposadr": 7,
+   "dofadr": 6,
+   "range": [
+    -0.5,
+    0.5
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fl_swing",
+   "type": "hinge",
+   "body": "fl_thigh",
+   "qposadr": 8,
+   "dofadr": 7,
+   "range": [
+    -1.6,
+    1.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fl_knee",
+   "type": "hinge",
+   "body": "fl_shank",
+   "qposadr": 9,
+   "dofadr": 8,
+   "range": [
+    0.15,
+    2.4
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fr_abduct",
+   "type": "hinge",
+   "body": "fr_hip",
+   "qposadr": 10,
+   "dofadr": 9,
+   "range": [
+    -0.5,
+    0.5
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fr_swing",
+   "type": "hinge",
+   "body": "fr_thigh",
+   "qposadr": 11,
+   "dofadr": 10,
+   "range": [
+    -1.6,
+    1.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "fr_knee",
+   "type": "hinge",
+   "body": "fr_shank",
+   "qposadr": 12,
+   "dofadr": 11,
+   "range": [
+    0.15,
+    2.4
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hl_abduct",
+   "type": "hinge",
+   "body": "hl_hip",
+   "qposadr": 13,
+   "dofadr": 12,
+   "range": [
+    -0.5,
+    0.5
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hl_swing",
+   "type": "hinge",
+   "body": "hl_thigh",
+   "qposadr": 14,
+   "dofadr": 13,
+   "range": [
+    -1.6,
+    1.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hl_knee",
+   "type": "hinge",
+   "body": "hl_shank",
+   "qposadr": 15,
+   "dofadr": 14,
+   "range": [
+    0.15,
+    2.4
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hr_abduct",
+   "type": "hinge",
+   "body": "hr_hip",
+   "qposadr": 16,
+   "dofadr": 15,
+   "range": [
+    -0.5,
+    0.5
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hr_swing",
+   "type": "hinge",
+   "body": "hr_thigh",
+   "qposadr": 17,
+   "dofadr": 16,
+   "range": [
+    -1.6,
+    1.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "hr_knee",
+   "type": "hinge",
+   "body": "hr_shank",
+   "qposadr": 18,
+   "dofadr": 17,
+   "range": [
+    0.15,
+    2.4
+   ],
+   "limited": true,
+   "object": false
+  }
+ ],
+ "actuators": [
+  {
+   "name": "fl_abduct_servo",
+   "transmission": "joint",
+   "joints": [
+    "fl_abduct"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.5,
+    0.5
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "fl_swing_servo",
+   "transmission": "joint",
+   "joints": [
+    "fl_swing"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.6,
+    1.6
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "fl_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "fl_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.15,
+    2.4
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "fr_abduct_servo",
+   "transmission": "joint",
+   "joints": [
+    "fr_abduct"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.5,
+    0.5
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "fr_swing_servo",
+   "transmission": "joint",
+   "joints": [
+    "fr_swing"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.6,
+    1.6
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "fr_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "fr_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.15,
+    2.4
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "hl_abduct_servo",
+   "transmission": "joint",
+   "joints": [
+    "hl_abduct"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.5,
+    0.5
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  },
+  {
+   "name": "hl_swing_servo",
+   "transmission": "joint",
+   "joints": [
+    "hl_swing"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.6,
+    1.6
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C7"
+  },
+  {
+   "name": "hl_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "hl_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.15,
+    2.4
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C8"
+  },
+  {
+   "name": "hr_abduct_servo",
+   "transmission": "joint",
+   "joints": [
+    "hr_abduct"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.5,
+    0.5
+   ],
+   "forcerange": [
+    -30.0,
+    30.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C9"
+  },
+  {
+   "name": "hr_swing_servo",
+   "transmission": "joint",
+   "joints": [
+    "hr_swing"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.6,
+    1.6
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C10"
+  },
+  {
+   "name": "hr_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "hr_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.15,
+    2.4
+   ],
+   "forcerange": [
+    -40.0,
+    40.0
+   ],
+   "gain": 160.0,
+   "bias": [
+    0.0,
+    -160.0,
+    0.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C11"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  0.0,
+  0.40213,
+  1.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "L": 0.3528,
+ "T": 0.18964,
+ "L_is": "standing CoM height (m)",
+ "tips": [
+  {
+   "name": "fl_foot_tip",
+   "body": "fl_foot",
+   "rigby_id": "T0",
+   "joints": [
+    "fl_abduct",
+    "fl_swing",
+    "fl_knee"
+   ],
+   "home_base_m": [
+    0.1689,
+    0.1546,
+    -0.3781
+   ],
+   "home_world_m": [
+    0.1689,
+    0.1546,
+    0.024
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.188,
+     -0.0088,
+     -0.3781
+    ],
+    "max": [
+     0.5242,
+     0.3183,
+     0.1521
+    ]
+   },
+   "reach_m": 0.3594,
+   "first_joint_anchor_base_m": [
+    0.1689,
+    0.1246,
+    -0.02
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "fl_abduct": 0.0095,
+      "fl_swing": 0.9463,
+      "fl_knee": 0.323
+     },
+     "share_of_motion": 0.907,
+     "tip_motion_per_unit_at_home_m": [
+      -0.6036,
+      0.0017,
+      0.0001
+     ]
+    },
+    {
+     "weights": {
+      "fl_abduct": 0.2514,
+      "fl_swing": -0.3149,
+      "fl_knee": 0.9152
+     },
+     "share_of_motion": 0.053,
+     "tip_motion_per_unit_at_home_m": [
+      0.0067,
+      0.045,
+      0.0038
+     ]
+    },
+    {
+     "weights": {
+      "fl_abduct": 0.9678,
+      "fl_swing": 0.0725,
+      "fl_knee": -0.2409
+     },
+     "share_of_motion": 0.041,
+     "tip_motion_per_unit_at_home_m": [
+      0.0042,
+      0.1733,
+      0.0145
+     ]
+    }
+   ]
+  },
+  {
+   "name": "fr_foot_tip",
+   "body": "fr_foot",
+   "rigby_id": "T1",
+   "joints": [
+    "fr_abduct",
+    "fr_swing",
+    "fr_knee"
+   ],
+   "home_base_m": [
+    0.1689,
+    -0.1546,
+    -0.3781
+   ],
+   "home_world_m": [
+    0.1689,
+    -0.1546,
+    0.024
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.1876,
+     -0.3078,
+     -0.3781
+    ],
+    "max": [
+     0.5241,
+     0.0127,
+     0.1542
+    ]
+   },
+   "reach_m": 0.3594,
+   "first_joint_anchor_base_m": [
+    0.1689,
+    -0.1246,
+    -0.02
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "fr_abduct": -0.0105,
+      "fr_swing": 0.9463,
+      "fr_knee": 0.3232
+     },
+     "share_of_motion": 0.909,
+     "tip_motion_per_unit_at_home_m": [
+      -0.6036,
+      -0.0019,
+      0.0002
+     ]
+    },
+    {
+     "weights": {
+      "fr_abduct": -0.1816,
+      "fr_swing": -0.3196,
+      "fr_knee": 0.93
+     },
+     "share_of_motion": 0.053,
+     "tip_motion_per_unit_at_home_m": [
+      0.0066,
+      -0.0325,
+      0.0027
+     ]
+    },
+    {
+     "weights": {
+      "fr_abduct": 0.9833,
+      "fr_swing": -0.049,
+      "fr_knee": 0.1752
+     },
+     "share_of_motion": 0.038,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0052,
+      0.1761,
+      -0.0147
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hl_foot_tip",
+   "body": "hl_foot",
+   "rigby_id": "T2",
+   "joints": [
+    "hl_abduct",
+    "hl_swing",
+    "hl_knee"
+   ],
+   "home_base_m": [
+    -0.1689,
+    0.1546,
+    -0.3781
+   ],
+   "home_world_m": [
+    -0.1689,
+    0.1546,
+    0.024
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.525,
+     -0.0119,
+     -0.3781
+    ],
+    "max": [
+     0.1861,
+     0.3198,
+     0.148
+    ]
+   },
+   "reach_m": 0.3594,
+   "first_joint_anchor_base_m": [
+    -0.1689,
+    0.1246,
+    -0.02
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "hl_abduct": 0.0119,
+      "hl_swing": 0.9458,
+      "hl_knee": 0.3244
+     },
+     "share_of_motion": 0.901,
+     "tip_motion_per_unit_at_home_m": [
+      -0.6036,
+      0.0021,
+      0.0002
+     ]
+    },
+    {
+     "weights": {
+      "hl_abduct": 0.1454,
+      "hl_swing": -0.3226,
+      "hl_knee": 0.9353
+     },
+     "share_of_motion": 0.06,
+     "tip_motion_per_unit_at_home_m": [
+      0.0073,
+      0.026,
+      0.0022
+     ]
+    },
+    {
+     "weights": {
+      "hl_abduct": 0.9893,
+      "hl_swing": 0.0361,
+      "hl_knee": -0.1413
+     },
+     "share_of_motion": 0.04,
+     "tip_motion_per_unit_at_home_m": [
+      0.0062,
+      0.1771,
+      0.0148
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hr_foot_tip",
+   "body": "hr_foot",
+   "rigby_id": "T3",
+   "joints": [
+    "hr_abduct",
+    "hr_swing",
+    "hr_knee"
+   ],
+   "home_base_m": [
+    -0.1689,
+    -0.1546,
+    -0.3781
+   ],
+   "home_world_m": [
+    -0.1689,
+    -0.1546,
+    0.024
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.5257,
+     -0.3131,
+     -0.3781
+    ],
+    "max": [
+     0.1841,
+     0.0096,
+     0.1471
+    ]
+   },
+   "reach_m": 0.3594,
+   "first_joint_anchor_base_m": [
+    -0.1689,
+    -0.1246,
+    -0.02
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "hr_abduct": -0.0108,
+      "hr_swing": 0.9463,
+      "hr_knee": 0.3232
+     },
+     "share_of_motion": 0.908,
+     "tip_motion_per_unit_at_home_m": [
+      -0.6036,
+      -0.0019,
+      0.0002
+     ]
+    },
+    {
+     "weights": {
+      "hr_abduct": -0.2024,
+      "hr_swing": -0.3186,
+      "hr_knee": 0.926
+     },
+     "share_of_motion": 0.053,
+     "tip_motion_per_unit_at_home_m": [
+      0.0068,
+      -0.0363,
+      0.003
+     ]
+    },
+    {
+     "weights": {
+      "hr_abduct": 0.9792,
+      "hr_swing": -0.0554,
+      "hr_knee": 0.195
+     },
+     "share_of_motion": 0.039,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0053,
+      0.1753,
+      -0.0147
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "fl_foot": [
+   5
+  ],
+  "fr_foot": [
+   9
+  ],
+  "hl_foot": [
+   13
+  ],
+  "hr_foot": [
+   17
+  ],
+  "rest_of_body": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   7,
+   8,
+   10,
+   11,
+   12,
+   14,
+   15,
+   16
+  ],
+  "floor": [
+   0
+  ]
+ },
+ "link_group_names": {
+  "fl_foot": [
+   "fl_foot"
+  ],
+  "fr_foot": [
+   "fr_foot"
+  ],
+  "hl_foot": [
+   "hl_foot"
+  ],
+  "hr_foot": [
+   "hr_foot"
+  ],
+  "rest_of_body": [
+   "torso",
+   "fl_hip",
+   "fl_thigh",
+   "fl_shank",
+   "fr_hip",
+   "fr_thigh",
+   "fr_shank",
+   "hl_hip",
+   "hl_thigh",
+   "hl_shank",
+   "hr_hip",
+   "hr_thigh",
+   "hr_shank"
+  ],
+  "floor": [
+   "world"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ]
+ },
+ "contact_edges": [
+  [
+   "fl_foot",
+   "floor"
+  ],
+  [
+   "fr_foot",
+   "floor"
+  ],
+  [
+   "hl_foot",
+   "floor"
+  ],
+  [
+   "hr_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ]
+ ],
+ "stance_sets": [
+  {
+   "name": "all",
+   "tips": [
+    "fl_foot_tip",
+    "fr_foot_tip",
+    "hl_foot_tip",
+    "hr_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_fl_foot_tip",
+   "tips": [
+    "fr_foot_tip",
+    "hl_foot_tip",
+    "hr_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_fr_foot_tip",
+   "tips": [
+    "fl_foot_tip",
+    "hl_foot_tip",
+    "hr_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_hl_foot_tip",
+   "tips": [
+    "fl_foot_tip",
+    "fr_foot_tip",
+    "hr_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_hr_foot_tip",
+   "tips": [
+    "fl_foot_tip",
+    "fr_foot_tip",
+    "hl_foot_tip"
+   ]
+  }
+ ],
+ "balance": {
+  "support_tips": [
+   "fl_foot_tip",
+   "fr_foot_tip",
+   "hl_foot_tip",
+   "hr_foot_tip"
+  ],
+  "support_polygon_base_xy_m": [
+   [
+    -0.1689,
+    -0.1546
+   ],
+   [
+    0.1689,
+    -0.1546
+   ],
+   [
+    0.1689,
+    0.1546
+   ],
+   [
+    -0.1689,
+    0.1546
+   ]
+  ],
+  "com_home_base_m": [
+   0.0,
+   0.0,
+   -0.0493
+  ],
+  "com_margin_home_m": 0.1547,
+  "about": "weight-shift coordinate: the base moves so the CoM moves toward a direction inside this polygon; a tip may lift once the CoM is inside the polygon of the others (dilated 0.1 L)"
+ },
+ "gaits": [
+  {
+   "name": "omnidirectional_crawl",
+   "source": "rigby v7 library (docs/preprint/v7/libraries/v3_reverse_knee_quadruped_s3104.json)",
+   "about": "A statically supported four-beat crawl that lifts only one foot at a time. Each airborne foot resets to the leading edge of its commanded path while the other three feet carry the body; forward, lateral, and yaw commands can be mixed.",
+   "cycle_s": 1.76,
+   "phase": {
+    "fl_foot_tip": 0.625,
+    "fr_foot_tip": 0.125,
+    "hl_foot_tip": 0.375,
+    "hr_foot_tip": 0.875
+   },
+   "duty": {
+    "fl_foot_tip": 0.375,
+    "fr_foot_tip": 0.375,
+    "hl_foot_tip": 0.375,
+    "hr_foot_tip": 0.375
+   },
+   "duty_mean": 0.375,
+   "stacks": [
+    {
+     "t": 0.22,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.0,
+      "C2": 0.45,
+      "C3": 0.0,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.0,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": 0.0,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.0,
+      "C2": 0.08,
+      "C3": 0.0,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.0,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": 0.0,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": 0.0,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.0,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": 0.0,
+      "C10": 0.0,
+      "C11": 0.45
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": 0.0,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.0,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": 0.0,
+      "C10": 0.0,
+      "C11": 0.08
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": 0.0,
+      "C4": 0.0,
+      "C5": 0.45,
+      "C6": 0.0,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": 0.0,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": 0.0,
+      "C4": 0.0,
+      "C5": 0.08,
+      "C6": 0.0,
+      "C7": 0.0,
+      "C8": 0.0,
+      "C9": 0.0,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": 0.0,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.0,
+      "C7": 0.0,
+      "C8": 0.45,
+      "C9": 0.0,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    },
+    {
+     "t": 0.22,
+     "set": {
+      "C0": 0.0,
+      "C1": 0.0,
+      "C2": 0.0,
+      "C3": 0.0,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.0,
+      "C7": 0.0,
+      "C8": 0.08,
+      "C9": 0.0,
+      "C10": 0.0,
+      "C11": 0.0
+     }
+    }
+   ],
+   "steer": {
+    "forward": [
+     {
+      "C1": -0.28,
+      "C4": 0.07,
+      "C7": -0.14,
+      "C10": 0.21
+     },
+     {
+      "C1": -0.28,
+      "C4": 0.14,
+      "C7": 0.0,
+      "C10": 0.28
+     },
+     {
+      "C1": -0.14,
+      "C4": 0.21,
+      "C7": 0.07,
+      "C10": -0.28
+     },
+     {
+      "C1": 0.0,
+      "C4": 0.28,
+      "C7": 0.14,
+      "C10": -0.28
+     },
+     {
+      "C1": 0.07,
+      "C4": -0.28,
+      "C7": 0.21,
+      "C10": -0.14
+     },
+     {
+      "C1": 0.14,
+      "C4": -0.28,
+      "C7": 0.28,
+      "C10": 0.0
+     },
+     {
+      "C1": 0.21,
+      "C4": -0.14,
+      "C7": -0.28,
+      "C10": 0.07
+     },
+     {
+      "C1": 0.28,
+      "C4": 0.0,
+      "C7": -0.28,
+      "C10": 0.14
+     }
+    ],
+    "left": [
+     {
+      "C0": 0.208,
+      "C3": -0.052,
+      "C6": 0.104,
+      "C9": -0.156
+     },
+     {
+      "C0": 0.208,
+      "C3": -0.104,
+      "C6": 0.0,
+      "C9": -0.208
+     },
+     {
+      "C0": 0.104,
+      "C3": -0.156,
+      "C6": -0.052,
+      "C9": 0.208
+     },
+     {
+      "C0": 0.0,
+      "C3": -0.208,
+      "C6": -0.104,
+      "C9": 0.208
+     },
+     {
+      "C0": -0.052,
+      "C3": 0.208,
+      "C6": -0.156,
+      "C9": 0.104
+     },
+     {
+      "C0": -0.104,
+      "C3": 0.208,
+      "C6": -0.208,
+      "C9": 0.0
+     },
+     {
+      "C0": -0.156,
+      "C3": 0.104,
+      "C6": 0.208,
+      "C9": -0.052
+     },
+     {
+      "C0": -0.208,
+      "C3": 0.0,
+      "C6": 0.208,
+      "C9": -0.104
+     }
+    ],
+    "turn": [
+     {
+      "C1": 0.256,
+      "C4": 0.064,
+      "C7": 0.128,
+      "C10": 0.192
+     },
+     {
+      "C1": 0.256,
+      "C4": 0.128,
+      "C7": 0.0,
+      "C10": 0.256
+     },
+     {
+      "C1": 0.128,
+      "C4": 0.192,
+      "C7": -0.064,
+      "C10": -0.256
+     },
+     {
+      "C1": 0.0,
+      "C4": 0.256,
+      "C7": -0.128,
+      "C10": -0.256
+     },
+     {
+      "C1": -0.064,
+      "C4": -0.256,
+      "C7": -0.192,
+      "C10": -0.128
+     },
+     {
+      "C1": -0.128,
+      "C4": -0.256,
+      "C7": -0.256,
+      "C10": 0.0
+     },
+     {
+      "C1": -0.192,
+      "C4": -0.128,
+      "C7": 0.256,
+      "C10": 0.064
+     },
+     {
+      "C1": -0.256,
+      "C4": 0.0,
+      "C7": 0.256,
+      "C10": 0.128
+     }
+    ]
+   },
+   "channel_joint": {
+    "C0": "fl_abduct",
+    "C1": "fl_swing",
+    "C2": "fl_knee",
+    "C3": "fr_abduct",
+    "C4": "fr_swing",
+    "C5": "fr_knee",
+    "C6": "hl_abduct",
+    "C7": "hl_swing",
+    "C8": "hl_knee",
+    "C9": "hr_abduct",
+    "C10": "hr_swing",
+    "C11": "hr_knee"
+   },
+   "step_height_m": 0.0882,
+   "min_limbs_down": 1,
+   "quasi_static": false
+  },
+  {
+   "name": "alternating",
+   "source": "synthesised from measured tips (angular order, alternate phases)",
+   "cycle_s": 0.4741,
+   "phase": {
+    "fl_foot_tip": 0.0,
+    "fr_foot_tip": 0.5,
+    "hl_foot_tip": 0.5,
+    "hr_foot_tip": 0.0
+   },
+   "duty": {
+    "fl_foot_tip": 0.6,
+    "fr_foot_tip": 0.6,
+    "hl_foot_tip": 0.6,
+    "hr_foot_tip": 0.6
+   },
+   "duty_mean": 0.6,
+   "step_height_m": 0.0882,
+   "min_limbs_down": 2,
+   "quasi_static": false
+  },
+  {
+   "name": "crawl",
+   "source": "synthesised quasi-static crawl from measured tips (one limb lifted at a time)",
+   "cycle_s": 1.8964,
+   "phase": {
+    "fl_foot_tip": 0.0,
+    "fr_foot_tip": 0.5,
+    "hl_foot_tip": 0.75,
+    "hr_foot_tip": 0.25
+   },
+   "duty": {
+    "fl_foot_tip": 0.8,
+    "fr_foot_tip": 0.8,
+    "hl_foot_tip": 0.8,
+    "hr_foot_tip": 0.8
+   },
+   "duty_mean": 0.8,
+   "step_height_m": 0.0882,
+   "lift_order": [
+    "fl_hip",
+    "hr_hip",
+    "fr_hip",
+    "hl_hip"
+   ],
+   "min_limbs_down": 3,
+   "quasi_static": true
+  }
+ ],
+ "objects": null,
+ "excluded_pairs_home_overlap": [],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: x forward, y left, z up, metres; for the arm a level frame at its base",
+ "kind": "quadruped",
+ "support": [
+  {
+   "tip": "fl_foot_tip",
+   "type": "point"
+  },
+  {
+   "tip": "fr_foot_tip",
+   "type": "point"
+  },
+  {
+   "tip": "hl_foot_tip",
+   "type": "point"
+  },
+  {
+   "tip": "hr_foot_tip",
+   "type": "point"
+  }
+ ],
+ "render_model": "any-robot/assets/general/v3_walkers/v3_reverse_knee_quadruped_s3104/robot.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ }
+}

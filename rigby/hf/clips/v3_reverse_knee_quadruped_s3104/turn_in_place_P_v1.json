@@ -1,0 +1,406 @@
+{
+ "body": "v3_reverse_knee_quadruped_s3104",
+ "skill": "turn_in_place",
+ "arm": "P",
+ "variant": 1,
+ "source": "llm_author",
+ "model": "gpt-6.1-sol",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/v3_reverse_knee_quadruped_s3104.json",
+ "library_sha": "947d054152b2850aeb5453ea9fae6cbb63068595aef9782c4545426dfe5e9c92",
+ "standin_library": false,
+ "prompt_sha256": "2ddf79ca1df2e08a7c1ee71f79707ad8a22afa5b6448d0cf4b97c4902a58f323",
+ "prompt_chars": 21308,
+ "valid": true,
+ "valid_first": true,
+ "repair_rounds": 0,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0009,
+   "pair_frame": [
+    "hr_thigh",
+    "torso",
+    469
+   ],
+   "limit_m": 0.0035
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0001,
+   "body_frame": [
+    "fr_foot",
+    25
+   ],
+   "limit_m": 0.0035
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0001,
+   "limit_m": 0.0176
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1191,
+   "limit_rad": 0.2109
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0095,
+   "limit_m": 0.0353
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0068,
+   "worst_off_ground_m": 0.0001,
+   "limit_m": 0.0071
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0353
+  },
+  "pass": true,
+  "failed": []
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0009,
+     "pair_frame": [
+      "hr_thigh",
+      "torso",
+      469
+     ],
+     "limit_m": 0.0035
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0001,
+     "body_frame": [
+      "fr_foot",
+      25
+     ],
+     "limit_m": 0.0035
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0001,
+     "limit_m": 0.0176
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.1191,
+     "limit_rad": 0.2109
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0095,
+     "limit_m": 0.0353
+    },
+    "foot_slip": {
+     "pass": true,
+     "worst_slide_m": 0.0068,
+     "worst_off_ground_m": 0.0001,
+     "limit_m": 0.0071
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.0353
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 12,
+    "keyframes": [
+     {
+      "t": 0,
+      "stance": [
+       "fl",
+       "fr",
+       "hl",
+       "hr"
+      ],
+      "modes": {
+       "trunk_lower": 0,
+       "trunk_pitch_forward": 0
+      }
+     },
+     {
+      "t": 0.4,
+      "modes": {
+       "trunk_lower": 0.08,
+       "trunk_pitch_forward": -0.04
+      },
+      "gait": {
+       "name": "four_beat_crawl",
+       "cmd": [
+        0,
+        0,
+        -45
+       ]
+      }
+     },
+     {
+      "t": 4.2,
+      "modes": {
+       "trunk_lower": 0.1,
+       "trunk_pitch_forward": 0.03
+      },
+      "gait": {
+       "name": "four_beat_crawl",
+       "cmd": [
+        0,
+        0,
+        -45
+       ]
+      }
+     },
+     {
+      "t": 7.9,
+      "modes": {
+       "trunk_lower": 0.07,
+       "trunk_pitch_forward": -0.03
+      },
+      "gait": {
+       "name": "four_beat_crawl",
+       "cmd": [
+        0,
+        0,
+        -45
+       ]
+      }
+     },
+     {
+      "t": 11.5,
+      "modes": {
+       "trunk_lower": 0.08,
+       "trunk_pitch_forward": 0
+      }
+     },
+     {
+      "t": 12,
+      "modes": {
+       "trunk_lower": 0,
+       "trunk_pitch_forward": 0
+      }
+     }
+    ]
+   },
+   "reply": "{\n  \"duration_s\": 12,\n  \"keyframes\": [\n    {\n      \"t\": 0,\n      \"stance\": [\"fl\", \"fr\", \"hl\", \"hr\"],\n      \"modes\": {\n        \"trunk_lower\": 0,\n        \"trunk_pitch_forward\": 0\n      }\n    },\n    {\n      \"t\": 0.4,\n      \"modes\": {\n        \"trunk_lower\": 0.08,\n        \"trunk_pitch_forward\": -0.04\n      },\n      \"gait\": {\n        \"name\": \"four_beat_crawl\",\n        \"cmd\": [0, 0, -45]\n      }\n    },\n    {\n      \"t\": 4.2,\n      \"modes\": {\n        \"trunk_lower\": 0.1,\n        \"trunk_pitch_forward\": 0.03\n      },\n      \"gait\": {\n        \"name\": \"four_beat_crawl\",\n        \"cmd\": [0, 0, -45]\n      }\n    },\n    {\n      \"t\": 7.9,\n      \"modes\": {\n        \"trunk_lower\": 0.07,\n        \"trunk_pitch_forward\": -0.03\n      },\n      \"gait\": {\n        \"name\": \"four_beat_crawl\",\n        \"cmd\": [0, 0, -45]\n      }\n    },\n    {\n      \"t\": 11.5,\n      \"modes\": {\n        \"trunk_lower\": 0.08,\n        \"trunk_pitch_forward\": 0\n      }\n    },\n    {\n      \"t\": 12,\n      \"modes\": {\n        \"trunk_lower\": 0,\n        \"trunk_pitch_forward\": 0\n      }\n    }\n  ]\n}"
+  }
+ ],
+ "feedback": [],
+ "calls": 1,
+ "call_log": [
+  {
+   "prompt_tokens": 7447,
+   "cached_tokens": 0,
+   "completion_tokens": 522,
+   "reasoning_tokens": 130,
+   "cost_usd": 0.010057,
+   "service_tier": "flex",
+   "seconds": 14.32
+  }
+ ],
+ "cost_usd": 0.010057,
+ "seconds": 19.6,
+ "at": "2026-11-12T02:37:58",
+ "predicate": {
+  "skill": "turn_in_place",
+  "applicable": true,
+  "pass": true,
+  "yaw_deg": -126.366,
+  "max_yaw_deg": 128.08,
+  "drift_L": 0.1287
+ },
+ "valid_and_semantic": true,
+ "program": {
+  "duration_s": 12,
+  "keyframes": [
+   {
+    "t": 0,
+    "stance": [
+     "fl",
+     "fr",
+     "hl",
+     "hr"
+    ],
+    "modes": {
+     "trunk_lower": 0,
+     "trunk_pitch_forward": 0
+    }
+   },
+   {
+    "t": 0.4,
+    "modes": {
+     "trunk_lower": 0.08,
+     "trunk_pitch_forward": -0.04
+    },
+    "gait": {
+     "name": "four_beat_crawl",
+     "cmd": [
+      0,
+      0,
+      -45
+     ]
+    }
+   },
+   {
+    "t": 4.2,
+    "modes": {
+     "trunk_lower": 0.1,
+     "trunk_pitch_forward": 0.03
+    },
+    "gait": {
+     "name": "four_beat_crawl",
+     "cmd": [
+      0,
+      0,
+      -45
+     ]
+    }
+   },
+   {
+    "t": 7.9,
+    "modes": {
+     "trunk_lower": 0.07,
+     "trunk_pitch_forward": -0.03
+    },
+    "gait": {
+     "name": "four_beat_crawl",
+     "cmd": [
+      0,
+      0,
+      -45
+     ]
+    }
+   },
+   {
+    "t": 11.5,
+    "modes": {
+     "trunk_lower": 0.08,
+     "trunk_pitch_forward": 0
+    }
+   },
+   {
+    "t": 12,
+    "modes": {
+     "trunk_lower": 0,
+     "trunk_pitch_forward": 0
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0009,
+   "pair_frame": [
+    "hr_thigh",
+    "torso",
+    469
+   ],
+   "limit_m": 0.0035
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0001,
+   "body_frame": [
+    "fr_foot",
+    25
+   ],
+   "limit_m": 0.0035
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0001,
+   "limit_m": 0.0176
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1191,
+   "limit_rad": 0.2109
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0095,
+   "limit_m": 0.0353
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0068,
+   "worst_off_ground_m": 0.0001,
+   "limit_m": 0.0071
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0353
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": 5,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.2109,
+   "start_joints_moved_inside_range": [
+    "fl_knee",
+    "fr_knee",
+    "hl_knee",
+    "hr_knee"
+   ],
+   "max_projection_m": 0.0095,
+   "frames_projected_over_1mm": 0,
+   "gait_cmd_scale_min": 0.2715,
+   "com_shift_max_m": 0.0493
+  },
+  "notes": [
+   "gait four_beat_crawl frames 20-575: the gait drives ['fl_knee', 'fl_swing', 'fr_knee', 'fr_swing', 'hl_knee', 'hl_swing', 'hr_knee', 'hr_swing']; their program values wait"
+  ],
+  "gaits": [
+   {
+    "f0": 20,
+    "f1": 575,
+    "legs": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "cycle_s": 1.896,
+    "cmd_scale_min": 0.2714639171629686,
+    "foothold_projection_m": 0.009452535083682878,
+    "advance_m": 0.0,
+    "yaw_deg": -127.95778689229418
+   }
+  ]
+ },
+ "npz": "/home/angelo3/scratch/rigby/kin_prod/out/clips/v3_reverse_knee_quadruped_s3104/clips/turn_in_place_P_v1.npz"
+}
