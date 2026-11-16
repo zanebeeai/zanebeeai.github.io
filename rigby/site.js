@@ -132,7 +132,7 @@ function homePage() {
   </div>
 </section>
 ${getSection()}
-<footer><div class="wrap">Rigby kinematic motion dataset · built locally from the release folder · clips are kinematic (physically possible poses and contacts), not simulated dynamics.</div></footer>`;
+<footer><div class="wrap">Rigby kinematic motion dataset · built locally from the release folder · clips are kinematic (physically possible poses and contacts), not simulated dynamics · licence CC BY-NC 4.0; for commercial use, contact the authors.</div></footer>`;
 }
 function matrixTable() {
   const skills = SKILL_ORDER.filter(s => S.meta.skills.includes(s));
@@ -180,6 +180,7 @@ clip = np.load(f"{root}/{go2[0]['npz']}")
 qpos = clip["qpos"]    # (frames, nq) in bodies/unitree_go2.xml's qpos order
 print(go2[0]["skill"], qpos.shape, clip["fps"])</pre>
         <a class="btn" style="background:var(--dark-ink);color:var(--dark);border-color:var(--dark-ink);align-self:flex-start" href="https://huggingface.co/datasets/${esc(repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download dataset</a>
+        <p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>, free for non-commercial use with credit. For commercial use, contact the authors through the dataset's <a href="https://huggingface.co/datasets/${esc(repo)}/discussions" target="_blank" rel="noopener">Community tab</a>. Robot models derived from MuJoCo Menagerie keep their own licences.</p>
       </div>
       <div class="files-wrap"><table class="files">
         <tr><td>index/clips.jsonl</td><td>one row per clip: robot, skill, arm, checks, label check, model, tokens, cost, file paths</td></tr>
