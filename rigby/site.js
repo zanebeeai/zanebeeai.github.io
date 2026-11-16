@@ -82,7 +82,7 @@ function homePage() {
       <div class="eyebrow">Rigby · kinematic motion dataset</div>
       <h1 style="margin-top:14px">Motion for <b>${st.bodies} robots</b>,<br>written in each robot's own primitives</h1>
       <p class="sub">${fmt(st.clips)} motion clips across ${skillN} skills, generated from nothing but each robot's model: a language model proposes the robot's primitives and composes them into motions. Every frame of every clip passes every physical check.</p>
-      <div class="ctas"><a class="btn" href="https://huggingface.co/datasets/${esc(S.meta.hf_repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download on Hugging Face</a><a class="btn ghost" href="#/browse">Browse clips</a></div>
+      <div class="ctas"><a class="btn" href="https://huggingface.co/datasets/${esc(S.meta.hf_repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download dataset</a><a class="btn ghost" href="#/browse">Browse clips</a></div>
     </div>
     <div class="stage" id="stage">
       <div class="plane" id="plane" style="--cols:${cols.length};--rows:${rows.length}">
@@ -179,7 +179,7 @@ go2 = [r for r in rows if r["body"] == "unitree_go2" and r["valid"]]
 clip = np.load(f"{root}/{go2[0]['npz']}")
 qpos = clip["qpos"]    # (frames, nq) in bodies/unitree_go2.xml's qpos order
 print(go2[0]["skill"], qpos.shape, clip["fps"])</pre>
-        <a class="btn" style="background:var(--dark-ink);color:var(--dark);border-color:var(--dark-ink);align-self:flex-start" href="https://huggingface.co/datasets/${esc(repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download on Hugging Face</a>
+        <a class="btn" style="background:var(--dark-ink);color:var(--dark);border-color:var(--dark-ink);align-self:flex-start" href="https://huggingface.co/datasets/${esc(repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download dataset</a>
       </div>
       <div class="files-wrap"><table class="files">
         <tr><td>index/clips.jsonl</td><td>one row per clip: robot, skill, arm, checks, label check, model, tokens, cost, file paths</td></tr>
