@@ -1,0 +1,502 @@
+{
+ "body": "astral_iguana",
+ "skill": "step_forward",
+ "arm": "P",
+ "variant": 0,
+ "source": "llm_author",
+ "model": "claude-opus-5-5",
+ "reasoning": "low",
+ "max_completion": 4000,
+ "library": "track/kin/libraries/astral_iguana.json",
+ "library_sha": "6925087539b15013da8e01250f2cb6bf21f8180e587e6d2b1df2a769ae2a8f5f",
+ "standin_library": false,
+ "prompt_sha256": "0d93d1472d94e0e28e86c04baacbab7e896e81ee3dad49c3e632675991ebd7da",
+ "prompt_chars": 33089,
+ "valid": true,
+ "valid_first": false,
+ "repair_rounds": 1,
+ "first_filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0027
+  },
+  "ground": {
+   "pass": false,
+   "worst_m": 0.0056,
+   "body_frame": [
+    "FL_foot",
+    225
+   ],
+   "limit_m": 0.0027
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0135
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.2289,
+   "limit_rad": 0.241
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.027
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.0064,
+   "worst_off_ground_m": 0.0042,
+   "limit_m": 0.0054
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.027
+  },
+  "pass": false,
+  "failed": [
+   "ground",
+   "foot_slip"
+  ]
+ },
+ "attempts": [
+  {
+   "round": 0,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0027
+    },
+    "ground": {
+     "pass": false,
+     "worst_m": 0.0056,
+     "body_frame": [
+      "FL_foot",
+      225
+     ],
+     "limit_m": 0.0027
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0135
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.2289,
+     "limit_rad": 0.241
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.027
+    },
+    "foot_slip": {
+     "pass": false,
+     "worst_slide_m": 0.0064,
+     "worst_off_ground_m": 0.0042,
+     "limit_m": 0.0054
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.027
+    },
+    "pass": false,
+    "failed": [
+     "ground",
+     "foot_slip"
+    ]
+   },
+   "program": {
+    "duration_s": 5.0,
+    "keyframes": [
+     {
+      "t": 0,
+      "modes": {
+       "head_down": 0,
+       "tail_s_bend_right": 0
+      }
+     },
+     {
+      "t": 0.5,
+      "modes": {
+       "head_down": 0.15,
+       "tail_s_bend_right": 0.2,
+       "trunk_shift_forward": 0.1
+      },
+      "gait": {
+       "name": "walk",
+       "cmd": [
+        0.4,
+        0.0,
+        0.0
+       ]
+      }
+     },
+     {
+      "t": 2.3,
+      "modes": {
+       "head_left": 0.15,
+       "tail_s_bend_right": -0.2
+      },
+      "gait": {
+       "name": "walk",
+       "cmd": [
+        0.45,
+        0.0,
+        0.0
+       ]
+      }
+     },
+     {
+      "t": 4.0,
+      "modes": {
+       "head_left": -0.1,
+       "tail_s_bend_right": 0.15,
+       "head_down": 0.1
+      }
+     },
+     {
+      "t": 4.5,
+      "modes": {
+       "head_left": 0.0,
+       "tail_s_bend_right": 0.0,
+       "head_down": 0.05,
+       "trunk_shift_forward": 0.0
+      }
+     },
+     {
+      "t": 5.0,
+      "modes": {
+       "head_down": 0.0
+      }
+     }
+    ]
+   },
+   "reply": "{\"duration_s\":5.0,\"keyframes\":[{\"t\":0,\"modes\":{\"head_down\":0,\"tail_s_bend_right\":0}},{\"t\":0.5,\"modes\":{\"head_down\":0.15,\"tail_s_bend_right\":0.2,\"trunk_shift_forward\":0.1},\"gait\":{\"name\":\"walk\",\"cmd\":[0.4,0.0,0.0]}},{\"t\":2.3,\"modes\":{\"head_left\":0.15,\"tail_s_bend_right\":-0.2},\"gait\":{\"name\":\"walk\",\"cmd\":[0.45,0.0,0.0]}},{\"t\":4.0,\"modes\":{\"head_left\":-0.1,\"tail_s_bend_right\":0.15,\"head_down\":0.1}},{\"t\":4.5,\"modes\":{\"head_left\":0.0,\"tail_s_bend_right\":0.0,\"head_down\":0.05,\"trunk_shift_forward\":0.0}},{\"t\":5.0,\"modes\":{\"head_down\":0.0}}]}"
+  },
+  {
+   "round": 1,
+   "filters": {
+    "joint_limits": {
+     "pass": true,
+     "worst_rad": 0.0,
+     "joint": null
+    },
+    "self_collision": {
+     "pass": true,
+     "worst_m": 0.0,
+     "pair_frame": null,
+     "limit_m": 0.0027
+    },
+    "ground": {
+     "pass": true,
+     "worst_m": 0.0013,
+     "body_frame": [
+      "FL_foot",
+      70
+     ],
+     "limit_m": 0.0027
+    },
+    "ik": {
+     "pass": true,
+     "worst_miss_m": 0.0,
+     "limit_m": 0.0135
+    },
+    "continuity": {
+     "pass": true,
+     "max_step_rad": 0.137,
+     "limit_rad": 0.241
+    },
+    "reach": {
+     "pass": true,
+     "max_projection_m": 0.0,
+     "limit_m": 0.027
+    },
+    "foot_slip": {
+     "pass": true,
+     "worst_slide_m": 0.0,
+     "worst_off_ground_m": 0.0002,
+     "limit_m": 0.0054
+    },
+    "support": {
+     "pass": true,
+     "frames_outside": 0,
+     "worst_outside_m": 0.0,
+     "limit_m": 0.027
+    },
+    "pass": true,
+    "failed": []
+   },
+   "program": {
+    "duration_s": 5.0,
+    "keyframes": [
+     {
+      "t": 0,
+      "modes": {
+       "head_down": 0,
+       "tail_s_bend_right": 0
+      }
+     },
+     {
+      "t": 0.5,
+      "modes": {
+       "head_down": 0.15,
+       "tail_s_bend_right": 0.2
+      },
+      "gait": {
+       "name": "walk",
+       "cmd": [
+        0.4,
+        0.0,
+        0.0
+       ]
+      }
+     },
+     {
+      "t": 2.3,
+      "modes": {
+       "head_left": 0.15,
+       "tail_s_bend_right": -0.2
+      },
+      "gait": {
+       "name": "walk",
+       "cmd": [
+        0.45,
+        0.0,
+        0.0
+       ]
+      }
+     },
+     {
+      "t": 4.0,
+      "modes": {
+       "head_left": -0.1,
+       "tail_s_bend_right": 0.15,
+       "head_down": 0.1
+      }
+     },
+     {
+      "t": 4.5,
+      "modes": {
+       "head_left": 0.0,
+       "tail_s_bend_right": 0.0,
+       "head_down": 0.05
+      }
+     },
+     {
+      "t": 5.0,
+      "modes": {
+       "head_down": 0.0
+      }
+     }
+    ]
+   },
+   "reply": "{\"duration_s\":5.0,\"keyframes\":[{\"t\":0,\"modes\":{\"head_down\":0,\"tail_s_bend_right\":0}},{\"t\":0.5,\"modes\":{\"head_down\":0.15,\"tail_s_bend_right\":0.2},\"gait\":{\"name\":\"walk\",\"cmd\":[0.4,0.0,0.0]}},{\"t\":2.3,\"modes\":{\"head_left\":0.15,\"tail_s_bend_right\":-0.2},\"gait\":{\"name\":\"walk\",\"cmd\":[0.45,0.0,0.0]}},{\"t\":4.0,\"modes\":{\"head_left\":-0.1,\"tail_s_bend_right\":0.15,\"head_down\":0.1}},{\"t\":4.5,\"modes\":{\"head_left\":0.0,\"tail_s_bend_right\":0.0,\"head_down\":0.05}},{\"t\":5.0,\"modes\":{\"head_down\":0.0}}]}"
+  }
+ ],
+ "feedback": [
+  "The program compiled, but the motion failed these checks:\n- ground: a part of the body went 0.0056 m into the floor or the table (limit 0.0027 m): ('FL_foot', 225) (body, frame)\n- foot_slip: a tip in stance slid 0.0064 m or left the floor by 0.0042 m (limit 0.0054 m): the base moved too far from the planted tips\n- ground: worst at t=4.50s (FL_foot)\n- foot_slip: worst on tip FL at t=4.50s\nNumbers: {\"ground\":{\"worst_m\":0.0056,\"body_frame\":[\"FL_foot\",225],\"limit_m\":0.0027},\"foot_slip\":{\"worst_slide_m\":0.0064,\"worst_off_ground_m\":0.0042,\"limit_m\":0.0054}}\nNote: gait walk frames 25-200: the gait drives ['FL_knee', 'FL_pitch', 'FR_knee', 'FR_pitch', 'RL_knee', 'RL_pitch', 'RR_knee', 'RR_pitch']; their program values wait\nWrite the whole program again so that every check passes, still doing what was asked. JSON only."
+ ],
+ "calls": 2,
+ "call_log": [
+  {
+   "prompt_tokens": 19528,
+   "cached_tokens": 19475,
+   "completion_tokens": 339,
+   "reasoning_tokens": null,
+   "cost_usd": 0.010887,
+   "service_tier": "standard",
+   "seconds": 3.32
+  },
+  {
+   "prompt_tokens": 20261,
+   "cached_tokens": 19475,
+   "completion_tokens": 453,
+   "reasoning_tokens": null,
+   "cost_usd": 0.016099,
+   "service_tier": "standard",
+   "seconds": 3.84
+  }
+ ],
+ "cost_usd": 0.026986,
+ "seconds": 14.6,
+ "at": "2026-11-16T19:56:00",
+ "predicate": {
+  "skill": "step_forward",
+  "applicable": true,
+  "pass": true,
+  "advance_L": 1.4334,
+  "stance_tips": 4,
+  "stepped": 4,
+  "not_stepped": []
+ },
+ "valid_and_semantic": true,
+ "program": {
+  "duration_s": 5.0,
+  "keyframes": [
+   {
+    "t": 0,
+    "modes": {
+     "head_down": 0,
+     "tail_s_bend_right": 0
+    }
+   },
+   {
+    "t": 0.5,
+    "modes": {
+     "head_down": 0.15,
+     "tail_s_bend_right": 0.2
+    },
+    "gait": {
+     "name": "walk",
+     "cmd": [
+      0.4,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 2.3,
+    "modes": {
+     "head_left": 0.15,
+     "tail_s_bend_right": -0.2
+    },
+    "gait": {
+     "name": "walk",
+     "cmd": [
+      0.45,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "t": 4.0,
+    "modes": {
+     "head_left": -0.1,
+     "tail_s_bend_right": 0.15,
+     "head_down": 0.1
+    }
+   },
+   {
+    "t": 4.5,
+    "modes": {
+     "head_left": 0.0,
+     "tail_s_bend_right": 0.0,
+     "head_down": 0.05
+    }
+   },
+   {
+    "t": 5.0,
+    "modes": {
+     "head_down": 0.0
+    }
+   }
+  ]
+ },
+ "filters": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0027
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0013,
+   "body_frame": [
+    "FL_foot",
+    70
+   ],
+   "limit_m": 0.0027
+  },
+  "ik": {
+   "pass": true,
+   "worst_miss_m": 0.0,
+   "limit_m": 0.0135
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.137,
+   "limit_rad": 0.241
+  },
+  "reach": {
+   "pass": true,
+   "max_projection_m": 0.0,
+   "limit_m": 0.027
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0002,
+   "limit_m": 0.0054
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.027
+  },
+  "pass": true,
+  "failed": []
+ },
+ "compile": {
+  "passes": 5,
+  "repairs": {
+   "frames_with_capped_joints": 0,
+   "jump_limit_rad_per_frame": 0.241,
+   "start_joints_moved_inside_range": [
+    "jaw_open"
+   ],
+   "max_projection_m": 0.0,
+   "frames_projected_over_1mm": 0,
+   "gait_cmd_scale_min": 0.1639,
+   "com_shift_max_m": 0.0539
+  },
+  "notes": [],
+  "gaits": [
+   {
+    "f0": 25,
+    "f1": 200,
+    "legs": [
+     0,
+     3,
+     1,
+     2
+    ],
+    "cycle_s": 0.9,
+    "cmd_scale_min": 0.16394074074074075,
+    "foothold_projection_m": 2.7755575615628914e-17,
+    "advance_m": 0.3931984519417384,
+    "yaw_deg": 0.0
+   }
+  ]
+ },
+ "npz": "clips/astral_iguana/step_forward_P_v0.npz"
+}

@@ -1,0 +1,305 @@
+<mujoco model="weaver-s">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast"/>
+
+  <size nkey="1"/>
+
+  <visual>
+    <global offwidth="960" offheight="640"/>
+    <headlight ambient="0.35 0.35 0.4" diffuse="0.6 0.65 0.7"/>
+  </visual>
+
+  <default>
+    <joint armature="0.006" damping="0.5"/>
+    <geom condim="4" friction="1.1 0.01 0.001" solref="0.008" solimp="0.95 0.99"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" friction="1 0.005 0.0001" rgba="0.32 0.34 0.36 1"/>
+    <light pos="1 -3 5" dir="0 0 -1" ambient="0.3 0.32 0.35" diffuse="0.8 0.9 1"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="chassis" pos="0 0 0.32">
+      <inertial pos="-0.0595098 0 0.00985294" quat="0 0.72228 0 0.691601" mass="2.55" diaginertia="0.0946813 0.0883616 0.0141702"/>
+      <joint name="root" type="free" armature="0" damping="0"/>
+      <geom name="abdomen_collision" size="0.22 0.15 0.095" pos="-0.16 0 0.015" type="ellipsoid" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="thorax_collision" size="0.16 0.12 0.065" pos="0.17 0 0" type="ellipsoid" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="palp_-1" size="0.012 0.0493077" pos="0.345 -0.05 -0.0375" quat="0.823078 0.123201 -0.554405 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="palp_1" size="0.012 0.0493077" pos="0.345 0.05 -0.0375" quat="0.823078 -0.123201 -0.554405 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <body name="L0_hip" pos="0.3 0.18 -0.015">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.2528e-05 2.2528e-05 2.2528e-05"/>
+        <joint name="L0_abduct" pos="0 0 0" axis="1 0 0" range="-1.25 1.25"/>
+        <geom name="surface_19" size="0.032" mass="0" rgba="0.85 0.35 0.3 1"/>
+        <body name="L0_upper">
+          <inertial pos="0 0 -0.12" mass="0.17" diaginertia="0.00100392 0.00100392 2.70393e-05"/>
+          <joint name="L0_pitch" pos="0 0 0" axis="0 1 0" range="-1.9 1.3"/>
+          <geom name="surface_21" size="0.018 0.12" pos="0 0 -0.12" type="capsule" mass="0" rgba="0.85 0.35 0.3 1"/>
+          <body name="L0_lower" pos="0 0 -0.24">
+            <inertial pos="0 0 -0.125" mass="0.12" diaginertia="0.000728917 0.000728917 1.15966e-05"/>
+            <joint name="L0_knee" pos="0 0 0" axis="0 1 0" range="0.05 2.8"/>
+            <geom name="surface_25" size="0.014 0.125" pos="0 0 -0.125" type="capsule" mass="0" rgba="0.85 0.35 0.3 1"/>
+            <body name="L0_ankle" pos="0 0 -0.25">
+              <inertial pos="0 0 0" mass="0.025" diaginertia="3.24e-06 3.24e-06 3.24e-06"/>
+              <joint name="L0_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2 2"/>
+              <geom name="surface_27" size="0.018" mass="0" rgba="0.85 0.35 0.3 1"/>
+              <body name="L0_foot">
+                <inertial pos="0 0 -0.0125" mass="0.075" diaginertia="1.96837e-05 3.69038e-05 5.19e-05"/>
+                <joint name="L0_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.4 1.4"/>
+                <geom name="L0_sole" size="0.048 0.034 0.0125" pos="0 0 -0.0125" type="ellipsoid" mass="0" rgba="0.85 0.35 0.3 1"/>
+                <site name="L0_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="L0_foot_tip" pos="0 0 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="L1_hip" pos="0.1 0.18 -0.015">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.2528e-05 2.2528e-05 2.2528e-05"/>
+        <joint name="L1_abduct" pos="0 0 0" axis="1 0 0" range="-1.25 1.25"/>
+        <geom name="surface_30" size="0.032" mass="0" rgba="0.3 0.55 0.85 1"/>
+        <body name="L1_upper">
+          <inertial pos="0 0 -0.12" mass="0.17" diaginertia="0.00100392 0.00100392 2.70393e-05"/>
+          <joint name="L1_pitch" pos="0 0 0" axis="0 1 0" range="-1.9 1.3"/>
+          <geom name="surface_32" size="0.018 0.12" pos="0 0 -0.12" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+          <body name="L1_lower" pos="0 0 -0.24">
+            <inertial pos="0 0 -0.125" mass="0.12" diaginertia="0.000728917 0.000728917 1.15966e-05"/>
+            <joint name="L1_knee" pos="0 0 0" axis="0 1 0" range="0.05 2.8"/>
+            <geom name="surface_36" size="0.014 0.125" pos="0 0 -0.125" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+            <body name="L1_ankle" pos="0 0 -0.25">
+              <inertial pos="0 0 0" mass="0.025" diaginertia="3.24e-06 3.24e-06 3.24e-06"/>
+              <joint name="L1_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2 2"/>
+              <geom name="surface_38" size="0.018" mass="0" rgba="0.3 0.55 0.85 1"/>
+              <body name="L1_foot">
+                <inertial pos="0 0 -0.0125" mass="0.075" diaginertia="1.96837e-05 3.69038e-05 5.19e-05"/>
+                <joint name="L1_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.4 1.4"/>
+                <geom name="L1_sole" size="0.048 0.034 0.0125" pos="0 0 -0.0125" type="ellipsoid" mass="0" rgba="0.3 0.55 0.85 1"/>
+                <site name="L1_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="L1_foot_tip" pos="0 0 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="L2_hip" pos="-0.1 0.18 -0.015">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.2528e-05 2.2528e-05 2.2528e-05"/>
+        <joint name="L2_abduct" pos="0 0 0" axis="1 0 0" range="-1.25 1.25"/>
+        <geom name="surface_41" size="0.032" mass="0" rgba="0.35 0.7 0.4 1"/>
+        <body name="L2_upper">
+          <inertial pos="0 0 -0.12" mass="0.17" diaginertia="0.00100392 0.00100392 2.70393e-05"/>
+          <joint name="L2_pitch" pos="0 0 0" axis="0 1 0" range="-1.9 1.3"/>
+          <geom name="surface_43" size="0.018 0.12" pos="0 0 -0.12" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+          <body name="L2_lower" pos="0 0 -0.24">
+            <inertial pos="0 0 -0.125" mass="0.12" diaginertia="0.000728917 0.000728917 1.15966e-05"/>
+            <joint name="L2_knee" pos="0 0 0" axis="0 1 0" range="0.05 2.8"/>
+            <geom name="surface_47" size="0.014 0.125" pos="0 0 -0.125" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+            <body name="L2_ankle" pos="0 0 -0.25">
+              <inertial pos="0 0 0" mass="0.025" diaginertia="3.24e-06 3.24e-06 3.24e-06"/>
+              <joint name="L2_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2 2"/>
+              <geom name="surface_49" size="0.018" mass="0" rgba="0.35 0.7 0.4 1"/>
+              <body name="L2_foot">
+                <inertial pos="0 0 -0.0125" mass="0.075" diaginertia="1.96837e-05 3.69038e-05 5.19e-05"/>
+                <joint name="L2_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.4 1.4"/>
+                <geom name="L2_sole" size="0.048 0.034 0.0125" pos="0 0 -0.0125" type="ellipsoid" mass="0" rgba="0.35 0.7 0.4 1"/>
+                <site name="L2_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="L2_foot_tip" pos="0 0 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="L3_hip" pos="-0.3 0.18 -0.015">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.2528e-05 2.2528e-05 2.2528e-05"/>
+        <joint name="L3_abduct" pos="0 0 0" axis="1 0 0" range="-1.25 1.25"/>
+        <geom name="surface_52" size="0.032" mass="0" rgba="0.85 0.65 0.25 1"/>
+        <body name="L3_upper">
+          <inertial pos="0 0 -0.12" mass="0.17" diaginertia="0.00100392 0.00100392 2.70393e-05"/>
+          <joint name="L3_pitch" pos="0 0 0" axis="0 1 0" range="-1.9 1.3"/>
+          <geom name="surface_54" size="0.018 0.12" pos="0 0 -0.12" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+          <body name="L3_lower" pos="0 0 -0.24">
+            <inertial pos="0 0 -0.125" mass="0.12" diaginertia="0.000728917 0.000728917 1.15966e-05"/>
+            <joint name="L3_knee" pos="0 0 0" axis="0 1 0" range="0.05 2.8"/>
+            <geom name="surface_58" size="0.014 0.125" pos="0 0 -0.125" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+            <body name="L3_ankle" pos="0 0 -0.25">
+              <inertial pos="0 0 0" mass="0.025" diaginertia="3.24e-06 3.24e-06 3.24e-06"/>
+              <joint name="L3_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2 2"/>
+              <geom name="surface_60" size="0.018" mass="0" rgba="0.85 0.65 0.25 1"/>
+              <body name="L3_foot">
+                <inertial pos="0 0 -0.0125" mass="0.075" diaginertia="1.96837e-05 3.69038e-05 5.19e-05"/>
+                <joint name="L3_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.4 1.4"/>
+                <geom name="L3_sole" size="0.048 0.034 0.0125" pos="0 0 -0.0125" type="ellipsoid" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <site name="L3_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="L3_foot_tip" pos="0 0 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="R0_hip" pos="0.3 -0.18 -0.015">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.2528e-05 2.2528e-05 2.2528e-05"/>
+        <joint name="R0_abduct" pos="0 0 0" axis="1 0 0" range="-1.25 1.25"/>
+        <geom name="surface_63" size="0.032" mass="0" rgba="0.6 0.4 0.8 1"/>
+        <body name="R0_upper">
+          <inertial pos="0 0 -0.12" mass="0.17" diaginertia="0.00100392 0.00100392 2.70393e-05"/>
+          <joint name="R0_pitch" pos="0 0 0" axis="0 1 0" range="-1.9 1.3"/>
+          <geom name="surface_65" size="0.018 0.12" pos="0 0 -0.12" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+          <body name="R0_lower" pos="0 0 -0.24">
+            <inertial pos="0 0 -0.125" mass="0.12" diaginertia="0.000728917 0.000728917 1.15966e-05"/>
+            <joint name="R0_knee" pos="0 0 0" axis="0 1 0" range="0.05 2.8"/>
+            <geom name="surface_69" size="0.014 0.125" pos="0 0 -0.125" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+            <body name="R0_ankle" pos="0 0 -0.25">
+              <inertial pos="0 0 0" mass="0.025" diaginertia="3.24e-06 3.24e-06 3.24e-06"/>
+              <joint name="R0_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2 2"/>
+              <geom name="surface_71" size="0.018" mass="0" rgba="0.6 0.4 0.8 1"/>
+              <body name="R0_foot">
+                <inertial pos="0 0 -0.0125" mass="0.075" diaginertia="1.96837e-05 3.69038e-05 5.19e-05"/>
+                <joint name="R0_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.4 1.4"/>
+                <geom name="R0_sole" size="0.048 0.034 0.0125" pos="0 0 -0.0125" type="ellipsoid" mass="0" rgba="0.6 0.4 0.8 1"/>
+                <site name="R0_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="R0_foot_tip" pos="0 0 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="R1_hip" pos="0.1 -0.18 -0.015">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.2528e-05 2.2528e-05 2.2528e-05"/>
+        <joint name="R1_abduct" pos="0 0 0" axis="1 0 0" range="-1.25 1.25"/>
+        <geom name="surface_74" size="0.032" mass="0" rgba="0.3 0.75 0.75 1"/>
+        <body name="R1_upper">
+          <inertial pos="0 0 -0.12" mass="0.17" diaginertia="0.00100392 0.00100392 2.70393e-05"/>
+          <joint name="R1_pitch" pos="0 0 0" axis="0 1 0" range="-1.9 1.3"/>
+          <geom name="surface_76" size="0.018 0.12" pos="0 0 -0.12" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+          <body name="R1_lower" pos="0 0 -0.24">
+            <inertial pos="0 0 -0.125" mass="0.12" diaginertia="0.000728917 0.000728917 1.15966e-05"/>
+            <joint name="R1_knee" pos="0 0 0" axis="0 1 0" range="0.05 2.8"/>
+            <geom name="surface_80" size="0.014 0.125" pos="0 0 -0.125" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+            <body name="R1_ankle" pos="0 0 -0.25">
+              <inertial pos="0 0 0" mass="0.025" diaginertia="3.24e-06 3.24e-06 3.24e-06"/>
+              <joint name="R1_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2 2"/>
+              <geom name="surface_82" size="0.018" mass="0" rgba="0.3 0.75 0.75 1"/>
+              <body name="R1_foot">
+                <inertial pos="0 0 -0.0125" mass="0.075" diaginertia="1.96837e-05 3.69038e-05 5.19e-05"/>
+                <joint name="R1_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.4 1.4"/>
+                <geom name="R1_sole" size="0.048 0.034 0.0125" pos="0 0 -0.0125" type="ellipsoid" mass="0" rgba="0.3 0.75 0.75 1"/>
+                <site name="R1_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="R1_foot_tip" pos="0 0 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="R2_hip" pos="-0.1 -0.18 -0.015">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.2528e-05 2.2528e-05 2.2528e-05"/>
+        <joint name="R2_abduct" pos="0 0 0" axis="1 0 0" range="-1.25 1.25"/>
+        <geom name="surface_85" size="0.032" mass="0" rgba="0.8 0.45 0.65 1"/>
+        <body name="R2_upper">
+          <inertial pos="0 0 -0.12" mass="0.17" diaginertia="0.00100392 0.00100392 2.70393e-05"/>
+          <joint name="R2_pitch" pos="0 0 0" axis="0 1 0" range="-1.9 1.3"/>
+          <geom name="surface_87" size="0.018 0.12" pos="0 0 -0.12" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+          <body name="R2_lower" pos="0 0 -0.24">
+            <inertial pos="0 0 -0.125" mass="0.12" diaginertia="0.000728917 0.000728917 1.15966e-05"/>
+            <joint name="R2_knee" pos="0 0 0" axis="0 1 0" range="0.05 2.8"/>
+            <geom name="surface_91" size="0.014 0.125" pos="0 0 -0.125" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+            <body name="R2_ankle" pos="0 0 -0.25">
+              <inertial pos="0 0 0" mass="0.025" diaginertia="3.24e-06 3.24e-06 3.24e-06"/>
+              <joint name="R2_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2 2"/>
+              <geom name="surface_93" size="0.018" mass="0" rgba="0.8 0.45 0.65 1"/>
+              <body name="R2_foot">
+                <inertial pos="0 0 -0.0125" mass="0.075" diaginertia="1.96837e-05 3.69038e-05 5.19e-05"/>
+                <joint name="R2_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.4 1.4"/>
+                <geom name="R2_sole" size="0.048 0.034 0.0125" pos="0 0 -0.0125" type="ellipsoid" mass="0" rgba="0.8 0.45 0.65 1"/>
+                <site name="R2_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="R2_foot_tip" pos="0 0 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="R3_hip" pos="-0.3 -0.18 -0.015">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.2528e-05 2.2528e-05 2.2528e-05"/>
+        <joint name="R3_abduct" pos="0 0 0" axis="1 0 0" range="-1.25 1.25"/>
+        <geom name="surface_96" size="0.032" mass="0" rgba="0.6 0.6 0.35 1"/>
+        <body name="R3_upper">
+          <inertial pos="0 0 -0.12" mass="0.17" diaginertia="0.00100392 0.00100392 2.70393e-05"/>
+          <joint name="R3_pitch" pos="0 0 0" axis="0 1 0" range="-1.9 1.3"/>
+          <geom name="surface_98" size="0.018 0.12" pos="0 0 -0.12" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+          <body name="R3_lower" pos="0 0 -0.24">
+            <inertial pos="0 0 -0.125" mass="0.12" diaginertia="0.000728917 0.000728917 1.15966e-05"/>
+            <joint name="R3_knee" pos="0 0 0" axis="0 1 0" range="0.05 2.8"/>
+            <geom name="surface_102" size="0.014 0.125" pos="0 0 -0.125" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+            <body name="R3_ankle" pos="0 0 -0.25">
+              <inertial pos="0 0 0" mass="0.025" diaginertia="3.24e-06 3.24e-06 3.24e-06"/>
+              <joint name="R3_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2 2"/>
+              <geom name="surface_104" size="0.018" mass="0" rgba="0.6 0.6 0.35 1"/>
+              <body name="R3_foot">
+                <inertial pos="0 0 -0.0125" mass="0.075" diaginertia="1.96837e-05 3.69038e-05 5.19e-05"/>
+                <joint name="R3_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.4 1.4"/>
+                <geom name="R3_sole" size="0.048 0.034 0.0125" pos="0 0 -0.0125" type="ellipsoid" mass="0" rgba="0.6 0.6 0.35 1"/>
+                <site name="R3_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="R3_foot_tip" pos="0 0 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="L0_lower" body2="L0_foot"/>
+    <exclude body1="L1_lower" body2="L1_foot"/>
+    <exclude body1="L2_lower" body2="L2_foot"/>
+    <exclude body1="L3_lower" body2="L3_foot"/>
+    <exclude body1="R0_lower" body2="R0_foot"/>
+    <exclude body1="R1_lower" body2="R1_foot"/>
+    <exclude body1="R2_lower" body2="R2_foot"/>
+    <exclude body1="R3_lower" body2="R3_foot"/>
+  </contact>
+
+  <actuator>
+    <general name="L0_abduct_servo" joint="L0_abduct" ctrlrange="-1.25 1.25" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L0_pitch_servo" joint="L0_pitch" ctrlrange="-1.9 1.3" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L0_knee_servo" joint="L0_knee" ctrlrange="0.05 2.8" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L0_ankle_pitch_servo" joint="L0_ankle_pitch" ctrlrange="-2 2" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="L0_ankle_roll_servo" joint="L0_ankle_roll" ctrlrange="-1.4 1.4" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="L1_abduct_servo" joint="L1_abduct" ctrlrange="-1.25 1.25" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L1_pitch_servo" joint="L1_pitch" ctrlrange="-1.9 1.3" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L1_knee_servo" joint="L1_knee" ctrlrange="0.05 2.8" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L1_ankle_pitch_servo" joint="L1_ankle_pitch" ctrlrange="-2 2" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="L1_ankle_roll_servo" joint="L1_ankle_roll" ctrlrange="-1.4 1.4" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="L2_abduct_servo" joint="L2_abduct" ctrlrange="-1.25 1.25" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L2_pitch_servo" joint="L2_pitch" ctrlrange="-1.9 1.3" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L2_knee_servo" joint="L2_knee" ctrlrange="0.05 2.8" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L2_ankle_pitch_servo" joint="L2_ankle_pitch" ctrlrange="-2 2" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="L2_ankle_roll_servo" joint="L2_ankle_roll" ctrlrange="-1.4 1.4" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="L3_abduct_servo" joint="L3_abduct" ctrlrange="-1.25 1.25" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L3_pitch_servo" joint="L3_pitch" ctrlrange="-1.9 1.3" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L3_knee_servo" joint="L3_knee" ctrlrange="0.05 2.8" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="L3_ankle_pitch_servo" joint="L3_ankle_pitch" ctrlrange="-2 2" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="L3_ankle_roll_servo" joint="L3_ankle_roll" ctrlrange="-1.4 1.4" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="R0_abduct_servo" joint="R0_abduct" ctrlrange="-1.25 1.25" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R0_pitch_servo" joint="R0_pitch" ctrlrange="-1.9 1.3" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R0_knee_servo" joint="R0_knee" ctrlrange="0.05 2.8" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R0_ankle_pitch_servo" joint="R0_ankle_pitch" ctrlrange="-2 2" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="R0_ankle_roll_servo" joint="R0_ankle_roll" ctrlrange="-1.4 1.4" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="R1_abduct_servo" joint="R1_abduct" ctrlrange="-1.25 1.25" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R1_pitch_servo" joint="R1_pitch" ctrlrange="-1.9 1.3" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R1_knee_servo" joint="R1_knee" ctrlrange="0.05 2.8" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R1_ankle_pitch_servo" joint="R1_ankle_pitch" ctrlrange="-2 2" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="R1_ankle_roll_servo" joint="R1_ankle_roll" ctrlrange="-1.4 1.4" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="R2_abduct_servo" joint="R2_abduct" ctrlrange="-1.25 1.25" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R2_pitch_servo" joint="R2_pitch" ctrlrange="-1.9 1.3" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R2_knee_servo" joint="R2_knee" ctrlrange="0.05 2.8" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R2_ankle_pitch_servo" joint="R2_ankle_pitch" ctrlrange="-2 2" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="R2_ankle_roll_servo" joint="R2_ankle_roll" ctrlrange="-1.4 1.4" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="R3_abduct_servo" joint="R3_abduct" ctrlrange="-1.25 1.25" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R3_pitch_servo" joint="R3_pitch" ctrlrange="-1.9 1.3" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R3_knee_servo" joint="R3_knee" ctrlrange="0.05 2.8" forcerange="-12 12" biastype="affine" gainprm="230" biasprm="0 -230 -6"/>
+    <general name="R3_ankle_pitch_servo" joint="R3_ankle_pitch" ctrlrange="-2 2" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="R3_ankle_roll_servo" joint="R3_ankle_roll" ctrlrange="-1.4 1.4" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.306523 1 0 0 0 0.8 -0.675 1.35 -0.675 -0.8 0.8 -0.675 1.35 -0.675 -0.8 0.8 -0.675 1.35 -0.675 -0.8 0.8 -0.675 1.35 -0.675 -0.8 -0.8 -0.675 1.35 -0.675 0.8 -0.8 -0.675 1.35 -0.675 0.8 -0.8 -0.675 1.35 -0.675 0.8 -0.8 -0.675 1.35 -0.675 0.8" ctrl="0.8 -0.675 1.35 -0.675 -0.8 0.8 -0.675 1.35 -0.675 -0.8 0.8 -0.675 1.35 -0.675 -0.8 0.8 -0.675 1.35 -0.675 -0.8 -0.8 -0.675 1.35 -0.675 0.8 -0.8 -0.675 1.35 -0.675 0.8 -0.8 -0.675 1.35 -0.675 0.8 -0.8 -0.675 1.35 -0.675 0.8"/>
+  </keyframe>
+</mujoco>

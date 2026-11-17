@@ -1,0 +1,516 @@
+<mujoco model="OCTO-8">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast" cone="elliptic" iterations="70"/>
+
+  <size nkey="1"/>
+
+  <visual>
+    <global offwidth="1280" offheight="800"/>
+    <headlight ambient="0.35 0.37 0.4" diffuse="0.7 0.75 0.8" specular="0.25 0.25 0.25"/>
+  </visual>
+
+  <default>
+    <joint solreflimit="0.004" solimplimit="0.99 0.999" armature="0.001" damping="0.18" frictionloss="0.008"/>
+    <geom condim="4" friction="1.1 0.015 0.002" solref="0.008" solimp="0.95 0.99"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" friction="1 0.005 0.0001" rgba="0.32 0.34 0.36 1"/>
+    <light name="light_0" pos="2 -3 5" dir="-0.19245 0.19245 -0.96225" diffuse="0.7 0.8 1"/>
+    <light name="light_1" pos="-2 2 3" dir="-0.19245 0.19245 -0.96225" diffuse="0.35 0.7 0.65"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="chassis" pos="0 0 0.17">
+      <inertial pos="0.00182583 0 0.0702402" quat="0.531614 0.466247 0.466247 0.531614" mass="0.666" diaginertia="0.00220007 0.00201004 0.00191829"/>
+      <joint name="root" type="free" solreflimit="0.02" solimplimit="0.9 0.95" armature="0" damping="0" frictionloss="0"/>
+      <geom name="chassis_g1" size="0.09 0.08 0.09" pos="0 0 0.07" type="ellipsoid" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="chassis_g3" size="0.019" pos="0.076 -0.044 0.08" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="chassis_g4" size="0.019" pos="0.076 0.044 0.08" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <body name="mantle_0" pos="0.045 0 0.11">
+        <inertial pos="0.025 0 0" mass="0.035" diaginertia="4.375e-05 7.0875e-05 8.6275e-05"/>
+        <joint name="mantle_slide_0" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.07"/>
+        <geom name="mantle_0_g5" size="0.09 0.065 0.045" pos="0.025 0 0" type="ellipsoid" mass="0" rgba="0.85 0.35 0.3 1"/>
+        <site name="mantle_0_tip" pos="0.025 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="arm_0_0" pos="0.075 0 -0.035">
+        <inertial pos="0.0837083 0 -0.00075" quat="0.500694 0.499305 0.499305 0.500694" mass="0.072" diaginertia="0.000225973 0.000224557 2.6089e-05"/>
+        <joint name="arm_0_lift" pos="0 0 0" axis="0 0 1" type="slide" range="-0.07 0.07"/>
+        <joint name="arm_0_yaw_0" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="arm_0_pitch_0" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+        <geom name="arm_0_0_g7" size="0.027 0.076" pos="0.084 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+        <body name="arm_0_1" pos="0.16 0 0">
+          <inertial pos="0.078682 0 -0.000830389" quat="0.500769 0.49923 0.49923 0.500769" mass="0.0566" diaginertia="0.00014943 0.000148366 1.57308e-05"/>
+          <joint name="arm_0_yaw_1" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+          <joint name="arm_0_pitch_1" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+          <geom name="arm_0_1_g11" size="0.0235 0.071" pos="0.079 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+          <body name="arm_0_2" pos="0.15 0 0">
+            <inertial pos="0.0687309 0 -0.000897102" quat="0.500752 0.499247 0.499247 0.500752" mass="0.044588" diaginertia="8.60164e-05 8.5253e-05 9.11066e-06"/>
+            <joint name="arm_0_yaw_2" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+            <joint name="arm_0_pitch_2" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+            <geom name="arm_0_2_g15" size="0.02 0.061" pos="0.069 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+            <body name="arm_0_3" pos="0.13 0 0">
+              <inertial pos="0.0539148 0 -0.000937004" quat="0.500339 0.499661 0.499661 0.500339" mass="0.0352186" diaginertia="3.9911e-05 3.93974e-05 4.99607e-06"/>
+              <joint name="arm_0_yaw_3" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+              <joint name="arm_0_pitch_3" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+              <geom name="arm_0_3_g19" size="0.0165 0.046" pos="0.054 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+              <body name="arm_0_pad" pos="0.1 0 0">
+                <inertial pos="0 0 -0.02" mass="0.025" diaginertia="6.775e-06 6.775e-06 9.8e-06"/>
+                <joint name="arm_0_pad_pitch" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+                <joint name="arm_0_pad_roll" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+                <geom name="arm_0_pad_g23" size="0.028 0.001" pos="0 0 -0.02" type="capsule" margin="0.0015" gap="0.001" mass="0" rgba="0.3 0.55 0.85 1"/>
+                <site name="A0_tip" pos="0 0 -0.035" size="0.007"/>
+                <site name="arm_0_pad_tip" pos="0 0 -0.021" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="mantle_1" pos="0.0318198 0.0318198 0.11" quat="0.92388 0 0 0.382683">
+        <inertial pos="0.025 0 0" mass="0.035" diaginertia="4.375e-05 7.0875e-05 8.6275e-05"/>
+        <joint name="mantle_slide_1" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.07"/>
+        <geom name="mantle_1_g24" size="0.09 0.065 0.045" pos="0.025 0 0" type="ellipsoid" mass="0" rgba="0.35 0.7 0.4 1"/>
+        <site name="mantle_1_tip" pos="0.025 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="arm_1_0" pos="0.053033 0.053033 -0.035" quat="0.92388 0 0 0.382683">
+        <inertial pos="0.0837083 0 -0.00075" quat="0.500694 0.499305 0.499305 0.500694" mass="0.072" diaginertia="0.000225973 0.000224557 2.6089e-05"/>
+        <joint name="arm_1_lift" pos="0 0 0" axis="0 0 1" type="slide" range="-0.07 0.07"/>
+        <joint name="arm_1_yaw_0" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="arm_1_pitch_0" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+        <geom name="arm_1_0_g26" size="0.027 0.076" pos="0.084 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+        <body name="arm_1_1" pos="0.16 0 0">
+          <inertial pos="0.078682 0 -0.000830389" quat="0.500769 0.49923 0.49923 0.500769" mass="0.0566" diaginertia="0.00014943 0.000148366 1.57308e-05"/>
+          <joint name="arm_1_yaw_1" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+          <joint name="arm_1_pitch_1" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+          <geom name="arm_1_1_g30" size="0.0235 0.071" pos="0.079 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+          <body name="arm_1_2" pos="0.15 0 0">
+            <inertial pos="0.0687309 0 -0.000897102" quat="0.500752 0.499247 0.499247 0.500752" mass="0.044588" diaginertia="8.60164e-05 8.5253e-05 9.11066e-06"/>
+            <joint name="arm_1_yaw_2" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+            <joint name="arm_1_pitch_2" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+            <geom name="arm_1_2_g34" size="0.02 0.061" pos="0.069 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+            <body name="arm_1_3" pos="0.13 0 0">
+              <inertial pos="0.0539148 0 -0.000937004" quat="0.500339 0.499661 0.499661 0.500339" mass="0.0352186" diaginertia="3.9911e-05 3.93974e-05 4.99607e-06"/>
+              <joint name="arm_1_yaw_3" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+              <joint name="arm_1_pitch_3" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+              <geom name="arm_1_3_g38" size="0.0165 0.046" pos="0.054 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+              <body name="arm_1_pad" pos="0.1 0 0">
+                <inertial pos="0 0 -0.02" mass="0.025" diaginertia="6.775e-06 6.775e-06 9.8e-06"/>
+                <joint name="arm_1_pad_pitch" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+                <joint name="arm_1_pad_roll" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+                <geom name="arm_1_pad_g42" size="0.028 0.001" pos="0 0 -0.02" type="capsule" margin="0.0015" gap="0.001" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <site name="A1_tip" pos="0 0 -0.035" size="0.007"/>
+                <site name="arm_1_pad_tip" pos="0 0 -0.021" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="mantle_2" pos="0 0.045 0.11" quat="0.707107 0 0 0.707107">
+        <inertial pos="0.025 0 0" mass="0.035" diaginertia="4.375e-05 7.0875e-05 8.6275e-05"/>
+        <joint name="mantle_slide_2" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.07"/>
+        <geom name="mantle_2_g43" size="0.09 0.065 0.045" pos="0.025 0 0" type="ellipsoid" mass="0" rgba="0.6 0.4 0.8 1"/>
+        <site name="mantle_2_tip" pos="0.025 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="arm_2_0" pos="0 0.075 -0.035" quat="0.707107 0 0 0.707107">
+        <inertial pos="0.0837083 0 -0.00075" quat="0.500694 0.499305 0.499305 0.500694" mass="0.072" diaginertia="0.000225973 0.000224557 2.6089e-05"/>
+        <joint name="arm_2_lift" pos="0 0 0" axis="0 0 1" type="slide" range="-0.07 0.07"/>
+        <joint name="arm_2_yaw_0" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="arm_2_pitch_0" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+        <geom name="arm_2_0_g45" size="0.027 0.076" pos="0.084 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+        <body name="arm_2_1" pos="0.16 0 0">
+          <inertial pos="0.078682 0 -0.000830389" quat="0.500769 0.49923 0.49923 0.500769" mass="0.0566" diaginertia="0.00014943 0.000148366 1.57308e-05"/>
+          <joint name="arm_2_yaw_1" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+          <joint name="arm_2_pitch_1" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+          <geom name="arm_2_1_g49" size="0.0235 0.071" pos="0.079 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+          <body name="arm_2_2" pos="0.15 0 0">
+            <inertial pos="0.0687309 0 -0.000897102" quat="0.500752 0.499247 0.499247 0.500752" mass="0.044588" diaginertia="8.60164e-05 8.5253e-05 9.11066e-06"/>
+            <joint name="arm_2_yaw_2" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+            <joint name="arm_2_pitch_2" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+            <geom name="arm_2_2_g53" size="0.02 0.061" pos="0.069 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+            <body name="arm_2_3" pos="0.13 0 0">
+              <inertial pos="0.0539148 0 -0.000937004" quat="0.500339 0.499661 0.499661 0.500339" mass="0.0352186" diaginertia="3.9911e-05 3.93974e-05 4.99607e-06"/>
+              <joint name="arm_2_yaw_3" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+              <joint name="arm_2_pitch_3" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+              <geom name="arm_2_3_g57" size="0.0165 0.046" pos="0.054 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+              <body name="arm_2_pad" pos="0.1 0 0">
+                <inertial pos="0 0 -0.02" mass="0.025" diaginertia="6.775e-06 6.775e-06 9.8e-06"/>
+                <joint name="arm_2_pad_pitch" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+                <joint name="arm_2_pad_roll" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+                <geom name="arm_2_pad_g61" size="0.028 0.001" pos="0 0 -0.02" type="capsule" margin="0.0015" gap="0.001" mass="0" rgba="0.3 0.75 0.75 1"/>
+                <site name="A2_tip" pos="0 0 -0.035" size="0.007"/>
+                <site name="arm_2_pad_tip" pos="0 0 -0.021" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="mantle_3" pos="-0.0318198 0.0318198 0.11" quat="0.382683 0 0 0.92388">
+        <inertial pos="0.025 0 0" mass="0.035" diaginertia="4.375e-05 7.0875e-05 8.6275e-05"/>
+        <joint name="mantle_slide_3" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.07"/>
+        <geom name="mantle_3_g62" size="0.09 0.065 0.045" pos="0.025 0 0" type="ellipsoid" mass="0" rgba="0.8 0.45 0.65 1"/>
+        <site name="mantle_3_tip" pos="0.025 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="arm_3_0" pos="-0.053033 0.053033 -0.035" quat="0.382683 0 0 0.92388">
+        <inertial pos="0.0837083 0 -0.00075" quat="0.500694 0.499305 0.499305 0.500694" mass="0.072" diaginertia="0.000225973 0.000224557 2.6089e-05"/>
+        <joint name="arm_3_lift" pos="0 0 0" axis="0 0 1" type="slide" range="-0.07 0.07"/>
+        <joint name="arm_3_yaw_0" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="arm_3_pitch_0" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+        <geom name="arm_3_0_g64" size="0.027 0.076" pos="0.084 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+        <body name="arm_3_1" pos="0.16 0 0">
+          <inertial pos="0.078682 0 -0.000830389" quat="0.500769 0.49923 0.49923 0.500769" mass="0.0566" diaginertia="0.00014943 0.000148366 1.57308e-05"/>
+          <joint name="arm_3_yaw_1" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+          <joint name="arm_3_pitch_1" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+          <geom name="arm_3_1_g68" size="0.0235 0.071" pos="0.079 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+          <body name="arm_3_2" pos="0.15 0 0">
+            <inertial pos="0.0687309 0 -0.000897102" quat="0.500752 0.499247 0.499247 0.500752" mass="0.044588" diaginertia="8.60164e-05 8.5253e-05 9.11066e-06"/>
+            <joint name="arm_3_yaw_2" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+            <joint name="arm_3_pitch_2" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+            <geom name="arm_3_2_g72" size="0.02 0.061" pos="0.069 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+            <body name="arm_3_3" pos="0.13 0 0">
+              <inertial pos="0.0539148 0 -0.000937004" quat="0.500339 0.499661 0.499661 0.500339" mass="0.0352186" diaginertia="3.9911e-05 3.93974e-05 4.99607e-06"/>
+              <joint name="arm_3_yaw_3" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+              <joint name="arm_3_pitch_3" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+              <geom name="arm_3_3_g76" size="0.0165 0.046" pos="0.054 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+              <body name="arm_3_pad" pos="0.1 0 0">
+                <inertial pos="0 0 -0.02" mass="0.025" diaginertia="6.775e-06 6.775e-06 9.8e-06"/>
+                <joint name="arm_3_pad_pitch" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+                <joint name="arm_3_pad_roll" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+                <geom name="arm_3_pad_g80" size="0.028 0.001" pos="0 0 -0.02" type="capsule" margin="0.0015" gap="0.001" mass="0" rgba="0.6 0.6 0.35 1"/>
+                <site name="A3_tip" pos="0 0 -0.035" size="0.007"/>
+                <site name="arm_3_pad_tip" pos="0 0 -0.021" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="mantle_4" pos="-0.045 0 0.11" quat="-2.05103e-10 0 0 1">
+        <inertial pos="0.025 0 0" mass="0.035" diaginertia="4.375e-05 7.0875e-05 8.6275e-05"/>
+        <joint name="mantle_slide_4" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.07"/>
+        <geom name="mantle_4_g81" size="0.09 0.065 0.045" pos="0.025 0 0" type="ellipsoid" mass="0" rgba="0.85 0.35 0.3 1"/>
+        <site name="mantle_4_tip" pos="0.025 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="arm_4_0" pos="-0.075 0 -0.035" quat="-2.05103e-10 0 0 1">
+        <inertial pos="0.0837083 0 -0.00075" quat="0.500694 0.499305 0.499305 0.500694" mass="0.072" diaginertia="0.000225973 0.000224557 2.6089e-05"/>
+        <joint name="arm_4_lift" pos="0 0 0" axis="0 0 1" type="slide" range="-0.07 0.07"/>
+        <joint name="arm_4_yaw_0" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="arm_4_pitch_0" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+        <geom name="arm_4_0_g83" size="0.027 0.076" pos="0.084 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+        <body name="arm_4_1" pos="0.16 0 0">
+          <inertial pos="0.078682 0 -0.000830389" quat="0.500769 0.49923 0.49923 0.500769" mass="0.0566" diaginertia="0.00014943 0.000148366 1.57308e-05"/>
+          <joint name="arm_4_yaw_1" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+          <joint name="arm_4_pitch_1" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+          <geom name="arm_4_1_g87" size="0.0235 0.071" pos="0.079 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+          <body name="arm_4_2" pos="0.15 0 0">
+            <inertial pos="0.0687309 0 -0.000897102" quat="0.500752 0.499247 0.499247 0.500752" mass="0.044588" diaginertia="8.60164e-05 8.5253e-05 9.11066e-06"/>
+            <joint name="arm_4_yaw_2" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+            <joint name="arm_4_pitch_2" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+            <geom name="arm_4_2_g91" size="0.02 0.061" pos="0.069 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+            <body name="arm_4_3" pos="0.13 0 0">
+              <inertial pos="0.0539148 0 -0.000937004" quat="0.500339 0.499661 0.499661 0.500339" mass="0.0352186" diaginertia="3.9911e-05 3.93974e-05 4.99607e-06"/>
+              <joint name="arm_4_yaw_3" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+              <joint name="arm_4_pitch_3" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+              <geom name="arm_4_3_g95" size="0.0165 0.046" pos="0.054 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+              <body name="arm_4_pad" pos="0.1 0 0">
+                <inertial pos="0 0 -0.02" mass="0.025" diaginertia="6.775e-06 6.775e-06 9.8e-06"/>
+                <joint name="arm_4_pad_pitch" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+                <joint name="arm_4_pad_roll" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+                <geom name="arm_4_pad_g99" size="0.028 0.001" pos="0 0 -0.02" type="capsule" margin="0.0015" gap="0.001" mass="0" rgba="0.3 0.55 0.85 1"/>
+                <site name="A4_tip" pos="0 0 -0.035" size="0.007"/>
+                <site name="arm_4_pad_tip" pos="0 0 -0.021" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="mantle_5" pos="-0.0318198 -0.0318198 0.11" quat="-0.382683 0 0 0.92388">
+        <inertial pos="0.025 0 0" mass="0.035" diaginertia="4.375e-05 7.0875e-05 8.6275e-05"/>
+        <joint name="mantle_slide_5" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.07"/>
+        <geom name="mantle_5_g100" size="0.09 0.065 0.045" pos="0.025 0 0" type="ellipsoid" mass="0" rgba="0.35 0.7 0.4 1"/>
+        <site name="mantle_5_tip" pos="0.025 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="arm_5_0" pos="-0.053033 -0.053033 -0.035" quat="-0.382683 0 0 0.92388">
+        <inertial pos="0.0837083 0 -0.00075" quat="0.500694 0.499305 0.499305 0.500694" mass="0.072" diaginertia="0.000225973 0.000224557 2.6089e-05"/>
+        <joint name="arm_5_lift" pos="0 0 0" axis="0 0 1" type="slide" range="-0.07 0.07"/>
+        <joint name="arm_5_yaw_0" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="arm_5_pitch_0" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+        <geom name="arm_5_0_g102" size="0.027 0.076" pos="0.084 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+        <body name="arm_5_1" pos="0.16 0 0">
+          <inertial pos="0.078682 0 -0.000830389" quat="0.500769 0.49923 0.49923 0.500769" mass="0.0566" diaginertia="0.00014943 0.000148366 1.57308e-05"/>
+          <joint name="arm_5_yaw_1" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+          <joint name="arm_5_pitch_1" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+          <geom name="arm_5_1_g106" size="0.0235 0.071" pos="0.079 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+          <body name="arm_5_2" pos="0.15 0 0">
+            <inertial pos="0.0687309 0 -0.000897102" quat="0.500752 0.499247 0.499247 0.500752" mass="0.044588" diaginertia="8.60164e-05 8.5253e-05 9.11066e-06"/>
+            <joint name="arm_5_yaw_2" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+            <joint name="arm_5_pitch_2" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+            <geom name="arm_5_2_g110" size="0.02 0.061" pos="0.069 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+            <body name="arm_5_3" pos="0.13 0 0">
+              <inertial pos="0.0539148 0 -0.000937004" quat="0.500339 0.499661 0.499661 0.500339" mass="0.0352186" diaginertia="3.9911e-05 3.93974e-05 4.99607e-06"/>
+              <joint name="arm_5_yaw_3" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+              <joint name="arm_5_pitch_3" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+              <geom name="arm_5_3_g114" size="0.0165 0.046" pos="0.054 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+              <body name="arm_5_pad" pos="0.1 0 0">
+                <inertial pos="0 0 -0.02" mass="0.025" diaginertia="6.775e-06 6.775e-06 9.8e-06"/>
+                <joint name="arm_5_pad_pitch" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+                <joint name="arm_5_pad_roll" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+                <geom name="arm_5_pad_g118" size="0.028 0.001" pos="0 0 -0.02" type="capsule" margin="0.0015" gap="0.001" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <site name="A5_tip" pos="0 0 -0.035" size="0.007"/>
+                <site name="arm_5_pad_tip" pos="0 0 -0.021" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="mantle_6" pos="0 -0.045 0.11" quat="-0.707107 0 0 0.707107">
+        <inertial pos="0.025 0 0" mass="0.035" diaginertia="4.375e-05 7.0875e-05 8.6275e-05"/>
+        <joint name="mantle_slide_6" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.07"/>
+        <geom name="mantle_6_g119" size="0.09 0.065 0.045" pos="0.025 0 0" type="ellipsoid" mass="0" rgba="0.6 0.4 0.8 1"/>
+        <site name="mantle_6_tip" pos="0.025 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="arm_6_0" pos="0 -0.075 -0.035" quat="-0.707107 0 0 0.707107">
+        <inertial pos="0.0837083 0 -0.00075" quat="0.500694 0.499305 0.499305 0.500694" mass="0.072" diaginertia="0.000225973 0.000224557 2.6089e-05"/>
+        <joint name="arm_6_lift" pos="0 0 0" axis="0 0 1" type="slide" range="-0.07 0.07"/>
+        <joint name="arm_6_yaw_0" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="arm_6_pitch_0" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+        <geom name="arm_6_0_g121" size="0.027 0.076" pos="0.084 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+        <body name="arm_6_1" pos="0.16 0 0">
+          <inertial pos="0.078682 0 -0.000830389" quat="0.500769 0.49923 0.49923 0.500769" mass="0.0566" diaginertia="0.00014943 0.000148366 1.57308e-05"/>
+          <joint name="arm_6_yaw_1" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+          <joint name="arm_6_pitch_1" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+          <geom name="arm_6_1_g125" size="0.0235 0.071" pos="0.079 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+          <body name="arm_6_2" pos="0.15 0 0">
+            <inertial pos="0.0687309 0 -0.000897102" quat="0.500752 0.499247 0.499247 0.500752" mass="0.044588" diaginertia="8.60164e-05 8.5253e-05 9.11066e-06"/>
+            <joint name="arm_6_yaw_2" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+            <joint name="arm_6_pitch_2" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+            <geom name="arm_6_2_g129" size="0.02 0.061" pos="0.069 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+            <body name="arm_6_3" pos="0.13 0 0">
+              <inertial pos="0.0539148 0 -0.000937004" quat="0.500339 0.499661 0.499661 0.500339" mass="0.0352186" diaginertia="3.9911e-05 3.93974e-05 4.99607e-06"/>
+              <joint name="arm_6_yaw_3" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+              <joint name="arm_6_pitch_3" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+              <geom name="arm_6_3_g133" size="0.0165 0.046" pos="0.054 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+              <body name="arm_6_pad" pos="0.1 0 0">
+                <inertial pos="0 0 -0.02" mass="0.025" diaginertia="6.775e-06 6.775e-06 9.8e-06"/>
+                <joint name="arm_6_pad_pitch" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+                <joint name="arm_6_pad_roll" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+                <geom name="arm_6_pad_g137" size="0.028 0.001" pos="0 0 -0.02" type="capsule" margin="0.0015" gap="0.001" mass="0" rgba="0.3 0.75 0.75 1"/>
+                <site name="A6_tip" pos="0 0 -0.035" size="0.007"/>
+                <site name="arm_6_pad_tip" pos="0 0 -0.021" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="mantle_7" pos="0.0318198 -0.0318198 0.11" quat="-0.92388 0 0 0.382683">
+        <inertial pos="0.025 0 0" mass="0.035" diaginertia="4.375e-05 7.0875e-05 8.6275e-05"/>
+        <joint name="mantle_slide_7" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.07"/>
+        <geom name="mantle_7_g138" size="0.09 0.065 0.045" pos="0.025 0 0" type="ellipsoid" mass="0" rgba="0.8 0.45 0.65 1"/>
+        <site name="mantle_7_tip" pos="0.025 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="arm_7_0" pos="0.053033 -0.053033 -0.035" quat="-0.92388 0 0 0.382683">
+        <inertial pos="0.0837083 0 -0.00075" quat="0.500694 0.499305 0.499305 0.500694" mass="0.072" diaginertia="0.000225973 0.000224557 2.6089e-05"/>
+        <joint name="arm_7_lift" pos="0 0 0" axis="0 0 1" type="slide" range="-0.07 0.07"/>
+        <joint name="arm_7_yaw_0" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="arm_7_pitch_0" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+        <geom name="arm_7_0_g140" size="0.027 0.076" pos="0.084 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+        <body name="arm_7_1" pos="0.16 0 0">
+          <inertial pos="0.078682 0 -0.000830389" quat="0.500769 0.49923 0.49923 0.500769" mass="0.0566" diaginertia="0.00014943 0.000148366 1.57308e-05"/>
+          <joint name="arm_7_yaw_1" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+          <joint name="arm_7_pitch_1" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+          <geom name="arm_7_1_g144" size="0.0235 0.071" pos="0.079 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+          <body name="arm_7_2" pos="0.15 0 0">
+            <inertial pos="0.0687309 0 -0.000897102" quat="0.500752 0.499247 0.499247 0.500752" mass="0.044588" diaginertia="8.60164e-05 8.5253e-05 9.11066e-06"/>
+            <joint name="arm_7_yaw_2" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+            <joint name="arm_7_pitch_2" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+            <geom name="arm_7_2_g148" size="0.02 0.061" pos="0.069 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+            <body name="arm_7_3" pos="0.13 0 0">
+              <inertial pos="0.0539148 0 -0.000937004" quat="0.500339 0.499661 0.499661 0.500339" mass="0.0352186" diaginertia="3.9911e-05 3.93974e-05 4.99607e-06"/>
+              <joint name="arm_7_yaw_3" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+              <joint name="arm_7_pitch_3" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+              <geom name="arm_7_3_g152" size="0.0165 0.046" pos="0.054 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+              <body name="arm_7_pad" pos="0.1 0 0">
+                <inertial pos="0 0 -0.02" mass="0.025" diaginertia="6.775e-06 6.775e-06 9.8e-06"/>
+                <joint name="arm_7_pad_pitch" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+                <joint name="arm_7_pad_roll" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+                <geom name="arm_7_pad_g156" size="0.028 0.001" pos="0 0 -0.02" type="capsule" margin="0.0015" gap="0.001" mass="0" rgba="0.6 0.6 0.35 1"/>
+                <site name="A7_tip" pos="0 0 -0.035" size="0.007"/>
+                <site name="arm_7_pad_tip" pos="0 0 -0.021" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="mantle_pump" pos="0 0 0.02">
+        <inertial pos="0 0 0" mass="0.04" diaginertia="2.12e-05 2.5e-05 3.62e-05"/>
+        <joint name="mantle_pump" pos="0 0 0" axis="0 0 1" type="slide" range="0 0.035"/>
+        <site name="mantle_pump_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="funnel" pos="0.1 0 0.015">
+        <inertial pos="0.025 0 0" quat="0.707107 0 -0.707107 0" mass="0.025" diaginertia="1.01281e-05 1.01281e-05 1.71273e-06"/>
+        <joint name="jet_yaw" pos="0 0 0" axis="0 0 1" range="-1 1"/>
+        <joint name="jet_pitch" pos="0 0 0" axis="0 1 0" range="-1 1"/>
+        <geom name="funnel_g158" size="0.012 0.025" pos="0.025 0 0" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+        <site name="jet_outlet" pos="0.05 0 0" size="0.006"/>
+        <site name="funnel_tip" pos="0.025 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+      <body name="trim_bladder" pos="0 0 0.0702">
+        <inertial pos="0 0 0" mass="0.01" diaginertia="2.304e-06 2.304e-06 2.304e-06"/>
+        <joint name="buoyancy_trim" pos="0 0 0" axis="0 0 1" type="slide" range="0 0.2"/>
+        <site name="buoyancy_center" pos="0 0 0"/>
+        <site name="trim_bladder_tip" pos="0 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+      </body>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="chassis" body2="mantle_0"/>
+    <exclude body1="chassis" body2="mantle_1"/>
+    <exclude body1="chassis" body2="mantle_2"/>
+    <exclude body1="chassis" body2="mantle_3"/>
+    <exclude body1="chassis" body2="mantle_4"/>
+    <exclude body1="chassis" body2="mantle_5"/>
+    <exclude body1="chassis" body2="mantle_6"/>
+    <exclude body1="chassis" body2="mantle_7"/>
+    <exclude body1="mantle_0" body2="mantle_1"/>
+    <exclude body1="mantle_0" body2="mantle_2"/>
+    <exclude body1="mantle_0" body2="mantle_3"/>
+    <exclude body1="mantle_0" body2="mantle_4"/>
+    <exclude body1="mantle_0" body2="mantle_5"/>
+    <exclude body1="mantle_0" body2="mantle_6"/>
+    <exclude body1="mantle_0" body2="mantle_7"/>
+    <exclude body1="mantle_1" body2="mantle_2"/>
+    <exclude body1="mantle_1" body2="mantle_3"/>
+    <exclude body1="mantle_1" body2="mantle_4"/>
+    <exclude body1="mantle_1" body2="mantle_5"/>
+    <exclude body1="mantle_1" body2="mantle_6"/>
+    <exclude body1="mantle_1" body2="mantle_7"/>
+    <exclude body1="mantle_2" body2="mantle_3"/>
+    <exclude body1="mantle_2" body2="mantle_4"/>
+    <exclude body1="mantle_2" body2="mantle_5"/>
+    <exclude body1="mantle_2" body2="mantle_6"/>
+    <exclude body1="mantle_2" body2="mantle_7"/>
+    <exclude body1="mantle_3" body2="mantle_4"/>
+    <exclude body1="mantle_3" body2="mantle_5"/>
+    <exclude body1="mantle_3" body2="mantle_6"/>
+    <exclude body1="mantle_3" body2="mantle_7"/>
+    <exclude body1="mantle_4" body2="mantle_5"/>
+    <exclude body1="mantle_4" body2="mantle_6"/>
+    <exclude body1="mantle_4" body2="mantle_7"/>
+    <exclude body1="mantle_5" body2="mantle_6"/>
+    <exclude body1="mantle_5" body2="mantle_7"/>
+    <exclude body1="mantle_6" body2="mantle_7"/>
+  </contact>
+
+  <actuator>
+    <general name="mantle_slide_0" joint="mantle_slide_0" ctrlrange="0 0.07" forcerange="-12 12" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="arm_0_lift" joint="arm_0_lift" ctrlrange="-0.07 0.07" forcerange="-50 50" biastype="affine" gainprm="3000" biasprm="0 -3000 -24.4949"/>
+    <general name="arm_0_yaw_0" joint="arm_0_yaw_0" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_0_pitch_0" joint="arm_0_pitch_0" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_0_yaw_1" joint="arm_0_yaw_1" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_0_pitch_1" joint="arm_0_pitch_1" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_0_yaw_2" joint="arm_0_yaw_2" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_0_pitch_2" joint="arm_0_pitch_2" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_0_yaw_3" joint="arm_0_yaw_3" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_0_pitch_3" joint="arm_0_pitch_3" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_0_pad_pitch" joint="arm_0_pad_pitch" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_0_pad_roll" joint="arm_0_pad_roll" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="A0_suction" body="arm_0_pad" ctrllimited="true" ctrlrange="0 1" forcerange="0 30" gainprm="30"/>
+    <general name="mantle_slide_1" joint="mantle_slide_1" ctrlrange="0 0.07" forcerange="-12 12" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="arm_1_lift" joint="arm_1_lift" ctrlrange="-0.07 0.07" forcerange="-50 50" biastype="affine" gainprm="3000" biasprm="0 -3000 -24.4949"/>
+    <general name="arm_1_yaw_0" joint="arm_1_yaw_0" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_1_pitch_0" joint="arm_1_pitch_0" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_1_yaw_1" joint="arm_1_yaw_1" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_1_pitch_1" joint="arm_1_pitch_1" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_1_yaw_2" joint="arm_1_yaw_2" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_1_pitch_2" joint="arm_1_pitch_2" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_1_yaw_3" joint="arm_1_yaw_3" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_1_pitch_3" joint="arm_1_pitch_3" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_1_pad_pitch" joint="arm_1_pad_pitch" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_1_pad_roll" joint="arm_1_pad_roll" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="A1_suction" body="arm_1_pad" ctrllimited="true" ctrlrange="0 1" forcerange="0 30" gainprm="30"/>
+    <general name="mantle_slide_2" joint="mantle_slide_2" ctrlrange="0 0.07" forcerange="-12 12" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="arm_2_lift" joint="arm_2_lift" ctrlrange="-0.07 0.07" forcerange="-50 50" biastype="affine" gainprm="3000" biasprm="0 -3000 -24.4949"/>
+    <general name="arm_2_yaw_0" joint="arm_2_yaw_0" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_2_pitch_0" joint="arm_2_pitch_0" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_2_yaw_1" joint="arm_2_yaw_1" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_2_pitch_1" joint="arm_2_pitch_1" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_2_yaw_2" joint="arm_2_yaw_2" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_2_pitch_2" joint="arm_2_pitch_2" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_2_yaw_3" joint="arm_2_yaw_3" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_2_pitch_3" joint="arm_2_pitch_3" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_2_pad_pitch" joint="arm_2_pad_pitch" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_2_pad_roll" joint="arm_2_pad_roll" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="A2_suction" body="arm_2_pad" ctrllimited="true" ctrlrange="0 1" forcerange="0 30" gainprm="30"/>
+    <general name="mantle_slide_3" joint="mantle_slide_3" ctrlrange="0 0.07" forcerange="-12 12" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="arm_3_lift" joint="arm_3_lift" ctrlrange="-0.07 0.07" forcerange="-50 50" biastype="affine" gainprm="3000" biasprm="0 -3000 -24.4949"/>
+    <general name="arm_3_yaw_0" joint="arm_3_yaw_0" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_3_pitch_0" joint="arm_3_pitch_0" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_3_yaw_1" joint="arm_3_yaw_1" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_3_pitch_1" joint="arm_3_pitch_1" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_3_yaw_2" joint="arm_3_yaw_2" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_3_pitch_2" joint="arm_3_pitch_2" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_3_yaw_3" joint="arm_3_yaw_3" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_3_pitch_3" joint="arm_3_pitch_3" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_3_pad_pitch" joint="arm_3_pad_pitch" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_3_pad_roll" joint="arm_3_pad_roll" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="A3_suction" body="arm_3_pad" ctrllimited="true" ctrlrange="0 1" forcerange="0 30" gainprm="30"/>
+    <general name="mantle_slide_4" joint="mantle_slide_4" ctrlrange="0 0.07" forcerange="-12 12" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="arm_4_lift" joint="arm_4_lift" ctrlrange="-0.07 0.07" forcerange="-50 50" biastype="affine" gainprm="3000" biasprm="0 -3000 -24.4949"/>
+    <general name="arm_4_yaw_0" joint="arm_4_yaw_0" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_4_pitch_0" joint="arm_4_pitch_0" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_4_yaw_1" joint="arm_4_yaw_1" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_4_pitch_1" joint="arm_4_pitch_1" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_4_yaw_2" joint="arm_4_yaw_2" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_4_pitch_2" joint="arm_4_pitch_2" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_4_yaw_3" joint="arm_4_yaw_3" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_4_pitch_3" joint="arm_4_pitch_3" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_4_pad_pitch" joint="arm_4_pad_pitch" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_4_pad_roll" joint="arm_4_pad_roll" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="A4_suction" body="arm_4_pad" ctrllimited="true" ctrlrange="0 1" forcerange="0 30" gainprm="30"/>
+    <general name="mantle_slide_5" joint="mantle_slide_5" ctrlrange="0 0.07" forcerange="-12 12" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="arm_5_lift" joint="arm_5_lift" ctrlrange="-0.07 0.07" forcerange="-50 50" biastype="affine" gainprm="3000" biasprm="0 -3000 -24.4949"/>
+    <general name="arm_5_yaw_0" joint="arm_5_yaw_0" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_5_pitch_0" joint="arm_5_pitch_0" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_5_yaw_1" joint="arm_5_yaw_1" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_5_pitch_1" joint="arm_5_pitch_1" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_5_yaw_2" joint="arm_5_yaw_2" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_5_pitch_2" joint="arm_5_pitch_2" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_5_yaw_3" joint="arm_5_yaw_3" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_5_pitch_3" joint="arm_5_pitch_3" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_5_pad_pitch" joint="arm_5_pad_pitch" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_5_pad_roll" joint="arm_5_pad_roll" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="A5_suction" body="arm_5_pad" ctrllimited="true" ctrlrange="0 1" forcerange="0 30" gainprm="30"/>
+    <general name="mantle_slide_6" joint="mantle_slide_6" ctrlrange="0 0.07" forcerange="-12 12" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="arm_6_lift" joint="arm_6_lift" ctrlrange="-0.07 0.07" forcerange="-50 50" biastype="affine" gainprm="3000" biasprm="0 -3000 -24.4949"/>
+    <general name="arm_6_yaw_0" joint="arm_6_yaw_0" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_6_pitch_0" joint="arm_6_pitch_0" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_6_yaw_1" joint="arm_6_yaw_1" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_6_pitch_1" joint="arm_6_pitch_1" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_6_yaw_2" joint="arm_6_yaw_2" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_6_pitch_2" joint="arm_6_pitch_2" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_6_yaw_3" joint="arm_6_yaw_3" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_6_pitch_3" joint="arm_6_pitch_3" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_6_pad_pitch" joint="arm_6_pad_pitch" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_6_pad_roll" joint="arm_6_pad_roll" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="A6_suction" body="arm_6_pad" ctrllimited="true" ctrlrange="0 1" forcerange="0 30" gainprm="30"/>
+    <general name="mantle_slide_7" joint="mantle_slide_7" ctrlrange="0 0.07" forcerange="-12 12" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="arm_7_lift" joint="arm_7_lift" ctrlrange="-0.07 0.07" forcerange="-50 50" biastype="affine" gainprm="3000" biasprm="0 -3000 -24.4949"/>
+    <general name="arm_7_yaw_0" joint="arm_7_yaw_0" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_7_pitch_0" joint="arm_7_pitch_0" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_7_yaw_1" joint="arm_7_yaw_1" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_7_pitch_1" joint="arm_7_pitch_1" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_7_yaw_2" joint="arm_7_yaw_2" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_7_pitch_2" joint="arm_7_pitch_2" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_7_yaw_3" joint="arm_7_yaw_3" ctrlrange="-2.7 2.7" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_7_pitch_3" joint="arm_7_pitch_3" ctrlrange="-2.1 2.1" forcerange="-6 6" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_7_pad_pitch" joint="arm_7_pad_pitch" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="arm_7_pad_roll" joint="arm_7_pad_roll" ctrlrange="-3.14 3.14" forcerange="-4 4" biastype="affine" gainprm="90" biasprm="0 -90 -4.24264"/>
+    <general name="A7_suction" body="arm_7_pad" ctrllimited="true" ctrlrange="0 1" forcerange="0 30" gainprm="30"/>
+    <general name="mantle_pump" joint="mantle_pump" ctrlrange="0 0.035" forcerange="-20 20" biastype="affine" gainprm="500" biasprm="0 -500 -10"/>
+    <general name="jet_yaw" joint="jet_yaw" ctrlrange="-1 1" forcerange="-2 2" biastype="affine" gainprm="35" biasprm="0 -35 -2.64575"/>
+    <general name="jet_pitch" joint="jet_pitch" ctrlrange="-1 1" forcerange="-2 2" biastype="affine" gainprm="35" biasprm="0 -35 -2.64575"/>
+    <general name="buoyancy_trim" joint="buoyancy_trim" ctrlrange="0 0.2" forcerange="-10 10" biastype="affine" gainprm="300" biasprm="0 -300 -7.74597"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.208856 1 0 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0.025 0 0 0" ctrl="0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0 0.07 0 0 0.05 0 0.55 0 -0.35 0 -0.25 0 0 0 0.025 0 0 0"/>
+  </keyframe>
+</mujoco>

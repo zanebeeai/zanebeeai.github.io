@@ -1,0 +1,4008 @@
+{
+ "name": "astral_kitsune",
+ "xml": "track/bodies/astral_kitsune.xml",
+ "source_model": "any-robot/assets/contrib/astral_kitsune/robot.xml",
+ "source_sha256": "2eb213530f1e2772e4a3c93e4ba93238131192d7b0d833768207325573ec4434",
+ "nq": 67,
+ "nv": 66,
+ "nu": 60,
+ "timestep": 0.002,
+ "free_base": true,
+ "root_body": "chassis",
+ "mass_kg": 5.718,
+ "joints": [
+  {
+   "name": "root",
+   "type": "free",
+   "body": "chassis",
+   "qposadr": 0,
+   "dofadr": 0,
+   "range": null,
+   "limited": null,
+   "object": false
+  },
+  {
+   "name": "neck_pitch",
+   "type": "hinge",
+   "body": "neck",
+   "qposadr": 7,
+   "dofadr": 6,
+   "range": [
+    -0.4,
+    0.45
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "head_yaw",
+   "type": "hinge",
+   "body": "head",
+   "qposadr": 8,
+   "dofadr": 7,
+   "range": [
+    -0.6,
+    0.6
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "ear_fold_-1",
+   "type": "hinge",
+   "body": "ear_-1",
+   "qposadr": 9,
+   "dofadr": 8,
+   "range": [
+    -0.8,
+    0.25
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "ear_fold_1",
+   "type": "hinge",
+   "body": "ear_1",
+   "qposadr": 10,
+   "dofadr": 9,
+   "range": [
+    -0.8,
+    0.25
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_0_spread",
+   "type": "hinge",
+   "body": "tail_0_mount",
+   "qposadr": 11,
+   "dofadr": 10,
+   "range": [
+    -0.28,
+    0.28
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_0_lift",
+   "type": "hinge",
+   "body": "tail_0_0",
+   "qposadr": 12,
+   "dofadr": 11,
+   "range": [
+    0.35,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_0_bend",
+   "type": "hinge",
+   "body": "tail_0_1",
+   "qposadr": 13,
+   "dofadr": 12,
+   "range": [
+    -0.15,
+    0.7
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_0_tip",
+   "type": "hinge",
+   "body": "tail_0_2",
+   "qposadr": 14,
+   "dofadr": 13,
+   "range": [
+    -0.2,
+    0.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_1_spread",
+   "type": "hinge",
+   "body": "tail_1_mount",
+   "qposadr": 15,
+   "dofadr": 14,
+   "range": [
+    -0.28,
+    0.28
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_1_lift",
+   "type": "hinge",
+   "body": "tail_1_0",
+   "qposadr": 16,
+   "dofadr": 15,
+   "range": [
+    0.35,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_1_bend",
+   "type": "hinge",
+   "body": "tail_1_1",
+   "qposadr": 17,
+   "dofadr": 16,
+   "range": [
+    -0.15,
+    0.7
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_1_tip",
+   "type": "hinge",
+   "body": "tail_1_2",
+   "qposadr": 18,
+   "dofadr": 17,
+   "range": [
+    -0.2,
+    0.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_2_spread",
+   "type": "hinge",
+   "body": "tail_2_mount",
+   "qposadr": 19,
+   "dofadr": 18,
+   "range": [
+    -0.28,
+    0.28
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_2_lift",
+   "type": "hinge",
+   "body": "tail_2_0",
+   "qposadr": 20,
+   "dofadr": 19,
+   "range": [
+    0.35,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_2_bend",
+   "type": "hinge",
+   "body": "tail_2_1",
+   "qposadr": 21,
+   "dofadr": 20,
+   "range": [
+    -0.15,
+    0.7
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_2_tip",
+   "type": "hinge",
+   "body": "tail_2_2",
+   "qposadr": 22,
+   "dofadr": 21,
+   "range": [
+    -0.2,
+    0.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_3_spread",
+   "type": "hinge",
+   "body": "tail_3_mount",
+   "qposadr": 23,
+   "dofadr": 22,
+   "range": [
+    -0.28,
+    0.28
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_3_lift",
+   "type": "hinge",
+   "body": "tail_3_0",
+   "qposadr": 24,
+   "dofadr": 23,
+   "range": [
+    0.35,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_3_bend",
+   "type": "hinge",
+   "body": "tail_3_1",
+   "qposadr": 25,
+   "dofadr": 24,
+   "range": [
+    -0.15,
+    0.7
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_3_tip",
+   "type": "hinge",
+   "body": "tail_3_2",
+   "qposadr": 26,
+   "dofadr": 25,
+   "range": [
+    -0.2,
+    0.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_4_spread",
+   "type": "hinge",
+   "body": "tail_4_mount",
+   "qposadr": 27,
+   "dofadr": 26,
+   "range": [
+    -0.28,
+    0.28
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_4_lift",
+   "type": "hinge",
+   "body": "tail_4_0",
+   "qposadr": 28,
+   "dofadr": 27,
+   "range": [
+    0.35,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_4_bend",
+   "type": "hinge",
+   "body": "tail_4_1",
+   "qposadr": 29,
+   "dofadr": 28,
+   "range": [
+    -0.15,
+    0.7
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_4_tip",
+   "type": "hinge",
+   "body": "tail_4_2",
+   "qposadr": 30,
+   "dofadr": 29,
+   "range": [
+    -0.2,
+    0.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_5_spread",
+   "type": "hinge",
+   "body": "tail_5_mount",
+   "qposadr": 31,
+   "dofadr": 30,
+   "range": [
+    -0.28,
+    0.28
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_5_lift",
+   "type": "hinge",
+   "body": "tail_5_0",
+   "qposadr": 32,
+   "dofadr": 31,
+   "range": [
+    0.35,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_5_bend",
+   "type": "hinge",
+   "body": "tail_5_1",
+   "qposadr": 33,
+   "dofadr": 32,
+   "range": [
+    -0.15,
+    0.7
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_5_tip",
+   "type": "hinge",
+   "body": "tail_5_2",
+   "qposadr": 34,
+   "dofadr": 33,
+   "range": [
+    -0.2,
+    0.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_6_spread",
+   "type": "hinge",
+   "body": "tail_6_mount",
+   "qposadr": 35,
+   "dofadr": 34,
+   "range": [
+    -0.28,
+    0.28
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_6_lift",
+   "type": "hinge",
+   "body": "tail_6_0",
+   "qposadr": 36,
+   "dofadr": 35,
+   "range": [
+    0.35,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_6_bend",
+   "type": "hinge",
+   "body": "tail_6_1",
+   "qposadr": 37,
+   "dofadr": 36,
+   "range": [
+    -0.15,
+    0.7
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_6_tip",
+   "type": "hinge",
+   "body": "tail_6_2",
+   "qposadr": 38,
+   "dofadr": 37,
+   "range": [
+    -0.2,
+    0.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_7_spread",
+   "type": "hinge",
+   "body": "tail_7_mount",
+   "qposadr": 39,
+   "dofadr": 38,
+   "range": [
+    -0.28,
+    0.28
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_7_lift",
+   "type": "hinge",
+   "body": "tail_7_0",
+   "qposadr": 40,
+   "dofadr": 39,
+   "range": [
+    0.35,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_7_bend",
+   "type": "hinge",
+   "body": "tail_7_1",
+   "qposadr": 41,
+   "dofadr": 40,
+   "range": [
+    -0.15,
+    0.7
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_7_tip",
+   "type": "hinge",
+   "body": "tail_7_2",
+   "qposadr": 42,
+   "dofadr": 41,
+   "range": [
+    -0.2,
+    0.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_8_spread",
+   "type": "hinge",
+   "body": "tail_8_mount",
+   "qposadr": 43,
+   "dofadr": 42,
+   "range": [
+    -0.28,
+    0.28
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_8_lift",
+   "type": "hinge",
+   "body": "tail_8_0",
+   "qposadr": 44,
+   "dofadr": 43,
+   "range": [
+    0.35,
+    1.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_8_bend",
+   "type": "hinge",
+   "body": "tail_8_1",
+   "qposadr": 45,
+   "dofadr": 44,
+   "range": [
+    -0.15,
+    0.7
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "tail_8_tip",
+   "type": "hinge",
+   "body": "tail_8_2",
+   "qposadr": 46,
+   "dofadr": 45,
+   "range": [
+    -0.2,
+    0.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "FL_abduct",
+   "type": "hinge",
+   "body": "FL_hip",
+   "qposadr": 47,
+   "dofadr": 46,
+   "range": [
+    -1.15,
+    1.15
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "FL_pitch",
+   "type": "hinge",
+   "body": "FL_upper",
+   "qposadr": 48,
+   "dofadr": 47,
+   "range": [
+    -2.2,
+    2.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "FL_knee",
+   "type": "hinge",
+   "body": "FL_lower",
+   "qposadr": 49,
+   "dofadr": 48,
+   "range": [
+    -2.85,
+    -0.015
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "FL_ankle_pitch",
+   "type": "hinge",
+   "body": "FL_ankle",
+   "qposadr": 50,
+   "dofadr": 49,
+   "range": [
+    -2.8,
+    2.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "FL_ankle_roll",
+   "type": "hinge",
+   "body": "FL_foot",
+   "qposadr": 51,
+   "dofadr": 50,
+   "range": [
+    -1.3,
+    1.3
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "FR_abduct",
+   "type": "hinge",
+   "body": "FR_hip",
+   "qposadr": 52,
+   "dofadr": 51,
+   "range": [
+    -1.15,
+    1.15
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "FR_pitch",
+   "type": "hinge",
+   "body": "FR_upper",
+   "qposadr": 53,
+   "dofadr": 52,
+   "range": [
+    -2.2,
+    2.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "FR_knee",
+   "type": "hinge",
+   "body": "FR_lower",
+   "qposadr": 54,
+   "dofadr": 53,
+   "range": [
+    -2.85,
+    -0.015
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "FR_ankle_pitch",
+   "type": "hinge",
+   "body": "FR_ankle",
+   "qposadr": 55,
+   "dofadr": 54,
+   "range": [
+    -2.8,
+    2.8
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "FR_ankle_roll",
+   "type": "hinge",
+   "body": "FR_foot",
+   "qposadr": 56,
+   "dofadr": 55,
+   "range": [
+    -1.3,
+    1.3
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "RL_abduct",
+   "type": "hinge",
+   "body": "RL_hip",
+   "qposadr": 57,
+   "dofadr": 56,
+   "range": [
+    -1.15,
+    1.15
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "RL_pitch",
+   "type": "hinge",
+   "body": "RL_upper",
+   "qposadr": 58,
+   "dofadr": 57,
+   "range": [
+    -2.2,
+    2.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "RL_knee",
+   "type": "hinge",
+   "body": "RL_lower",
+   "qposadr": 59,
+   "dofadr": 58,
+   "range": [
+    0.015,
+    2.85
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "RL_ankle_pitch",
+   "type": "hinge",
+   "body": "RL_ankle",
+   "qposadr": 60,
+   "dofadr": 59,
+   "range": [
+    -2.1,
+    2.1
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "RL_ankle_roll",
+   "type": "hinge",
+   "body": "RL_foot",
+   "qposadr": 61,
+   "dofadr": 60,
+   "range": [
+    -1.3,
+    1.3
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "RR_abduct",
+   "type": "hinge",
+   "body": "RR_hip",
+   "qposadr": 62,
+   "dofadr": 61,
+   "range": [
+    -1.15,
+    1.15
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "RR_pitch",
+   "type": "hinge",
+   "body": "RR_upper",
+   "qposadr": 63,
+   "dofadr": 62,
+   "range": [
+    -2.2,
+    2.2
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "RR_knee",
+   "type": "hinge",
+   "body": "RR_lower",
+   "qposadr": 64,
+   "dofadr": 63,
+   "range": [
+    0.015,
+    2.85
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "RR_ankle_pitch",
+   "type": "hinge",
+   "body": "RR_ankle",
+   "qposadr": 65,
+   "dofadr": 64,
+   "range": [
+    -2.1,
+    2.1
+   ],
+   "limited": true,
+   "object": false
+  },
+  {
+   "name": "RR_ankle_roll",
+   "type": "hinge",
+   "body": "RR_foot",
+   "qposadr": 66,
+   "dofadr": 65,
+   "range": [
+    -1.3,
+    1.3
+   ],
+   "limited": true,
+   "object": false
+  }
+ ],
+ "actuators": [
+  {
+   "name": "neck_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "neck_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.4,
+    0.45
+   ],
+   "forcerange": [
+    -7.0,
+    7.0
+   ],
+   "gain": 100.0,
+   "bias": [
+    0.0,
+    -100.0,
+    -3.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C0"
+  },
+  {
+   "name": "head_yaw_servo",
+   "transmission": "joint",
+   "joints": [
+    "head_yaw"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.6,
+    0.6
+   ],
+   "forcerange": [
+    -4.0,
+    4.0
+   ],
+   "gain": 70.0,
+   "bias": [
+    0.0,
+    -70.0,
+    -2.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C1"
+  },
+  {
+   "name": "ear_fold_-1_servo",
+   "transmission": "joint",
+   "joints": [
+    "ear_fold_-1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.8,
+    0.25
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 30.0,
+   "bias": [
+    0.0,
+    -30.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C2"
+  },
+  {
+   "name": "ear_fold_1_servo",
+   "transmission": "joint",
+   "joints": [
+    "ear_fold_1"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.8,
+    0.25
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 30.0,
+   "bias": [
+    0.0,
+    -30.0,
+    -1.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C3"
+  },
+  {
+   "name": "tail_0_spread_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_0_spread"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.28,
+    0.28
+   ],
+   "forcerange": [
+    -2.5,
+    2.5
+   ],
+   "gain": 45.0,
+   "bias": [
+    0.0,
+    -45.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C4"
+  },
+  {
+   "name": "tail_0_lift_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_0_lift"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.35,
+    1.2
+   ],
+   "forcerange": [
+    -3.0,
+    3.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C5"
+  },
+  {
+   "name": "tail_0_bend_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_0_bend"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.15,
+    0.7
+   ],
+   "forcerange": [
+    -2.0,
+    2.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C6"
+  },
+  {
+   "name": "tail_0_tip_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_0_tip"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.2,
+    0.8
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C7"
+  },
+  {
+   "name": "tail_1_spread_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_1_spread"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.28,
+    0.28
+   ],
+   "forcerange": [
+    -2.5,
+    2.5
+   ],
+   "gain": 45.0,
+   "bias": [
+    0.0,
+    -45.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C8"
+  },
+  {
+   "name": "tail_1_lift_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_1_lift"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.35,
+    1.2
+   ],
+   "forcerange": [
+    -3.0,
+    3.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C9"
+  },
+  {
+   "name": "tail_1_bend_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_1_bend"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.15,
+    0.7
+   ],
+   "forcerange": [
+    -2.0,
+    2.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C10"
+  },
+  {
+   "name": "tail_1_tip_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_1_tip"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.2,
+    0.8
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C11"
+  },
+  {
+   "name": "tail_2_spread_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_2_spread"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.28,
+    0.28
+   ],
+   "forcerange": [
+    -2.5,
+    2.5
+   ],
+   "gain": 45.0,
+   "bias": [
+    0.0,
+    -45.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C12"
+  },
+  {
+   "name": "tail_2_lift_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_2_lift"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.35,
+    1.2
+   ],
+   "forcerange": [
+    -3.0,
+    3.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C13"
+  },
+  {
+   "name": "tail_2_bend_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_2_bend"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.15,
+    0.7
+   ],
+   "forcerange": [
+    -2.0,
+    2.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C14"
+  },
+  {
+   "name": "tail_2_tip_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_2_tip"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.2,
+    0.8
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C15"
+  },
+  {
+   "name": "tail_3_spread_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_3_spread"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.28,
+    0.28
+   ],
+   "forcerange": [
+    -2.5,
+    2.5
+   ],
+   "gain": 45.0,
+   "bias": [
+    0.0,
+    -45.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C16"
+  },
+  {
+   "name": "tail_3_lift_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_3_lift"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.35,
+    1.2
+   ],
+   "forcerange": [
+    -3.0,
+    3.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C17"
+  },
+  {
+   "name": "tail_3_bend_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_3_bend"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.15,
+    0.7
+   ],
+   "forcerange": [
+    -2.0,
+    2.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C18"
+  },
+  {
+   "name": "tail_3_tip_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_3_tip"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.2,
+    0.8
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C19"
+  },
+  {
+   "name": "tail_4_spread_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_4_spread"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.28,
+    0.28
+   ],
+   "forcerange": [
+    -2.5,
+    2.5
+   ],
+   "gain": 45.0,
+   "bias": [
+    0.0,
+    -45.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C20"
+  },
+  {
+   "name": "tail_4_lift_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_4_lift"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.35,
+    1.2
+   ],
+   "forcerange": [
+    -3.0,
+    3.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C21"
+  },
+  {
+   "name": "tail_4_bend_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_4_bend"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.15,
+    0.7
+   ],
+   "forcerange": [
+    -2.0,
+    2.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C22"
+  },
+  {
+   "name": "tail_4_tip_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_4_tip"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.2,
+    0.8
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C23"
+  },
+  {
+   "name": "tail_5_spread_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_5_spread"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.28,
+    0.28
+   ],
+   "forcerange": [
+    -2.5,
+    2.5
+   ],
+   "gain": 45.0,
+   "bias": [
+    0.0,
+    -45.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C24"
+  },
+  {
+   "name": "tail_5_lift_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_5_lift"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.35,
+    1.2
+   ],
+   "forcerange": [
+    -3.0,
+    3.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C25"
+  },
+  {
+   "name": "tail_5_bend_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_5_bend"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.15,
+    0.7
+   ],
+   "forcerange": [
+    -2.0,
+    2.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C26"
+  },
+  {
+   "name": "tail_5_tip_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_5_tip"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.2,
+    0.8
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C27"
+  },
+  {
+   "name": "tail_6_spread_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_6_spread"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.28,
+    0.28
+   ],
+   "forcerange": [
+    -2.5,
+    2.5
+   ],
+   "gain": 45.0,
+   "bias": [
+    0.0,
+    -45.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C28"
+  },
+  {
+   "name": "tail_6_lift_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_6_lift"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.35,
+    1.2
+   ],
+   "forcerange": [
+    -3.0,
+    3.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C29"
+  },
+  {
+   "name": "tail_6_bend_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_6_bend"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.15,
+    0.7
+   ],
+   "forcerange": [
+    -2.0,
+    2.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C30"
+  },
+  {
+   "name": "tail_6_tip_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_6_tip"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.2,
+    0.8
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C31"
+  },
+  {
+   "name": "tail_7_spread_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_7_spread"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.28,
+    0.28
+   ],
+   "forcerange": [
+    -2.5,
+    2.5
+   ],
+   "gain": 45.0,
+   "bias": [
+    0.0,
+    -45.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C32"
+  },
+  {
+   "name": "tail_7_lift_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_7_lift"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.35,
+    1.2
+   ],
+   "forcerange": [
+    -3.0,
+    3.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C33"
+  },
+  {
+   "name": "tail_7_bend_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_7_bend"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.15,
+    0.7
+   ],
+   "forcerange": [
+    -2.0,
+    2.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C34"
+  },
+  {
+   "name": "tail_7_tip_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_7_tip"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.2,
+    0.8
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C35"
+  },
+  {
+   "name": "tail_8_spread_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_8_spread"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.28,
+    0.28
+   ],
+   "forcerange": [
+    -2.5,
+    2.5
+   ],
+   "gain": 45.0,
+   "bias": [
+    0.0,
+    -45.0,
+    -1.5
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C36"
+  },
+  {
+   "name": "tail_8_lift_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_8_lift"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.35,
+    1.2
+   ],
+   "forcerange": [
+    -3.0,
+    3.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C37"
+  },
+  {
+   "name": "tail_8_bend_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_8_bend"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.15,
+    0.7
+   ],
+   "forcerange": [
+    -2.0,
+    2.0
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C38"
+  },
+  {
+   "name": "tail_8_tip_servo",
+   "transmission": "joint",
+   "joints": [
+    "tail_8_tip"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -0.2,
+    0.8
+   ],
+   "forcerange": [
+    -1.2,
+    1.2
+   ],
+   "gain": 55.0,
+   "bias": [
+    0.0,
+    -55.0,
+    -1.8
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C39"
+  },
+  {
+   "name": "FL_abduct_servo",
+   "transmission": "joint",
+   "joints": [
+    "FL_abduct"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.15,
+    1.15
+   ],
+   "forcerange": [
+    -28.0,
+    28.0
+   ],
+   "gain": 300.0,
+   "bias": [
+    0.0,
+    -300.0,
+    -7.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C40"
+  },
+  {
+   "name": "FL_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "FL_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.2,
+    2.2
+   ],
+   "forcerange": [
+    -32.0,
+    32.0
+   ],
+   "gain": 380.0,
+   "bias": [
+    0.0,
+    -380.0,
+    -8.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C41"
+  },
+  {
+   "name": "FL_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "FL_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.85,
+    -0.015
+   ],
+   "forcerange": [
+    -32.0,
+    32.0
+   ],
+   "gain": 380.0,
+   "bias": [
+    0.0,
+    -380.0,
+    -8.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C42"
+  },
+  {
+   "name": "FL_ankle_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "FL_ankle_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.8,
+    2.8
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 180.0,
+   "bias": [
+    0.0,
+    -180.0,
+    -4.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C43"
+  },
+  {
+   "name": "FL_ankle_roll_servo",
+   "transmission": "joint",
+   "joints": [
+    "FL_ankle_roll"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.3,
+    1.3
+   ],
+   "forcerange": [
+    -9.0,
+    9.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    -3.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C44"
+  },
+  {
+   "name": "FR_abduct_servo",
+   "transmission": "joint",
+   "joints": [
+    "FR_abduct"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.15,
+    1.15
+   ],
+   "forcerange": [
+    -28.0,
+    28.0
+   ],
+   "gain": 300.0,
+   "bias": [
+    0.0,
+    -300.0,
+    -7.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C45"
+  },
+  {
+   "name": "FR_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "FR_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.2,
+    2.2
+   ],
+   "forcerange": [
+    -32.0,
+    32.0
+   ],
+   "gain": 380.0,
+   "bias": [
+    0.0,
+    -380.0,
+    -8.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C46"
+  },
+  {
+   "name": "FR_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "FR_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.85,
+    -0.015
+   ],
+   "forcerange": [
+    -32.0,
+    32.0
+   ],
+   "gain": 380.0,
+   "bias": [
+    0.0,
+    -380.0,
+    -8.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C47"
+  },
+  {
+   "name": "FR_ankle_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "FR_ankle_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.8,
+    2.8
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 180.0,
+   "bias": [
+    0.0,
+    -180.0,
+    -4.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C48"
+  },
+  {
+   "name": "FR_ankle_roll_servo",
+   "transmission": "joint",
+   "joints": [
+    "FR_ankle_roll"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.3,
+    1.3
+   ],
+   "forcerange": [
+    -9.0,
+    9.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    -3.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C49"
+  },
+  {
+   "name": "RL_abduct_servo",
+   "transmission": "joint",
+   "joints": [
+    "RL_abduct"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.15,
+    1.15
+   ],
+   "forcerange": [
+    -28.0,
+    28.0
+   ],
+   "gain": 300.0,
+   "bias": [
+    0.0,
+    -300.0,
+    -7.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C50"
+  },
+  {
+   "name": "RL_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "RL_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.2,
+    2.2
+   ],
+   "forcerange": [
+    -42.0,
+    42.0
+   ],
+   "gain": 380.0,
+   "bias": [
+    0.0,
+    -380.0,
+    -8.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C51"
+  },
+  {
+   "name": "RL_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "RL_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.015,
+    2.85
+   ],
+   "forcerange": [
+    -42.0,
+    42.0
+   ],
+   "gain": 380.0,
+   "bias": [
+    0.0,
+    -380.0,
+    -8.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C52"
+  },
+  {
+   "name": "RL_ankle_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "RL_ankle_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.1,
+    2.1
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 180.0,
+   "bias": [
+    0.0,
+    -180.0,
+    -4.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C53"
+  },
+  {
+   "name": "RL_ankle_roll_servo",
+   "transmission": "joint",
+   "joints": [
+    "RL_ankle_roll"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.3,
+    1.3
+   ],
+   "forcerange": [
+    -9.0,
+    9.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    -3.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C54"
+  },
+  {
+   "name": "RR_abduct_servo",
+   "transmission": "joint",
+   "joints": [
+    "RR_abduct"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.15,
+    1.15
+   ],
+   "forcerange": [
+    -28.0,
+    28.0
+   ],
+   "gain": 300.0,
+   "bias": [
+    0.0,
+    -300.0,
+    -7.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C55"
+  },
+  {
+   "name": "RR_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "RR_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.2,
+    2.2
+   ],
+   "forcerange": [
+    -42.0,
+    42.0
+   ],
+   "gain": 380.0,
+   "bias": [
+    0.0,
+    -380.0,
+    -8.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C56"
+  },
+  {
+   "name": "RR_knee_servo",
+   "transmission": "joint",
+   "joints": [
+    "RR_knee"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    0.015,
+    2.85
+   ],
+   "forcerange": [
+    -42.0,
+    42.0
+   ],
+   "gain": 380.0,
+   "bias": [
+    0.0,
+    -380.0,
+    -8.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C57"
+  },
+  {
+   "name": "RR_ankle_pitch_servo",
+   "transmission": "joint",
+   "joints": [
+    "RR_ankle_pitch"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -2.1,
+    2.1
+   ],
+   "forcerange": [
+    -14.0,
+    14.0
+   ],
+   "gain": 180.0,
+   "bias": [
+    0.0,
+    -180.0,
+    -4.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C58"
+  },
+  {
+   "name": "RR_ankle_roll_servo",
+   "transmission": "joint",
+   "joints": [
+    "RR_ankle_roll"
+   ],
+   "type": "position servo",
+   "ctrlrange": [
+    -1.3,
+    1.3
+   ],
+   "forcerange": [
+    -9.0,
+    9.0
+   ],
+   "gain": 120.0,
+   "bias": [
+    0.0,
+    -120.0,
+    -3.0
+   ],
+   "gear": 1.0,
+   "rigby_channel": "C59"
+  }
+ ],
+ "home_qpos": [
+  0.0,
+  0.0,
+  0.3,
+  1.0,
+  0.0,
+  0.0,
+  0.0,
+  -0.12,
+  0.0,
+  -0.06,
+  -0.06,
+  0.0,
+  0.65,
+  0.22,
+  0.28,
+  0.0,
+  0.65,
+  0.22,
+  0.28,
+  0.0,
+  0.65,
+  0.22,
+  0.28,
+  0.0,
+  0.65,
+  0.22,
+  0.28,
+  0.0,
+  0.65,
+  0.22,
+  0.28,
+  0.0,
+  0.65,
+  0.22,
+  0.28,
+  0.0,
+  0.65,
+  0.22,
+  0.28,
+  0.0,
+  0.65,
+  0.22,
+  0.28,
+  0.0,
+  0.65,
+  0.22,
+  0.28,
+  0.327739,
+  0.898193,
+  -1.66702,
+  0.768825,
+  -0.327739,
+  -0.327739,
+  0.898193,
+  -1.66702,
+  0.768825,
+  0.327739,
+  0.327739,
+  -1.08061,
+  2.07022,
+  -0.98961,
+  -0.327739,
+  -0.327739,
+  -1.08061,
+  2.07022,
+  -0.98961,
+  0.327739
+ ],
+ "L": 0.30404,
+ "T": 0.17605,
+ "L_is": "standing CoM height (m)",
+ "tips": [
+  {
+   "name": "ear_-1_tip",
+   "body": "ear_-1",
+   "rigby_id": "T0",
+   "joints": [
+    "neck_pitch",
+    "head_yaw",
+    "ear_fold_-1"
+   ],
+   "home_base_m": [
+    0.2048,
+    -0.0509,
+    0.328
+   ],
+   "home_world_m": [
+    0.2048,
+    -0.0509,
+    0.628
+   ],
+   "reach_box_base_m": {
+    "min": [
+     0.0879,
+     -0.0975,
+     0.2461
+    ],
+    "max": [
+     0.39,
+     0.0136,
+     0.3486
+    ]
+   },
+   "reach_m": 0.2986,
+   "first_joint_anchor_base_m": [
+    0.18,
+    0.0,
+    0.055
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "neck_pitch": 0.9148,
+      "head_yaw": 0.2656,
+      "ear_fold_-1": 0.3043
+     },
+     "share_of_motion": 0.85,
+     "tip_motion_per_unit_at_home_m": [
+      0.1273,
+      -0.0076,
+      -0.0039
+     ]
+    },
+    {
+     "weights": {
+      "neck_pitch": -0.3052,
+      "head_yaw": 0.948,
+      "ear_fold_-1": 0.0902
+     },
+     "share_of_motion": 0.103,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0028,
+      -0.0271,
+      0.0081
+     ]
+    },
+    {
+     "weights": {
+      "neck_pitch": -0.2645,
+      "head_yaw": -0.1753,
+      "ear_fold_-1": 0.9483
+     },
+     "share_of_motion": 0.047,
+     "tip_motion_per_unit_at_home_m": [
+      0.0048,
+      0.005,
+      0.017
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ear_1_tip",
+   "body": "ear_1",
+   "rigby_id": "T1",
+   "joints": [
+    "neck_pitch",
+    "head_yaw",
+    "ear_fold_1"
+   ],
+   "home_base_m": [
+    0.2049,
+    0.0525,
+    0.3277
+   ],
+   "home_world_m": [
+    0.2049,
+    0.0525,
+    0.6277
+   ],
+   "reach_box_base_m": {
+    "min": [
+     0.0865,
+     -0.0115,
+     0.2436
+    ],
+    "max": [
+     0.3949,
+     0.0986,
+     0.3473
+    ]
+   },
+   "reach_m": 0.2991,
+   "first_joint_anchor_base_m": [
+    0.18,
+    0.0,
+    0.055
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "neck_pitch": 0.9121,
+      "head_yaw": -0.2776,
+      "ear_fold_1": 0.3017
+     },
+     "share_of_motion": 0.854,
+     "tip_motion_per_unit_at_home_m": [
+      0.1274,
+      0.0079,
+      -0.0039
+     ]
+    },
+    {
+     "weights": {
+      "neck_pitch": 0.3137,
+      "head_yaw": 0.9464,
+      "ear_fold_1": -0.0775
+     },
+     "share_of_motion": 0.099,
+     "tip_motion_per_unit_at_home_m": [
+      0.0034,
+      -0.0271,
+      -0.0081
+     ]
+    },
+    {
+     "weights": {
+      "neck_pitch": -0.264,
+      "head_yaw": 0.1653,
+      "ear_fold_1": 0.9502
+     },
+     "share_of_motion": 0.047,
+     "tip_motion_per_unit_at_home_m": [
+      0.005,
+      -0.0047,
+      0.017
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tail_0_2_tip",
+   "body": "tail_0_2",
+   "rigby_id": "T2",
+   "joints": [
+    "tail_0_spread",
+    "tail_0_lift",
+    "tail_0_bend",
+    "tail_0_tip"
+   ],
+   "home_base_m": [
+    -0.6705,
+    -0.5123,
+    0.1339
+   ],
+   "home_world_m": [
+    -0.6705,
+    -0.5123,
+    0.4339
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8482,
+     -0.6546,
+     0.005
+    ],
+    "max": [
+     -0.1993,
+     -0.2382,
+     0.305
+    ]
+   },
+   "reach_m": 0.584,
+   "first_joint_anchor_base_m": [
+    -0.29,
+    -0.0903,
+    0.0524
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "tail_0_spread": -0.0,
+      "tail_0_lift": 0.8282,
+      "tail_0_bend": 0.5229,
+      "tail_0_tip": 0.2017
+     },
+     "share_of_motion": 0.829,
+     "tip_motion_per_unit_at_home_m": [
+      0.2286,
+      -0.1814,
+      0.035
+     ]
+    },
+    {
+     "weights": {
+      "tail_0_spread": 1.0,
+      "tail_0_lift": 0.0,
+      "tail_0_bend": 0.0,
+      "tail_0_tip": 0.0
+     },
+     "share_of_motion": 0.162,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.0228,
+      -0.1181
+     ]
+    },
+    {
+     "weights": {
+      "tail_0_spread": 0.0,
+      "tail_0_lift": -0.4987,
+      "tail_0_bend": 0.5232,
+      "tail_0_tip": 0.6911
+     },
+     "share_of_motion": 0.009,
+     "tip_motion_per_unit_at_home_m": [
+      0.014,
+      0.0172,
+      -0.0033
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tail_1_2_tip",
+   "body": "tail_1_2",
+   "rigby_id": "T3",
+   "joints": [
+    "tail_1_spread",
+    "tail_1_lift",
+    "tail_1_bend",
+    "tail_1_tip"
+   ],
+   "home_base_m": [
+    -0.6705,
+    -0.4486,
+    0.3014
+   ],
+   "home_world_m": [
+    -0.6705,
+    -0.4486,
+    0.6014
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8519,
+     -0.6247,
+     0.1347
+    ],
+    "max": [
+     -0.1955,
+     -0.2091,
+     0.4901
+    ]
+   },
+   "reach_m": 0.584,
+   "first_joint_anchor_base_m": [
+    -0.29,
+    -0.0791,
+    0.082
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "tail_1_spread": -0.0,
+      "tail_1_lift": 0.828,
+      "tail_1_bend": 0.5231,
+      "tail_1_tip": 0.202
+     },
+     "share_of_motion": 0.822,
+     "tip_motion_per_unit_at_home_m": [
+      0.2286,
+      -0.1588,
+      0.0943
+     ]
+    },
+    {
+     "weights": {
+      "tail_1_spread": 1.0,
+      "tail_1_lift": 0.0,
+      "tail_1_bend": 0.0,
+      "tail_1_tip": 0.0
+     },
+     "share_of_motion": 0.168,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.0614,
+      -0.1035
+     ]
+    },
+    {
+     "weights": {
+      "tail_1_spread": 0.0,
+      "tail_1_lift": -0.5023,
+      "tail_1_bend": 0.5318,
+      "tail_1_tip": 0.6818
+     },
+     "share_of_motion": 0.009,
+     "tip_motion_per_unit_at_home_m": [
+      0.0139,
+      0.0151,
+      -0.009
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tail_2_2_tip",
+   "body": "tail_2_2",
+   "rigby_id": "T4",
+   "joints": [
+    "tail_2_spread",
+    "tail_2_lift",
+    "tail_2_bend",
+    "tail_2_tip"
+   ],
+   "home_base_m": [
+    -0.6705,
+    -0.3321,
+    0.4374
+   ],
+   "home_world_m": [
+    -0.6705,
+    -0.3321,
+    0.7374
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8479,
+     -0.5139,
+     0.2184
+    ],
+    "max": [
+     -0.2043,
+     -0.1338,
+     0.6198
+    ]
+   },
+   "reach_m": 0.584,
+   "first_joint_anchor_base_m": [
+    -0.29,
+    -0.0586,
+    0.106
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "tail_2_spread": -0.0,
+      "tail_2_lift": 0.8276,
+      "tail_2_bend": 0.5237,
+      "tail_2_tip": 0.2021
+     },
+     "share_of_motion": 0.82,
+     "tip_motion_per_unit_at_home_m": [
+      0.2286,
+      -0.1176,
+      0.1424
+     ]
+    },
+    {
+     "weights": {
+      "tail_2_spread": 1.0,
+      "tail_2_lift": 0.0,
+      "tail_2_bend": 0.0,
+      "tail_2_tip": 0.0
+     },
+     "share_of_motion": 0.17,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.0928,
+      -0.0766
+     ]
+    },
+    {
+     "weights": {
+      "tail_2_spread": 0.0,
+      "tail_2_lift": -0.5068,
+      "tail_2_bend": 0.5422,
+      "tail_2_tip": 0.6703
+     },
+     "share_of_motion": 0.009,
+     "tip_motion_per_unit_at_home_m": [
+      0.0137,
+      0.0112,
+      -0.0136
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tail_3_2_tip",
+   "body": "tail_3_2",
+   "rigby_id": "T5",
+   "joints": [
+    "tail_3_spread",
+    "tail_3_lift",
+    "tail_3_bend",
+    "tail_3_tip"
+   ],
+   "home_base_m": [
+    -0.6705,
+    -0.1765,
+    0.526
+   ],
+   "home_world_m": [
+    -0.6705,
+    -0.1765,
+    0.826
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8504,
+     -0.3565,
+     0.2708
+    ],
+    "max": [
+     -0.21,
+     -0.0489,
+     0.6839
+    ]
+   },
+   "reach_m": 0.584,
+   "first_joint_anchor_base_m": [
+    -0.29,
+    -0.0311,
+    0.1216
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "tail_3_spread": 0.0,
+      "tail_3_lift": 0.8282,
+      "tail_3_bend": 0.5229,
+      "tail_3_tip": 0.2017
+     },
+     "share_of_motion": 0.823,
+     "tip_motion_per_unit_at_home_m": [
+      0.2286,
+      -0.0625,
+      0.1738
+     ]
+    },
+    {
+     "weights": {
+      "tail_3_spread": 1.0,
+      "tail_3_lift": 0.0,
+      "tail_3_bend": 0.0,
+      "tail_3_tip": 0.0
+     },
+     "share_of_motion": 0.167,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.1132,
+      -0.0407
+     ]
+    },
+    {
+     "weights": {
+      "tail_3_spread": 0.0,
+      "tail_3_lift": -0.4988,
+      "tail_3_bend": 0.5234,
+      "tail_3_tip": 0.6908
+     },
+     "share_of_motion": 0.009,
+     "tip_motion_per_unit_at_home_m": [
+      0.014,
+      0.0059,
+      -0.0164
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tail_4_2_tip",
+   "body": "tail_4_2",
+   "rigby_id": "T6",
+   "joints": [
+    "tail_4_spread",
+    "tail_4_lift",
+    "tail_4_bend",
+    "tail_4_tip"
+   ],
+   "home_base_m": [
+    -0.6705,
+    0.0,
+    0.5568
+   ],
+   "home_world_m": [
+    -0.6705,
+    0.0,
+    0.8568
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8545,
+     -0.1525,
+     0.2592
+    ],
+    "max": [
+     -0.1946,
+     0.153,
+     0.6925
+    ]
+   },
+   "reach_m": 0.584,
+   "first_joint_anchor_base_m": [
+    -0.29,
+    0.0,
+    0.127
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "tail_4_spread": -0.0,
+      "tail_4_lift": 0.8282,
+      "tail_4_bend": 0.5228,
+      "tail_4_tip": 0.2018
+     },
+     "share_of_motion": 0.828,
+     "tip_motion_per_unit_at_home_m": [
+      0.2286,
+      0.0,
+      0.1847
+     ]
+    },
+    {
+     "weights": {
+      "tail_4_spread": 1.0,
+      "tail_4_lift": 0.0,
+      "tail_4_bend": 0.0,
+      "tail_4_tip": 0.0
+     },
+     "share_of_motion": 0.162,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.1203,
+      0.0
+     ]
+    },
+    {
+     "weights": {
+      "tail_4_spread": 0.0,
+      "tail_4_lift": -0.4987,
+      "tail_4_bend": 0.5233,
+      "tail_4_tip": 0.691
+     },
+     "share_of_motion": 0.009,
+     "tip_motion_per_unit_at_home_m": [
+      0.014,
+      0.0,
+      -0.0175
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tail_5_2_tip",
+   "body": "tail_5_2",
+   "rigby_id": "T7",
+   "joints": [
+    "tail_5_spread",
+    "tail_5_lift",
+    "tail_5_bend",
+    "tail_5_tip"
+   ],
+   "home_base_m": [
+    -0.6705,
+    0.1765,
+    0.526
+   ],
+   "home_world_m": [
+    -0.6705,
+    0.1765,
+    0.826
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8517,
+     0.0454,
+     0.2513
+    ],
+    "max": [
+     -0.1957,
+     0.3556,
+     0.6801
+    ]
+   },
+   "reach_m": 0.584,
+   "first_joint_anchor_base_m": [
+    -0.29,
+    0.0311,
+    0.1216
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "tail_5_spread": -0.0,
+      "tail_5_lift": 0.828,
+      "tail_5_bend": 0.5234,
+      "tail_5_tip": 0.2011
+     },
+     "share_of_motion": 0.818,
+     "tip_motion_per_unit_at_home_m": [
+      0.2286,
+      0.0625,
+      0.1738
+     ]
+    },
+    {
+     "weights": {
+      "tail_5_spread": 1.0,
+      "tail_5_lift": 0.0,
+      "tail_5_bend": 0.0,
+      "tail_5_tip": 0.0
+     },
+     "share_of_motion": 0.172,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.1132,
+      0.0407
+     ]
+    },
+    {
+     "weights": {
+      "tail_5_spread": 0.0,
+      "tail_5_lift": -0.4982,
+      "tail_5_bend": 0.522,
+      "tail_5_tip": 0.6923
+     },
+     "share_of_motion": 0.009,
+     "tip_motion_per_unit_at_home_m": [
+      0.014,
+      -0.0059,
+      -0.0164
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tail_6_2_tip",
+   "body": "tail_6_2",
+   "rigby_id": "T8",
+   "joints": [
+    "tail_6_spread",
+    "tail_6_lift",
+    "tail_6_bend",
+    "tail_6_tip"
+   ],
+   "home_base_m": [
+    -0.6705,
+    0.3321,
+    0.4374
+   ],
+   "home_world_m": [
+    -0.6705,
+    0.3321,
+    0.7374
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8494,
+     0.14,
+     0.2231
+    ],
+    "max": [
+     -0.229,
+     0.519,
+     0.6142
+    ]
+   },
+   "reach_m": 0.584,
+   "first_joint_anchor_base_m": [
+    -0.29,
+    0.0586,
+    0.106
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "tail_6_spread": -0.0,
+      "tail_6_lift": 0.828,
+      "tail_6_bend": 0.5232,
+      "tail_6_tip": 0.2019
+     },
+     "share_of_motion": 0.829,
+     "tip_motion_per_unit_at_home_m": [
+      0.2286,
+      0.1176,
+      0.1424
+     ]
+    },
+    {
+     "weights": {
+      "tail_6_spread": 1.0,
+      "tail_6_lift": 0.0,
+      "tail_6_bend": 0.0,
+      "tail_6_tip": 0.0
+     },
+     "share_of_motion": 0.161,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.0928,
+      0.0766
+     ]
+    },
+    {
+     "weights": {
+      "tail_6_spread": 0.0,
+      "tail_6_lift": -0.5014,
+      "tail_6_bend": 0.5295,
+      "tail_6_tip": 0.6843
+     },
+     "share_of_motion": 0.009,
+     "tip_motion_per_unit_at_home_m": [
+      0.0139,
+      -0.0112,
+      -0.0135
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tail_7_2_tip",
+   "body": "tail_7_2",
+   "rigby_id": "T9",
+   "joints": [
+    "tail_7_spread",
+    "tail_7_lift",
+    "tail_7_bend",
+    "tail_7_tip"
+   ],
+   "home_base_m": [
+    -0.6705,
+    0.4486,
+    0.3014
+   ],
+   "home_world_m": [
+    -0.6705,
+    0.4486,
+    0.6014
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8533,
+     0.1841,
+     0.1308
+    ],
+    "max": [
+     -0.2104,
+     0.6243,
+     0.4831
+    ]
+   },
+   "reach_m": 0.584,
+   "first_joint_anchor_base_m": [
+    -0.29,
+    0.0791,
+    0.082
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "tail_7_spread": -0.0,
+      "tail_7_lift": 0.8282,
+      "tail_7_bend": 0.5233,
+      "tail_7_tip": 0.2005
+     },
+     "share_of_motion": 0.821,
+     "tip_motion_per_unit_at_home_m": [
+      0.2286,
+      0.1588,
+      0.0943
+     ]
+    },
+    {
+     "weights": {
+      "tail_7_spread": 1.0,
+      "tail_7_lift": 0.0,
+      "tail_7_bend": 0.0,
+      "tail_7_tip": 0.0
+     },
+     "share_of_motion": 0.169,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.0614,
+      0.1035
+     ]
+    },
+    {
+     "weights": {
+      "tail_7_spread": 0.0,
+      "tail_7_lift": -0.4933,
+      "tail_7_bend": 0.5111,
+      "tail_7_tip": 0.7038
+     },
+     "share_of_motion": 0.01,
+     "tip_motion_per_unit_at_home_m": [
+      0.0142,
+      -0.0149,
+      -0.0089
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tail_8_2_tip",
+   "body": "tail_8_2",
+   "rigby_id": "T10",
+   "joints": [
+    "tail_8_spread",
+    "tail_8_lift",
+    "tail_8_bend",
+    "tail_8_tip"
+   ],
+   "home_base_m": [
+    -0.6705,
+    0.5123,
+    0.1339
+   ],
+   "home_world_m": [
+    -0.6705,
+    0.5123,
+    0.4339
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.8492,
+     0.2447,
+     0.0051
+    ],
+    "max": [
+     -0.191,
+     0.6565,
+     0.304
+    ]
+   },
+   "reach_m": 0.584,
+   "first_joint_anchor_base_m": [
+    -0.29,
+    0.0903,
+    0.0524
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "tail_8_spread": -0.0,
+      "tail_8_lift": 0.828,
+      "tail_8_bend": 0.5231,
+      "tail_8_tip": 0.2019
+     },
+     "share_of_motion": 0.831,
+     "tip_motion_per_unit_at_home_m": [
+      0.2286,
+      0.1813,
+      0.035
+     ]
+    },
+    {
+     "weights": {
+      "tail_8_spread": 1.0,
+      "tail_8_lift": 0.0,
+      "tail_8_bend": 0.0,
+      "tail_8_tip": 0.0
+     },
+     "share_of_motion": 0.16,
+     "tip_motion_per_unit_at_home_m": [
+      0.0,
+      -0.0228,
+      0.1181
+     ]
+    },
+    {
+     "weights": {
+      "tail_8_spread": 0.0,
+      "tail_8_lift": -0.5015,
+      "tail_8_bend": 0.5297,
+      "tail_8_tip": 0.684
+     },
+     "share_of_motion": 0.009,
+     "tip_motion_per_unit_at_home_m": [
+      0.0139,
+      -0.0172,
+      -0.0033
+     ]
+    }
+   ]
+  },
+  {
+   "name": "FL_foot_tip",
+   "body": "FL_foot",
+   "rigby_id": "T11",
+   "joints": [
+    "FL_abduct",
+    "FL_pitch",
+    "FL_knee",
+    "FL_ankle_pitch",
+    "FL_ankle_roll"
+   ],
+   "home_base_m": [
+    0.165,
+    0.167,
+    -0.3
+   ],
+   "home_world_m": [
+    0.165,
+    0.167,
+    0.0
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.2178,
+     -0.2211,
+     -0.4137
+    ],
+    "max": [
+     0.6172,
+     0.4829,
+     0.2776
+    ]
+   },
+   "reach_m": 0.4219,
+   "first_joint_anchor_base_m": [
+    0.2,
+    0.115,
+    -0.025
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "FL_abduct": 0.0074,
+      "FL_pitch": 0.9147,
+      "FL_knee": 0.3832,
+      "FL_ankle_pitch": 0.1278,
+      "FL_ankle_roll": -0.0103
+     },
+     "share_of_motion": 0.808,
+     "tip_motion_per_unit_at_home_m": [
+      -0.6712,
+      -0.0089,
+      0.0331
+     ]
+    },
+    {
+     "weights": {
+      "FL_abduct": 0.9982,
+      "FL_pitch": -0.0015,
+      "FL_knee": 0.0009,
+      "FL_ankle_pitch": -0.0465,
+      "FL_ankle_roll": 0.0372
+     },
+     "share_of_motion": 0.082,
+     "tip_motion_per_unit_at_home_m": [
+      0.007,
+      0.3184,
+      0.0536
+     ]
+    },
+    {
+     "weights": {
+      "FL_abduct": 0.0401,
+      "FL_pitch": -0.3093,
+      "FL_knee": 0.4593,
+      "FL_ankle_pitch": 0.8294,
+      "FL_ankle_roll": -0.0626
+     },
+     "share_of_motion": 0.068,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0385,
+      0.011,
+      0.0039
+     ]
+    }
+   ]
+  },
+  {
+   "name": "FR_foot_tip",
+   "body": "FR_foot",
+   "rigby_id": "T12",
+   "joints": [
+    "FR_abduct",
+    "FR_pitch",
+    "FR_knee",
+    "FR_ankle_pitch",
+    "FR_ankle_roll"
+   ],
+   "home_base_m": [
+    0.165,
+    -0.167,
+    -0.3
+   ],
+   "home_world_m": [
+    0.165,
+    -0.167,
+    0.0
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.2183,
+     -0.4679,
+     -0.4357
+    ],
+    "max": [
+     0.6174,
+     0.2207,
+     0.2778
+    ]
+   },
+   "reach_m": 0.4235,
+   "first_joint_anchor_base_m": [
+    0.2,
+    -0.115,
+    -0.025
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "FR_abduct": -0.0097,
+      "FR_pitch": 0.9157,
+      "FR_knee": 0.3825,
+      "FR_ankle_pitch": 0.1224,
+      "FR_ankle_roll": 0.0113
+     },
+     "share_of_motion": 0.8,
+     "tip_motion_per_unit_at_home_m": [
+      -0.6709,
+      0.0081,
+      0.0329
+     ]
+    },
+    {
+     "weights": {
+      "FR_abduct": 0.9979,
+      "FR_pitch": 0.022,
+      "FR_knee": -0.028,
+      "FR_ankle_pitch": -0.0031,
+      "FR_ankle_roll": 0.0537
+     },
+     "share_of_motion": 0.09,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0059,
+      0.3189,
+      -0.0527
+     ]
+    },
+    {
+     "weights": {
+      "FR_abduct": 0.0185,
+      "FR_pitch": -0.302,
+      "FR_knee": 0.4543,
+      "FR_ankle_pitch": 0.8354,
+      "FR_ankle_roll": 0.0642
+     },
+     "share_of_motion": 0.069,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0425,
+      0.0081,
+      0.0022
+     ]
+    }
+   ]
+  },
+  {
+   "name": "RL_foot_tip",
+   "body": "RL_foot",
+   "rigby_id": "T13",
+   "joints": [
+    "RL_abduct",
+    "RL_pitch",
+    "RL_knee",
+    "RL_ankle_pitch",
+    "RL_ankle_roll"
+   ],
+   "home_base_m": [
+    -0.235,
+    0.192,
+    -0.3
+   ],
+   "home_world_m": [
+    -0.235,
+    0.192,
+    0.0
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.6874,
+     -0.2701,
+     -0.5021
+    ],
+    "max": [
+     0.2797,
+     0.5264,
+     0.3697
+    ]
+   },
+   "reach_m": 0.4907,
+   "first_joint_anchor_base_m": [
+    -0.2,
+    0.14,
+    -0.025
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "RL_abduct": -0.0115,
+      "RL_pitch": 0.8925,
+      "RL_knee": 0.4157,
+      "RL_ankle_pitch": 0.1745,
+      "RL_ankle_roll": 0.0009
+     },
+     "share_of_motion": 0.821,
+     "tip_motion_per_unit_at_home_m": [
+      -0.6897,
+      -0.0666,
+      0.1846
+     ]
+    },
+    {
+     "weights": {
+      "RL_abduct": 0.9937,
+      "RL_pitch": 0.0565,
+      "RL_knee": -0.071,
+      "RL_ankle_pitch": -0.0542,
+      "RL_ankle_roll": 0.0383
+     },
+     "share_of_motion": 0.081,
+     "tip_motion_per_unit_at_home_m": [
+      -0.005,
+      0.3217,
+      0.0397
+     ]
+    },
+    {
+     "weights": {
+      "RL_abduct": 0.1064,
+      "RL_pitch": -0.4188,
+      "RL_knee": 0.6347,
+      "RL_ankle_pitch": 0.6374,
+      "RL_ankle_roll": -0.0645
+     },
+     "share_of_motion": 0.073,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0356,
+      -0.0293,
+      0.188
+     ]
+    }
+   ]
+  },
+  {
+   "name": "RR_foot_tip",
+   "body": "RR_foot",
+   "rigby_id": "T14",
+   "joints": [
+    "RR_abduct",
+    "RR_pitch",
+    "RR_knee",
+    "RR_ankle_pitch",
+    "RR_ankle_roll"
+   ],
+   "home_base_m": [
+    -0.235,
+    -0.258,
+    -0.3
+   ],
+   "home_world_m": [
+    -0.235,
+    -0.258,
+    0.0
+   ],
+   "reach_box_base_m": {
+    "min": [
+     -0.678,
+     -0.5488,
+     -0.507
+    ],
+    "max": [
+     0.2888,
+     0.2305,
+     0.3537
+    ]
+   },
+   "reach_m": 0.4901,
+   "first_joint_anchor_base_m": [
+    -0.2,
+    -0.14,
+    -0.025
+   ],
+   "coordinates": [
+    {
+     "weights": {
+      "RR_abduct": -0.0112,
+      "RR_pitch": 0.8909,
+      "RR_knee": 0.4188,
+      "RR_ankle_pitch": 0.1751,
+      "RR_ankle_roll": -0.0002
+     },
+     "share_of_motion": 0.815,
+     "tip_motion_per_unit_at_home_m": [
+      -0.7518,
+      0.0597,
+      0.1876
+     ]
+    },
+    {
+     "weights": {
+      "RR_abduct": 0.9867,
+      "RR_pitch": 0.0783,
+      "RR_knee": -0.1023,
+      "RR_ankle_pitch": -0.0903,
+      "RR_ankle_roll": 0.0416
+     },
+     "share_of_motion": 0.085,
+     "tip_motion_per_unit_at_home_m": [
+      0.0003,
+      0.3041,
+      -0.1629
+     ]
+    },
+    {
+     "weights": {
+      "RR_abduct": 0.1591,
+      "RR_pitch": -0.4207,
+      "RR_knee": 0.6401,
+      "RR_ankle_pitch": 0.6197,
+      "RR_ankle_roll": -0.0633
+     },
+     "share_of_motion": 0.075,
+     "tip_motion_per_unit_at_home_m": [
+      -0.0599,
+      0.1091,
+      0.16
+     ]
+    }
+   ]
+  }
+ ],
+ "link_groups": {
+  "ear_-1_end": [
+   4
+  ],
+  "ear_1_end": [
+   5
+  ],
+  "tail_0_2_end": [
+   9
+  ],
+  "tail_1_2_end": [
+   13
+  ],
+  "tail_2_2_end": [
+   17
+  ],
+  "tail_3_2_end": [
+   21
+  ],
+  "tail_4_2_end": [
+   25
+  ],
+  "tail_5_2_end": [
+   29
+  ],
+  "tail_6_2_end": [
+   33
+  ],
+  "tail_7_2_end": [
+   37
+  ],
+  "tail_8_2_end": [
+   41
+  ],
+  "FL_foot": [
+   46
+  ],
+  "FR_foot": [
+   51
+  ],
+  "RL_foot": [
+   56
+  ],
+  "RR_foot": [
+   61
+  ],
+  "rest_of_body": [
+   1,
+   2,
+   3,
+   6,
+   7,
+   8,
+   10,
+   11,
+   12,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   22,
+   23,
+   24,
+   26,
+   27,
+   28,
+   30,
+   31,
+   32,
+   34,
+   35,
+   36,
+   38,
+   39,
+   40,
+   42,
+   43,
+   44,
+   45,
+   47,
+   48,
+   49,
+   50,
+   52,
+   53,
+   54,
+   55,
+   57,
+   58,
+   59,
+   60
+  ],
+  "floor": [
+   0
+  ]
+ },
+ "link_group_names": {
+  "ear_-1_end": [
+   "ear_-1"
+  ],
+  "ear_1_end": [
+   "ear_1"
+  ],
+  "tail_0_2_end": [
+   "tail_0_2"
+  ],
+  "tail_1_2_end": [
+   "tail_1_2"
+  ],
+  "tail_2_2_end": [
+   "tail_2_2"
+  ],
+  "tail_3_2_end": [
+   "tail_3_2"
+  ],
+  "tail_4_2_end": [
+   "tail_4_2"
+  ],
+  "tail_5_2_end": [
+   "tail_5_2"
+  ],
+  "tail_6_2_end": [
+   "tail_6_2"
+  ],
+  "tail_7_2_end": [
+   "tail_7_2"
+  ],
+  "tail_8_2_end": [
+   "tail_8_2"
+  ],
+  "FL_foot": [
+   "FL_foot"
+  ],
+  "FR_foot": [
+   "FR_foot"
+  ],
+  "RL_foot": [
+   "RL_foot"
+  ],
+  "RR_foot": [
+   "RR_foot"
+  ],
+  "rest_of_body": [
+   "chassis",
+   "neck",
+   "head",
+   "tail_0_mount",
+   "tail_0_0",
+   "tail_0_1",
+   "tail_1_mount",
+   "tail_1_0",
+   "tail_1_1",
+   "tail_2_mount",
+   "tail_2_0",
+   "tail_2_1",
+   "tail_3_mount",
+   "tail_3_0",
+   "tail_3_1",
+   "tail_4_mount",
+   "tail_4_0",
+   "tail_4_1",
+   "tail_5_mount",
+   "tail_5_0",
+   "tail_5_1",
+   "tail_6_mount",
+   "tail_6_0",
+   "tail_6_1",
+   "tail_7_mount",
+   "tail_7_0",
+   "tail_7_1",
+   "tail_8_mount",
+   "tail_8_0",
+   "tail_8_1",
+   "FL_hip",
+   "FL_upper",
+   "FL_lower",
+   "FL_ankle",
+   "FR_hip",
+   "FR_upper",
+   "FR_lower",
+   "FR_ankle",
+   "RL_hip",
+   "RL_upper",
+   "RL_lower",
+   "RL_ankle",
+   "RR_hip",
+   "RR_upper",
+   "RR_lower",
+   "RR_ankle"
+  ],
+  "floor": [
+   "world"
+  ]
+ },
+ "link_group_geoms": {
+  "floor": [
+   "floor"
+  ]
+ },
+ "contact_edges": [
+  [
+   "FL_foot",
+   "floor"
+  ],
+  [
+   "FR_foot",
+   "floor"
+  ],
+  [
+   "RL_foot",
+   "floor"
+  ],
+  [
+   "RR_foot",
+   "floor"
+  ],
+  [
+   "rest_of_body",
+   "floor"
+  ],
+  [
+   "ear_-1_end",
+   "floor"
+  ],
+  [
+   "ear_1_end",
+   "floor"
+  ],
+  [
+   "tail_0_2_end",
+   "floor"
+  ],
+  [
+   "tail_1_2_end",
+   "floor"
+  ],
+  [
+   "tail_2_2_end",
+   "floor"
+  ],
+  [
+   "tail_3_2_end",
+   "floor"
+  ],
+  [
+   "tail_4_2_end",
+   "floor"
+  ],
+  [
+   "tail_5_2_end",
+   "floor"
+  ],
+  [
+   "tail_6_2_end",
+   "floor"
+  ],
+  [
+   "tail_7_2_end",
+   "floor"
+  ],
+  [
+   "tail_8_2_end",
+   "floor"
+  ]
+ ],
+ "stance_sets": [
+  {
+   "name": "all",
+   "tips": [
+    "FL_foot_tip",
+    "FR_foot_tip",
+    "RL_foot_tip",
+    "RR_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_FL_foot_tip",
+   "tips": [
+    "FR_foot_tip",
+    "RL_foot_tip",
+    "RR_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_FR_foot_tip",
+   "tips": [
+    "FL_foot_tip",
+    "RL_foot_tip",
+    "RR_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_RL_foot_tip",
+   "tips": [
+    "FL_foot_tip",
+    "FR_foot_tip",
+    "RR_foot_tip"
+   ]
+  },
+  {
+   "name": "all_but_RR_foot_tip",
+   "tips": [
+    "FL_foot_tip",
+    "FR_foot_tip",
+    "RL_foot_tip"
+   ]
+  }
+ ],
+ "balance": {
+  "support_tips": [
+   "FL_foot_tip",
+   "FR_foot_tip",
+   "RL_foot_tip",
+   "RR_foot_tip"
+  ],
+  "support_polygon_base_xy_m": [
+   [
+    -0.235,
+    -0.258
+   ],
+   [
+    0.165,
+    -0.167
+   ],
+   [
+    0.165,
+    0.167
+   ],
+   [
+    -0.235,
+    0.192
+   ]
+  ],
+  "com_home_base_m": [
+   -0.0466,
+   0.0,
+   0.004
+  ],
+  "com_margin_home_m": 0.1799,
+  "about": "weight-shift coordinate: the base moves so the CoM moves toward a direction inside this polygon; a tip may lift once the CoM is inside the polygon of the others (dilated 0.1 L)"
+ },
+ "gaits": [
+  {
+   "name": "alternating",
+   "source": "synthesised from measured tips (angular order, alternate phases)",
+   "cycle_s": 0.4401,
+   "phase": {
+    "FL_foot_tip": 0.0,
+    "FR_foot_tip": 0.5,
+    "RL_foot_tip": 0.5,
+    "RR_foot_tip": 0.0
+   },
+   "duty": {
+    "FL_foot_tip": 0.6,
+    "FR_foot_tip": 0.6,
+    "RL_foot_tip": 0.6,
+    "RR_foot_tip": 0.6
+   },
+   "duty_mean": 0.6,
+   "step_height_m": 0.076,
+   "min_limbs_down": 2,
+   "quasi_static": false
+  },
+  {
+   "name": "crawl",
+   "source": "synthesised quasi-static crawl from measured tips (one limb lifted at a time)",
+   "cycle_s": 1.7605,
+   "phase": {
+    "FL_foot_tip": 0.0,
+    "FR_foot_tip": 0.5,
+    "RL_foot_tip": 0.75,
+    "RR_foot_tip": 0.25
+   },
+   "duty": {
+    "FL_foot_tip": 0.8,
+    "FR_foot_tip": 0.8,
+    "RL_foot_tip": 0.8,
+    "RR_foot_tip": 0.8
+   },
+   "duty_mean": 0.8,
+   "step_height_m": 0.076,
+   "lift_order": [
+    "FL_hip",
+    "RR_hip",
+    "FR_hip",
+    "RL_hip"
+   ],
+   "min_limbs_down": 3,
+   "quasi_static": true
+  }
+ ],
+ "objects": null,
+ "excluded_pairs_home_overlap": [],
+ "held_out": {
+  "share": 0.15,
+  "rule": "int(sha256(clip_id).hexdigest()[:8], 16) / 2**32 < share"
+ },
+ "frames": "base frame: x forward, y left, z up, metres; for the arm a level frame at its base",
+ "kind": "quadruped",
+ "support": [
+  {
+   "tip": "FL_foot_tip",
+   "type": "point"
+  },
+  {
+   "tip": "FR_foot_tip",
+   "type": "point"
+  },
+  {
+   "tip": "RL_foot_tip",
+   "type": "point"
+  },
+  {
+   "tip": "RR_foot_tip",
+   "type": "point"
+  }
+ ],
+ "render_model": "any-robot/assets/contrib/astral_kitsune/robot.xml",
+ "render_model_check": {
+  "loads": true,
+  "joints_match": true,
+  "missing_in_render": [],
+  "extra_in_render": []
+ },
+ "intake_notes": {
+  "support_sites_at_contact": [
+   "FL_foot_tip",
+   "FR_foot_tip",
+   "RL_foot_tip",
+   "RR_foot_tip"
+  ]
+ }
+}

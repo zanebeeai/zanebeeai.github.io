@@ -1,0 +1,3457 @@
+{
+ "body": "astral_crocodile",
+ "kind": "quadruped",
+ "free_base": true,
+ "L": 0.1842,
+ "T": 0.13703,
+ "modes": [
+  {
+   "name": "trunk_lower",
+   "part": "trunk",
+   "plus": "trunk rises (legs extend)",
+   "minus": "trunk lowers (legs fold)",
+   "toward": {
+    "FL_knee": -0.5,
+    "FR_knee": -0.5,
+    "RL_knee": -0.5,
+    "RR_knee": -0.5,
+    "FL_pitch": 0.3,
+    "FR_pitch": 0.3,
+    "RL_pitch": 0.3,
+    "RR_pitch": 0.3
+   },
+   "away": {
+    "FL_knee": 0.4,
+    "FR_knee": 0.4,
+    "RL_knee": 0.4,
+    "RR_knee": 0.4,
+    "FL_pitch": -0.25,
+    "FR_pitch": -0.25,
+    "RL_pitch": -0.25,
+    "RR_pitch": -0.25
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.005,
+       -0.0,
+       0.059
+      ],
+      "FR_foot_tip": [
+       0.005,
+       0.0,
+       0.059
+      ],
+      "RL_foot_tip": [
+       0.005,
+       -0.0,
+       0.059
+      ],
+      "RR_foot_tip": [
+       0.005,
+       0.0,
+       0.059
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0172
+     },
+     "fail": [],
+     "base": [
+      -0.005,
+      -0.0,
+      -0.059
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.321,
+      "base_L": 0.321,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.118
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.002,
+       -0.0,
+       0.026
+      ],
+      "FR_foot_tip": [
+       0.002,
+       0.0,
+       0.026
+      ],
+      "RL_foot_tip": [
+       0.002,
+       -0.0,
+       0.026
+      ],
+      "RR_foot_tip": [
+       0.002,
+       0.0,
+       0.026
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0173
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      -0.0,
+      -0.026
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.026,
+       0.0,
+       -0.066
+      ],
+      "FR_foot_tip": [
+       -0.026,
+       -0.0,
+       -0.066
+      ],
+      "RL_foot_tip": [
+       -0.026,
+       0.0,
+       -0.066
+      ],
+      "RR_foot_tip": [
+       -0.026,
+       -0.0,
+       -0.066
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0163
+     },
+     "fail": [],
+     "base": [
+      0.026,
+      0.0,
+      0.066
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      -0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.063,
+       0.0,
+       -0.112
+      ],
+      "FR_foot_tip": [
+       -0.063,
+       -0.0,
+       -0.112
+      ],
+      "RL_foot_tip": [
+       -0.063,
+       0.0,
+       -0.112
+      ],
+      "RR_foot_tip": [
+       -0.063,
+       -0.0,
+       -0.112
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0162
+     },
+     "fail": [],
+     "base": [
+      0.063,
+      -0.0,
+      0.112
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.698,
+      "base_L": 0.698,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.352
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  },
+  {
+   "name": "trunk_shift_forward",
+   "part": "trunk",
+   "plus": "trunk moves forward over feet (feet move back relative to base)",
+   "minus": "trunk moves back",
+   "toward": {
+    "FL_pitch": 0.2,
+    "FR_pitch": 0.2,
+    "RL_pitch": 0.2,
+    "RR_pitch": 0.2
+   },
+   "away": {
+    "FL_pitch": -0.4,
+    "FR_pitch": -0.4,
+    "RL_pitch": -0.4,
+    "RR_pitch": -0.4
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.056,
+       -0.0,
+       0.022
+      ],
+      "FR_foot_tip": [
+       0.056,
+       0.0,
+       0.022
+      ],
+      "RL_foot_tip": [
+       0.056,
+       -0.0,
+       0.021
+      ],
+      "RR_foot_tip": [
+       0.056,
+       0.0,
+       0.021
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.016
+     },
+     "fail": [],
+     "base": [
+      -0.056,
+      0.0,
+      -0.021
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.1,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.327,
+      "base_L": 0.325,
+      "turn_deg": 0.1,
+      "joint_range_share": 0.104
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.033,
+       0.0,
+       0.006
+      ],
+      "FR_foot_tip": [
+       0.033,
+       -0.0,
+       0.006
+      ],
+      "RL_foot_tip": [
+       0.033,
+       -0.0,
+       0.006
+      ],
+      "RR_foot_tip": [
+       0.033,
+       0.0,
+       0.006
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.016
+     },
+     "fail": [],
+     "base": [
+      -0.033,
+      0.0,
+      -0.006
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.045,
+       -0.0,
+       -0.003
+      ],
+      "FR_foot_tip": [
+       -0.045,
+       0.0,
+       -0.003
+      ],
+      "RL_foot_tip": [
+       -0.045,
+       0.0,
+       -0.003
+      ],
+      "RR_foot_tip": [
+       -0.045,
+       -0.0,
+       -0.003
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0178
+     },
+     "fail": [],
+     "base": [
+      0.045,
+      0.0,
+      0.003
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.085,
+       -0.0,
+       -0.006
+      ],
+      "FR_foot_tip": [
+       -0.085,
+       0.0,
+       -0.006
+      ],
+      "RL_foot_tip": [
+       -0.085,
+       0.0,
+       -0.005
+      ],
+      "RR_foot_tip": [
+       -0.085,
+       -0.0,
+       -0.005
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0178
+     },
+     "fail": [],
+     "base": [
+      0.085,
+      -0.0,
+      0.006
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.1,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.463,
+      "base_L": 0.463,
+      "turn_deg": 0.1,
+      "joint_range_share": 0.148
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "moves the base most along x",
+   "kept": true
+  },
+  {
+   "name": "trunk_shift_left",
+   "part": "trunk",
+   "plus": "trunk shifts left (feet move right relative to base)",
+   "minus": "trunk shifts right",
+   "toward": {
+    "FL_abduct": -0.2,
+    "RL_abduct": -0.2,
+    "FR_abduct": 0.15,
+    "RR_abduct": 0.15
+   },
+   "away": {
+    "FL_abduct": 0.15,
+    "RL_abduct": 0.15,
+    "FR_abduct": -0.2,
+    "RR_abduct": -0.2
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.015,
+       -0.002,
+       0.023
+      ],
+      "FR_foot_tip": [
+       -0.015,
+       -0.003,
+       0.024
+      ],
+      "RL_foot_tip": [
+       -0.015,
+       -0.003,
+       0.023
+      ],
+      "RR_foot_tip": [
+       -0.015,
+       -0.003,
+       0.024
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0178
+     },
+     "fail": [],
+     "base": [
+      0.015,
+      0.002,
+      -0.024
+     ],
+     "rpy_deg": [
+      0.1,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.155,
+      "base_L": 0.154,
+      "turn_deg": 0.1,
+      "joint_range_share": 0.051
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.01,
+       -0.001,
+       0.012
+      ],
+      "FR_foot_tip": [
+       -0.01,
+       -0.001,
+       0.013
+      ],
+      "RL_foot_tip": [
+       -0.01,
+       -0.001,
+       0.012
+      ],
+      "RR_foot_tip": [
+       -0.01,
+       -0.001,
+       0.013
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0175
+     },
+     "fail": [],
+     "base": [
+      0.01,
+      0.001,
+      -0.012
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.016,
+       -0.006,
+       -0.064
+      ],
+      "FR_foot_tip": [
+       0.016,
+       -0.006,
+       -0.061
+      ],
+      "RL_foot_tip": [
+       0.016,
+       -0.006,
+       -0.065
+      ],
+      "RR_foot_tip": [
+       0.016,
+       -0.006,
+       -0.063
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      -0.016,
+      0.005,
+      0.063
+     ],
+     "rpy_deg": [
+      0.2,
+      0.1,
+      -0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.02,
+       -0.016,
+       -0.173
+      ],
+      "FR_foot_tip": [
+       0.02,
+       -0.015,
+       -0.166
+      ],
+      "RL_foot_tip": [
+       0.02,
+       -0.016,
+       -0.173
+      ],
+      "RR_foot_tip": [
+       0.02,
+       -0.015,
+       -0.166
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0169
+     },
+     "fail": [],
+     "base": [
+      -0.02,
+      0.011,
+      0.17
+     ],
+     "rpy_deg": [
+      0.7,
+      0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.949,
+      "base_L": 0.931,
+      "turn_deg": 0.7,
+      "joint_range_share": 0.604
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "moves the base most along z",
+   "kept": true
+  },
+  {
+   "name": "trunk_roll_right",
+   "part": "trunk",
+   "plus": "trunk rolls right: right side lowers, left rises",
+   "minus": "trunk rolls left",
+   "toward": {
+    "FL_knee": -0.3,
+    "RL_knee": -0.3,
+    "FR_knee": 0.3,
+    "RR_knee": 0.3
+   },
+   "away": {
+    "FL_knee": 0.3,
+    "RL_knee": 0.3,
+    "FR_knee": -0.3,
+    "RR_knee": -0.3
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.004,
+       -0.076,
+       -0.001
+      ],
+      "FR_foot_tip": [
+       0.004,
+       -0.076,
+       -0.026
+      ],
+      "RL_foot_tip": [
+       0.004,
+       -0.077,
+       -0.001
+      ],
+      "RR_foot_tip": [
+       0.004,
+       -0.076,
+       -0.026
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.016
+     },
+     "fail": [],
+     "base": [
+      -0.004,
+      0.085,
+      0.01
+     ],
+     "rpy_deg": [
+      -2.4,
+      0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.437,
+      "base_L": 0.465,
+      "turn_deg": 2.4,
+      "joint_range_share": 0.211
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.004,
+       -0.037,
+       -0.002
+      ],
+      "FR_foot_tip": [
+       0.005,
+       -0.037,
+       -0.018
+      ],
+      "RL_foot_tip": [
+       0.004,
+       -0.037,
+       -0.003
+      ],
+      "RR_foot_tip": [
+       0.005,
+       -0.037,
+       -0.018
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      -0.004,
+      0.043,
+      0.009
+     ],
+     "rpy_deg": [
+      -1.5,
+      0.0,
+      -0.1
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.005,
+       0.036,
+       -0.018
+      ],
+      "FR_foot_tip": [
+       0.004,
+       0.037,
+       -0.002
+      ],
+      "RL_foot_tip": [
+       0.005,
+       0.037,
+       -0.019
+      ],
+      "RR_foot_tip": [
+       0.004,
+       0.037,
+       -0.003
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      -0.004,
+      -0.043,
+      0.009
+     ],
+     "rpy_deg": [
+      1.5,
+      0.0,
+      0.1
+     ]
+    },
+    "1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.004,
+       0.076,
+       -0.026
+      ],
+      "FR_foot_tip": [
+       0.004,
+       0.076,
+       -0.001
+      ],
+      "RL_foot_tip": [
+       0.004,
+       0.076,
+       -0.026
+      ],
+      "RR_foot_tip": [
+       0.004,
+       0.077,
+       -0.001
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.016
+     },
+     "fail": [],
+     "base": [
+      -0.004,
+      -0.085,
+      0.01
+     ],
+     "rpy_deg": [
+      2.4,
+      0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.437,
+      "base_L": 0.465,
+      "turn_deg": 2.4,
+      "joint_range_share": 0.211
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "moves the base most along y",
+   "kept": true
+  },
+  {
+   "name": "trunk_pitch_down",
+   "part": "trunk",
+   "plus": "nose pitches down: front legs fold, rear extend",
+   "minus": "nose pitches up",
+   "toward": {
+    "FL_knee": 0.3,
+    "FR_knee": 0.3,
+    "RL_knee": -0.3,
+    "RR_knee": -0.3
+   },
+   "away": {
+    "FL_knee": -0.22,
+    "FR_knee": -0.22,
+    "RL_knee": 0.22,
+    "RR_knee": 0.22
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.029,
+       0.0,
+       -0.061
+      ],
+      "FR_foot_tip": [
+       -0.029,
+       -0.0,
+       -0.061
+      ],
+      "RL_foot_tip": [
+       -0.022,
+       -0.0,
+       0.029
+      ],
+      "RR_foot_tip": [
+       -0.022,
+       0.0,
+       0.029
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0055
+     },
+     "fail": [],
+     "base": [
+      -0.013,
+      0.0,
+      0.018
+     ],
+     "rpy_deg": [
+      0.0,
+      -9.8,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.367,
+      "base_L": 0.121,
+      "turn_deg": 9.8,
+      "joint_range_share": 0.155
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.012,
+       0.0,
+       -0.032
+      ],
+      "FR_foot_tip": [
+       -0.012,
+       -0.0,
+       -0.032
+      ],
+      "RL_foot_tip": [
+       -0.011,
+       -0.0,
+       0.012
+      ],
+      "RR_foot_tip": [
+       -0.011,
+       0.0,
+       0.012
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0162
+     },
+     "fail": [],
+     "base": [
+      -0.007,
+      -0.0,
+      0.01
+     ],
+     "rpy_deg": [
+      0.0,
+      -4.8,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.016,
+       -0.0,
+       0.02
+      ],
+      "FR_foot_tip": [
+       0.016,
+       0.0,
+       0.02
+      ],
+      "RL_foot_tip": [
+       0.02,
+       0.0,
+       -0.041
+      ],
+      "RR_foot_tip": [
+       0.02,
+       -0.0,
+       -0.041
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0163
+     },
+     "fail": [],
+     "base": [
+      0.007,
+      -0.0,
+      0.011
+     ],
+     "rpy_deg": [
+      0.0,
+      6.6,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.034,
+       -0.0,
+       0.047
+      ],
+      "FR_foot_tip": [
+       0.034,
+       0.0,
+       0.047
+      ],
+      "RL_foot_tip": [
+       0.049,
+       0.0,
+       -0.076
+      ],
+      "RR_foot_tip": [
+       0.049,
+       -0.0,
+       -0.076
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0158
+     },
+     "fail": [],
+     "base": [
+      0.012,
+      -0.0,
+      0.017
+     ],
+     "rpy_deg": [
+      0.0,
+      13.4,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.491,
+      "base_L": 0.113,
+      "turn_deg": 13.4,
+      "joint_range_share": 0.211
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 1,
+   "kept_by": "moves the base most along pitch",
+   "kept": true
+  },
+  {
+   "name": "fl_tip_up",
+   "part": "FL_foot_tip",
+   "plus": "FL foot lifts up and back",
+   "minus": "FL foot reaches forward and up",
+   "toward": {
+    "FL_pitch": 0.45,
+    "FL_knee": 0.2,
+    "FL_ankle_pitch": 0.2
+   },
+   "away": {
+    "FL_pitch": -0.8,
+    "FL_knee": -0.5
+   },
+   "frees": [
+    "FL_foot_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.312,
+       -0.06,
+       0.055
+      ],
+      "FR_foot_tip": [
+       0.008,
+       0.003,
+       -0.01
+      ],
+      "RL_foot_tip": [
+       0.007,
+       0.002,
+       -0.009
+      ],
+      "RR_foot_tip": [
+       0.008,
+       0.002,
+       -0.009
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      -0.007,
+      -0.002,
+      0.01
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.1
+     ],
+     "size": {
+      "tip_L": 1.751,
+      "base_L": 0.067,
+      "turn_deg": 0.1,
+      "joint_range_share": 0.352
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.16,
+       0.011,
+       -0.01
+      ],
+      "FR_foot_tip": [
+       0.004,
+       -0.003,
+       -0.023
+      ],
+      "RL_foot_tip": [
+       -0.002,
+       -0.009,
+       -0.025
+      ],
+      "RR_foot_tip": [
+       0.004,
+       -0.009,
+       -0.014
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.016
+     },
+     "fail": [],
+     "base": [
+      -0.005,
+      0.002,
+      0.023
+     ],
+     "rpy_deg": [
+      1.1,
+      -1.0,
+      -0.6
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.127,
+       -0.035,
+       0.032
+      ],
+      "FR_foot_tip": [
+       -0.002,
+       -0.002,
+       -0.004
+      ],
+      "RL_foot_tip": [
+       -0.003,
+       -0.002,
+       -0.004
+      ],
+      "RR_foot_tip": [
+       -0.002,
+       -0.002,
+       -0.004
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.002,
+      0.002,
+      0.004
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      -0.1
+     ]
+    },
+    "1": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.204,
+       -0.113,
+       0.104
+      ],
+      "FR_foot_tip": [
+       -0.006,
+       -0.004,
+       -0.001
+      ],
+      "RL_foot_tip": [
+       -0.006,
+       -0.004,
+       -0.001
+      ],
+      "RR_foot_tip": [
+       -0.006,
+       -0.004,
+       -0.001
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.006,
+      0.004,
+      0.001
+     ],
+     "rpy_deg": [
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 1.386,
+      "base_L": 0.04,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.333
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "FR_foot_tip",
+    "RL_foot_tip",
+    "RR_foot_tip"
+   ],
+   "round": 1,
+   "kept_by": "only mode driving FL_ankle_pitch",
+   "kept": true
+  },
+  {
+   "name": "fl_tip_left",
+   "part": "FL_foot_tip",
+   "plus": "FL foot moves out left and up",
+   "minus": "FL foot moves in right",
+   "toward": {
+    "FL_abduct": 0.8,
+    "FL_ankle_roll": 0.5,
+    "FL_knee": 0.2
+   },
+   "away": {
+    "FL_abduct": 0.3,
+    "FL_ankle_roll": 0.3,
+    "FL_knee": 0.2
+   },
+   "frees": [
+    "FL_foot_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.023,
+       0.025,
+       0.037
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.273,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.244
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.012,
+       0.014,
+       0.017
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.012,
+       0.037,
+       0.034
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.023,
+       0.061,
+       0.08
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 0.56,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.407
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "FR_foot_tip",
+    "RL_foot_tip",
+    "RR_foot_tip"
+   ],
+   "round": 0,
+   "kept_by": "only mode driving FL_ankle_roll",
+   "kept": true
+  },
+  {
+   "name": "fr_tip_up",
+   "part": "FR_foot_tip",
+   "plus": "FR foot lifts up and back",
+   "minus": "FR foot reaches forward and up",
+   "toward": {
+    "FR_pitch": 0.45,
+    "FR_knee": 0.2,
+    "FR_ankle_pitch": 0.2
+   },
+   "away": {
+    "FR_pitch": -0.8,
+    "FR_knee": -0.5
+   },
+   "frees": [
+    "FR_foot_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.008,
+       -0.003,
+       -0.01
+      ],
+      "FR_foot_tip": [
+       0.312,
+       0.06,
+       0.055
+      ],
+      "RL_foot_tip": [
+       0.008,
+       -0.002,
+       -0.009
+      ],
+      "RR_foot_tip": [
+       0.007,
+       -0.002,
+       -0.009
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      -0.007,
+      0.002,
+      0.01
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.1
+     ],
+     "size": {
+      "tip_L": 1.751,
+      "base_L": 0.067,
+      "turn_deg": 0.1,
+      "joint_range_share": 0.352
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.004,
+       0.003,
+       -0.023
+      ],
+      "FR_foot_tip": [
+       0.16,
+       -0.011,
+       -0.01
+      ],
+      "RL_foot_tip": [
+       0.004,
+       0.009,
+       -0.014
+      ],
+      "RR_foot_tip": [
+       -0.002,
+       0.009,
+       -0.025
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.016
+     },
+     "fail": [],
+     "base": [
+      -0.005,
+      -0.002,
+      0.023
+     ],
+     "rpy_deg": [
+      -1.1,
+      -1.0,
+      0.6
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.002,
+       0.002,
+       -0.004
+      ],
+      "FR_foot_tip": [
+       -0.127,
+       0.035,
+       0.032
+      ],
+      "RL_foot_tip": [
+       -0.002,
+       0.002,
+       -0.004
+      ],
+      "RR_foot_tip": [
+       -0.003,
+       0.002,
+       -0.004
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.002,
+      -0.002,
+      0.004
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.1
+     ]
+    },
+    "1": {
+     "tips": {
+      "FL_foot_tip": [
+       -0.006,
+       0.004,
+       -0.001
+      ],
+      "FR_foot_tip": [
+       -0.204,
+       0.113,
+       0.104
+      ],
+      "RL_foot_tip": [
+       -0.006,
+       0.004,
+       -0.001
+      ],
+      "RR_foot_tip": [
+       -0.006,
+       0.004,
+       -0.001
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.006,
+      -0.004,
+      0.001
+     ],
+     "rpy_deg": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.386,
+      "base_L": 0.04,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.333
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "FL_foot_tip",
+    "RL_foot_tip",
+    "RR_foot_tip"
+   ],
+   "round": 1,
+   "kept_by": "only mode driving FR_ankle_pitch",
+   "kept": true
+  },
+  {
+   "name": "fr_tip_right",
+   "part": "FR_foot_tip",
+   "plus": "FR foot moves out right and up",
+   "minus": "FR foot moves in left",
+   "toward": {
+    "FR_abduct": -0.8,
+    "FR_ankle_roll": -0.5,
+    "FR_knee": 0.2
+   },
+   "away": {
+    "FR_abduct": -0.3,
+    "FR_ankle_roll": -0.3,
+    "FR_knee": 0.2
+   },
+   "frees": [
+    "FR_foot_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "FR_foot_tip": [
+       -0.023,
+       -0.025,
+       0.037
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.273,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.244
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FR_foot_tip": [
+       -0.012,
+       -0.014,
+       0.017
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FR_foot_tip": [
+       -0.012,
+       -0.037,
+       0.034
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "FR_foot_tip": [
+       -0.023,
+       -0.061,
+       0.08
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0161
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.56,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.407
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "FL_foot_tip",
+    "RL_foot_tip",
+    "RR_foot_tip"
+   ],
+   "round": 0,
+   "kept_by": "only mode driving FR_ankle_roll",
+   "kept": true
+  },
+  {
+   "name": "rl_tip_up",
+   "part": "RL_foot_tip",
+   "plus": "RL foot lifts up and back",
+   "minus": "RL foot reaches forward and up",
+   "toward": {
+    "RL_pitch": 0.6,
+    "RL_knee": 0.3,
+    "RL_ankle_pitch": 0.3
+   },
+   "away": {
+    "RL_pitch": -0.55,
+    "RL_knee": -0.35
+   },
+   "frees": [
+    "RL_foot_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.019,
+       0.001,
+       -0.027
+      ],
+      "FR_foot_tip": [
+       0.011,
+       0.001,
+       -0.021
+      ],
+      "RL_foot_tip": [
+       0.224,
+       -0.005,
+       0.006
+      ],
+      "RR_foot_tip": [
+       0.011,
+       0.008,
+       -0.024
+      ]
+     },
+     "clear": {
+      "self": 0.0152,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      -0.014,
+      -0.007,
+      0.025
+     ],
+     "rpy_deg": [
+      0.5,
+      0.3,
+      0.8
+     ],
+     "size": {
+      "tip_L": 1.217,
+      "base_L": 0.16,
+      "turn_deg": 0.8,
+      "joint_range_share": 0.247
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.021,
+       -0.001,
+       -0.024
+      ],
+      "FR_foot_tip": [
+       0.01,
+       -0.001,
+       -0.013
+      ],
+      "RL_foot_tip": [
+       0.108,
+       0.014,
+       -0.018
+      ],
+      "RR_foot_tip": [
+       0.01,
+       0.009,
+       -0.022
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      -0.011,
+      -0.008,
+      0.023
+     ],
+     "rpy_deg": [
+      1.1,
+      1.0,
+      1.1
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.002,
+       0.0,
+       -0.003
+      ],
+      "FR_foot_tip": [
+       0.001,
+       0.0,
+       -0.003
+      ],
+      "RL_foot_tip": [
+       -0.16,
+       -0.049,
+       0.065
+      ],
+      "RR_foot_tip": [
+       0.001,
+       0.001,
+       -0.003
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0169
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      -0.001,
+      0.003
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.1
+     ]
+    },
+    "1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.001,
+       0.0,
+       -0.001
+      ],
+      "RL_foot_tip": [
+       -0.211,
+       -0.147,
+       0.194
+      ],
+      "RR_foot_tip": [
+       0.0,
+       0.0,
+       -0.001
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      -0.001,
+      -0.0,
+      0.001
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 1.749,
+      "base_L": 0.008,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.444
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "FL_foot_tip",
+    "FR_foot_tip",
+    "RR_foot_tip"
+   ],
+   "round": 1,
+   "kept_by": "only mode driving RL_ankle_pitch",
+   "kept": true
+  },
+  {
+   "name": "rl_tip_left",
+   "part": "RL_foot_tip",
+   "plus": "RL foot moves out left and up",
+   "minus": "RL foot moves in right",
+   "toward": {
+    "RL_abduct": 0.8,
+    "RL_ankle_roll": 0.5,
+    "RL_knee": 0.2
+   },
+   "away": {
+    "RL_abduct": 0.3,
+    "RL_ankle_roll": 0.3,
+    "RL_knee": 0.2
+   },
+   "frees": [
+    "RL_foot_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "RL_foot_tip": [
+       -0.02,
+       0.023,
+       0.04
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.273,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.244
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "RL_foot_tip": [
+       -0.01,
+       0.013,
+       0.018
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0128
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "RL_foot_tip": [
+       -0.01,
+       0.036,
+       0.036
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "RL_foot_tip": [
+       -0.02,
+       0.059,
+       0.082
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.559,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.407
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "FL_foot_tip",
+    "FR_foot_tip",
+    "RR_foot_tip"
+   ],
+   "round": 0,
+   "kept_by": "only mode driving RL_ankle_roll",
+   "kept": true
+  },
+  {
+   "name": "rr_tip_up",
+   "part": "RR_foot_tip",
+   "plus": "RR foot lifts up and back",
+   "minus": "RR foot reaches forward and up",
+   "toward": {
+    "RR_pitch": 0.6,
+    "RR_knee": 0.3,
+    "RR_ankle_pitch": 0.3
+   },
+   "away": {
+    "RR_pitch": -0.55,
+    "RR_knee": -0.35
+   },
+   "frees": [
+    "RR_foot_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.011,
+       -0.001,
+       -0.021
+      ],
+      "FR_foot_tip": [
+       0.019,
+       -0.001,
+       -0.027
+      ],
+      "RL_foot_tip": [
+       0.011,
+       -0.008,
+       -0.024
+      ],
+      "RR_foot_tip": [
+       0.224,
+       0.005,
+       0.006
+      ]
+     },
+     "clear": {
+      "self": 0.0152,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      -0.014,
+      0.007,
+      0.025
+     ],
+     "rpy_deg": [
+      -0.5,
+      0.3,
+      -0.8
+     ],
+     "size": {
+      "tip_L": 1.217,
+      "base_L": 0.16,
+      "turn_deg": 0.8,
+      "joint_range_share": 0.247
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.01,
+       0.001,
+       -0.013
+      ],
+      "FR_foot_tip": [
+       0.021,
+       0.001,
+       -0.024
+      ],
+      "RL_foot_tip": [
+       0.01,
+       -0.009,
+       -0.022
+      ],
+      "RR_foot_tip": [
+       0.108,
+       -0.014,
+       -0.018
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      -0.011,
+      0.008,
+      0.023
+     ],
+     "rpy_deg": [
+      -1.1,
+      1.0,
+      -1.1
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "FL_foot_tip": [
+       0.001,
+       -0.0,
+       -0.003
+      ],
+      "FR_foot_tip": [
+       0.002,
+       -0.0,
+       -0.003
+      ],
+      "RL_foot_tip": [
+       0.001,
+       -0.001,
+       -0.003
+      ],
+      "RR_foot_tip": [
+       -0.16,
+       0.049,
+       0.065
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.0169
+     },
+     "fail": [],
+     "base": [
+      -0.002,
+      0.001,
+      0.003
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      -0.1
+     ]
+    },
+    "1": {
+     "tips": {
+      "FR_foot_tip": [
+       0.001,
+       -0.0,
+       -0.001
+      ],
+      "RL_foot_tip": [
+       0.0,
+       -0.0,
+       -0.001
+      ],
+      "RR_foot_tip": [
+       -0.211,
+       0.147,
+       0.194
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      -0.001,
+      0.0,
+      0.001
+     ],
+     "rpy_deg": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "size": {
+      "tip_L": 1.749,
+      "base_L": 0.008,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.444
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "FL_foot_tip",
+    "FR_foot_tip",
+    "RL_foot_tip"
+   ],
+   "round": 1,
+   "kept_by": "only mode driving RR_ankle_pitch",
+   "kept": true
+  },
+  {
+   "name": "rr_tip_right",
+   "part": "RR_foot_tip",
+   "plus": "RR foot moves out right and up",
+   "minus": "RR foot moves in left",
+   "toward": {
+    "RR_abduct": -0.8,
+    "RR_ankle_roll": -0.5,
+    "RR_knee": 0.2
+   },
+   "away": {
+    "RR_abduct": -0.3,
+    "RR_ankle_roll": -0.3,
+    "RR_knee": 0.2
+   },
+   "frees": [
+    "RR_foot_tip"
+   ],
+   "cards": {
+    "-1": {
+     "tips": {
+      "RR_foot_tip": [
+       -0.02,
+       -0.023,
+       0.04
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.273,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.244
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "RR_foot_tip": [
+       -0.01,
+       -0.013,
+       0.018
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "RR_foot_tip": [
+       -0.01,
+       -0.036,
+       0.036
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "RR_foot_tip": [
+       -0.02,
+       -0.059,
+       0.082
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.559,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.407
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "measured_stance": [
+    "FL_foot_tip",
+    "FR_foot_tip",
+    "RL_foot_tip"
+   ],
+   "round": 0,
+   "kept_by": "only mode driving RR_ankle_roll",
+   "kept": true
+  },
+  {
+   "name": "head_left",
+   "part": "jaw_tip",
+   "plus": "head turns left",
+   "minus": "head turns right",
+   "toward": {
+    "head_pan": 1.0
+   },
+   "away": {
+    "head_pan": -1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "jaw_tip": [
+       -0.027,
+       -0.101,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.568,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "jaw_tip": [
+       -0.007,
+       -0.052,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "jaw_tip": [
+       -0.007,
+       0.052,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "jaw_tip": [
+       -0.027,
+       0.101,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.568,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving head_pan",
+   "kept": true
+  },
+  {
+   "name": "head_up",
+   "part": "jaw_tip",
+   "plus": "head pitches up",
+   "minus": "head pitches down",
+   "toward": {
+    "head_pitch": -1.0
+   },
+   "away": {
+    "head_pitch": 1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "jaw_tip": [
+       -0.017,
+       0.0,
+       -0.052
+      ]
+     },
+     "clear": {
+      "self": 0.0146,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.297,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.34
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "jaw_tip": [
+       -0.006,
+       0.0,
+       -0.027
+      ]
+     },
+     "clear": {
+      "self": 0.017,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "jaw_tip": [
+       0.0,
+       0.0,
+       0.053
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "jaw_tip": [
+       -0.016,
+       0.0,
+       0.103
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.566,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.66
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving head_pitch",
+   "kept": true
+  },
+  {
+   "name": "jaw_open",
+   "part": "jaw_tip",
+   "plus": "jaw opens downward",
+   "minus": "jaw closes fully",
+   "toward": {
+    "jaw_open": 1.0
+   },
+   "away": {
+    "jaw_open": -1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {},
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.0,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.0
+     }
+    },
+    "-0.5": {
+     "tips": {},
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "jaw_tip": [
+       -0.012,
+       0.0,
+       -0.058
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "FL_foot_tip": [
+       0.008,
+       -0.0,
+       -0.018
+      ],
+      "FR_foot_tip": [
+       0.008,
+       0.0,
+       -0.018
+      ],
+      "RL_foot_tip": [
+       0.008,
+       -0.0,
+       -0.005
+      ],
+      "RR_foot_tip": [
+       0.008,
+       0.0,
+       -0.005
+      ],
+      "jaw_tip": [
+       -0.044,
+       0.0,
+       -0.107
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": -0.0
+     },
+     "fail": [],
+     "base": [
+      -0.014,
+      -0.0,
+      0.012
+     ],
+     "rpy_deg": [
+      0.0,
+      -1.4,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.628,
+      "base_L": 0.1,
+      "turn_deg": 1.4,
+      "joint_range_share": 1.0
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving jaw_open",
+   "kept": true
+  },
+  {
+   "name": "tail_right",
+   "part": "tail_6_tip",
+   "plus": "tail curls to the right",
+   "minus": "tail curls to the left",
+   "toward": {
+    "tail_yaw_0": 1.0,
+    "tail_yaw_1": 1.0,
+    "tail_yaw_2": 1.0,
+    "tail_yaw_3": 1.0,
+    "tail_yaw_4": 1.0,
+    "tail_yaw_5": 1.0,
+    "tail_yaw_6": 1.0
+   },
+   "away": {
+    "tail_yaw_0": -1.0,
+    "tail_yaw_1": -1.0,
+    "tail_yaw_2": -1.0,
+    "tail_yaw_3": -1.0,
+    "tail_yaw_4": -1.0,
+    "tail_yaw_5": -1.0,
+    "tail_yaw_6": -1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "tail_6_tip": [
+       0.731,
+       0.607,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 5.158,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "tail_6_tip": [
+       0.243,
+       0.503,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "tail_6_tip": [
+       0.243,
+       -0.503,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "tail_6_tip": [
+       0.731,
+       -0.607,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 5.158,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "only mode driving tail_yaw_2",
+   "kept": true
+  },
+  {
+   "name": "tail_s_right",
+   "part": "tail_6_tip",
+   "plus": "tail base swings right, tip back left (S shape)",
+   "minus": "opposite S shape",
+   "toward": {
+    "tail_yaw_0": 0.8,
+    "tail_yaw_1": 0.5,
+    "tail_yaw_2": 0.0,
+    "tail_yaw_3": -0.5,
+    "tail_yaw_4": -0.8,
+    "tail_yaw_5": -1.0,
+    "tail_yaw_6": -1.0
+   },
+   "cards": {
+    "-1": {
+     "tips": {
+      "tail_6_tip": [
+       0.073,
+       0.129,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.805,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    },
+    "-0.5": {
+     "tips": {
+      "tail_6_tip": [
+       0.018,
+       0.065,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "0.5": {
+     "tips": {
+      "tail_6_tip": [
+       0.018,
+       -0.065,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "tips": {
+      "tail_6_tip": [
+       0.073,
+       -0.129,
+       0.0
+      ]
+     },
+     "clear": {
+      "self": 0.0184,
+      "ground": 0.017
+     },
+     "fail": [],
+     "base": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rpy_deg": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "size": {
+      "tip_L": 0.805,
+      "base_L": 0.0,
+      "turn_deg": 0.0,
+      "joint_range_share": 0.5
+     }
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "small": false,
+   "round": 0,
+   "kept_by": "coverage",
+   "kept": true
+  }
+ ],
+ "gaits": [
+  {
+   "name": "trot",
+   "cycle_s": 0.6,
+   "duty": 0.6,
+   "phase": {
+    "FL_foot_tip": 0.0,
+    "RR_foot_tip": 0.0,
+    "FR_foot_tip": 0.5,
+    "RL_foot_tip": 0.5
+   },
+   "step_L": 1.0,
+   "swing_height_L": 0.3,
+   "source": "llm",
+   "card": {
+    "forward": {
+     "advance_L": 3.131,
+     "side_L": -0.413,
+     "turn_deg": 1.9
+    },
+    "turn": {
+     "advance_L": 0.135,
+     "side_L": 0.026,
+     "turn_deg": 85.2
+    },
+    "lifts": {
+     "FL_foot_tip": 8,
+     "FR_foot_tip": 8,
+     "RL_foot_tip": 8,
+     "RR_foot_tip": 8
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": 0
+  },
+  {
+   "name": "walk",
+   "cycle_s": 1.0,
+   "duty": 0.75,
+   "phase": {
+    "FL_foot_tip": 0.0,
+    "RR_foot_tip": 0.25,
+    "FR_foot_tip": 0.5,
+    "RL_foot_tip": 0.75
+   },
+   "step_L": 0.8,
+   "swing_height_L": 0.3,
+   "source": "llm",
+   "card": {
+    "forward": {
+     "advance_L": 2.957,
+     "side_L": 0.013,
+     "turn_deg": 0.2
+    },
+    "turn": {
+     "advance_L": 0.168,
+     "side_L": -0.144,
+     "turn_deg": 72.0
+    },
+    "lifts": {
+     "FL_foot_tip": 8,
+     "FR_foot_tip": 8,
+     "RL_foot_tip": 6,
+     "RR_foot_tip": 8
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": 0
+  },
+  {
+   "name": "alternating",
+   "cycle_s": 0.3426,
+   "duty": {
+    "FL_foot_tip": 0.6,
+    "FR_foot_tip": 0.6,
+    "RL_foot_tip": 0.6,
+    "RR_foot_tip": 0.6
+   },
+   "phase": {
+    "FL_foot_tip": 0.0,
+    "FR_foot_tip": 0.5,
+    "RL_foot_tip": 0.5,
+    "RR_foot_tip": 0.0
+   },
+   "step_L": 0.25,
+   "swing_height_L": 0.08,
+   "source": "intake",
+   "card": {
+    "forward": {
+     "advance_L": 1.307,
+     "side_L": 0.028,
+     "turn_deg": -0.1
+    },
+    "turn": {
+     "advance_L": 0.128,
+     "side_L": -0.069,
+     "turn_deg": 34.3
+    },
+    "lifts": {
+     "FL_foot_tip": 10,
+     "FR_foot_tip": 12,
+     "RL_foot_tip": 12,
+     "RR_foot_tip": 10
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": null
+  },
+  {
+   "name": "crawl",
+   "cycle_s": 1.3703,
+   "duty": {
+    "FL_foot_tip": 0.8,
+    "FR_foot_tip": 0.8,
+    "RL_foot_tip": 0.8,
+    "RR_foot_tip": 0.8
+   },
+   "phase": {
+    "FL_foot_tip": 0.0,
+    "FR_foot_tip": 0.5,
+    "RL_foot_tip": 0.75,
+    "RR_foot_tip": 0.25
+   },
+   "step_L": 0.25,
+   "swing_height_L": 0.08,
+   "source": "intake",
+   "card": {
+    "forward": {
+     "advance_L": 0.879,
+     "side_L": 0.001,
+     "turn_deg": 0.0
+    },
+    "turn": {
+     "advance_L": 0.003,
+     "side_L": -0.005,
+     "turn_deg": 21.7
+    },
+    "lifts": {
+     "FL_foot_tip": 6,
+     "FR_foot_tip": 8,
+     "RL_foot_tip": 8,
+     "RR_foot_tip": 6
+    }
+   },
+   "valid": true,
+   "fail": [],
+   "round": null
+  }
+ ],
+ "rejected": {
+  "modes": [
+   {
+    "name": "trunk_yaw_left",
+    "part": "trunk",
+    "plus": "trunk yaws left: front feet go right, rear feet go left relative to base",
+    "minus": "trunk yaws right",
+    "toward": {
+     "FL_abduct": -0.12,
+     "FR_abduct": 0.1,
+     "RL_abduct": 0.1,
+     "RR_abduct": -0.12,
+     "FL_pitch": 0.05,
+     "FR_pitch": -0.08,
+     "RL_pitch": -0.08,
+     "RR_pitch": 0.05
+    },
+    "away": {
+     "FL_abduct": 0.1,
+     "FR_abduct": -0.12,
+     "RL_abduct": -0.12,
+     "RR_abduct": 0.1,
+     "FL_pitch": -0.08,
+     "FR_pitch": 0.05,
+     "RL_pitch": 0.05,
+     "RR_pitch": -0.08
+    },
+    "cards": {
+     "-1": {
+      "tips": {
+       "FL_foot_tip": [
+        0.018,
+        0.0,
+        0.001
+       ],
+       "FR_foot_tip": [
+        -0.006,
+        -0.006,
+        0.01
+       ],
+       "RL_foot_tip": [
+        0.019,
+        -0.003,
+        -0.055
+       ],
+       "RR_foot_tip": [
+        0.017,
+        0.014,
+        -0.034
+       ]
+      },
+      "clear": {
+       "self": 0.0184,
+       "ground": 0.014
+      },
+      "fail": [
+       "ground",
+       "foot_slip"
+      ],
+      "base": [
+       0.012,
+       -0.007,
+       0.025
+      ],
+      "rpy_deg": [
+       1.4,
+       5.9,
+       1.2
+      ],
+      "size": {
+       "tip_L": 0.316,
+       "base_L": 0.155,
+       "turn_deg": 5.9,
+       "joint_range_share": 0.351
+      }
+     },
+     "-0.5": {
+      "tips": {
+       "FL_foot_tip": [
+        0.008,
+        -0.001,
+        -0.001
+       ],
+       "FR_foot_tip": [
+        0.001,
+        -0.003,
+        0.002
+       ],
+       "RL_foot_tip": [
+        0.008,
+        0.0,
+        -0.027
+       ],
+       "RR_foot_tip": [
+        0.007,
+        0.003,
+        -0.019
+       ]
+      },
+      "clear": {
+       "self": 0.0184,
+       "ground": 0.0152
+      },
+      "fail": [
+       "ground",
+       "foot_slip"
+      ],
+      "base": [
+       0.004,
+       -0.002,
+       0.014
+      ],
+      "rpy_deg": [
+       0.5,
+       2.6,
+       0.4
+      ]
+     },
+     "0.5": {
+      "tips": {
+       "FL_foot_tip": [
+        -0.001,
+        -0.002,
+        -0.022
+       ],
+       "FR_foot_tip": [
+        0.006,
+        0.001,
+        -0.022
+       ],
+       "RL_foot_tip": [
+        0.001,
+        -0.002,
+        0.001
+       ],
+       "RR_foot_tip": [
+        0.001,
+        -0.005,
+        -0.003
+       ]
+      },
+      "clear": {
+       "self": 0.0184,
+       "ground": 0.0151
+      },
+      "fail": [
+       "ground",
+       "foot_slip"
+      ],
+      "base": [
+       -0.011,
+       0.003,
+       0.014
+      ],
+      "rpy_deg": [
+       -0.3,
+       -2.4,
+       -0.3
+      ]
+     },
+     "1": {
+      "tips": {
+       "FL_foot_tip": [
+        -0.004,
+        -0.009,
+        -0.039
+       ],
+       "FR_foot_tip": [
+        0.016,
+        0.01,
+        -0.037
+       ],
+       "RL_foot_tip": [
+        0.002,
+        -0.002,
+        0.006
+       ],
+       "RR_foot_tip": [
+        -0.001,
+        -0.012,
+        -0.006
+       ]
+      },
+      "clear": {
+       "self": 0.0184,
+       "ground": 0.0132
+      },
+      "fail": [
+       "ground",
+       "foot_slip"
+      ],
+      "base": [
+       -0.021,
+       0.006,
+       0.025
+      ],
+      "rpy_deg": [
+       -0.6,
+       -4.4,
+       -0.8
+      ],
+      "size": {
+       "tip_L": 0.225,
+       "base_L": 0.18,
+       "turn_deg": 4.4,
+       "joint_range_share": 0.381
+      }
+     }
+    },
+    "valid": false,
+    "fail": [
+     "ground: a part of the body went 0.011 m into the floor or the table (limit 0.0018 m): ('FL_foot', 120) (body, frame)",
+     "foot_slip: a tip in stance slid 0.0131 m or left the floor by 0.0127 m (limit 0.0037 m): the base moved too far from the planted tips"
+    ],
+    "small": false,
+    "round": 0,
+    "kept": false,
+    "why": "invalid"
+   }
+  ],
+  "gaits": []
+ },
+ "coverage": {
+  "FL_foot_tip": 0.2407,
+  "FR_foot_tip": 0.2053,
+  "RL_foot_tip": 0.2642,
+  "RR_foot_tip": 0.2341,
+  "jaw_tip": 0.3853,
+  "tail_6_tip": 0.4631
+ },
+ "coverage_valid": {
+  "FL_foot_tip": 0.2407,
+  "FR_foot_tip": 0.2053,
+  "RL_foot_tip": 0.2642,
+  "RR_foot_tip": 0.2341,
+  "jaw_tip": 0.3853,
+  "tail_6_tip": 0.4631
+ },
+ "coverage_ceiling": {
+  "FL_foot_tip": 0.8906,
+  "FR_foot_tip": 0.9111,
+  "RL_foot_tip": 0.9023,
+  "RR_foot_tip": 0.8943,
+  "jaw_tip": 0.8984,
+  "tail_6_tip": 0.908
+ },
+ "selection": [
+  {
+   "start": [
+    "trunk_lower",
+    "trunk_shift_forward",
+    "trunk_shift_left",
+    "trunk_roll_right",
+    "trunk_pitch_down",
+    "fl_tip_up",
+    "fl_tip_left",
+    "fr_tip_up",
+    "fr_tip_right",
+    "rl_tip_up",
+    "rl_tip_left",
+    "rr_tip_up",
+    "rr_tip_right",
+    "head_left",
+    "head_up",
+    "jaw_open",
+    "tail_right",
+    "tail_s_right"
+   ],
+   "mean_coverage": 0.2988
+  }
+ ],
+ "counts": {
+  "modes_final": 19,
+  "modes_valid": 18,
+  "modes_usable": 18,
+  "modes_kept": 18,
+  "gaits_llm_valid": 2,
+  "gaits_llm": 2,
+  "gaits_intake_valid": 2,
+  "gaits_intake": 2,
+  "modes_proposed": 19
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "modes": 19,
+   "modes_valid": 13,
+   "modes_small": 0,
+   "gaits": 2,
+   "gaits_valid": 2
+  },
+  {
+   "round": 1,
+   "modes": 5,
+   "modes_valid": 5,
+   "modes_small": 0,
+   "gaits": 0,
+   "gaits_valid": 0
+  }
+ ],
+ "calls": 2,
+ "cost_usd": 0.186108,
+ "model": "claude-opus-5-5",
+ "reasoning": "low",
+ "prompt_sha": "6d1d19d0e639",
+ "description_sha": "ab81c2140bd0",
+ "seconds": 80.2,
+ "made": "2026-11-16T19:58:07",
+ "method": "track/kin/primitives.py (see its docstring)"
+}

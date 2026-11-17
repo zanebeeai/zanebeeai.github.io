@@ -1,0 +1,210 @@
+<mujoco model="vanta_lizard">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast"/>
+
+  <size nkey="1"/>
+
+  <default>
+    <joint armature="0.006" damping="0.5"/>
+    <geom condim="4" friction="1.1 0.01 0.001" solref="0.008" solimp="0.95 0.99"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" friction="1 0.005 0.0001" rgba="0.32 0.34 0.36 1"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="chassis" pos="0 0 0.295">
+      <joint name="root" type="free" armature="0" damping="0"/>
+      <geom name="chassis_collision" size="0.3 0.125 0.075" type="ellipsoid" mass="3.2" rgba="0.62 0.62 0.66 1"/>
+      <geom name="fin_collision_0" size="0.006 0.0275" pos="-0.225 0 0.1275" quat="0 1 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="fin_collision_1" size="0.006 0.0275" pos="-0.148333 0 0.1275" quat="0 1 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="fin_collision_2" size="0.006 0.0275" pos="-0.0716667 0 0.1275" quat="0 1 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="fin_collision_3" size="0.006 0.0275" pos="0.005 0 0.1275" quat="0 1 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="fin_collision_4" size="0.006 0.0275" pos="0.0816667 0 0.1275" quat="0 1 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="fin_collision_5" size="0.006 0.0275" pos="0.158333 0 0.1275" quat="0 1 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="fin_collision_6" size="0.006 0.0275" pos="0.235 0 0.1275" quat="0 1 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <body name="neck" pos="0.29 0 0.012">
+        <joint name="neck_yaw" pos="0 0 0" axis="0 0 1" range="-0.8 0.8"/>
+        <geom name="surface_94" size="0.045" mass="0.12" rgba="0.85 0.35 0.3 1"/>
+        <body name="sensor_head" pos="0.045 0 0.015">
+          <joint name="neck_pitch" pos="0 0 0" axis="0 1 0" range="-0.55 0.6"/>
+          <geom name="surface_95" size="0.115 0.065 0.035" pos="0.065 0 0" type="ellipsoid" mass="0.5" rgba="0.85 0.35 0.3 1"/>
+          <site name="inspection_ray" pos="0.24 0 0.01" size="0.003" rgba="0 1 1 1"/>
+          <body name="mandible" pos="-0.005 0 -0.033">
+            <joint name="jaw" pos="0 0 0" axis="0 1 0" range="-0.05 0.5"/>
+            <geom name="surface_111" size="0.08 0.045 0.009" pos="0.12 0 0" type="box" mass="0.1" rgba="0.85 0.35 0.3 1"/>
+            <site name="mandible_tip" pos="0.12 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+          </body>
+        </body>
+      </body>
+      <body name="FL_hip" pos="0.22 0.12 -0.025">
+        <joint name="FL_abduct" pos="0 0 0" axis="1 0 0" range="-0.9 0.9"/>
+        <geom name="surface_113" size="0.04" mass="0.08" rgba="0.3 0.55 0.85 1"/>
+        <body name="FL_upper">
+          <joint name="FL_pitch" pos="0 0 0" axis="0 1 0" range="-1.6 1.1"/>
+          <geom name="surface_115" size="0.023 0.095" pos="0 0 -0.095" type="capsule" mass="0.32" rgba="0.3 0.55 0.85 1"/>
+          <body name="FL_lower" pos="0 0 -0.19">
+            <joint name="FL_knee" pos="0 0 0" axis="0 1 0" range="0.1 2.5"/>
+            <geom name="surface_121" size="0.018 0.105" pos="0 0 -0.105" type="capsule" mass="0.23" rgba="0.3 0.55 0.85 1"/>
+            <body name="FL_ankle" pos="0 0 -0.21">
+              <joint name="FL_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.8"/>
+              <geom name="surface_124" size="0.024" mass="0.035" rgba="0.3 0.55 0.85 1"/>
+              <body name="FL_foot">
+                <joint name="FL_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1 1"/>
+                <geom name="FL_sole" size="0.064 0.045 0.014" pos="0.015 0 -0.015" type="ellipsoid" friction="1.2 0.02 0.002" mass="0.12" rgba="0.3 0.55 0.85 1"/>
+                <site name="FL_contact" pos="0 0 -0.029" size="0.004" rgba="0 1 1 0"/>
+                <site name="FL_foot_tip" pos="0.015 0 -0.029" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="FR_hip" pos="0.22 -0.12 -0.025">
+        <joint name="FR_abduct" pos="0 0 0" axis="1 0 0" range="-0.9 0.9"/>
+        <geom name="surface_142" size="0.04" mass="0.08" rgba="0.35 0.7 0.4 1"/>
+        <body name="FR_upper">
+          <joint name="FR_pitch" pos="0 0 0" axis="0 1 0" range="-1.6 1.1"/>
+          <geom name="surface_144" size="0.023 0.095" pos="0 0 -0.095" type="capsule" mass="0.32" rgba="0.35 0.7 0.4 1"/>
+          <body name="FR_lower" pos="0 0 -0.19">
+            <joint name="FR_knee" pos="0 0 0" axis="0 1 0" range="0.1 2.5"/>
+            <geom name="surface_150" size="0.018 0.105" pos="0 0 -0.105" type="capsule" mass="0.23" rgba="0.35 0.7 0.4 1"/>
+            <body name="FR_ankle" pos="0 0 -0.21">
+              <joint name="FR_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.8"/>
+              <geom name="surface_153" size="0.024" mass="0.035" rgba="0.35 0.7 0.4 1"/>
+              <body name="FR_foot">
+                <joint name="FR_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1 1"/>
+                <geom name="FR_sole" size="0.064 0.045 0.014" pos="0.015 0 -0.015" type="ellipsoid" friction="1.2 0.02 0.002" mass="0.12" rgba="0.35 0.7 0.4 1"/>
+                <site name="FR_contact" pos="0 0 -0.029" size="0.004" rgba="0 1 1 0"/>
+                <site name="FR_foot_tip" pos="0.015 0 -0.029" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RL_hip" pos="-0.22 0.12 -0.025">
+        <joint name="RL_abduct" pos="0 0 0" axis="1 0 0" range="-0.9 0.9"/>
+        <geom name="surface_171" size="0.04" mass="0.08" rgba="0.85 0.65 0.25 1"/>
+        <body name="RL_upper">
+          <joint name="RL_pitch" pos="0 0 0" axis="0 1 0" range="-1.6 1.1"/>
+          <geom name="surface_173" size="0.023 0.095" pos="0 0 -0.095" type="capsule" mass="0.32" rgba="0.85 0.65 0.25 1"/>
+          <body name="RL_lower" pos="0 0 -0.19">
+            <joint name="RL_knee" pos="0 0 0" axis="0 1 0" range="0.1 2.5"/>
+            <geom name="surface_179" size="0.018 0.105" pos="0 0 -0.105" type="capsule" mass="0.23" rgba="0.85 0.65 0.25 1"/>
+            <body name="RL_ankle" pos="0 0 -0.21">
+              <joint name="RL_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.8"/>
+              <geom name="surface_182" size="0.024" mass="0.035" rgba="0.85 0.65 0.25 1"/>
+              <body name="RL_foot">
+                <joint name="RL_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1 1"/>
+                <geom name="RL_sole" size="0.064 0.045 0.014" pos="0.015 0 -0.015" type="ellipsoid" friction="1.2 0.02 0.002" mass="0.12" rgba="0.85 0.65 0.25 1"/>
+                <site name="RL_contact" pos="0 0 -0.029" size="0.004" rgba="0 1 1 0"/>
+                <site name="RL_foot_tip" pos="0.015 0 -0.029" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RR_hip" pos="-0.22 -0.12 -0.025">
+        <joint name="RR_abduct" pos="0 0 0" axis="1 0 0" range="-0.9 0.9"/>
+        <geom name="surface_200" size="0.04" mass="0.08" rgba="0.6 0.4 0.8 1"/>
+        <body name="RR_upper">
+          <joint name="RR_pitch" pos="0 0 0" axis="0 1 0" range="-1.6 1.1"/>
+          <geom name="surface_202" size="0.023 0.095" pos="0 0 -0.095" type="capsule" mass="0.32" rgba="0.6 0.4 0.8 1"/>
+          <body name="RR_lower" pos="0 0 -0.19">
+            <joint name="RR_knee" pos="0 0 0" axis="0 1 0" range="0.1 2.5"/>
+            <geom name="surface_208" size="0.018 0.105" pos="0 0 -0.105" type="capsule" mass="0.23" rgba="0.6 0.4 0.8 1"/>
+            <body name="RR_ankle" pos="0 0 -0.21">
+              <joint name="RR_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.8"/>
+              <geom name="surface_211" size="0.024" mass="0.035" rgba="0.6 0.4 0.8 1"/>
+              <body name="RR_foot">
+                <joint name="RR_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1 1"/>
+                <geom name="RR_sole" size="0.064 0.045 0.014" pos="0.015 0 -0.015" type="ellipsoid" friction="1.2 0.02 0.002" mass="0.12" rgba="0.6 0.4 0.8 1"/>
+                <site name="RR_contact" pos="0 0 -0.029" size="0.004" rgba="0 1 1 0"/>
+                <site name="RR_foot_tip" pos="0.015 0 -0.029" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="tail_0" pos="-0.3 0 0.01">
+        <joint name="tail_joint_0" pos="0 0 0" axis="0 0 1" range="-0.65 0.65"/>
+        <geom name="surface_229" size="0.03355 0.0675" pos="-0.0675 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0.1" rgba="0.3 0.75 0.75 1"/>
+        <body name="tail_1" pos="-0.135 0 0">
+          <joint name="tail_joint_1" pos="0 0 0" axis="0 1 0" range="-0.65 0.65"/>
+          <geom name="surface_233" size="0.03025 0.063" pos="-0.063 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0.08" rgba="0.3 0.75 0.75 1"/>
+          <body name="tail_2" pos="-0.126 0 0">
+            <joint name="tail_joint_2" pos="0 0 0" axis="0 0 1" range="-0.65 0.65"/>
+            <geom name="surface_237" size="0.02695 0.0585" pos="-0.0585 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0.064" rgba="0.3 0.75 0.75 1"/>
+            <body name="tail_3" pos="-0.117 0 0">
+              <joint name="tail_joint_3" pos="0 0 0" axis="0 1 0" range="-0.65 0.65"/>
+              <geom name="surface_241" size="0.02365 0.054" pos="-0.054 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0.0512" rgba="0.3 0.75 0.75 1"/>
+              <body name="tail_4" pos="-0.108 0 0">
+                <joint name="tail_joint_4" pos="0 0 0" axis="0 0 1" range="-0.65 0.65"/>
+                <geom name="surface_245" size="0.02035 0.0495" pos="-0.0495 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0.04096" rgba="0.3 0.75 0.75 1"/>
+                <body name="tail_5" pos="-0.099 0 0">
+                  <joint name="tail_joint_5" pos="0 0 0" axis="0 1 0" range="-0.65 0.65"/>
+                  <geom name="surface_249" size="0.01705 0.045" pos="-0.045 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0.032768" rgba="0.3 0.75 0.75 1"/>
+                  <body name="tail_6" pos="-0.09 0 0">
+                    <joint name="tail_joint_6" pos="0 0 0" axis="0 0 1" range="-0.65 0.65"/>
+                    <geom name="surface_253" size="0.01375 0.0405" pos="-0.0405 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0.0262144" rgba="0.3 0.75 0.75 1"/>
+                    <body name="tail_7" pos="-0.081 0 0">
+                      <joint name="tail_joint_7" pos="0 0 0" axis="0 1 0" range="-0.65 0.65"/>
+                      <geom name="surface_257" size="0.01045 0.036" pos="-0.036 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0.0209715" rgba="0.3 0.75 0.75 1"/>
+                      <geom name="tail_tip_collision" size="0.005 0.0525" pos="-0.1125 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+                      <site name="tail_7_tip" pos="-0.1125 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="chassis" body2="sensor_head"/>
+    <exclude body1="FL_lower" body2="FL_foot"/>
+    <exclude body1="FR_lower" body2="FR_foot"/>
+    <exclude body1="RL_lower" body2="RL_foot"/>
+    <exclude body1="RR_lower" body2="RR_foot"/>
+  </contact>
+
+  <actuator>
+    <general name="neck_yaw_servo" joint="neck_yaw" ctrlrange="-0.8 0.8" forcerange="-5 5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="neck_pitch_servo" joint="neck_pitch" ctrlrange="-0.55 0.6" forcerange="-5 5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="jaw_servo" joint="jaw" ctrlrange="-0.05 0.5" forcerange="-1.5 1.5" biastype="affine" gainprm="20" biasprm="0 -20 -0.6"/>
+    <general name="FL_abduct_servo" joint="FL_abduct" ctrlrange="-0.9 0.9" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="FL_pitch_servo" joint="FL_pitch" ctrlrange="-1.6 1.1" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="FL_knee_servo" joint="FL_knee" ctrlrange="0.1 2.5" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="FL_ankle_pitch_servo" joint="FL_ankle_pitch" ctrlrange="-1.8 1.8" forcerange="-9 9" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="FL_ankle_roll_servo" joint="FL_ankle_roll" ctrlrange="-1 1" forcerange="-9 9" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="FR_abduct_servo" joint="FR_abduct" ctrlrange="-0.9 0.9" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="FR_pitch_servo" joint="FR_pitch" ctrlrange="-1.6 1.1" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="FR_knee_servo" joint="FR_knee" ctrlrange="0.1 2.5" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="FR_ankle_pitch_servo" joint="FR_ankle_pitch" ctrlrange="-1.8 1.8" forcerange="-9 9" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="FR_ankle_roll_servo" joint="FR_ankle_roll" ctrlrange="-1 1" forcerange="-9 9" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="RL_abduct_servo" joint="RL_abduct" ctrlrange="-0.9 0.9" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="RL_pitch_servo" joint="RL_pitch" ctrlrange="-1.6 1.1" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="RL_knee_servo" joint="RL_knee" ctrlrange="0.1 2.5" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="RL_ankle_pitch_servo" joint="RL_ankle_pitch" ctrlrange="-1.8 1.8" forcerange="-9 9" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="RL_ankle_roll_servo" joint="RL_ankle_roll" ctrlrange="-1 1" forcerange="-9 9" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="RR_abduct_servo" joint="RR_abduct" ctrlrange="-0.9 0.9" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="RR_pitch_servo" joint="RR_pitch" ctrlrange="-1.6 1.1" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="RR_knee_servo" joint="RR_knee" ctrlrange="0.1 2.5" forcerange="-24 24" biastype="affine" gainprm="180" biasprm="0 -180 -5"/>
+    <general name="RR_ankle_pitch_servo" joint="RR_ankle_pitch" ctrlrange="-1.8 1.8" forcerange="-9 9" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="RR_ankle_roll_servo" joint="RR_ankle_roll" ctrlrange="-1 1" forcerange="-9 9" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="tail_joint_0_servo" joint="tail_joint_0" ctrlrange="-0.65 0.65" forcerange="-4 4" biastype="affine" gainprm="35" biasprm="0 -35 -1.2"/>
+    <general name="tail_joint_1_servo" joint="tail_joint_1" ctrlrange="-0.65 0.65" forcerange="-4 4" biastype="affine" gainprm="35" biasprm="0 -35 -1.2"/>
+    <general name="tail_joint_2_servo" joint="tail_joint_2" ctrlrange="-0.65 0.65" forcerange="-4 4" biastype="affine" gainprm="35" biasprm="0 -35 -1.2"/>
+    <general name="tail_joint_3_servo" joint="tail_joint_3" ctrlrange="-0.65 0.65" forcerange="-4 4" biastype="affine" gainprm="35" biasprm="0 -35 -1.2"/>
+    <general name="tail_joint_4_servo" joint="tail_joint_4" ctrlrange="-0.65 0.65" forcerange="-4 4" biastype="affine" gainprm="35" biasprm="0 -35 -1.2"/>
+    <general name="tail_joint_5_servo" joint="tail_joint_5" ctrlrange="-0.65 0.65" forcerange="-4 4" biastype="affine" gainprm="35" biasprm="0 -35 -1.2"/>
+    <general name="tail_joint_6_servo" joint="tail_joint_6" ctrlrange="-0.65 0.65" forcerange="-4 4" biastype="affine" gainprm="35" biasprm="0 -35 -1.2"/>
+    <general name="tail_joint_7_servo" joint="tail_joint_7" ctrlrange="-0.65 0.65" forcerange="-4 4" biastype="affine" gainprm="35" biasprm="0 -35 -1.2"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.315918 1 0 0 0 0 -0.08 0 0.4 -0.78 1.56 -0.78 -0.4 -0.4 -0.78 1.56 -0.78 0.4 0.4 -0.78 1.56 -0.78 -0.4 -0.4 -0.78 1.56 -0.78 0.4 0.18 0.04 0.18 0.04 0.18 0.04 0.18 0.04" ctrl="0 -0.08 0 0.4 -0.78 1.56 -0.78 -0.4 -0.4 -0.78 1.56 -0.78 0.4 0.4 -0.78 1.56 -0.78 -0.4 -0.4 -0.78 1.56 -0.78 0.4 0.18 0.04 0.18 0.04 0.18 0.04 0.18 0.04"/>
+  </keyframe>
+</mujoco>

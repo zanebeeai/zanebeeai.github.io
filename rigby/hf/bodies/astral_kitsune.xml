@@ -1,0 +1,436 @@
+<mujoco model="kitsune-9">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast"/>
+
+  <size nkey="1"/>
+
+  <visual>
+    <global offwidth="960" offheight="640"/>
+    <headlight ambient="0.35 0.35 0.4" diffuse="0.6 0.65 0.7"/>
+  </visual>
+
+  <default>
+    <joint armature="0.006" damping="0.5"/>
+    <geom condim="4" friction="1.1 0.01 0.001" solref="0.008" solimp="0.95 0.99"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" friction="1 0.005 0.0001" rgba="0.32 0.34 0.36 1"/>
+    <light pos="1 -3 5" dir="0 0 -1" ambient="0.3 0.32 0.35" diffuse="0.8 0.9 1"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="chassis" pos="0 0 0.32">
+      <inertial pos="-0.00554348 0 0.00713043" quat="0 0.734451 0 0.678662" mass="2.3" diaginertia="0.0497071 0.0483915 0.00858784"/>
+      <joint name="root" type="free" armature="0" damping="0"/>
+      <geom name="chest_collision" size="0.16 0.112 0.1" pos="0.105 0 -0.005" type="ellipsoid" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="waist_collision" size="0.14 0.076 0.06" pos="-0.075 0 0.022" type="ellipsoid" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="pelvis_collision" size="0.105 0.115 0.085" pos="-0.2 0 0.018" type="ellipsoid" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <body name="neck" pos="0.18 0 0.055">
+        <inertial pos="0.05 0 0.06" quat="0.340425 0 -0.940272 0" mass="0.25" diaginertia="0.000997138 0.000997138 0.000171658"/>
+        <joint name="neck_pitch" pos="0 0 0" axis="0 1 0" range="-0.4 0.45"/>
+        <geom name="neck_core" size="0.038 0.0781025" pos="0.05 0 0.06" quat="0.340425 0 -0.940272 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <body name="head" pos="0.105 0 0.135">
+          <inertial pos="0.030963 0 0.000407407" quat="0.448322 0.546815 0.546815 0.448322" mass="0.27" diaginertia="0.000701659 0.000699496 0.000287409"/>
+          <joint name="head_yaw" pos="0 0 0" axis="0 0 1" range="-0.6 0.6"/>
+          <geom name="head_collision" size="0.08 0.055 0.052" pos="0.02 0 0.005" type="ellipsoid" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <geom name="muzzle_collision" size="0.019 0.0540093" pos="0.094 0 -0.026" quat="0.713623 0 -0.70053 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <body name="ear_-1" pos="-0.028 -0.042 0.048">
+            <inertial pos="-0.00828883 -0.00424515 0.0468811" quat="0.706735 -0.0128144 -0.0878956 0.70188" mass="0.035" diaginertia="5.06529e-05 4.68343e-05 1.26226e-05"/>
+            <joint name="ear_fold_-1" pos="0 0 0" axis="0 1 0" range="-0.8 0.25"/>
+            <geom name="ear_collision_-1" size="0.029581 0.0603945" pos="-0.0145746 -0.00893729 0.0860578" quat="0.706735 -0.0128144 -0.0878956 0.70188" type="capsule" mass="0" rgba="0.85 0.35 0.3 1"/>
+            <site name="ear_-1_tip" pos="-0.0145746 -0.00893729 0.0860578" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+          </body>
+          <body name="ear_1" pos="-0.028 0.042 0.048">
+            <inertial pos="-0.00828883 0.00501699 0.0468811" quat="0.701096 -0.0944707 -0.00592937 0.706756" mass="0.035" diaginertia="5.08201e-05 4.69838e-05 1.26055e-05"/>
+            <joint name="ear_fold_1" pos="0 0 0" axis="0 1 0" range="-0.8 0.25"/>
+            <geom name="ear_collision_1" size="0.0295985 0.060775" pos="-0.0145335 0.0105265 0.0858126" quat="0.701096 -0.0944707 -0.00592937 0.706756" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+            <site name="ear_1_tip" pos="-0.0145335 0.0105265 0.0858126" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+          </body>
+        </body>
+      </body>
+      <body name="tail_0_mount" pos="-0.29 -0.0903305 0.052447" quat="0.771246 0.636537 0 0">
+        <inertial pos="0 0 0" mass="0.018" diaginertia="1.62e-06 1.62e-06 1.62e-06"/>
+        <joint name="tail_0_spread" pos="0 0 0" axis="1 0 0" range="-0.28 0.28"/>
+        <geom name="surface_132" size="0.015" mass="0" rgba="0.35 0.7 0.4 1"/>
+        <body name="tail_0_0">
+          <inertial pos="-0.109 0 0" quat="0.707107 0 0.707107 0" mass="0.032" diaginertia="0.000115065 0.000115065 1.90852e-06"/>
+          <joint name="tail_0_lift" pos="0 0 0" axis="0 1 0" range="0.35 1.2"/>
+          <geom name="tail_core_0_0" size="0.011 0.096" pos="-0.109 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+          <body name="tail_0_1" pos="-0.22 0 0">
+            <inertial pos="-0.119 0 0" quat="0.707107 0 0.707107 0" mass="0.027" diaginertia="0.00012131 0.00012131 2.60317e-06"/>
+            <joint name="tail_0_bend" pos="0 0 0" axis="0 1 0" range="-0.15 0.7"/>
+            <geom name="tail_core_0_1" size="0.014 0.106" pos="-0.119 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+            <body name="tail_0_2" pos="-0.24 0 0">
+              <inertial pos="-0.124 0 0" quat="0.707107 0 0.707107 0" mass="0.019" diaginertia="8.82626e-05 8.82626e-05 9.39235e-07"/>
+              <joint name="tail_0_tip" pos="0 0 0" axis="0 1 0" range="-0.2 0.8"/>
+              <geom name="tail_core_0_2" size="0.01 0.111" pos="-0.124 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+              <site name="tail_0_2_tip" pos="-0.124 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="tail_1_mount" pos="-0.29 -0.0791073 0.0819684" quat="0.869059 0.494709 0 0">
+        <inertial pos="0 0 0" mass="0.018" diaginertia="1.62e-06 1.62e-06 1.62e-06"/>
+        <joint name="tail_1_spread" pos="0 0 0" axis="1 0 0" range="-0.28 0.28"/>
+        <geom name="surface_220" size="0.015" mass="0" rgba="0.85 0.65 0.25 1"/>
+        <body name="tail_1_0">
+          <inertial pos="-0.109 0 0" quat="0.707107 0 0.707107 0" mass="0.032" diaginertia="0.000115065 0.000115065 1.90852e-06"/>
+          <joint name="tail_1_lift" pos="0 0 0" axis="0 1 0" range="0.35 1.2"/>
+          <geom name="tail_core_1_0" size="0.011 0.096" pos="-0.109 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+          <body name="tail_1_1" pos="-0.22 0 0">
+            <inertial pos="-0.119 0 0" quat="0.707107 0 0.707107 0" mass="0.027" diaginertia="0.00012131 0.00012131 2.60317e-06"/>
+            <joint name="tail_1_bend" pos="0 0 0" axis="0 1 0" range="-0.15 0.7"/>
+            <geom name="tail_core_1_1" size="0.014 0.106" pos="-0.119 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+            <body name="tail_1_2" pos="-0.24 0 0">
+              <inertial pos="-0.124 0 0" quat="0.707107 0 0.707107 0" mass="0.019" diaginertia="8.82626e-05 8.82626e-05 9.39235e-07"/>
+              <joint name="tail_1_tip" pos="0 0 0" axis="0 1 0" range="-0.2 0.8"/>
+              <geom name="tail_core_1_2" size="0.01 0.111" pos="-0.124 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+              <site name="tail_1_2_tip" pos="-0.124 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="tail_2_mount" pos="-0.29 -0.0585614 0.105955" quat="0.941075 0.338197 0 0">
+        <inertial pos="0 0 0" mass="0.018" diaginertia="1.62e-06 1.62e-06 1.62e-06"/>
+        <joint name="tail_2_spread" pos="0 0 0" axis="1 0 0" range="-0.28 0.28"/>
+        <geom name="surface_308" size="0.015" mass="0" rgba="0.6 0.4 0.8 1"/>
+        <body name="tail_2_0">
+          <inertial pos="-0.109 0 0" quat="0.707107 0 0.707107 0" mass="0.032" diaginertia="0.000115065 0.000115065 1.90852e-06"/>
+          <joint name="tail_2_lift" pos="0 0 0" axis="0 1 0" range="0.35 1.2"/>
+          <geom name="tail_core_2_0" size="0.011 0.096" pos="-0.109 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+          <body name="tail_2_1" pos="-0.22 0 0">
+            <inertial pos="-0.119 0 0" quat="0.707107 0 0.707107 0" mass="0.027" diaginertia="0.00012131 0.00012131 2.60317e-06"/>
+            <joint name="tail_2_bend" pos="0 0 0" axis="0 1 0" range="-0.15 0.7"/>
+            <geom name="tail_core_2_1" size="0.014 0.106" pos="-0.119 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+            <body name="tail_2_2" pos="-0.24 0 0">
+              <inertial pos="-0.124 0 0" quat="0.707107 0 0.707107 0" mass="0.019" diaginertia="8.82626e-05 8.82626e-05 9.39235e-07"/>
+              <joint name="tail_2_tip" pos="0 0 0" axis="0 1 0" range="-0.2 0.8"/>
+              <geom name="tail_core_2_2" size="0.01 0.111" pos="-0.124 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+              <site name="tail_2_2_tip" pos="-0.124 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="tail_3_mount" pos="-0.29 -0.0311141 0.121579" quat="0.985159 0.171646 0 0">
+        <inertial pos="0 0 0" mass="0.018" diaginertia="1.62e-06 1.62e-06 1.62e-06"/>
+        <joint name="tail_3_spread" pos="0 0 0" axis="1 0 0" range="-0.28 0.28"/>
+        <geom name="surface_396" size="0.015" mass="0" rgba="0.3 0.75 0.75 1"/>
+        <body name="tail_3_0">
+          <inertial pos="-0.109 0 0" quat="0.707107 0 0.707107 0" mass="0.032" diaginertia="0.000115065 0.000115065 1.90852e-06"/>
+          <joint name="tail_3_lift" pos="0 0 0" axis="0 1 0" range="0.35 1.2"/>
+          <geom name="tail_core_3_0" size="0.011 0.096" pos="-0.109 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+          <body name="tail_3_1" pos="-0.22 0 0">
+            <inertial pos="-0.119 0 0" quat="0.707107 0 0.707107 0" mass="0.027" diaginertia="0.00012131 0.00012131 2.60317e-06"/>
+            <joint name="tail_3_bend" pos="0 0 0" axis="0 1 0" range="-0.15 0.7"/>
+            <geom name="tail_core_3_1" size="0.014 0.106" pos="-0.119 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+            <body name="tail_3_2" pos="-0.24 0 0">
+              <inertial pos="-0.124 0 0" quat="0.707107 0 0.707107 0" mass="0.019" diaginertia="8.82626e-05 8.82626e-05 9.39235e-07"/>
+              <joint name="tail_3_tip" pos="0 0 0" axis="0 1 0" range="-0.2 0.8"/>
+              <geom name="tail_core_3_2" size="0.01 0.111" pos="-0.124 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+              <site name="tail_3_2_tip" pos="-0.124 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="tail_4_mount" pos="-0.29 0 0.127">
+        <inertial pos="0 0 0" mass="0.018" diaginertia="1.62e-06 1.62e-06 1.62e-06"/>
+        <joint name="tail_4_spread" pos="0 0 0" axis="1 0 0" range="-0.28 0.28"/>
+        <geom name="surface_484" size="0.015" mass="0" rgba="0.8 0.45 0.65 1"/>
+        <body name="tail_4_0">
+          <inertial pos="-0.109 0 0" quat="0.707107 0 0.707107 0" mass="0.032" diaginertia="0.000115065 0.000115065 1.90852e-06"/>
+          <joint name="tail_4_lift" pos="0 0 0" axis="0 1 0" range="0.35 1.2"/>
+          <geom name="tail_core_4_0" size="0.011 0.096" pos="-0.109 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+          <body name="tail_4_1" pos="-0.22 0 0">
+            <inertial pos="-0.119 0 0" quat="0.707107 0 0.707107 0" mass="0.027" diaginertia="0.00012131 0.00012131 2.60317e-06"/>
+            <joint name="tail_4_bend" pos="0 0 0" axis="0 1 0" range="-0.15 0.7"/>
+            <geom name="tail_core_4_1" size="0.014 0.106" pos="-0.119 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+            <body name="tail_4_2" pos="-0.24 0 0">
+              <inertial pos="-0.124 0 0" quat="0.707107 0 0.707107 0" mass="0.019" diaginertia="8.82626e-05 8.82626e-05 9.39235e-07"/>
+              <joint name="tail_4_tip" pos="0 0 0" axis="0 1 0" range="-0.2 0.8"/>
+              <geom name="tail_core_4_2" size="0.01 0.111" pos="-0.124 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+              <site name="tail_4_2_tip" pos="-0.124 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="tail_5_mount" pos="-0.29 0.0311141 0.121579" quat="0.985159 -0.171646 0 0">
+        <inertial pos="0 0 0" mass="0.018" diaginertia="1.62e-06 1.62e-06 1.62e-06"/>
+        <joint name="tail_5_spread" pos="0 0 0" axis="1 0 0" range="-0.28 0.28"/>
+        <geom name="surface_572" size="0.015" mass="0" rgba="0.6 0.6 0.35 1"/>
+        <body name="tail_5_0">
+          <inertial pos="-0.109 0 0" quat="0.707107 0 0.707107 0" mass="0.032" diaginertia="0.000115065 0.000115065 1.90852e-06"/>
+          <joint name="tail_5_lift" pos="0 0 0" axis="0 1 0" range="0.35 1.2"/>
+          <geom name="tail_core_5_0" size="0.011 0.096" pos="-0.109 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+          <body name="tail_5_1" pos="-0.22 0 0">
+            <inertial pos="-0.119 0 0" quat="0.707107 0 0.707107 0" mass="0.027" diaginertia="0.00012131 0.00012131 2.60317e-06"/>
+            <joint name="tail_5_bend" pos="0 0 0" axis="0 1 0" range="-0.15 0.7"/>
+            <geom name="tail_core_5_1" size="0.014 0.106" pos="-0.119 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+            <body name="tail_5_2" pos="-0.24 0 0">
+              <inertial pos="-0.124 0 0" quat="0.707107 0 0.707107 0" mass="0.019" diaginertia="8.82626e-05 8.82626e-05 9.39235e-07"/>
+              <joint name="tail_5_tip" pos="0 0 0" axis="0 1 0" range="-0.2 0.8"/>
+              <geom name="tail_core_5_2" size="0.01 0.111" pos="-0.124 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+              <site name="tail_5_2_tip" pos="-0.124 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="tail_6_mount" pos="-0.29 0.0585614 0.105955" quat="0.941075 -0.338197 0 0">
+        <inertial pos="0 0 0" mass="0.018" diaginertia="1.62e-06 1.62e-06 1.62e-06"/>
+        <joint name="tail_6_spread" pos="0 0 0" axis="1 0 0" range="-0.28 0.28"/>
+        <geom name="surface_660" size="0.015" mass="0" rgba="0.85 0.35 0.3 1"/>
+        <body name="tail_6_0">
+          <inertial pos="-0.109 0 0" quat="0.707107 0 0.707107 0" mass="0.032" diaginertia="0.000115065 0.000115065 1.90852e-06"/>
+          <joint name="tail_6_lift" pos="0 0 0" axis="0 1 0" range="0.35 1.2"/>
+          <geom name="tail_core_6_0" size="0.011 0.096" pos="-0.109 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.85 0.35 0.3 1"/>
+          <body name="tail_6_1" pos="-0.22 0 0">
+            <inertial pos="-0.119 0 0" quat="0.707107 0 0.707107 0" mass="0.027" diaginertia="0.00012131 0.00012131 2.60317e-06"/>
+            <joint name="tail_6_bend" pos="0 0 0" axis="0 1 0" range="-0.15 0.7"/>
+            <geom name="tail_core_6_1" size="0.014 0.106" pos="-0.119 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.85 0.35 0.3 1"/>
+            <body name="tail_6_2" pos="-0.24 0 0">
+              <inertial pos="-0.124 0 0" quat="0.707107 0 0.707107 0" mass="0.019" diaginertia="8.82626e-05 8.82626e-05 9.39235e-07"/>
+              <joint name="tail_6_tip" pos="0 0 0" axis="0 1 0" range="-0.2 0.8"/>
+              <geom name="tail_core_6_2" size="0.01 0.111" pos="-0.124 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.85 0.35 0.3 1"/>
+              <site name="tail_6_2_tip" pos="-0.124 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="tail_7_mount" pos="-0.29 0.0791073 0.0819684" quat="0.869059 -0.494709 0 0">
+        <inertial pos="0 0 0" mass="0.018" diaginertia="1.62e-06 1.62e-06 1.62e-06"/>
+        <joint name="tail_7_spread" pos="0 0 0" axis="1 0 0" range="-0.28 0.28"/>
+        <geom name="surface_748" size="0.015" mass="0" rgba="0.3 0.55 0.85 1"/>
+        <body name="tail_7_0">
+          <inertial pos="-0.109 0 0" quat="0.707107 0 0.707107 0" mass="0.032" diaginertia="0.000115065 0.000115065 1.90852e-06"/>
+          <joint name="tail_7_lift" pos="0 0 0" axis="0 1 0" range="0.35 1.2"/>
+          <geom name="tail_core_7_0" size="0.011 0.096" pos="-0.109 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+          <body name="tail_7_1" pos="-0.22 0 0">
+            <inertial pos="-0.119 0 0" quat="0.707107 0 0.707107 0" mass="0.027" diaginertia="0.00012131 0.00012131 2.60317e-06"/>
+            <joint name="tail_7_bend" pos="0 0 0" axis="0 1 0" range="-0.15 0.7"/>
+            <geom name="tail_core_7_1" size="0.014 0.106" pos="-0.119 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+            <body name="tail_7_2" pos="-0.24 0 0">
+              <inertial pos="-0.124 0 0" quat="0.707107 0 0.707107 0" mass="0.019" diaginertia="8.82626e-05 8.82626e-05 9.39235e-07"/>
+              <joint name="tail_7_tip" pos="0 0 0" axis="0 1 0" range="-0.2 0.8"/>
+              <geom name="tail_core_7_2" size="0.01 0.111" pos="-0.124 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+              <site name="tail_7_2_tip" pos="-0.124 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="tail_8_mount" pos="-0.29 0.0903305 0.052447" quat="0.771246 -0.636537 0 0">
+        <inertial pos="0 0 0" mass="0.018" diaginertia="1.62e-06 1.62e-06 1.62e-06"/>
+        <joint name="tail_8_spread" pos="0 0 0" axis="1 0 0" range="-0.28 0.28"/>
+        <geom name="surface_836" size="0.015" mass="0" rgba="0.35 0.7 0.4 1"/>
+        <body name="tail_8_0">
+          <inertial pos="-0.109 0 0" quat="0.707107 0 0.707107 0" mass="0.032" diaginertia="0.000115065 0.000115065 1.90852e-06"/>
+          <joint name="tail_8_lift" pos="0 0 0" axis="0 1 0" range="0.35 1.2"/>
+          <geom name="tail_core_8_0" size="0.011 0.096" pos="-0.109 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+          <body name="tail_8_1" pos="-0.22 0 0">
+            <inertial pos="-0.119 0 0" quat="0.707107 0 0.707107 0" mass="0.027" diaginertia="0.00012131 0.00012131 2.60317e-06"/>
+            <joint name="tail_8_bend" pos="0 0 0" axis="0 1 0" range="-0.15 0.7"/>
+            <geom name="tail_core_8_1" size="0.014 0.106" pos="-0.119 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+            <body name="tail_8_2" pos="-0.24 0 0">
+              <inertial pos="-0.124 0 0" quat="0.707107 0 0.707107 0" mass="0.019" diaginertia="8.82626e-05 8.82626e-05 9.39235e-07"/>
+              <joint name="tail_8_tip" pos="0 0 0" axis="0 1 0" range="-0.2 0.8"/>
+              <geom name="tail_core_8_2" size="0.01 0.111" pos="-0.124 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+              <site name="tail_8_2_tip" pos="-0.124 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="FL_hip" pos="0.2 0.115 -0.025">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.1142e-05 2.1142e-05 2.1142e-05"/>
+        <joint name="FL_abduct" pos="0 0 0" axis="1 0 0" range="-1.15 1.15"/>
+        <geom name="surface_924" size="0.031" mass="0" rgba="0.85 0.65 0.25 1"/>
+        <body name="FL_upper">
+          <inertial pos="0 0 -0.08" mass="0.16" diaginertia="0.000475204 0.000475204 2.80905e-05"/>
+          <joint name="FL_pitch" pos="0 0 0" axis="0 1 0" range="-2.2 2.2"/>
+          <geom name="surface_925" size="0.019 0.08" pos="0 0 -0.08" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+          <body name="FL_lower" pos="0 0 -0.16">
+            <inertial pos="0 0 -0.09" mass="0.11" diaginertia="0.000362547 0.000362547 9.13171e-06"/>
+            <joint name="FL_knee" pos="0 0 0" axis="0 1 0" range="-2.85 -0.015"/>
+            <geom name="surface_928" size="0.013 0.09" pos="0 0 -0.09" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+            <body name="FL_ankle" pos="0 0 -0.18">
+              <inertial pos="0 0 -0.0175" mass="0.045" diaginertia="1.24589e-05 1.24589e-05 3.55061e-06"/>
+              <joint name="FL_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2.8 2.8"/>
+              <geom name="surface_930" size="0.013 0.0175" pos="0 0 -0.0175" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+              <body name="FL_foot" pos="0 0 -0.035">
+                <inertial pos="0.0120698 0 -0.0127442" quat="0 0.713214 0 0.700946" mass="0.086" diaginertia="9.42536e-05 6.73577e-05 3.54627e-05"/>
+                <joint name="FL_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.3 1.3"/>
+                <geom name="FL_sole" size="0.044 0.033 0.0125" pos="0.009 0 -0.0125" type="box" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <geom name="FL_claw_-0.023" size="0.004 0.0155242" pos="0.053 -0.023 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <geom name="FL_claw_0" size="0.004 0.0155242" pos="0.053 0 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <geom name="FL_claw_0.023" size="0.004 0.0155242" pos="0.053 0.023 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <site name="FL_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="FL_foot_tip" pos="-0.035 -0.033 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="FR_hip" pos="0.2 -0.115 -0.025">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.1142e-05 2.1142e-05 2.1142e-05"/>
+        <joint name="FR_abduct" pos="0 0 0" axis="1 0 0" range="-1.15 1.15"/>
+        <geom name="surface_1012" size="0.031" mass="0" rgba="0.6 0.4 0.8 1"/>
+        <body name="FR_upper">
+          <inertial pos="0 0 -0.08" mass="0.16" diaginertia="0.000475204 0.000475204 2.80905e-05"/>
+          <joint name="FR_pitch" pos="0 0 0" axis="0 1 0" range="-2.2 2.2"/>
+          <geom name="surface_1013" size="0.019 0.08" pos="0 0 -0.08" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+          <body name="FR_lower" pos="0 0 -0.16">
+            <inertial pos="0 0 -0.09" mass="0.11" diaginertia="0.000362547 0.000362547 9.13171e-06"/>
+            <joint name="FR_knee" pos="0 0 0" axis="0 1 0" range="-2.85 -0.015"/>
+            <geom name="surface_1016" size="0.013 0.09" pos="0 0 -0.09" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+            <body name="FR_ankle" pos="0 0 -0.18">
+              <inertial pos="0 0 -0.0175" mass="0.045" diaginertia="1.24589e-05 1.24589e-05 3.55061e-06"/>
+              <joint name="FR_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2.8 2.8"/>
+              <geom name="surface_1018" size="0.013 0.0175" pos="0 0 -0.0175" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+              <body name="FR_foot" pos="0 0 -0.035">
+                <inertial pos="0.0120698 0 -0.0127442" quat="0 0.713214 0 0.700946" mass="0.086" diaginertia="9.42536e-05 6.73577e-05 3.54627e-05"/>
+                <joint name="FR_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.3 1.3"/>
+                <geom name="FR_sole" size="0.044 0.033 0.0125" pos="0.009 0 -0.0125" type="box" mass="0" rgba="0.6 0.4 0.8 1"/>
+                <geom name="FR_claw_-0.023" size="0.004 0.0155242" pos="0.053 -0.023 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+                <geom name="FR_claw_0" size="0.004 0.0155242" pos="0.053 0 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+                <geom name="FR_claw_0.023" size="0.004 0.0155242" pos="0.053 0.023 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+                <site name="FR_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="FR_foot_tip" pos="-0.035 0.033 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RL_hip" pos="-0.2 0.14 -0.025">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.1142e-05 2.1142e-05 2.1142e-05"/>
+        <joint name="RL_abduct" pos="0 0 0" axis="1 0 0" range="-1.15 1.15"/>
+        <geom name="surface_1100" size="0.031" mass="0" rgba="0.3 0.75 0.75 1"/>
+        <body name="RL_upper">
+          <inertial pos="0 0 -0.09" mass="0.23" diaginertia="0.000900833 0.000900833 6.42403e-05"/>
+          <joint name="RL_pitch" pos="0 0 0" axis="0 1 0" range="-2.2 2.2"/>
+          <geom name="surface_1101" size="0.024 0.09" pos="0 0 -0.09" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+          <body name="RL_lower" pos="0 0 -0.18">
+            <inertial pos="0 0 -0.095" mass="0.11" diaginertia="0.000399645 0.000399645 9.13959e-06"/>
+            <joint name="RL_knee" pos="0 0 0" axis="0 1 0" range="0.015 2.85"/>
+            <geom name="surface_1104" size="0.013 0.095" pos="0 0 -0.095" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+            <body name="RL_ankle" pos="0 0 -0.19">
+              <inertial pos="0 0 -0.0375" mass="0.045" diaginertia="3.42175e-05 3.42175e-05 3.65973e-06"/>
+              <joint name="RL_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+              <geom name="surface_1106" size="0.013 0.0375" pos="0 0 -0.0375" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+              <body name="RL_foot" pos="0 0 -0.075">
+                <inertial pos="0.0120698 0 -0.0127442" quat="0 0.713214 0 0.700946" mass="0.086" diaginertia="9.42536e-05 6.73577e-05 3.54627e-05"/>
+                <joint name="RL_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.3 1.3"/>
+                <geom name="RL_sole" size="0.044 0.033 0.0125" pos="0.009 0 -0.0125" type="box" mass="0" rgba="0.3 0.75 0.75 1"/>
+                <geom name="RL_claw_-0.023" size="0.004 0.0155242" pos="0.053 -0.023 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+                <geom name="RL_claw_0" size="0.004 0.0155242" pos="0.053 0 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+                <geom name="RL_claw_0.023" size="0.004 0.0155242" pos="0.053 0.023 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+                <site name="RL_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="RL_foot_tip" pos="-0.035 -0.033 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RR_hip" pos="-0.2 -0.14 -0.025">
+        <inertial pos="0 0 0" mass="0.055" diaginertia="2.1142e-05 2.1142e-05 2.1142e-05"/>
+        <joint name="RR_abduct" pos="0 0 0" axis="1 0 0" range="-1.15 1.15"/>
+        <geom name="surface_1188" size="0.031" mass="0" rgba="0.8 0.45 0.65 1"/>
+        <body name="RR_upper">
+          <inertial pos="0 0 -0.09" mass="0.23" diaginertia="0.000900833 0.000900833 6.42403e-05"/>
+          <joint name="RR_pitch" pos="0 0 0" axis="0 1 0" range="-2.2 2.2"/>
+          <geom name="surface_1189" size="0.024 0.09" pos="0 0 -0.09" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+          <body name="RR_lower" pos="0 0 -0.18">
+            <inertial pos="0 0 -0.095" mass="0.11" diaginertia="0.000399645 0.000399645 9.13959e-06"/>
+            <joint name="RR_knee" pos="0 0 0" axis="0 1 0" range="0.015 2.85"/>
+            <geom name="surface_1192" size="0.013 0.095" pos="0 0 -0.095" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+            <body name="RR_ankle" pos="0 0 -0.19">
+              <inertial pos="0 0 -0.0375" mass="0.045" diaginertia="3.42175e-05 3.42175e-05 3.65973e-06"/>
+              <joint name="RR_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-2.1 2.1"/>
+              <geom name="surface_1194" size="0.013 0.0375" pos="0 0 -0.0375" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+              <body name="RR_foot" pos="0 0 -0.075">
+                <inertial pos="0.0120698 0 -0.0127442" quat="0 0.713214 0 0.700946" mass="0.086" diaginertia="9.42536e-05 6.73577e-05 3.54627e-05"/>
+                <joint name="RR_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.3 1.3"/>
+                <geom name="RR_sole" size="0.044 0.033 0.0125" pos="0.009 0 -0.0125" type="box" mass="0" rgba="0.8 0.45 0.65 1"/>
+                <geom name="RR_claw_-0.023" size="0.004 0.0155242" pos="0.053 -0.023 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+                <geom name="RR_claw_0" size="0.004 0.0155242" pos="0.053 0 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+                <geom name="RR_claw_0.023" size="0.004 0.0155242" pos="0.053 0.023 -0.016" quat="0.792989 0 -0.609236 0" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+                <site name="RR_contact" pos="0 0 -0.025" size="0.003" rgba="0 1 1 0"/>
+                <site name="RR_foot_tip" pos="-0.035 -0.033 -0.025" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="FL_lower" body2="FL_foot"/>
+    <exclude body1="FR_lower" body2="FR_foot"/>
+    <exclude body1="RL_lower" body2="RL_foot"/>
+    <exclude body1="RR_lower" body2="RR_foot"/>
+  </contact>
+
+  <actuator>
+    <general name="neck_pitch_servo" joint="neck_pitch" ctrlrange="-0.4 0.45" forcerange="-7 7" biastype="affine" gainprm="100" biasprm="0 -100 -3"/>
+    <general name="head_yaw_servo" joint="head_yaw" ctrlrange="-0.6 0.6" forcerange="-4 4" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+    <general name="ear_fold_-1_servo" joint="ear_fold_-1" ctrlrange="-0.8 0.25" forcerange="-1.2 1.2" biastype="affine" gainprm="30" biasprm="0 -30 -1"/>
+    <general name="ear_fold_1_servo" joint="ear_fold_1" ctrlrange="-0.8 0.25" forcerange="-1.2 1.2" biastype="affine" gainprm="30" biasprm="0 -30 -1"/>
+    <general name="tail_0_spread_servo" joint="tail_0_spread" ctrlrange="-0.28 0.28" forcerange="-2.5 2.5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="tail_0_lift_servo" joint="tail_0_lift" ctrlrange="0.35 1.2" forcerange="-3 3" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_0_bend_servo" joint="tail_0_bend" ctrlrange="-0.15 0.7" forcerange="-2 2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_0_tip_servo" joint="tail_0_tip" ctrlrange="-0.2 0.8" forcerange="-1.2 1.2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_1_spread_servo" joint="tail_1_spread" ctrlrange="-0.28 0.28" forcerange="-2.5 2.5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="tail_1_lift_servo" joint="tail_1_lift" ctrlrange="0.35 1.2" forcerange="-3 3" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_1_bend_servo" joint="tail_1_bend" ctrlrange="-0.15 0.7" forcerange="-2 2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_1_tip_servo" joint="tail_1_tip" ctrlrange="-0.2 0.8" forcerange="-1.2 1.2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_2_spread_servo" joint="tail_2_spread" ctrlrange="-0.28 0.28" forcerange="-2.5 2.5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="tail_2_lift_servo" joint="tail_2_lift" ctrlrange="0.35 1.2" forcerange="-3 3" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_2_bend_servo" joint="tail_2_bend" ctrlrange="-0.15 0.7" forcerange="-2 2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_2_tip_servo" joint="tail_2_tip" ctrlrange="-0.2 0.8" forcerange="-1.2 1.2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_3_spread_servo" joint="tail_3_spread" ctrlrange="-0.28 0.28" forcerange="-2.5 2.5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="tail_3_lift_servo" joint="tail_3_lift" ctrlrange="0.35 1.2" forcerange="-3 3" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_3_bend_servo" joint="tail_3_bend" ctrlrange="-0.15 0.7" forcerange="-2 2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_3_tip_servo" joint="tail_3_tip" ctrlrange="-0.2 0.8" forcerange="-1.2 1.2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_4_spread_servo" joint="tail_4_spread" ctrlrange="-0.28 0.28" forcerange="-2.5 2.5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="tail_4_lift_servo" joint="tail_4_lift" ctrlrange="0.35 1.2" forcerange="-3 3" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_4_bend_servo" joint="tail_4_bend" ctrlrange="-0.15 0.7" forcerange="-2 2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_4_tip_servo" joint="tail_4_tip" ctrlrange="-0.2 0.8" forcerange="-1.2 1.2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_5_spread_servo" joint="tail_5_spread" ctrlrange="-0.28 0.28" forcerange="-2.5 2.5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="tail_5_lift_servo" joint="tail_5_lift" ctrlrange="0.35 1.2" forcerange="-3 3" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_5_bend_servo" joint="tail_5_bend" ctrlrange="-0.15 0.7" forcerange="-2 2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_5_tip_servo" joint="tail_5_tip" ctrlrange="-0.2 0.8" forcerange="-1.2 1.2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_6_spread_servo" joint="tail_6_spread" ctrlrange="-0.28 0.28" forcerange="-2.5 2.5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="tail_6_lift_servo" joint="tail_6_lift" ctrlrange="0.35 1.2" forcerange="-3 3" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_6_bend_servo" joint="tail_6_bend" ctrlrange="-0.15 0.7" forcerange="-2 2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_6_tip_servo" joint="tail_6_tip" ctrlrange="-0.2 0.8" forcerange="-1.2 1.2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_7_spread_servo" joint="tail_7_spread" ctrlrange="-0.28 0.28" forcerange="-2.5 2.5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="tail_7_lift_servo" joint="tail_7_lift" ctrlrange="0.35 1.2" forcerange="-3 3" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_7_bend_servo" joint="tail_7_bend" ctrlrange="-0.15 0.7" forcerange="-2 2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_7_tip_servo" joint="tail_7_tip" ctrlrange="-0.2 0.8" forcerange="-1.2 1.2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_8_spread_servo" joint="tail_8_spread" ctrlrange="-0.28 0.28" forcerange="-2.5 2.5" biastype="affine" gainprm="45" biasprm="0 -45 -1.5"/>
+    <general name="tail_8_lift_servo" joint="tail_8_lift" ctrlrange="0.35 1.2" forcerange="-3 3" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_8_bend_servo" joint="tail_8_bend" ctrlrange="-0.15 0.7" forcerange="-2 2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="tail_8_tip_servo" joint="tail_8_tip" ctrlrange="-0.2 0.8" forcerange="-1.2 1.2" biastype="affine" gainprm="55" biasprm="0 -55 -1.8"/>
+    <general name="FL_abduct_servo" joint="FL_abduct" ctrlrange="-1.15 1.15" forcerange="-28 28" biastype="affine" gainprm="300" biasprm="0 -300 -7"/>
+    <general name="FL_pitch_servo" joint="FL_pitch" ctrlrange="-2.2 2.2" forcerange="-32 32" biastype="affine" gainprm="380" biasprm="0 -380 -8"/>
+    <general name="FL_knee_servo" joint="FL_knee" ctrlrange="-2.85 -0.015" forcerange="-32 32" biastype="affine" gainprm="380" biasprm="0 -380 -8"/>
+    <general name="FL_ankle_pitch_servo" joint="FL_ankle_pitch" ctrlrange="-2.8 2.8" forcerange="-14 14" biastype="affine" gainprm="180" biasprm="0 -180 -4"/>
+    <general name="FL_ankle_roll_servo" joint="FL_ankle_roll" ctrlrange="-1.3 1.3" forcerange="-9 9" biastype="affine" gainprm="120" biasprm="0 -120 -3"/>
+    <general name="FR_abduct_servo" joint="FR_abduct" ctrlrange="-1.15 1.15" forcerange="-28 28" biastype="affine" gainprm="300" biasprm="0 -300 -7"/>
+    <general name="FR_pitch_servo" joint="FR_pitch" ctrlrange="-2.2 2.2" forcerange="-32 32" biastype="affine" gainprm="380" biasprm="0 -380 -8"/>
+    <general name="FR_knee_servo" joint="FR_knee" ctrlrange="-2.85 -0.015" forcerange="-32 32" biastype="affine" gainprm="380" biasprm="0 -380 -8"/>
+    <general name="FR_ankle_pitch_servo" joint="FR_ankle_pitch" ctrlrange="-2.8 2.8" forcerange="-14 14" biastype="affine" gainprm="180" biasprm="0 -180 -4"/>
+    <general name="FR_ankle_roll_servo" joint="FR_ankle_roll" ctrlrange="-1.3 1.3" forcerange="-9 9" biastype="affine" gainprm="120" biasprm="0 -120 -3"/>
+    <general name="RL_abduct_servo" joint="RL_abduct" ctrlrange="-1.15 1.15" forcerange="-28 28" biastype="affine" gainprm="300" biasprm="0 -300 -7"/>
+    <general name="RL_pitch_servo" joint="RL_pitch" ctrlrange="-2.2 2.2" forcerange="-42 42" biastype="affine" gainprm="380" biasprm="0 -380 -8"/>
+    <general name="RL_knee_servo" joint="RL_knee" ctrlrange="0.015 2.85" forcerange="-42 42" biastype="affine" gainprm="380" biasprm="0 -380 -8"/>
+    <general name="RL_ankle_pitch_servo" joint="RL_ankle_pitch" ctrlrange="-2.1 2.1" forcerange="-14 14" biastype="affine" gainprm="180" biasprm="0 -180 -4"/>
+    <general name="RL_ankle_roll_servo" joint="RL_ankle_roll" ctrlrange="-1.3 1.3" forcerange="-9 9" biastype="affine" gainprm="120" biasprm="0 -120 -3"/>
+    <general name="RR_abduct_servo" joint="RR_abduct" ctrlrange="-1.15 1.15" forcerange="-28 28" biastype="affine" gainprm="300" biasprm="0 -300 -7"/>
+    <general name="RR_pitch_servo" joint="RR_pitch" ctrlrange="-2.2 2.2" forcerange="-42 42" biastype="affine" gainprm="380" biasprm="0 -380 -8"/>
+    <general name="RR_knee_servo" joint="RR_knee" ctrlrange="0.015 2.85" forcerange="-42 42" biastype="affine" gainprm="380" biasprm="0 -380 -8"/>
+    <general name="RR_ankle_pitch_servo" joint="RR_ankle_pitch" ctrlrange="-2.1 2.1" forcerange="-14 14" biastype="affine" gainprm="180" biasprm="0 -180 -4"/>
+    <general name="RR_ankle_roll_servo" joint="RR_ankle_roll" ctrlrange="-1.3 1.3" forcerange="-9 9" biastype="affine" gainprm="120" biasprm="0 -120 -3"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.3 1 0 0 0 -0.12 0 -0.06 -0.06 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0.327739 0.898193 -1.66702 0.768825 -0.327739 -0.327739 0.898193 -1.66702 0.768825 0.327739 0.327739 -1.08061 2.07022 -0.98961 -0.327739 -0.327739 -1.08061 2.07022 -0.98961 0.327739" ctrl="-0.12 0 -0.06 -0.06 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0 0.65 0.22 0.28 0.327739 0.898193 -1.66702 0.768825 -0.327739 -0.327739 0.898193 -1.66702 0.768825 0.327739 0.327739 -1.08061 2.07022 -0.98961 -0.327739 -0.327739 -1.08061 2.07022 -0.98961 0.327739"/>
+  </keyframe>
+</mujoco>

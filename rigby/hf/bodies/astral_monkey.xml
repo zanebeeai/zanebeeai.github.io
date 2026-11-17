@@ -1,0 +1,376 @@
+<mujoco model="SIMIA-M">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast" cone="elliptic" iterations="70"/>
+
+  <size nkey="1"/>
+
+  <visual>
+    <global offwidth="1280" offheight="800"/>
+    <headlight ambient="0.35 0.37 0.4" diffuse="0.7 0.75 0.8" specular="0.25 0.25 0.25"/>
+  </visual>
+
+  <default>
+    <joint solreflimit="0.004" solimplimit="0.99 0.999" armature="0.001" damping="0.18" frictionloss="0.008"/>
+    <geom condim="4" friction="1.1 0.015 0.002" solref="0.008" solimp="0.95 0.99"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" friction="1 0.005 0.0001" rgba="0.32 0.34 0.36 1"/>
+    <light name="light_0" pos="2 -3 5" dir="-0.19245 0.19245 -0.96225" diffuse="0.7 0.8 1"/>
+    <light name="light_1" pos="-2 2 3" dir="-0.19245 0.19245 -0.96225" diffuse="0.35 0.7 0.65"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="chassis" pos="0 0 0.7">
+      <inertial pos="0.00411765 0 0.00294118" quat="0.707064 0.00780811 0.00780811 0.707064" mass="1.36" diaginertia="0.0135532 0.0126074 0.00701221"/>
+      <joint name="root" type="free" solreflimit="0.02" solimplimit="0.9 0.95" armature="0" damping="0" frictionloss="0"/>
+      <geom name="chassis_g1" size="0.12 0.105 0.19" type="ellipsoid" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <geom name="chassis_g2" size="0.105 0.11 0.16" pos="0.035 0 0.025" type="ellipsoid" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <body name="neck" pos="0 0 0.21">
+        <inertial pos="0 0 0" mass="0.035" diaginertia="1.4336e-05 1.4336e-05 1.4336e-05"/>
+        <joint name="head_pan" pos="0 0 0" axis="0 0 1" range="-1 1"/>
+        <geom name="neck_g3" size="0.032" mass="0" rgba="0.85 0.35 0.3 1"/>
+        <body name="head" pos="0.025 0 0.07">
+          <inertial pos="0.00735714 0 0" quat="0.546882 0.546882 -0.448241 0.448241" mass="0.28" diaginertia="0.00142689 0.0013713 0.00111093"/>
+          <joint name="head_pitch" pos="0 0 0" axis="0 1 0" range="-0.6 0.6"/>
+          <geom name="head_g4" size="0.095 0.1 0.105" type="ellipsoid" mass="0" rgba="0.85 0.35 0.3 1"/>
+          <geom name="head_g5" size="0.05 0.067 0.046" pos="0.075 0 -0.025" type="ellipsoid" mass="0" rgba="0.85 0.35 0.3 1"/>
+          <geom name="head_g6" size="0.024" pos="0.08 -0.05 0.035" mass="0" rgba="0.85 0.35 0.3 1"/>
+          <geom name="head_g7" size="0.04" pos="-0.008 -0.108 0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+          <geom name="head_g8" size="0.024" pos="0.08 0.05 0.035" mass="0" rgba="0.85 0.35 0.3 1"/>
+          <geom name="head_g9" size="0.04" pos="-0.008 0.108 0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+          <site name="head_tip" pos="0.08 -0.05 0.035" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+        </body>
+      </body>
+      <body name="LH_shoulder" pos="0 0.21 0.135">
+        <inertial pos="0.00156522 0 -0.102991" quat="0.707105 -0.00174127 -0.00174127 0.707105" mass="0.345" diaginertia="0.00310618 0.00309932 0.000181803"/>
+        <joint name="LH_yaw" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="LH_roll" pos="0 0 0" axis="1 0 0" range="-2.7 2.7"/>
+        <joint name="LH_pitch" pos="0 0 0" axis="0 1 0" range="-5.8 5.8"/>
+        <geom name="LH_shoulder_g10" size="0.042" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <geom name="LH_shoulder_g11" size="0.03 0.135" pos="0 0 -0.135" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <body name="LH_elbow" pos="0 0 -0.27">
+          <inertial pos="0 0 -0.104" mass="0.225" diaginertia="0.00193924 0.00193924 7.15118e-05"/>
+          <joint name="LH_bend" pos="0 0 0" axis="0 1 0" range="-2.7 2.7"/>
+          <geom name="LH_elbow_g13" size="0.034" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <geom name="LH_elbow_g14" size="0.024 0.13" pos="0 0 -0.13" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <body name="LH_extension" pos="0 0 -0.26">
+            <inertial pos="0 0 0.06" mass="0.045" diaginertia="7.47379e-05 7.47379e-05 4.29127e-06"/>
+            <joint name="LH_extend" pos="0 0 0" axis="0 0 -1" type="slide" range="0 0.12"/>
+            <geom name="LH_extension_g16" size="0.014 0.06" pos="0 0 0.06" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+            <body name="LH_wrist">
+              <inertial pos="0.01 0 -0.003" quat="0.422094 0.567307 0.567307 0.422094" mass="0.05" diaginertia="2.06591e-05 2.06591e-05 5.26044e-06"/>
+              <joint name="LH_wrist_pitch" pos="0 0 0" axis="0 1 0" range="-5.8 5.8"/>
+              <joint name="LH_wrist_roll" pos="0 0 0" axis="1 0 0" range="-2.7 2.7"/>
+              <joint name="LH_wrist_yaw" pos="0 0 0" axis="0 0 1" range="-3.3 3.3"/>
+              <geom name="LH_wrist_g18" size="0.018" mass="0" rgba="0.62 0.62 0.66 1"/>
+              <geom name="LH_wrist_g19" size="0.012 0.0261008" pos="0.025 0 -0.0075" quat="0.802293 0 -0.596931 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+              <body name="LH" pos="0.05 0 -0.07">
+                <inertial pos="0 0 0.055" quat="0.707107 0.707107 0 0" mass="0.08" diaginertia="8.86811e-05 8.86811e-05 9.84757e-06"/>
+                <geom name="LH_g20" size="0.016 0.045" pos="0 0 0.055" quat="0.707107 0.707107 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+                <site name="LH_tip" pos="0 0 0" size="0.008"/>
+                <body name="LH_jaw_-1" pos="-0.02 0 0">
+                  <inertial pos="0.00208696 0 -0.0156522" quat="0.999531 0 -0.0306258 0" mass="0.046" diaginertia="7.73736e-05 4.93724e-05 3.12685e-05"/>
+                  <joint name="LH_close_-1" pos="0 0 0" axis="-1 0 0" type="slide" range="0 0.065"/>
+                  <geom name="LH_jaw_-1_g21" size="0.009 0.045" pos="0 -0.025 0" type="capsule" friction="1.6" mass="0" rgba="0.3 0.55 0.85 1"/>
+                  <geom name="LH_jaw_-1_g22" size="0.009 0.006" pos="0.006 -0.025 -0.045" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+                  <geom name="LH_jaw_-1_g23" size="0.009 0.045" pos="0 0.025 0" type="capsule" friction="1.6" mass="0" rgba="0.3 0.55 0.85 1"/>
+                  <geom name="LH_jaw_-1_g24" size="0.009 0.006" pos="0.006 0.025 -0.045" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+                  <site name="LH_jaw_-1_tip" pos="0.006 -0.025 -0.045" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+                </body>
+                <body name="LH_jaw_1" pos="0.02 0 0">
+                  <inertial pos="-0.00208696 0 -0.0156522" quat="0.999531 0 0.0306258 0" mass="0.046" diaginertia="7.73736e-05 4.93724e-05 3.12685e-05"/>
+                  <joint name="LH_close_1" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.065"/>
+                  <geom name="LH_jaw_1_g26" size="0.009 0.045" pos="0 -0.025 0" type="capsule" friction="1.6" mass="0" rgba="0.35 0.7 0.4 1"/>
+                  <geom name="LH_jaw_1_g27" size="0.009 0.006" pos="-0.006 -0.025 -0.045" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+                  <geom name="LH_jaw_1_g28" size="0.009 0.045" pos="0 0.025 0" type="capsule" friction="1.6" mass="0" rgba="0.35 0.7 0.4 1"/>
+                  <geom name="LH_jaw_1_g29" size="0.009 0.006" pos="-0.006 0.025 -0.045" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+                  <site name="LH_jaw_1_tip" pos="-0.006 -0.025 -0.045" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="LF_shoulder" pos="-0.025 0.095 -0.14">
+        <inertial pos="0.00156522 0 -0.0762899" quat="0.707103 -0.00225935 -0.00225935 0.707103" mass="0.345" diaginertia="0.0018535 0.00184664 0.000181061"/>
+        <joint name="LF_yaw" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="LF_roll" pos="0 0 0" axis="1 0 0" range="-2.7 2.7"/>
+        <joint name="LF_pitch" pos="0 0 0" axis="0 1 0" range="-4.2 4.2"/>
+        <geom name="LF_shoulder_g31" size="0.042" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <geom name="LF_shoulder_g32" size="0.03 0.1" pos="0 0 -0.1" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <body name="LF_elbow" pos="0 0 -0.2">
+          <inertial pos="0 0 -0.088" mass="0.225" diaginertia="0.00143994 0.00143994 7.13314e-05"/>
+          <joint name="LF_bend" pos="0 0 0" axis="0 1 0" range="-2.7 2.7"/>
+          <geom name="LF_elbow_g34" size="0.034" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <geom name="LF_elbow_g35" size="0.024 0.11" pos="0 0 -0.11" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <body name="LF_wrist" pos="0 0 -0.22">
+            <inertial pos="0 0 0" mass="0.03" diaginertia="3.888e-06 3.888e-06 3.888e-06"/>
+            <joint name="LF_wrist_pitch" pos="0 0 0" axis="0 1 0" range="-4.2 4.2"/>
+            <joint name="LF_wrist_roll" pos="0 0 0" axis="1 0 0" range="-2.7 2.7"/>
+            <joint name="LF_wrist_yaw" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+            <geom name="LF_wrist_g37" size="0.018" mass="0" rgba="0.62 0.62 0.66 1"/>
+            <body name="LF" pos="0 0 -0.0595">
+              <inertial pos="0 0 0.04675" quat="0.707107 0.707107 0 0" mass="0.068" diaginertia="5.44613e-05 5.44613e-05 6.04764e-06"/>
+              <geom name="LF_g38" size="0.0136 0.03825" pos="0 0 0.04675" quat="0.707107 0.707107 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+              <site name="LF_tip" pos="0 0 0" size="0.008"/>
+              <body name="LF_jaw_-1" pos="-0.017 0 0">
+                <inertial pos="0.00177391 0 -0.0133043" quat="0.999531 0 -0.0306258 0" mass="0.0391" diaginertia="4.75171e-05 3.03208e-05 1.92027e-05"/>
+                <joint name="LF_close_-1" pos="0 0 0" axis="-1 0 0" type="slide" range="0 0.05525"/>
+                <geom name="LF_jaw_-1_g39" size="0.00765 0.03825" pos="0 -0.02125 0" type="capsule" friction="1.6" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <geom name="LF_jaw_-1_g40" size="0.00765 0.0051" pos="0.0051 -0.02125 -0.03825" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <geom name="LF_jaw_-1_g41" size="0.00765 0.03825" pos="0 0.02125 0" type="capsule" friction="1.6" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <geom name="LF_jaw_-1_g42" size="0.00765 0.0051" pos="0.0051 0.02125 -0.03825" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <site name="LF_jaw_-1_tip" pos="0 -0.02125 -0.03825" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+              <body name="LF_jaw_1" pos="0.017 0 0">
+                <inertial pos="-0.00177391 0 -0.0133043" quat="0.999531 0 0.0306258 0" mass="0.0391" diaginertia="4.75171e-05 3.03208e-05 1.92027e-05"/>
+                <joint name="LF_close_1" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.05525"/>
+                <geom name="LF_jaw_1_g44" size="0.00765 0.03825" pos="0 -0.02125 0" type="capsule" friction="1.6" mass="0" rgba="0.6 0.4 0.8 1"/>
+                <geom name="LF_jaw_1_g45" size="0.00765 0.0051" pos="-0.0051 -0.02125 -0.03825" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+                <geom name="LF_jaw_1_g46" size="0.00765 0.03825" pos="0 0.02125 0" type="capsule" friction="1.6" mass="0" rgba="0.6 0.4 0.8 1"/>
+                <geom name="LF_jaw_1_g47" size="0.00765 0.0051" pos="-0.0051 0.02125 -0.03825" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.6 0.4 0.8 1"/>
+                <site name="LF_jaw_1_tip" pos="0 -0.02125 -0.03825" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RH_shoulder" pos="0 -0.21 0.135">
+        <inertial pos="0.00156522 0 -0.102991" quat="0.707105 -0.00174127 -0.00174127 0.707105" mass="0.345" diaginertia="0.00310618 0.00309932 0.000181803"/>
+        <joint name="RH_yaw" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="RH_roll" pos="0 0 0" axis="1 0 0" range="-2.7 2.7"/>
+        <joint name="RH_pitch" pos="0 0 0" axis="0 1 0" range="-5.8 5.8"/>
+        <geom name="RH_shoulder_g49" size="0.042" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <geom name="RH_shoulder_g50" size="0.03 0.135" pos="0 0 -0.135" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <body name="RH_elbow" pos="0 0 -0.27">
+          <inertial pos="0 0 -0.104" mass="0.225" diaginertia="0.00193924 0.00193924 7.15118e-05"/>
+          <joint name="RH_bend" pos="0 0 0" axis="0 1 0" range="-2.7 2.7"/>
+          <geom name="RH_elbow_g52" size="0.034" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <geom name="RH_elbow_g53" size="0.024 0.13" pos="0 0 -0.13" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <body name="RH_extension" pos="0 0 -0.26">
+            <inertial pos="0 0 0.06" mass="0.045" diaginertia="7.47379e-05 7.47379e-05 4.29127e-06"/>
+            <joint name="RH_extend" pos="0 0 0" axis="0 0 -1" type="slide" range="0 0.12"/>
+            <geom name="RH_extension_g55" size="0.014 0.06" pos="0 0 0.06" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+            <body name="RH_wrist">
+              <inertial pos="0.01 0 -0.003" quat="0.422094 0.567307 0.567307 0.422094" mass="0.05" diaginertia="2.06591e-05 2.06591e-05 5.26044e-06"/>
+              <joint name="RH_wrist_pitch" pos="0 0 0" axis="0 1 0" range="-5.8 5.8"/>
+              <joint name="RH_wrist_roll" pos="0 0 0" axis="1 0 0" range="-2.7 2.7"/>
+              <joint name="RH_wrist_yaw" pos="0 0 0" axis="0 0 1" range="-3.3 3.3"/>
+              <geom name="RH_wrist_g57" size="0.018" mass="0" rgba="0.62 0.62 0.66 1"/>
+              <geom name="RH_wrist_g58" size="0.012 0.0261008" pos="0.025 0 -0.0075" quat="0.802293 0 -0.596931 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+              <body name="RH" pos="0.05 0 -0.07">
+                <inertial pos="0 0 0.055" quat="0.707107 0.707107 0 0" mass="0.08" diaginertia="8.86811e-05 8.86811e-05 9.84757e-06"/>
+                <geom name="RH_g59" size="0.016 0.045" pos="0 0 0.055" quat="0.707107 0.707107 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+                <site name="RH_tip" pos="0 0 0" size="0.008"/>
+                <body name="RH_jaw_-1" pos="-0.02 0 0">
+                  <inertial pos="0.00208696 0 -0.0156522" quat="0.999531 0 -0.0306258 0" mass="0.046" diaginertia="7.73736e-05 4.93724e-05 3.12685e-05"/>
+                  <joint name="RH_close_-1" pos="0 0 0" axis="-1 0 0" type="slide" range="0 0.065"/>
+                  <geom name="RH_jaw_-1_g60" size="0.009 0.045" pos="0 -0.025 0" type="capsule" friction="1.6" mass="0" rgba="0.3 0.75 0.75 1"/>
+                  <geom name="RH_jaw_-1_g61" size="0.009 0.006" pos="0.006 -0.025 -0.045" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+                  <geom name="RH_jaw_-1_g62" size="0.009 0.045" pos="0 0.025 0" type="capsule" friction="1.6" mass="0" rgba="0.3 0.75 0.75 1"/>
+                  <geom name="RH_jaw_-1_g63" size="0.009 0.006" pos="0.006 0.025 -0.045" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.75 0.75 1"/>
+                  <site name="RH_jaw_-1_tip" pos="0.006 0.025 -0.045" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+                </body>
+                <body name="RH_jaw_1" pos="0.02 0 0">
+                  <inertial pos="-0.00208696 0 -0.0156522" quat="0.999531 0 0.0306258 0" mass="0.046" diaginertia="7.73736e-05 4.93724e-05 3.12685e-05"/>
+                  <joint name="RH_close_1" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.065"/>
+                  <geom name="RH_jaw_1_g65" size="0.009 0.045" pos="0 -0.025 0" type="capsule" friction="1.6" mass="0" rgba="0.8 0.45 0.65 1"/>
+                  <geom name="RH_jaw_1_g66" size="0.009 0.006" pos="-0.006 -0.025 -0.045" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+                  <geom name="RH_jaw_1_g67" size="0.009 0.045" pos="0 0.025 0" type="capsule" friction="1.6" mass="0" rgba="0.8 0.45 0.65 1"/>
+                  <geom name="RH_jaw_1_g68" size="0.009 0.006" pos="-0.006 0.025 -0.045" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.8 0.45 0.65 1"/>
+                  <site name="RH_jaw_1_tip" pos="-0.006 -0.025 -0.045" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RF_shoulder" pos="-0.025 -0.095 -0.14">
+        <inertial pos="0.00156522 0 -0.0762899" quat="0.707103 -0.00225935 -0.00225935 0.707103" mass="0.345" diaginertia="0.0018535 0.00184664 0.000181061"/>
+        <joint name="RF_yaw" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+        <joint name="RF_roll" pos="0 0 0" axis="1 0 0" range="-2.7 2.7"/>
+        <joint name="RF_pitch" pos="0 0 0" axis="0 1 0" range="-4.2 4.2"/>
+        <geom name="RF_shoulder_g70" size="0.042" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <geom name="RF_shoulder_g71" size="0.03 0.1" pos="0 0 -0.1" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <body name="RF_elbow" pos="0 0 -0.2">
+          <inertial pos="0 0 -0.088" mass="0.225" diaginertia="0.00143994 0.00143994 7.13314e-05"/>
+          <joint name="RF_bend" pos="0 0 0" axis="0 1 0" range="-2.7 2.7"/>
+          <geom name="RF_elbow_g73" size="0.034" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <geom name="RF_elbow_g74" size="0.024 0.11" pos="0 0 -0.11" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <body name="RF_wrist" pos="0 0 -0.22">
+            <inertial pos="0 0 0" mass="0.03" diaginertia="3.888e-06 3.888e-06 3.888e-06"/>
+            <joint name="RF_wrist_pitch" pos="0 0 0" axis="0 1 0" range="-4.2 4.2"/>
+            <joint name="RF_wrist_roll" pos="0 0 0" axis="1 0 0" range="-2.7 2.7"/>
+            <joint name="RF_wrist_yaw" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+            <geom name="RF_wrist_g76" size="0.018" mass="0" rgba="0.62 0.62 0.66 1"/>
+            <body name="RF" pos="0 0 -0.0595">
+              <inertial pos="0 0 0.04675" quat="0.707107 0.707107 0 0" mass="0.068" diaginertia="5.44613e-05 5.44613e-05 6.04764e-06"/>
+              <geom name="RF_g77" size="0.0136 0.03825" pos="0 0 0.04675" quat="0.707107 0.707107 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+              <site name="RF_tip" pos="0 0 0" size="0.008"/>
+              <body name="RF_jaw_-1" pos="-0.017 0 0">
+                <inertial pos="0.00177391 0 -0.0133043" quat="0.999531 0 -0.0306258 0" mass="0.0391" diaginertia="4.75171e-05 3.03208e-05 1.92027e-05"/>
+                <joint name="RF_close_-1" pos="0 0 0" axis="-1 0 0" type="slide" range="0 0.05525"/>
+                <geom name="RF_jaw_-1_g78" size="0.00765 0.03825" pos="0 -0.02125 0" type="capsule" friction="1.6" mass="0" rgba="0.6 0.6 0.35 1"/>
+                <geom name="RF_jaw_-1_g79" size="0.00765 0.0051" pos="0.0051 -0.02125 -0.03825" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+                <geom name="RF_jaw_-1_g80" size="0.00765 0.03825" pos="0 0.02125 0" type="capsule" friction="1.6" mass="0" rgba="0.6 0.6 0.35 1"/>
+                <geom name="RF_jaw_-1_g81" size="0.00765 0.0051" pos="0.0051 0.02125 -0.03825" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.6 0.6 0.35 1"/>
+                <site name="RF_jaw_-1_tip" pos="0 -0.02125 -0.03825" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+              <body name="RF_jaw_1" pos="0.017 0 0">
+                <inertial pos="-0.00177391 0 -0.0133043" quat="0.999531 0 0.0306258 0" mass="0.0391" diaginertia="4.75171e-05 3.03208e-05 1.92027e-05"/>
+                <joint name="RF_close_1" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.05525"/>
+                <geom name="RF_jaw_1_g83" size="0.00765 0.03825" pos="0 -0.02125 0" type="capsule" friction="1.6" mass="0" rgba="0.85 0.35 0.3 1"/>
+                <geom name="RF_jaw_1_g84" size="0.00765 0.0051" pos="-0.0051 -0.02125 -0.03825" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.85 0.35 0.3 1"/>
+                <geom name="RF_jaw_1_g85" size="0.00765 0.03825" pos="0 0.02125 0" type="capsule" friction="1.6" mass="0" rgba="0.85 0.35 0.3 1"/>
+                <geom name="RF_jaw_1_g86" size="0.00765 0.0051" pos="-0.0051 0.02125 -0.03825" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.85 0.35 0.3 1"/>
+                <site name="RF_jaw_1_tip" pos="0 -0.02125 -0.03825" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="tail_0" pos="-0.12 0 -0.09">
+        <inertial pos="-0.055 0 0" quat="0.707107 0 0.707107 0" mass="0.07" diaginertia="0.000123216 0.000123216 1.62267e-05"/>
+        <joint name="tail_yaw_0" pos="0 0 0" axis="0 0 1" range="-1.6 1.6"/>
+        <joint name="tail_pitch_0" pos="0 0 0" axis="0 1 0" range="-1.6 1.6"/>
+        <geom name="tail_0_g88" size="0.022 0.055" pos="-0.055 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <body name="tail_1" pos="-0.11 0 0">
+          <inertial pos="-0.055 0 0" quat="0.707107 0 0.707107 0" mass="0.07" diaginertia="0.000119557 0.000119557 1.45189e-05"/>
+          <joint name="tail_yaw_1" pos="0 0 0" axis="0 0 1" range="-1.6 1.6"/>
+          <joint name="tail_pitch_1" pos="0 0 0" axis="0 1 0" range="-1.6 1.6"/>
+          <geom name="tail_1_g90" size="0.02079 0.055" pos="-0.055 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <body name="tail_2" pos="-0.11 0 0">
+            <inertial pos="-0.055 0 0" quat="0.707107 0 0.707107 0" mass="0.07" diaginertia="0.000115986 0.000115986 1.29034e-05"/>
+            <joint name="tail_yaw_2" pos="0 0 0" axis="0 0 1" range="-1.6 1.6"/>
+            <joint name="tail_pitch_2" pos="0 0 0" axis="0 1 0" range="-1.6 1.6"/>
+            <geom name="tail_2_g92" size="0.01958 0.055" pos="-0.055 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+            <body name="tail_3" pos="-0.11 0 0">
+              <inertial pos="-0.055 0 0" quat="0.707107 0 0.707107 0" mass="0.07" diaginertia="0.000112503 0.000112503 1.13808e-05"/>
+              <joint name="tail_yaw_3" pos="0 0 0" axis="0 0 1" range="-1.6 1.6"/>
+              <joint name="tail_pitch_3" pos="0 0 0" axis="0 1 0" range="-1.6 1.6"/>
+              <geom name="tail_3_g94" size="0.01837 0.055" pos="-0.055 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+              <body name="tail_4" pos="-0.11 0 0">
+                <inertial pos="-0.055 0 0" quat="0.707107 0 0.707107 0" mass="0.07" diaginertia="0.000109107 0.000109107 9.95138e-06"/>
+                <joint name="tail_yaw_4" pos="0 0 0" axis="0 0 1" range="-1.6 1.6"/>
+                <joint name="tail_pitch_4" pos="0 0 0" axis="0 1 0" range="-1.6 1.6"/>
+                <geom name="tail_4_g96" size="0.01716 0.055" pos="-0.055 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+                <body name="tail_5" pos="-0.11 0 0">
+                  <inertial pos="-0.055 0 0" quat="0.707107 0 0.707107 0" mass="0.07" diaginertia="0.0001058 0.0001058 8.61558e-06"/>
+                  <joint name="tail_yaw_5" pos="0 0 0" axis="0 0 1" range="-1.6 1.6"/>
+                  <joint name="tail_pitch_5" pos="0 0 0" axis="0 1 0" range="-1.6 1.6"/>
+                  <geom name="tail_5_g98" size="0.01595 0.055" pos="-0.055 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+                  <body name="tail_6" pos="-0.11 0 0">
+                    <inertial pos="-0.055 0 0" quat="0.707107 0 0.707107 0" mass="0.07" diaginertia="0.000102582 0.000102582 7.37383e-06"/>
+                    <joint name="tail_yaw_6" pos="0 0 0" axis="0 0 1" range="-2.7 2.7"/>
+                    <joint name="tail_pitch_6" pos="0 0 0" axis="0 1 0" range="-2.7 2.7"/>
+                    <geom name="tail_6_g100" size="0.01474 0.055" pos="-0.055 0 0" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+                    <body name="tail_tip_mount" pos="-0.11 0 0">
+                      <inertial pos="0 0 0" mass="0.02" diaginertia="2.592e-06 2.592e-06 2.592e-06"/>
+                      <geom name="tail_tip_mount_g102" size="0.018" mass="0" rgba="0.62 0.62 0.66 1"/>
+                      <body name="TAIL" pos="0 0 -0.056">
+                        <inertial pos="0 0 0.044" quat="0.707107 0.707107 0 0" mass="0.064" diaginertia="4.54047e-05 4.54047e-05 5.04196e-06"/>
+                        <geom name="TAIL_g103" size="0.0128 0.036" pos="0 0 0.044" quat="0.707107 0.707107 0 0" type="capsule" mass="0" rgba="0.62 0.62 0.66 1"/>
+                        <site name="TAIL_tip" pos="0 0 0" size="0.008"/>
+                        <body name="TAIL_jaw_-1" pos="-0.016 0 0">
+                          <inertial pos="0.00166957 0 -0.0125217" quat="0.999531 0 -0.0306258 0" mass="0.0368" diaginertia="3.96153e-05 2.52787e-05 1.60094e-05"/>
+                          <joint name="TAIL_close_-1" pos="0 0 0" axis="-1 0 0" type="slide" range="0 0.052"/>
+                          <geom name="TAIL_jaw_-1_g104" size="0.0072 0.036" pos="0 -0.02 0" type="capsule" friction="1.6" mass="0" rgba="0.3 0.55 0.85 1"/>
+                          <geom name="TAIL_jaw_-1_g105" size="0.0072 0.0048" pos="0.0048 -0.02 -0.036" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+                          <geom name="TAIL_jaw_-1_g106" size="0.0072 0.036" pos="0 0.02 0" type="capsule" friction="1.6" mass="0" rgba="0.3 0.55 0.85 1"/>
+                          <geom name="TAIL_jaw_-1_g107" size="0.0072 0.0048" pos="0.0048 0.02 -0.036" quat="0.707107 0 -0.707107 0" type="capsule" mass="0" rgba="0.3 0.55 0.85 1"/>
+                          <site name="TAIL_jaw_-1_tip" pos="0.0048 -0.02 -0.036" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+                        </body>
+                        <body name="TAIL_jaw_1" pos="0.016 0 0">
+                          <inertial pos="-0.00166957 0 -0.0125217" quat="0.999531 0 0.0306258 0" mass="0.0368" diaginertia="3.96153e-05 2.52787e-05 1.60094e-05"/>
+                          <joint name="TAIL_close_1" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.052"/>
+                          <geom name="TAIL_jaw_1_g109" size="0.0072 0.036" pos="0 -0.02 0" type="capsule" friction="1.6" mass="0" rgba="0.35 0.7 0.4 1"/>
+                          <geom name="TAIL_jaw_1_g110" size="0.0072 0.0048" pos="-0.0048 -0.02 -0.036" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+                          <geom name="TAIL_jaw_1_g111" size="0.0072 0.036" pos="0 0.02 0" type="capsule" friction="1.6" mass="0" rgba="0.35 0.7 0.4 1"/>
+                          <geom name="TAIL_jaw_1_g112" size="0.0072 0.0048" pos="-0.0048 0.02 -0.036" quat="0.707107 0 0.707107 0" type="capsule" mass="0" rgba="0.35 0.7 0.4 1"/>
+                          <site name="TAIL_jaw_1_tip" pos="-0.0048 -0.02 -0.036" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="chassis" body2="head"/>
+    <exclude body1="LH_elbow" body2="LH_wrist"/>
+    <exclude body1="LH_elbow" body2="LH"/>
+    <exclude body1="LF_elbow" body2="LF"/>
+    <exclude body1="RH_elbow" body2="RH_wrist"/>
+    <exclude body1="RH_elbow" body2="RH"/>
+    <exclude body1="RF_elbow" body2="RF"/>
+  </contact>
+
+  <actuator>
+    <general name="head_pan" joint="head_pan" ctrlrange="-1 1" forcerange="-3 3" biastype="affine" gainprm="45" biasprm="0 -45 -3"/>
+    <general name="head_pitch" joint="head_pitch" ctrlrange="-0.6 0.6" forcerange="-3 3" biastype="affine" gainprm="45" biasprm="0 -45 -3"/>
+    <general name="LH_yaw" joint="LH_yaw" ctrlrange="-2.7 2.7" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="LH_roll" joint="LH_roll" ctrlrange="-2.7 2.7" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="LH_pitch" joint="LH_pitch" ctrlrange="-5.8 5.8" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="LH_bend" joint="LH_bend" ctrlrange="-2.7 2.7" forcerange="-25 25" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="LH_extend" joint="LH_extend" ctrlrange="0 0.12" forcerange="-80 80" biastype="affine" gainprm="2500" biasprm="0 -2500 -22.3607"/>
+    <general name="LH_wrist_pitch" joint="LH_wrist_pitch" ctrlrange="-5.8 5.8" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="LH_wrist_roll" joint="LH_wrist_roll" ctrlrange="-2.7 2.7" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="LH_wrist_yaw" joint="LH_wrist_yaw" ctrlrange="-3.3 3.3" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="LH_close_-1" joint="LH_close_-1" ctrlrange="0 0.065" forcerange="-60 60" biastype="affine" gainprm="1200" biasprm="0 -1200 -15.4919"/>
+    <general name="LH_close_1" joint="LH_close_1" ctrlrange="0 0.065" forcerange="-60 60" biastype="affine" gainprm="1200" biasprm="0 -1200 -15.4919"/>
+    <general name="LF_yaw" joint="LF_yaw" ctrlrange="-2.7 2.7" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="LF_roll" joint="LF_roll" ctrlrange="-2.7 2.7" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="LF_pitch" joint="LF_pitch" ctrlrange="-4.2 4.2" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="LF_bend" joint="LF_bend" ctrlrange="-2.7 2.7" forcerange="-25 25" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="LF_wrist_pitch" joint="LF_wrist_pitch" ctrlrange="-4.2 4.2" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="LF_wrist_roll" joint="LF_wrist_roll" ctrlrange="-2.7 2.7" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="LF_wrist_yaw" joint="LF_wrist_yaw" ctrlrange="-2.7 2.7" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="LF_close_-1" joint="LF_close_-1" ctrlrange="0 0.05525" forcerange="-51 51" biastype="affine" gainprm="1200" biasprm="0 -1200 -15.4919"/>
+    <general name="LF_close_1" joint="LF_close_1" ctrlrange="0 0.05525" forcerange="-51 51" biastype="affine" gainprm="1200" biasprm="0 -1200 -15.4919"/>
+    <general name="RH_yaw" joint="RH_yaw" ctrlrange="-2.7 2.7" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="RH_roll" joint="RH_roll" ctrlrange="-2.7 2.7" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="RH_pitch" joint="RH_pitch" ctrlrange="-5.8 5.8" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="RH_bend" joint="RH_bend" ctrlrange="-2.7 2.7" forcerange="-25 25" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="RH_extend" joint="RH_extend" ctrlrange="0 0.12" forcerange="-80 80" biastype="affine" gainprm="2500" biasprm="0 -2500 -22.3607"/>
+    <general name="RH_wrist_pitch" joint="RH_wrist_pitch" ctrlrange="-5.8 5.8" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="RH_wrist_roll" joint="RH_wrist_roll" ctrlrange="-2.7 2.7" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="RH_wrist_yaw" joint="RH_wrist_yaw" ctrlrange="-3.3 3.3" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="RH_close_-1" joint="RH_close_-1" ctrlrange="0 0.065" forcerange="-60 60" biastype="affine" gainprm="1200" biasprm="0 -1200 -15.4919"/>
+    <general name="RH_close_1" joint="RH_close_1" ctrlrange="0 0.065" forcerange="-60 60" biastype="affine" gainprm="1200" biasprm="0 -1200 -15.4919"/>
+    <general name="RF_yaw" joint="RF_yaw" ctrlrange="-2.7 2.7" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="RF_roll" joint="RF_roll" ctrlrange="-2.7 2.7" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="RF_pitch" joint="RF_pitch" ctrlrange="-4.2 4.2" forcerange="-28 28" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="RF_bend" joint="RF_bend" ctrlrange="-2.7 2.7" forcerange="-25 25" biastype="affine" gainprm="400" biasprm="0 -400 -8.94427"/>
+    <general name="RF_wrist_pitch" joint="RF_wrist_pitch" ctrlrange="-4.2 4.2" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="RF_wrist_roll" joint="RF_wrist_roll" ctrlrange="-2.7 2.7" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="RF_wrist_yaw" joint="RF_wrist_yaw" ctrlrange="-2.7 2.7" forcerange="-18 18" biastype="affine" gainprm="220" biasprm="0 -220 -6.63325"/>
+    <general name="RF_close_-1" joint="RF_close_-1" ctrlrange="0 0.05525" forcerange="-51 51" biastype="affine" gainprm="1200" biasprm="0 -1200 -15.4919"/>
+    <general name="RF_close_1" joint="RF_close_1" ctrlrange="0 0.05525" forcerange="-51 51" biastype="affine" gainprm="1200" biasprm="0 -1200 -15.4919"/>
+    <general name="tail_yaw_0" joint="tail_yaw_0" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_pitch_0" joint="tail_pitch_0" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_yaw_1" joint="tail_yaw_1" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_pitch_1" joint="tail_pitch_1" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_yaw_2" joint="tail_yaw_2" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_pitch_2" joint="tail_pitch_2" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_yaw_3" joint="tail_yaw_3" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_pitch_3" joint="tail_pitch_3" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_yaw_4" joint="tail_yaw_4" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_pitch_4" joint="tail_pitch_4" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_yaw_5" joint="tail_yaw_5" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_pitch_5" joint="tail_pitch_5" ctrlrange="-1.6 1.6" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_yaw_6" joint="tail_yaw_6" ctrlrange="-2.7 2.7" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="tail_pitch_6" joint="tail_pitch_6" ctrlrange="-2.7 2.7" forcerange="-16 16" biastype="affine" gainprm="200" biasprm="0 -200 -6.32456"/>
+    <general name="TAIL_close_-1" joint="TAIL_close_-1" ctrlrange="0 0.052" forcerange="-48 48" biastype="affine" gainprm="1200" biasprm="0 -1200 -15.4919"/>
+    <general name="TAIL_close_1" joint="TAIL_close_1" ctrlrange="0 0.052" forcerange="-48 48" biastype="affine" gainprm="1200" biasprm="0 -1200 -15.4919"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.613985 1 0 0 0 0 0 0.165432 -0.0440676 -2.63915 1.95569 0.0469565 0.683279 0.044061 -0.165442 0.04 0.04 0 0 -0.5 1 -0.5 0 0 0.034 0.034 -0.165432 0.0440676 -2.63915 1.95569 0.0469565 0.683279 -0.044061 0.165442 0.04 0.04 0 0 -0.5 1 -0.5 0 0 0.034 0.034 0 0.3 0 0.3 0 0.3 0 0.3 0 0.3 0 0.3 0 0.3 0.032 0.032" ctrl="0 0 0.165432 -0.0440676 -2.63915 1.95569 0 0.683279 0.044061 -0.165442 0.04 0.04 0 0 -0.5 1 -0.5 0 0 0.034 0.034 -0.165432 0.0440676 -2.63915 1.95569 0 0.683279 -0.044061 0.165442 0.04 0.04 0 0 -0.5 1 -0.5 0 0 0.034 0.034 0 0.3 0 0.3 0 0.3 0 0.3 0 0.3 0 0.3 0 0.3 0.032 0.032"/>
+  </keyframe>
+</mujoco>

@@ -1,0 +1,265 @@
+<mujoco model="IGNEA-I">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast"/>
+
+  <size nkey="2"/>
+
+  <default>
+    <joint armature="0.006" damping="0.5"/>
+    <geom condim="4" friction="1.1 0.01 0.001" solref="0.008" solimp="0.95 0.99"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="0 0 0.05" type="plane" priority="1" friction="1 0.005 0.0001" rgba="0.32 0.34 0.36 1"/>
+    <light pos="0 -2 4" dir="0 0.371391 -0.928477"/>
+    <light name="rtp_light" pos="0 -1.5 3" dir="0 0.371391 -0.928477"/>
+    <body name="chassis" pos="0 0 0.3">
+      <inertial pos="0 0 0" mass="2.4" diaginertia="0.009816 0.031116 0.033996"/>
+      <joint name="root" type="free" armature="0" damping="0"/>
+      <geom name="surface_1" size="0.24 0.115 0.085" type="ellipsoid" solref="0.005" mass="0" rgba="0.62 0.62 0.66 1"/>
+      <body name="FL_hip" pos="0.1872 0.115 0">
+        <inertial pos="0 0 0" mass="0.08" diaginertia="2.3328e-05 2.3328e-05 2.3328e-05"/>
+        <joint name="FL_abduct" pos="0 0 0" axis="1 0 0" range="-1.1 1.1"/>
+        <geom name="surface_32" size="0.027" solref="0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+        <body name="FL_upper">
+          <inertial pos="0 0 -0.11" mass="0.19" diaginertia="0.000961138 0.000961138 3.01745e-05"/>
+          <joint name="FL_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.3"/>
+          <geom name="surface_33" size="0.018 0.11" pos="0 0 -0.11" type="capsule" solref="0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+          <body name="FL_lower" pos="0 0 -0.22">
+            <inertial pos="0 0 -0.1" mass="0.14" diaginertia="0.000566102 0.000566102 1.34858e-05"/>
+            <joint name="FL_knee" pos="0 0 0" axis="0 1 0" range="0.1 2.7"/>
+            <geom name="surface_37" size="0.014 0.1" pos="0 0 -0.1" type="capsule" solref="0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+            <body name="FL_ankle" pos="0 0 -0.24">
+              <inertial pos="0 0 0" mass="0.035" diaginertia="4.046e-06 4.046e-06 4.046e-06"/>
+              <joint name="FL_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.8"/>
+              <geom name="surface_40" size="0.017" solref="0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+              <body name="FL_foot">
+                <inertial pos="0.012 0 -0.018" mass="0.09" diaginertia="3.9456e-05 8.0658e-05 0.000110898"/>
+                <joint name="FL_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.1 1.1"/>
+                <geom name="FL_sole" size="0.065 0.044 0.016" pos="0.012 0 -0.018" type="ellipsoid" solref="0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+                <geom name="surface_42" size="0.006 0.0273011" pos="0.041 -0.038775 -0.006" quat="0.780952 -0.135431 -0.609732 0" type="capsule" solref="0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+                <geom name="surface_43" size="0.006 0.0267527" pos="0.041 -0.012925 -0.006" quat="0.782393 -0.0459842 -0.621085 0" type="capsule" solref="0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+                <geom name="surface_44" size="0.006 0.0267527" pos="0.041 0.012925 -0.006" quat="0.782393 0.0459842 -0.621085 0" type="capsule" solref="0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+                <geom name="surface_45" size="0.006 0.0273011" pos="0.041 0.038775 -0.006" quat="0.780952 0.135431 -0.609732 0" type="capsule" solref="0.005" mass="0" rgba="0.85 0.35 0.3 1"/>
+                <site name="FL_foot_tip" pos="0.012 0 -0.034" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="FR_hip" pos="0.1872 -0.115 0">
+        <inertial pos="0 0 0" mass="0.08" diaginertia="2.3328e-05 2.3328e-05 2.3328e-05"/>
+        <joint name="FR_abduct" pos="0 0 0" axis="1 0 0" range="-1.1 1.1"/>
+        <geom name="surface_47" size="0.027" solref="0.005" mass="0" rgba="0.3 0.55 0.85 1"/>
+        <body name="FR_upper">
+          <inertial pos="0 0 -0.11" mass="0.19" diaginertia="0.000961138 0.000961138 3.01745e-05"/>
+          <joint name="FR_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.3"/>
+          <geom name="surface_48" size="0.018 0.11" pos="0 0 -0.11" type="capsule" solref="0.005" mass="0" rgba="0.3 0.55 0.85 1"/>
+          <body name="FR_lower" pos="0 0 -0.22">
+            <inertial pos="0 0 -0.1" mass="0.14" diaginertia="0.000566102 0.000566102 1.34858e-05"/>
+            <joint name="FR_knee" pos="0 0 0" axis="0 1 0" range="0.1 2.7"/>
+            <geom name="surface_52" size="0.014 0.1" pos="0 0 -0.1" type="capsule" solref="0.005" mass="0" rgba="0.3 0.55 0.85 1"/>
+            <body name="FR_ankle" pos="0 0 -0.24">
+              <inertial pos="0 0 0" mass="0.035" diaginertia="4.046e-06 4.046e-06 4.046e-06"/>
+              <joint name="FR_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.8"/>
+              <geom name="surface_55" size="0.017" solref="0.005" mass="0" rgba="0.3 0.55 0.85 1"/>
+              <body name="FR_foot">
+                <inertial pos="0.012 0 -0.018" mass="0.09" diaginertia="3.9456e-05 8.0658e-05 0.000110898"/>
+                <joint name="FR_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.1 1.1"/>
+                <geom name="FR_sole" size="0.065 0.044 0.016" pos="0.012 0 -0.018" type="ellipsoid" solref="0.005" mass="0" rgba="0.3 0.55 0.85 1"/>
+                <geom name="surface_57" size="0.006 0.0273011" pos="0.041 -0.038775 -0.006" quat="0.780952 -0.135431 -0.609732 0" type="capsule" solref="0.005" mass="0" rgba="0.3 0.55 0.85 1"/>
+                <geom name="surface_58" size="0.006 0.0267527" pos="0.041 -0.012925 -0.006" quat="0.782393 -0.0459842 -0.621085 0" type="capsule" solref="0.005" mass="0" rgba="0.3 0.55 0.85 1"/>
+                <geom name="surface_59" size="0.006 0.0267527" pos="0.041 0.012925 -0.006" quat="0.782393 0.0459842 -0.621085 0" type="capsule" solref="0.005" mass="0" rgba="0.3 0.55 0.85 1"/>
+                <geom name="surface_60" size="0.006 0.0273011" pos="0.041 0.038775 -0.006" quat="0.780952 0.135431 -0.609732 0" type="capsule" solref="0.005" mass="0" rgba="0.3 0.55 0.85 1"/>
+                <site name="FR_foot_tip" pos="0.012 0 -0.034" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RL_hip" pos="-0.1872 0.115 0">
+        <inertial pos="0 0 0" mass="0.08" diaginertia="2.3328e-05 2.3328e-05 2.3328e-05"/>
+        <joint name="RL_abduct" pos="0 0 0" axis="1 0 0" range="-1.1 1.1"/>
+        <geom name="surface_62" size="0.027" solref="0.005" mass="0" rgba="0.35 0.7 0.4 1"/>
+        <body name="RL_upper">
+          <inertial pos="0 0 -0.11" mass="0.19" diaginertia="0.000961138 0.000961138 3.01745e-05"/>
+          <joint name="RL_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.3"/>
+          <geom name="surface_63" size="0.018 0.11" pos="0 0 -0.11" type="capsule" solref="0.005" mass="0" rgba="0.35 0.7 0.4 1"/>
+          <body name="RL_lower" pos="0 0 -0.22">
+            <inertial pos="0 0 -0.1" mass="0.14" diaginertia="0.000566102 0.000566102 1.34858e-05"/>
+            <joint name="RL_knee" pos="0 0 0" axis="0 1 0" range="0.1 2.7"/>
+            <geom name="surface_67" size="0.014 0.1" pos="0 0 -0.1" type="capsule" solref="0.005" mass="0" rgba="0.35 0.7 0.4 1"/>
+            <body name="RL_ankle" pos="0 0 -0.24">
+              <inertial pos="0 0 0" mass="0.035" diaginertia="4.046e-06 4.046e-06 4.046e-06"/>
+              <joint name="RL_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.8"/>
+              <geom name="surface_70" size="0.017" solref="0.005" mass="0" rgba="0.35 0.7 0.4 1"/>
+              <body name="RL_foot">
+                <inertial pos="0.012 0 -0.018" mass="0.09" diaginertia="3.9456e-05 8.0658e-05 0.000110898"/>
+                <joint name="RL_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.1 1.1"/>
+                <geom name="RL_sole" size="0.065 0.044 0.016" pos="0.012 0 -0.018" type="ellipsoid" solref="0.005" mass="0" rgba="0.35 0.7 0.4 1"/>
+                <geom name="surface_72" size="0.006 0.0273011" pos="0.041 -0.038775 -0.006" quat="0.780952 -0.135431 -0.609732 0" type="capsule" solref="0.005" mass="0" rgba="0.35 0.7 0.4 1"/>
+                <geom name="surface_73" size="0.006 0.0267527" pos="0.041 -0.012925 -0.006" quat="0.782393 -0.0459842 -0.621085 0" type="capsule" solref="0.005" mass="0" rgba="0.35 0.7 0.4 1"/>
+                <geom name="surface_74" size="0.006 0.0267527" pos="0.041 0.012925 -0.006" quat="0.782393 0.0459842 -0.621085 0" type="capsule" solref="0.005" mass="0" rgba="0.35 0.7 0.4 1"/>
+                <geom name="surface_75" size="0.006 0.0273011" pos="0.041 0.038775 -0.006" quat="0.780952 0.135431 -0.609732 0" type="capsule" solref="0.005" mass="0" rgba="0.35 0.7 0.4 1"/>
+                <site name="RL_foot_tip" pos="0.012 0 -0.034" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RR_hip" pos="-0.1872 -0.115 0">
+        <inertial pos="0 0 0" mass="0.08" diaginertia="2.3328e-05 2.3328e-05 2.3328e-05"/>
+        <joint name="RR_abduct" pos="0 0 0" axis="1 0 0" range="-1.1 1.1"/>
+        <geom name="surface_77" size="0.027" solref="0.005" mass="0" rgba="0.85 0.65 0.25 1"/>
+        <body name="RR_upper">
+          <inertial pos="0 0 -0.11" mass="0.19" diaginertia="0.000961138 0.000961138 3.01745e-05"/>
+          <joint name="RR_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.3"/>
+          <geom name="surface_78" size="0.018 0.11" pos="0 0 -0.11" type="capsule" solref="0.005" mass="0" rgba="0.85 0.65 0.25 1"/>
+          <body name="RR_lower" pos="0 0 -0.22">
+            <inertial pos="0 0 -0.1" mass="0.14" diaginertia="0.000566102 0.000566102 1.34858e-05"/>
+            <joint name="RR_knee" pos="0 0 0" axis="0 1 0" range="0.1 2.7"/>
+            <geom name="surface_82" size="0.014 0.1" pos="0 0 -0.1" type="capsule" solref="0.005" mass="0" rgba="0.85 0.65 0.25 1"/>
+            <body name="RR_ankle" pos="0 0 -0.24">
+              <inertial pos="0 0 0" mass="0.035" diaginertia="4.046e-06 4.046e-06 4.046e-06"/>
+              <joint name="RR_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-1.8 1.8"/>
+              <geom name="surface_85" size="0.017" solref="0.005" mass="0" rgba="0.85 0.65 0.25 1"/>
+              <body name="RR_foot">
+                <inertial pos="0.012 0 -0.018" mass="0.09" diaginertia="3.9456e-05 8.0658e-05 0.000110898"/>
+                <joint name="RR_ankle_roll" pos="0 0 0" axis="1 0 0" range="-1.1 1.1"/>
+                <geom name="RR_sole" size="0.065 0.044 0.016" pos="0.012 0 -0.018" type="ellipsoid" solref="0.005" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <geom name="surface_87" size="0.006 0.0273011" pos="0.041 -0.038775 -0.006" quat="0.780952 -0.135431 -0.609732 0" type="capsule" solref="0.005" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <geom name="surface_88" size="0.006 0.0267527" pos="0.041 -0.012925 -0.006" quat="0.782393 -0.0459842 -0.621085 0" type="capsule" solref="0.005" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <geom name="surface_89" size="0.006 0.0267527" pos="0.041 0.012925 -0.006" quat="0.782393 0.0459842 -0.621085 0" type="capsule" solref="0.005" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <geom name="surface_90" size="0.006 0.0273011" pos="0.041 0.038775 -0.006" quat="0.780952 0.135431 -0.609732 0" type="capsule" solref="0.005" mass="0" rgba="0.85 0.65 0.25 1"/>
+                <site name="RR_foot_tip" pos="0.012 0 -0.034" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="neck" pos="0.2256 0 0.015">
+        <inertial pos="0 0 0" mass="0.08" diaginertia="3.92e-05 3.92e-05 3.92e-05"/>
+        <joint name="head_pan" pos="0 0 0" axis="0 0 1" range="-0.55 0.55"/>
+        <geom name="surface_92" size="0.035" solref="0.005" mass="0" rgba="0.62 0.62 0.66 1"/>
+        <body name="head" pos="0.035 0 0">
+          <inertial pos="0.0782 0 0.018" mass="0.22" diaginertia="0.000435952 0.00046231 0.00077119"/>
+          <joint name="head_pitch" pos="0 0 0" axis="0 1 0" range="-0.65 0.35"/>
+          <geom name="surface_93" size="0.0952 0.092 0.038" pos="0.0782 0 0.018" type="ellipsoid" solref="0.005" mass="0" rgba="0.62 0.62 0.66 1"/>
+          <body name="jaw" pos="0.015 0 -0.026">
+            <inertial pos="0.0816 0 0" quat="0 0.707107 0 0.707107" mass="0.15" diaginertia="0.000612306 0.000340128 0.000286578"/>
+            <joint name="jaw_open" pos="0 0 0" axis="0 1 0" range="-0.02 0.8"/>
+            <geom name="surface_107" size="0.02995 0.05165" pos="0.0816 0 0" quat="0 0.707107 0 0.707107" type="capsule" solref="0.005" mass="0" rgba="0.6 0.4 0.8 1"/>
+            <site name="jaw_tip" pos="0.0816 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+          </body>
+          <body name="dewlap" pos="-0.005 0 -0.065">
+            <inertial pos="0 0 -0.04" mass="0.03" diaginertia="1.275e-05 1.59e-05 4.35e-06"/>
+            <joint name="dewlap_fold" pos="0 0 0" axis="0 1 0" range="-0.2 0.8"/>
+            <geom name="surface_109" size="0.025 0.01 0.045" pos="0 0 -0.04" type="ellipsoid" solref="0.005" mass="0" rgba="0.3 0.75 0.75 1"/>
+            <site name="dewlap_tip" pos="0 0 -0.04" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+          </body>
+        </body>
+      </body>
+      <body name="tail_0" pos="-0.24 0 0">
+        <inertial pos="-0.0625 0 0" quat="0.707107 0 0.707107 0" mass="0.08" diaginertia="0.000274845 0.000274845 7.57459e-05"/>
+        <joint name="tail_yaw_0" pos="0 0 0" axis="0 0 1" range="-0.42 0.42"/>
+        <geom name="surface_110" size="0.045 0.0625" pos="-0.0625 0 0" quat="0.707107 0 0.707107 0" type="capsule" solref="0.005" mass="0" rgba="0.8 0.45 0.65 1"/>
+        <body name="tail_1" pos="-0.125 0 0">
+          <inertial pos="-0.0603125 0 0" quat="0.707107 0 0.707107 0" mass="0.068" diaginertia="0.00020675 0.00020675 5.33572e-05"/>
+          <joint name="tail_yaw_1" pos="0 0 0" axis="0 0 1" range="-0.42 0.42"/>
+          <geom name="surface_113" size="0.0409091 0.0603125" pos="-0.0603125 0 0" quat="0.707107 0 0.707107 0" type="capsule" solref="0.005" mass="0" rgba="0.8 0.45 0.65 1"/>
+          <body name="tail_2" pos="-0.120625 0 0">
+            <inertial pos="-0.058125 0 0" quat="0.707107 0 0.707107 0" mass="0.0578" diaginertia="0.000154368 0.000154368 3.68499e-05"/>
+            <joint name="tail_yaw_2" pos="0 0 0" axis="0 0 1" range="-0.42 0.42"/>
+            <geom name="surface_116" size="0.0368182 0.058125" pos="-0.058125 0 0" quat="0.707107 0 0.707107 0" type="capsule" solref="0.005" mass="0" rgba="0.8 0.45 0.65 1"/>
+            <body name="tail_3" pos="-0.11625 0 0">
+              <inertial pos="-0.0559375 0 0" quat="0.707107 0 0.707107 0" mass="0.04913" diaginertia="0.000114298 0.000114298 2.48344e-05"/>
+              <joint name="tail_yaw_3" pos="0 0 0" axis="0 0 1" range="-0.42 0.42"/>
+              <geom name="surface_119" size="0.0327273 0.0559375" pos="-0.0559375 0 0" quat="0.707107 0 0.707107 0" type="capsule" solref="0.005" mass="0" rgba="0.8 0.45 0.65 1"/>
+              <body name="tail_4" pos="-0.111875 0 0">
+                <inertial pos="-0.05375 0 0" quat="0.707107 0 0.707107 0" mass="0.0417605" diaginertia="8.38395e-05 8.38395e-05 1.62252e-05"/>
+                <joint name="tail_yaw_4" pos="0 0 0" axis="0 0 1" range="-0.42 0.42"/>
+                <geom name="surface_122" size="0.0286364 0.05375" pos="-0.05375 0 0" quat="0.707107 0 0.707107 0" type="capsule" solref="0.005" mass="0" rgba="0.8 0.45 0.65 1"/>
+                <body name="tail_5" pos="-0.1075 0 0">
+                  <inertial pos="-0.0515625 0 0" quat="0.707107 0 0.707107 0" mass="0.0354964" diaginertia="6.08509e-05 6.08509e-05 1.01778e-05"/>
+                  <joint name="tail_yaw_5" pos="0 0 0" axis="0 0 1" range="-0.42 0.42"/>
+                  <geom name="surface_125" size="0.0245455 0.0515625" pos="-0.0515625 0 0" quat="0.707107 0 0.707107 0" type="capsule" solref="0.005" mass="0" rgba="0.8 0.45 0.65 1"/>
+                  <body name="tail_6" pos="-0.103125 0 0">
+                    <inertial pos="-0.049375 0 0" quat="0.707107 0 0.707107 0" mass="0.030172" diaginertia="4.36424e-05 4.36424e-05 6.03859e-06"/>
+                    <joint name="tail_yaw_6" pos="0 0 0" axis="0 0 1" range="-0.42 0.42"/>
+                    <geom name="surface_128" size="0.0204545 0.049375" pos="-0.049375 0 0" quat="0.707107 0 0.707107 0" type="capsule" solref="0.005" mass="0" rgba="0.8 0.45 0.65 1"/>
+                    <body name="tail_7" pos="-0.09875 0 0">
+                      <inertial pos="-0.0471875 0 0" quat="0.707107 0 0.707107 0" mass="0.0256462" diaginertia="3.08828e-05 3.08828e-05 3.30466e-06"/>
+                      <joint name="tail_yaw_7" pos="0 0 0" axis="0 0 1" range="-0.42 0.42"/>
+                      <geom name="surface_131" size="0.0163636 0.0471875" pos="-0.0471875 0 0" quat="0.707107 0 0.707107 0" type="capsule" solref="0.005" mass="0" rgba="0.8 0.45 0.65 1"/>
+                      <body name="tail_8" pos="-0.094375 0 0">
+                        <inertial pos="-0.045 0 0" quat="0.707107 0 0.707107 0" mass="0.0217992" diaginertia="2.15277e-05 2.15277e-05 1.59118e-06"/>
+                        <joint name="tail_yaw_8" pos="0 0 0" axis="0 0 1" range="-0.42 0.42"/>
+                        <geom name="surface_134" size="0.0122727 0.045" pos="-0.045 0 0" quat="0.707107 0 0.707107 0" type="capsule" solref="0.005" mass="0" rgba="0.8 0.45 0.65 1"/>
+                        <body name="tail_9" pos="-0.09 0 0">
+                          <inertial pos="-0.0428125 0 0" quat="0.707107 0 0.707107 0" mass="0.0185294" diaginertia="1.47608e-05 1.47608e-05 6.06182e-07"/>
+                          <joint name="tail_yaw_9" pos="0 0 0" axis="0 0 1" range="-0.42 0.42"/>
+                          <geom name="surface_137" size="0.00818182 0.0428125" pos="-0.0428125 0 0" quat="0.707107 0 0.707107 0" type="capsule" solref="0.005" mass="0" rgba="0.8 0.45 0.65 1"/>
+                          <site name="tail_9_tip" pos="-0.0428125 0 0" size="0.008" group="4" rgba="1 0.85 0.15 1"/>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="chassis" body2="head"/>
+    <exclude body1="FL_lower" body2="FL_foot"/>
+    <exclude body1="FR_lower" body2="FR_foot"/>
+    <exclude body1="RL_lower" body2="RL_foot"/>
+    <exclude body1="RR_lower" body2="RR_foot"/>
+  </contact>
+
+  <actuator>
+    <general name="FL_abduct_servo" joint="FL_abduct" ctrlrange="-1.1 1.1" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="FL_pitch_servo" joint="FL_pitch" ctrlrange="-1.8 1.3" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="FL_knee_servo" joint="FL_knee" ctrlrange="0.1 2.7" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="FL_ankle_pitch_servo" joint="FL_ankle_pitch" ctrlrange="-1.8 1.8" forcerange="-10 10" biastype="affine" gainprm="140" biasprm="0 -140 -4"/>
+    <general name="FL_ankle_roll_servo" joint="FL_ankle_roll" ctrlrange="-1.1 1.1" forcerange="-10 10" biastype="affine" gainprm="140" biasprm="0 -140 -4"/>
+    <general name="FR_abduct_servo" joint="FR_abduct" ctrlrange="-1.1 1.1" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="FR_pitch_servo" joint="FR_pitch" ctrlrange="-1.8 1.3" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="FR_knee_servo" joint="FR_knee" ctrlrange="0.1 2.7" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="FR_ankle_pitch_servo" joint="FR_ankle_pitch" ctrlrange="-1.8 1.8" forcerange="-10 10" biastype="affine" gainprm="140" biasprm="0 -140 -4"/>
+    <general name="FR_ankle_roll_servo" joint="FR_ankle_roll" ctrlrange="-1.1 1.1" forcerange="-10 10" biastype="affine" gainprm="140" biasprm="0 -140 -4"/>
+    <general name="RL_abduct_servo" joint="RL_abduct" ctrlrange="-1.1 1.1" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="RL_pitch_servo" joint="RL_pitch" ctrlrange="-1.8 1.3" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="RL_knee_servo" joint="RL_knee" ctrlrange="0.1 2.7" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="RL_ankle_pitch_servo" joint="RL_ankle_pitch" ctrlrange="-1.8 1.8" forcerange="-10 10" biastype="affine" gainprm="140" biasprm="0 -140 -4"/>
+    <general name="RL_ankle_roll_servo" joint="RL_ankle_roll" ctrlrange="-1.1 1.1" forcerange="-10 10" biastype="affine" gainprm="140" biasprm="0 -140 -4"/>
+    <general name="RR_abduct_servo" joint="RR_abduct" ctrlrange="-1.1 1.1" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="RR_pitch_servo" joint="RR_pitch" ctrlrange="-1.8 1.3" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="RR_knee_servo" joint="RR_knee" ctrlrange="0.1 2.7" forcerange="-24 24" biastype="affine" gainprm="240" biasprm="0 -240 -8"/>
+    <general name="RR_ankle_pitch_servo" joint="RR_ankle_pitch" ctrlrange="-1.8 1.8" forcerange="-10 10" biastype="affine" gainprm="140" biasprm="0 -140 -4"/>
+    <general name="RR_ankle_roll_servo" joint="RR_ankle_roll" ctrlrange="-1.1 1.1" forcerange="-10 10" biastype="affine" gainprm="140" biasprm="0 -140 -4"/>
+    <general name="head_pan_servo" joint="head_pan" ctrlrange="-0.55 0.55" forcerange="-9 9" biastype="affine" gainprm="100" biasprm="0 -100 -4"/>
+    <general name="head_pitch_servo" joint="head_pitch" ctrlrange="-0.65 0.35" forcerange="-9 9" biastype="affine" gainprm="100" biasprm="0 -100 -4"/>
+    <general name="jaw_open_servo" joint="jaw_open" ctrlrange="-0.02 0.8" forcerange="-5 5" biastype="affine" gainprm="65" biasprm="0 -65 -2"/>
+    <general name="dewlap_fold_servo" joint="dewlap_fold" ctrlrange="-0.2 0.8" forcerange="-2 2" biastype="affine" gainprm="30" biasprm="0 -30 -1"/>
+    <general name="tail_yaw_0_servo" joint="tail_yaw_0" ctrlrange="-0.42 0.42" forcerange="-5 5" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+    <general name="tail_yaw_1_servo" joint="tail_yaw_1" ctrlrange="-0.42 0.42" forcerange="-5 5" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+    <general name="tail_yaw_2_servo" joint="tail_yaw_2" ctrlrange="-0.42 0.42" forcerange="-5 5" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+    <general name="tail_yaw_3_servo" joint="tail_yaw_3" ctrlrange="-0.42 0.42" forcerange="-5 5" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+    <general name="tail_yaw_4_servo" joint="tail_yaw_4" ctrlrange="-0.42 0.42" forcerange="-5 5" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+    <general name="tail_yaw_5_servo" joint="tail_yaw_5" ctrlrange="-0.42 0.42" forcerange="-5 5" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+    <general name="tail_yaw_6_servo" joint="tail_yaw_6" ctrlrange="-0.42 0.42" forcerange="-5 5" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+    <general name="tail_yaw_7_servo" joint="tail_yaw_7" ctrlrange="-0.42 0.42" forcerange="-5 5" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+    <general name="tail_yaw_8_servo" joint="tail_yaw_8" ctrlrange="-0.42 0.42" forcerange="-5 5" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+    <general name="tail_yaw_9_servo" joint="tail_yaw_9" ctrlrange="-0.42 0.42" forcerange="-5 5" biastype="affine" gainprm="70" biasprm="0 -70 -2"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0.326631 1 0 0 0 0.42 -0.8 1.6 -0.8 -0.42 -0.42 -0.8 1.6 -0.8 0.42 0.42 -0.8 1.6 -0.8 -0.42 -0.42 -0.8 1.6 -0.8 0.42 0 -0.28 0 0 0 0 0 0 0 0 0 0 0 0"/>
+  </keyframe>
+</mujoco>

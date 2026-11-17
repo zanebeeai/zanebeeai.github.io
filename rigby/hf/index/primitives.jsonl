@@ -415,3 +415,221 @@
 {"body": "zoo_dual_arm", "type": "mode", "name": "right_fingers_rotate_left", "about": null, "joints": ["right_joint_0", "right_joint_3"], "frees": [], "round": 0}
 {"body": "zoo_dual_arm", "type": "mode", "name": "right_left_finger_backward", "about": null, "joints": ["right_grip_left"], "frees": [], "round": 0}
 {"body": "zoo_dual_arm", "type": "mode", "name": "right_right_finger_forward", "about": null, "joints": ["right_grip_right"], "frees": [], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "trunk_lower", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_knee", "RL_pitch", "RR_knee", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "trunk_shift_forward", "about": null, "joints": ["FL_pitch", "FR_pitch", "RL_pitch", "RR_pitch"], "frees": [], "round": 1}
+{"body": "astral_aegis_t", "type": "mode", "name": "trunk_shift_left", "about": null, "joints": ["FL_abduct", "FR_abduct", "RL_abduct", "RR_abduct"], "frees": [], "round": 1}
+{"body": "astral_aegis_t", "type": "mode", "name": "trunk_roll_left", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "trunk_pitch_down", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "fl_tip_up", "about": null, "joints": ["FL_ankle_pitch", "FL_knee", "FL_pitch"], "frees": ["FL_foot_tip"], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "fl_tip_out", "about": null, "joints": ["FL_abduct", "FL_ankle_roll", "FL_knee"], "frees": ["FL_foot_tip"], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "fr_tip_up", "about": null, "joints": ["FR_ankle_pitch", "FR_knee", "FR_pitch"], "frees": ["FR_foot_tip"], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "fr_tip_out", "about": null, "joints": ["FR_abduct", "FR_ankle_roll", "FR_knee"], "frees": ["FR_foot_tip"], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "rl_tip_up", "about": null, "joints": ["RL_ankle_pitch", "RL_knee", "RL_pitch"], "frees": ["RL_foot_tip"], "round": 1}
+{"body": "astral_aegis_t", "type": "mode", "name": "rl_tip_out", "about": null, "joints": ["RL_abduct", "RL_ankle_roll", "RL_knee"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "rr_tip_up", "about": null, "joints": ["RR_ankle_pitch", "RR_knee", "RR_pitch"], "frees": ["RR_foot_tip"], "round": 1}
+{"body": "astral_aegis_t", "type": "mode", "name": "rr_tip_out", "about": null, "joints": ["RR_abduct", "RR_ankle_roll", "RR_knee"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "head_down", "about": null, "joints": ["neck_pitch"], "frees": [], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "head_retract", "about": null, "joints": ["neck_extend"], "frees": [], "round": 0}
+{"body": "astral_aegis_t", "type": "mode", "name": "head_yaw_left", "about": null, "joints": ["head_yaw"], "frees": [], "round": 0}
+{"body": "astral_aegis_t", "type": "gait", "name": "trot", "about": null, "source": "llm", "cycle_s": 0.6, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5}}
+{"body": "astral_aegis_t", "type": "gait", "name": "crawl", "about": null, "source": "llm", "cycle_s": 1.2, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.25, "FR_foot_tip": 0.5, "RL_foot_tip": 0.75}}
+{"body": "astral_aegis_t", "type": "gait", "name": "alternating", "about": null, "source": "intake", "cycle_s": 0.374, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5, "RR_foot_tip": 0.0}}
+{"body": "astral_crocodile", "type": "mode", "name": "trunk_lower", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_knee", "RL_pitch", "RR_knee", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "trunk_shift_forward", "about": null, "joints": ["FL_pitch", "FR_pitch", "RL_pitch", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "trunk_shift_left", "about": null, "joints": ["FL_abduct", "FR_abduct", "RL_abduct", "RR_abduct"], "frees": [], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "trunk_roll_right", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "trunk_pitch_down", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 1}
+{"body": "astral_crocodile", "type": "mode", "name": "fl_tip_up", "about": null, "joints": ["FL_ankle_pitch", "FL_knee", "FL_pitch"], "frees": ["FL_foot_tip"], "round": 1}
+{"body": "astral_crocodile", "type": "mode", "name": "fl_tip_left", "about": null, "joints": ["FL_abduct", "FL_ankle_roll", "FL_knee"], "frees": ["FL_foot_tip"], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "fr_tip_up", "about": null, "joints": ["FR_ankle_pitch", "FR_knee", "FR_pitch"], "frees": ["FR_foot_tip"], "round": 1}
+{"body": "astral_crocodile", "type": "mode", "name": "fr_tip_right", "about": null, "joints": ["FR_abduct", "FR_ankle_roll", "FR_knee"], "frees": ["FR_foot_tip"], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "rl_tip_up", "about": null, "joints": ["RL_ankle_pitch", "RL_knee", "RL_pitch"], "frees": ["RL_foot_tip"], "round": 1}
+{"body": "astral_crocodile", "type": "mode", "name": "rl_tip_left", "about": null, "joints": ["RL_abduct", "RL_ankle_roll", "RL_knee"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "rr_tip_up", "about": null, "joints": ["RR_ankle_pitch", "RR_knee", "RR_pitch"], "frees": ["RR_foot_tip"], "round": 1}
+{"body": "astral_crocodile", "type": "mode", "name": "rr_tip_right", "about": null, "joints": ["RR_abduct", "RR_ankle_roll", "RR_knee"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "head_left", "about": null, "joints": ["head_pan"], "frees": [], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "head_up", "about": null, "joints": ["head_pitch"], "frees": [], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "jaw_open", "about": null, "joints": ["jaw_open"], "frees": [], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "tail_right", "about": null, "joints": ["tail_yaw_0", "tail_yaw_1", "tail_yaw_2", "tail_yaw_3", "tail_yaw_4", "tail_yaw_5", "tail_yaw_6"], "frees": [], "round": 0}
+{"body": "astral_crocodile", "type": "mode", "name": "tail_s_right", "about": null, "joints": ["tail_yaw_0", "tail_yaw_1", "tail_yaw_2", "tail_yaw_3", "tail_yaw_4", "tail_yaw_5", "tail_yaw_6"], "frees": [], "round": 0}
+{"body": "astral_crocodile", "type": "gait", "name": "trot", "about": null, "source": "llm", "cycle_s": 0.6, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5}}
+{"body": "astral_crocodile", "type": "gait", "name": "walk", "about": null, "source": "llm", "cycle_s": 1.0, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.25, "FR_foot_tip": 0.5, "RL_foot_tip": 0.75}}
+{"body": "astral_crocodile", "type": "gait", "name": "alternating", "about": null, "source": "intake", "cycle_s": 0.3426, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5, "RR_foot_tip": 0.0}}
+{"body": "astral_crocodile", "type": "gait", "name": "crawl", "about": null, "source": "intake", "cycle_s": 1.3703, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.75, "RR_foot_tip": 0.25}}
+{"body": "astral_ember_f", "type": "mode", "name": "head_pitch_down", "about": null, "joints": ["neck_pitch"], "frees": [], "round": 2}
+{"body": "astral_ember_f", "type": "mode", "name": "head_yaw_right", "about": null, "joints": ["head_yaw"], "frees": [], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "left_ear_fold", "about": null, "joints": ["ear_fold_-1"], "frees": [], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "right_ear_fold", "about": null, "joints": ["ear_fold_1"], "frees": [], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "tail_up", "about": null, "joints": ["tail_0", "tail_2"], "frees": [], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "tail_right", "about": null, "joints": ["tail_1"], "frees": [], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "trunk_lower", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_knee", "RL_pitch", "RR_knee", "RR_pitch"], "frees": [], "round": 1}
+{"body": "astral_ember_f", "type": "mode", "name": "trunk_shift_forward", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_pitch", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "trunk_shift_left", "about": null, "joints": ["FL_abduct", "FL_ankle_roll", "FR_abduct", "FR_ankle_roll", "RL_abduct", "RL_ankle_roll", "RR_abduct", "RR_ankle_roll"], "frees": [], "round": 1}
+{"body": "astral_ember_f", "type": "mode", "name": "trunk_roll_right", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "trunk_pitch_down", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "trunk_yaw_left", "about": null, "joints": ["FL_abduct", "FR_abduct", "RL_abduct", "RR_abduct"], "frees": [], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "fl_foot_up", "about": null, "joints": ["FL_knee", "FL_pitch"], "frees": ["FL_foot_tip"], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "rl_foot_up", "about": null, "joints": ["RL_knee", "RL_pitch"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "rr_foot_up", "about": null, "joints": ["RR_knee", "RR_pitch"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "fl_foot_out", "about": null, "joints": ["FL_abduct", "FL_ankle_roll", "FL_knee"], "frees": ["FL_foot_tip"], "round": 0}
+{"body": "astral_ember_f", "type": "mode", "name": "rr_foot_out", "about": null, "joints": ["RR_abduct", "RR_ankle_roll", "RR_knee"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_ember_f", "type": "gait", "name": "trot", "about": null, "source": "llm", "cycle_s": 0.45, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5}}
+{"body": "astral_ember_f", "type": "gait", "name": "walk", "about": null, "source": "llm", "cycle_s": 0.8, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.25, "FR_foot_tip": 0.5, "RL_foot_tip": 0.75}}
+{"body": "astral_ember_f", "type": "gait", "name": "alternating", "about": null, "source": "intake", "cycle_s": 0.4048, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5, "RR_foot_tip": 0.0}}
+{"body": "astral_ember_f", "type": "gait", "name": "crawl", "about": null, "source": "intake", "cycle_s": 1.6192, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.75, "RR_foot_tip": 0.25}}
+{"body": "astral_iguana", "type": "mode", "name": "trunk_lower", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_knee", "RL_pitch", "RR_knee", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "trunk_shift_forward", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_knee", "RL_pitch", "RR_knee", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "trunk_shift_left", "about": null, "joints": ["FL_abduct", "FR_abduct", "RL_abduct", "RR_abduct"], "frees": [], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "trunk_roll_left", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "trunk_pitch_down", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 1}
+{"body": "astral_iguana", "type": "mode", "name": "RL_tip_up", "about": null, "joints": ["RL_knee", "RL_pitch"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "RR_tip_up", "about": null, "joints": ["RR_knee", "RR_pitch"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "FL_tip_left", "about": null, "joints": ["FL_abduct", "FL_ankle_roll", "FL_knee"], "frees": ["FL_foot_tip"], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "FR_tip_right", "about": null, "joints": ["FR_abduct", "FR_ankle_roll", "FR_knee"], "frees": ["FR_foot_tip"], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "RL_tip_left", "about": null, "joints": ["RL_abduct", "RL_ankle_roll", "RL_knee"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "RR_tip_right", "about": null, "joints": ["RR_abduct", "RR_ankle_roll", "RR_knee"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "front_ankles_flex", "about": null, "joints": ["FL_ankle_pitch", "FL_knee"], "frees": ["FL_foot_tip"], "round": 1}
+{"body": "astral_iguana", "type": "mode", "name": "rear_ankles_flex", "about": null, "joints": ["RR_ankle_pitch", "RR_knee"], "frees": ["RR_foot_tip"], "round": 1}
+{"body": "astral_iguana", "type": "mode", "name": "head_left", "about": null, "joints": ["head_pan"], "frees": [], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "head_down", "about": null, "joints": ["head_pitch"], "frees": [], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "jaw_open", "about": null, "joints": ["jaw_open"], "frees": [], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "dewlap_fold_back", "about": null, "joints": ["dewlap_fold"], "frees": [], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "tail_curl_right", "about": null, "joints": ["tail_yaw_0", "tail_yaw_1", "tail_yaw_2", "tail_yaw_3", "tail_yaw_4", "tail_yaw_5", "tail_yaw_6", "tail_yaw_7", "tail_yaw_8", "tail_yaw_9"], "frees": [], "round": 0}
+{"body": "astral_iguana", "type": "mode", "name": "tail_s_bend_right", "about": null, "joints": ["tail_yaw_0", "tail_yaw_1", "tail_yaw_2", "tail_yaw_3", "tail_yaw_4", "tail_yaw_5", "tail_yaw_6", "tail_yaw_7", "tail_yaw_8", "tail_yaw_9"], "frees": [], "round": 0}
+{"body": "astral_iguana", "type": "gait", "name": "trot", "about": null, "source": "llm", "cycle_s": 0.5, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5}}
+{"body": "astral_iguana", "type": "gait", "name": "walk", "about": null, "source": "llm", "cycle_s": 0.9, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.25, "FR_foot_tip": 0.5, "RL_foot_tip": 0.75}}
+{"body": "astral_iguana", "type": "gait", "name": "alternating", "about": null, "source": "intake", "cycle_s": 0.415, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5, "RR_foot_tip": 0.0}}
+{"body": "astral_iguana", "type": "gait", "name": "crawl", "about": null, "source": "intake", "cycle_s": 1.6599, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.75, "RR_foot_tip": 0.25}}
+{"body": "astral_kitsune", "type": "mode", "name": "trunk_shift_forward", "about": null, "joints": ["FL_pitch", "FR_pitch", "RL_pitch", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "trunk_lower", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_knee", "RL_pitch", "RR_knee", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "trunk_shift_left", "about": null, "joints": ["FL_abduct", "FL_ankle_roll", "FR_abduct", "FR_ankle_roll", "RL_abduct", "RL_ankle_roll", "RR_abduct", "RR_ankle_roll"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "trunk_roll_right", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "trunk_pitch_down", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "trunk_yaw_left", "about": null, "joints": ["FL_abduct", "FR_abduct", "RL_abduct", "RR_abduct"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "fl_foot_up", "about": null, "joints": ["FL_ankle_pitch", "FL_knee", "FL_pitch"], "frees": ["FL_foot_tip"], "round": 1}
+{"body": "astral_kitsune", "type": "mode", "name": "fr_foot_up", "about": null, "joints": ["FR_ankle_pitch", "FR_knee", "FR_pitch"], "frees": ["FR_foot_tip"], "round": 1}
+{"body": "astral_kitsune", "type": "mode", "name": "rl_foot_up", "about": null, "joints": ["RL_ankle_pitch", "RL_knee", "RL_pitch"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "rr_foot_up", "about": null, "joints": ["RR_ankle_pitch", "RR_knee", "RR_pitch"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "head_nod_down", "about": null, "joints": ["neck_pitch"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "head_turn_right", "about": null, "joints": ["head_yaw"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "ears_fold_back", "about": null, "joints": ["ear_fold_-1", "ear_fold_1"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "tail_fan_raise", "about": null, "joints": ["tail_0_bend", "tail_0_lift", "tail_0_tip", "tail_1_bend", "tail_1_lift", "tail_1_tip", "tail_2_bend", "tail_2_lift", "tail_2_tip", "tail_3_bend", "tail_3_lift", "tail_3_tip", "tail_4_bend", "tail_4_lift", "tail_4_tip", "tail_5_bend", "tail_5_lift", "tail_5_tip", "tail_6_bend", "tail_6_lift", "tail_6_tip", "tail_7_bend", "tail_7_lift", "tail_7_tip", "tail_8_bend", "tail_8_lift", "tail_8_tip"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "tail_fan_spread", "about": null, "joints": ["tail_0_spread", "tail_1_spread", "tail_2_spread", "tail_3_spread", "tail_5_spread", "tail_6_spread", "tail_7_spread", "tail_8_spread"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "mode", "name": "tail_fan_sweep_left", "about": null, "joints": ["tail_0_spread", "tail_1_spread", "tail_2_spread", "tail_3_spread", "tail_4_spread", "tail_5_spread", "tail_6_spread", "tail_7_spread", "tail_8_spread"], "frees": [], "round": 0}
+{"body": "astral_kitsune", "type": "gait", "name": "trot", "about": null, "source": "llm", "cycle_s": 0.5, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5}}
+{"body": "astral_kitsune", "type": "gait", "name": "walk", "about": null, "source": "llm", "cycle_s": 0.9, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.25, "FR_foot_tip": 0.5, "RL_foot_tip": 0.75}}
+{"body": "astral_kitsune", "type": "gait", "name": "alternating", "about": null, "source": "intake", "cycle_s": 0.4401, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5, "RR_foot_tip": 0.0}}
+{"body": "astral_monkey", "type": "mode", "name": "trunk_lower", "about": null, "joints": ["LF_bend", "LF_pitch", "LF_wrist_pitch", "RF_bend", "RF_pitch", "RF_wrist_pitch"], "frees": [], "round": 1}
+{"body": "astral_monkey", "type": "mode", "name": "trunk_shift_forward", "about": null, "joints": ["LF_pitch", "LF_wrist_pitch", "RF_pitch", "RF_wrist_pitch"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "trunk_shift_left", "about": null, "joints": ["LF_roll", "LF_wrist_roll", "RF_roll", "RF_wrist_roll"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "trunk_roll_left", "about": null, "joints": ["LF_bend", "LF_pitch", "RF_bend", "RF_pitch"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "trunk_yaw_left", "about": null, "joints": ["LF_pitch", "LF_yaw", "RF_pitch", "RF_yaw"], "frees": [], "round": 2}
+{"body": "astral_monkey", "type": "mode", "name": "trunk_pitch_up", "about": null, "joints": ["LF_pitch", "LF_wrist_pitch", "RF_pitch", "RF_wrist_pitch"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "lh_arm_forward", "about": null, "joints": ["LH_bend", "LH_extend", "LH_wrist_pitch"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "lh_arm_left", "about": null, "joints": ["LH_roll", "LH_wrist_roll", "LH_wrist_yaw", "LH_yaw"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "lh_arm_up", "about": null, "joints": ["LH_pitch"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "lh_jaws_close", "about": null, "joints": ["LH_close_-1", "LH_close_1"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "rh_arm_forward", "about": null, "joints": ["RH_bend", "RH_extend", "RH_wrist_pitch"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "rh_arm_right", "about": null, "joints": ["RH_roll", "RH_wrist_roll", "RH_wrist_yaw", "RH_yaw"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "rh_arm_up", "about": null, "joints": ["RH_pitch"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "rh_jaws_close", "about": null, "joints": ["RH_close_-1", "RH_close_1"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "mode", "name": "tail_left", "about": null, "joints": ["tail_yaw_0", "tail_yaw_1", "tail_yaw_2", "tail_yaw_3", "tail_yaw_4", "tail_yaw_5", "tail_yaw_6"], "frees": [], "round": 1}
+{"body": "astral_monkey", "type": "mode", "name": "tail_forward", "about": null, "joints": ["TAIL_close_-1", "TAIL_close_1", "tail_pitch_0", "tail_pitch_1", "tail_pitch_2", "tail_pitch_3", "tail_pitch_4", "tail_pitch_5", "tail_pitch_6"], "frees": [], "round": 1}
+{"body": "astral_monkey", "type": "mode", "name": "head_left", "about": null, "joints": ["head_pan", "head_pitch"], "frees": [], "round": 0}
+{"body": "astral_monkey", "type": "gait", "name": "biped_walk", "about": null, "source": "llm", "cycle_s": 1.0, "phase": {"LF_jaw_-1_tip": 0.0, "LF_jaw_1_tip": 0.0, "RF_jaw_-1_tip": 0.5, "RF_jaw_1_tip": 0.5}}
+{"body": "astral_monkey", "type": "gait", "name": "alternating", "about": null, "source": "intake", "cycle_s": 0.6333, "phase": {"LF_jaw_-1_tip": 0.5, "LF_jaw_1_tip": 0.5, "RF_jaw_-1_tip": 0.0, "RF_jaw_1_tip": 0.0}}
+{"body": "astral_monkey", "type": "gait", "name": "crawl", "about": null, "source": "intake", "cycle_s": 1.2666, "phase": {"LF_jaw_-1_tip": 0.0, "LF_jaw_1_tip": 0.0, "RF_jaw_-1_tip": 0.5, "RF_jaw_1_tip": 0.5}}
+{"body": "astral_octopus", "type": "mode", "name": "trunk_yaw_left", "about": null, "joints": ["arm_0_yaw_0", "arm_1_yaw_0", "arm_2_yaw_0", "arm_3_yaw_0", "arm_4_yaw_0", "arm_5_yaw_0", "arm_6_yaw_0", "arm_7_yaw_0"], "frees": [], "round": 0}
+{"body": "astral_octopus", "type": "mode", "name": "trunk_pitch_nose_up", "about": null, "joints": ["arm_0_lift", "arm_1_lift", "arm_2_lift", "arm_3_lift", "arm_4_lift", "arm_5_lift", "arm_6_lift", "arm_7_lift"], "frees": [], "round": 1}
+{"body": "astral_octopus", "type": "mode", "name": "trunk_roll_right", "about": null, "joints": ["arm_0_lift", "arm_1_lift", "arm_2_lift", "arm_3_lift", "arm_4_lift", "arm_5_lift", "arm_6_lift", "arm_7_lift"], "frees": [], "round": 1}
+{"body": "astral_octopus", "type": "mode", "name": "arm_0_tip_up", "about": null, "joints": ["arm_0_lift", "arm_0_pitch_0", "arm_0_pitch_1", "arm_0_pitch_2"], "frees": ["arm_0_pad_tip"], "round": 1}
+{"body": "astral_octopus", "type": "mode", "name": "arm_0_tip_left", "about": null, "joints": ["arm_0_lift", "arm_0_pitch_1", "arm_0_yaw_0", "arm_0_yaw_1", "arm_0_yaw_2", "arm_0_yaw_3"], "frees": ["arm_0_pad_tip"], "round": 1}
+{"body": "astral_octopus", "type": "mode", "name": "arm_0_pad_tilt", "about": null, "joints": ["arm_0_lift", "arm_0_pad_pitch", "arm_0_pad_roll", "arm_0_pitch_1"], "frees": ["arm_0_pad_tip"], "round": 1}
+{"body": "astral_octopus", "type": "mode", "name": "arm_2_tip_up", "about": null, "joints": ["arm_2_lift", "arm_2_pitch_0", "arm_2_pitch_1", "arm_2_pitch_2"], "frees": ["arm_2_pad_tip"], "round": 1}
+{"body": "astral_octopus", "type": "mode", "name": "arm_4_tip_up", "about": null, "joints": ["arm_4_lift", "arm_4_pitch_0", "arm_4_pitch_1", "arm_4_pitch_2"], "frees": ["arm_4_pad_tip"], "round": 1}
+{"body": "astral_octopus", "type": "mode", "name": "arm_6_tip_up", "about": null, "joints": ["arm_6_lift", "arm_6_pitch_0", "arm_6_pitch_1", "arm_6_pitch_2"], "frees": ["arm_6_pad_tip"], "round": 1}
+{"body": "astral_octopus", "type": "mode", "name": "mantle_flare_out", "about": null, "joints": ["mantle_slide_0", "mantle_slide_1", "mantle_slide_2", "mantle_slide_3", "mantle_slide_4", "mantle_slide_5", "mantle_slide_6", "mantle_slide_7"], "frees": [], "round": 0}
+{"body": "astral_octopus", "type": "mode", "name": "mantle_pump_up", "about": null, "joints": ["buoyancy_trim", "mantle_pump"], "frees": [], "round": 0}
+{"body": "astral_octopus", "type": "mode", "name": "funnel_left_down", "about": null, "joints": ["jet_pitch", "jet_yaw"], "frees": [], "round": 1}
+{"body": "astral_prism_m", "type": "mode", "name": "head_pitch_down", "about": null, "joints": ["neck_pitch"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "head_yaw_left", "about": null, "joints": ["head_yaw"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "right_palm_up", "about": null, "joints": ["arm_elbow_-1", "arm_pitch_-1", "arm_wrist_-1", "arm_yaw_-1"], "frees": [], "round": 1}
+{"body": "astral_prism_m", "type": "mode", "name": "right_palm_out", "about": null, "joints": ["arm_yaw_-1"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "right_palm_extend", "about": null, "joints": ["arm_elbow_-1"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "left_palm_up", "about": null, "joints": ["arm_elbow_1", "arm_pitch_1", "arm_wrist_1", "arm_yaw_1"], "frees": [], "round": 1}
+{"body": "astral_prism_m", "type": "mode", "name": "left_palm_out", "about": null, "joints": ["arm_yaw_1"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "left_palm_extend", "about": null, "joints": ["arm_elbow_1"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "trunk_raise", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_knee", "RL_pitch", "RR_knee", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "trunk_shift_forward", "about": null, "joints": ["FL_pitch", "FR_pitch", "RL_pitch", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "trunk_shift_left", "about": null, "joints": ["FL_abduct", "FR_abduct", "RL_abduct", "RR_abduct"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "trunk_pitch_nose_down", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "trunk_roll_left", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "trunk_yaw_left", "about": null, "joints": ["FL_abduct", "FR_abduct", "RL_abduct", "RR_abduct"], "frees": [], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "FL_foot_up", "about": null, "joints": ["FL_knee", "FL_pitch"], "frees": ["FL_foot_tip"], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "FR_foot_up", "about": null, "joints": ["FR_knee", "FR_pitch"], "frees": ["FR_foot_tip"], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "RL_foot_up", "about": null, "joints": ["RL_knee", "RL_pitch"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "RR_foot_up", "about": null, "joints": ["RR_knee", "RR_pitch"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_prism_m", "type": "mode", "name": "FL_foot_out", "about": null, "joints": ["FL_abduct", "FL_ankle_roll", "FL_knee"], "frees": ["FL_foot_tip"], "round": 2}
+{"body": "astral_prism_m", "type": "mode", "name": "RR_foot_out", "about": null, "joints": ["RR_abduct", "RR_ankle_pitch", "RR_ankle_roll", "RR_knee"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_prism_m", "type": "gait", "name": "trot", "about": null, "source": "llm", "cycle_s": 0.6, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5}}
+{"body": "astral_prism_m", "type": "gait", "name": "alternating", "about": null, "source": "intake", "cycle_s": 0.4249, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5, "RR_foot_tip": 0.0}}
+{"body": "astral_salamander", "type": "mode", "name": "trunk_lower", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_knee", "RL_pitch", "RR_knee", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "trunk_shift_forward", "about": null, "joints": ["FL_pitch", "FR_pitch", "RL_pitch", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "trunk_shift_left", "about": null, "joints": ["FL_abduct", "FR_abduct", "RL_abduct", "RR_abduct"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "trunk_pitch_nose_down", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "trunk_roll_left_down", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "trunk_yaw_left", "about": null, "joints": ["pelvis_yaw", "spine_yaw"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "fl_tip_up", "about": null, "joints": ["FL_ankle_pitch", "FL_knee", "FL_pitch"], "frees": ["FL_foot_tip"], "round": 1}
+{"body": "astral_salamander", "type": "mode", "name": "fl_tip_left", "about": null, "joints": ["FL_abduct", "FL_ankle_roll", "FL_knee"], "frees": ["FL_foot_tip"], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "fr_tip_up", "about": null, "joints": ["FR_ankle_pitch", "FR_knee", "FR_pitch"], "frees": ["FR_foot_tip"], "round": 1}
+{"body": "astral_salamander", "type": "mode", "name": "fr_tip_right", "about": null, "joints": ["FR_abduct", "FR_ankle_roll", "FR_knee"], "frees": ["FR_foot_tip"], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "rl_tip_up", "about": null, "joints": ["RL_ankle_pitch", "RL_knee", "RL_pitch"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "rl_tip_left", "about": null, "joints": ["RL_abduct", "RL_ankle_roll", "RL_knee"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "rr_tip_up", "about": null, "joints": ["RR_ankle_pitch", "RR_knee", "RR_pitch"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "rr_tip_right", "about": null, "joints": ["RR_abduct", "RR_ankle_roll", "RR_knee"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "tail_tip_right", "about": null, "joints": ["tail_yaw_0", "tail_yaw_1", "tail_yaw_2", "tail_yaw_3", "tail_yaw_4", "tail_yaw_5", "tail_yaw_6"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "tail_tip_s_curve", "about": null, "joints": ["tail_yaw_0", "tail_yaw_1", "tail_yaw_2", "tail_yaw_3", "tail_yaw_4", "tail_yaw_5", "tail_yaw_6"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "jaw_tip_left", "about": null, "joints": ["head_pan"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "jaw_tip_up", "about": null, "joints": ["head_pitch"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "mode", "name": "jaw_tip_open", "about": null, "joints": ["jaw_open"], "frees": [], "round": 0}
+{"body": "astral_salamander", "type": "gait", "name": "walk", "about": null, "source": "llm", "cycle_s": 1.2, "phase": {"RL_foot_tip": 0.0, "FL_foot_tip": 0.25, "RR_foot_tip": 0.5, "FR_foot_tip": 0.75}}
+{"body": "astral_salamander", "type": "gait", "name": "trot", "about": null, "source": "llm", "cycle_s": 0.6, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5}}
+{"body": "astral_vanta_l", "type": "mode", "name": "head_left", "about": null, "joints": ["neck_yaw"], "frees": [], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "head_down", "about": null, "joints": ["neck_pitch"], "frees": [], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "jaw_open", "about": null, "joints": ["jaw"], "frees": [], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "tail_left", "about": null, "joints": ["tail_joint_0", "tail_joint_2", "tail_joint_4", "tail_joint_6"], "frees": [], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "tail_up", "about": null, "joints": ["tail_joint_1", "tail_joint_3", "tail_joint_5", "tail_joint_7"], "frees": [], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "trunk_lower", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_knee", "RL_pitch", "RR_knee", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "trunk_forward", "about": null, "joints": ["FL_knee", "FL_pitch", "FR_knee", "FR_pitch", "RL_knee", "RL_pitch", "RR_knee", "RR_pitch"], "frees": [], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "trunk_left", "about": null, "joints": ["FL_abduct", "FR_abduct", "RL_abduct", "RR_abduct"], "frees": [], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "trunk_roll_right", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "trunk_pitch_down", "about": null, "joints": ["FL_knee", "FR_knee", "RL_knee", "RR_knee"], "frees": [], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "fl_foot_up_forward", "about": null, "joints": ["FL_ankle_pitch", "FL_knee", "FL_pitch"], "frees": ["FL_foot_tip"], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "fl_foot_out", "about": null, "joints": ["FL_abduct", "FL_ankle_roll", "FL_knee"], "frees": ["FL_foot_tip"], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "fr_foot_up_forward", "about": null, "joints": ["FR_ankle_pitch", "FR_knee", "FR_pitch"], "frees": ["FR_foot_tip"], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "fr_foot_out", "about": null, "joints": ["FR_abduct", "FR_ankle_roll", "FR_knee"], "frees": ["FR_foot_tip"], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "rl_foot_up_forward", "about": null, "joints": ["RL_ankle_pitch", "RL_knee", "RL_pitch"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "rl_foot_out", "about": null, "joints": ["RL_abduct", "RL_ankle_roll", "RL_knee"], "frees": ["RL_foot_tip"], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "rr_foot_up_forward", "about": null, "joints": ["RR_ankle_pitch", "RR_knee", "RR_pitch"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_vanta_l", "type": "mode", "name": "rr_foot_out", "about": null, "joints": ["RR_abduct", "RR_ankle_roll", "RR_knee"], "frees": ["RR_foot_tip"], "round": 0}
+{"body": "astral_vanta_l", "type": "gait", "name": "walk", "about": null, "source": "llm", "cycle_s": 1.2, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.25, "FR_foot_tip": 0.5, "RL_foot_tip": 0.75}}
+{"body": "astral_vanta_l", "type": "gait", "name": "trot", "about": null, "source": "llm", "cycle_s": 0.6, "phase": {"FL_foot_tip": 0.0, "RR_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5}}
+{"body": "astral_vanta_l", "type": "gait", "name": "alternating", "about": null, "source": "intake", "cycle_s": 0.4007, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.5, "RR_foot_tip": 0.0}}
+{"body": "astral_vanta_l", "type": "gait", "name": "crawl", "about": null, "source": "intake", "cycle_s": 1.6027, "phase": {"FL_foot_tip": 0.0, "FR_foot_tip": 0.5, "RL_foot_tip": 0.75, "RR_foot_tip": 0.25}}
+{"body": "astral_weaver_s", "type": "mode", "name": "trunk_shift_forward", "about": null, "joints": ["L0_pitch", "L1_pitch", "L2_pitch", "L3_pitch", "R0_pitch", "R1_pitch", "R2_pitch", "R3_pitch"], "frees": [], "round": 0}
+{"body": "astral_weaver_s", "type": "mode", "name": "trunk_lower", "about": null, "joints": ["L0_knee", "L1_knee", "L2_knee", "L3_knee", "R0_knee", "R1_knee", "R2_knee", "R3_knee"], "frees": [], "round": 0}
+{"body": "astral_weaver_s", "type": "mode", "name": "trunk_shift_left", "about": null, "joints": ["L0_abduct", "L1_abduct", "L2_abduct", "L3_abduct", "R0_abduct", "R1_abduct", "R2_abduct", "R3_abduct"], "frees": [], "round": 0}
+{"body": "astral_weaver_s", "type": "mode", "name": "trunk_roll_right", "about": null, "joints": ["L0_knee", "L1_knee", "L2_knee", "L3_knee", "R0_knee", "R1_knee", "R2_knee", "R3_knee"], "frees": [], "round": 0}
+{"body": "astral_weaver_s", "type": "mode", "name": "trunk_pitch_down", "about": null, "joints": ["L0_knee", "L1_knee", "L2_knee", "L3_knee", "R0_knee", "R1_knee", "R2_knee", "R3_knee"], "frees": [], "round": 0}
+{"body": "astral_weaver_s", "type": "mode", "name": "trunk_yaw_left", "about": null, "joints": ["L0_pitch", "L1_pitch", "L2_pitch", "L3_pitch", "R0_pitch", "R1_pitch", "R2_pitch", "R3_pitch"], "frees": [], "round": 0}
+{"body": "astral_weaver_s", "type": "mode", "name": "left_tips_ankles", "about": null, "joints": ["L0_ankle_pitch", "L0_ankle_roll", "L1_ankle_pitch", "L1_ankle_roll", "L2_ankle_pitch", "L2_ankle_roll", "L3_ankle_pitch", "L3_ankle_roll", "R0_ankle_pitch", "R0_ankle_roll", "R1_ankle_pitch", "R1_ankle_roll", "R2_ankle_pitch", "R2_ankle_roll", "R3_ankle_pitch", "R3_ankle_roll"], "frees": [], "round": 1}
+{"body": "astral_weaver_s", "type": "mode", "name": "l0_tip_up", "about": null, "joints": ["L0_abduct", "L0_pitch"], "frees": ["L0_foot_tip"], "round": 1}
+{"body": "astral_weaver_s", "type": "mode", "name": "l0_tip_forward", "about": null, "joints": ["L0_abduct", "L0_knee", "L0_pitch"], "frees": ["L0_foot_tip"], "round": 1}
+{"body": "astral_weaver_s", "type": "mode", "name": "r0_tip_up", "about": null, "joints": ["R0_abduct", "R0_pitch"], "frees": ["R0_foot_tip"], "round": 1}
+{"body": "astral_weaver_s", "type": "mode", "name": "r0_tip_forward", "about": null, "joints": ["R0_abduct", "R0_knee", "R0_pitch"], "frees": ["R0_foot_tip"], "round": 1}
+{"body": "astral_weaver_s", "type": "mode", "name": "l3_tip_up", "about": null, "joints": ["L3_knee", "L3_pitch"], "frees": ["L3_foot_tip"], "round": 0}
+{"body": "astral_weaver_s", "type": "mode", "name": "r3_tip_up", "about": null, "joints": ["R3_knee", "R3_pitch"], "frees": ["R3_foot_tip"], "round": 0}
+{"body": "astral_weaver_s", "type": "mode", "name": "l1_tip_up", "about": null, "joints": ["L1_abduct", "L1_pitch"], "frees": ["L1_foot_tip"], "round": 1}
+{"body": "astral_weaver_s", "type": "mode", "name": "r2_tip_up", "about": null, "joints": ["R2_abduct", "R2_pitch"], "frees": ["R2_foot_tip"], "round": 1}
+{"body": "astral_weaver_s", "type": "gait", "name": "alternating_tetrapod", "about": null, "source": "llm", "cycle_s": 0.9, "phase": {"L0_foot_tip": 0.0, "R1_foot_tip": 0.0, "L2_foot_tip": 0.0, "R3_foot_tip": 0.0, "R0_foot_tip": 0.5, "L1_foot_tip": 0.5, "R2_foot_tip": 0.5, "L3_foot_tip": 0.5}}
+{"body": "astral_weaver_s", "type": "gait", "name": "alternating", "about": null, "source": "intake", "cycle_s": 0.3744, "phase": {"L0_foot_tip": 0.0, "L1_foot_tip": 0.5, "L2_foot_tip": 0.0, "L3_foot_tip": 0.5, "R0_foot_tip": 0.5, "R1_foot_tip": 0.0, "R2_foot_tip": 0.5, "R3_foot_tip": 0.0}}
