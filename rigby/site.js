@@ -248,10 +248,10 @@ async function pipeline(sel = 0) {
       <p>${esc(b.origin)} · ${b.nq - (b.free_base ? 7 : 0)} joints · ${esc(b.kind_label.toLowerCase())}. The only input.</p></div>
     <div class="step"><div class="n">2 · Primitives</div><h3>${b.modes} modes, ${b.gaits} gaits</h3>
       <div class="minis">${prims.map(p => `<div class="mini">${vid(p.video)}<span>${esc(p.name)}</span></div>`).join("")}</div>
-      <p>Written once per robot by ${esc(b.primitives_model || "the model")}, each measured by forward kinematics.${used.size ? " Outlined: used by this clip." : ""}</p></div>
+      <p>Written once per robot by the model, each measured by forward kinematics.${used.size ? " Outlined: used by this clip." : ""}</p></div>
     <div class="step"><div class="n">3 · Program</div><h3>${esc(nice(c.skill))}, ${(side?.program?.keyframes || []).length} keyframes</h3>
       <pre class="code">${esc(programText(side?.program))}</pre>
-      <p>${esc(c.model || "")} wrote it from the skill's sentence and the primitive cards${c.repairs ? `, repaired ${c.repairs}×` : ""}.</p></div>
+      <p>The model wrote it from the skill's sentence and the primitive cards${c.repairs ? `, repaired ${c.repairs}×` : ""}.</p></div>
     <div class="step"><div class="n">4 · Checked clip</div><h3>${c.valid ? "Physically possible" : "Fails a check"}</h3>
       ${vid(c.video)}
       <div class="badges">${checks.map(([k, v]) => `<span class="badge ${v.pass ? "ok" : "bad"}">${esc(CHECK_NAMES[k] || nice(k))}</span>`).join("")}</div>
@@ -400,8 +400,7 @@ async function clipPage(app, body, stem) {
     const calls = side.call_log || [];
     const tin = calls.reduce((a, x) => a + (x.prompt_tokens || 0), 0), tout = calls.reduce((a, x) => a + (x.completion_tokens || 0), 0);
     const att = (side.attempts || []).map(a => `round ${a.round}: ${a.filters?.pass ? "passed" : "failed " + (a.filters?.failed || []).join(", ")}`);
-    $("#gen").innerHTML = `<dt>Language model</dt><dd class="mono">${esc(side.model || "–")}${side.reasoning ? ` (reasoning ${esc(side.reasoning)})` : ""}</dd>
-      <dt>Calls</dt><dd>${fmt(side.calls)} · ${fmt(tin)} tokens in, ${fmt(tout)} out</dd>
+    $("#gen").innerHTML = `<dt>Calls</dt><dd>${fmt(side.calls)} · ${fmt(tin)} tokens in, ${fmt(tout)} out</dd>
       <dt>Cost</dt><dd>$${fmt(side.cost_usd, 4)}</dd>
       <dt>Repairs</dt><dd>${fmt(side.repair_rounds ?? 0)}${att.length ? `<br><span class="note">${esc(att.join(" · "))}</span>` : ""}</dd>
       <dt>Primitives</dt><dd class="mono">${esc(side.library || "–")}</dd>
@@ -422,7 +421,7 @@ function robotKV(b) {
     <dt>Joints</dt><dd>${b.nq - (b.free_base ? 7 : 0)}${b.free_base ? " + floating base" : ""} · ${b.nu} actuators</dd>
     <dt>Size</dt><dd>${fmt(b.L_m, 3)} m (L) · ${fmt(b.mass_kg, 1)} kg · time scale ${fmt(b.T_s, 3)} s</dd>
     <dt>Tips</dt><dd class="mono" style="font-size:12px">${esc((b.tips || []).join(", "))}</dd>
-    <dt>Primitives</dt><dd>${b.modes} modes, ${b.gaits} gaits · ${esc(b.primitives_model || "–")}${b.primitives_cost_usd != null ? ` · $${fmt(b.primitives_cost_usd, 3)}` : ""}</dd></dl>`;
+    <dt>Primitives</dt><dd>${b.modes} modes, ${b.gaits} gaits${b.primitives_cost_usd != null ? ` · $${fmt(b.primitives_cost_usd, 3)}` : ""}</dd></dl>`;
 }
 function timeline(p) {
   const kfs = p.keyframes || [], T = p.duration_s || (kfs.at(-1)?.t ?? 1);
