@@ -103,7 +103,7 @@ Development skills (used while building the method) and frozen skills (written d
 | tap twice | frozen | 51 | 42 |
 | lift and hold | frozen | 51 | 28 |
 
-The label check is a strict, automatic test of each skill's definition. In a blind human rating of 117 clips, the rater judged most clips that fail it to be correct, so treat it as high-precision and low-recall.
+The label check is a strict, automatic test of each skill's definition.
 
 ## Imported motions: animal robots
 
@@ -190,7 +190,7 @@ To replay a clip in MuJoCo: load `bodies/<robot>.xml`, then set `data.qpos[:] = 
 ## Limitations
 
 - Kinematic only: no forces, torques or dynamic balance were simulated.
-- The label checks are strict and human-centric; many correct clips fail them (see above).
+- The label checks are strict and human-centric; a clip can do its skill and still fail them.
 - One clip per (robot, skill, arm, variant); there is no motion-capture ground truth.
 
 ## Licence

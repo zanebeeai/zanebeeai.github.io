@@ -254,7 +254,7 @@ function luRender(skill, focus, page = 0) {
 function setSection() {
   const st = S.meta.stats;
   return '<section class="sec wrap" id="set"><p class="stmt"><b>' + fmt(st.clips) + ' clips, ' + fmt(st.hours, 2) + ' hours of motion.</b> For ' + plural(st.bodies, "robot") + ', from three sources.</p>' +
-    '<div class="stmt-sub"><p>' + fmt(st.skill_clips) + ' skill clips across ' + plural(S.skills.length, "skill") + ', ' + fmt(st.taskblind_clips) + ' task-blind and ' + fmt(st.procedural_clips) + ' procedural, with ' + fmt(st.held_out) + ' of the robots held out for transfer tests. ' + fmt(st.frames) + ' frames at ' + st.fps.map(f => fmt(f)).join(", ") + ' fps. The model wrote ' + fmt(st.primitives) + ' primitives and ' + fmt(st.gaits) + ' gaits for these bodies. People rated ' + fmt(st.human_rated) + ' clips by eye and judged ' + fmt(st.human_yes) + ' to look right.</p></div>' +
+    '<div class="stmt-sub"><p>' + fmt(st.skill_clips) + ' skill clips across ' + plural(S.skills.length, "skill") + ', ' + fmt(st.taskblind_clips) + ' task-blind and ' + fmt(st.procedural_clips) + ' procedural, with ' + fmt(st.held_out) + ' of the robots held out for transfer tests. ' + fmt(st.frames) + ' frames at ' + st.fps.map(f => fmt(f)).join(", ") + ' fps. The model wrote ' + fmt(st.primitives) + ' primitives and ' + fmt(st.gaits) + ' gaits for these bodies.</p></div>' +
     '<div class="sec-body panel split" id="src"><div class="vlist" role="tablist" aria-label="Source" aria-orientation="vertical" id="src-tabs"></div><div class="src-grid" id="src-grid" role="tabpanel"></div></div></section>';
 }
 const SOURCES = () => {
@@ -300,7 +300,7 @@ function showcase() {
   const used = new Set(), out = [];
   for (const { body } of diverse(S.bodies.filter(b => !b.held_out).map(b => ({ body: b.body })), 24)) {
     const rows = Object.keys(S.cells[body] || {}).map(s => bestOf(body, s)).filter(c => c && c.video && c.arm === "P");
-    const score = c => (c.human === "yes" ? 2 : 0) + (c.label ? 1 : 0) + (used.has(c.skill) ? -10 : 0) + (out.length === 0 && c.skill === FIRST_SKILL ? 5 : 0);
+    const score = c => (c.label ? 1 : 0) + (used.has(c.skill) ? -10 : 0) + (out.length === 0 && c.skill === FIRST_SKILL ? 5 : 0);
     const c = rows.sort((a, b) => score(b) - score(a))[0];
     if (!c) continue;
     used.add(c.skill); out.push(c);
@@ -633,7 +633,7 @@ function pageHead(h, sub, right = "") {
 
 // ------------------------------------------------------------------ clips: every clip, filtered; a slim index read only on this route
 const IX = { rows: null, text: null };
-const F0 = { src: "skill", skill: "", kind: "", body: "", arm: "", valid: "", label: "", human: "", q: "", n: 24 };
+const F0 = { src: "skill", skill: "", kind: "", body: "", arm: "", valid: "", label: "", q: "", n: 24 };
 const F = { ...F0 };
 const PAGE = 24;
 async function loadIndex() {
@@ -647,8 +647,8 @@ async function loadIndex() {
 function rowClip(r) {                    // one index row as the clip fields a card needs
   const body = IX.bodies[r[0]], src = IX.srcs[r[1]], skill = r[2] < 0 ? null : IX.skills[r[2]], arm = r[3] < 0 ? null : IX.arms[r[3]], v = r[4];
   const stem = r[7] === "" ? (skill || src) + "_" + arm + "_v" + v : r[7][0] === "~" ? body + "__" + r[7].slice(1) : r[7];
-  const fl = r[5], human = fl & 16 ? "yes" : fl & 32 ? "no" : fl & 64 ? "unsure" : null;
-  return { id: body + "/" + stem, body, src, skill, arm, v, dur: r[6], valid: !!(fl & 1), label: fl & 2 ? true : fl & 4 ? false : null, human,
+  const fl = r[5];
+  return { id: body + "/" + stem, body, src, skill, arm, v, dur: r[6], valid: !!(fl & 1), label: fl & 2 ? true : fl & 4 ? false : null,
     failed: r[8] < 0 ? [] : [IX.checks[r[8]]], video: r[9] === 0 ? null : r[9] === 1 ? (src === "procedural" ? "procedural" : "clips") + "/" + body + "/" + stem + ".mp4" : r[9] };
 }
 function kindMatch(k) { k = k.toLowerCase(); return b => b.kind === k || (b.kind_label || "").toLowerCase() === k; }
@@ -662,7 +662,6 @@ function tests(except) {                 // one predicate per active filter, ove
   if (on("arm")) { const i = IX.arms.indexOf(F.arm); t.push(r => r[3] === i); }
   if (on("valid")) { const w = F.valid === "1"; t.push(r => !!(r[5] & 1) === w); }
   if (on("label")) { const bit = F.label === "1" ? 2 : 4; t.push(r => !!(r[5] & bit)); }
-  if (on("human")) { const bit = F.human === "yes" ? 16 : F.human === "no" ? 32 : 112; t.push(r => !!(r[5] & bit)); }
   if (on("q") && F.q.trim()) {
     const q = F.q.trim().toLowerCase();
     IX.text ||= IX.rows.map(r => (name(IX.bodies[r[0]]) + " " + IX.bodies[r[0]] + " " + (r[2] < 0 ? "" : nice(IX.skills[r[2]])) + " " + IX.srcs[r[1]] + " " + nice(String(r[4] ?? ""))).toLowerCase());
@@ -690,10 +689,10 @@ function facet(key) {                    // the options of one filter, each with
   if (key === "body") { rows.forEach(r => inc(r[0])); return opts.concat(groups().flatMap(g => g.bodies).map(b => [b.body, name(b.body), n.get(IX.bi[b.body]) || 0, b.kind_label])); }
   if (key === "kind") { rows.forEach(r => inc((S.bodyOf[IX.bodies[r[0]]] || {}).kind)); return opts.concat(groups().map(g => [g.label, g.label, n.get(g.k) || 0])); }
   if (key === "arm") { rows.forEach(r => r[3] >= 0 && inc(r[3])); return opts.concat(IX.arms.map((a, i) => [a, ARM[a] || cap(a), n.get(i) || 0]).filter(o => o[2] || o[0] === F.arm)); }
-  const bits = key === "valid" ? [["1", "Physically possible", 1], ["0", "Fails a check", -1]] : key === "label" ? [["1", "Passes", 2], ["0", "Fails", 4]] : [["yes", "Looks right", 16], ["no", "Looks wrong", 32], ["rated", "Rated", 112]];
+  const bits = key === "valid" ? [["1", "Physically possible", 1], ["0", "Fails a check", -1]] : [["1", "Passes", 2], ["0", "Fails", 4]];
   return opts.concat(bits.map(([v, t, bit]) => [v, t, rows.reduce((a, r) => a + (bit < 0 ? !(r[5] & 1) : !!(r[5] & bit)), 0)]));
 }
-const FILTERS = [["skill", "Skill"], ["kind", "Body plan"], ["body", "Robot"], ["arm", "Made with"], ["label", "Label check"], ["human", "Human rating"], ["valid", "Physics"]];
+const FILTERS = [["skill", "Skill"], ["kind", "Body plan"], ["body", "Robot"], ["arm", "Made with"], ["label", "Label check"], ["valid", "Physics"]];
 function fLabel(key) {
   const v = F[key]; if (v === "") return "";
   if (key === "skill") return cap(v);
@@ -702,7 +701,7 @@ function fLabel(key) {
   if (key === "arm") return ARM[v] || cap(v);
   if (key === "label") return v === "1" ? "Passes" : "Fails";
   if (key === "valid") return v === "1" ? "Physically possible" : "Fails a check";
-  return v === "yes" ? "Looks right" : v === "no" ? "Looks wrong" : "Rated";
+  return v;
 }
 function browseHash() {
   const p = [];
@@ -729,7 +728,6 @@ function card(c) {
   const sub = c.src === "procedural" ? nice(c.v) : (ARM[c.arm] || c.arm) + " v" + c.v;
   const marks = ['<span class="' + (c.valid ? "pass" : "fail") + '">' + (c.valid ? "Possible" : "Fails " + esc(nice(c.failed[0] || "a check"))) + "</span>"];
   if (c.src === "skill" && c.label != null) marks.push('<span class="' + (c.label ? "pass" : "fail") + '">Label ' + (c.label ? "passes" : "fails") + "</span>");
-  if (c.human) marks.push('<span class="' + (c.human === "yes" ? "pass" : c.human === "no" ? "fail" : "") + '">' + (c.human === "yes" ? "Looks right" : c.human === "no" ? "Looks wrong" : "Rated " + esc(c.human)) + "</span>");
   return '<a class="card tile" href="#/clip/' + esc(c.id) + '"><div class="frame">' + (c.video ? vtag(c.video) : b.still ? '<img src="' + ROOT + 'media/' + esc(b.still) + '" alt="" loading="lazy" decoding="async"><span class="nr">No render</span>' : "") + "</div>" +
     '<div class="ccap"><div class="r1"><b>' + esc(name(c.body)) + "</b><span>" + fmt(c.dur, 1) + ' s</span></div><div class="r2">' + esc(title) + ' <span class="g">· ' + esc(sub) + '</span></div><div class="r3">' + marks.join("") + "</div></div></a>";
 }
@@ -952,7 +950,6 @@ async function clipPage(app, body, stem) {
   const c = (rows || []).find(x => x.id === body + "/" + stem);
   if (!c) { app.innerHTML = '<div class="wrap"><div class="empty"><h1>No clip <span class="g">' + esc(body) + "/" + esc(stem) + '</span></h1><p>This clip is not in the release.</p><p style="margin-top:28px"><a class="btn" href="#/browse">All clips</a></p></div></div>'; restoreScroll(); return; }
   const b = S.bodyOf[c.body] || {};
-  const human = c.human ? (c.human.verdict === "yes" ? "Looks right" : c.human.verdict === "no" ? "Looks wrong" : "Unsure") : "Not rated";
   const sentence = c.src === "skill" ? S.meta.skill_text[c.skill] : c.src === "taskblind" ? S.meta.skill_text.taskblind : "Made without a model: a gait, balance, drive or random motion over the robot's own primitives.";
   const labelTxt = c.src !== "skill" ? "Not applicable" : c.label ? "Passes" : "Fails";
   app.innerHTML = '<article class="clip wrap">' +
@@ -961,7 +958,6 @@ async function clipPage(app, body, stem) {
     '<p class="csent">' + esc(sentence) + "</p>" +
     '<dl class="facts"><div><dt>Physics</dt><dd class="' + (c.valid ? "pass" : "fail") + '" id="f-phys">' + (c.valid ? "Physically possible" : "Fails " + esc((c.failed || []).map(nice).join(", "))) + "</dd></div>" +
     '<div><dt>Label check</dt><dd class="' + (c.src !== "skill" ? "" : c.label ? "pass" : "fail") + '">' + labelTxt + "</dd></div>" +
-    "<div><dt>Human rating</dt><dd>" + human + (c.human?.rank ? ' <span class="g">· ranked ' + c.human.rank + " of " + c.human.group_size + "</span>" : "") + "</dd></div>" +
     "<div><dt>Made with</dt><dd>" + (c.src === "procedural" ? esc(cap(c.arm)) + ' <span class="g">· ' + esc(nice(c.v)) + "</span>" : esc(ARM[c.arm] || c.arm) + ' <span class="g">· v' + esc(c.v) + "</span>") + "</dd></div>" +
     "<div><dt>Length</dt><dd>" + fmt(c.dur, 2) + ' s <span class="g">· ' + fmt(c.frames) + " frames</span></dd></div></dl>" +
     '<div class="cstage"><div class="player">' +
@@ -973,7 +969,6 @@ async function clipPage(app, body, stem) {
     '<div class="recs">' +
     '<section class="rec"><h2>Physical checks<span id="ck-n"></span></h2><div><table class="cktab" id="cktab"><thead><tr><th>Check</th><th class="num">Worst</th><th class="num">Limit</th><th class="bar2"><span class="g" style="font-weight:400">Worst against limit</span></th><th class="num">Result</th></tr></thead><tbody></tbody></table></div></section>' +
     '<section class="rec"><h2>Label check<span>' + labelTxt + '</span></h2><div id="pred"></div></section>' +
-    (c.human ? '<section class="rec"><h2>Human rating<span>' + human + '</span></h2><div><p style="margin:0;font-size:15px">' + (c.human.source === "blind" ? "Rated blind, without knowing how the clip was made." : "Rated in review.") + (c.human.rank ? " Ranked " + c.human.rank + " of " + c.human.group_size + " takes." : "") + "</p>" + (c.human.note ? '<p class="quote">' + esc(c.human.note) + "</p>" : "") + "</div></section>" : "") +
     (c.src !== "procedural" ? '<section class="rec"><h2>Generation</h2><div><dl class="kv" id="gen"></dl></div></section>' : "") +
     '<section class="rec"><h2>Files<span>In the dataset on Hugging Face</span></h2><div><dl class="kv"><dt>Motion</dt><dd class="mono">' + esc(c.npz) + '</dd><dt>Record</dt><dd class="mono"><a href="' + ROOT + 'hf/' + esc(c.sidecar) + '" target="_blank" rel="noopener">' + esc(c.sidecar) + '</a></dd><dt>Robot model</dt><dd class="mono">' + esc(b.model || "") + "</dd><dt>Frames</dt><dd>" + fmt(c.frames) + " at " + S.meta.stats.fps.map(f => fmt(f)).join(", ") + " fps</dd></dl></div></section>" +
     '<section class="rec"><h2>The robot<span>' + esc(b.label) + '</span></h2><div class="rb"><div class="frame"><img src="' + ROOT + 'media/' + esc(b.still) + '" alt="' + esc(b.label) + '"></div><dl class="kv"><dt>Body plan</dt><dd>' + esc(b.kind_label) + (b.held_out ? ' · <span class="fail">held out for transfer tests</span>' : "") + "</dd><dt>Source model</dt><dd>" + esc(b.origin) + (b.detail ? ' <span class="g">· ' + esc(b.detail) + "</span>" : "") + (b.url ? ' · <a href="' + esc(b.url) + '" target="_blank" rel="noopener">source ↗</a>' : "") + "</dd><dt>Joints</dt><dd>" + joints(b) + (b.free_base ? " + floating base" : "") + " · " + b.nu + " actuators</dd><dt>Size</dt><dd>" + fmt(b.L_m, 3) + " m · " + fmt(b.mass_kg, 1) + " kg</dd><dt>Primitives</dt><dd>" + b.modes + " modes, " + b.gaits + " gaits" + '</dd><dt>Tips</dt><dd class="mono">' + esc((b.tips || []).join(", ")) + "</dd></dl></div></section>" +

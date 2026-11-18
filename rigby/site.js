@@ -58,7 +58,7 @@ const HERO_ROWS = ["unitree_h1", "unitree_g1", "unitree_go2", "boston_dynamics_s
 const HERO_COLS = ["wave", "point", "reach_forward", "crouch", "turn_in_place", "bow", "twist", "lift_and_hold"];
 function bestClip(body, skill) {
   const cs = (S.byBody[body] || []).filter(c => c.src === "skill" && c.skill === skill && c.video);
-  const score = c => (c.valid ? 4 : 0) + (c.human?.verdict === "yes" ? 2 : 0) + (c.label ? 1 : 0) + (c.arm === "P" ? .5 : 0) - (c.v || 0) * .1;
+  const score = c => (c.valid ? 4 : 0) + (c.label ? 1 : 0) + (c.arm === "P" ? .5 : 0) - (c.v || 0) * .1;
   return cs.sort((a, b) => score(b) - score(a))[0];
 }
 function homePage() {
@@ -284,7 +284,7 @@ async function sidecar(c) {
 }
 
 // ------------------------------------------------------------------ browse
-const F = { src: "skill", skill: "", kind: "", body: "", arm: "", valid: "", label: "", human: "", q: "", n: 60 };
+const F = { src: "skill", skill: "", kind: "", body: "", arm: "", valid: "", label: "", q: "", n: 60 };
 function browsePage(params) {
   for (const k of Object.keys(F)) if (params.has(k)) F[k] = k === "n" ? +params.get(k) : params.get(k);
   const kinds = [...new Set(S.bodies.map(b => b.kind_label))].sort();
@@ -299,7 +299,6 @@ function browsePage(params) {
     <div class="frow"><span class="lab">Body plan</span>${pills("kind", [["", "Any"], ...kinds.map(k => [k, k])])}</div>
     <div class="frow"><span class="lab">Made with</span>${pills("arm", [["", "Any"], ["P", "Primitives"], ["J", "Joint keyframes"]])}</div>
     <div class="frow"><span class="lab">Label check</span>${pills("label", [["", "Label: any"], ["1", "Passes label check"], ["0", "Fails label check"]])}</div>
-    <div class="frow"><span class="lab">Human</span>${pills("human", [["", "Any"], ["yes", "Looks right"], ["no", "Looks wrong"], ["rated", "Rated"]])}</div>
     <div class="frow"><span class="lab">Robot</span><select class="sel" id="fbody"><option value="">Any robot</option>${S.bodies.map(b => `<option value="${esc(b.body)}" ${F.body === b.body ? "selected" : ""}>${esc(b.label)}</option>`).join("")}</select>
       <input class="search" id="fq" placeholder="Search robot or skill" value="${esc(F.q)}" aria-label="Search"></div>
   </div>
@@ -312,7 +311,6 @@ function filtered() {
   return S.clips.filter(c => (!F.src || c.src === F.src) && (!F.skill || c.skill === F.skill) && (!F.body || c.body === F.body)
     && (!F.kind || S.bodyOf[c.body]?.kind_label === F.kind) && (!F.arm || c.arm === F.arm)
     && (F.valid === "" || String(+!!c.valid) === F.valid) && (F.label === "" || (c.label != null && String(+c.label) === F.label))
-    && (!F.human || (F.human === "rated" ? !!c.human : c.human?.verdict === F.human))
     && (!q || `${label(c.body)} ${c.body} ${c.skill || ""} ${c.v ?? ""}`.toLowerCase().includes(q)));
 }
 function card(c) {
@@ -321,7 +319,6 @@ function card(c) {
   const sub = c.src === "procedural" ? nice(c.v) : `${ARM[c.arm] || c.arm} v${c.v}`;
   const badges = [`<span class="badge ${c.valid ? "ok" : "bad"}">${c.valid ? "possible" : (c.failed || [])[0] || "fails"}</span>`];
   if (c.label != null) badges.push(`<span class="badge ${c.label ? "ok" : "mid"}">label ${c.label ? "pass" : "fail"}</span>`);
-  if (c.human) badges.push(`<span class="badge ${c.human.verdict === "yes" ? "ok" : c.human.verdict === "no" ? "bad" : "mid"}">human ${esc(c.human.verdict)}</span>`);
   return `<a class="card" href="#/clip/${esc(c.id)}">${vid(c.video)}<div class="t"><div class="h"><b>${esc(b.label || c.body)}</b><span>${fmt(c.dur, 1)} s</span></div>
     <div class="h"><b style="font-weight:500">${esc(title)}</b><span>${esc(sub)}</span></div><div class="badges">${badges.join("")}</div></div></a>`;
 }
@@ -357,7 +354,6 @@ async function clipPage(app, body, stem) {
   <div class="chead"><h1><b>${esc(title)}</b> on ${esc(b.label)}</h1>
     <div class="badges"><span class="badge ${c.valid ? "ok" : "bad"}">${c.valid ? "physically possible" : "fails " + (c.failed || []).join(", ")}</span>
     ${c.label != null ? `<span class="badge ${c.label ? "ok" : "mid"}">label check ${c.label ? "passes" : "fails"}</span>` : ""}
-    ${c.human ? `<span class="badge ${c.human.verdict === "yes" ? "ok" : c.human.verdict === "no" ? "bad" : "mid"}">human: ${esc(c.human.verdict === "yes" ? "looks right" : c.human.verdict === "no" ? "looks wrong" : "unsure")}${c.human.rank ? ` · ranked ${c.human.rank} of ${c.human.group_size}` : ""}</span>` : ""}
     ${c.src !== "procedural" ? `<span class="badge">${esc(ARM[c.arm] || c.arm)} · v${esc(c.v)}</span>` : `<span class="badge">${esc(c.v)}</span>`}</div></div>
   <p class="task">${esc(S.meta.skill_text[c.skill || (c.src === "taskblind" ? "taskblind" : "")] || (c.src === "procedural" ? "Made without a model: a gait, balance, drive or random motion over the robot's own primitives." : ""))}</p>
   <div class="cgrid">
