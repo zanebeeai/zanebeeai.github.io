@@ -54,24 +54,24 @@ The clips are **kinematic**: poses, contacts and support are physically possible
 | Franka Panda | arm | 16 | MuJoCo Menagerie | Apache-2.0 | 26 | 150 |
 | Kinova Gen3 | arm | 14 | MuJoCo Menagerie | BSD-3-Clause | 26 | 150 |
 | KUKA iiwa 14 (held out) | arm | 14 | MuJoCo Menagerie | BSD-3-Clause | 3 | 0 |
-| Mobile crane (procedural) | crane | 8 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 31 | 150 |
-| Dog with an arm (procedural) | mobile_manipulator | 18 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
-| Octopus (procedural) | octopus | 52 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 38 | 150 |
-| Wheeled biped (procedural) | wheeled | 11 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 24 | 150 |
-| Random gripper 41 (procedural) | arm | 15 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 26 | 150 |
-| Simple dog (procedural) | quadruped | 12 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 32 | 150 |
+| Mobile crane (synthetic) | crane | 8 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 31 | 150 |
+| Dog with an arm (synthetic) | mobile_manipulator | 18 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
+| Octopus (synthetic) | octopus | 52 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 38 | 150 |
+| Wheeled biped (synthetic) | wheeled | 11 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 24 | 150 |
+| Random gripper 41 (synthetic) | arm | 15 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 26 | 150 |
+| Simple dog (synthetic) | quadruped | 12 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 32 | 150 |
 | xArm7 | arm | 20 | MuJoCo Menagerie | BSD-3-Clause | 26 | 150 |
 | Unitree A1 | quadruped | 12 | MuJoCo Menagerie | BSD-3-Clause | 37 | 150 |
 | Unitree G1 | humanoid | 29 | MuJoCo Menagerie | BSD-3-Clause | 38 | 150 |
 | Unitree Go2 | quadruped | 12 | MuJoCo Menagerie | BSD-3-Clause | 37 | 150 |
 | Unitree H1 | humanoid | 19 | MuJoCo Menagerie | BSD-3-Clause | 29 | 150 |
 | UR5e | arm | 13 | MuJoCo Menagerie | BSD-3-Clause | 26 | 150 |
-| Hexapod, new draw (procedural) (held out) | multileg | 18 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 6 | 0 |
-| Hexapod (procedural) | multileg | 18 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
-| Reverse-knee quadruped, new draw (procedural) (held out) | quadruped | 12 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 6 | 0 |
-| Reverse-knee quadruped (procedural) | quadruped | 12 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
-| Six-arm crawler (procedural) | multileg | 24 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
-| Two-armed zoo body (procedural) | dual_arm | 21 | procedural (this repository) | CC BY-NC 4.0 (this dataset) | 26 | 150 |
+| Hexapod, new draw (synthetic) (held out) | multileg | 18 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 6 | 0 |
+| Hexapod (synthetic) | multileg | 18 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
+| Reverse-knee quadruped, new draw (synthetic) (held out) | quadruped | 12 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 6 | 0 |
+| Reverse-knee quadruped (synthetic) | quadruped | 12 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
+| Six-arm crawler (synthetic) | multileg | 24 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
+| Two-armed zoo body (synthetic) | dual_arm | 21 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 26 | 150 |
 | Tortoise (Aegis-T) | quadruped | 23 | Animal Atlas (Yi Zhou) | CC BY-NC 4.0 (this dataset) | 7 | 0 |
 | Crocodile (Croco-X) | quadruped | 30 | Animal Atlas (Yi Zhou) | CC BY-NC 4.0 (this dataset) | 6 | 0 |
 | Fox (Ember-F) | quadruped | 27 | Animal Atlas (Yi Zhou) | CC BY-NC 4.0 (this dataset) | 10 | 0 |
@@ -195,7 +195,7 @@ To replay a clip in MuJoCo: load `bodies/<robot>.xml`, then set `data.qpos[:] = 
 
 ## Licence
 
-The clips, programs, primitives, indexes, the procedural robot models and the animal robot models are released under the [Creative Commons Attribution-NonCommercial 4.0 International licence](https://creativecommons.org/licenses/by-nc/4.0/) (CC BY-NC 4.0): free to use, share and adapt for non-commercial purposes, with credit to the authors.
+The clips, programs, primitives, indexes, the synthetic robot models and the animal robot models are released under the [Creative Commons Attribution-NonCommercial 4.0 International licence](https://creativecommons.org/licenses/by-nc/4.0/) (CC BY-NC 4.0): free to use, share and adapt for non-commercial purposes, with credit to the authors.
 
 **Commercial use:** please contact the authors by opening a discussion in the Community tab of this dataset.
 

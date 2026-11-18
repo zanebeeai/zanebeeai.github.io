@@ -26,9 +26,9 @@ const CHECK_NAMES = {
   support: "Centre of mass over support", reach: "Targets within reach", ik: "Targets reached (IK)", continuity: "Smooth joint motion",
   wheel_slip: "Wheels roll without slipping", arm_in_object: "Arm clear of objects", program: "Program compiles",
 };
-const name = b => (S.bodyOf[b]?.label || nice(b)).replace(/\s*\(procedural\)$/, "");
-const isProc = x => /procedural/i.test(x?.origin || "");
-const kindLine = b => { const x = S.bodyOf[b]; if (!x) return ""; return isProc(x) ? "Procedural " + x.kind_label.toLowerCase() : x.kind_label; };
+const name = b => (S.bodyOf[b]?.label || nice(b)).replace(/\s*\((procedural|synthetic)\)$/, "");
+const isProc = x => /synthetic/i.test(x?.origin || "");
+const kindLine = b => { const x = S.bodyOf[b]; if (!x) return ""; return isProc(x) ? "Synthetic " + x.kind_label.toLowerCase() : x.kind_label; };
 const joints = b => b.nq - (b.free_base ? 7 : 0);
 const hfURL = () => "https://huggingface.co/datasets/" + S.meta.hf_repo;
 const ARR = '<span class="arr" aria-hidden="true">→</span>';
@@ -520,7 +520,7 @@ function robotsSection(page) {
   Object.assign(RB, { page: !!page, q: "", all: false }); RB.open.clear();
   const st = S.meta.stats, gs = groups();
   const menag = S.bodies.filter(b => /menagerie/i.test(b.origin || "")).length, proc = S.bodies.filter(isProc).length, atlas = S.bodies.filter(b => /animal atlas/i.test(b.origin || "")).length;
-  return '<section class="' + (page ? "wrap page" : "sec wrap") + '" id="robots"><' + (page ? "h1" : "p") + ' class="stmt"><b>' + plural(S.bodies.length, "robot") + ", " + plural(gs.length, "body plan") + ".</b> " + fmt(menag) + " from MuJoCo Menagerie, " + fmt(proc) + " generated procedurally" + (atlas ? ", " + fmt(atlas) + " animal robots by Yi Zhou" : "") + ".</" + (page ? "h1" : "p") + '><div class="stmt-sub"><p>' + fmt(S.bodies.filter(b => b.held_out).length) + ' are held out for transfer tests. Each robot\'s primitives were written once, from its model alone, and every clip on that robot is composed from them.</p>' + (page ? "" : '<a class="link" href="#/robots">All robots ' + ARR + "</a>") + "</div>" +
+  return '<section class="' + (page ? "wrap page" : "sec wrap") + '" id="robots"><' + (page ? "h1" : "p") + ' class="stmt"><b>' + plural(S.bodies.length, "robot") + ", " + plural(gs.length, "body plan") + ".</b> " + fmt(menag) + " from MuJoCo Menagerie, " + fmt(proc) + " synthetic" + (atlas ? ", " + fmt(atlas) + " animal robots by Yi Zhou" : "") + ".</" + (page ? "h1" : "p") + '><div class="stmt-sub"><p>' + fmt(S.bodies.filter(b => b.held_out).length) + ' are held out for transfer tests. Each robot\'s primitives were written once, from its model alone, and every clip on that robot is composed from them.</p>' + (page ? "" : '<a class="link" href="#/robots">All robots ' + ARR + "</a>") + "</div>" +
     (S.bodies.length > 30 ? '<div class="sec-body mx-tools"><label class="find"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="m10.5 10.5 3 3"/></svg><input id="rb-q" type="search" placeholder="Find a robot" aria-label="Find a robot by name" autocomplete="off"></label><span class="mx-note" id="rb-note" aria-live="polite"></span></div>' : "") +
     '<div class="sec-body rgroups" id="rg"></div></section>';
 }
