@@ -1,6 +1,6 @@
 // Rigby dataset site: a hash-routed static app over data/*.json (build_site.py), hf/ (the dataset) and media/ (videos).
 "use strict";
-const S = { clips: [], bodies: [], meta: null, byBody: {}, bodyOf: {}, sideCache: {} };
+const S = { clips: [], bodies: [], meta: null, recorded: [], byBody: {}, bodyOf: {}, sideCache: {} };
 const $ = (sel, el = document) => el.querySelector(sel);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const nice = s => String(s ?? "").replace(/_/g, " ");
@@ -28,8 +28,9 @@ function wireVideos(root = document) { root.querySelectorAll("video[data-src]").
 
 // ------------------------------------------------------------------ boot
 async function boot() {
-  const [clips, bodies, meta] = await Promise.all(["clips", "bodies", "meta"].map(n => fetch(`data/${n}.json?v=${Date.now()}`).then(r => r.json())));
-  S.clips = clips; S.bodies = bodies; S.meta = meta;
+  const [clips, bodies, meta, recorded] = await Promise.all([...["clips", "bodies", "meta"].map(n => fetch(`data/${n}.json?v=${Date.now()}`).then(r => r.json())),
+    fetch(`data/recorded.json?v=${Date.now()}`).then(r => r.ok ? r.json() : []).catch(() => [])]);
+  S.clips = clips; S.bodies = bodies; S.meta = meta; S.recorded = recorded || [];
   for (const b of bodies) S.bodyOf[b.body] = b;
   for (const c of clips) (S.byBody[c.body] ||= []).push(c);
   window.addEventListener("hashchange", route);
@@ -45,6 +46,7 @@ function route() {
   else if (page === "clip") return clipPage(app, rest[0], rest.slice(1).join("/"));
   else if (page === "robot") app.innerHTML = robotPage(rest[0]);
   else if (page === "robots") app.innerHTML = robotsPage();
+  else if (page === "recorded") { app.innerHTML = rest.length > 1 ? recordedClipPage(rest.join("/")) : recordedPage(); window.scrollTo(0, 0); }
   else if (page === "get") app.innerHTML = getPage();
   else app.innerHTML = homePage();
   if (page === "browse") wireBrowse();
@@ -131,6 +133,7 @@ function homePage() {
     ${robotCards()}
   </div>
 </section>
+${recordedBand()}
 ${getSection()}
 <footer><div class="wrap">Rigby kinematic motion dataset · built locally from the release folder · clips are kinematic (physically possible poses and contacts), not simulated dynamics · licence CC BY-NC 4.0; for commercial use, contact the authors.</div></footer>`;
 }
@@ -187,6 +190,7 @@ print(go2[0]["skill"], qpos.shape, clip["fps"])</pre>
         <tr><td>clips/&lt;robot&gt;/&lt;skill&gt;_&lt;arm&gt;_v&lt;k&gt;.npz</td><td>qpos, qvel, tip positions, contacts, fps</td></tr>
         <tr><td>clips/…/*.json</td><td>the clip's program, every check with its worst value, repair history, model calls</td></tr>
         <tr><td>procedural/&lt;robot&gt;/*.npz</td><td>gait, balance, drive and random clips made without a model</td></tr>
+        <tr><td>imported/&lt;robot&gt;/&lt;task&gt;.*</td><td>recorded motions of the animal robots, each with the scene it was made in (a separate subset)</td></tr>
         <tr><td>primitives/&lt;robot&gt;.json</td><td>the robot's primitives and gaits, their coverage, the model that wrote them</td></tr>
         <tr><td>bodies/&lt;robot&gt;.xml, .json</td><td>the MuJoCo model each clip is in, and its measured description</td></tr>
         <tr><td>index/bodies.jsonl, primitives.jsonl</td><td>one row per robot and per primitive</td></tr>
@@ -453,6 +457,66 @@ function relatedRows(c) {
   return row(`${nice(c.skill || "")} on other robots`, same) + row(`Other clips of ${label(c.body)}`, other);
 }
 
+// ------------------------------------------------------------------ recorded motions, each in the scene it was made in
+const hfFile = p => `https://huggingface.co/datasets/${S.meta.hf_repo}/blob/main/${p}`;
+function recCard(g, c) {
+  return `<a class="card" href="#/recorded/${esc(c.id)}" title="${esc(c.title)}">${vid(c.video)}<div class="t"><div class="h"><b>${esc(g.name)}</b><span>${fmt(c.dur, 1)} s</span></div>
+    <div class="rt">${esc(c.title)}</div></div></a>`;
+}
+const REC_SHOW = ["monkey", "serpens-arbor", "octopus", "shark", "kitsune", "crocodile", "jellyfish", "manta-ray"];     // the home page leads with the robots whose scenes show most
+const recShow = () => [...REC_SHOW.map(r => S.recorded.find(g => g.robot === r)).filter(Boolean), ...S.recorded.filter(g => !REC_SHOW.includes(g.robot))];
+function recordedBand() {
+  if (!S.recorded.length) return "";
+  const st = S.meta.stats;
+  const pick = recShow().map(g => ({ g, c: g.clips.find(c => c.video && c.own_scene && c.dur < 40) || g.clips.find(c => c.video) })).filter(x => x.c).slice(0, 8);
+  return `<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Recorded motions</div>
+    <h2 class="h2" style="margin-top:12px">Animal robots, <b>each in its own scene</b></h2>
+    <p class="lede">${st.recorded_clips} motions of ${st.recorded_robots} animal-inspired robots by Yi Zhou, recorded in physics simulation and shown in the scenes they were made in, with the ladders, ropes, reefs and objects the robots work with. They are a separate subset of the dataset and are not counted in the figures above.</p>
+    <div class="rowclips" style="margin-top:18px">${pick.map(x => recCard(x.g, x.c)).join("")}</div>
+    <a class="btn small ghost" style="margin-top:14px" href="#/recorded">See all ${st.recorded_clips}</a>
+  </div>
+</section>`;
+}
+function recordedPage() {
+  if (!S.recorded.length) return `<div class="wrap page"><div class="empty-state">This build has no recorded motions.</div></div>`;
+  const st = S.meta.stats;
+  return `<div class="wrap page"><div class="eyebrow">Recorded motions</div><h1 class="h2" style="margin-top:8px">Animal robots, each in its own scene</h1>
+    <p class="lede">${st.recorded_clips} motions of ${st.recorded_robots} animal-inspired robots by Yi Zhou, about ${st.recorded_minutes} minutes in all. Each was recorded in physics simulation in a scene built for it, and is shown here in that scene: its surroundings and the objects the robot works with move as they did in the recording. They are a separate subset of the dataset.</p>
+    ${S.recorded.map(g => `<div style="margin-top:30px"><div class="chead" style="margin-top:0"><b>${esc(g.name)}</b><span class="tag">${esc(g.robot_name)}</span>${g.body ? `<a class="btn small ghost" href="#/robot/${esc(g.body)}">Its generated clips</a>` : ""}</div>
+      <div class="grid">${g.clips.map(c => recCard(g, c)).join("")}</div></div>`).join("")}
+  </div>`;
+}
+function recordedClipPage(id) {
+  let g = null, c = null;
+  for (const x of S.recorded) { const y = x.clips.find(k => k.id === id); if (y) { g = x; c = y; break; } }
+  if (!c) return `<div class="wrap page"><div class="empty-state">No recorded motion ${esc(id)}.</div></div>`;
+  const f = c.files || {};
+  const file = (k, t) => f[k] ? `<a href="${esc(hfFile(f[k]))}" target="_blank" rel="noopener">${t}</a>` : "";
+  return `<div class="wrap page">
+  <div class="crumbs"><a href="#/recorded">Recorded motions</a> / ${esc(g.name)}</div>
+  <div class="chead"><h1><b>${esc(c.title)}</b></h1><span class="tag">${esc(g.name)} · ${esc(g.robot_name)}</span></div>
+  <div class="cgrid">
+    <div class="stack"><div class="player">${c.video ? `<video src="media/${esc(c.video)}" muted loop playsinline autoplay controls></video>` : ""}</div></div>
+    <div class="stack"><div class="panel"><h2>Recording</h2><dl class="kv">
+      <dt>Robot</dt><dd>${esc(g.name)} (${esc(g.robot_name)})${g.body ? ` · <a href="#/robot/${esc(g.body)}">its generated clips</a>` : ""}</dd>
+      <dt>Made by</dt><dd>${esc(g.author)}, recorded in physics simulation</dd>
+      <dt>Scene</dt><dd>${c.own_scene ? "the scene built for this motion, with its surroundings and objects" : "a bare floor"}</dd>
+      <dt>Length</dt><dd>${fmt(c.dur, 1)} s</dd>
+      ${c.kind ? `<dt>Kind</dt><dd>${esc(nice(c.kind))}</dd>` : ""}
+      <dt>Author's validation</dt><dd>${c.validated ? "passes" : "not recorded"}</dd>
+      <dt>Files</dt><dd>${[file("npz", "motion (.npz)"), file("scene", "scene (.xml)"), file("program", "program"), file("sidecar", "record")].filter(Boolean).join(" · ")}</dd>
+    </dl></div></div>
+  </div>
+  <div style="margin-top:28px"><div class="eyebrow" style="margin-bottom:10px">Other recorded motions of this robot</div><div class="rowclips">${g.clips.filter(k => k.id !== c.id).map(k => recCard(g, k)).join("")}</div></div>
+</div>`;
+}
+function recordedOf(body) {
+  const g = S.recorded.find(x => x.body === body);
+  return g ? `<div style="margin-top:28px"><div class="eyebrow" style="margin-bottom:10px">Recorded in its own scenes, by ${esc(g.author)}</div><div class="grid">${g.clips.map(c => recCard(g, c)).join("")}</div></div>` : "";
+}
+
 // ------------------------------------------------------------------ robots
 function robotsPage() {
   return `<div class="wrap page"><div class="eyebrow">Embodiments</div><h1 class="h2" style="margin-top:8px">Robots</h1>
@@ -477,6 +541,7 @@ function robotPage(body) {
   </div>
   <div style="margin-top:28px"><div class="eyebrow" style="margin-bottom:10px">Skill and task-blind clips</div><div class="grid">${skillClips.map(card).join("")}</div></div>
   ${proc.length ? `<div style="margin-top:28px"><div class="eyebrow" style="margin-bottom:10px">Procedural sample</div><div class="grid">${proc.map(card).join("")}</div></div>` : ""}
+  ${recordedOf(body)}
 </div>`;
 }
 function getPage() {

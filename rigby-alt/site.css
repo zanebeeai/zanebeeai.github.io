@@ -565,3 +565,14 @@ details.json pre{margin:0;padding:4px 22px 22px;max-height:420px;overflow:auto;f
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition-duration:0s!important;animation:none!important}
 }
+/* recorded motions: scenes with their own floor, sky and props, shown whole (no white mask) */
+.rframe{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:14px;background:#0b0f14}
+.rframe video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rtile .cap{margin-top:12px}
+.rrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:32px 20px}
+.rplay{max-width:760px;margin-top:36px}
+.rplay .rframe video{object-fit:contain}
+.rctl{display:flex;justify-content:flex-end;margin-top:12px}
+.rkv{margin-top:36px;max-width:760px}
+@media (max-width:1100px){.rrow{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.rrow{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}}
