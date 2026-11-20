@@ -72,7 +72,7 @@ const FIRST = [
   { g: ["v3_hexapod_s20261104", "tap_twice"] }, { g: ["simple_dog", "twist"] }, { g: ["random_gripper_s41", "reach_forward"] }, { g: ["v3_reverse_knee_quadruped_s20261104", "step_forward"] },
 ];
 // The authors, in the paper's order, each with the numbers of their affiliations.
-const AFFILS = ["University of Waterloo", "University of Toronto", "NVIDIA", "Simon Fraser University"];
+const AFFILS = ["University of Waterloo", "University of Toronto", "Simon Fraser University", "NVIDIA"];
 const AUTHORS = [["Zane Beeai", "https://www.zanebeeai.com/", [1]], ["Angelo Wei", "https://www.linkedin.com/in/angelo-wei-a638232a2/", [2]],
   ["Tony Pan", "https://www.tony-pan.com/", [1]], ["Xue Bin Peng", "https://xbpeng.github.io/", [3, 4]],
   ["Russell Buchanan", "https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/r6buchan", [1]], ["Yi Zhou", "https://zhouyisjtu.github.io/", []]];
@@ -94,10 +94,10 @@ function firstTiles() {
     const seed = Math.sin((i + 1) * 12.9898 + 78.233) * 43758.5453, z = (seed - Math.floor(seed)).toFixed(3);
     if (t.r) {
       const x = recFind(t.r), v = x && (x.c.video_light || x.c.video); if (!v) return "";
-      return `<a class="tile" href="#/recorded/${esc(x.c.id)}" data-z="${z}" aria-label="${esc(x.g.name)}: ${esc(x.c.title)}"><video data-src="media/${esc(v)}" muted loop playsinline preload="none"></video><span class="tl">${esc(x.g.name)}</span></a>`;
+      return `<a class="tile" href="#/recorded/${esc(x.c.id)}" data-z="${z}" aria-label="${esc(x.g.name)}: ${esc(x.c.title)}"><video data-src="media/${esc(v)}" muted loop playsinline preload="none"></video></a>`;
     }
     const k = bestClip(t.g[0], t.g[1]); if (!k) return "";
-    return `<a class="tile" href="#/clip/${esc(k.id)}" data-z="${z}" aria-label="${esc(label(k.body))}: ${esc(nice(k.skill))}"><video data-src="media/${esc(k.video)}" muted loop playsinline preload="none"></video><span class="tl">${esc(label(k.body).replace(/\s*\(synthetic\)$/, ""))}</span></a>`;
+    return `<a class="tile" href="#/clip/${esc(k.id)}" data-z="${z}" aria-label="${esc(label(k.body))}: ${esc(nice(k.skill))}"><video data-src="media/${esc(k.video)}" muted loop playsinline preload="none"></video></a>`;
   }).join("");
 }
 function paperButton() {
