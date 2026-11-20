@@ -126,10 +126,12 @@ function homePage() {
 <section class="hero" id="hero">
   <div class="hero-stick">
     <div class="hero-copy wrap">
-      <h1><b>Rigby:</b> Motion Primitives for <span class="nb">Cross-Embodiment</span> Skill Transfer</h1>
+      <h1 id="hero-title"><b>Rigby:</b> Motion Primitives for <span class="nb">Cross-Embodiment</span> Skill Transfer</h1>
+      <div class="hero-rest" id="hero-rest">
       ${authorsHTML()}
       <p class="sub"><b>${st.bodies} robots</b>, <b>${fmt(st.clips)} motion clips</b>, generated from nothing but each robot's model: a language model proposes the robot's primitives and composes them into motions. Every frame of every clip passes every physical check.</p>
       <div class="ctas"><a class="btn" href="https://huggingface.co/datasets/${esc(S.meta.hf_repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download dataset</a><a class="btn ghost" href="#/browse">Browse clips</a>${paperButton()}</div>
+      </div>
     </div>
     <div class="stage" id="stage">
       <div class="plane" id="plane">
@@ -171,13 +173,14 @@ function homePage() {
   <div class="wrap">
     <h2 class="h2">${st.bodies} robots, <b>one method</b></h2>
     <p class="lede">The pipeline wrote primitives and motions for all ${st.bodies}.${only ? ` Another ${only} robots, swimmers and snakes, are in the dataset with motions recorded in simulation only.` : ""}</p>
-    ${robotCards()}
+    ${robotCards(true)}
+    <a class="btn small ghost" style="margin-top:14px" href="#/robots">See all robots</a>
   </div>
 </section>
 ${getSection()}
 <footer><div class="wrap">Rigby kinematic motion dataset · built locally from the release folder · clips are kinematic (physically possible poses and contacts), not simulated dynamics · licence CC BY-NC 4.0; for commercial use, contact the authors.</div></footer>`;
 }
-function robotCards() {
+function robotCards(scroll) {                     // scroll: one row that scrolls sideways (the home page), else a grid
   const gen = S.bodies.map(b => `
     <a class="rcard" href="#/robot/${esc(b.body)}">
       <div class="media">${b.still ? `<img src="media/${esc(b.still)}" alt="" loading="lazy">` : ""}</div>
@@ -191,7 +194,7 @@ function robotCards() {
       <div class="t"><span class="tag ho">recorded motions only</span><b>${esc(g.name)}</b>
       <span>${g.clips.length} motions recorded in simulation</span></div>
     </a>`; });
-  return `<div class="robots">${gen.concat(rec).join("")}</div>`;
+  return `<div class="robots${scroll ? " hscroll" : ""}"${scroll ? ' tabindex="0" role="region" aria-label="Robots, scroll sideways"' : ""}>${gen.concat(rec).join("")}</div>`;
 }
 function getSection() {
   const repo = S.meta.hf_repo;
@@ -237,9 +240,11 @@ function heroLayout() {
   const m = $("#matrix"); if (!m) return;
   const vw = window.innerWidth, small = vw < 760;
   const cols = small ? 4 : 8, rows = small ? 6 : 5;
-  const w = Math.min(vw * 0.92, 1240), h = window.innerHeight - 56 - 64;
+  const band = small ? 124 : 88;                  // room above the settled tiles: the title stays there, smaller
+  const w = Math.min(vw * 0.92, 1240), h = window.innerHeight - 56 - band - 28;
   const tw = Math.max(72, Math.min(216, (w - (cols - 1) * 8) / cols, ((h - (rows - 1) * 8) / rows) * 4 / 3));
   m.style.setProperty("--tw", tw + "px"); m.style.setProperty("--mc", cols);
+  m.dataset.band = band; $("#stage").style.paddingTop = band + "px";
   m.classList.toggle("small", small);            // a narrow screen: four columns, twenty-four tiles
   [...m.querySelectorAll(".tile")].forEach((t, i) => { t.hidden = small && i >= 24; });
 }
@@ -251,16 +256,26 @@ function heroScroll() {
   const e = 1 - easeInOut(Math.min(1, p * 1.25));          // explode: 1 at the top, 0 when settled
   heroEls.plane.style.transform = `translateY(${((window.innerWidth < 760 ? 330 : 160) * e).toFixed(1)}px) rotateX(${(50 * e).toFixed(2)}deg) rotateZ(${(-30 * e).toFixed(2)}deg) scale(${(0.86 + 0.14 * (1 - e)).toFixed(3)})`;
   for (const t of heroEls.tiles) t.style.transform = `translateZ(${(e * (40 + t._z * 260)).toFixed(1)}px)`;
-  heroEls.copy.style.opacity = String(Math.max(0, 1 - p * 2.2));
-  for (const a of heroEls.axes) a.style.opacity = String(Math.max(0, 1 - e * 1.6).toFixed(2));
+  // the title stays: it shrinks a little and rises into the band above the settled tiles; the rest of the copy fades
+  const fade = Math.max(0, 1 - p * 2.6), k = 1 - e, h1 = heroEls.title, band = +heroEls.matrix.dataset.band || 88;
+  heroEls.rest.style.opacity = fade.toFixed(3);
+  heroEls.rest.style.visibility = fade < 0.02 ? "hidden" : "visible";          // faded buttons must not take clicks
+  heroEls.copy.style.setProperty("--scrim", fade.toFixed(3));
+  const less = window.innerWidth < 760 ? 0.2 : 0.28;                           // how much smaller the title ends
+  const tilesTop = band + (heroEls.stage.clientHeight - band - heroEls.matrix.offsetHeight) / 2;   // where the settled tiles begin
+  const centre = Math.max(band * 0.45, tilesTop - 22 - h1.offsetHeight * (1 - less) / 2);          // the title ends just above them
+  h1.style.transform = `translateY(${((centre - (h1.offsetTop + h1.offsetHeight / 2)) * k).toFixed(1)}px) scale(${(1 - less * k).toFixed(3)})`;
 }
 const easeInOut = x => x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
 function wireHome() {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   heroLayout();
-  heroEls = { plane: $("#plane"), copy: $(".hero-copy"), tiles: [...document.querySelectorAll("#matrix .tile")], axes: [...document.querySelectorAll("#matrix .ax")] };
+  heroEls = { plane: $("#plane"), copy: $(".hero-copy"), title: $("#hero-title"), rest: $("#hero-rest"), matrix: $("#matrix"), stage: $("#stage"), tiles: [...document.querySelectorAll("#matrix .tile")] };
   heroEls.tiles.forEach(t => { t._z = +t.dataset.z; });
-  if (reduce) { $("#hero").style.height = "auto"; $(".hero-stick").style.position = "static"; $(".hero-stick").style.height = "auto"; heroEls = null; }
+  if (reduce) {                                   // no scroll effect: the copy, then the tiles below it, both in the flow
+    $("#hero").style.height = "auto"; $(".hero-stick").style.position = "static"; $(".hero-stick").style.height = "auto";
+    $("#stage").style.cssText = "position:static;padding:28px 0 48px"; heroEls = null;
+  }
   else { window.addEventListener("scroll", heroScroll, { passive: true }); heroScroll(); }
   window.onresize = () => { heroLayout(); heroScroll(); };
   wireWave(reduce);
