@@ -57,16 +57,29 @@ function route() {
 
 // ------------------------------------------------------------------ home
 const PAPER_URL = "";   // the paper's address on arXiv. While this is empty the Paper button is shown dimmed and is not a link.
-// First screen: the most striking clips, mixed, in no order of robot or skill, all of one size and on one ground.
-// g: a generated clip (robot, skill); r: a recorded clip (its id), shown in its light render. Three of the 18 are swimmers.
+// First screen: every robot once, mixed, in no order of body plan or skill, all of one size and on one ground.
+// g: a generated clip (robot, skill); r: a recorded clip (its id), shown in its light render. Three of the 40 are swimmers.
 const FIRST = [
-  { r: "astral_monkey/monkey_bars" }, { g: ["astral_prism_m", "wave"] }, { r: "astral_shark/bank_recover" },
-  { g: ["astral_kitsune", "wave"] }, { r: "astral_crocodile/bite_release" }, { g: ["unitree_h1", "wave"] },
-  { g: ["astral_weaver_s", "wave"] }, { r: "astral_jellyfish/capture_release" }, { r: "astral_octopus/arm_handover" },
-  { g: ["astral_ember_f", "wave"] }, { r: "astral_serpens_arbor/up_down" }, { g: ["astral_monkey", "wave"] },
-  { r: "astral_monkey/banana_harvest" }, { r: "astral_manta_ray/arch_passage" }, { g: ["mobile_dog_arm_v2", "lift_and_hold"] },
-  { g: ["astral_octopus", "point"] }, { g: ["unitree_go2", "trace_circle"] }, { g: ["astral_aegis_t", "wave"] },
+  { r: "astral_monkey/monkey_bars" }, { g: ["franka_emika_panda", "trace_circle"] }, { g: ["astral_kitsune", "wave"] }, { g: ["unitree_h1", "wave"] },
+  { r: "astral_shark/bank_recover" }, { g: ["v3_hexapod_s3101", "step_forward"] }, { g: ["boston_dynamics_spot", "bow"] }, { r: "astral_prism_m/grasp_reposition" },
+  { g: ["universal_robots_ur5e", "wave"] }, { r: "astral_octopus/arm_handover" }, { g: ["unitree_go2", "trace_circle"] }, { g: ["apptronik_apollo", "point"] },
+  { r: "astral_crocodile/bite_release" }, { g: ["mobile_crane", "reach_forward"] }, { g: ["astral_weaver_s", "wave"] }, { g: ["kinova_gen3", "point"] },
+  { r: "astral_jellyfish/capture_release" }, { g: ["unitree_g1", "kick_swing"] }, { g: ["astral_ember_f", "wave"] }, { g: ["ufactory_xarm7", "tap_twice"] },
+  { g: ["anybotics_anymal_c", "turn_in_place"] }, { r: "astral_serpens_arbor/up_down" }, { g: ["mobile_wheeled_biped", "turn_in_place"] }, { g: ["astral_aegis_t", "wave"] },
+  { g: ["mobile_dog_arm_v2", "lift_and_hold"] }, { g: ["astral_vanta_l", "wave"] }, { g: ["kuka_iiwa_14", "lift_and_hold"] }, { r: "astral_manta_ray/arch_passage" },
+  { g: ["v3_six_arm_crawler_s3103", "wave"] }, { g: ["booster_t1", "twist"] }, { g: ["unitree_a1", "crouch"] }, { g: ["astral_iguana", "reach_forward"] },
+  { g: ["mobile_octopus", "tap_twice"] }, { g: ["zoo_dual_arm", "trace_circle"] }, { g: ["astral_salamander", "lift_and_hold"] }, { g: ["v3_reverse_knee_quadruped_s3104", "kick_swing"] },
+  { g: ["v3_hexapod_s20261104", "tap_twice"] }, { g: ["simple_dog", "twist"] }, { g: ["random_gripper_s41", "reach_forward"] }, { g: ["v3_reverse_knee_quadruped_s20261104", "step_forward"] },
 ];
+// The authors, in the paper's order, each with the numbers of their affiliations.
+const AFFILS = ["University of Waterloo", "University of Toronto", "NVIDIA", "Simon Fraser University"];
+const AUTHORS = [["Zane Beeai", "https://www.zanebeeai.com/", [1]], ["Angelo Wei", "https://www.linkedin.com/in/angelo-wei-a638232a2/", [2]],
+  ["Tony Pan", "https://www.tony-pan.com/", [1]], ["Xue Bin Peng", "https://xbpeng.github.io/", [3, 4]],
+  ["Russell Buchanan", "https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/r6buchan", [1]], ["Yi Zhou", "https://zhouyisjtu.github.io/", []]];
+function authorsHTML() {
+  return `<p class="authors">${AUTHORS.map(([n, u, a]) => `<span class="au"><a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>${a.length ? `<sup>${a.join(",")}</sup>` : ""}</span>`).join("")}</p>
+      <p class="affils">${AFFILS.map((x, i) => `<span><sup>${i + 1}</sup>${esc(x)}</span>`).join("")}</p>`;
+}
 // The organized grid: animal robots among the others, the livelier skills first.
 const GRID_ROWS = ["astral_kitsune", "unitree_h1", "astral_monkey", "unitree_go2", "astral_prism_m", "mobile_dog_arm_v2", "astral_weaver_s", "boston_dynamics_spot"];
 const GRID_COLS = ["wave", "kick_swing", "trace_circle", "step_forward", "turn_in_place", "twist", "bow", "lift_and_hold"];
@@ -84,7 +97,7 @@ function firstTiles() {
       return `<a class="tile" href="#/recorded/${esc(x.c.id)}" data-z="${z}" aria-label="${esc(x.g.name)}: ${esc(x.c.title)}"><video data-src="media/${esc(v)}" muted loop playsinline preload="none"></video><span class="tl">${esc(x.g.name)}</span></a>`;
     }
     const k = bestClip(t.g[0], t.g[1]); if (!k) return "";
-    return `<a class="tile" href="#/clip/${esc(k.id)}" data-z="${z}" aria-label="${esc(label(k.body))}: ${esc(nice(k.skill))}"><video data-src="media/${esc(k.video)}" muted loop playsinline preload="none"></video><span class="tl">${esc(label(k.body))}</span></a>`;
+    return `<a class="tile" href="#/clip/${esc(k.id)}" data-z="${z}" aria-label="${esc(label(k.body))}: ${esc(nice(k.skill))}"><video data-src="media/${esc(k.video)}" muted loop playsinline preload="none"></video><span class="tl">${esc(label(k.body).replace(/\s*\(synthetic\)$/, ""))}</span></a>`;
   }).join("");
 }
 function paperButton() {
@@ -114,7 +127,8 @@ function homePage() {
   <div class="hero-stick">
     <div class="hero-copy wrap">
       <h1><b>Rigby:</b> Motion Primitives for <span class="nb">Cross-Embodiment</span> Skill Transfer</h1>
-      <p class="sub"><b>${st.bodies} robots</b>, <b>${fmt(st.clips)} motion clips</b> across ${st.skills} skills, generated from nothing but each robot's model: a language model proposes the robot's primitives and composes them into motions. Every frame of every clip passes every physical check.</p>
+      ${authorsHTML()}
+      <p class="sub"><b>${st.bodies} robots</b>, <b>${fmt(st.clips)} motion clips</b>, generated from nothing but each robot's model: a language model proposes the robot's primitives and composes them into motions. Every frame of every clip passes every physical check.</p>
       <div class="ctas"><a class="btn" href="https://huggingface.co/datasets/${esc(S.meta.hf_repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download dataset</a><a class="btn ghost" href="#/browse">Browse clips</a>${paperButton()}</div>
     </div>
     <div class="stage" id="stage">
@@ -126,8 +140,7 @@ function homePage() {
 </section>
 <section class="band dots">
   <div class="wrap">
-    <div class="eyebrow">How a clip is made</div>
-    <h2 class="h2" style="margin-top:12px">Every clip comes with <b>its program</b></h2>
+    <h2 class="h2">How Rigby generates motions <b>with primitives</b></h2>
     <p class="lede">From the robot model to a checked motion in four steps: the robot's primitives, the program that composes them, and the checks every frame passes. Pick an example; each panel shows the real artefacts for that clip.</p>
     <div class="rail" id="rail"></div>
     <div class="pipe" id="pipe"></div>
@@ -135,24 +148,14 @@ function homePage() {
 </section>
 <section class="band">
   <div class="wrap">
-    <div class="eyebrow">Robots × skills</div>
-    <h2 class="h2" style="margin-top:12px">One sentence, <b>every robot</b></h2>
+    <h2 class="h2">One sentence, <b>every robot</b></h2>
     <p class="lede">A skill is asked for in one sentence, and each robot answers it in its own primitives. Click a tile to open the clip.</p>
     ${skillGrid()}
   </div>
 </section>
-<section class="band dots">
-  <div class="wrap">
-    <div class="eyebrow">Coverage</div>
-    <h2 class="h2" style="margin-top:12px">Every robot, every skill</h2>
-    <p class="lede">Each cell holds every take of that skill on that robot. Click a cell to open its best clip.</p>
-    ${matrixTable()}
-  </div>
-</section>
 <section class="band dark">
   <div class="wrap">
-    <div class="eyebrow">At a glance</div>
-    <h2 class="h2" style="margin-top:12px">One pipeline, <b>every body plan</b></h2>
+    <h2 class="h2">One pipeline, <b>every body plan</b></h2>
     <p class="lede">Arms, quadrupeds, humanoids, hexapods, octopuses, wheeled bodies, a crane and animal-inspired robots: each gets its own primitives, measured by forward kinematics, and every clip is composed from them.</p>
     <div class="stats">
       <div class="stat"><b class="num">${fmt(st.clips)}</b><span>motion clips (${fmt(st.skill_clips)} skill, ${fmt(st.taskblind_clips)} task-blind, ${fmt(st.procedural_clips)} procedural)</span></div>
@@ -166,29 +169,13 @@ function homePage() {
 </section>
 <section class="band dots">
   <div class="wrap">
-    <div class="eyebrow">Embodiments</div>
-    <h2 class="h2" style="margin-top:12px">${st.bodies} robots, <b>one method</b></h2>
+    <h2 class="h2">${st.bodies} robots, <b>one method</b></h2>
     <p class="lede">The pipeline wrote primitives and motions for all ${st.bodies}.${only ? ` Another ${only} robots, swimmers and snakes, are in the dataset with motions recorded in simulation only.` : ""}</p>
     ${robotCards()}
   </div>
 </section>
 ${getSection()}
 <footer><div class="wrap">Rigby kinematic motion dataset · built locally from the release folder · clips are kinematic (physically possible poses and contacts), not simulated dynamics · licence CC BY-NC 4.0; for commercial use, contact the authors.</div></footer>`;
-}
-function matrixTable() {
-  const skills = SKILL_ORDER.filter(s => S.meta.skills.includes(s));
-  let h = `<div class="mx-wrap"><table class="mx"><thead><tr><th></th>${skills.map(s => `<th>${esc(nice(s))}</th>`).join("")}</tr></thead><tbody>`;
-  for (const b of S.bodies) {
-    h += `<tr><th><a href="#/robot/${esc(b.body)}" style="text-decoration:none">${esc(b.label)}</a>${b.held_out ? ' <span class="tag ho">held out</span>' : ""}</th>`;
-    for (const s of skills) {
-      const cs = (S.byBody[b.body] || []).filter(c => c.src === "skill" && c.skill === s);
-      const best = bestClip(b.body, s);
-      h += `<td>${cs.length ? `<a class="cell" href="#/clip/${esc((best || cs[0]).id)}" title="${esc(b.label)} · ${esc(nice(s))}: ${cs.length} takes">${cs.map(c => `<i class="${c.valid ? (c.label ? "vl" : "v") : "x"}"></i>`).join("")}</a>` : ""}</td>`;
-    }
-    h += "</tr>";
-  }
-  h += `</tbody></table></div><div class="legend"><span><i style="background:var(--ok)"></i>passes the label check</span><span><i style="background:color-mix(in srgb,var(--ok) 45%,var(--bg2))"></i>fails the label check</span><span>one mark per take (primitives v0, v1, joint keyframes)</span></div>`;
-  return h;
 }
 function robotCards() {
   const gen = S.bodies.map(b => `
@@ -210,8 +197,7 @@ function getSection() {
   const repo = S.meta.hf_repo;
   return `<section class="band dark" id="get">
   <div class="wrap">
-    <div class="eyebrow">Download</div>
-    <h2 class="h2" style="margin-top:12px">Get the data</h2>
+    <h2 class="h2">Get the data</h2>
     <p class="lede">Everything is on Hugging Face as plain files: NumPy arrays for the motion, JSON for everything else. Pull one robot or the whole set.</p>
     <div class="gs">
       <div class="stack">
@@ -250,12 +236,12 @@ let heroEls = null;
 function heroLayout() {
   const m = $("#matrix"); if (!m) return;
   const vw = window.innerWidth, small = vw < 760;
-  const cols = small ? 3 : 6, rows = small ? 4 : 3;
+  const cols = small ? 4 : 8, rows = small ? 6 : 5;
   const w = Math.min(vw * 0.92, 1240), h = window.innerHeight - 56 - 64;
   const tw = Math.max(72, Math.min(216, (w - (cols - 1) * 8) / cols, ((h - (rows - 1) * 8) / rows) * 4 / 3));
   m.style.setProperty("--tw", tw + "px"); m.style.setProperty("--mc", cols);
-  m.classList.toggle("small", small);            // a narrow screen: three columns, twelve tiles of one size
-  [...m.querySelectorAll(".tile")].forEach((t, i) => { t.hidden = small && i >= 12; });
+  m.classList.toggle("small", small);            // a narrow screen: four columns, twenty-four tiles
+  [...m.querySelectorAll(".tile")].forEach((t, i) => { t.hidden = small && i >= 24; });
 }
 function heroScroll() {
   if (!heroEls) return;
@@ -263,7 +249,7 @@ function heroScroll() {
   const r = hero.getBoundingClientRect();
   const p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - window.innerHeight)));
   const e = 1 - easeInOut(Math.min(1, p * 1.25));          // explode: 1 at the top, 0 when settled
-  heroEls.plane.style.transform = `translateY(${(160 * e).toFixed(1)}px) rotateX(${(50 * e).toFixed(2)}deg) rotateZ(${(-30 * e).toFixed(2)}deg) scale(${(0.86 + 0.14 * (1 - e)).toFixed(3)})`;
+  heroEls.plane.style.transform = `translateY(${((window.innerWidth < 760 ? 330 : 160) * e).toFixed(1)}px) rotateX(${(50 * e).toFixed(2)}deg) rotateZ(${(-30 * e).toFixed(2)}deg) scale(${(0.86 + 0.14 * (1 - e)).toFixed(3)})`;
   for (const t of heroEls.tiles) t.style.transform = `translateZ(${(e * (40 + t._z * 260)).toFixed(1)}px)`;
   heroEls.copy.style.opacity = String(Math.max(0, 1 - p * 2.2));
   for (const a of heroEls.axes) a.style.opacity = String(Math.max(0, 1 - e * 1.6).toFixed(2));
@@ -277,7 +263,27 @@ function wireHome() {
   if (reduce) { $("#hero").style.height = "auto"; $(".hero-stick").style.position = "static"; $(".hero-stick").style.height = "auto"; heroEls = null; }
   else { window.addEventListener("scroll", heroScroll, { passive: true }); heroScroll(); }
   window.onresize = () => { heroLayout(); heroScroll(); };
+  wireWave(reduce);
   pipeline();
+}
+function wireWave(reduce) {
+  const m = $("#matrix");
+  if (!m || reduce || !matchMedia("(hover: hover)").matches) return;
+  const tiles = [...m.querySelectorAll(".tile")];
+  let raf = 0, px = 0, py = 0;
+  const apply = () => {
+    raf = 0;
+    for (const t of tiles) {
+      if (t.hidden) continue;
+      const r = t.getBoundingClientRect();
+      const d = Math.hypot(px - (r.left + r.width / 2), py - (r.top + r.height / 2)) / Math.max(t.offsetWidth, 1);
+      const k = Math.exp(-(d * d) / 1.25);                       // 1 under the cursor, about a half one tile away
+      t.style.scale = (1 + 0.17 * k).toFixed(3);
+      t.style.zIndex = String(Math.round(k * 100));
+    }
+  };
+  m.addEventListener("pointermove", e => { px = e.clientX; py = e.clientY; if (!raf) raf = requestAnimationFrame(apply); });
+  m.addEventListener("pointerleave", () => { if (raf) { cancelAnimationFrame(raf); raf = 0; } for (const t of tiles) { t.style.scale = ""; t.style.zIndex = ""; } });
 }
 // pipeline showcase
 function showcaseClips() {
@@ -344,7 +350,7 @@ function browsePage(params) {
   const skills = SKILL_ORDER.filter(s => S.meta.skills.includes(s));
   const pills = (key, opts) => opts.map(([v, t]) => `<button class="pill" data-k="${key}" data-v="${esc(v)}" aria-pressed="${F[key] === v}">${esc(t)}</button>`).join("");
   return `<div class="wrap page">
-  <div class="bhead"><div><div class="eyebrow">Browse</div><h1 class="h2" style="margin-top:8px">Every clip</h1></div>
+  <div class="bhead"><div><h1 class="h2">Every clip</h1></div>
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="count" id="count"></span><button class="btn small ghost" id="rand">Random clip</button></div></div>
   <div class="facets" id="facets">
     <div class="frow"><span class="lab">Source</span>${pills("src", [["skill", "Skill clips"], ["taskblind", "Task-blind"], ["procedural", "Procedural"], ["", "All generated"], ["recorded", "Recorded in simulation"]])}</div>
@@ -527,7 +533,7 @@ function recCard(g, c) {
 function recordedPage() {
   if (!S.recorded.length) return `<div class="wrap page"><div class="empty-state">This build has no recorded motions.</div></div>`;
   const st = S.meta.stats;
-  return `<div class="wrap page"><div class="eyebrow">Recorded in simulation</div><h1 class="h2" style="margin-top:8px">Recorded motions, each in its own scene</h1>
+  return `<div class="wrap page"><h1 class="h2">Recorded motions, each in its own scene</h1>
     <p class="lede">${st.recorded_clips} motions of ${st.recorded_robots} robots, about ${st.recorded_minutes} minutes in all. Each was recorded in physics simulation in a scene built for it, and is shown in that scene: its surroundings and the objects the robot works with move as they did in the recording. These motions were not generated by the pipeline and are not counted in the dataset's figures.</p>
     ${S.recorded.map(g => `<div style="margin-top:30px"><div class="chead" style="margin-top:0"><b>${esc(g.name)}</b><a class="btn small ghost" href="#/robot/${esc(g.page_body)}">The robot</a></div>
       <div class="grid">${g.clips.map(c => recCard(g, c)).join("")}</div></div>`).join("")}
@@ -562,7 +568,7 @@ function recordedOf(body) {
 
 // ------------------------------------------------------------------ robots
 function robotsPage() {
-  return `<div class="wrap page"><div class="eyebrow">Embodiments</div><h1 class="h2" style="margin-top:8px">Robots</h1>
+  return `<div class="wrap page"><h1 class="h2">Robots</h1>
     <p class="lede">Each robot's primitives were written once from its model alone, before any motion is requested, and every generated clip on that robot is composed from them.</p>${robotCards()}</div>`;
 }
 function robotPage(body) {
