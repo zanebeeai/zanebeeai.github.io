@@ -1,5 +1,5 @@
-/* Rigby dataset site. Layout: a light editorial page with dark bands; the hero is a robots x skills grid that
-   starts exploded in depth and settles into a flat matrix as you scroll. */
+/* Rigby dataset site. Layout: a light editorial page with dark bands; the hero is the paper's title over a mix of
+   the most striking clips, which starts exploded in depth and settles into a flat mosaic as you scroll. */
 :root {
   --bg: #f4f5f3; --bg2: #ebedea; --panel: #ffffff; --ink: #121614; --ink2: #5b645f; --ink3: #8a938e; --line: #dde1de;
   --dark: #0e1211; --dark2: #171c1a; --dark-ink: #e8ece9; --dark-ink2: #9aa49f; --dark-line: #29302d;
@@ -209,3 +209,38 @@ details summary { cursor: pointer; font-size: 13px; color: var(--ink2) }
 .cell i { border-radius: 1px }
 /* recorded motions: the title of a recording wraps under the robot's name */
 .card .t .rt { font-size: 12.5px; line-height: 1.35; color: var(--ink2) }
+
+/* hero: the paper's title, its first word large; the line about the dataset and the paragraph are smaller */
+.hero h1 { font-weight: 300; font-size: clamp(19px, 2.5vw, 34px); line-height: 1.14; letter-spacing: -.02em; max-width: 28ch; margin: 0 auto }
+.hero h1 b { display: block; font-weight: 600; font-size: clamp(64px, 11vw, 148px); line-height: .9; letter-spacing: -.055em; margin-bottom: clamp(8px, 1.4vh, 16px) }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap }
+.hero .tagline { font-size: clamp(16px, 1.8vw, 22px); color: var(--ink); margin: clamp(12px, 2vh, 20px) auto 0; text-wrap: balance }
+.hero .tagline b { font-weight: 600 }
+.hero .sub { font-size: clamp(14px, 1.25vw, 16px); margin: 10px auto 20px; max-width: 66ch }
+.btn .axi { width: 16px; height: 16px; display: block }
+.btn.soon { cursor: default; opacity: .62 }
+.btn.soon small { font: 500 10px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink3) }
+/* the first screen's mosaic: tiles of two sizes, packed; recorded motions are dark scenes in either theme, and say so */
+.mosaic { display: grid; grid-template-columns: repeat(var(--mc, 6), var(--tw, 150px)); grid-auto-rows: calc(var(--tw, 150px) * .75);
+  grid-auto-flow: dense; gap: 8px; transform-style: preserve-3d }
+.mosaic .tile { width: auto; height: 100%; aspect-ratio: auto }
+.mosaic .tile.big { grid-column: span 2; grid-row: span 2 }
+.mosaic.small .tile.big { grid-column: auto; grid-row: auto }
+.mosaic .tile[hidden] { display: none }
+.tile.rec { background: #0b0f14; border-color: #29302d }
+.tile.rec .tl, .tile .tr { background: rgba(8, 10, 9, .74); color: #e8ece9 }
+.tile .tr { position: absolute; right: 6px; top: 6px; font: 500 9px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; padding: 3px 5px; border-radius: 1px }
+.hero-foot { display: flex; gap: 6px 22px; justify-content: center; flex-wrap: wrap; padding: 0 16px }
+.hero-foot .key { display: inline-flex; align-items: center; gap: 7px }
+.hero-foot .key i { width: 10px; height: 10px; border-radius: 2px; border: 1px solid var(--ink3); display: inline-block }
+.hero-foot .kg { background: #ffffff } .hero-foot .kr { background: #0b0f14 }
+/* the organized grid below the explanation: the same matrix, flat */
+.matrix.flat { min-width: 760px }
+.matrix.flat .tile { width: auto; box-shadow: none }
+.nb { white-space: nowrap }
+.hero h1 { max-width: 32ch }
+/* the scrim behind the copy holds to the edge of the text, so a light tile behind it cannot wash a line out */
+.hero-copy::before { inset: -40px -6% -90px; background: radial-gradient(ellipse closest-side, var(--bg) 0%, var(--bg) 70%, color-mix(in srgb, var(--bg) 70%, transparent) 86%, transparent 100%) }
+.hero-foot { left: 50%; right: auto; transform: translateX(-50%); width: max-content; max-width: calc(100% - 24px); padding: 7px 14px; border-radius: 3px;
+  background: color-mix(in srgb, var(--bg) 90%, transparent); color: var(--ink2) }
+
