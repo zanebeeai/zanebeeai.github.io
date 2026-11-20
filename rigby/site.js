@@ -240,7 +240,7 @@ function heroLayout() {
   const m = $("#matrix"); if (!m) return;
   const vw = window.innerWidth, small = vw < 760;
   const cols = small ? 4 : 8, rows = small ? 6 : 5;
-  const band = small ? 124 : 88;                  // room above the settled tiles: the title stays there, smaller
+  const band = small ? 148 : 92;                  // room above the settled tiles: the title stays there
   const w = Math.min(vw * 0.92, 1240), h = window.innerHeight - 56 - band - 28;
   const tw = Math.max(72, Math.min(216, (w - (cols - 1) * 8) / cols, ((h - (rows - 1) * 8) / rows) * 4 / 3));
   m.style.setProperty("--tw", tw + "px"); m.style.setProperty("--mc", cols);
@@ -256,15 +256,14 @@ function heroScroll() {
   const e = 1 - easeInOut(Math.min(1, p * 1.25));          // explode: 1 at the top, 0 when settled
   heroEls.plane.style.transform = `translateY(${((window.innerWidth < 760 ? 330 : 160) * e).toFixed(1)}px) rotateX(${(50 * e).toFixed(2)}deg) rotateZ(${(-30 * e).toFixed(2)}deg) scale(${(0.86 + 0.14 * (1 - e)).toFixed(3)})`;
   for (const t of heroEls.tiles) t.style.transform = `translateZ(${(e * (40 + t._z * 260)).toFixed(1)}px)`;
-  // the title stays: it shrinks a little and rises into the band above the settled tiles; the rest of the copy fades
+  // the title stays, at its size: it moves to sit just above the settled tiles; the rest of the copy fades
   const fade = Math.max(0, 1 - p * 2.6), k = 1 - e, h1 = heroEls.title, band = +heroEls.matrix.dataset.band || 88;
   heroEls.rest.style.opacity = fade.toFixed(3);
   heroEls.rest.style.visibility = fade < 0.02 ? "hidden" : "visible";          // faded buttons must not take clicks
   heroEls.copy.style.setProperty("--scrim", fade.toFixed(3));
-  const less = window.innerWidth < 760 ? 0.2 : 0.28;                           // how much smaller the title ends
   const tilesTop = band + (heroEls.stage.clientHeight - band - heroEls.matrix.offsetHeight) / 2;   // where the settled tiles begin
-  const centre = Math.max(band * 0.45, tilesTop - 22 - h1.offsetHeight * (1 - less) / 2);          // the title ends just above them
-  h1.style.transform = `translateY(${((centre - (h1.offsetTop + h1.offsetHeight / 2)) * k).toFixed(1)}px) scale(${(1 - less * k).toFixed(3)})`;
+  const top = Math.max(10, tilesTop - 20 - h1.offsetHeight);                                       // the title ends just above them, at its own size
+  h1.style.transform = `translateY(${((top - h1.offsetTop) * k).toFixed(1)}px)`;
 }
 const easeInOut = x => x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
 function wireHome() {
