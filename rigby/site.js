@@ -357,7 +357,7 @@ async function sidecar(c) {
 }
 
 // ------------------------------------------------------------------ browse
-const F = { src: "skill", skill: "", kind: "", body: "", arm: "", valid: "", label: "", q: "", n: 60 };
+const F = { src: "", skill: "", kind: "", body: "", arm: "", valid: "", label: "", q: "", n: 60 };     // src "": every clip, the recorded scenes among them
 function browsePage(params) {
   for (const k of Object.keys(F)) if (params.has(k)) F[k] = k === "n" ? +params.get(k) : params.get(k);
   const kinds = [...new Set(S.bodies.map(b => b.kind_label))].sort();
@@ -367,12 +367,12 @@ function browsePage(params) {
   <div class="bhead"><div><h1 class="h2">Every clip</h1></div>
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="count" id="count"></span><button class="btn small ghost" id="rand">Random clip</button></div></div>
   <div class="facets" id="facets">
-    <div class="frow"><span class="lab">Source</span>${pills("src", [["skill", "Skill clips"], ["taskblind", "Task-blind"], ["procedural", "Procedural"], ["", "All generated"], ["recorded", "Recorded in simulation"]])}</div>
+    <div class="frow"><span class="lab">Source</span>${pills("src", [["", "All"], ["skill", "Skill clips"], ["taskblind", "Task-blind"], ["procedural", "Procedural"], ["recorded", "Recorded scenes"]])}</div>
     <div class="frow"><span class="lab">Skill</span>${pills("skill", [["", "Any"], ...skills.map(s => [s, nice(s)])])}</div>
     <div class="frow"><span class="lab">Body plan</span>${pills("kind", [["", "Any"], ...kinds.map(k => [k, k])])}</div>
     <div class="frow"><span class="lab">Made with</span>${pills("arm", [["", "Any"], ["P", "Primitives"], ["J", "Joint keyframes"]])}</div>
     <div class="frow"><span class="lab">Label check</span>${pills("label", [["", "Label: any"], ["1", "Passes label check"], ["0", "Fails label check"]])}</div>
-    <div class="frow"><span class="lab">Robot</span><select class="sel" id="fbody"><option value="">Any robot</option>${S.bodies.map(b => `<option value="${esc(b.body)}" ${F.body === b.body ? "selected" : ""}>${esc(b.label)}</option>`).join("")}</select>
+    <div class="frow"><span class="lab">Robot</span><select class="sel" id="fbody"><option value="">Any robot</option>${S.bodies.map(b => [b.body, b.label]).concat(S.recorded.filter(g => !g.body).map(g => [g.page_body, g.name])).map(([v, t]) => `<option value="${esc(v)}" ${F.body === v ? "selected" : ""}>${esc(t)}</option>`).join("")}</select>
       <input class="search" id="fq" placeholder="Search robot or skill" value="${esc(F.q)}" aria-label="Search"></div>
   </div>
   <div class="grid" id="grid"></div>
@@ -396,20 +396,28 @@ function card(c) {
     <div class="h"><b style="font-weight:500">${esc(title)}</b><span>${esc(sub)}</span></div><div class="badges">${badges.join("")}</div></div></a>`;
 }
 function wireBrowse() {
-  const recs = () => { const q = F.q.trim().toLowerCase(); return S.recorded.flatMap(g => g.clips.map(c => ({ g, c }))).filter(x => (!F.body || x.g.body === F.body) && (!q || `${x.g.name} ${x.c.title} ${x.c.task}`.toLowerCase().includes(q))); };
+  // What the filters leave: generated clips ({c}) and recorded motions in their scenes ({g, c}) in one list. The recorded
+  // ones have no skill, arm or label check, so they drop out when one of those filters is set. With no robot chosen the
+  // list takes one clip from each robot in turn, a robot's scenes first, so the page opens on the widest mix.
+  const items = () => {
+    const q = F.q.trim().toLowerCase(), plain = !F.skill && !F.kind && !F.arm && F.valid === "" && F.label === "";
+    const rank = { skill: 0, taskblind: 1, procedural: 2 };
+    const gen = F.src === "recorded" ? [] : filtered().map(c => ({ c })).sort((a, b) => (!a.c.video - !b.c.video) || (rank[a.c.src] - rank[b.c.src]));
+    const rec = (F.src === "" || F.src === "recorded") && plain
+      ? S.recorded.flatMap(g => g.clips.map(c => ({ g, c }))).filter(x => (!F.body || x.g.page_body === F.body) && (!q || `${x.g.name} ${x.c.title} ${x.c.task}`.toLowerCase().includes(q))) : [];
+    if (F.body) return rec.concat(gen);
+    const by = new Map();
+    for (const x of rec.concat(gen)) { const k = x.g ? x.g.page_body : x.c.body; if (!by.has(k)) by.set(k, []); by.get(k).push(x); }
+    const all = [...by.values()], withScenes = all.filter(v => v[0].g), without = all.filter(v => !v[0].g), qs = [];
+    for (let i = 0; i < Math.max(withScenes.length, without.length); i++) { if (without[i]) qs.push(without[i]); if (withScenes[i]) qs.push(withScenes[i]); }
+    const out = [], n = rec.length + gen.length;
+    for (let i = 0; out.length < n; i++) for (const v of qs) if (i < v.length) out.push(v[i]);
+    return out;
+  };
   const draw = () => {
-    if (F.src === "recorded") {                  // recorded in simulation: not pipeline output, so the other filters do not apply
-      const rs = recs(), g = $("#grid");
-      $("#count").textContent = `${rs.length.toLocaleString()} recorded motions`;
-      g.innerHTML = rs.length ? rs.slice(0, F.n).map(x => recCard(x.g, x.c)).join("") : `<div class="empty-state" style="grid-column:1/-1">No recorded motion matches. Clear the robot or the search to see more.</div>`;
-      $("#moreb").hidden = rs.length <= F.n;
-      wireVideos(g);
-      return;
-    }
-    const xs = filtered();
-    $("#count").textContent = `${xs.length.toLocaleString()} clips`;
-    const g = $("#grid");
-    g.innerHTML = xs.length ? xs.slice(0, F.n).map(card).join("") : `<div class="empty-state" style="grid-column:1/-1">No clips match these filters. Clear one of them to see more.</div>`;
+    const xs = items(), nr = xs.filter(x => x.g).length, ng = xs.length - nr, g = $("#grid");
+    $("#count").textContent = nr && ng ? `${ng.toLocaleString()} clips · ${nr} in recorded scenes` : nr ? `${nr} recorded motions` : `${ng.toLocaleString()} clips`;
+    g.innerHTML = xs.length ? xs.slice(0, F.n).map(x => x.g ? recCard(x.g, x.c) : card(x.c)).join("") : `<div class="empty-state" style="grid-column:1/-1">No clips match these filters. Clear one of them to see more.</div>`;
     $("#moreb").hidden = xs.length <= F.n;
     wireVideos(g);
   };
@@ -422,8 +430,9 @@ function wireBrowse() {
   let t; $("#fq").oninput = e => { clearTimeout(t); t = setTimeout(() => { F.q = e.target.value; F.n = 60; draw(); }, 200); };
   $("#moreb").onclick = () => { F.n += 60; draw(); };
   $("#rand").onclick = () => {
-    if (F.src === "recorded") { const rs = recs().filter(x => x.c.video); if (rs.length) location.hash = `#/recorded/${rs[Math.floor(Math.random() * rs.length)].c.id}`; return; }
-    const xs = filtered().filter(c => c.video); if (xs.length) location.hash = `#/clip/${xs[Math.floor(Math.random() * xs.length)].id}`;
+    const xs = items().filter(x => x.c.video); if (!xs.length) return;
+    const x = xs[Math.floor(Math.random() * xs.length)];
+    location.hash = x.g ? `#/recorded/${x.c.id}` : `#/clip/${x.c.id}`;
   };
   draw();
 }
