@@ -94,9 +94,30 @@ section.band.dots { background-image: radial-gradient(var(--line) 1px, transpare
 .pill[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
 .pill .c { color: var(--ink3); margin-left: 6px; font-family: var(--f-mono); font-size: 11px }
 .pill[aria-pressed="true"] .c { color: inherit; opacity: .7 }
-.pipe { display: grid; grid-template-columns: 1fr 1.15fr 1.15fr 1.3fr; gap: 14px; align-items: stretch }
-@media (max-width: 1000px) { .pipe { grid-template-columns: 1fr 1fr } }
-@media (max-width: 560px) { .pipe { grid-template-columns: 1fr } }
+.pipe { display: grid; grid-template-columns: 1fr auto 1.15fr auto 1.15fr auto 1.3fr; align-items: stretch }
+/* between two boxes: what the first hands to the second, over an arrow */
+.flow { align-self: center; width: 76px; padding: 0 7px; display: flex; flex-direction: column; align-items: center; gap: 7px; text-align: center;
+  font: 12px/1.25 var(--f-sans); color: var(--ink2) }
+.flow i { position: relative; display: block; width: 100%; height: 1px; background: var(--ink3) }
+.flow i::after { content: ""; position: absolute; right: 1px; top: 50%; width: 7px; height: 7px; border: solid var(--ink3); border-width: 1px 1px 0 0; transform: translateY(-50%) rotate(45deg) }
+@media (max-width: 1000px) {                      /* two boxes a row: the middle arrow points down to the second row */
+  .pipe { grid-template-columns: 1fr auto 1fr }
+  .flow.mid { grid-column: 1 / -1; width: auto; flex-direction: row-reverse; justify-content: center; gap: 12px; padding: 10px 0; text-align: left }
+  .flow.mid i { width: 1px; height: 30px }
+  .flow.mid i::after { right: auto; left: 50%; top: auto; bottom: 1px; transform: translateX(-50%) rotate(135deg) }
+}
+@media (max-width: 560px) {                       /* one box a row: every arrow points down */
+  .pipe { grid-template-columns: 1fr }
+  .flow { width: auto; flex-direction: row-reverse; justify-content: center; gap: 12px; padding: 10px 0; text-align: left }
+  .flow i { width: 1px; height: 30px }
+  .flow i::after { right: auto; left: 50%; top: auto; bottom: 1px; transform: translateX(-50%) rotate(135deg) }
+}
+/* the checks of the clip, as a plain list: name on the left, result on the right */
+.cklist { font-size: 13px; line-height: 1.35 }
+.ck-h { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-size: 12px; color: var(--ink3); padding-bottom: 6px }
+.cklist ul { list-style: none; margin: 0; padding: 0 }
+.cklist li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 4px 0; border-top: 1px solid var(--line); color: var(--ink2) }
+.cklist .st { font-weight: 500 }
 .step { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0 }
 .step .n { font: 500 11px var(--f-mono); color: var(--accent); letter-spacing: .1em; text-transform: uppercase }
 .step h3 { font-size: 16px; font-weight: 600 }
@@ -147,7 +168,6 @@ table.files td { padding: 8px 6px; border-bottom: 1px solid var(--dark-line); ve
 table.files td:first-child { font-family: var(--f-mono); font-size: 12px; white-space: nowrap; color: var(--dark-ink) }
 table.files td:last-child { color: var(--dark-ink2) }
 .files-wrap { overflow-x: auto }
-footer { padding: 40px 0 60px; color: var(--ink3); font-size: 13px; border-top: 1px solid var(--line) }
 
 /* browse */
 .page { padding-block: 32px 80px }
