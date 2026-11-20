@@ -314,25 +314,26 @@ async function pipeline(sel = 0) {
   const used = usedPrims(side?.program);
   const prims = (b.prims || []).filter(p => used.has(p.name)).concat((b.prims || []).filter(p => !used.has(p.name))).slice(0, 4);
   const checks = Object.entries(side?.filters || {}).filter(([k, v]) => v && typeof v === "object" && "pass" in v);
-  // what one step hands to the next, on an arrow between the two boxes (the middle one turns down where the boxes wrap to two rows)
-  const flow = (t, mid) => `<div class="flow${mid ? " mid" : ""}"><span>${t}</span><i aria-hidden="true"></i></div>`;
+  // what one step hands to the next, on an arrow from its box to the next one: on a wide screen it leaves the bottom of the
+  // box, runs across below and rises into the next; on narrower screens it is a straight arrow between the two
+  const flow = (t, k) => `<div class="flow f${k}${k === 2 ? " mid" : ""}"><span>${t}</span><i aria-hidden="true"></i></div>`;
+  const nPass = checks.filter(([, v]) => v.pass).length;
   $("#pipe").innerHTML = `
     <div class="step"><div class="n">Robot model</div><h3>${esc(b.label)}</h3>
       <div class="media">${b.still ? `<img src="media/${esc(b.still)}" alt="">` : ""}</div>
       <p>${esc(b.origin)} · ${b.nq - (b.free_base ? 7 : 0)} joints · ${esc(b.kind_label.toLowerCase())}. The only input.</p></div>
-    ${flow("robot description")}
+    ${flow("robot description", 1)}
     <div class="step"><div class="n">Primitives</div><h3>${b.modes} modes, ${b.gaits} gaits</h3>
       <div class="minis">${prims.map(p => `<div class="mini">${vid(p.video)}<span>${esc(p.name)}</span></div>`).join("")}</div>
       <p>Written once per robot by the model, before any motion is requested, and each measured by forward kinematics.${used.size ? " Outlined: used by this clip." : ""}</p></div>
-    ${flow("primitive library", true)}
+    ${flow("primitive library", 2)}
     <div class="step"><div class="n">Program</div><h3>${esc(nice(c.skill))}, ${(side?.program?.keyframes || []).length} keyframes</h3>
       <pre class="code">${esc(programText(side?.program))}</pre>
       <p>The model wrote it from the skill's sentence and the primitive cards${c.repairs ? `, repaired ${c.repairs}×` : ""}.</p></div>
-    ${flow("compiled motion")}
+    ${flow("compiled motion", 3)}
     <div class="step"><div class="n">Checked clip</div><h3>${c.valid ? "Physically possible" : "Fails a check"}</h3>
       ${vid(c.video)}
-      ${checks.length ? `<div class="cklist"><div class="ck-h"><span>Checked on every frame</span><span>${checks.filter(([, v]) => v.pass).length} of ${checks.length} pass</span></div>
-      <ul>${checks.map(([k, v]) => `<li><span>${esc(CHECK_NAMES[k] || nice(k))}</span><span class="st ${v.pass ? "ok" : "bad"}">${v.pass ? "pass" : "fail"}</span></li>`).join("")}</ul></div>` : ""}
+      ${checks.length ? `<p>${nPass === checks.length ? `Every frame passes all ${checks.length} physical checks.` : `${nPass} of its ${checks.length} physical checks pass.`}</p>` : ""}
       <a class="btn small ghost" href="#/clip/${esc(c.id)}" style="align-self:flex-start">Open this clip</a></div>`;
   // mark used primitives
   $("#pipe").querySelectorAll(".mini").forEach((m, i) => { if (used.has(prims[i]?.name)) m.querySelector(".media").style.outline = "2px solid var(--accent)"; });
