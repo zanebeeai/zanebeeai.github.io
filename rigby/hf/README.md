@@ -107,33 +107,33 @@ The label check is a strict, automatic test of each skill's definition.
 
 ## Imported motions: animal robots
 
-90 motions for 18 animal-inspired robots that walk, climb and swim, designed and recorded by Yi Zhou (the Animal Atlas). They are a separate subset with a different guarantee from the clips above, and they are **not counted** in the numbers above.
+111 motions for 18 animal-inspired robots that walk, climb and swim, designed and recorded by Yi Zhou (the Animal Atlas). They are a separate subset with a different guarantee from the clips above, and they are **not counted** in the numbers above.
 
 - Each motion was recorded in MuJoCo physics, in its own scene: the robot, a floor and sometimes props, latches or approximate water forces. It was accepted on its author's physics validation, which the clip's record summarises.
 - Each was made from a program over motion primitives by an earlier, physics-based executor of this project, not by the kinematic pipeline described below. Some are new compositions; others re-express a hand-written controller's motion as primitives.
-- The dataset's kinematic checks were run on every one and are recorded, but they were not used to accept or reject it; 8 of 90 pass all of them. Checks such as static support and planted-foot slip do not fit swimming, climbing or jumping.
+- The dataset's kinematic checks were run on every one and are recorded, but they were not used to accept or reject it; 9 of 111 pass all of them. Checks such as static support and planted-foot slip do not fit swimming, climbing or jumping.
 - Format: the same arrays as every clip (`qpos`, `qvel`, `tip_pos`, `contact`, `fps`), for the robot alone at 50 fps, in the qpos order of `bodies/<body>.xml`; plus `scene_t` and `scene_qpos`, the recording as it was made with every body of its scene, and the scene file.
 
 | Robot | Body files | Motions | Minutes | Pass every kinematic check |
 |---|---|---|---|---|
-| KITSUNE / 09 / Nine-tailed fox | `astral_kitsune` | 5 | 4.3 | 3 |
-| AEGIS–T / Tortoise | `astral_aegis_t`, `astral_aegis_t_b` | 5 | 6.4 | 0 |
-| EMBER–F / Fox | `astral_ember_f` | 5 | 4.0 | 2 |
-| PRISM–M / Praying mantis | `astral_prism_m` | 5 | 5.3 | 2 |
-| WEAVER–S / Spider | `astral_weaver_s` | 5 | 3.4 | 0 |
-| SERPENS / Snake | `astral_serpens` | 5 | 1.5 | 0 |
-| SERPENS / ARBOR / Snake-inspired tree climber | `astral_serpens_arbor`, `astral_serpens_arbor_b` | 5 | 2.5 | 0 |
-| PELAGIC / MANTA / Manta Ray | `astral_manta_ray`, `astral_manta_ray_b` | 5 | 3.1 | 0 |
-| REEF / SHARK / Shark | `astral_shark` | 5 | 2.8 | 0 |
-| ECHO / DOLPHIN / Dolphin | `astral_dolphin`, `astral_dolphin_b` | 5 | 3.4 | 0 |
-| ANCHOR / SEAHORSE / Seahorse | `astral_seahorse`, `astral_seahorse_b` | 5 | 3.5 | 0 |
-| AXON-S / Salamander | `astral_salamander` | 5 | 1.1 | 0 |
-| CROCO-X / Crocodile | `astral_crocodile` | 5 | 1.0 | 0 |
-| IGNEA-I / Iguana | `astral_iguana` | 5 | 1.4 | 0 |
-| OCTO-8 / Octopus | `astral_octopus` | 5 | 5.0 | 0 |
-| SIMIA-M / Monkey | `astral_monkey` | 5 | 3.3 | 0 |
-| MEDUSA-J / Jellyfish | `astral_jellyfish` | 5 | 4.0 | 0 |
-| VANTA–L / Chameleon / gecko | `astral_vanta_l` | 5 | 0.5 | 1 |
+| KITSUNE / 09 / Nine-tailed fox | `astral_kitsune` | 6 | 4.4 | 3 |
+| AEGIS–T / Tortoise | `astral_aegis_t`, `astral_aegis_t_b`, `astral_aegis_t_c` | 6 | 6.6 | 0 |
+| EMBER–F / Fox | `astral_ember_f`, `astral_ember_f_b` | 6 | 4.5 | 2 |
+| PRISM–M / Praying mantis | `astral_prism_m` | 6 | 5.3 | 3 |
+| WEAVER–S / Spider | `astral_weaver_s` | 6 | 3.5 | 0 |
+| SERPENS / Snake | `astral_serpens`, `astral_serpens_b` | 6 | 1.8 | 0 |
+| SERPENS / ARBOR / Snake-inspired tree climber | `astral_serpens_arbor`, `astral_serpens_arbor_b`, `astral_serpens_arbor_c` | 6 | 2.7 | 0 |
+| PELAGIC / MANTA / Manta Ray | `astral_manta_ray`, `astral_manta_ray_b`, `astral_manta_ray_c` | 6 | 3.2 | 0 |
+| REEF / SHARK / Shark | `astral_shark`, `astral_shark_b` | 6 | 3.0 | 0 |
+| ECHO / DOLPHIN / Dolphin | `astral_dolphin`, `astral_dolphin_b`, `astral_dolphin_c` | 6 | 3.5 | 0 |
+| ANCHOR / SEAHORSE / Seahorse | `astral_seahorse`, `astral_seahorse_b`, `astral_seahorse_c` | 6 | 4.0 | 0 |
+| AXON-S / Salamander | `astral_salamander`, `astral_salamander_b` | 6 | 1.5 | 0 |
+| CROCO-X / Crocodile | `astral_crocodile`, `astral_crocodile_b` | 6 | 1.2 | 0 |
+| IGNEA-I / Iguana | `astral_iguana` | 6 | 1.5 | 0 |
+| OCTO-8 / Octopus | `astral_octopus` | 6 | 5.5 | 0 |
+| SIMIA-M / Monkey | `astral_monkey` | 6 | 3.6 | 0 |
+| MEDUSA-J / Jellyfish | `astral_jellyfish`, `astral_jellyfish_b` | 6 | 4.4 | 0 |
+| VANTA–L / Chameleon / gecko | `astral_vanta_l`, `astral_vanta_l_b` | 9 | 5.0 | 1 |
 
 11 of these robots are also in the main set above, with skill clips made by the kinematic pipeline (their rows in the robots table).
 
