@@ -1,0 +1,119 @@
+{
+ "clip_id": "astral_octopus/hidden_retrieve",
+ "body": "astral_octopus",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "octopus",
+ "robot_name": "OCTO-8",
+ "animal": "Octopus",
+ "task": "hidden_retrieve",
+ "title": "Retrieve an object around a blind corner",
+ "kind": "manipulate",
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.embodied_sequence.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "3 fixed positives including exact repeat; command-omission control"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/trio/octopus/hidden_retrieve/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/trio/octopus/hidden_retrieve/",
+  "trajectory_sha256": "2ba32e3d5dc743ba68ebf9f191ebc55c19f3f1b75bc2839e026f5341f83d8d1a"
+ },
+ "model_revision": "88f119f6a3",
+ "scene": {
+  "file": "imported/astral_octopus/hidden_retrieve.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "FLOAT_target",
+   "ENV_blind_wall",
+   "ENV_rear_wall"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_octopus/hidden_retrieve.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json.gz",
+  "passed": true,
+  "positive_trials": 3,
+  "exact_repeat": true,
+  "gates": {
+   "finite": true,
+   "penetration": true,
+   "joint_limits": true,
+   "bounded_actuation": true,
+   "declared_forces_only": true,
+   "passive_drag": true,
+   "no_warnings": true,
+   "no_root_pose_writes": true,
+   "latch_integrity": true
+  }
+ },
+ "frames": 841,
+ "fps": 50.0,
+ "duration_s": 16.82,
+ "nq": 107,
+ "source_frames": 841,
+ "source_dt_s": 0.02,
+ "resampled": false,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": false,
+   "worst_rad": 0.1207,
+   "joint": "arm_1_pad_pitch"
+  },
+  "self_collision": {
+   "pass": false,
+   "worst_m": 0.0054,
+   "pair_frame": [
+    "arm_0_pad",
+    "arm_7_pad",
+    0
+   ],
+   "limit_m": 0.0017
+  },
+  "ground": {
+   "pass": false,
+   "worst_m": 0.015,
+   "body_frame": [
+    "arm_2_pad",
+    615
+   ],
+   "limit_m": 0.0017
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0608,
+   "limit_rad": 0.3049
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.0135,
+   "worst_off_ground_m": 0.015,
+   "limit_m": 0.0034
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0169
+  },
+  "pass": false,
+  "failed": [
+   "joint_limits",
+   "self_collision",
+   "ground",
+   "foot_slip"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_octopus/hidden_retrieve.npz"
+}

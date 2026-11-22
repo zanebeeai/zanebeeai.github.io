@@ -1,0 +1,97 @@
+{
+ "clip_id": "astral_salamander/forage_snap",
+ "body": "astral_salamander",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "salamander",
+ "robot_name": "AXON-S",
+ "animal": "Salamander",
+ "task": "forage_snap",
+ "title": "Low foraging scan and paired jaw snaps",
+ "kind": "display",
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.basis_run.run_program",
+  "conversion_method": "new",
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "7 fixed positive trials; exact repeat; command-omission control"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/features/salamander/forage_snap/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/features/salamander/forage_snap/",
+  "trajectory_sha256": "91f3976401bcc96946be97d377d7e1112bee95fa08aa70c83db2e0c83ae6b35f"
+ },
+ "model_revision": "111ceb0280",
+ "scene": {
+  "file": "imported/astral_salamander/forage_snap.scene.xml",
+  "flat_floor_only": true,
+  "props": [],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_salamander/forage_snap.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json.gz",
+  "passed": true,
+  "positive_trials": 7,
+  "exact_repeat": true
+ },
+ "frames": 437,
+ "fps": 50.0,
+ "duration_s": 8.74,
+ "nq": 39,
+ "source_frames": 258,
+ "source_dt_s": 0.034,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0017
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": [
+    "FL_foot",
+    22
+   ],
+   "limit_m": 0.0017
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0377,
+   "limit_rad": 0.3052
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0021,
+   "worst_off_ground_m": 0.0001,
+   "limit_m": 0.0034
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 2,
+   "worst_outside_m": 9.9,
+   "limit_m": 0.0168
+  },
+  "pass": false,
+  "failed": [
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_salamander/forage_snap.npz"
+}

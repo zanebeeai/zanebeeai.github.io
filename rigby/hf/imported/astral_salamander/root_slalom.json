@@ -1,0 +1,119 @@
+{
+ "clip_id": "astral_salamander/root_slalom",
+ "body": "astral_salamander",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "salamander",
+ "robot_name": "AXON-S",
+ "animal": "Salamander",
+ "task": "root_slalom",
+ "title": "Spine-led root slalom",
+ "kind": "crawl",
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.basis_run.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "nominal, repeat, 5 fixed friction/yaw variations, command-omission control"
+ },
+ "origin": {
+  "page": "https://vanta-l-v2-astral-robots.zhouyisjtu2012.chatgpt.site/primitives/animals/salamander/root_slalom/",
+  "files": "https://vanta-l-v2-astral-robots.zhouyisjtu2012.chatgpt.site/primitives/animals/salamander/root_slalom/",
+  "trajectory_sha256": "5c0c92f3896fc78a1a561dc9a86f5f339f98f11ba5c47a371a5e713c40ba5d4e"
+ },
+ "model_revision": "111ceb0280",
+ "scene": {
+  "file": "imported/astral_salamander/root_slalom.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "OBJ:first",
+   "OBJ:second",
+   "OBJ:exit",
+   "ENV_root_a",
+   "ENV_root_b"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_salamander/root_slalom.program.json",
+ "author_validation": {
+  "file": "metrics.json.gz",
+  "passed": true,
+  "gates": {
+   "general_physics": true,
+   "initial_scene_clear": true,
+   "finite_state": true,
+   "upright": true,
+   "floor_clearance": true,
+   "self_clearance": true,
+   "obstacle_clearance": true,
+   "bounded_actuation": true,
+   "no_external_root_force": true,
+   "program_completed": true,
+   "ordered_waypoints": true,
+   "finish": true,
+   "turn": true,
+   "spine": true
+  }
+ },
+ "frames": 1405,
+ "fps": 50.0,
+ "duration_s": 28.1,
+ "nq": 39,
+ "source_frames": 827,
+ "source_dt_s": 0.034,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": false,
+   "worst_rad": 0.01647,
+   "joint": "jaw_open"
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0017
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0013,
+   "body_frame": [
+    "FR_foot",
+    857
+   ],
+   "limit_m": 0.0017
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.2489,
+   "limit_rad": 0.3052
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.1837,
+   "worst_off_ground_m": 0.0357,
+   "limit_m": 0.0034
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 90,
+   "worst_outside_m": 0.4272,
+   "limit_m": 0.0168
+  },
+  "pass": false,
+  "failed": [
+   "joint_limits",
+   "foot_slip",
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_salamander/root_slalom.npz"
+}

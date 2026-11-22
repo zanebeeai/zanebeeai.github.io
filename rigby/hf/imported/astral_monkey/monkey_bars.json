@@ -1,0 +1,124 @@
+{
+ "clip_id": "astral_monkey/monkey_bars",
+ "body": "astral_monkey",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "monkey",
+ "robot_name": "SIMIA-M",
+ "animal": "Monkey",
+ "task": "monkey_bars",
+ "title": "Climb and turn across ascending bars",
+ "kind": "climb",
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.embodied_sequence.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "3 fixed positives including exact repeat; command-omission control"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/trio/monkey/monkey_bars/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/trio/monkey/monkey_bars/",
+  "trajectory_sha256": "9c331e7a136bfe42af28f83dea68f13b507faa2630938acfcaf42a813a55fb3a"
+ },
+ "model_revision": "4a289c784c",
+ "scene": {
+  "file": "imported/astral_monkey/monkey_bars.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "ENV_tail_anchor",
+   "ENV_tail_post",
+   "ENV_tail_brace",
+   "ENV_bar_0_LH",
+   "ENV_bar_0_RH",
+   "ENV_bar_1_LH",
+   "ENV_bar_1_RH",
+   "ENV_bar_2_LH",
+   "ENV_bar_2_RH",
+   "ENV_bar_3_LH",
+   "ENV_bar_3_RH",
+   "ENV_bar_4_LH",
+   "ENV_bar_4_RH"
+  ],
+  "equalities": 5,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_monkey/monkey_bars.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json.gz",
+  "passed": true,
+  "positive_trials": 3,
+  "exact_repeat": true,
+  "gates": {
+   "finite": true,
+   "penetration": true,
+   "joint_limits": true,
+   "bounded_actuation": true,
+   "declared_forces_only": true,
+   "passive_drag": true,
+   "no_warnings": true,
+   "no_root_pose_writes": true,
+   "latch_integrity": true
+  }
+ },
+ "frames": 2632,
+ "fps": 50.0,
+ "duration_s": 52.64,
+ "nq": 63,
+ "source_frames": 2632,
+ "source_dt_s": 0.02,
+ "resampled": false,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": false,
+   "worst_rad": 0.11065,
+   "joint": "tail_yaw_6"
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0023,
+   "pair_frame": [
+    "tail_4",
+    "TAIL",
+    2492
+   ],
+   "limit_m": 0.0063
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0063
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0603,
+   "limit_rad": 0.1579
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0126
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 2632,
+   "worst_outside_m": 9.9,
+   "limit_m": 0.063
+  },
+  "pass": false,
+  "failed": [
+   "joint_limits",
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_monkey/monkey_bars.npz"
+}

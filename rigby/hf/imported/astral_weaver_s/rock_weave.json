@@ -1,0 +1,108 @@
+{
+ "clip_id": "astral_weaver_s/rock_weave",
+ "body": "astral_weaver_s",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "weaver-s",
+ "robot_name": "WEAVER\u2013S",
+ "animal": "Spider",
+ "task": "rock_weave",
+ "title": "Rock weave with lateral stepping \u00b7 feedback primitives",
+ "kind": "crawl",
+ "made_with": {
+  "composition": "goal_conditioned_conversion",
+  "executor": "rigby_general.bricks.feedback_sequence.run_program",
+  "conversion_method": "feedback_controller_primitives",
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "five fixed positive task/physics trials; exact repeat; command-omission control; water-variation trace differences reported separately"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/weaver-s/rock_weave/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/weaver-s/rock_weave/",
+  "trajectory_sha256": "92742b5dda534487bd37a0d782ab75fc725406a6a93de242ba728f82f7252159"
+ },
+ "model_revision": "c75c0d6336",
+ "scene": {
+  "file": "imported/astral_weaver_s/rock_weave.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "obstacle_pillar_0",
+   "obstacle_pillar_1",
+   "checkpoint_0_-1",
+   "checkpoint_0_1",
+   "checkpoint_1_-1",
+   "checkpoint_1_1",
+   "checkpoint_2_-1",
+   "checkpoint_2_1",
+   "checkpoint_3_-1",
+   "checkpoint_3_1"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_weaver_s/rock_weave.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json.gz",
+  "passed": true,
+  "positive_trials": 5,
+  "exact_repeat": true
+ },
+ "frames": 5555,
+ "fps": 50.0,
+ "duration_s": 111.1,
+ "nq": 47,
+ "source_frames": 5557,
+ "source_dt_s": 0.02,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0022
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0012,
+   "body_frame": [
+    "L0_foot",
+    1406
+   ],
+   "limit_m": 0.0022
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0806,
+   "limit_rad": 0.2671
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.0477,
+   "worst_off_ground_m": 0.0118,
+   "limit_m": 0.0044
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.022
+  },
+  "pass": false,
+  "failed": [
+   "foot_slip"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_weaver_s/rock_weave.npz"
+}

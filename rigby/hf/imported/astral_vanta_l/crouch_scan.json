@@ -1,0 +1,97 @@
+{
+ "clip_id": "astral_vanta_l/crouch_scan",
+ "body": "astral_vanta_l",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "vanta-l",
+ "robot_name": "VANTA\u2013L",
+ "animal": "Chameleon / gecko",
+ "task": "crouch_scan",
+ "title": "Low crouch with elliptical head scan",
+ "kind": null,
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.basis_run.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "one recorded run, checked against 6 fixed gates (the author's initial mode-only general-composition pilot)"
+ },
+ "origin": {
+  "page": "https://vanta-l-v2-astral-robots.zhouyisjtu2012.chatgpt.site/primitives/vanta-l/#crouch_scan",
+  "files": "https://vanta-l-v2-astral-robots.zhouyisjtu2012.chatgpt.site/primitives/vanta-l/crouch_scan/",
+  "trajectory_sha256": "3049df5d251377f822369c0724e00e1696937041f2205eb001a3f214fbf2d38d"
+ },
+ "model_revision": "v1 (experiments/vanta_lizard/assets/robot.xml)",
+ "scene": {
+  "file": null,
+  "flat_floor_only": true,
+  "props": [],
+  "note": "recorded on the robot's own model over a flat floor"
+ },
+ "composition": "imported/astral_vanta_l/crouch_scan.program.json",
+ "author_validation": {
+  "file": "metrics.json",
+  "passed": true,
+  "gates": {
+   "physical": true,
+   "stayed_up": true,
+   "generic_trace_has_no_errors": true,
+   "returned_near_home_height": true,
+   "meaningful_head_sweep": true,
+   "body_lowered": true
+  }
+ },
+ "frames": 312,
+ "fps": 50.0,
+ "duration_s": 6.24,
+ "nq": 38,
+ "source_frames": 184,
+ "source_dt_s": 0.034,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0025
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0002,
+   "body_frame": [
+    "FR_foot",
+    29
+   ],
+   "limit_m": 0.0025
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0322,
+   "limit_rad": 0.2496
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.0279,
+   "worst_off_ground_m": 0.0063,
+   "limit_m": 0.005
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0252
+  },
+  "pass": false,
+  "failed": [
+   "foot_slip"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_vanta_l/crouch_scan.npz"
+}

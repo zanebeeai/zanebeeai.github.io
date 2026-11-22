@@ -1,0 +1,154 @@
+{
+ "clip_id": "astral_manta_ray/arch_passage",
+ "body": "astral_manta_ray",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "manta-ray",
+ "robot_name": "PELAGIC / MANTA",
+ "animal": "Manta Ray",
+ "task": "arch_passage",
+ "title": "Dive beneath a reef arch & recover \u00b7 primitive conversion",
+ "kind": "swim",
+ "made_with": {
+  "composition": "converted",
+  "executor": "rigby_general.bricks.skill_sequence.run_program",
+  "conversion_method": "imported_motor_primitives",
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "five fixed positive task/physics trials; exact repeat; command-omission control; water-variation trace differences reported separately"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/manta-ray/arch_passage/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/manta-ray/arch_passage/",
+  "trajectory_sha256": "bd00b4b6acf9c400d452a804f743844388ad494aec660e3bfd4fa3d160069951"
+ },
+ "model_revision": "a639cff92d",
+ "scene": {
+  "file": "imported/astral_manta_ray/arch_passage.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "seabed",
+   "reef_0",
+   "geom2",
+   "geom3",
+   "reef_1",
+   "geom5",
+   "geom6",
+   "reef_2",
+   "geom8",
+   "geom9",
+   "reef_3",
+   "geom11",
+   "geom12",
+   "reef_4",
+   "geom14",
+   "geom15",
+   "reef_5",
+   "geom17",
+   "geom18",
+   "reef_6",
+   "geom20",
+   "geom21",
+   "reef_7",
+   "geom23",
+   "geom24",
+   "reef_8",
+   "geom26",
+   "geom27",
+   "reef_9",
+   "geom29",
+   "geom30",
+   "reef_10",
+   "geom32",
+   "geom33",
+   "reef_11",
+   "geom35",
+   "geom36",
+   "canyon_rock_0_-1",
+   "canyon_rock_0_1",
+   "canyon_rock_1_-1",
+   "canyon_rock_1_1",
+   "canyon_rock_2_-1",
+   "canyon_rock_2_1",
+   "canyon_rock_3_-1",
+   "canyon_rock_3_1",
+   "canyon_rock_4_-1",
+   "canyon_rock_4_1",
+   "canyon_rock_5_-1",
+   "canyon_rock_5_1",
+   "canyon_rock_6_-1",
+   "canyon_rock_6_1",
+   "canyon_rock_7_-1",
+   "canyon_rock_7_1",
+   "canyon_rock_8_-1",
+   "canyon_rock_8_1",
+   "reef_arch_roof",
+   "reef_arch_pier_-1",
+   "reef_arch_pier_1"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.001,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_manta_ray/arch_passage.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json.gz",
+  "passed": true,
+  "positive_trials": 5,
+  "exact_repeat": true
+ },
+ "frames": 3453,
+ "fps": 50.0,
+ "duration_s": 69.06,
+ "nq": 14,
+ "source_frames": 6907,
+ "source_dt_s": 0.01,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": false,
+   "worst_rad": 0.03149,
+   "joint": "feather_-1"
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.001
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.001
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1637,
+   "limit_rad": 0.3959
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.002
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 3453,
+   "worst_outside_m": 9.9,
+   "limit_m": 0.01
+  },
+  "pass": false,
+  "failed": [
+   "joint_limits",
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_manta_ray/arch_passage.npz"
+}

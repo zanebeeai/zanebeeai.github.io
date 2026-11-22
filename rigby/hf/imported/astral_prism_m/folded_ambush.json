@@ -1,0 +1,109 @@
+{
+ "clip_id": "astral_prism_m/folded_ambush",
+ "body": "astral_prism_m",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "prism-m",
+ "robot_name": "PRISM\u2013M",
+ "animal": "Praying mantis",
+ "task": "folded_ambush",
+ "title": "Folded passage & ambush turn \u00b7 feedback primitives",
+ "kind": "crawl",
+ "made_with": {
+  "composition": "goal_conditioned_conversion",
+  "executor": "rigby_general.bricks.feedback_sequence.run_program",
+  "conversion_method": "feedback_controller_primitives",
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "five fixed positive task/physics trials; exact repeat; command-omission control; water-variation trace differences reported separately"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/prism-m/folded_ambush/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/prism-m/folded_ambush/",
+  "trajectory_sha256": "3f2e68c1d18ed4c3b7655266cae195be5f79da0a28cb5c610484fb6086dbb053"
+ },
+ "model_revision": "83f981badd",
+ "scene": {
+  "file": "imported/astral_prism_m/folded_ambush.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "obstacle_roof",
+   "obstacle_pier_-1",
+   "obstacle_pier_1",
+   "checkpoint_0_-1",
+   "checkpoint_0_1",
+   "checkpoint_1_-1",
+   "checkpoint_1_1",
+   "checkpoint_2_-1",
+   "checkpoint_2_1"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_prism_m/folded_ambush.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json.gz",
+  "passed": true,
+  "positive_trials": 5,
+  "exact_repeat": true
+ },
+ "frames": 7491,
+ "fps": 50.0,
+ "duration_s": 149.82,
+ "nq": 37,
+ "source_frames": 7495,
+ "source_dt_s": 0.02,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0028
+  },
+  "ground": {
+   "pass": false,
+   "worst_m": 0.0038,
+   "body_frame": [
+    "RL_foot",
+    5101
+   ],
+   "limit_m": 0.0028
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0698,
+   "limit_rad": 0.2353
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.0384,
+   "worst_off_ground_m": 0.0125,
+   "limit_m": 0.0057
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 806,
+   "worst_outside_m": 0.0805,
+   "limit_m": 0.0283
+  },
+  "pass": false,
+  "failed": [
+   "ground",
+   "foot_slip",
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_prism_m/folded_ambush.npz"
+}

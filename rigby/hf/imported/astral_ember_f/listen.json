@@ -1,0 +1,95 @@
+{
+ "clip_id": "astral_ember_f/listen",
+ "body": "astral_ember_f",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "ember-f",
+ "robot_name": "EMBER\u2013F",
+ "animal": "Fox",
+ "task": "listen",
+ "title": "Listen, swivel, freeze",
+ "kind": "display",
+ "made_with": {
+  "composition": "converted",
+  "executor": "rigby_general.bricks.skill_sequence.run_program",
+  "conversion_method": "imported_motor_primitives",
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "5 fixed positive trials; exact repeat; command-omission control"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/features/ember-f/listen/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/features/ember-f/listen/",
+  "trajectory_sha256": "11623135f5b142c723722f70acb57a818d06c9279dac3677056192c741bf3016"
+ },
+ "model_revision": "9ecc27ba11",
+ "scene": {
+  "file": "imported/astral_ember_f/listen.scene.xml",
+  "flat_floor_only": true,
+  "props": [],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_ember_f/listen.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json.gz",
+  "passed": true,
+  "positive_trials": 5,
+  "exact_repeat": true
+ },
+ "frames": 551,
+ "fps": 50.0,
+ "duration_s": 11.02,
+ "nq": 34,
+ "source_frames": 551,
+ "source_dt_s": 0.02,
+ "resampled": false,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0026
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0006,
+   "body_frame": [
+    "RL_foot",
+    1
+   ],
+   "limit_m": 0.0026
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.012,
+   "limit_rad": 0.247
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0007,
+   "worst_off_ground_m": 0.001,
+   "limit_m": 0.0051
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0257
+  },
+  "pass": true,
+  "failed": []
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_ember_f/listen.npz"
+}

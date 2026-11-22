@@ -1,0 +1,117 @@
+{
+ "clip_id": "astral_crocodile/log_underpass",
+ "body": "astral_crocodile",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "crocodile",
+ "robot_name": "CROCO-X",
+ "animal": "Crocodile",
+ "task": "log_underpass",
+ "title": "Low armored log underpass",
+ "kind": "crawl",
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.basis_run.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "nominal, repeat, 5 fixed friction/yaw variations, command-omission control"
+ },
+ "origin": {
+  "page": "https://vanta-l-v2-astral-robots.zhouyisjtu2012.chatgpt.site/primitives/animals/crocodile/log_underpass/",
+  "files": "https://vanta-l-v2-astral-robots.zhouyisjtu2012.chatgpt.site/primitives/animals/crocodile/log_underpass/",
+  "trajectory_sha256": "ab85f5bf30423d71a90dcd9e9870ec05cd26581c2868aecb33afcf69ccafd716"
+ },
+ "model_revision": "516ddd3ebf",
+ "scene": {
+  "file": "imported/astral_crocodile/log_underpass.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "OBJ:exit",
+   "ENV_arch",
+   "ENV_arch_leg_-1",
+   "ENV_arch_leg_1"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_crocodile/log_underpass.program.json",
+ "author_validation": {
+  "file": "metrics.json.gz",
+  "passed": true,
+  "gates": {
+   "general_physics": true,
+   "initial_scene_clear": true,
+   "finite_state": true,
+   "upright": true,
+   "floor_clearance": true,
+   "self_clearance": true,
+   "obstacle_clearance": true,
+   "bounded_actuation": true,
+   "no_external_root_force": true,
+   "program_completed": true,
+   "entire_body_clear": true,
+   "lower": true,
+   "recover": true
+  }
+ },
+ "frames": 1021,
+ "fps": 50.0,
+ "duration_s": 20.42,
+ "nq": 37,
+ "source_frames": 601,
+ "source_dt_s": 0.034,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": false,
+   "worst_rad": 0.01511,
+   "joint": "jaw_open"
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0018
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0016,
+   "body_frame": [
+    "FL_foot",
+    250
+   ],
+   "limit_m": 0.0018
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1762,
+   "limit_rad": 0.2919
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.1355,
+   "worst_off_ground_m": 0.0058,
+   "limit_m": 0.0037
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 225,
+   "worst_outside_m": 0.241,
+   "limit_m": 0.0184
+  },
+  "pass": false,
+  "failed": [
+   "joint_limits",
+   "foot_slip",
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_crocodile/log_underpass.npz"
+}

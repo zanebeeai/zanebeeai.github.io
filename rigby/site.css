@@ -276,3 +276,17 @@ details summary { cursor: pointer; font-size: 13px; color: var(--ink2) }
 .robots.hscroll .rcard { scroll-snap-align: start }
 .robots.hscroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px }
 
+/* the totals: eight cells, four a row, each saying what it covers */
+.stats.four { grid-template-columns: repeat(4, 1fr) }
+@media (max-width: 1000px) { .stats.four { grid-template-columns: repeat(2, 1fr) } }
+@media (max-width: 560px) { .stats.four { grid-template-columns: 1fr } }
+/* one stroke on six bodies: a row of clips, each with what it is */
+.strokes { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 28px }
+@media (max-width: 1000px) { .strokes { grid-template-columns: repeat(3, 1fr) } }
+@media (max-width: 560px) { .strokes { grid-template-columns: repeat(2, 1fr) } }
+.strokes figure { margin: 0; min-width: 0 }
+.strokes figcaption { display: flex; flex-direction: column; gap: 1px; margin-top: 6px; font-size: 13px }
+.strokes figcaption b { font-weight: 600 }
+.strokes figcaption span { color: var(--ink3); font: 11px var(--f-mono) }
+/* the download examples are shown whole */
+#get pre.code { max-height: none }

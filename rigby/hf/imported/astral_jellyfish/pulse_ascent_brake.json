@@ -1,0 +1,105 @@
+{
+ "clip_id": "astral_jellyfish/pulse_ascent_brake",
+ "body": "astral_jellyfish",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "jellyfish",
+ "robot_name": "MEDUSA-J",
+ "animal": "Jellyfish",
+ "task": "pulse_ascent_brake",
+ "title": "Pulse upward, coast and descend to hold depth",
+ "kind": "swim",
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.embodied_sequence.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "3 fixed positives including exact repeat; command-omission control"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/trio/jellyfish/pulse_ascent_brake/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/trio/jellyfish/pulse_ascent_brake/",
+  "trajectory_sha256": "66a6075818988a44aa45c56a9ea90bc6c3c7685dc267a1656b8291a4fcf72130"
+ },
+ "model_revision": "8bee912839",
+ "scene": {
+  "file": "imported/astral_jellyfish/pulse_ascent_brake.scene.xml",
+  "flat_floor_only": true,
+  "props": [],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_jellyfish/pulse_ascent_brake.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json.gz",
+  "passed": true,
+  "positive_trials": 3,
+  "exact_repeat": true,
+  "gates": {
+   "finite": true,
+   "penetration": true,
+   "joint_limits": true,
+   "bounded_actuation": true,
+   "declared_forces_only": true,
+   "passive_drag": true,
+   "no_warnings": true,
+   "no_root_pose_writes": true,
+   "latch_integrity": true
+  }
+ },
+ "frames": 730,
+ "fps": 50.0,
+ "duration_s": 14.6,
+ "nq": 111,
+ "source_frames": 730,
+ "source_dt_s": 0.02,
+ "resampled": false,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0037
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0037
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0371,
+   "limit_rad": 0.2069
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0073
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 730,
+   "worst_outside_m": 9.9,
+   "limit_m": 0.0367
+  },
+  "pass": false,
+  "failed": [
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_jellyfish/pulse_ascent_brake.npz"
+}

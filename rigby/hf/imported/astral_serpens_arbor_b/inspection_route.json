@@ -1,0 +1,128 @@
+{
+ "clip_id": "astral_serpens_arbor_b/inspection_route",
+ "body": "astral_serpens_arbor_b",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "serpens-arbor",
+ "robot_name": "SERPENS / ARBOR",
+ "animal": "Snake-inspired tree climber",
+ "task": "inspection_route",
+ "title": "Three-height inspection route \u00b7 primitive conversion",
+ "kind": "climb",
+ "made_with": {
+  "composition": "converted",
+  "executor": "rigby_general.bricks.skill_sequence.run_program",
+  "conversion_method": "imported_motor_primitives",
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "five fixed positive task/physics trials; exact repeat; command-omission control; water-variation trace differences reported separately"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/serpens-arbor/inspection_route/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/serpens-arbor/inspection_route/",
+  "trajectory_sha256": "ab6d052266d7c9dd4c58a8aaf667deea695ce6cec9d58f5533280dee02c81ef6"
+ },
+ "model_revision": "47f15ed964",
+ "scene": {
+  "file": "imported/astral_serpens_arbor_b/inspection_route.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "trunk",
+   "surface_3",
+   "surface_4",
+   "surface_5",
+   "surface_6",
+   "surface_7",
+   "surface_8",
+   "surface_9",
+   "surface_10",
+   "surface_11",
+   "surface_12",
+   "surface_13",
+   "surface_14",
+   "surface_15",
+   "surface_16",
+   "surface_17",
+   "surface_18",
+   "surface_19",
+   "surface_20",
+   "surface_21",
+   "surface_22",
+   "surface_23",
+   "surface_24",
+   "surface_25",
+   "surface_26",
+   "surface_27",
+   "surface_28",
+   "surface_29",
+   "surface_30",
+   "surface_31",
+   "surface_32",
+   "surface_33"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.001,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_serpens_arbor_b/inspection_route.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json.gz",
+  "passed": true,
+  "positive_trials": 5,
+  "exact_repeat": true
+ },
+ "frames": 1238,
+ "fps": 50.0,
+ "duration_s": 24.76,
+ "nq": 15,
+ "source_frames": 2476,
+ "source_dt_s": 0.01,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": false,
+   "worst_rad": 0.00825,
+   "joint": "extend"
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0023
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0023
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0495,
+   "limit_rad": 0.2604
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0046
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 1238,
+   "worst_outside_m": 9.9,
+   "limit_m": 0.0231
+  },
+  "pass": false,
+  "failed": [
+   "joint_limits",
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_serpens_arbor_b/inspection_route.npz"
+}

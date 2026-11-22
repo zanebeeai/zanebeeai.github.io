@@ -1,0 +1,138 @@
+{
+ "clip_id": "astral_manta_ray_c/feeding_loop",
+ "body": "astral_manta_ray_c",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "manta-ray",
+ "robot_name": "PELAGIC / MANTA",
+ "animal": "Manta Ray",
+ "task": "feeding_loop",
+ "title": "Somersault through a drifting food patch",
+ "kind": null,
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.skill_sequence.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "fixed trials: nominal, repeat, variation; command-omission control"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/sixth/manta-ray/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/sixth/manta-ray/",
+  "trajectory_sha256": "cabdb2752df1cfcde1dd930fa734ca3f43dbc9f3e1e82fead5931260949deb95"
+ },
+ "model_revision": "de9a11765f",
+ "scene": {
+  "file": "imported/astral_manta_ray_c/feeding_loop.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "plankton_0",
+   "plankton_1",
+   "plankton_2",
+   "plankton_3",
+   "plankton_4",
+   "plankton_5",
+   "plankton_6",
+   "plankton_7",
+   "plankton_8",
+   "plankton_9",
+   "plankton_10",
+   "plankton_11",
+   "plankton_12",
+   "plankton_13",
+   "plankton_14",
+   "plankton_15",
+   "plankton_16",
+   "plankton_17",
+   "plankton_18",
+   "plankton_19",
+   "plankton_20",
+   "plankton_21",
+   "plankton_22",
+   "plankton_23",
+   "plankton_24",
+   "plankton_25",
+   "plankton_26",
+   "plankton_27",
+   "plankton_28",
+   "plankton_29"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.001,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_manta_ray_c/feeding_loop.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json",
+  "passed": true,
+  "exact_repeat": true,
+  "gates": {
+   "full_somersault": true,
+   "returned_to_patch": true,
+   "left_patch_during_loop": true,
+   "deployed_lobes": true,
+   "passive_drag": true,
+   "program_complete": true,
+   "finite": true,
+   "no_simulator_warning": true,
+   "penetration": true,
+   "joint_limits": true,
+   "force_limits": true
+  }
+ },
+ "frames": 265,
+ "fps": 50.0,
+ "duration_s": 5.3,
+ "nq": 18,
+ "source_frames": 266,
+ "source_dt_s": 0.02,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.001
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.001
+  },
+  "continuity": {
+   "pass": false,
+   "max_step_rad": 0.4486,
+   "limit_rad": 0.396
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.002
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 265,
+   "worst_outside_m": 9.9,
+   "limit_m": 0.01
+  },
+  "pass": false,
+  "failed": [
+   "continuity",
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_manta_ray_c/feeding_loop.npz"
+}

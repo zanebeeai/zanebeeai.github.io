@@ -1,0 +1,132 @@
+{
+ "clip_id": "astral_shark/forage_sweep",
+ "body": "astral_shark",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "shark",
+ "robot_name": "REEF / SHARK",
+ "animal": "Shark",
+ "task": "forage_sweep",
+ "title": "Snout-down foraging sweep",
+ "kind": "swim",
+ "made_with": {
+  "composition": "converted",
+  "executor": "rigby_general.bricks.skill_sequence.run_program",
+  "conversion_method": "imported_motor_primitives",
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "5 fixed positive trials; exact repeat; command-omission control"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/features/shark/forage_sweep/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/features/shark/forage_sweep/",
+  "trajectory_sha256": "db7880ea41f1fbf1865f4b668c2953e128850fe628e8b612f44f59b580202d74"
+ },
+ "model_revision": "92619a23f8",
+ "scene": {
+  "file": "imported/astral_shark/forage_sweep.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "seabed",
+   "reef_0",
+   "geom2",
+   "geom3",
+   "reef_1",
+   "geom5",
+   "geom6",
+   "reef_2",
+   "geom8",
+   "geom9",
+   "reef_3",
+   "geom11",
+   "geom12",
+   "reef_4",
+   "geom14",
+   "geom15",
+   "reef_5",
+   "geom17",
+   "geom18",
+   "reef_6",
+   "geom20",
+   "geom21",
+   "reef_7",
+   "geom23",
+   "geom24",
+   "reef_8",
+   "geom26",
+   "geom27",
+   "reef_9",
+   "geom29",
+   "geom30",
+   "reef_10",
+   "geom32",
+   "geom33",
+   "reef_11",
+   "geom35",
+   "geom36"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.001,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_shark/forage_sweep.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json.gz",
+  "passed": true,
+  "positive_trials": 5,
+  "exact_repeat": true
+ },
+ "frames": 901,
+ "fps": 50.0,
+ "duration_s": 18.02,
+ "nq": 12,
+ "source_frames": 1801,
+ "source_dt_s": 0.01,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0024
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0,
+   "body_frame": null,
+   "limit_m": 0.0024
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.2062,
+   "limit_rad": 0.2554
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0048
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 901,
+   "worst_outside_m": 9.9,
+   "limit_m": 0.0241
+  },
+  "pass": false,
+  "failed": [
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_shark/forage_sweep.npz"
+}

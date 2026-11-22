@@ -32,6 +32,8 @@ configs:
 
 The clips are **kinematic**: poses, contacts and support are physically possible, but no dynamics were simulated.
 
+In all the repository holds 4,049 motions on 43 robots, 7.6 hours: the 3,938 generated clips on 36 robots (6.5 hours) and 111 motions recorded in physics simulation on 18 animal-inspired robots, 11 of which also have generated clips and 7 of which (dolphin, jellyfish, manta ray, seahorse, shark, snake, tree-climbing snake) have recordings only. Statements that every clip passes every physical check are about the generated clips. See *Imported motions* below.
+
 ## At a glance
 
 | | |
@@ -113,6 +115,8 @@ The label check is a strict, automatic test of each skill's definition.
 - Each was made from a program over motion primitives by an earlier, physics-based executor of this project, not by the kinematic pipeline described below. Some are new compositions; others re-express a hand-written controller's motion as primitives.
 - The dataset's kinematic checks were run on every one and are recorded, but they were not used to accept or reject it; 9 of 111 pass all of them. Checks such as static support and planted-foot slip do not fit swimming, climbing or jumping.
 - Format: the same arrays as every clip (`qpos`, `qvel`, `tip_pos`, `contact`, `fps`), for the robot alone at 50 fps, in the qpos order of `bodies/<body>.xml`; plus `scene_t` and `scene_qpos`, the recording as it was made with every body of its scene, and the scene file.
+- A robot whose joints changed between recordings has more than one model: `astral_<robot>`, then `_b` and `_c`. They are one robot; its rows in `index/imported.jsonl` share the same `robot`, and each row names the model its motion uses in `body`.
+- Each clip's record (`imported/<body>/<task>.json`) says how its program was made (`made_with`: a new composition or a conversion, the executor, the scope of the author's validation) and links its interactive viewer in the author's gallery (`origin.page`).
 
 | Robot | Body files | Motions | Minutes | Pass every kinematic check |
 |---|---|---|---|---|
@@ -181,7 +185,7 @@ To replay a clip in MuJoCo: load `bodies/<robot>.xml`, then set `data.qpos[:] = 
 
 ## How it was made
 
-1. **Intake.** Each robot model is reduced to a portable MuJoCo model with primitive colliders, and measured: joints, limb tips, supports (point feet, soles, wheels), a length scale L and a time scale T.
+1. **Intake.** Each robot model is reduced to a portable MuJoCo model with primitive colliders, and measured: joints, end effectors, supports (point feet, soles, wheels), a length scale L and a time scale T.
 2. **Primitives.** A language model reads the measurements and proposes motion modes (joint directions with shares) and gaits (cycle and phase). Each is swept and measured by forward kinematics; invalid ones go back for up to two repair rounds; a coverage rule keeps a small set.
 3. **Programs.** For each skill, the model writes a keyframe program over the primitives (arm P) or over raw joints (arm J).
 4. **Compile and check.** A stance solver keeps planted feet, soles and wheels fixed and the centre of mass over the support; the clip is then checked frame by frame: joint limits, self-collision, floor penetration, planted-foot slip, support, IK misses, continuity and wheel slip. Failed checks go back to the model for up to two repairs.

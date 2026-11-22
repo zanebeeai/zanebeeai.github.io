@@ -57,8 +57,9 @@ function route() {
 
 // ------------------------------------------------------------------ home
 const PAPER_URL = "";   // the paper's address on arXiv. While this is empty the Paper button is shown dimmed and is not a link.
-// First screen: every robot once, mixed, in no order of body plan or skill, all of one size and on one ground.
-// g: a generated clip (robot, skill); r: a recorded clip (its id), shown in its light render. Three of the 40 are swimmers.
+// First screen: every one of the 43 robots, mixed, in no order of body plan or skill, all of one size and on one ground;
+// two robots are there twice, to fill nine columns by five rows. g: a generated clip (robot, skill); r: a recorded clip
+// (its id), shown in its light render.
 const FIRST = [
   { r: "astral_monkey/monkey_bars" }, { g: ["franka_emika_panda", "trace_circle"] }, { g: ["astral_kitsune", "wave"] }, { g: ["unitree_h1", "wave"] },
   { r: "astral_shark/bank_recover" }, { g: ["v3_hexapod_s3101", "step_forward"] }, { g: ["boston_dynamics_spot", "bow"] }, { r: "astral_prism_m/grasp_reposition" },
@@ -70,6 +71,7 @@ const FIRST = [
   { g: ["v3_six_arm_crawler_s3103", "wave"] }, { g: ["booster_t1", "twist"] }, { g: ["unitree_a1", "crouch"] }, { g: ["astral_iguana", "reach_forward"] },
   { g: ["mobile_octopus", "tap_twice"] }, { g: ["zoo_dual_arm", "trace_circle"] }, { g: ["astral_salamander", "lift_and_hold"] }, { g: ["v3_reverse_knee_quadruped_s3104", "kick_swing"] },
   { g: ["v3_hexapod_s20261104", "tap_twice"] }, { g: ["simple_dog", "twist"] }, { g: ["random_gripper_s41", "reach_forward"] }, { g: ["v3_reverse_knee_quadruped_s20261104", "step_forward"] },
+  { r: "astral_dolphin_c/echo_retrieval" }, { r: "astral_seahorse_c/courtship_duet" }, { r: "astral_serpens_b/pipe_concertina" }, { r: "astral_kitsune/tipping_beam" }, { r: "astral_vanta_l_b/branch_hide" },
 ];
 // The authors, in the paper's order, each with the numbers of their affiliations.
 const AFFILS = ["University of Waterloo", "University of Toronto", "Simon Fraser University", "NVIDIA"];
@@ -118,10 +120,26 @@ function skillGrid() {
   }
   return `<div class="mx-wrap"><div class="matrix flat" style="grid-template-columns:auto repeat(${cols.length}, minmax(84px, 1fr))">${t}</div></div>`;
 }
+// One recorded stroke carried to five robots (the paper's first figure). These clips are replays and lecture edits of
+// that demonstration, published beside the dataset: they are not in it and are not counted in any figure on the page.
+const STROKES = [["recorded-player", "Recorded player", "motion capture"], ["g1-wrist", "Unitree G1, wrist", "lecture replay"],
+  ["panda-gripper", "Franka Panda, gripper", "lecture replay"], ["go2-foot", "Unitree Go2, front foot", "lecture replay"],
+  ["octopus-t4", "Octopus, one tentacle", "physics replay"], ["kitsune-tail", "Nine-tailed fox, middle tail", "physics replay"]];
+function strokeSection() {
+  return `<section class="band dots">
+  <div class="wrap">
+    <h2 class="h2">One recorded forehand, <b>five robots</b></h2>
+    <p class="lede">A table-tennis player's topspin forehand, recorded by motion capture, and the same stroke on a humanoid's wrist, an arm's gripper, a quadruped's front foot, an octopus's tentacle and the middle tail of the nine-tailed fox. The red racket marks the tip that moves.</p>
+    <div class="strokes">${STROKES.map(([f, t, how]) => `<figure><div class="media"><video data-src="media/forehand/${f}.mp4" muted loop playsinline preload="none"></video></div><figcaption><b>${esc(t)}</b><span>${esc(how)}</span></figcaption></figure>`).join("")}</div>
+    <p class="note" style="margin-top:14px;max-width:80ch">These six clips are physics replays and lecture edits of the stroke-transfer demonstration, each on its own background. They are not part of the dataset and are not counted in its totals.</p>
+  </div>
+</section>`;
+}
 function homePage() {
   const st = S.meta.stats;
   const valid = (100 * st.valid / Math.max(st.clips, 1)).toFixed(1);
   const only = S.recorded.filter(g => !g.body).length;
+  const nVal = S.recorded.reduce((a, g) => a + g.clips.filter(c => c.validated).length, 0);
   return `
 <section class="hero" id="hero">
   <div class="hero-stick">
@@ -129,7 +147,7 @@ function homePage() {
       <h1 id="hero-title"><b>Rigby:</b> Motion Primitives for <span class="nb">Cross-Embodiment</span> Skill Transfer</h1>
       <div class="hero-rest" id="hero-rest">
       ${authorsHTML()}
-      <p class="sub"><b>${st.bodies} robots</b>, <b>${fmt(st.clips)} motion clips</b>, generated from nothing but each robot's model: a language model proposes the robot's primitives and composes them into motions. Every frame of every clip passes every physical check.</p>
+      <p class="sub"><b>${fmt(st.total_motions)} motions</b> on <b>${st.total_robots} robots</b>. ${fmt(st.clips)} were generated from nothing but each robot's model: a language model proposes the robot's primitives and composes them into motions, and every frame of each one passes every physical check. ${st.recorded_clips} more were recorded in physics simulation on ${st.recorded_robots} animal-inspired robots.</p>
       <div class="ctas"><a class="btn" href="https://huggingface.co/datasets/${esc(S.meta.hf_repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download dataset</a><a class="btn ghost" href="#/browse">Browse clips</a>${paperButton()}</div>
       </div>
     </div>
@@ -155,17 +173,20 @@ function homePage() {
     ${skillGrid()}
   </div>
 </section>
+${strokeSection()}
 <section class="band dark">
   <div class="wrap">
     <h2 class="h2">One pipeline, <b>every body plan</b></h2>
     <p class="lede">Arms, quadrupeds, humanoids, hexapods, octopuses, wheeled bodies, a crane and animal-inspired robots: each gets its own primitives, measured by forward kinematics, and every clip is composed from them.</p>
-    <div class="stats">
-      <div class="stat"><b class="num">${fmt(st.clips)}</b><span>motion clips (${fmt(st.skill_clips)} skill, ${fmt(st.taskblind_clips)} task-blind, ${fmt(st.procedural_clips)} procedural)</span></div>
-      <div class="stat"><b class="num">${st.bodies}</b><span>robots; the paper's experiments ran on ${st.experiment_bodies} of them, ${st.held_out} held out for the transfer test</span></div>
-      <div class="stat"><b class="num">${fmt(st.hours, 1)} h</b><span>of motion at 50 fps (${fmt(st.frames)} frames)</span></div>
+    <div class="stats four">
+      <div class="stat"><b class="num">${fmt(st.total_motions)}</b><span>motions in all, on ${st.total_robots} robots: ${fmt(st.total_hours, 1)} hours at 50 fps</span></div>
+      <div class="stat"><b class="num">${fmt(st.clips)}</b><span>generated by the pipeline on ${st.bodies} robots, ${fmt(st.hours, 1)} hours (${fmt(st.skill_clips)} skill, ${fmt(st.taskblind_clips)} task-blind, ${fmt(st.procedural_clips)} procedural)</span></div>
+      <div class="stat"><b class="num">${fmt(st.recorded_clips)}</b><span>recorded in physics simulation on the ${st.recorded_robots} animal-inspired robots: ${st.recorded_both} of them also have generated motions, ${st.recorded_only} (${esc((st.recorded_only_names || []).join(", "))}) have recordings only</span></div>
+      <div class="stat"><b class="num">${st.total_robots}</b><span>robots: ${st.bodies} with generated motions (the paper's experiments ran on ${st.experiment_bodies} of them, ${st.held_out} held out for the transfer test) and ${st.recorded_only} with recordings only</span></div>
       <div class="stat"><b class="num">${fmt(st.primitives)}</b><span>primitives and ${fmt(st.gaits)} gaits, written by the model before any motion is requested</span></div>
-      <div class="stat"><b class="num">100%</b><span>of clips pass every physical check on every frame; failing takes were removed</span></div>
-      <div class="stat"><b class="num">${st.skills}</b><span>skills, each asked for in one sentence</span></div>
+      <div class="stat"><b class="num">100%</b><span>of the generated clips pass every physical check on every frame; failing takes were removed</span></div>
+      <div class="stat"><b class="num">${st.skills}</b><span>skills, each asked for in one sentence, in the generated set</span></div>
+      <div class="stat"><b class="num">${nVal}/${fmt(st.recorded_clips)}</b><span>recordings pass their author's own validation in simulation, a different guarantee from the generated set's checks</span></div>
     </div>
   </div>
 </section>
@@ -216,6 +237,20 @@ go2 = [r for r in rows if r["body"] == "unitree_go2" and r["valid"]]
 clip = np.load(f"{root}/{go2[0]['npz']}")
 qpos = clip["qpos"]    # (frames, nq) in bodies/unitree_go2.xml's qpos order
 print(go2[0]["skill"], qpos.shape, clip["fps"])</pre>
+<pre class="code"># a recorded motion of an animal-inspired robot, with its scene and program
+import gzip
+
+root = snapshot_download("${esc(repo)}", repo_type="dataset",
+    allow_patterns=["index/imported.jsonl", "imported/astral_octopus*/*",
+                    "bodies/astral_octopus*"])
+rows = [json.loads(l) for l in open(f"{root}/index/imported.jsonl")]
+r = next(x for x in rows if x["robot"] == "octopus" and x["task"] == "coconut_den")
+clip = np.load(f"{root}/{r['npz']}")
+qpos = clip["qpos"]              # the robot alone at 50 fps, in bodies/&lt;r["body"]&gt;.xml's order
+scene_qpos = clip["scene_qpos"]  # the recording as made: every body of the scene r["scene"]
+program = json.load(gzip.open(f"{root}/{r['program']}"))   # its primitive program
+print(r["title"], qpos.shape, scene_qpos.shape, list(program))</pre>
+        <p class="licence">A robot whose joints changed between recordings has more than one model: <span class="mono">astral_&lt;robot&gt;</span>, then <span class="mono">_b</span> and <span class="mono">_c</span>. They are one robot; its rows in <span class="mono">index/imported.jsonl</span> share the same <span class="mono">robot</span>, and each row names the model its motion uses in <span class="mono">body</span>.</p>
         <a class="btn" style="background:var(--dark-ink);color:var(--dark);border-color:var(--dark-ink);align-self:flex-start" href="https://huggingface.co/datasets/${esc(repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download dataset</a>
         <p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>, free for non-commercial use with credit. For commercial use, contact the authors through the dataset's <a href="https://huggingface.co/datasets/${esc(repo)}/discussions" target="_blank" rel="noopener">Community tab</a>. Robot models derived from MuJoCo Menagerie keep their own licences.</p>
       </div>
@@ -224,7 +259,9 @@ print(go2[0]["skill"], qpos.shape, clip["fps"])</pre>
         <tr><td>clips/&lt;robot&gt;/&lt;skill&gt;_&lt;arm&gt;_v&lt;k&gt;.npz</td><td>qpos, qvel, tip positions, contacts, fps</td></tr>
         <tr><td>clips/…/*.json</td><td>the clip's program, every check with its worst value, repair history, model calls</td></tr>
         <tr><td>procedural/&lt;robot&gt;/*.npz</td><td>gait, balance, drive and random clips made without a model</td></tr>
-        <tr><td>imported/&lt;robot&gt;/&lt;task&gt;.*</td><td>motions recorded in simulation, each with the scene it was made in (a separate subset, not pipeline output)</td></tr>
+        <tr><td>index/imported.jsonl</td><td>one row per recorded motion: robot, model (body), task, title, how its program was made, file paths</td></tr>
+        <tr><td>imported/&lt;body&gt;/&lt;task&gt;.npz</td><td>a motion recorded in simulation: the robot's qpos at 50 fps, and the whole scene as recorded (a separate subset, not pipeline output)</td></tr>
+        <tr><td>imported/&lt;body&gt;/&lt;task&gt;.scene.xml, .composition.json.gz, .json</td><td>the scene it was recorded in, its primitive program, and its record (origin, author's validation)</td></tr>
         <tr><td>primitives/&lt;robot&gt;.json</td><td>the robot's primitives and gaits, their coverage, the model that wrote them</td></tr>
         <tr><td>bodies/&lt;robot&gt;.xml, .json</td><td>the MuJoCo model each clip is in, and its measured description</td></tr>
         <tr><td>index/bodies.jsonl, primitives.jsonl</td><td>one row per robot and per primitive</td></tr>
@@ -238,7 +275,7 @@ let heroEls = null;
 function heroLayout() {
   const m = $("#matrix"); if (!m) return;
   const vw = window.innerWidth, small = vw < 760;
-  const cols = small ? 4 : 8, rows = small ? 6 : 5;
+  const cols = small ? 4 : 9, rows = small ? 6 : 5;
   const band = small ? 148 : 92;                  // room above the settled tiles: the title stays there
   const w = Math.min(vw * 0.92, 1240), h = window.innerHeight - 56 - band - 28;
   const tw = Math.max(72, Math.min(216, (w - (cols - 1) * 8) / cols, ((h - (rows - 1) * 8) / rows) * 4 / 3));
@@ -366,7 +403,7 @@ async function sidecar(c) {
 const F = { src: "", skill: "", kind: "", body: "", arm: "", valid: "", label: "", q: "", n: 60 };     // src "": every clip, the recorded scenes among them
 function browsePage(params) {
   for (const k of Object.keys(F)) if (params.has(k)) F[k] = k === "n" ? +params.get(k) : params.get(k);
-  const kinds = [...new Set(S.bodies.map(b => b.kind_label))].sort();
+  const kinds = [...new Set(S.bodies.map(b => b.kind_label).concat(S.recorded.map(g => g.kind_label)).filter(Boolean))].sort();
   const skills = SKILL_ORDER.filter(s => S.meta.skills.includes(s));
   const pills = (key, opts) => opts.map(([v, t]) => `<button class="pill" data-k="${key}" data-v="${esc(v)}" aria-pressed="${F[key] === v}">${esc(t)}</button>`).join("");
   return `<div class="wrap page">
@@ -379,18 +416,22 @@ function browsePage(params) {
     <div class="frow"><span class="lab">Made with</span>${pills("arm", [["", "Any"], ["P", "Primitives"], ["J", "Joint keyframes"]])}</div>
     <div class="frow"><span class="lab">Label check</span>${pills("label", [["", "Label: any"], ["1", "Passes label check"], ["0", "Fails label check"]])}</div>
     <div class="frow"><span class="lab">Robot</span><select class="sel" id="fbody"><option value="">Any robot</option>${S.bodies.map(b => [b.body, b.label]).concat(S.recorded.filter(g => !g.body).map(g => [g.page_body, g.name])).map(([v, t]) => `<option value="${esc(v)}" ${F.body === v ? "selected" : ""}>${esc(t)}</option>`).join("")}</select>
-      <input class="search" id="fq" placeholder="Search robot or skill" value="${esc(F.q)}" aria-label="Search"></div>
+      <input class="search" id="fq" placeholder="Search robot, skill or motion" value="${esc(F.q)}" aria-label="Search"></div>
   </div>
   <div class="grid" id="grid"></div>
   <div class="more"><button class="btn ghost" id="moreb">Show more</button></div>
 </div>`;
 }
+// A search is matched without regard to case or to the kind of dash, so "VANTA-L" finds "VANTA–L". A robot is also found
+// by the names its recordings carry: its design name, its id, the animal.
+const norm = t => String(t ?? "").toLowerCase().replace(/[\u2010-\u2015\u2212]/g, "-");
+const aliasOf = body => { const g = S.recorded.find(x => x.body === body); return g ? (g.aliases || []).join(" ") : ""; };
 function filtered() {
-  const q = F.q.trim().toLowerCase();
+  const q = norm(F.q.trim());
   return S.clips.filter(c => (!F.src || c.src === F.src) && (!F.skill || c.skill === F.skill) && (!F.body || c.body === F.body)
     && (!F.kind || S.bodyOf[c.body]?.kind_label === F.kind) && (!F.arm || c.arm === F.arm)
     && (F.valid === "" || String(+!!c.valid) === F.valid) && (F.label === "" || (c.label != null && String(+c.label) === F.label))
-    && (!q || `${label(c.body)} ${c.body} ${c.skill || ""} ${c.v ?? ""}`.toLowerCase().includes(q)));
+    && (!q || norm(`${label(c.body)} ${c.body} ${aliasOf(c.body)} ${c.skill || ""} ${c.v ?? ""}`).includes(q)));
 }
 function card(c) {
   const b = S.bodyOf[c.body] || {};
@@ -402,15 +443,17 @@ function card(c) {
     <div class="h"><b style="font-weight:500">${esc(title)}</b><span>${esc(sub)}</span></div><div class="badges">${badges.join("")}</div></div></a>`;
 }
 function wireBrowse() {
-  // What the filters leave: generated clips ({c}) and recorded motions in their scenes ({g, c}) in one list. The recorded
-  // ones have no skill, arm or label check, so they drop out when one of those filters is set. With no robot chosen the
-  // list takes one clip from each robot in turn, a robot's scenes first, so the page opens on the widest mix.
+  // What the filters leave: generated clips ({c}) and recorded motions in their scenes ({g, c}) in one list. A recorded
+  // motion has a body plan (its robot's) and was made with primitives (its program is one), so those two filters keep
+  // it; it has no skill and no label check, so it drops out when one of those is set. With no robot chosen the list
+  // takes one clip from each robot in turn, a robot's scenes first, so the page opens on the widest mix.
   const items = () => {
-    const q = F.q.trim().toLowerCase(), plain = !F.skill && !F.kind && !F.arm && F.valid === "" && F.label === "";
+    const q = norm(F.q.trim()), plain = !F.skill && F.arm !== "J" && F.valid === "" && F.label === "";
     const rank = { skill: 0, taskblind: 1, procedural: 2 };
     const gen = F.src === "recorded" ? [] : filtered().map(c => ({ c })).sort((a, b) => (!a.c.video - !b.c.video) || (rank[a.c.src] - rank[b.c.src]));
     const rec = (F.src === "" || F.src === "recorded") && plain
-      ? S.recorded.flatMap(g => g.clips.map(c => ({ g, c }))).filter(x => (!F.body || x.g.page_body === F.body) && (!q || `${x.g.name} ${x.c.title} ${x.c.task}`.toLowerCase().includes(q))) : [];
+      ? S.recorded.flatMap(g => g.clips.map(c => ({ g, c }))).filter(x => (!F.body || x.g.page_body === F.body) && (!F.kind || x.g.kind_label === F.kind)
+          && (!q || norm(`${x.g.name} ${(x.g.aliases || []).join(" ")} ${x.g.page_body} ${x.c.title} ${x.c.task} ${x.c.made?.category || ""}`).includes(q))) : [];
     if (F.body) return rec.concat(gen);
     const by = new Map();
     for (const x of rec.concat(gen)) { const k = x.g ? x.g.page_body : x.c.body; if (!by.has(k)) by.set(k, []); by.get(k).push(x); }
@@ -555,9 +598,12 @@ function relatedRows(c) {
 
 // ------------------------------------------------------------------ recorded motions, each in the scene it was made in
 const hfFile = p => `https://huggingface.co/datasets/${S.meta.hf_repo}/blob/main/${p}`;
+// how a recorded motion's primitive program came about, in a sentence
+const MADE_TEXT = { "New composition": "a new composition of the robot's primitives", "Imported conversion": "an earlier motion converted to primitives (imported motor primitives)",
+  "Feedback conversion": "an earlier motion converted to primitives that use feedback from the measured state", "Conversion": "an earlier motion converted to primitives" };
 function recCard(g, c) {
   return `<a class="card" href="#/recorded/${esc(c.id)}" title="${esc(c.title)}">${vid(c.video)}<div class="t"><div class="h"><b>${esc(g.name)}</b><span>${fmt(c.dur, 1)} s</span></div>
-    <div class="rt">${esc(c.title)}</div><div class="badges"><span class="badge mid">recorded in simulation</span></div></div></a>`;
+    <div class="rt">${esc(c.title)}</div><div class="badges"><span class="badge mid">recorded in simulation</span>${c.made?.category ? `<span class="badge">${esc(c.made.category.toLowerCase())}</span>` : ""}</div></div></a>`;
 }
 function recordedPage() {
   if (!S.recorded.length) return `<div class="wrap page"><div class="empty-state">This build has no recorded motions.</div></div>`;
@@ -571,7 +617,7 @@ function recordedPage() {
 function recordedClipPage(id) {
   const hit = recFind(id);
   if (!hit) return `<div class="wrap page"><div class="empty-state">No recorded motion ${esc(id)}.</div></div>`;
-  const { g, c } = hit, f = c.files || {};
+  const { g, c } = hit, f = c.files || {}, m = c.made || {};
   const file = (k, t) => f[k] ? `<a href="${esc(hfFile(f[k]))}" target="_blank" rel="noopener">${t}</a>` : "";
   return `<div class="wrap page">
   <div class="crumbs"><a href="#/browse/src=recorded">Recorded motions</a> / <a href="#/robot/${esc(g.page_body)}">${esc(g.name)}</a></div>
@@ -580,10 +626,15 @@ function recordedClipPage(id) {
     <div class="stack"><div class="player">${c.video ? `<video src="media/${esc(c.video)}" muted loop playsinline autoplay controls></video>` : ""}</div></div>
     <div class="stack"><div class="panel"><h2>Recording</h2><dl class="kv">
       <dt>Robot</dt><dd><a href="#/robot/${esc(g.page_body)}">${esc(g.name)}</a></dd>
-      <dt>How it was made</dt><dd>recorded in physics simulation; not generated by the pipeline</dd>
+      <dt>How it was made</dt><dd>recorded in physics simulation while its primitive program ran; not generated by the pipeline</dd>
+      ${m.category ? `<dt>Primitive program</dt><dd>${esc(MADE_TEXT[m.category] || m.category)}${m.method && !/^(new|imported_motor_primitives|feedback_controller_primitives)$/.test(m.method) ? `<br><span class="note">${esc(m.method)}</span>` : ""}</dd>` : ""}
+      ${m.executor || m.schema ? `<dt>${m.executor ? "Executor" : "Program format"}</dt><dd class="mono">${esc(m.executor || m.schema)}</dd>` : ""}
+      ${m.scope ? `<dt>Author's validation</dt><dd>${c.validated ? "passed" : "recorded"}: ${esc(m.scope)}</dd>` : ""}
       <dt>Scene</dt><dd>${c.own_scene ? "the scene built for this motion, with its surroundings and objects" : "a bare floor"}</dd>
       <dt>Length</dt><dd>${fmt(c.dur, 1)} s</dd>
       ${c.kind ? `<dt>Kind</dt><dd>${esc(nice(c.kind))}</dd>` : ""}
+      ${c.body ? `<dt>Model</dt><dd><a class="mono" href="${esc(hfFile(`bodies/${c.body}.xml`))}" target="_blank" rel="noopener">bodies/${esc(c.body)}.xml</a>${g.bodies && g.bodies.length > 1 ? `<br><span class="note">This robot's joints changed between recordings, so it has ${g.bodies.length} models (${esc(g.bodies.join(", "))}); they are one robot.</span>` : ""}</dd>` : ""}
+      ${c.origin ? `<dt>Original viewer</dt><dd><a href="${esc(c.origin)}" target="_blank" rel="noopener">interactive viewer on the author's gallery</a></dd>` : ""}
       <dt>Files</dt><dd>${[file("npz", "motion (.npz)"), file("scene", "scene (.xml)"), file("program", "program"), file("sidecar", "record")].filter(Boolean).join(" · ")}</dd>
     </dl></div></div>
   </div>

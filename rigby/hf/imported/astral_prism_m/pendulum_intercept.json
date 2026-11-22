@@ -1,0 +1,113 @@
+{
+ "clip_id": "astral_prism_m/pendulum_intercept",
+ "body": "astral_prism_m",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "prism-m",
+ "robot_name": "PRISM\u2013M",
+ "animal": "Praying mantis",
+ "task": "pendulum_intercept",
+ "title": "Catch a returning pendulum",
+ "kind": null,
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.skill_sequence.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "fixed trials: nominal, repeat, variation; command-omission control"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/sixth/prism-m/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/sixth/prism-m/",
+  "trajectory_sha256": "dcef17ec88faf1a8d2e085e0193028c7dd6746014e990dc64c91ec0e11ac0678"
+ },
+ "model_revision": "83f981badd",
+ "scene": {
+  "file": "imported/astral_prism_m/pendulum_intercept.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "pendulum",
+   "geom1",
+   "geom2"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_prism_m/pendulum_intercept.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json",
+  "passed": true,
+  "exact_repeat": true,
+  "gates": {
+   "sensed_return": true,
+   "intercepted_in_motion": true,
+   "opposing_pad_hold": true,
+   "program_complete": true,
+   "finite": true,
+   "no_simulator_warning": true,
+   "penetration": true,
+   "joint_limits": true,
+   "force_limits": true
+  }
+ },
+ "frames": 100,
+ "fps": 50.0,
+ "duration_s": 2.0,
+ "nq": 37,
+ "source_frames": 101,
+ "source_dt_s": 0.02,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": true,
+   "worst_rad": 0.0,
+   "joint": null
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0003,
+   "pair_frame": [
+    "arm_upper_-1",
+    "head",
+    51
+   ],
+   "limit_m": 0.0028
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0026,
+   "body_frame": [
+    "FL_foot",
+    0
+   ],
+   "limit_m": 0.0028
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0727,
+   "limit_rad": 0.2353
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0022,
+   "worst_off_ground_m": 0.0026,
+   "limit_m": 0.0057
+  },
+  "support": {
+   "pass": true,
+   "frames_outside": 0,
+   "worst_outside_m": 0.0,
+   "limit_m": 0.0283
+  },
+  "pass": true,
+  "failed": []
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_prism_m/pendulum_intercept.npz"
+}

@@ -1,0 +1,175 @@
+{
+ "clip_id": "astral_jellyfish_b/inverted_feeding",
+ "body": "astral_jellyfish_b",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "jellyfish",
+ "robot_name": "MEDUSA-J",
+ "animal": "Jellyfish",
+ "task": "inverted_feeding",
+ "title": "Feed upside down on the seabed",
+ "kind": null,
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.skill_sequence.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "fixed trials: nominal, repeat, variation; command-omission control"
+ },
+ "origin": {
+  "page": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/sixth/jellyfish/",
+  "files": "https://astral-feedback-motions.zhouyisjtu2012.chatgpt.site/sixth/jellyfish/",
+  "trajectory_sha256": "d038dc4a8e2b3b062cfd31dbaae327c1169ce46c1700a6b683ab3f149b98ade6"
+ },
+ "model_revision": "3c4a470050",
+ "scene": {
+  "file": "imported/astral_jellyfish_b/inverted_feeding.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "food_0",
+   "food_1",
+   "food_2",
+   "food_3",
+   "food_4",
+   "food_5",
+   "food_6",
+   "food_7",
+   "food_8",
+   "food_9",
+   "food_10",
+   "food_11",
+   "food_12",
+   "food_13",
+   "food_14",
+   "food_15",
+   "food_16",
+   "food_17",
+   "food_18",
+   "food_19",
+   "food_20",
+   "food_21",
+   "food_22",
+   "food_23",
+   "food_24",
+   "food_25",
+   "food_26",
+   "food_27",
+   "food_28",
+   "food_29",
+   "food_30",
+   "food_31",
+   "food_32",
+   "food_33",
+   "food_34",
+   "food_35",
+   "food_36",
+   "food_37",
+   "food_38",
+   "food_39",
+   "food_40",
+   "food_41",
+   "food_42",
+   "food_43",
+   "food_44",
+   "food_45",
+   "food_46",
+   "food_47",
+   "food_48",
+   "food_49",
+   "food_50",
+   "food_51",
+   "food_52",
+   "food_53",
+   "food_54",
+   "food_55",
+   "food_56",
+   "food_57",
+   "food_58",
+   "food_59"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_jellyfish_b/inverted_feeding.composition.json.gz",
+ "author_validation": {
+  "file": "evidence.json",
+  "passed": true,
+  "exact_repeat": true,
+  "gates": {
+   "turned_over": true,
+   "resting_on_bell": true,
+   "oral_arms_above_bell": true,
+   "drew_food_to_arms": true,
+   "pulsed": true,
+   "program_complete": true,
+   "finite": true,
+   "no_simulator_warning": true,
+   "penetration": true,
+   "joint_limits": true,
+   "force_limits": true
+  }
+ },
+ "frames": 996,
+ "fps": 50.0,
+ "duration_s": 19.92,
+ "nq": 112,
+ "source_frames": 997,
+ "source_dt_s": 0.02,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": false,
+   "worst_rad": 0.003,
+   "joint": "ballast_travel"
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0025,
+   "pair_frame": [
+    "bell_3_1",
+    "oral_1_1",
+    609
+   ],
+   "limit_m": 0.0046
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0006,
+   "body_frame": [
+    "chassis",
+    646
+   ],
+   "limit_m": 0.0046
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.058,
+   "limit_rad": 0.1845
+  },
+  "foot_slip": {
+   "pass": true,
+   "worst_slide_m": 0.0,
+   "worst_off_ground_m": 0.0,
+   "limit_m": 0.0092
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 996,
+   "worst_outside_m": 9.9,
+   "limit_m": 0.0461
+  },
+  "pass": false,
+  "failed": [
+   "joint_limits",
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_jellyfish_b/inverted_feeding.npz"
+}

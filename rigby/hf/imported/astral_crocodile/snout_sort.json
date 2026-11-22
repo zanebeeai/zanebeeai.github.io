@@ -1,0 +1,116 @@
+{
+ "clip_id": "astral_crocodile/snout_sort",
+ "body": "astral_crocodile",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "crocodile",
+ "robot_name": "CROCO-X",
+ "animal": "Crocodile",
+ "task": "snout_sort",
+ "title": "Snout-guided debris sorting",
+ "kind": "manipulate",
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.basis_run.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "nominal, repeat, 5 fixed friction/yaw variations, command-omission control"
+ },
+ "origin": {
+  "page": "https://vanta-l-v2-astral-robots.zhouyisjtu2012.chatgpt.site/primitives/animals/crocodile/snout_sort/",
+  "files": "https://vanta-l-v2-astral-robots.zhouyisjtu2012.chatgpt.site/primitives/animals/crocodile/snout_sort/",
+  "trajectory_sha256": "fb81afef24182d584ac020cdc97b9a520fcfeea8b5913e4b062cb0941d7dddba"
+ },
+ "model_revision": "516ddd3ebf",
+ "scene": {
+  "file": "imported/astral_crocodile/snout_sort.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "OBJ:debris",
+   "OBJ:sort_zone"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_crocodile/snout_sort.program.json",
+ "author_validation": {
+  "file": "metrics.json.gz",
+  "passed": true,
+  "gates": {
+   "general_physics": true,
+   "initial_scene_clear": true,
+   "finite_state": true,
+   "upright": true,
+   "floor_clearance": true,
+   "self_clearance": true,
+   "obstacle_clearance": true,
+   "bounded_actuation": true,
+   "no_external_root_force": true,
+   "program_completed": true,
+   "object_moved": true,
+   "snout_contact": true,
+   "retreat": true,
+   "jaw": true
+  }
+ },
+ "frames": 641,
+ "fps": 50.0,
+ "duration_s": 12.82,
+ "nq": 37,
+ "source_frames": 378,
+ "source_dt_s": 0.034,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": false,
+   "worst_rad": 0.01873,
+   "joint": "tail_yaw_0"
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0018
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.0012,
+   "body_frame": [
+    "FR_foot",
+    364
+   ],
+   "limit_m": 0.0018
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.1684,
+   "limit_rad": 0.2919
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.1984,
+   "worst_off_ground_m": 0.0301,
+   "limit_m": 0.0037
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 98,
+   "worst_outside_m": 0.3226,
+   "limit_m": 0.0184
+  },
+  "pass": false,
+  "failed": [
+   "joint_limits",
+   "foot_slip",
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_crocodile/snout_sort.npz"
+}

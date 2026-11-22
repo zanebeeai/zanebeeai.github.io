@@ -1,0 +1,118 @@
+{
+ "clip_id": "astral_iguana/crest_passage",
+ "body": "astral_iguana",
+ "source": "imported",
+ "collection": "animal_atlas",
+ "author": "Yi Zhou",
+ "robot": "iguana",
+ "robot_name": "IGNEA-I",
+ "animal": "Iguana",
+ "task": "crest_passage",
+ "title": "Crest-aware crouch passage",
+ "kind": "crawl",
+ "made_with": {
+  "composition": "new",
+  "executor": "rigby_general.bricks.basis_run.run_program",
+  "conversion_method": null,
+  "simulated": "MuJoCo physics (recorded states)",
+  "validation_scope": "nominal, repeat, 5 fixed friction/yaw variations, command-omission control"
+ },
+ "origin": {
+  "page": "https://vanta-l-v2-astral-robots.zhouyisjtu2012.chatgpt.site/primitives/animals/iguana/crest_passage/",
+  "files": "https://vanta-l-v2-astral-robots.zhouyisjtu2012.chatgpt.site/primitives/animals/iguana/crest_passage/",
+  "trajectory_sha256": "14b74e1d4450d7890f8126c416a433cb8053c260cdcdc536a8d8322e2bde2981"
+ },
+ "model_revision": "1c8025f034",
+ "scene": {
+  "file": "imported/astral_iguana/crest_passage.scene.xml",
+  "flat_floor_only": false,
+  "props": [
+   "OBJ:exit",
+   "ENV_arch",
+   "ENV_arch_leg_-1",
+   "ENV_arch_leg_1"
+  ],
+  "equalities": 0,
+  "timestep_s": 0.002,
+  "gravity": [
+   0.0,
+   0.0,
+   -9.81
+  ]
+ },
+ "composition": "imported/astral_iguana/crest_passage.program.json",
+ "author_validation": {
+  "file": "metrics.json.gz",
+  "passed": true,
+  "gates": {
+   "general_physics": true,
+   "initial_scene_clear": true,
+   "finite_state": true,
+   "upright": true,
+   "floor_clearance": true,
+   "self_clearance": true,
+   "obstacle_clearance": true,
+   "bounded_actuation": true,
+   "no_external_root_force": true,
+   "program_completed": true,
+   "entire_body_clear": true,
+   "lower": true,
+   "recover": true,
+   "dewlap": true
+  }
+ },
+ "frames": 1352,
+ "fps": 50.0,
+ "duration_s": 27.04,
+ "nq": 41,
+ "source_frames": 796,
+ "source_dt_s": 0.034,
+ "resampled": true,
+ "kinematic_checks": {
+  "joint_limits": {
+   "pass": false,
+   "worst_rad": 0.01909,
+   "joint": "head_pitch"
+  },
+  "self_collision": {
+   "pass": true,
+   "worst_m": 0.0,
+   "pair_frame": null,
+   "limit_m": 0.0027
+  },
+  "ground": {
+   "pass": true,
+   "worst_m": 0.001,
+   "body_frame": [
+    "FL_foot",
+    573
+   ],
+   "limit_m": 0.0027
+  },
+  "continuity": {
+   "pass": true,
+   "max_step_rad": 0.0625,
+   "limit_rad": 0.241
+  },
+  "foot_slip": {
+   "pass": false,
+   "worst_slide_m": 0.1189,
+   "worst_off_ground_m": 0.007,
+   "limit_m": 0.0054
+  },
+  "support": {
+   "pass": false,
+   "frames_outside": 114,
+   "worst_outside_m": 0.034,
+   "limit_m": 0.027
+  },
+  "pass": false,
+  "failed": [
+   "joint_limits",
+   "foot_slip",
+   "support"
+  ]
+ },
+ "kinematic_checks_note": "The dataset's checks, run on the robot alone over a flat floor with stance read from floor contact. They are recorded for comparison; this clip was accepted on its author's physics validation, not on them. Support and foot slip assume a statically supported body; contacts with props and water forces are not modelled.",
+ "npz": "imported/astral_iguana/crest_passage.npz"
+}
