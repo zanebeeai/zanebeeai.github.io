@@ -147,7 +147,7 @@ function homePage() {
       <h1 id="hero-title"><b>Rigby:</b> Motion Primitives for <span class="nb">Cross-Embodiment</span> Skill Transfer</h1>
       <div class="hero-rest" id="hero-rest">
       ${authorsHTML()}
-      <p class="sub"><b>${fmt(st.total_motions)} motions</b> on <b>${st.total_robots} robots</b>. ${fmt(st.clips)} were generated from nothing but each robot's model: a language model proposes the robot's primitives and composes them into motions, and every frame of each one passes every physical check. ${st.recorded_clips} more were recorded in physics simulation on ${st.recorded_robots} animal-inspired robots.</p>
+      <p class="sub"><b>${st.bodies} robots</b>, <b>${fmt(st.clips)} motion clips</b>, generated from nothing but each robot's model: a language model proposes the robot's primitives and composes them into motions. Every frame of every clip passes every physical check.</p>
       <div class="ctas"><a class="btn" href="https://huggingface.co/datasets/${esc(S.meta.hf_repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download dataset</a><a class="btn ghost" href="#/browse">Browse clips</a>${paperButton()}</div>
       </div>
     </div>
@@ -237,20 +237,20 @@ go2 = [r for r in rows if r["body"] == "unitree_go2" and r["valid"]]
 clip = np.load(f"{root}/{go2[0]['npz']}")
 qpos = clip["qpos"]    # (frames, nq) in bodies/unitree_go2.xml's qpos order
 print(go2[0]["skill"], qpos.shape, clip["fps"])</pre>
-<pre class="code"># a recorded motion of an animal-inspired robot, with its scene and program
+<pre class="code"># a recorded motion of an animal-inspired robot
 import gzip
 
 root = snapshot_download("${esc(repo)}", repo_type="dataset",
-    allow_patterns=["index/imported.jsonl", "imported/astral_octopus*/*",
-                    "bodies/astral_octopus*"])
+    allow_patterns=["index/imported.jsonl", "bodies/astral_octopus*",
+                    "imported/astral_octopus*/*"])
 rows = [json.loads(l) for l in open(f"{root}/index/imported.jsonl")]
-r = next(x for x in rows if x["robot"] == "octopus" and x["task"] == "coconut_den")
+r = next(x for x in rows
+         if x["robot"] == "octopus" and x["task"] == "coconut_den")
 clip = np.load(f"{root}/{r['npz']}")
-qpos = clip["qpos"]              # the robot alone at 50 fps, in bodies/&lt;r["body"]&gt;.xml's order
-scene_qpos = clip["scene_qpos"]  # the recording as made: every body of the scene r["scene"]
-program = json.load(gzip.open(f"{root}/{r['program']}"))   # its primitive program
+qpos = clip["qpos"]              # the robot alone, 50 fps
+scene_qpos = clip["scene_qpos"]  # every body of the scene r["scene"]
+program = json.load(gzip.open(f"{root}/{r['program']}"))
 print(r["title"], qpos.shape, scene_qpos.shape, list(program))</pre>
-        <p class="licence">A robot whose joints changed between recordings has more than one model: <span class="mono">astral_&lt;robot&gt;</span>, then <span class="mono">_b</span> and <span class="mono">_c</span>. They are one robot; its rows in <span class="mono">index/imported.jsonl</span> share the same <span class="mono">robot</span>, and each row names the model its motion uses in <span class="mono">body</span>.</p>
         <a class="btn" style="background:var(--dark-ink);color:var(--dark);border-color:var(--dark-ink);align-self:flex-start" href="https://huggingface.co/datasets/${esc(repo)}" target="_blank" rel="noopener"><img class="hfi" src="hf-logo.svg" alt="">Download dataset</a>
         <p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>, free for non-commercial use with credit. For commercial use, contact the authors through the dataset's <a href="https://huggingface.co/datasets/${esc(repo)}/discussions" target="_blank" rel="noopener">Community tab</a>. Robot models derived from MuJoCo Menagerie keep their own licences.</p>
       </div>
@@ -259,13 +259,13 @@ print(r["title"], qpos.shape, scene_qpos.shape, list(program))</pre>
         <tr><td>clips/&lt;robot&gt;/&lt;skill&gt;_&lt;arm&gt;_v&lt;k&gt;.npz</td><td>qpos, qvel, tip positions, contacts, fps</td></tr>
         <tr><td>clips/…/*.json</td><td>the clip's program, every check with its worst value, repair history, model calls</td></tr>
         <tr><td>procedural/&lt;robot&gt;/*.npz</td><td>gait, balance, drive and random clips made without a model</td></tr>
-        <tr><td>index/imported.jsonl</td><td>one row per recorded motion: robot, model (body), task, title, how its program was made, file paths</td></tr>
-        <tr><td>imported/&lt;body&gt;/&lt;task&gt;.npz</td><td>a motion recorded in simulation: the robot's qpos at 50 fps, and the whole scene as recorded (a separate subset, not pipeline output)</td></tr>
-        <tr><td>imported/&lt;body&gt;/&lt;task&gt;.scene.xml, .composition.json.gz, .json</td><td>the scene it was recorded in, its primitive program, and its record (origin, author's validation)</td></tr>
+        <tr><td>index/imported.jsonl</td><td>one row per recorded motion: robot, model (body), task, title, file paths</td></tr>
+        <tr><td>imported/&lt;body&gt;/&lt;task&gt;.*</td><td>a motion recorded in simulation (a separate subset, not pipeline output): .npz the robot's qpos and the whole scene as recorded, .scene.xml its scene, .composition.json.gz its primitive program, .json its record</td></tr>
         <tr><td>primitives/&lt;robot&gt;.json</td><td>the robot's primitives and gaits, their coverage, the model that wrote them</td></tr>
         <tr><td>bodies/&lt;robot&gt;.xml, .json</td><td>the MuJoCo model each clip is in, and its measured description</td></tr>
         <tr><td>index/bodies.jsonl, primitives.jsonl</td><td>one row per robot and per primitive</td></tr>
-      </table></div>
+      </table>
+        <p class="licence" style="margin-top:16px">A robot whose joints changed between recordings has more than one model: <span class="mono">astral_&lt;robot&gt;</span>, then <span class="mono">_b</span> and <span class="mono">_c</span>. They are one robot: its rows in <span class="mono">index/imported.jsonl</span> share the same <span class="mono">robot</span>, and each row names the model its motion uses in <span class="mono">body</span>.</p></div>
     </div>
   </div>
 </section>`;

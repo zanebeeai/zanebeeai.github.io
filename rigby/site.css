@@ -290,3 +290,8 @@ details summary { cursor: pointer; font-size: 13px; color: var(--ink2) }
 .strokes figcaption span { color: var(--ink3); font: 11px var(--f-mono) }
 /* the download examples are shown whole */
 #get pre.code { max-height: none }
+/* the download section: neither column may push the other, and a long path wraps where it must */
+.gs > * { min-width: 0 }
+#get table.files td:first-child { white-space: normal; overflow-wrap: anywhere; width: 40% }
+#get pre.code { white-space: pre; overflow-x: auto }
+
