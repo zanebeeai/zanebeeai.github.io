@@ -1,5 +1,7 @@
 // Rigby dataset site: a hash-routed static app over data/*.json (build_site.py), hf/ (the dataset) and media/ (videos).
 "use strict";
+// actuated joints: nq holds 7 more coordinates, the floating base's or (fixed base) the block's; a joint can have two actuators
+const joints = b => Math.min(b.nq - 7, b.nu);
 const S = { clips: [], bodies: [], meta: null, recorded: [], byBody: {}, bodyOf: {}, sideCache: {} };
 const $ = (sel, el = document) => el.querySelector(sel);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -205,7 +207,7 @@ function robotCards(scroll) {                     // scroll: one row that scroll
     <a class="rcard" href="#/robot/${esc(b.body)}">
       <div class="media">${b.still ? `<img src="media/${esc(b.still)}" alt="" loading="lazy">` : ""}</div>
       <div class="t"><span class="tag ${b.held_out ? "ho" : ""}">${esc(b.kind_label)}${b.held_out ? " · held out" : ""}</span><b>${esc(b.label)}</b>
-      <span>${b.nq - (b.free_base ? 7 : 0)} joints · ${b.modes} primitives · ${fmt((b.counts.skill || 0) + (b.counts.taskblind || 0))} skill clips</span></div>
+      <span>${joints(b)} joints · ${b.modes} primitives · ${fmt((b.counts.skill || 0) + (b.counts.taskblind || 0))} skill clips</span></div>
     </a>`);
   // robots that are in the dataset with recorded motions only: among the others, and marked
   const rec = S.recorded.filter(g => !g.body).map(g => { const c = g.clips.find(k => k.video); return `
@@ -358,7 +360,7 @@ async function pipeline(sel = 0) {
   $("#pipe").innerHTML = `
     <div class="step"><div class="n">Robot model</div><h3>${esc(b.label)}</h3>
       <div class="media">${b.still ? `<img src="media/${esc(b.still)}" alt="">` : ""}</div>
-      <p>${esc(b.origin)} · ${b.nq - (b.free_base ? 7 : 0)} joints · ${esc(b.kind_label.toLowerCase())}. The only input.</p></div>
+      <p>${esc(b.origin)} · ${joints(b)} joints · ${esc(b.kind_label.toLowerCase())}. The only input.</p></div>
     ${flow("robot description", 1)}
     <div class="step"><div class="n">Primitives</div><h3>${b.modes} modes, ${b.gaits} gaits</h3>
       <div class="minis">${prims.map(p => `<div class="mini">${vid(p.video)}<span>${esc(p.name)}</span></div>`).join("")}</div>
@@ -557,9 +559,9 @@ function robotKV(b) {
   return `<div class="media" style="margin-bottom:12px">${b.still ? `<img src="media/${esc(b.still)}" alt="">` : ""}</div><dl class="kv">
     <dt>Body plan</dt><dd>${esc(b.kind_label)}${b.held_out ? " · held out" : ""}</dd>
     <dt>Source model</dt><dd>${esc(b.origin)}${b.detail ? ` · ${esc(b.detail)}` : ""}${b.url ? ` · <a href="${esc(b.url)}" target="_blank" rel="noopener">link ↗</a>` : ""}</dd>
-    <dt>Joints</dt><dd>${b.nq - (b.free_base ? 7 : 0)}${b.free_base ? " + floating base" : ""} · ${b.nu} actuators</dd>
+    <dt>Joints</dt><dd>${joints(b)} actuated${b.free_base ? " + floating base" : ""}</dd>
     <dt>Size</dt><dd>${fmt(b.L_m, 3)} m (L) · ${fmt(b.mass_kg, 1)} kg · time scale ${fmt(b.T_s, 3)} s</dd>
-    <dt>Tips</dt><dd class="mono" style="font-size:12px">${esc((b.tips || []).join(", "))}</dd>
+    <dt>End effectors</dt><dd class="mono" style="font-size:12px">${esc((b.tips || []).join(", "))}</dd>
     <dt>Primitives</dt><dd>${b.modes} modes, ${b.gaits} gaits${b.primitives_cost_usd != null ? ` · $${fmt(b.primitives_cost_usd, 3)}` : ""}</dd></dl>`;
 }
 function timeline(p) {

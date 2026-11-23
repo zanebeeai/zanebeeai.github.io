@@ -47,33 +47,33 @@ In all the repository holds 4,049 motions on 43 robots, 7.6 hours: the 3,938 gen
 
 ## Robots
 
-| Robot | Body plan | Joints | Source model | Licence of the model | Skill clips | Procedural |
+| Robot | Body plan | Actuated joints | Source model | Licence of the model | Skill clips | Procedural |
 |---|---|---|---|---|---|---|
 | ANYmal C | quadruped | 12 | MuJoCo Menagerie | BSD-3-Clause | 34 | 150 |
 | Apptronik Apollo | humanoid | 32 | MuJoCo Menagerie | Apache-2.0 | 32 | 150 |
 | Booster T1 (held out) | humanoid | 23 | MuJoCo Menagerie | Apache-2.0 | 6 | 0 |
 | Spot | quadruped | 12 | MuJoCo Menagerie | BSD-3-Clause | 37 | 150 |
-| Franka Panda | arm | 16 | MuJoCo Menagerie | Apache-2.0 | 26 | 150 |
-| Kinova Gen3 | arm | 14 | MuJoCo Menagerie | BSD-3-Clause | 26 | 150 |
-| KUKA iiwa 14 (held out) | arm | 14 | MuJoCo Menagerie | BSD-3-Clause | 3 | 0 |
+| Franka Panda | arm | 8 | MuJoCo Menagerie | Apache-2.0 | 26 | 150 |
+| Kinova Gen3 | arm | 7 | MuJoCo Menagerie | BSD-3-Clause | 26 | 150 |
+| KUKA iiwa 14 (held out) | arm | 7 | MuJoCo Menagerie | BSD-3-Clause | 3 | 0 |
 | Mobile crane (synthetic) | crane | 8 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 31 | 150 |
 | Dog with an arm (synthetic) | mobile_manipulator | 18 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
 | Octopus (synthetic) | octopus | 52 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 38 | 150 |
 | Wheeled biped (synthetic) | wheeled | 11 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 24 | 150 |
-| Random gripper 41 (synthetic) | arm | 15 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 26 | 150 |
+| Random gripper 41 (synthetic) | arm | 8 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 26 | 150 |
 | Simple dog (synthetic) | quadruped | 12 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 32 | 150 |
-| xArm7 | arm | 20 | MuJoCo Menagerie | BSD-3-Clause | 26 | 150 |
+| xArm7 | arm | 8 | MuJoCo Menagerie | BSD-3-Clause | 26 | 150 |
 | Unitree A1 | quadruped | 12 | MuJoCo Menagerie | BSD-3-Clause | 37 | 150 |
 | Unitree G1 | humanoid | 29 | MuJoCo Menagerie | BSD-3-Clause | 38 | 150 |
 | Unitree Go2 | quadruped | 12 | MuJoCo Menagerie | BSD-3-Clause | 37 | 150 |
 | Unitree H1 | humanoid | 19 | MuJoCo Menagerie | BSD-3-Clause | 29 | 150 |
-| UR5e | arm | 13 | MuJoCo Menagerie | BSD-3-Clause | 26 | 150 |
+| UR5e | arm | 6 | MuJoCo Menagerie | BSD-3-Clause | 26 | 150 |
 | Hexapod, new draw (synthetic) (held out) | multileg | 18 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 6 | 0 |
 | Hexapod (synthetic) | multileg | 18 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
 | Reverse-knee quadruped, new draw (synthetic) (held out) | quadruped | 12 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 6 | 0 |
 | Reverse-knee quadruped (synthetic) | quadruped | 12 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
 | Six-arm crawler (synthetic) | multileg | 24 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 37 | 150 |
-| Two-armed zoo body (synthetic) | dual_arm | 21 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 26 | 150 |
+| Two-armed zoo body (synthetic) | dual_arm | 14 | synthetic (this repository) | CC BY-NC 4.0 (this dataset) | 26 | 150 |
 | Tortoise (Aegis-T) | quadruped | 23 | Animal Atlas (Yi Zhou) | CC BY-NC 4.0 (this dataset) | 7 | 0 |
 | Crocodile (Croco-X) | quadruped | 30 | Animal Atlas (Yi Zhou) | CC BY-NC 4.0 (this dataset) | 6 | 0 |
 | Fox (Ember-F) | quadruped | 27 | Animal Atlas (Yi Zhou) | CC BY-NC 4.0 (this dataset) | 10 | 0 |

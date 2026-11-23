@@ -29,7 +29,7 @@ const CHECK_NAMES = {
 const name = b => (S.bodyOf[b]?.label || nice(b)).replace(/\s*\((procedural|synthetic)\)$/, "");
 const isProc = x => /synthetic/i.test(x?.origin || "");
 const kindLine = b => { const x = S.bodyOf[b]; if (!x) return ""; return isProc(x) ? "Synthetic " + x.kind_label.toLowerCase() : x.kind_label; };
-const joints = b => b.nq - (b.free_base ? 7 : 0);
+const joints = b => Math.min(b.nq - 7, b.nu);
 const hfURL = () => "https://huggingface.co/datasets/" + S.meta.hf_repo;
 const ARR = '<span class="arr" aria-hidden="true">→</span>';
 const CHEV = '<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -317,7 +317,7 @@ function makeSection() {
 }
 const MK = { ex: 0, step: 0, tl: null, raf: 0 };
 const STEPS = [
-  ["Robot model", "The only input: the robot's MuJoCo model, its joints, limits and tips."],
+  ["Robot model", "The only input: the robot's MuJoCo model, its joints, limits and end effectors."],
   ["Primitives", "The model writes the robot's own motion primitives once, each measured by forward kinematics."],
   ["Program", "For a skill sentence, it composes them into keyframes over time."],
   ["Checked clip", "The program compiles to joint motion and every frame passes every physical check."],
@@ -349,7 +349,7 @@ async function mkRender(exI, step) {
   if (step === 0) {
     h = '<div class="stage-h"><h3>' + esc(b.label) + '</h3><span class="mono">' + esc(b.model || "") + '</span></div><div class="robot-art"><div class="frame"><img src="' + ROOT + 'media/' + esc(b.still) + '" alt="' + esc(b.label) + '"></div>' +
       '<dl class="kv"><dt>Body plan</dt><dd>' + esc(b.kind_label) + (b.held_out ? " · held out" : "") + '</dd><dt>Source</dt><dd>' + esc(b.origin) + (b.detail ? ' <span class="g">· ' + esc(b.detail) + "</span>" : "") + "</dd>" +
-      "<dt>Joints</dt><dd>" + joints(b) + (b.free_base ? " + floating base" : "") + "</dd><dt>Actuators</dt><dd>" + b.nu + "</dd><dt>Size</dt><dd>" + fmt(b.L_m, 2) + " m · " + fmt(b.mass_kg, 1) + ' kg</dd><dt>Tips</dt><dd class="mono">' + esc((b.tips || []).join(", ")) + "</dd></dl></div>";
+      "<dt>Joints</dt><dd>" + joints(b) + (b.free_base ? " + floating base" : "") + "</dd><dt>Actuators</dt><dd>" + b.nu + "</dd><dt>Size</dt><dd>" + fmt(b.L_m, 2) + " m · " + fmt(b.mass_kg, 1) + ' kg</dd><dt>End effectors</dt><dd class="mono">' + esc((b.tips || []).join(", ")) + "</dd></dl></div>";
   } else if (step === 1) {
     const ps = (b.prims || []).slice().sort((x, y) => (used.includes(y.name) - used.includes(x.name)) || (used.indexOf(x.name) - used.indexOf(y.name))).slice(0, 8);
     h = '<div class="stage-h"><h3>' + plural(b.modes, "mode") + ", " + plural(b.gaits, "gait") + '</h3><span>written by the model' + (b.primitives_cost_usd != null ? " for $" + fmt(b.primitives_cost_usd, 3) : "") + '</span></div><div class="prim-grid">' +
@@ -830,7 +830,7 @@ async function robotPage(app, body) {
     "<dt>Joints</dt><dd>" + joints(b) + (b.free_base ? " + floating base" : "") + " · " + b.nu + " actuators</dd>" +
     "<dt>Size</dt><dd>" + fmt(b.L_m, 3) + " m (L) · " + fmt(b.mass_kg, 1) + " kg · time scale " + fmt(b.T_s, 3) + " s</dd>" +
     "<dt>Primitives</dt><dd>" + b.modes + " modes, " + b.gaits + " gaits" + (b.primitives_cost_usd != null ? " · $" + fmt(b.primitives_cost_usd, 3) : "") + "</dd>" +
-    '<dt>Tips</dt><dd class="mono">' + esc((b.tips || []).join(", ")) + "</dd>" +
+    '<dt>End effectors</dt><dd class="mono">' + esc((b.tips || []).join(", ")) + "</dd>" +
     '<dt>Files</dt><dd class="mono">' + esc(b.model || "") + (b.primitives ? "<br>" + esc(b.primitives) : "") + "</dd></dl></div>" +
     '<section class="more" id="r-skills"></section><section class="more" id="r-prims"></section><section class="more" id="r-tb"></section><section class="more" id="r-proc"></section><section class="more" id="r-rec"></section>' +
     footHTML(false) + "</article>";
@@ -1016,7 +1016,7 @@ async function clipPage(app, body, stem) {
     '<section class="rec"><h2>Label check<span>' + labelTxt + '</span></h2><div id="pred"></div></section>' +
     (c.src !== "procedural" ? '<section class="rec"><h2>Generation</h2><div><dl class="kv" id="gen"></dl></div></section>' : "") +
     '<section class="rec"><h2>Files<span>In the dataset on Hugging Face</span></h2><div><dl class="kv"><dt>Motion</dt><dd class="mono">' + esc(c.npz) + '</dd><dt>Record</dt><dd class="mono"><a href="' + ROOT + 'hf/' + esc(c.sidecar) + '" target="_blank" rel="noopener">' + esc(c.sidecar) + '</a></dd><dt>Robot model</dt><dd class="mono">' + esc(b.model || "") + "</dd><dt>Frames</dt><dd>" + fmt(c.frames) + " at " + S.meta.stats.fps.map(f => fmt(f)).join(", ") + " fps</dd></dl></div></section>" +
-    '<section class="rec"><h2>The robot<span>' + esc(b.label) + '</span></h2><div class="rb"><div class="frame"><img src="' + ROOT + 'media/' + esc(b.still) + '" alt="' + esc(b.label) + '"></div><dl class="kv"><dt>Body plan</dt><dd>' + esc(b.kind_label) + (b.held_out ? ' · <span class="fail">held out for transfer tests</span>' : "") + "</dd><dt>Source model</dt><dd>" + esc(b.origin) + (b.detail ? ' <span class="g">· ' + esc(b.detail) + "</span>" : "") + (b.url ? ' · <a href="' + esc(b.url) + '" target="_blank" rel="noopener">source ↗</a>' : "") + "</dd><dt>Joints</dt><dd>" + joints(b) + (b.free_base ? " + floating base" : "") + " · " + b.nu + " actuators</dd><dt>Size</dt><dd>" + fmt(b.L_m, 3) + " m · " + fmt(b.mass_kg, 1) + " kg</dd><dt>Primitives</dt><dd>" + b.modes + " modes, " + b.gaits + " gaits" + '</dd><dt>Tips</dt><dd class="mono">' + esc((b.tips || []).join(", ")) + "</dd></dl></div></section>" +
+    '<section class="rec"><h2>The robot<span>' + esc(b.label) + '</span></h2><div class="rb"><div class="frame"><img src="' + ROOT + 'media/' + esc(b.still) + '" alt="' + esc(b.label) + '"></div><dl class="kv"><dt>Body plan</dt><dd>' + esc(b.kind_label) + (b.held_out ? ' · <span class="fail">held out for transfer tests</span>' : "") + "</dd><dt>Source model</dt><dd>" + esc(b.origin) + (b.detail ? ' <span class="g">· ' + esc(b.detail) + "</span>" : "") + (b.url ? ' · <a href="' + esc(b.url) + '" target="_blank" rel="noopener">source ↗</a>' : "") + "</dd><dt>Joints</dt><dd>" + joints(b) + (b.free_base ? " + floating base" : "") + " · " + b.nu + " actuators</dd><dt>Size</dt><dd>" + fmt(b.L_m, 3) + " m · " + fmt(b.mass_kg, 1) + " kg</dd><dt>Primitives</dt><dd>" + b.modes + " modes, " + b.gaits + " gaits" + '</dd><dt>End effectors</dt><dd class="mono">' + esc((b.tips || []).join(", ")) + "</dd></dl></div></section>" +
     "</div>" + moreRows(c, rows) +
     footHTML(false) + "</article>";
   wire(app);
